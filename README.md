@@ -1,15 +1,11 @@
-## Chapter1_codingfundamentals
-
-#----------
-#--0----0--
-#----__----
-#-(______)-
-#----------
+# Chapter1_codingfundamentals
 
 Create the happy face image above using the following criteria:
 
-Create a class
-Create a main method
-Use System.out.print at least two lines
-Use System.out.println at least three times
-Submission:
+## Create a class
+- [ ] Create a main method
+- [ ] Use System.out.print at least two lines
+- [ ] Use System.out.println at least three times
+
+## Submission:
+:+1:
