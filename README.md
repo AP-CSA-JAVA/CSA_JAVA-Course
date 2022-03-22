@@ -1,10 +1,10 @@
-# Chapter1codingfundamentals
+## Chapter1_codingfundamentals
 
-----------
---0----0--
-----__----
--(______)-
-----------
+#----------
+#--0----0--
+#----__----
+#-(______)-
+#----------
 
 Create the happy face image above using the following criteria:
 
