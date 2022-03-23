@@ -1,4 +1,4 @@
-# Chapter 1Coding Fundamentals
+# Chapter 1 Coding Fundamentals
 
 ## Why Programming? Why Java?
 
