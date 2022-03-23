@@ -1,6 +1,8 @@
 # An Introduction to Java Programming 
 
-Java is a popular programming languages.  It is used in a variery of environments.  This course is modeled after the AP Computer Science A course.
+While Java is a popular programming language, it can be a challenge to learn.  The purpose of this course is to provide students with additional content that will help support their learning.  This course is modeled after the AP Computer Science A course and some advanced topics will not be covered.
+
+## TABLE OF CONTENTS
 
 ## Why Programming? Why Java?
 
