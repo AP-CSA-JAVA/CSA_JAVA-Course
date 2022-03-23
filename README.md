@@ -1,4 +1,6 @@
-# Chapter 1 Coding Fundamentals
+# An Introduction to Java Programming 
+
+Java is a popular programming languages.  It is used in a variery of environments.  This course is modeled after the AP Computer Science A course.
 
 ## Why Programming? Why Java?
 
