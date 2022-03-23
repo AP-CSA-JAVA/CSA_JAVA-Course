@@ -1,4 +1,6 @@
-# Chapter1_codingfundamentals
+# Chapter 1Coding Fundamentals
+
+## Why Programming? Why Java?
 
 Create the happy face image above using the following criteria:
 
