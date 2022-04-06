@@ -20,7 +20,7 @@ The following computational thinking practices describe what skills students sho
 
 ## TABLE OF CONTENTS
 The course content is organized into ten commonly taught units:</br>
-Unit 1: Primitive Types</br>
+[Unit 1: Primitive Types](#unit-1---primitive-types)</br>
 Unit 2: Using Objects</br>
 Unit 3: Boolean Expressions and if Statements</br>
 Unit 4: Iteration</br>
@@ -31,7 +31,7 @@ Unit 8: 2D Array</br>
 Unit 9: Inheritance</br>
 Unit 10: Recursion</br>
 
-# Unit 1: Primitive Types
+# Unit 1 - Primitive Types
 
 ## Why Programming? Why Java?
 
