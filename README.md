@@ -33,6 +33,8 @@ Unit 10: Recursion</br>
 
 # Unit 1 - Primitive Types
 
+![features-of-java-programming-language](https://user-images.githubusercontent.com/12989939/162025057-a7667977-a6c3-4604-860c-19ec18dc2e12.jpg)
+
 ## Why Programming? Why Java?
 
 Create the happy face image above using the following criteria:
