@@ -37,7 +37,7 @@ Unit 10: Recursion</br>
 
 ## Why Programming? Why Java?
 
-![first_Java](https://user-images.githubusercontent.com/12989939/162062802-f4c86686-0f9f-44e0-95d1-36f9be03e5c6.PNG)
+![first_Java](https://user-images.githubusercontent.com/12989939/162062802-f4c86686-0f9f-44e0-95d1-36f9be03e5c6.PNG)</br>
 Create the happy face image above using the following criteria:
 
 ## Create a class
