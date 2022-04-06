@@ -31,6 +31,8 @@ Unit 8: 2D Array</br>
 Unit 9: Inheritance</br>
 Unit 10: Recursion</br>
 
+# Unit 1: Primitive Types
+
 ## Why Programming? Why Java?
 
 Create the happy face image above using the following criteria:
