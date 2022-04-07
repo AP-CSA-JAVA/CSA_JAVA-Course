@@ -53,5 +53,11 @@ Notice within the main method there is a print statement.  Let's break down this
 - [ ] Use System.out.print at least two lines
 - [ ] Use System.out.println at least three times
 
+With every program that you will submit, I want you to follow the convention below.
+
+
+In addition, your program should have the assignment number, name of the assignment and your last name.
+
+Example: file name: 111whyProgramming_Edwards.java
 
 Create the happy face image above using the following criteria:
