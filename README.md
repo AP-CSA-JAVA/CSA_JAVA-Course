@@ -37,13 +37,21 @@ Unit 10: Recursion</br>
 
 ## Why Programming? Why Java?
 
-![first_Java](https://user-images.githubusercontent.com/12989939/162062802-f4c86686-0f9f-44e0-95d1-36f9be03e5c6.PNG)</br>
-Create the happy face image above using the following criteria:
+Every Java program begins with the creation of a class.  In this instance, we created a class called MyFirstClass.  Within the class there is a main method that is required to execute the program.  Below is a simple program that will print "Hello,World".  Notice that with every ' { ' there is a corresponding ' } '.  In class, you may hear me refer to it as a curly brace.  A missing a curly brace is one of the most common errors among new programmers.  
+![first_Java](https://user-images.githubusercontent.com/12989939/162324090-a9292f5d-3c02-46d8-bb05-e69cb0f72845.PNG)
 
-## Create a class
+Notice within the main method there is a print statement.  Let's break down this print statement. 
+<p align="center"><b> System.out.println("Hello,World");</b></p>
+
+- [ ] <b>System</b> is a class defined in the java lang package.</br>
+- [ ] <b>out</b> is a public static field of the PrintStream type.</br>
+- [ ] <b>println()</b> is invoked by the PrintStream class.</br>
+- [ ] <b>NOTE</b> <i>println()</i> when executed will return to the next line. Whereas <i>print()</i> will execute the string literal but not return to the next line.
+
+## Assignment - Create a class
 - [ ] Create a main method
 - [ ] Use System.out.print at least two lines
 - [ ] Use System.out.println at least three times
 
-## Submission:
-:+1:
+
+Create the happy face image above using the following criteria:
