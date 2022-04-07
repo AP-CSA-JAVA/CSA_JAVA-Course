@@ -54,7 +54,7 @@ Notice within the main method there is a print statement.  Let's break down this
 - [ ] Use System.out.println at least three times
 
 With every program that you will submit, I want you to follow the convention below.
-
+![naming_Convention](https://user-images.githubusercontent.com/12989939/162331128-d1b0a742-298a-4e2e-b6de-97afe928bee3.PNG)
 
 In addition, your program should have the assignment number, name of the assignment and your last name.
 
