@@ -134,7 +134,7 @@ Eligible for allowance? False<br>
 Michael's weekly allowance is $0.00<br>
 
 ## Assignment 2
-Use a Scanner object to create an input feature in your program.  Click on [Scanner_Input](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/8455326/Scanner_Input.pptx) to learn more.  You will ask the user for a string, int, double, and a boolean.  From the user's response, you will return (print statement) a sentence that includes the data types listed above.  
+Use a Scanner object to create an input feature in your program.  Click on [Scanner_Input](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/8455326/Scanner_Input.pptx) to learn more.  Create four questions that will ask the user for a string, int, double, and a boolean.  From the user's response, you will return (print statement) a sentence that includes the data types listed above.  
 - [ ] string
 - [ ] int
 - [ ] double
@@ -142,3 +142,21 @@ Use a Scanner object to create an input feature in your program.  Click on [Scan
 - [ ] print statement that includes all for data types
 
 There is no test to run when you are complete. Please screenshot your code with result and include it in your assignment.
+
+
+## Expressions and Assignment Statements
+Math Operators are a very important part of computing. Below are the most common operators that we will be using in this course.
+![mathOperators](https://user-images.githubusercontent.com/12989939/162537055-d237526c-a02b-4d9e-a0ab-136746534b81.PNG)
+
+**Note** When you divide an integer by zero your program will return an <i>ArthmeticException</i> error.
+
+### Please Excuse My Dear Aunt Sally
+In Java, the order of operation works pretty much the same with the exception of the modulo.</br>Take for example the following math equation: **5 + 12 * 18 - 10 / 2 % 2**
+
+| Step  | Operation        | Result |
+| :---: | :---:            | :---:  |
+|  1    | Multiply 12 * 18 | = 216  |
+|  2    | Divide 10 / 2    | = 5    |
+|  3    | Modulo 5 % 2     | = 1    |
+|  4    | Add 5 + 216      | = 221  |
+|  5    | Subtract 221 - 1 | = 220  |
