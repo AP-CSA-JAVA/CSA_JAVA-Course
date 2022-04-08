@@ -92,6 +92,31 @@ There are eight primitive types in Java. In no particular order, they are int, d
 - [ ] A variable cannot begin with any special characters
 - [ ] A variable cannot have the same name as a Java keyword
 
-When you declare a variable, you must state the variable type along with the variable name followed by the value assignment to the variable.</br>  For example:  *int age = 12;*</br></br>
-Once you have declared the variable type, you do not need to do it again to reassign a value to the variable.</br> Example:  </br>*int age = 12;</br>age = 13*</br></br>
-If you declare a variable as *final* you cannot change the value of it.  We can refer to the *final* variable as immutable (unchanging).  Anotehr variable rule is that *final* variables are written as ALL CAPS to remind you that they cannot change.</br> Example:</br> final double ALLOWANCE = 8.75;</br></br>
+When you declare a variable, you must state the variable type along with the variable name followed by the value assignment to the variable.</br>  For example:  *int height = 72;*</br></br>
+Once you have declared the variable type, you <b> do not need to do it again </b> to reassign a value to the variable.</br> Example:  </br>*int height = 72;</br>height = 70*</br></br>
+If you declare a variable as *final* you cannot change the value of it.  We can refer to the *final* variable as immutable (unchanging).  Anotehr variable rule is that *final* variables are written as ALL CAPS to remind you that they cannot change.</br> Example:</br> final double PI = 3.14159;</br></br>
+
+## Assignment 1
+### Allowance
+Write a program that will determine who receives an allowance or not.  Use the information below as a guide:
+- [ ] Allowance is always $30.00/ week
+- [ ] Non-teenagers do not receive an allowance
+- [ ] Jon is 16 years old
+- [ ] Ed is 12 years old
+- [ ] Michael was born fours years before Jon
+- [ ] Print out who receives an allowance and who does not by using an int, double and boolean variables.
+
+**Example Output:**<br>
+Jon's age is 16<br>
+Eligible for allowance? True<br>
+Jon's weekly allowance is $30.00<br>
+<br>
+Ed's age is 12<br>
+Eligible for allowance? False<br>
+Ed's weekly allowance is $0.00<br>
+<br>
+Michael's age is 20<br>
+Eligible for allowance? False<br>
+Michael's weekly allowance is $0.00<br>
+
+## Assignment 2
