@@ -146,7 +146,13 @@ There is no test to run when you are complete. Please screenshot your code with 
 
 ## Expressions and Assignment Statements
 Math Operators are a very important part of computing. Below are the most common operators that we will be using in this course.
-![mathOperators](https://user-images.githubusercontent.com/12989939/162537055-d237526c-a02b-4d9e-a0ab-136746534b81.PNG)
+| Symbol | Name  | Usage |
+| :---:  | :---: | :---: |
+| * | Multiplication | multiply two values together |
+| / | Division | divide two values |
+| % | Modulo | the remainder after dividing two values |
+| + | Addition | add two values together |
+| - | Subtraction | subtract two values |
 
 **Note** When you divide an integer by zero your program will return an <i>ArthmeticException</i> error.
 
