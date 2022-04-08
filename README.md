@@ -94,6 +94,11 @@ There are eight primitive types in Java. In no particular order, they are int, d
 - [ ] **long** is a 64 bit datatype with a minimum value of -2^63 to 2^63
 - [ ] **short** is a 16 bit datatype with a minimum value of -32,768 to 32,767
 
+Non-primitive data types include a String, Arrays and Classes.
+- [ ] **String** is a data type that is a collection of characters encompassed by quotes
+- [ ] **Arrays** are used to store multiple values (think 'list')
+- [ ] **Class** is an object constructor, blueprint, for creating objects.
+
 ### Variable Naming Convention
 - [ ] Always choose a name that indicates the purpose of the variable
 - [ ] A variable cannot begin with a number
@@ -129,3 +134,11 @@ Eligible for allowance? False<br>
 Michael's weekly allowance is $0.00<br>
 
 ## Assignment 2
+Use a Scanner object to create an input feature in your program.  Click on [Scanner_Input](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/8455326/Scanner_Input.pptx) to learn more.  You will ask the user for a string, int, double, and a boolean.  From the user's response, you will return (print statement) a sentence that includes the data types listed above.  
+- [ ] string
+- [ ] int
+- [ ] double
+- [ ] boolean
+- [ ] print statement that includes all for data types
+
+There is no test to run when you are complete. Please screenshot your code with result and include it in your assignment.
