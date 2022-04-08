@@ -37,27 +37,39 @@ Unit 10: Recursion</br>
 
 ## Why Programming? Why Java?
 
-Every Java program begins with the creation of a class.  In this instance, we created a class called MyFirstClass.  Within the class there is a main method that is required to execute the program.  Below is a simple program that will print "Hello,World".  Notice that with every ' { ' there is a corresponding ' } '.  In class, you may hear me refer to it as a curly brace.  A missing a curly brace is one of the most common errors among new programmers.  
+Every Java program begins with the creation of a class.  Consider a class as a blueprint for your program.  In this instance, we created a class called MyFirstClass.  Within the class there is a main method that is required to execute the program.  Below is a simple program that will print "Hello, World".</br>Notice that with every ' { ' there is a corresponding ' } '.  In class, you may hear me refer to it as a curly brace.  A missing a curly brace is one of the most common errors among new programmers.  The name 'public' allows users to be able to see the specific parts of your program.  Notice also that the name of the class starts with a capital letter.  The main class with always start with a capital letter.
 ![first_Java](https://user-images.githubusercontent.com/12989939/162324090-a9292f5d-3c02-46d8-bb05-e69cb0f72845.PNG)
 
-Notice within the main method there is a print statement.  Let's break down this print statement. 
-<p align="center"><b> System.out.println("Hello,World");</b></p>
+Notice that within the main method there is a print statement.  Let's break down this print statement. 
+<p align="center"><b> System.out.println("Hello, World");</b></p>
 
 - [ ] <b>System</b> is a class defined in the java lang package.</br>
 - [ ] <b>out</b> is a public static field of the PrintStream type.</br>
 - [ ] <b>println()</b> is invoked by the PrintStream class.</br>
-- [ ] <b>NOTE</b> <i>println()</i> when executed will return to the next line. Whereas <i>print()</i> will execute the string literal but not return to the next line.
-
-## Assignment - Create a class
-- [ ] Create a main method
-- [ ] Use System.out.print at least two lines
-- [ ] Use System.out.println at least three times
+- [ ] <b>NOTE</b> <i>println()</i> when executed will return to the next line. Whereas <i>print()</i> will execute the string literal but not return to the next line. You can also create a new line inside a print statement by adding   <b>\n</b>  anywhere inside the quotation marks of a print statement.
 
 With every program that you will submit, I want you to follow the convention below.
 ![naming_Convention](https://user-images.githubusercontent.com/12989939/162331128-d1b0a742-298a-4e2e-b6de-97afe928bee3.PNG)
 
-In addition, your program should have the assignment number, name of the assignment and your last name.
 
-Example: file name: 111whyProgramming_Edwards.java
-
+## Assignment 1
+![76b4e00f998549e6a8717c6e5d5f0f1a](https://user-images.githubusercontent.com/12989939/162492248-21683f86-fc3f-4756-b78f-ddfe9373ab60.png)</br>
 Create the happy face image above using the following criteria:
+
+- [ ] Create a class
+- [ ] Create a main method
+- [ ] Use System.out.print at least two lines
+- [ ] Use System.out.println at least three times
+
+## Assignment 2
+### Personal Timeline
+For this assignment, you will create a program that outputs a personal timeline of events in your life. The timeline will proceed vertically. Earlier events will be displayed nearer the top of the timeline while later events are displayed near the bottom.
+
+Include seven meaningful events in your life. No repetitive events such as "started kindergarten, started first grade, etc".
+
+Make it look professional. HINT: use \t
+![timeline](https://user-images.githubusercontent.com/12989939/162494607-3d0fe461-5139-4116-b049-bebc9103c9c4.PNG)
+
+There is no test to run when you are complete. Please screenshot your code with result and include it in your Canvas assignment.
+
+
