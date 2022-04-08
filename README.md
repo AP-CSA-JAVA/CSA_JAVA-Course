@@ -73,3 +73,25 @@ Make it look professional. HINT: use \t
 There is no test to run when you are complete. Please screenshot your code with result and include it in your Canvas assignment.
 
 
+
+## Variables and Data Types
+There are eight primitive types in Java. In no particular order, they are int, double, boolean, float, char, byte, long and short.  For this course we will be using only int, double, and boolean.
+- [ ] **int** short for integer deals with whole numbers
+- [ ] **double** is a data type that stores decimal numbers
+- [ ] **boolean** is used to represent true or false values
+- [ ] **float** 
+- [ ] **char**
+- [ ] **byte**
+- [ ] **long**
+- [ ] **short**
+
+### Variable Naming Convention
+- [ ] Always choose a name that indicates the purpose of the variable
+- [ ] A variable cannot begin with a number
+- [ ] A variable must not have spaces
+- [ ] A variable cannot begin with any special characters
+- [ ] A variable cannot have the same name as a Java keyword
+
+When you declare a variable, you must state the variable type along with the variable name followed by the value assignment to the variable.</br>  For example:  *int age = 12;*</br></br>
+Once you have declared the variable type, you do not need to do it again to reassign a value to the variable.</br> Example:  </br>*int age = 12;</br>age = 13*</br></br>
+If you declare a variable as *final* you cannot change the value of it.  We can refer to the *final* variable as immutable (unchanging).  Anotehr variable rule is that *final* variables are written as ALL CAPS to remind you that they cannot change.</br> Example:</br> final double ALLOWANCE = 8.75;</br></br>
