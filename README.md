@@ -213,11 +213,12 @@ this assignment.**
 
 ## Assignment 2
 ### Simple Math
-- [ ] Create a program that will ask the user for two distinct numbers (integers).  
-- [ ] Store those values and perform some basic operations with those numbers.
+- [ ] Create a program that will ask the user for two distinct numbers (integers)
+- [ ] Use the scanner class to receive input from the user  
+- [ ] Store those values and perform some basic operations with those numbers
 - [ ] Make sure to use the exact same wording and spacing to pass the test
 
-### Sample Output
+**Example Output**
 ```
 Enter first number:
 20
@@ -229,6 +230,44 @@ Difference: 15
 Product: 100
 Dividing: 4 with remainder 0
 
+```
+
+
+
+## Compound Assignment Operators
+
+In Java, you can modify a variable by referencing it, performing an operation on it, and assigning the result back to the variable. Thus, you can reference a variable to change its own value. For example, if x equals 0 , the following statement modifies x.</br>
+
+```
+public class Main
+{
+  public static void main(String[] args)
+  {
+    x = 0;
+    x = x + 1; //common programming convention
+    System.out.println("x = " + x);
+  }
+}
+Output:
+x = 1
+```
+
+In algebra, this is an impossible statement, but in programming, the assignment operator makes this a simple and logical statement. 
+To interpret assignment statements such as this, begin with the first instruction to the right of the assignment operator.
+
+In Java, a strong convention is to declare variables close to where they are first used, at the beginning of a code block. 
+A code block is denoted by curly braces, { }.  Notice that the print statement uses quotes around 'x = ' followed by plus(+) sign.
+This is referred to as a **concatenation operator** where you can add a string literal to a variable.
+
+Java like other programs has simplified the compound operators.  **Compound Assignment Operators** performs two tasks in one step.  It performs a mathematical calculation by and assignment.  It is written as:  
+```
+x +=1
+
+// notice the simplicity of the code versus the code below.
+x = x + 1
+
+// What would happen if you accidently type the plus sign in after the equal sign?
+// How would that affect your program?
 ```
 </p>
 </details>
