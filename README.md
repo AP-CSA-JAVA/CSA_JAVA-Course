@@ -169,19 +169,71 @@ In Java, the order of operation works pretty much the same with the exception of
 |  4    | Add 5 + 216      | = 221  |
 |  5    | Subtract 221 - 1 | = 220  |
 
+## Assignment 1
+### Calculate your weight on Jupiter
 
+```
+The expression F=ma allows you to calculate your weight (in newtons) based on your mass (in kilograms)
+the acceleration due to gravity on Earth (9.81 m/sec2). A typical mass of a human might be 58.9 kg.
 
+F = ma
+F = (58.9 kg)(9.81 m/s^2)
+F = 578 Newtons
+One newton is equal to 0.225 lbs. So on Earth, this human weighs 130 lbs.
 
+F = (578 N)(0.225 lbs/ 1 N) = 130 lbs
 
+But Jupiter is more massive than the Earth. The force of gravity is stronger, making the acceleration 
+due to gravity much larger (24.79 m/sec^2). Below is a list of variables that will be used in the program.
+
+Using the equation below, you can determine what your weight on Jupiter would be in pounds and not have 
+to worry about converting units.
+
+(weightOnJupiter) = (weightOnEarth)/1 x (jupiterGravity)/(earthGravity)
+
+weightOnJupiter = 130
+earthGravity = 9.81 
+jupiterGravity = 24.79
+weightOnJupiter = weightOnJupiter / earthGravity * jupiterGravity
+
+```
+**Using the chart below, create a program called GalaxyWeight that outputs information of the users weight
+on three different planets and takes the average of those weights.  You will use the <i>scanner class</i> for 
+this assignment.**
+
+| Planet | Acceleration Due to Gravity (m/sec^2) |
+| :---: | :---: |
+| Mercury | 3.59 |
+| Venus | 8.87 |
+| Mars | 3.711 |
+| Jupiter | 24.79 | 
+| Saturn | 11.08 |
+| Uranus | 10.67 |
+| Neptune | 11.15 |
+
+## Assignment 2
+### Simple Math
+- [ ] Create a program that will ask the user for two distinct numbers (integers).  
+- [ ] Store those values and perform some basic operations with those numbers.
+- [ ] Make sure to use the exact same wording and spacing to pass the test
+
+### Sample Output
+```
+Enter first number:
+20
+Enter second number:
+5
+
+Sum: 25
+Difference: 15
+Product: 100
+Dividing: 4 with remainder 0
+
+```
 </p>
 </details>
 
-```
 
-function test() {
-   console.log("notice the blank line before this function?");
-   
-```
 ```ruby
 require 'redcarpet'
 markdown = Redcarpet.new("Hello World!")
