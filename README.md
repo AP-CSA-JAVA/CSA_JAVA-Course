@@ -31,7 +31,9 @@ Unit 8: 2D Array</br>
 Unit 9: Inheritance</br>
 Unit 10: Recursion</br>
 
-# Unit 1 - Primitive Types
+# Unit 1 - Primitive Types 
+<details><summary>Click to Open</summary>
+<p>
 
 
 
@@ -166,3 +168,22 @@ In Java, the order of operation works pretty much the same with the exception of
 |  3    | Modulo 5 % 2     | = 1    |
 |  4    | Add 5 + 216      | = 221  |
 |  5    | Subtract 221 - 1 | = 220  |
+
+
+
+
+
+</p>
+</details>
+
+```
+
+function test() {
+   console.log("notice the blank line before this function?");
+   
+```
+```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+```
