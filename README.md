@@ -64,7 +64,8 @@ Please follow the convention shown below.</br>
 
 
 ## Assignment 1
-![76b4e00f998549e6a8717c6e5d5f0f1a](https://user-images.githubusercontent.com/12989939/162492248-21683f86-fc3f-4756-b78f-ddfe9373ab60.png)</br>
+
+ ![76b4e00f998549e6a8717c6e5d5f0f1a](https://user-images.githubusercontent.com/12989939/162492248-21683f86-fc3f-4756-b78f-ddfe9373ab60.png)</br>
 Create the happy face image above using the following criteria:
 
 - [ ] Create a class
@@ -238,7 +239,7 @@ Dividing: 4 with remainder 0
 
 In Java, you can modify a variable by referencing it, performing an operation on it, and assigning the result back to the variable. Thus, you can reference a variable to change its own value. For example, if x equals 0 , the following statement modifies x.</br>
 
-```
+```ruby
 public class Main
 {
   public static void main(String[] args)
@@ -273,8 +274,14 @@ x = x + 1
 </details>
 
 
+
 ```ruby
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
+public class Main {
+  public static void main(String[] args) {
+    ProgramOne.main(args);
+    ProgramTwo.main(args);
+    ProgramThree.main(args);
+  }
+}
 ```
+
