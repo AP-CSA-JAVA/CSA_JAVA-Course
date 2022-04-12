@@ -360,21 +360,41 @@ Total Sales: $64.3
 ## Casting and Range of Variables
 There are some unique features to Java that help programmers create programs that are flexible in how they display data.  We learned earlier </br>
 that we need to declare a variable by it's type.  It can be an int or a double.  As you may remember, an int is any whole negative or positive number.</br>
-A double is any number with a decimal.  1.0 is a whole number, but it has a decimal. So, Java considers 1.0 as a double.</br>  We can convert the double</br> 
-by declaring a new variable that changes the double to an int.
+A double is any number with a decimal.  1.0 is a whole number, but it has a decimal. So, Java considers 1.0 as a double.</br>  
+We can convert the double by declaring a new variable that changes the double to an int.
 
 ``` 
 double temp = 98.6;
 int newTemp = temp;
 ```
+What is the value of newTemp?  Did you guess 99?  The actual value of newTemp is 98.  Java does not round unless you tell it to round.
 
 You will need to be familiar with some terms:
 
 - [ ] **widening** - converting from a smaller data type (int) to a larger data type (double).
 - [ ] **narrowing** - converting a larger data type (double) to a smaller data type (int).
 
+In this instance, we 'narrowed' the value of temp.  There is another term that you need to be familiar with and it is called **casting**.  Casting </br>
+is converting from one data type to another, such as from a double to an int, potentially losing information. Take a look at this program:
+```ruby
+int eggs = 9;
+final int dozen = 12;// a dozen will not change
 
+System.out.println("Total eggs = " + eggs/ dozen);
 
+Example output:
+Total eggs = 0
+```
+We know that we don't have 0 eggs.  We can rewrite our program to show how many eggs we have in decimal form.
+```ruby
+int eggs = 9;
+final int dozen = 12;// a dozen will not change
+
+System.out.println("Total eggs = " + eggs/ (double) dozen);
+
+Example output:
+Total eggs = 0.75
+```
 </p>
 </details>
 
