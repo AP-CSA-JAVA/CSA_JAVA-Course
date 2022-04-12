@@ -21,15 +21,15 @@ The following computational thinking practices describe what skills students sho
 ## TABLE OF CONTENTS
 The course content is organized into ten commonly taught units:</br>
 [Unit 1: Primitive Types](#unit-1---primitive-types)</br>
-Unit 2: Using Objects</br>
-Unit 3: Boolean Expressions and if Statements</br>
-Unit 4: Iteration</br>
-Unit 5: Writing Classes</br>
-Unit 6: Array</br>
-Unit 7: ArrayList</br>
-Unit 8: 2D Array</br>
-Unit 9: Inheritance</br>
-Unit 10: Recursion</br>
+[Unit 2: Using Objects](#unit-2---using-objects)</br>
+[Unit 3: Boolean Expressions and if Statements](#unit-3---boolean-expressions-and-if-statements)</br>
+[Unit 4: Iteration](#unit-4---iteration)</br>
+[Unit 5: Writing Classes](#unit-5---writing-classes)</br>
+[Unit 6: Array](#unit-6---array)</br>
+[Unit 7: ArrayList](#unit-7---arraylist)</br>
+[Unit 8: 2D Array](#unit-8---2d-array)</br>
+[Unit 9: Inheritance](#unit-9---inheritance)</br>
+[Unit 10: Recursion](#unit-10---recursion)</br>
 
 # Unit 1 - Primitive Types 
 <details><summary>Click to Open</summary>
@@ -273,7 +273,9 @@ x = x + 1
 </p>
 </details>
 
-
+# Unit 2 - Using Objects 
+<details><summary>Click to Open</summary>
+<p>
 
 ```ruby
 public class Main {
