@@ -20,7 +20,7 @@ The following computational thinking practices describe what skills students sho
 
 ## TABLE OF CONTENTS
 The course content is organized into ten commonly taught units:</br>
-[Unit 1: Primitive Types](#unit-1---primitive-types)</br>
+[Unit 1: Primitive Types](click-to-open)</br>
 [Unit 2: Using Objects](#unit-2---using-objects)</br>
 [Unit 3: Boolean Expressions and if Statements](#unit-3---boolean-expressions-and-if-statements)</br>
 [Unit 4: Iteration](#unit-4---iteration)</br>
@@ -261,7 +261,7 @@ A code block is denoted by curly braces, { }.  Notice that the print statement u
 This is referred to as a **concatenation operator** where you can add a string literal to a variable.
 
 Java like other programs has simplified the compound operators.  **Compound Assignment Operators** performs two tasks in one step.  It performs a mathematical calculation by and assignment.  It is written as:  
-```
+```ruby
 x +=1
 
 // notice the simplicity of the code versus the code below.
@@ -270,12 +270,36 @@ x = x + 1
 // What would happen if you accidently type the plus sign in after the equal sign?
 // How would that affect your program?
 ```
-</p>
-</details>
 
-# Unit 2 - Using Objects 
-<details><summary>Click to Open</summary>
-<p>
+## Assignment 1
+### Compound Operators
+```ruby
+
+public class CompoundOperators
+{
+  public static void main(String[] args)
+  {
+    int numPeople = 0;  
+    double totalYears = 0;
+
+    double years = 11.5;  // I will soon be halfway through my junior year.
+
+    totalYears = totalYears + years;
+    numPeople = numPeople + 1;
+  }
+}
+```
+- [ ] Rewrite the statements of the program above to use the compound assignment and/or the increment/decrement operators.
+- [ ] TODO 1) Add at least three other people to your program, such as siblings, friends, or neighbors.
+- [ ] TODO 2) Use people that are in different grades to validate your program can work for different school grades.
+- [ ] TODO 3) For their years in school, use values that indicate they will soon be halfway through their current school year, as shown in the provided code.
+- [ ] TODO 4)The average years you and your friends, siblings, neighbors have been in school.
+- [ ] TODO 5) The total days you have all been in school, assuming you spend 180 days per year in school.
+- [ ] TODO 6) The average days you have all spent in school.
+
+<p align="center">---------------------------------------------------------------------------- </p>
+
+When you are using replit, you can create different programs and have them execute on the Main.java page.
 
 ```ruby
 public class Main {
@@ -286,4 +310,53 @@ public class Main {
   }
 }
 ```
+Use this format for Assignment 2 and all future programs where you are asked to create two different programs.
+
+## Assignment 2
+### Average Test Score
+Directions: Write two programs that will do the following:
+
+**Average Test Score**
+- [ ] ask the user for four test scores
+- [ ] calculate and show the result
+
+**Cashier Totals**
+- [ ] ask the user for the number of burgers sold and how much each one costs
+- [ ] ask the user for the number of fries sold and how much each costs
+- [ ] display the total items sold
+- [ ] display the total sales
+
+### Example Output:
+```
+Enter the first test score:
+95
+Enter the second test score:
+87
+Enter the third test score:
+74
+Enter the forth test score:
+75
+
+Average test score: 82.75%
+---------------------------------
+Enter the number of burgers ordered:
+10
+Price of a burger:
+5.65
+Enter the number of fries ordered:
+4
+Price of fries:
+1.95
+
+Total Items Sold: 14
+Total Sales: $64.3
+```
+</p>
+</details>
+
+# Unit 2 - Using Objects 
+<details><summary>Click to Open</summary>
+<p>
+
+
 
