@@ -18,9 +18,13 @@ The following computational thinking practices describe what skills students sho
 <b>Code Testing</b>: Analyze program code for correctness, equivalence,and errors.</br>
 <b>Documentation</b>: Describe the behavior and conditions thatproduce identified results in a program.</br>
 
+For this course we will be using various Integrated Development Environment (IDE) software to help you manage your programs, data files, & images.  
+Coding Rooms will be our primary online IDE for this course.  For your personal development and collaboration, you may want to use an online IDE 
+that will allow you to collaborate with peers.  If you are using a personal laptop, a good desktop IDE to install is VS Code.  
+
 ## TABLE OF CONTENTS
 The course content is organized into ten commonly taught units:</br>
-[Unit 1: Primitive Types](click-to-open)</br>
+[Unit 1: Primitive Types](#unit-1---primitive-types)</br>
 [Unit 2: Using Objects](#unit-2---using-objects)</br>
 [Unit 3: Boolean Expressions and if Statements](#unit-3---boolean-expressions-and-if-statements)</br>
 [Unit 4: Iteration](#unit-4---iteration)</br>
@@ -32,7 +36,7 @@ The course content is organized into ten commonly taught units:</br>
 [Unit 10: Recursion](#unit-10---recursion)</br>
 
 # Unit 1 - Primitive Types 
-<details><summary>Click to Open</summary>
+<details><summary>Lessons</summary>
 <p>
 
 
@@ -351,6 +355,26 @@ Price of fries:
 Total Items Sold: 14
 Total Sales: $64.3
 ```
+
+
+## Casting and Range of Variables
+There are some unique features to Java that help programmers create programs that are flexible in how they display data.  We learned earlier </br>
+that we need to declare a variable by it's type.  It can be an int or a double.  As you may remember, an int is any whole negative or positive number.</br>
+A double is any number with a decimal.  1.0 is a whole number, but it has a decimal. So, Java considers 1.0 as a double.</br>  We can convert the double</br> 
+by declaring a new variable that changes the double to an int.
+
+``` 
+double temp = 98.6;
+int newTemp = temp;
+```
+
+You will need to be familiar with some terms:
+
+- [ ] **widening** - converting from a smaller data type (int) to a larger data type (double).
+- [ ] **narrowing** - converting a larger data type (double) to a smaller data type (int).
+
+
+
 </p>
 </details>
 
