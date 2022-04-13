@@ -23,25 +23,44 @@ Coding Rooms will be our primary online IDE for this course.  For your personal 
 that will allow you to collaborate with peers.  If you are using a personal laptop, a good desktop IDE to install is VS Code.  
 
 ## TABLE OF CONTENTS
+<details><summary>Click Here</summary>
+ <p>
+
 The course content is organized into ten commonly taught units:</br>
-[Unit 1: Primitive Types](#unit-1---primitive-types)</br>
-[Unit 2: Using Objects](#unit-2---using-objects)</br>
-[Unit 3: Boolean Expressions and if Statements](#unit-3---boolean-expressions-and-if-statements)</br>
-[Unit 4: Iteration](#unit-4---iteration)</br>
-[Unit 5: Writing Classes](#unit-5---writing-classes)</br>
-[Unit 6: Array](#unit-6---array)</br>
-[Unit 7: ArrayList](#unit-7---arraylist)</br>
-[Unit 8: 2D Array](#unit-8---2d-array)</br>
-[Unit 9: Inheritance](#unit-9---inheritance)</br>
-[Unit 10: Recursion](#unit-10---recursion)</br>
+</br>
+| Chapter 1: Java Code Fundamentals | Chapter 2: Iteration and Classes | Chapter 3: Arrays | Chapter 4: Inheritance and Recursion |
+| :---: | :---: |:---: | :---: |
+| **Unit 1 - Primitive Types** |  |  |  |
+| [Why Programming? Why Java?](#why-programming-why-java) |  |  |  |
+| [Variables and Data Types](#variables-and-data-types) |  |  |  |
+| Expressions and Assignment Statements |  |  |  |
+| Compound Assignment Operators |  |  |  |
+| Casting and Range Variables |  |  |  |
+| Project: Numbers Riddle |  |  |  |
+| **Unit 2 - Using Objects** |  |  |  |
+| Objects: Instances of Classes  |  |  |  |
+| Creating and Storing Objects |  |  |  |
+| Calling a Void Method |  |  |  |
+| Calling a Void Method with Parameters |  |  |  |
+| Calling a Non-Void Method |  |  |  |
+| String Objects: Concatenation, Literals, and More |  |  |  |
+| String Methods |  |  |  |
+| Wrapper Classes: Integer and Doubles |  |  |  |
+| Using a Math Class |  |  |  |
+| Project: Mad Libs |  |  |  |
+| **Unit 3 - Boolean Expressions and if Statements** |  |  |  |
+| Boolean Expression |
+| If Statements and Control Flow |
+| if/ else Statements |
+| else if Statements |
+| Compound Boolean Expressions |
+| Equivalent Boolean Expressions |
+| Comparing Objects |
+| Project: Choose Your Path |
 
-# Unit 1 - Primitive Types 
-<details><summary>Lessons</summary>
-<p>
-
-
-
-## Why Programming? Why Java?
+ </p></details>
+ 
+# Why Programming Why Java
 
 Every Java program begins with the creation of a class.  Consider a class as a blueprint for your program.  In this instance, we created a class called MyFirstClass.  Within the class there is a main method that is required to execute the program.  Below is a simple program that will print "Hello, World".</br>Notice that with every ' { ' there is a corresponding ' } '.  In class, you may hear me refer to it as a curly brace.  A missing a curly brace is one of the most common errors among new programmers.  The name 'public' allows users to be able to see the specific parts of your program.  Notice also that the name of the class starts with a capital letter.  The main class with always start with a capital letter.
 ![first_Java](https://user-images.githubusercontent.com/12989939/162324090-a9292f5d-3c02-46d8-bb05-e69cb0f72845.PNG)
@@ -65,8 +84,15 @@ With **every** program that you submit, I want you to list the following:
  
 Please follow the convention shown below.</br>
 
-![naming_Convention](https://user-images.githubusercontent.com/12989939/162331128-d1b0a742-298a-4e2e-b6de-97afe928bee3.PNG)
-
+```
+/*
+* Programmer(s):
+* Date:
+* Course Name: AP Computer Science A
+* Section: Period #
+* Purpose/ Assignment:
+*/
+```
 
 ## Assignment 1
 
@@ -101,7 +127,7 @@ There is no test to run when you are complete. Please screenshot your code with 
 
 
 
-## Variables and Data Types
+# Variables and Data Types
 There are eight primitive types in Java. In no particular order, they are int, double, boolean, float, char, byte, long and short.  For this course we will be using only int, double, and boolean.
 - [ ] **int** is short for integer deals with whole numbers
 - [ ] **double** is a 64 bit data type that stores decimal numbers
