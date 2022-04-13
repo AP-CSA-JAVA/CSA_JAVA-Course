@@ -64,6 +64,7 @@ With **every** program that you submit, I want you to list the following:
 - and the assignment  
  
 Please follow the convention shown below.</br>
+
 ![naming_Convention](https://user-images.githubusercontent.com/12989939/162331128-d1b0a742-298a-4e2e-b6de-97afe928bee3.PNG)
 
 
@@ -83,8 +84,18 @@ For this assignment, you will create a program that outputs a personal timeline 
 
 Include seven meaningful events in your life. No repetitive events such as "started kindergarten, started first grade, etc".
 
-Make it look professional. HINT: use \t
-![timeline](https://user-images.githubusercontent.com/12989939/162494607-3d0fe461-5139-4116-b049-bebc9103c9c4.PNG)
+Make it look professional. HINT: use \t</br>
+```
+Year                 Age                    Description
+1971             0 years old                Born in Long Beach
+1971             .25 years old              Had hernia surgery
+1976             5 years old                Started kindergarten
+1989             17 years old               Graduated high school
+1995             24 years old               Graduated college Long Beach State
+1998             27 years old               Got Married
+1998             27 years old               Began teaching career
+```
+
 
 There is no test to run when you are complete. Please screenshot your code with result and include it in your Canvas assignment.
 
@@ -395,6 +406,7 @@ System.out.println("Total eggs = " + eggs/ (double) dozen);
 Example output:
 Total eggs = 0.75
 ```
+If you were to print the variables of eggs and down, you would see that the values are 9 & 12 respectively.
 </p>
 </details>
 
