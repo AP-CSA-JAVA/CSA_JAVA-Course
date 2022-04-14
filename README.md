@@ -35,7 +35,7 @@ The course content is organized into ten commonly taught units:</br>
 | [Variables and Data Types](#variables-and-data-types) |  |  |  |
 | [Expressions and Assignment Statements](#expressions-and-assignment-statements) |  |  |  |
 | [Compound Assignment Operators](#compound-assignment-operators) |  |  |  |
-| Casting and Range Variables |  |  |  |
+| [Casting and Range Variables](#casting-and-range-variables) |  |  |  |
 | Project: Numbers Riddle |  |  |  |
 | **Unit 2 - Using Objects** |  |  |  |
 | Objects: Instances of Classes  |  |  |  |
@@ -394,7 +394,7 @@ Total Sales: $64.3
 ```
 
 
-## Casting and Range of Variables
+# Casting and Range of Variables
 There are some unique features to Java that help programmers create programs that are flexible in how they display data.  We learned earlier </br>
 that we need to declare a variable by it's type.  It can be an int or a double.  As you may remember, an int is any whole negative or positive number.</br>
 A double is any number with a decimal.  1.0 is a whole number, but it has a decimal. So, Java considers 1.0 as a double.</br>  
