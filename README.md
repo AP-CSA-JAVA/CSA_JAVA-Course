@@ -33,7 +33,7 @@ The course content is organized into ten commonly taught units:</br>
 | **Unit 1 - Primitive Types** |  |  |  |
 | [Why Programming? Why Java?](#why-programming-why-java) |  |  |  |
 | [Variables and Data Types](#variables-and-data-types) |  |  |  |
-| Expressions and Assignment Statements |  |  |  |
+| [Expressions and Assignment Statements](#expressions-and-assignment-statements) |  |  |  |
 | Compound Assignment Operators |  |  |  |
 | Casting and Range Variables |  |  |  |
 | Project: Numbers Riddle |  |  |  |
@@ -188,7 +188,7 @@ Use a Scanner object to create an input feature in your program.  Click on [Scan
 There is no test to run when you are complete. Please screenshot your code with result and include it in your assignment.
 
 
-## Expressions and Assignment Statements
+# Expressions and Assignment Statements
 Math Operators are a very important part of computing. Below are the most common operators that we will be using in this course.
 | Symbol | Name  | Usage |
 | :---:  | :---: | :---: |
