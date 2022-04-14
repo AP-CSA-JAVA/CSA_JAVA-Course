@@ -34,7 +34,7 @@ The course content is organized into ten commonly taught units:</br>
 | [Why Programming? Why Java?](#why-programming-why-java) |  |  |  |
 | [Variables and Data Types](#variables-and-data-types) |  |  |  |
 | [Expressions and Assignment Statements](#expressions-and-assignment-statements) |  |  |  |
-| Compound Assignment Operators |  |  |  |
+| [Compound Assignment Operators](#compound-assignment-operators) |  |  |  |
 | Casting and Range Variables |  |  |  |
 | Project: Numbers Riddle |  |  |  |
 | **Unit 2 - Using Objects** |  |  |  |
@@ -276,7 +276,7 @@ Dividing: 4 with remainder 0
 
 
 
-## Compound Assignment Operators
+# Compound Assignment Operators
 
 In Java, you can modify a variable by referencing it, performing an operation on it, and assigning the result back to the variable. Thus, you can reference a variable to change its own value. For example, if x equals 0 , the following statement modifies x.</br>
 
