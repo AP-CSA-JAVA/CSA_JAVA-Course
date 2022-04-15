@@ -436,7 +436,55 @@ If you were to print the variables of eggs and down, you would see that the valu
 </p>
 </details>
 
-# Unit 2 - Using Objects 
+# Project: Numbers Riddle
+
+###Your First Project
+In this project, you will write a program that incorporates the Java™ concepts you have learned throughout this unit.
+
+Your program will include:
+
+- [ ] Use of the camelCase naming convention
+- [ ] Both multiline and inline comments
+- [ ] The print and printtln methods
+- [ ] Variables
+- [ ] Arithmetic expressions
+- [ ] The compound assignment operator
+- [ ] Conversion between int and double data types
+
+## The Numbers Riddle
+
+<p align="center">Choose any integer, double it, add six, divide it in half, and subtract the number you started with. The answer is always three! </p>
+
+**Important:** No shortcuts! You know the answer to the riddle will always be three, but your program is being used to test and validate the riddle. You should print the result of all calculations, not just “3.”
+
+###Requirements of this project
+
+Your program should allow any number to be stored in a variable and printed out. Then, the program should output its double, output six added to it, output that number divided in half, and, finally, output that number subtracted by the original number. In this way, the program displays each calculation, and of course, the final result of three.
+
+Looking back at previous programs and the requirements stated above, you know you will need:
+- [ ] a class definition header that matches the file name
+- [ ] the main method of the program
+- [ ] a variable defined as the “starting number you choose”
+- [ ] six variables representing integer and double data types and positive, negative, and zero values (see details in Step 5)
+- [ ] an algorithm(s) that processes the chosen number
+- [ ] a print statement displaying the number you chose
+- [ ] a print statement displaying each calculation and the final result
+- [ ] comments in your code
+- [ ] use of camelCase when appropriate
+
+### Test Cases
+Create variables and choose numbers that match the following six number types to verify your program works for each.  
+- [ ] Positive Integer
+- [ ] Negative Integer
+- [ ] Zero
+- [ ] One
+- [ ] Positive Double
+- [ ] Negative Double
+
+## Document and Present
+
+Create a slideshow of your program and how your program works. As part of your project documentation, you will take screenshots of your program’s code and output.
+
 <details><summary>Click to Open</summary>
 <p>
 
