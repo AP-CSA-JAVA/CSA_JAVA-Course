@@ -374,7 +374,7 @@ If you were to print the variables of eggs and down, you would see that the valu
 </p>
 </details>
 
-# Project: Numbers Riddle
+# Numbers Riddle Project 
 
 ###Your First Project
 In this project, you will write a program that incorporates the Java™ concepts you have learned throughout this unit.
