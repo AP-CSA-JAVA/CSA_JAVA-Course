@@ -31,7 +31,7 @@ The course content is organized into ten commonly taught units:</br>
 | Chapter 1: Java Code Fundamentals | Chapter 2: Iteration and Classes | Chapter 3: Arrays | Chapter 4: Inheritance and Recursion |
 | :---: | :---: |:---: | :---: |
 | **Unit 1 - Primitive Types** |  |  |  |
-| [Why Programming? Why Java?](#why-programming-why-java) |  |  |  |
+| [Why Programming? Why Java?](.../Unit_1/Unit1/#why-programming-why-java) |  |  |  |
 | [Variables and Data Types](#variables-and-data-types) |  |  |  |
 | [Expressions and Assignment Statements](#expressions-and-assignment-statements) |  |  |  |
 | [Compound Assignment Operators](#compound-assignment-operators) |  |  |  |
