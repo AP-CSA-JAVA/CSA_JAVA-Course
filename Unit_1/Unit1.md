@@ -423,3 +423,4 @@ Create variables and choose numbers that match the following six number types to
 
 Create a slideshow of your program and how your program works. As part of your project documentation, you will take screenshots of your program’s code and output.
 
+Inline `code` has `back-ticks around` it.
