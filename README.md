@@ -64,10 +64,10 @@ The course content is organized into ten commonly taught units:</br>
 ###	Below is a comprehensive list of vocabulary words every AP Computer Science A student should be familiar with.
 #### Did I miss a word? Please let me know...
 <details><summary>Click Here</summary>
- <p>
-|   |   |
+ <p></br>
+
+| Term  | Definition |
 | :---: | :--- |
-| Term	| Definition |
 | !	| A logical operator that reverses the state of a boolean value |
 | &&	| A logical operator that evaluates to true only if both sides are true| 
 | ==	| An operator to compare two pieces of primitive data or two addresses| 
@@ -315,8 +315,15 @@ The course content is organized into ten commonly taught units:</br>
 
 </p></details>
 
+## Academic Integrity
 <details><summary>Click to Open</summary>
 <p>
+ This is a reminder that each student is responsible for their own work.  Assignments that are designated as team/ group assignments must have each students name within the block header.  Other assignments students may collaborate with another student, but each student must submit their own work and the assignment cannot be a facsimile of their peers work.  Submitted assignments that has another student's name on it and not your name will be considered as cheating and subject to the schools policy regarding plagiarism/ cheating.  Furthermore, assignments that have been deemed as plagirised will receive a '0' on the assignment.
+
+If you have any questions, please contact me.
+ </p>
+ </details>
+
 
 
 
