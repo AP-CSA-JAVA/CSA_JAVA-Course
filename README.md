@@ -60,7 +60,7 @@ The course content is organized into ten commonly taught units:</br>
 
  </p></details>
 
-# AP Computer Science A Vocabulary
+## AP Computer Science A Vocabulary
 ###	Below is a comprehensive list of vocabulary words every AP Computer Science A student should be familiar with.
 #### Did I miss a word? Please let me know...
 <details><summary>Click Here</summary>
