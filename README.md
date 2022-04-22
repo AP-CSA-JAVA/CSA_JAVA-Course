@@ -30,33 +30,38 @@ The course content is organized into ten commonly taught units:</br>
 </br>
 | Chapter 1: Java Code Fundamentals | Chapter 2: Iteration and Classes | Chapter 3: Arrays | Chapter 4: Inheritance and Recursion |
 | :---: | :---: |:---: | :---: |
-| **Unit 1 - Primitive Types** |  |  |  |
-| [Why Programming? Why Java?](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/blob/main/Unit_1/Unit1.md/#why-programming-why-java) |  |  |  |
-| [Variables and Data Types](#variables-and-data-types) |  |  |  |
-| [Expressions and Assignment Statements](#expressions-and-assignment-statements) |  |  |  |
-| [Compound Assignment Operators](#compound-assignment-operators) |  |  |  |
-| [Casting and Range Variables](#casting-and-range-variables) |  |  |  |
-| Project: Numbers Riddle |  |  |  |
-| **Unit 2 - Using Objects** |  |  |  |
-| Objects: Instances of Classes  |  |  |  |
-| Creating and Storing Objects |  |  |  |
-| Calling a Void Method |  |  |  |
-| Calling a Void Method with Parameters |  |  |  |
-| Calling a Non-Void Method |  |  |  |
-| String Objects: Concatenation, Literals, and More |  |  |  |
-| String Methods |  |  |  |
-| Wrapper Classes: Integer and Doubles |  |  |  |
-| Using a Math Class |  |  |  |
-| Project: Mad Libs |  |  |  |
-| **Unit 3 - Boolean Expressions and if Statements** |  |  |  |
-| Boolean Expression |
-| If Statements and Control Flow |
-| if/ else Statements |
-| else if Statements |
-| Compound Boolean Expressions |
-| Equivalent Boolean Expressions |
-| Comparing Objects |
-| Project: Choose Your Path |
+| **Unit 1 - Primitive Types** | **Unit 4 - Iteration** | **Unit 6 - Arrays** | **Unit 9 - Inheritance** |
+| [Why Programming? Why Java?](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/blob/main/Unit_1/Unit1.md/#why-programming-why-java) | While Loops | Array Creation and Access | Creating Superclasses and Subclasses |
+| [Variables and Data Types](#variables-and-data-types) | For Loops | Traversing Arrays | Writing constructors for Subclasses |
+| [Expressions and Assignment Statements](#expressions-and-assignment-statements) | Developing Algorithms Using Strings | Enhanced Loops for Arrays | Overriding Methods |
+| [Compound Assignment Operators](#compound-assignment-operators) | Nested Iterations | Developing Algorithms Using Arrays | Super Keyword |
+| [Casting and Range Variables](#casting-and-range-variables) | Informal Code Analysis | Project: Memory Game | Creating References Using Inheritance Hierachies |
+| Project: Numbers Riddle | Project: Consumer Review Lab |  | Polymorphism |
+|  |  |  | Object Superclass |
+|  |  |  | Project: Celebrity Lab |
+| **Unit 2 - Using Objects** | **Unit 5 - Writing Classes** | **Unit 7 - ArrayList** |  |
+| Objects: Instances of Classes  | Anatomy of a Class | Introduction to ArrayList |  |
+| Creating and Storing Objects | Constructors | ArrayList Methods |  |
+| Calling a Void Method | Documentation with Commands | Traversing ArrayLists |  |
+| Calling a Void Method with Parameters | Accessor Methods | Developing Algorithms Using ArrayLists |  |
+| Calling a Non-Void Method | Mutator Methods | Searching |  |
+| String Objects: Concatenation, Literals, and More | Writing Methods | Sorting |  |
+| String Methods | Static Variables and Methods | Project: Data Lab |  |
+| Wrapper Classes: Integer and Doubles | Scope and Access |  |  |
+| Using a Math Class | `this` Keyword |  |  |
+| Project: Mad Libs | Ethical and social Implications of Computing |  |  |
+|  | Project: Game of Nim |  |  |
+|  | Project - Sell my Pet Food |  |  |
+| **Unit 3 - Boolean Expressions and if Statements** |  | **Unit 8 - 2D Arrays** | **Unit 10 - Recursion** |
+| Boolean Expression |  | 2D Arrays | Recursion |
+| If Statements and Control Flow |  | Traversing 2D Arrays | Recursive Searching and Sorting |
+| if/ else Statements |  | Project: Stenography Lab | Project: TBD |
+| else if Statements |  | **Problem:** Data Lab | **Problem:** Almost Anything! |
+| Compound Boolean Expressions |  |  |
+| Equivalent Boolean Expressions |  |  |
+| Comparing Objects |  |  |
+| Project: Choose Your Path |  |  |
+| **Problem:** Escape Room |  |  |
 
  </p></details>
 
