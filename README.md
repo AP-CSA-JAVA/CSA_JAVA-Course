@@ -236,7 +236,7 @@ The course content is organized into ten commonly taught units:</br>
  | new operator	 | A keyword used when calling the constructor for an object being instantiated | 
  | newline	 | A character that tells the console to move the cursor to the next line | 
  | no-args constructor	 | An empty constructor, one that takes no parameters | 
- | NOT	 | Reverses value of the input | 
+ | NOT | Reverses value of the input | 
  | null	 | A keyword meaning "has no value" | 
  | O notation	 | A way of showing the relative theoretical speed of a search or sort algorithm | 
  | object	 | An instance of a class that exists when a program is running | 
@@ -255,12 +255,12 @@ The course content is organized into ten commonly taught units:</br>
  | peripheral	 | Computer part not inside the chassis | 
  | pivot	 | A value in a set used to split the set into two parts on which the data will be sorted | 
  | polymorphism	 | The concept that a single named behavior can be performed differently by various subclasses | 
- | primitive type	 | One of the built-in non-object data types that is stored by value | 
+ | primitive type | One of the built-in non-object data types that is stored by value | 
  | printf	 | A special method for Strings that includes formatting characters in the string literal | 
  | private	 | A keyword that makes a variable or method accessible from only inside the class | 
  | procedural language	 | A language where programs are expected to operate in a predictable order | 
  | pseudocode	 | A way of designing a program using written descriptions of what the code will be | 
- | public	A keyword that makes a variable or method accessible from outside the class | 
+ | public	| A keyword that makes a variable or method accessible from outside the class | 
  | Quicksort	 | A sort with O(n log n) speed that splits the data using a randomly chosen pivot | 
  | RAM	 | Computer component that stores currently in-use data | 
  | readability	 | A measure of how easily something is understood by others | 
@@ -331,6 +331,12 @@ If you have any questions, please contact me.
  </p>
  </details>
 
-
-
-
+## Java Style Guidelines
+<details><summary>Click Here</summary>
+ <p></br>
+ Please review the Java Style Guidelines
+ 
+ [Java Style Guidelines](http://cit.evc.edu/comsc075/java_style_guide.html)
+ 
+ </p>
+ </details>
