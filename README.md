@@ -325,8 +325,8 @@ The course content is organized into ten commonly taught units:</br>
 ## Academic Integrity
 <details><summary>Click to Open</summary>
 <p>
- This is a reminder that each student is responsible for their own work.  Assignments that are designated as team/ group assignments must have each students name within the block header.  Other assignments students may collaborate with another student, but each student must submit their own work and the assignment cannot be a facsimile of their peers work.  Submitted assignments that has another student's name on it and not your name will be considered as cheating and subject to the schools policy regarding plagiarism/ cheating.  Furthermore, assignments that have been deemed as plagirised will receive a '0' on the assignment.
-
+This is a reminder that each student is responsible for their own work.  Assignments that are designated as team/ group assignments must have each students name within the block header.  Other assignments students may collaborate with another student, but each student must submit their own work and the assignment cannot be a facsimile of their peers work.  Submitted assignments that has another student's name on it and not your name will be considered as cheating and subject to the schools policy regarding plagiarism/ cheating.  Furthermore, assignments that have been deemed as plagirised will receive a '0' on the assignment.
+ 
 If you have any questions, please contact me.
  </p>
  </details>
