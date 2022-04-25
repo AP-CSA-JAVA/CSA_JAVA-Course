@@ -32,10 +32,10 @@ The course content is organized into ten commonly taught units:</br>
 | :---: | :---: |:---: | :---: |
 | **Unit 1 - Primitive Types** | **Unit 4 - Iteration** | **Unit 6 - Arrays** | **Unit 9 - Inheritance** |
 | [Why Programming? Why Java?](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/blob/main/Unit_1/Unit1.md/#why-programming-why-java) | While Loops | Array Creation and Access | Creating Superclasses and Subclasses |
-| [Variables and Data Types](#variables-and-data-types) | For Loops | Traversing Arrays | Writing constructors for Subclasses |
-| [Expressions and Assignment Statements](#expressions-and-assignment-statements) | Developing Algorithms Using Strings | Enhanced Loops for Arrays | Overriding Methods |
-| [Compound Assignment Operators](#compound-assignment-operators) | Nested Iterations | Developing Algorithms Using Arrays | Super Keyword |
-| [Casting and Range Variables](#casting-and-range-variables) | Informal Code Analysis | Project: Memory Game | Creating References Using Inheritance Hierachies |
+| [Variables and Data Types](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/blob/main/Unit_1/Unit1.md/#variables-and-data-types) | For Loops | Traversing Arrays | Writing constructors for Subclasses |
+| [Expressions and Assignment Statements](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/blob/main/Unit_1/Unit1.md/#expressions-and-assignment-statements) | Developing Algorithms Using Strings | Enhanced Loops for Arrays | Overriding Methods |
+| [Compound Assignment Operators](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/blob/main/Unit_1/Unit1.md/#compound-assignment-operators) | Nested Iterations | Developing Algorithms Using Arrays | Super Keyword |
+| [Casting and Range Variables](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/blob/main/Unit_1/Unit1.md/#casting-and-range-variables) | Informal Code Analysis | Project: Memory Game | Creating References Using Inheritance Hierachies |
 | [Project: Numbers Riddle](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/blob/main/Chapter_1/Unit1.md/#numbers-riddle-project) | Project: Consumer Review Lab |  | Polymorphism |
 |  |  |  | Object Superclass |
 |  |  |  | Project: Celebrity Lab |
