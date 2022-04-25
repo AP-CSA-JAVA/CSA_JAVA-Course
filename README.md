@@ -36,7 +36,7 @@ The course content is organized into ten commonly taught units:</br>
 | [Expressions and Assignment Statements](#expressions-and-assignment-statements) | Developing Algorithms Using Strings | Enhanced Loops for Arrays | Overriding Methods |
 | [Compound Assignment Operators](#compound-assignment-operators) | Nested Iterations | Developing Algorithms Using Arrays | Super Keyword |
 | [Casting and Range Variables](#casting-and-range-variables) | Informal Code Analysis | Project: Memory Game | Creating References Using Inheritance Hierachies |
-| Project: Numbers Riddle | Project: Consumer Review Lab |  | Polymorphism |
+| [Project: Numbers Riddle](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/blob/main/Chapter_1/Unit1.md/#numbers-riddle-project) | Project: Consumer Review Lab |  | Polymorphism |
 |  |  |  | Object Superclass |
 |  |  |  | Project: Celebrity Lab |
 | **Unit 2 - Using Objects** | **Unit 5 - Writing Classes** | **Unit 7 - ArrayList** |  |
