@@ -21,9 +21,10 @@ You may work by yourself or in a team of 2-3 people.  Your program must show som
 | May 5 | Create a project proposal/ design document | 10 |
 |  | -  Brainstorming Notes (extra credit) |  |
 |  | Project Approval |   |
-| June 1 | Student Development of program | 90 |
-|  |   |   |
-|  | **Submit your Year-End Project:** |  |
+|    |
+|  | Student Development of program |  |
+|    |
+| June 1 | **Submit your Year-End Project:** | 90 |
 |  | 1) Written Proposal |  |
 |  | 2) Program Code |  |
 |  | 3) Video of your program running |  |
