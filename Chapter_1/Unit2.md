@@ -16,11 +16,40 @@ class Bicycle {
 
     // attribute or state
     int gear = 1;
-    string color = white;
+    String color = white;
     
     // behavior or method
     public void pedaling() {
         System.out.println("Pedaling to accelerate!");
     }
 } 
+```
+**Things to Remember**
+Object-oriented Programming Facts:
+- [ ] Properties are the characteristics of your objects
+- [ ] Object-Oriented programming focuses on the data represented inthe problem
+- [ ] Object-Oriented programs remove details from many programs, making the code rewrite less frequent.
+- [ ] Methods are the actions that your object can take.
+- [ ] A class is like a blueprint or a recipe.
+- [ ] A class is used to create an instance of a class, called an object
+
+A **constructor** in Java is a special method that is used to initialize objects. The constructor is called when an object of a class is created. It can be used to set initial values for object attributes.
+
+Take a look at the example below:
+
+```ruby
+// Create a Main class
+public class Main {
+  int age;  // Create a class attribute
+
+  // Create a class constructor for the Main class
+  public Main() {
+    age = 5;  // Set the initial value for the class attribute x
+  }
+
+  public static void main(String[] args) {
+    Main myObj = new Main(); // Create an object of class Main (This will call the constructor)
+    System.out.println("My age is " + myObj.age); // Print the value of x
+  }
+}
 ```
