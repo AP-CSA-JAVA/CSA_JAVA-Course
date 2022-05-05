@@ -120,3 +120,60 @@ Number: 12
 Goals: 0
 Starting: True
 ```
+
+# Scanner Class
+Scanner class is a package that provide primitive input within Java programs.  It can be found in the [java.util Package](https://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html) website.
+
+- [ ] First you need to import the class from Oracle by typing `import java.util.Scanner;`
+- [ ] To create an object of the Scanner class, we must pass a defined object in `System.in` which is the standard input.
+- [ ] To read the data type we need to use the function next**data type**().  For example, to read an `int` we would type `nextint()`.
+- [ ] To read strings, we would use `nextLine()`.
+- [ ] To read a single character we would use `next()` or `charAt()`.  The `next()` function returns the next word in the input as a string.  Whereas, `charAt()` function returns the first character in that string.
+
+```java
+import java.util.Scanner; // import scanner class
+public class Main
+{
+	public static void main(String[] args)
+	{
+		// Declare the object and initialize with
+		// predefined standard input object
+		Scanner test = new Scanner(System.in);
+
+		// String input
+		String name = test.nextLine();
+
+		// Character input
+		char gender = test.next().charAt(0);
+
+		// Numerical data input
+		int age = test.nextInt();
+		long mobileNum = test.nextLong();
+		double gpa = test.nextDouble();
+
+		// Print the values to check if the input was correctly obtained.
+		System.out.println("Name: "+name);
+		System.out.println("Gender: "+gender);
+		System.out.println("Age: "+age);
+		System.out.println("Mobile Number: "+mobileNum);
+		System.out.println("GPA: "+gpa);
+	}
+}
+```
+**Sample input**
+
+```java
+Jon
+Male
+50
+1236549898
+3.0
+```
+**Sample Output**
+```java
+Name: Jon
+Gender: M
+Age: 50
+Mobile Number: 1236549898
+GPA: 3.0
+```
