@@ -124,7 +124,7 @@ Starting: True
 # Scanner Class
 Scanner class is a package that provide primitive input within Java programs.  It can be found in the [java.util Package](https://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html) website.
 
-- [ ] First you need to import the class from Oracle by typing `import java.util.Scanner;`
+- [ ] First you need to import the class from the online Oracle repository by typing `import java.util.Scanner;`
 - [ ] To create an object of the Scanner class, we must pass a defined object in `System.in` which is the standard input.
 - [ ] To read the data type we need to use the function next**data type**().  For example, to read an `int` we would type `nextint()`.
 - [ ] To read strings, we would use `nextLine()`.
