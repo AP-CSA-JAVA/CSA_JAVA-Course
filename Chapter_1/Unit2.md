@@ -59,7 +59,7 @@ public class Main {
 A **toString()** is an prebuilt method in Java that returns the value in a string format. Therefore, any object that this method is applied on, will return as a string object.
 
 The first example below is when it is called as a method of an object instance.
-```ruby
+```java
 public class Main {
     public static void main( String args[] ) {
 
@@ -72,7 +72,7 @@ public class Main {
 ```
 
 The second example is when you call the method of the relevant class by passing the value as an argument.
-```ruby
+```java
 class Child{
 
   String name;
@@ -101,4 +101,22 @@ class Main {
 }
 ```
 
+## Assignment 1
 
+Write a class related to a professional sport (i.e. Football, soccer, basketball, etc)
+
+- [ ] Create class related to a professional sport of our choice
+- [ ] Create attributes/instance variables for the class
+- [ ] Create a constructor for your class
+- [ ] Create an instance of the class
+- [ ] Create a toString() method to printout the object
+
+**Example**
+```java
+Name: Marcelo Vieira da Silva Jr.
+Team: Real Madrid 
+Position: left-back
+Number: 12
+Goals: 0
+Starting: True
+```
