@@ -71,7 +71,7 @@ public class Main {
 }
 ```
 
-The second example is when you call the method of the relevant class by passing the value as an argument.
+The second example is when you call the method of a class by passing the value as an argument.
 ```java
 class Child{
 
