@@ -121,6 +121,13 @@ Goals: 0
 Starting: True
 ```
 
+##Assignment 2
+- [ ] Complete the cakeRunner program
+- [ ] Submit your program code
+
+![cakeRunner](https://user-images.githubusercontent.com/12989939/167034699-91f78db4-b728-41cf-9eb3-d151d1c9c9b3.PNG)
+
+
 # Scanner Class
 Scanner class is a package that provide primitive input within Java programs.  It can be found in the [java.util Package](https://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html) website.
 
