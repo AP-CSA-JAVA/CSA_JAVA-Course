@@ -11,7 +11,7 @@ We can also create a method that will call the attributes within a class.  For e
 The value of the attributes define the state of the object. What makes this efficient is that the class does not hold any space in the memory becaue we just create a definition.  The moment we instantiate the class the object will require a dedicated space in memory.  Thus we can say that a Class defines how the object should look and object is the actual representation of the same.
 
 ### Example:
-```ruby
+```java
 class Bicycle {
 
     // attribute or state
@@ -39,7 +39,7 @@ A **constructor** in Java is a special method that is used to initialize objects
 
 Take a look at the example below:
 
-```ruby
+```java
 // Create a Main class
 public class Main {
   int age;  // Create a class attribute
