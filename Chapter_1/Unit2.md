@@ -121,7 +121,7 @@ Goals: 0
 Starting: True
 ```
 
-##Assignment 2
+## Assignment 2
 - [ ] Complete the cakeRunner program
 - [ ] Submit your program code
 
