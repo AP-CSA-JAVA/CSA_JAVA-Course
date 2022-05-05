@@ -53,3 +53,46 @@ public class Main {
   }
 }
 ```
+
+A **toString()** is an prebuilt method in Java that returns the value in a string format. Therefore, any object that this method is applied on, will return as a string object.
+
+For example:
+```
+public class Main {
+    public static void main( String args[] ) {
+
+        //Creating an integer of value 1
+        int x = 1;
+        // Calling the toString() method as a function of the Integer variable
+        System.out.println( x.toString() );
+    }
+}
+```
+
+Another Example:
+```
+class Pet{
+
+  String name;
+  Integer age; 
+
+  Pet(String n, Integer a){
+    this.name=n; // 'this' is a keyword in Java that refers to the instance of the variable
+    this.age=a;
+  }
+//Over-riding the toString() function as a class function
+  public String toString(){
+    return "The name of the pet is " + this.name + ". The age of the pet is " + this.age;
+  }
+}
+
+public class Main {
+    public static void main( String args[] ) {
+      Pet p = new Pet("Jane",10);
+      //Calling the class version of toString()
+        System.out.println(p.toString());
+      //Calling the original toString()
+      System.out.println(Integer.toString(12));
+    }
+}
+```
