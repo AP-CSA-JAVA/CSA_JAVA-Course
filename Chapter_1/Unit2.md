@@ -125,6 +125,7 @@ Starting: True
 - [ ] Complete the cakeRunner program
 - [ ] Submit your program code
 
+**Sample Output**
 ![cakeRunner](https://user-images.githubusercontent.com/12989939/167034699-91f78db4-b728-41cf-9eb3-d151d1c9c9b3.PNG)
 
 
