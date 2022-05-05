@@ -33,6 +33,7 @@ Object-oriented Programming Facts:
 - [ ] A class is like a blueprint or a recipe.
 - [ ] A class is used to create an instance of a class, called an object
 
+The next two concepts will be used in most of your programs moving forward.  Read the 
 A **constructor** in Java is a special method that is used to initialize objects. The constructor is called when an object of a class is created. It can be used to set initial values for object attributes.
 
 Take a look at the example below:
@@ -57,38 +58,38 @@ public class Main {
 A **toString()** is an prebuilt method in Java that returns the value in a string format. Therefore, any object that this method is applied on, will return as a string object.
 
 For example:
-```
+```ruby
 public class Main {
     public static void main( String args[] ) {
 
         //Creating an integer of value 1
-        int x = 1;
-        // Calling the toString() method as a function of the Integer variable
+        integer x = 1;
+        // Calling the toString method as a function of the Integer variable
         System.out.println( x.toString() );
     }
 }
 ```
 
 Another Example:
-```
-class Pet{
+```ruby
+class Child{
 
   String name;
-  Integer age; 
+  Integer age; //Integer is a wrapper class for the int data type
 
-  Pet(String n, Integer a){
-    this.name=n; // 'this' is a keyword in Java that refers to the instance of the variable
+  Child(String n, Integer a){
+    this.name=n;
     this.age=a;
   }
 //Over-riding the toString() function as a class function
   public String toString(){
-    return "The name of the pet is " + this.name + ". The age of the pet is " + this.age;
+    return "The name of the child is " + this.name + ". The age of the child is " + this.age + ".";
   }
 }
 
-public class Main {
+class Main {
     public static void main( String args[] ) {
-      Pet p = new Pet("Jane",10);
+      Child p = new Child("Francis",10);
       //Calling the class version of toString()
         System.out.println(p.toString());
       //Calling the original toString()
