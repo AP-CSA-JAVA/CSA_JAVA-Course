@@ -93,6 +93,7 @@ class Child{
 
 class Main {
     public static void main( String args[] ) {
+      Child a = new Child(); //constructor - no defined parameter
       Child p = new Child("Francis",10); // constructor - overloading
       
       //Calling the class version of toString()
@@ -187,4 +188,17 @@ Gender: M
 Age: 50
 Mobile Number: 1236549898
 GPA: 3.0
+```
+
+# Calling a Void Method
+
+Class methods represent an object's behavior, defining what an object can do within a program.
+
+Recall the constructor created above.  One constructor was created that had no defined parameters.  The second constructor had two parameters, Francis and 10.
+
+```java
+class Main {
+    public static void main( String args[] ) {
+      Child a = new Child(); //constructor - no defined parameter
+      Child p = new Child("Francis",10); // constructor - overloading
 ```
