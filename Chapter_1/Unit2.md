@@ -194,11 +194,53 @@ GPA: 3.0
 
 Class methods represent an object's behavior, defining what an object can do within a program.
 
-Recall the constructor created above.  One constructor was created that had no defined parameters.  The second constructor had two parameters, Francis and 10.
+Recall the Child program created above.  We will use the one constructor that has no defined parameters to create behaviors of our object.
 
 ```java
+class Child{
+
+  String name;
+  Integer age; //Integer is a wrapper class for the int data type
+
+  Child(){
+    System.out.println("I am a child."); // constructor without parameters
+    }
+  Child(String n, Integer a){ //constructor with parameters
+    this.name=n;
+    this.age=a; //'this' is an instance of the variable
+  }
+   public void running(){
+     System.out.println("I am running!");
+  }
+//Over-riding the toString function as a class function
+  public String toString(){
+    return "The name of the child is " + this.name + ". The age of the child is " + this.age + ".";
+  }
+}
+
 class Main {
     public static void main( String args[] ) {
       Child a = new Child(); //constructor - no defined parameter
       Child p = new Child("Francis",10); // constructor - overloading
+      
+      //Calling the class version of toString()
+        System.out.println(p.toString());
+        
+      //Calling the original toString()
+      System.out.println(Integer.toString(12));
+      a.running();
+    }
+}
+      a.running();
+      a.sleeping();
+      a.dancing();
+      
+```
+
+**Sample output**
+```java
+I am a child
+The name of the child is Francis. The age of the child is 10.
+12
+I am running!
 ```
