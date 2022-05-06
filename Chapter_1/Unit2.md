@@ -254,3 +254,30 @@ I am running!
 Zzzzzzz!
 Lah-la-la-LAH-la-la!
 ```
+
+The `void` keyword will not return *anything* from the method declaration.  While the void method of the class does not return any value, the constructors return an object reference.  Thus, they can be called as a part of an expression.  Explained another way, void means that nothing is returned from a method, nor will anything ever be returned. It is an absence of any value.
+
+**NOTE:** 'Null' is a place holder for a reference that does not have an object.  If defines a memory address that may eventually hold a value.
+
+## Assignment 1
+## Instructions DigiPet
+You will create a class DigiPet
+
+### Steps
+1. Create a DigiPet class with the following attributes:  
+	- `animal`
+	- `name`
+	- `food`
+	- `energy`
+	- `happy`
+	- 
+2. Create a constructor with variables for `animal` and `name`. `food`, `energy`, and `happy` should be set to 20.
+3. In the main class, create two pets with their name and print them out.
+4. Create the following void methods according to these rules:
+  - `speak()` - If your pet is a dog, print out "woof! woof!". If you choose another animal follow the format of the dog. 
+  - `play()` - print out "Do you wanna play?", increase `happy` by 10, decrease `food` and `energy` by 10.
+  - `feed()` - If food is greater than 15, print out the pet is not hungry and decrease `happy` by 10. Otherwise, print "Yay! Food!", increase `food` and `energy` by 10.
+  - `sleep()` - if energy is 20 or more, print out the pet is not sleepy and decrease `happy` by 10. Otherwise, print "zzzzzzzzzzzzzzz!", increase `happy` by 15 and set energy to 50.
+5. Call the methods according to the comments in main
+
+
