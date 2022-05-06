@@ -212,6 +212,14 @@ class Child{
    public void running(){
      System.out.println("I am running!");
   }
+     public void sleeping(){
+     System.out.println("Zzzzzzz!");
+  }
+     public void singing(){
+     System.out.println("Lah-la-la-LAH-la-la!");
+  }
+  
+  
 //Over-riding the toString function as a class function
   public String toString(){
     return "The name of the child is " + this.name + ". The age of the child is " + this.age + ".";
@@ -228,12 +236,12 @@ class Main {
         
       //Calling the original toString()
       System.out.println(Integer.toString(12));
-      a.running();
+      a.running(); // running method
+      a.sleeping(); // sleeping method
+      a.singing(); //singing method
     }
 }
-      a.running();
-      a.sleeping();
-      a.dancing();
+
       
 ```
 
@@ -243,4 +251,6 @@ I am a child
 The name of the child is Francis. The age of the child is 10.
 12
 I am running!
+Zzzzzzz!
+Lah-la-la-LAH-la-la!
 ```
