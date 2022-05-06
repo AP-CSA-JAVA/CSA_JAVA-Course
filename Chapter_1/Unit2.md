@@ -33,6 +33,8 @@ Object-oriented Programming Facts:
 - [ ] A class is like a blueprint or a recipe.
 - [ ] A class is used to create an instance of a class, called an object
 
+# Creating and Storing Objects
+
 The next two concepts will be used in most of your programs moving forward.  Read through **constructor** and **toString()** below.
 
 A **constructor** in Java is a special method that is used to initialize objects. The constructor is called when an object of a class is created. It can be used to set initial values for object attributes.
@@ -91,7 +93,7 @@ class Child{
 
 class Main {
     public static void main( String args[] ) {
-      Child p = new Child("Francis",10); // constructor
+      Child p = new Child("Francis",10); // constructor - overloading
       
       //Calling the class version of toString()
         System.out.println(p.toString());
