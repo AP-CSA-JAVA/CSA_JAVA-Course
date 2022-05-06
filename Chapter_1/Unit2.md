@@ -132,6 +132,17 @@ Starting: True
 **Sample Output**
 ![cakeRunner](https://user-images.githubusercontent.com/12989939/167034699-91f78db4-b728-41cf-9eb3-d151d1c9c9b3.PNG)
 
+## Extra Credit
+**Instructions:**
+
+1. Edit the Bike class to have the following attributes:
+   - `kind`
+   - `size`
+   - `cost`
+2. Create a no argument constructor. The values are Cruiser, 26, and 175.99
+3. Create a constructor that only takes type and size as parameters
+4. Create a constructor that takes all the parameters
+5. Create two more objects that will match the sample output.
 
 # Scanner Class
 Scanner class is a package that provide primitive input within Java programs.  It can be found in the [java.util Package](https://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html) website.
@@ -207,7 +218,7 @@ class Child{
     }
   Child(String n, Integer a){ //constructor with parameters
     this.name=n;
-    this.age=a; //'this' is an instance of the variable
+    this.age=a; //'this' is a Java keyword and refers to a specific instance of the variable
   }
    public void running(){
      System.out.println("I am running!");
