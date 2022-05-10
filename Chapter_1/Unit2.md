@@ -48,18 +48,18 @@ public class Main {
 
   // Create a class constructor for the Main class
   public Main() {
-    age = 5;  // Set the initial value for the class attribute x
+    age = 5;  // Set the initial value for the class attribute age
   }
 
   public static void main(String[] args) {
     Main myObj = new Main(); // Create an object of class Main (This will call the constructor)
-    System.out.println("My age is " + myObj.age); // Print the value of x
+    System.out.println("My age is " + myObj.age); // Print the value of age
   }
 }
 ```
 It is a *best practice* to keep your class definitions in a separate file from the file containing the main method that executes a program. This way, your class definitions can be used in another program without connecting to unnecessary code.
 
-A **toString()** is an prebuilt method in Java that returns the value in a string format. Therefore, any object that this method is applied on, will return as a string object.
+A **toString()** is a prebuilt method in Java that returns the value in a string format. Therefore, any object that this method is applied on, will return as a string object.
 
 The first example below is when it is called as a method of an object instance.
 ```java
