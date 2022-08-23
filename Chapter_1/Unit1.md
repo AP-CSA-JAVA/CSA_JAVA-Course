@@ -69,7 +69,7 @@ There is no test to run when you are complete. Please screenshot your code with 
 
 # Variables and Data Types
 There are eight primitive types in Java. In no particular order, they are int, double, boolean, float, char, byte, long and short.  For this course we will be using only int, double, and boolean.
-- [ ] **int** is short for integer deals with whole numbers
+- [ ] **int** is short for integer deals with whole numbers and uses 32 bits of memory
 - [ ] **double** is a 64 bit data type that stores decimal numbers
 - [ ] **boolean** is used to represent true or false values
 - [ ] **float** is very similar to a double but uses less memory
