@@ -22,6 +22,8 @@ javac NewClass.java  # whatever that file is java NewClass
 
 Lastly, make sure that the Main class is label correctly!  In this instance it will be called <i>NewClass</i>.
 
+![replit](https://user-images.githubusercontent.com/12989939/186237117-a3565f6b-bc38-4edd-be59-f787ed233668.PNG)
+
 ## Comments in Code
 Typing comments within your program is considered a professional practice, and I expect you to comment your code as appropriate throughtout the year.  There are two ways to comment in Java.  The first is a single line comment and you would use two foward slashes( // ) to indicate a comment.  The second is a multiline comment that uses a forward slash followed by an asterisks and closed with an asterisk followed by a forward slash ( /* */ )</br></br>
 With **every** program that you submit, I want you to list the following: 
