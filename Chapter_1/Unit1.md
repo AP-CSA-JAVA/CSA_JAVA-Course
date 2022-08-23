@@ -42,6 +42,8 @@ Create the happy face image above using the following criteria:
 - [ ] Use System.out.print at least two lines
 - [ ] Use System.out.println at least three times
 
+Please screenshot your code with result and include it in your Canvas assignment.
+
 ## Assignment 2
 ### Personal Timeline
 For this assignment, you will create a program that outputs a personal timeline of events in your life. The timeline will proceed vertically. Earlier events will be displayed nearer the top of the timeline while later events are displayed near the bottom.
