@@ -14,11 +14,11 @@ Notice that within the main method there is a print statement.  Let's break down
 ## Replit.com
 By default, Replit uses Main as the main class.  To change the Main class name to a class name of your choosing, create a new file within replit and call it <i>.repl</i>.  Within the file type the following:
 
-'''
+```
 run="sh main.sh"
 
 javac NewClass.java  # whatever that file is java NewClass
-'''
+```
 
 Lastly, make sure that the Main class is label correctly!  In this instance it will be called <i>NewClass</i>.
 
