@@ -11,6 +11,17 @@ Notice that within the main method there is a print statement.  Let's break down
 - [ ] <b>println()</b> is invoked by the PrintStream class.</br>
 - [ ] <b>NOTE</b> <i>println()</i> when executed will return to the next line. Whereas <i>print()</i> will execute the string literal but not return to the next line. You can also create a new line inside a print statement by adding   <b>\n</b>  anywhere inside the quotation marks of a print statement.
 
+## Replit.com
+By default, Replit uses Main as the main class.  To change the Main class name to a class name of your choosing, create a new file within replit and call it <i>.repl</i>.  Within the file type the following:
+
+'''
+run="sh main.sh"
+
+javac NewClass.java  # whatever that file is java NewClass
+'''
+
+Lastly, make sure that the Main class is label correctly!  In this instance it will be called <i>NewClass</i>.
+
 ## Comments in Code
 Typing comments within your program is considered a professional practice, and I expect you to comment your code as appropriate throughtout the year.  There are two ways to comment in Java.  The first is a single line comment and you would use two foward slashes( // ) to indicate a comment.  The second is a multiline comment that uses a forward slash followed by an asterisks and closed with an asterisk followed by a forward slash ( /* */ )</br></br>
 With **every** program that you submit, I want you to list the following: 
