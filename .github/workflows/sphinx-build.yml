@@ -27,10 +27,10 @@ jobs:
     - name: Build Sphinx for Github Pages
       run: |
         rm -rf ./docs
-        python -m sphinx source build
+        python -m sphinx source docs
     - name: Create .nojekyll
       run: |
-        touch ./build/.nojekyll
+        touch ./docs/.nojekyll
     - name: Commit and push changes
       run: |
         git config --global user.name "AP-CSA-JAVA"
