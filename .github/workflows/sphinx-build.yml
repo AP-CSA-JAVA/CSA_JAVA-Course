@@ -30,7 +30,7 @@ jobs:
         python -m sphinx source build
     - name: Copy repository README
       run: |
-        cat ./source/README.md > README.md
+        cat ./source/home.md > README.md
     - name: Create .nojekyll
       run: |
         touch ./build/.nojekyll
