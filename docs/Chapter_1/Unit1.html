@@ -157,7 +157,6 @@
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../home.html">Home</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../welcome.html">Welcome</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../AP_Resource/APResources.html">AP Resources</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Chapter 1:</span></p>
@@ -465,7 +464,7 @@ Michael’s weekly allowance is $0.00<br></p>
 <span class="n">weightOnJupiter</span> <span class="o">=</span> <span class="mi">130</span>
 <span class="n">earthGravity</span> <span class="o">=</span> <span class="mf">9.81</span> 
 <span class="n">jupiterGravity</span> <span class="o">=</span> <span class="mf">24.79</span>
-<span class="n">weightOnJupiter</span> <span class="o">=</span> <span class="n">weightOnJupiter</span> <span class="o">/</span> <span class="n">earthGravity</span> <span class="o">*</span> <span class="n">jupiterGravity</span>
+<span class="o">**</span><span class="n">weightOnJupiter</span> <span class="o">=</span> <span class="n">weightOnJupiter</span> <span class="o">/</span> <span class="n">earthGravity</span> <span class="o">*</span> <span class="n">jupiterGravity</span><span class="o">**</span>
 
 </pre></div>
 </div>
@@ -480,25 +479,28 @@ this assignment.</strong></p>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-center"><p>Mercury</p></td>
+<tr class="row-even"><td class="text-center"><p>Earth</p></td>
+<td class="text-center"><p>9.81</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Mercury</p></td>
 <td class="text-center"><p>3.59</p></td>
 </tr>
-<tr class="row-odd"><td class="text-center"><p>Venus</p></td>
+<tr class="row-even"><td class="text-center"><p>Venus</p></td>
 <td class="text-center"><p>8.87</p></td>
 </tr>
-<tr class="row-even"><td class="text-center"><p>Mars</p></td>
+<tr class="row-odd"><td class="text-center"><p>Mars</p></td>
 <td class="text-center"><p>3.711</p></td>
 </tr>
-<tr class="row-odd"><td class="text-center"><p>Jupiter</p></td>
+<tr class="row-even"><td class="text-center"><p>Jupiter</p></td>
 <td class="text-center"><p>24.79</p></td>
 </tr>
-<tr class="row-even"><td class="text-center"><p>Saturn</p></td>
+<tr class="row-odd"><td class="text-center"><p>Saturn</p></td>
 <td class="text-center"><p>11.08</p></td>
 </tr>
-<tr class="row-odd"><td class="text-center"><p>Uranus</p></td>
+<tr class="row-even"><td class="text-center"><p>Uranus</p></td>
 <td class="text-center"><p>10.67</p></td>
 </tr>
-<tr class="row-even"><td class="text-center"><p>Neptune</p></td>
+<tr class="row-odd"><td class="text-center"><p>Neptune</p></td>
 <td class="text-center"><p>11.15</p></td>
 </tr>
 </tbody>
