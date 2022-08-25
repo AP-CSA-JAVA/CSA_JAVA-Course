@@ -11,7 +11,6 @@ Welcome to CSA JAVA!
    :caption: Contents:
 
    Home <../home.md>
-   Welcome <./welcome.md>
    AP Resources <./AP_Resource/APResources.md>
    
 
