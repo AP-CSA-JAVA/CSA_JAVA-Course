@@ -1,0 +1,54 @@
+.. CSA JAVA Course documentation master file, created by
+   sphinx-quickstart on Tue Aug 23 21:33:03 2022.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to CSA JAVA!
+===========================================
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Contents:
+
+   Home <../home.md>
+   Welcome <./welcome.md>
+   AP Resources <./AP_Resource/APResources.md>
+   
+
+.. toctree:: 
+   :maxdepth: 2
+   :caption: Chapter 1:
+
+   Unit 1 <./Chapter_1/Unit1.md>
+   Unit 2 <./Chapter_1/Unit2.md>
+   Unit 3 <./Chapter_1/Unit3.md>
+
+.. toctree:: 
+   :maxdepth: 2
+   :caption: Chapter 2:
+
+   Unit 4 <./Chapter_2/Unit4.md>
+   Unit 5 <./Chapter_2/Unit5.md>
+
+.. toctree:: 
+   :maxdepth: 2
+   :caption: Chapter 3:
+
+   Unit 6 <./Chapter_3/Unit6.md>
+   Unit 7 <./Chapter_3/Unit7.md>
+   Unit 8 <./Chapter_3/Unit8.md>
+
+.. toctree:: 
+   :maxdepth: 2
+   :caption: Chapter 4:
+
+   Unit 9 <./Chapter_4/Unit9.md>
+   Unit 10 <./Chapter_4/Unit10.md>
+   Final Project <./Chapter_4/Final_Project.md>
+   
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
