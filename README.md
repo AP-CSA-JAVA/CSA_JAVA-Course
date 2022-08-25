@@ -31,12 +31,12 @@ The course content is organized into ten commonly taught units:</br>
 | Chapter 1: Java Code Fundamentals | Chapter 2: Iteration and Classes | Chapter 3: Arrays | Chapter 4: Inheritance and Recursion |
 | :---: | :---: |:---: | :---: |
 | **Unit 1 - Primitive Types** | **Unit 4 - Iteration** | **Unit 6 - Arrays** | **Unit 9 - Inheritance** |
-| [Why Programming? Why Java?](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/blob/main/Chapter_1/Unit1.md/#why-programming-why-java) | While Loops | Array Creation and Access | Creating Superclasses and Subclasses |
-| [Variables and Data Types](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/blob/main/Chapter_1/Unit1.md/#variables-and-data-types) | For Loops | Traversing Arrays | Writing constructors for Subclasses |
-| [Expressions and Assignment Statements](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/blob/main/Chapter_1/Unit1.md/#expressions-and-assignment-statements) | Developing Algorithms Using Strings | Enhanced Loops for Arrays | Overriding Methods |
-| [Compound Assignment Operators](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/blob/main/Chapter_1/Unit1.md/#compound-assignment-operators) | Nested Iterations | Developing Algorithms Using Arrays | Super Keyword |
-| [Casting and Range Variables](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/blob/main/Chapter_1/Unit1.md/#casting-and-range-of-variables) | Informal Code Analysis | Project: Memory Game | Creating References Using Inheritance Hierachies |
-| [Project: Numbers Riddle](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/blob/main/Chapter_1/Unit1.md/#numbers-riddle-project) | Project: Consumer Review Lab |  | Polymorphism |
+| [Why Programming? Why Java?](https://ap-csa-java.github.io/CSA_JAVA-Course/Chapter_1/Unit1.html#why-programming-why-java) | While Loops | Array Creation and Access | Creating Superclasses and Subclasses |
+| [Variables and Data Types](https://ap-csa-java.github.io/CSA_JAVA-Course/Chapter_1/Unit1.html#variables-and-data-types) | For Loops | Traversing Arrays | Writing constructors for Subclasses |
+| [Expressions and Assignment Statements](hhttps://ap-csa-java.github.io/CSA_JAVA-Course/Chapter_1/Unit1.html#expressions-and-assignment-statements) | Developing Algorithms Using Strings | Enhanced Loops for Arrays | Overriding Methods |
+| [Compound Assignment Operators](https://ap-csa-java.github.io/CSA_JAVA-Course/Chapter_1/Unit1.html#compound-assignment-operators) | Nested Iterations | Developing Algorithms Using Arrays | Super Keyword |
+| [Casting and Range Variables](https://ap-csa-java.github.io/CSA_JAVA-Course/Chapter_1/Unit1.html#casting-and-range-of-variables) | Informal Code Analysis | Project: Memory Game | Creating References Using Inheritance Hierachies |
+| [Project: Numbers Riddle](https://ap-csa-java.github.io/CSA_JAVA-Course/Chapter_1/Unit1.html#numbers-riddle-project) | Project: Consumer Review Lab |  | Polymorphism |
 |  |  |  | Object Superclass |
 |  |  |  | Project: Celebrity Lab |
 | **Unit 2 - Using Objects** | **Unit 5 - Writing Classes** | **Unit 7 - ArrayList** |  |
