@@ -189,7 +189,7 @@ to worry about converting units.
 weightOnJupiter = 130
 earthGravity = 9.81 
 jupiterGravity = 24.79
-weightOnJupiter = weightOnJupiter / earthGravity * jupiterGravity
+**weightOnJupiter = weightOnJupiter / earthGravity * jupiterGravity**
 
 ```
 **Using the chart below, create a program called GalaxyWeight that outputs information of the users weight
@@ -198,6 +198,7 @@ this assignment.**
 
 | Planet | Acceleration Due to Gravity (m/sec^2) |
 | :---: | :---: |
+| Earth | 9.81 |
 | Mercury | 3.59 |
 | Venus | 8.87 |
 | Mars | 3.711 |
