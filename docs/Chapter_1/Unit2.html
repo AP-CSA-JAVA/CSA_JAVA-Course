@@ -1,0 +1,629 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Unit 3" href="Unit3.html" /><link rel="prev" title="Unit 1 - Primitive Types" href="Unit1.html" />
+
+    <meta name="generator" content="sphinx-5.1.1, furo 2022.06.21"/>
+        <title>Unit 2 - Using Objects - CSA JAVA Course</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">CSA JAVA Course</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  
+  <span class="sidebar-brand-text">CSA JAVA Course</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../home.html">Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AP_Resource/APResources.html">AP Resources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 1:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Unit1.html">Unit 1</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Unit 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unit3.html">Unit 3</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 2:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_2/Unit4.html">Unit 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_2/Unit5.html">Unit 5</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 3:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_3/Unit6.html">Unit 6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_3/Unit7.html">Unit 7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_3/Unit8.html">Unit 8</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 4:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_4/Unit9.html">Unit 9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_4/Unit10.html">Unit 10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_4/Final_Project.html">Final Project</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="unit-2-using-objects">
+<h1>Unit 2 - Using Objects<a class="headerlink" href="#unit-2-using-objects" title="Permalink to this heading">#</a></h1>
+<section id="objects-instances-of-classes">
+<h2>Objects: Instances of Classes<a class="headerlink" href="#objects-instances-of-classes" title="Permalink to this heading">#</a></h2>
+<p><strong>GOALS</strong></p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Explain the relationship between a class and an object</p></li>
+</ul>
+<p>As stated earlier, a <em>class</em> is a blueprint of an object.  So we can also say that an <em>object</em> is an instance of a class.  What we define as a class determines what objects that will be associated with the class and how things will operate within it.  For example, we can define <code class="docutils literal notranslate"><span class="pre">human</span></code> as a class.  We can assign attributes to that class like a nose, ears, eyes, hands, feet, etc.  <strong>NOTE:</strong> Attribute and state are interchangable terms.</p>
+<p>We can also create a <em>method</em> that will call the attributes within a class.  For example, we can create a method called running or sleeping.  Now each of these methods will use an attribute or attributes of its class to perform something within the <code class="docutils literal notranslate"><span class="pre">human</span></code> class.  If we create an instance of the <code class="docutils literal notranslate"><span class="pre">human</span></code> class, let say Object John , then John will have all the attributes (nose , ears, eyes, hands, legs) unique to it and will also have access to these methods to carry out basic functions. <strong>NOTE:</strong> Method and behavior are interchangable terms.</p>
+<p>The value of the attributes define the state of the object. What makes this efficient is that the class does not hold any space in the memory becaue we just create a definition.  The moment we <em>instantiate</em> the class the object will require a dedicated space in memory.  Thus we can say that a Class defines how the object should look and object is the actual representation of the same.</p>
+<section id="example">
+<h3>Example:<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Bicycle</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// attribute or state</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">gear</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">white</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// behavior or method</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">pedaling</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Pedaling to accelerate!&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"> </span>
+</pre></div>
+</div>
+<p><strong>Things to Remember</strong>
+Object-oriented Programming Facts:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Properties are the characteristics of your objects</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Object-Oriented programming focuses on the data represented inthe problem</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Object-Oriented programs remove details from many programs, making the code rewrite less frequent.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Methods are the actions that your object can take.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> A class is like a blueprint or a recipe.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> A class is used to create an instance of a class, called an object</p></li>
+</ul>
+</section>
+</section>
+<section id="creating-and-storing-objects">
+<h2>Creating and Storing Objects<a class="headerlink" href="#creating-and-storing-objects" title="Permalink to this heading">#</a></h2>
+<p>The next two concepts will be used in most of your programs moving forward.  Read through <strong>constructor</strong> and <strong>toString()</strong> below.</p>
+<p>A <strong>constructor</strong> in Java is a special method that is used to initialize objects. The constructor is called when an object of a class is created. It can be used to set initial values for object attributes.</p>
+<p>Take a look at the example below:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create a Main class</span><span class="w"></span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span><span class="w">  </span><span class="c1">// Create a class attribute</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">// Create a class constructor for the Main class</span><span class="w"></span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="nf">Main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w">  </span><span class="c1">// Set the initial value for the class attribute age</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Main</span><span class="w"> </span><span class="n">myObj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Main</span><span class="p">();</span><span class="w"> </span><span class="c1">// Create an object of class Main (This will call the constructor)</span><span class="w"></span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;My age is &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">myObj</span><span class="p">.</span><span class="na">age</span><span class="p">);</span><span class="w"> </span><span class="c1">// Print the value of age</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>It is a <em>best practice</em> to keep your class definitions in a separate file from the file containing the main method that executes a program. This way, your class definitions can be used in another program without connecting to unnecessary code.</p>
+<p>A <strong>toString()</strong> is a prebuilt method in Java that returns the value in a string format. Therefore, any object that this method is applied on, will return as a string object.</p>
+<p>The first example below is when it is called as a method of an object instance.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">args</span><span class="o">[]</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">//Creating an integer of value 1</span><span class="w"></span>
+<span class="w">        </span><span class="n">integer</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Calling the toString method as a function of the Integer variable</span><span class="w"></span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="na">toString</span><span class="p">()</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>The second example is when you call the method of a class by passing the value as an argument.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Child</span><span class="p">{</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">Integer</span><span class="w"> </span><span class="n">age</span><span class="p">;</span><span class="w"> </span><span class="c1">//Integer is a wrapper class for the int data type</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">Child</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="w"> </span><span class="n">a</span><span class="p">){</span><span class="w"></span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="o">=</span><span class="n">n</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">age</span><span class="o">=</span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="c1">//&#39;this&#39; is an instance of the variable</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="c1">//Over-riding the toString function as a class function</span><span class="w"></span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">(){</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;The name of the child is &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;. The age of the child is &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">age</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;.&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">args</span><span class="o">[]</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">Child</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Child</span><span class="p">();</span><span class="w"> </span><span class="c1">//constructor - no defined parameter</span><span class="w"></span>
+<span class="w">      </span><span class="n">Child</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Child</span><span class="p">(</span><span class="s">&quot;Francis&quot;</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span><span class="w"> </span><span class="c1">// constructor - overloading</span><span class="w"></span>
+<span class="w">      </span>
+<span class="w">      </span><span class="c1">//Calling the class version of toString()</span><span class="w"></span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span><span class="w"></span>
+<span class="w">        </span>
+<span class="w">      </span><span class="c1">//Calling the original toString()</span><span class="w"></span>
+<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Integer</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="mi">12</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<section id="assignment-1">
+<h3>Assignment 1<a class="headerlink" href="#assignment-1" title="Permalink to this heading">#</a></h3>
+<p>Write a class related to a professional sport (i.e. Football, soccer, basketball, etc)</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create class related to a professional sport of our choice</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create attributes/instance variables for the class</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create a constructor for your class</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create an instance of the class</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create a toString() method to printout the object</p></li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="nl">Name</span><span class="p">:</span><span class="w"> </span><span class="n">Marcelo</span><span class="w"> </span><span class="n">Vieira</span><span class="w"> </span><span class="n">da</span><span class="w"> </span><span class="n">Silva</span><span class="w"> </span><span class="n">Jr</span><span class="p">.</span><span class="w"></span>
+<span class="nl">Team</span><span class="p">:</span><span class="w"> </span><span class="n">Real</span><span class="w"> </span><span class="n">Madrid</span><span class="w"> </span>
+<span class="nl">Position</span><span class="p">:</span><span class="w"> </span><span class="n">left</span><span class="o">-</span><span class="n">back</span><span class="w"></span>
+<span class="nl">Number</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="w"></span>
+<span class="nl">Goals</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="nl">Starting</span><span class="p">:</span><span class="w"> </span><span class="n">True</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="assignment-2">
+<h3>Assignment 2<a class="headerlink" href="#assignment-2" title="Permalink to this heading">#</a></h3>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Complete the cakeRunner program</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Submit your program code</p></li>
+</ul>
+<p><strong>Sample Output</strong>
+<img alt="cakeRunner" src="https://user-images.githubusercontent.com/12989939/167034699-91f78db4-b728-41cf-9eb3-d151d1c9c9b3.PNG" /></p>
+</section>
+<section id="extra-credit">
+<h3>Extra Credit<a class="headerlink" href="#extra-credit" title="Permalink to this heading">#</a></h3>
+<p><strong>Instructions:</strong></p>
+<ol class="arabic simple">
+<li><p>Edit the Bike class to have the following attributes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">kind</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cost</span></code></p></li>
+</ul>
+</li>
+<li><p>Create a no argument constructor. The values are Cruiser, 26, and 175.99</p></li>
+<li><p>Create a constructor that only takes type and size as parameters</p></li>
+<li><p>Create a constructor that takes all the parameters</p></li>
+<li><p>Create two more objects that will match the sample output.</p></li>
+</ol>
+</section>
+</section>
+<section id="scanner-class">
+<h2>Scanner Class<a class="headerlink" href="#scanner-class" title="Permalink to this heading">#</a></h2>
+<p>Scanner class is a package that provide primitive input within Java programs.  It can be found in the <a class="reference external" href="https://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html">java.util Package</a> website.</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> First you need to import the class from the online Oracle repository by typing <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">java.util.Scanner;</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> To create an object of the Scanner class, we must pass a defined object in <code class="docutils literal notranslate"><span class="pre">System.in</span></code> which is the standard input.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> To read the data type we need to use the function next<strong>data type</strong>().  For example, to read an <code class="docutils literal notranslate"><span class="pre">int</span></code> we would type <code class="docutils literal notranslate"><span class="pre">nextint()</span></code>.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> To read strings, we would use <code class="docutils literal notranslate"><span class="pre">nextLine()</span></code>.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> To read a single character we would use <code class="docutils literal notranslate"><span class="pre">next()</span></code> or <code class="docutils literal notranslate"><span class="pre">charAt()</span></code>.  The <code class="docutils literal notranslate"><span class="pre">next()</span></code> function returns the next word in the input as a string.  Whereas, <code class="docutils literal notranslate"><span class="pre">charAt()</span></code> function returns the first character in that string.</p></li>
+</ul>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span><span class="w"> </span><span class="c1">// import scanner class</span><span class="w"></span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="w">	</span><span class="p">{</span><span class="w"></span>
+<span class="w">		</span><span class="c1">// Declare the object and initialize with</span><span class="w"></span>
+<span class="w">		</span><span class="c1">// predefined standard input object</span><span class="w"></span>
+<span class="w">		</span><span class="n">Scanner</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">		</span><span class="c1">// String input</span><span class="w"></span>
+<span class="w">		</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">test</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">		</span><span class="c1">// Character input</span><span class="w"></span>
+<span class="w">		</span><span class="kt">char</span><span class="w"> </span><span class="n">gender</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">test</span><span class="p">.</span><span class="na">next</span><span class="p">().</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">		</span><span class="c1">// Numerical data input</span><span class="w"></span>
+<span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">test</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span><span class="w"></span>
+<span class="w">		</span><span class="kt">long</span><span class="w"> </span><span class="n">mobileNum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">test</span><span class="p">.</span><span class="na">nextLong</span><span class="p">();</span><span class="w"></span>
+<span class="w">		</span><span class="kt">double</span><span class="w"> </span><span class="n">gpa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">test</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">		</span><span class="c1">// Print the values to check if the input was correctly obtained.</span><span class="w"></span>
+<span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Name: &quot;</span><span class="o">+</span><span class="n">name</span><span class="p">);</span><span class="w"></span>
+<span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Gender: &quot;</span><span class="o">+</span><span class="n">gender</span><span class="p">);</span><span class="w"></span>
+<span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Age: &quot;</span><span class="o">+</span><span class="n">age</span><span class="p">);</span><span class="w"></span>
+<span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Mobile Number: &quot;</span><span class="o">+</span><span class="n">mobileNum</span><span class="p">);</span><span class="w"></span>
+<span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;GPA: &quot;</span><span class="o">+</span><span class="n">gpa</span><span class="p">);</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Sample input</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Jon</span><span class="w"></span>
+<span class="n">Male</span><span class="w"></span>
+<span class="mi">50</span><span class="w"></span>
+<span class="mi">1236549898</span><span class="w"></span>
+<span class="mf">3.0</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Sample Output</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="nl">Name</span><span class="p">:</span><span class="w"> </span><span class="n">Jon</span><span class="w"></span>
+<span class="nl">Gender</span><span class="p">:</span><span class="w"> </span><span class="n">M</span><span class="w"></span>
+<span class="nl">Age</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="w"></span>
+<span class="n">Mobile</span><span class="w"> </span><span class="n">Number</span><span class="p">:</span><span class="w"> </span><span class="mi">1236549898</span><span class="w"></span>
+<span class="nl">GPA</span><span class="p">:</span><span class="w"> </span><span class="mf">3.0</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="calling-a-void-method">
+<h2>Calling a Void Method<a class="headerlink" href="#calling-a-void-method" title="Permalink to this heading">#</a></h2>
+<p>Class methods represent an object’s behavior, defining what an object can do within a program.</p>
+<p>Recall the Child program created above.  We will use the one constructor that has no defined parameters to create behaviors of our object.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Child</span><span class="p">{</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">Integer</span><span class="w"> </span><span class="n">age</span><span class="p">;</span><span class="w"> </span><span class="c1">//Integer is a wrapper class for the int data type</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">Child</span><span class="p">(){</span><span class="w"></span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;I am a child.&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// constructor without parameters</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="n">Child</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="w"> </span><span class="n">a</span><span class="p">){</span><span class="w"> </span><span class="c1">//constructor with parameters</span><span class="w"></span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="o">=</span><span class="n">n</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">age</span><span class="o">=</span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="c1">//&#39;this&#39; is a Java keyword and refers to a specific instance of the variable</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">running</span><span class="p">(){</span><span class="w"></span>
+<span class="w">     </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;I am running!&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">     </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">sleeping</span><span class="p">(){</span><span class="w"></span>
+<span class="w">     </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Zzzzzzz!&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">     </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">singing</span><span class="p">(){</span><span class="w"></span>
+<span class="w">     </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Lah-la-la-LAH-la-la!&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span>
+<span class="w">  </span>
+<span class="c1">//Over-riding the toString function as a class function</span><span class="w"></span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">(){</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;The name of the child is &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;. The age of the child is &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">age</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;.&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">args</span><span class="o">[]</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">Child</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Child</span><span class="p">();</span><span class="w"> </span><span class="c1">//constructor - no defined parameter</span><span class="w"></span>
+<span class="w">      </span><span class="n">Child</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Child</span><span class="p">(</span><span class="s">&quot;Francis&quot;</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span><span class="w"> </span><span class="c1">// overloaded constructor - adding one or more parameter to the constructor </span><span class="w"></span>
+<span class="w">      </span>
+<span class="w">      </span><span class="c1">//Calling the class version of toString()</span><span class="w"></span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span><span class="w"></span>
+<span class="w">        </span>
+<span class="w">      </span><span class="c1">//Calling the original toString()</span><span class="w"></span>
+<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Integer</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="mi">12</span><span class="p">));</span><span class="w"></span>
+<span class="w">      </span><span class="n">a</span><span class="p">.</span><span class="na">running</span><span class="p">();</span><span class="w"> </span><span class="c1">// running method</span><span class="w"></span>
+<span class="w">      </span><span class="n">a</span><span class="p">.</span><span class="na">sleeping</span><span class="p">();</span><span class="w"> </span><span class="c1">// sleeping method</span><span class="w"></span>
+<span class="w">      </span><span class="n">a</span><span class="p">.</span><span class="na">singing</span><span class="p">();</span><span class="w"> </span><span class="c1">//singing method</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="w">      </span>
+</pre></div>
+</div>
+<p><strong>Sample output</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">I</span><span class="w"> </span><span class="n">am</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">child</span><span class="w"></span>
+<span class="n">The</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">child</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">Francis</span><span class="p">.</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">child</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="mf">10.</span><span class="w"></span>
+<span class="mi">12</span><span class="w"></span>
+<span class="n">I</span><span class="w"> </span><span class="n">am</span><span class="w"> </span><span class="n">running</span><span class="o">!</span><span class="w"></span>
+<span class="n">Zzzzzzz</span><span class="o">!</span><span class="w"></span>
+<span class="n">Lah</span><span class="o">-</span><span class="n">la</span><span class="o">-</span><span class="n">la</span><span class="o">-</span><span class="n">LAH</span><span class="o">-</span><span class="n">la</span><span class="o">-</span><span class="n">la</span><span class="o">!</span><span class="w"></span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">void</span></code> keyword will not return <em>anything</em> from the method declaration.  While the void method of the class does not return any value, the constructors return an object reference.  Thus, they can be called as a part of an expression.  Explained another way, void means that nothing is returned from a method, nor will anything ever be returned. It is an absence of any value.</p>
+<p><strong>NOTE:</strong> ‘Null’ is a place holder for a reference that does not have an object.  If defines a memory address that may eventually hold a value.</p>
+<section id="id1">
+<h3>Assignment 1<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<section id="instructions-digipet">
+<h4>Instructions DigiPet<a class="headerlink" href="#instructions-digipet" title="Permalink to this heading">#</a></h4>
+<p>You will create a class DigiPet</p>
+</section>
+<section id="steps">
+<h4>Steps<a class="headerlink" href="#steps" title="Permalink to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p>Create a DigiPet class with the following attributes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">animal</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">food</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">energy</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">happy</span></code></p></li>
+<li></li>
+</ul>
+</li>
+<li><p>Create a constructor with variables for <code class="docutils literal notranslate"><span class="pre">animal</span></code> and <code class="docutils literal notranslate"><span class="pre">name</span></code>. <code class="docutils literal notranslate"><span class="pre">food</span></code>, <code class="docutils literal notranslate"><span class="pre">energy</span></code>, and <code class="docutils literal notranslate"><span class="pre">happy</span></code> should be set to 20.</p></li>
+<li><p>In the main class, create two pets with their name and print them out.</p></li>
+<li><p>Create the following void methods according to these rules:</p></li>
+</ol>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">speak()</span></code> - If your pet is a dog, print out “woof! woof!”. If you choose another animal follow the format of the dog.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">play()</span></code> - print out “Do you wanna play?”, increase <code class="docutils literal notranslate"><span class="pre">happy</span></code> by 10, decrease <code class="docutils literal notranslate"><span class="pre">food</span></code> and <code class="docutils literal notranslate"><span class="pre">energy</span></code> by 10.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">feed()</span></code> - If food is greater than 15, print out the pet is not hungry and decrease <code class="docutils literal notranslate"><span class="pre">happy</span></code> by 10. Otherwise, print “Yay! Food!”, increase <code class="docutils literal notranslate"><span class="pre">food</span></code> and <code class="docutils literal notranslate"><span class="pre">energy</span></code> by 10.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sleep()</span></code> - if energy is 20 or more, print out the pet is not sleepy and decrease <code class="docutils literal notranslate"><span class="pre">happy</span></code> by 10. Otherwise, print “zzzzzzzzzzzzzzz!”, increase <code class="docutils literal notranslate"><span class="pre">happy</span></code> by 15 and set energy to 50.</p></li>
+</ul>
+<ol class="arabic simple" start="5">
+<li><p>Call the methods according to the comments in main</p></li>
+</ol>
+</section>
+</section>
+<section id="calling-a-void-method-with-parameters">
+<h3>Calling a Void Method with Parameters<a class="headerlink" href="#calling-a-void-method-with-parameters" title="Permalink to this heading">#</a></h3>
+<p>Using parameters allows us the freedom to write a program that is more flexible and specific.  It is similar to providing specific instructions for the program.  When you pass multiple parameters, it is important to make sure that the order is correct.  Incorrect order will return incorrect results.  As we did with constructors, we can overload a method.  Recall that the method name has also an ordered list of parameters.  You can also overload a method by giving the method the same name as another method, and provide a different set of parameters.</p>
+<p>For example:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">school</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">grade</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">gpa</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">school</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">grade</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">gpa</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="Unit3.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Unit 3</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="Unit1.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Unit 1 - Primitive Types</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022, Jonathan Virak
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Unit 2 - Using Objects</a><ul>
+<li><a class="reference internal" href="#objects-instances-of-classes">Objects: Instances of Classes</a><ul>
+<li><a class="reference internal" href="#example">Example:</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#creating-and-storing-objects">Creating and Storing Objects</a><ul>
+<li><a class="reference internal" href="#assignment-1">Assignment 1</a></li>
+<li><a class="reference internal" href="#assignment-2">Assignment 2</a></li>
+<li><a class="reference internal" href="#extra-credit">Extra Credit</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scanner-class">Scanner Class</a></li>
+<li><a class="reference internal" href="#calling-a-void-method">Calling a Void Method</a><ul>
+<li><a class="reference internal" href="#id1">Assignment 1</a><ul>
+<li><a class="reference internal" href="#instructions-digipet">Instructions DigiPet</a></li>
+<li><a class="reference internal" href="#steps">Steps</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#calling-a-void-method-with-parameters">Calling a Void Method with Parameters</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/furo.js"></script>
+    </body>
+</html>
