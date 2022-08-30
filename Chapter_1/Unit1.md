@@ -463,7 +463,7 @@ In this project, you will write a program that incorporates the Java™ concepts
 
 Your program will include:
 
-- [ ] Use of the camelCase naming convention
+- [ ] Use of the [camelCase](https://betterprogramming.pub/string-case-styles-camel-pascal-snake-and-kebab-case-981407998841) naming convention
 - [ ] Both multiline and inline comments
 - [ ] The print and printtln methods
 - [ ] Variables
