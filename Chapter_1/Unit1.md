@@ -283,6 +283,20 @@ public class CompoundOperators
     numPeople = numPeople + 1;
   }
 }
+
+Sample Output:
+I have 11.5 years in school and 1.5 years to graduate.
+Total people: 1, total years: 11.5
+My best friend has 10.5 years in school and 2.5 years to graduate.
+Total people: 2, total years: 22.0
+My sister has 8.5 years in school and 4.5 years to graduate.
+Total people: 3, total years: 30.5
+My neighbor has 5.5 years in school and 7.5 years to graduate.
+Total people: 4, total years: 36.0
+
+Average years in school: 9.0
+Average days in school: 6480.0
+Average days per person: 1620.0
 ```
 - [ ] Rewrite the statements of the program above to use the compound assignment and/or the increment/decrement operators.
 - [ ] TODO 1) Add at least three other people to your program, such as siblings, friends, or neighbors.
