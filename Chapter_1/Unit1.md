@@ -415,6 +415,47 @@ If you were to print the variables of eggs and down, you would see that the valu
 </p>
 </details>
 
+You will explore the PlanetTravel program called FivePlanetTravel. The program is set up to plan a five-planet tour! STEP 15:
+```
+/* 
+ * Activity 1.1.5
+ */
+public class FivePlanetTravel
+{
+  public static void main(String[] args)
+  {
+    // theplanets.org average distance from earth to the planets
+    int mercury = 56974146;
+    int venus = 25724767;
+    int mars = 48678219;
+    int jupiter = 390674710;
+    int saturn = 792248270;
+
+    // number of planets to visit
+    int numPlanets = 5;
+
+    // speed of light and our speed
+    int lightSpeed =  670616629;
+    lightSpeed /= 10;
+
+    // total travel time
+    double total = 0;
+
+    /* your code here */
+  }
+}
+```
+    In place of /* your code here */ you will write a widening algorithm with new variables to show the travel time to
+    and from all planets.
+
+    You will write a casting version without new variables to show the travel times. 
+    The one rule is that you must use the provided code and not change any provided data types.
+
+Complete STEPS 17 - 21, 23
+Comment out your code as appropriate (4 points)
+
+Take a screenshot of your completed code and the output it produced.
+
 # Numbers Riddle Project 
 
 ### Your First Project
