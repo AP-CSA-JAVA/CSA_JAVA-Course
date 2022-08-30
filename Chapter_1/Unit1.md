@@ -284,6 +284,16 @@ public class CompoundOperators
   }
 }
 
+```
+- [ ] Rewrite the statements of the program above to use the compound assignment and/or the increment/decrement operators.
+- [ ] TODO 1) Add at least three other people to your program, such as siblings, friends, or neighbors.
+- [ ] TODO 2) Use people that are in different grades to validate your program can work for different school grades.
+- [ ] TODO 3) For their years in school, use values that indicate they will soon be halfway through their current school year, as shown in the provided code.
+- [ ] TODO 4)The average years you and your friends, siblings, neighbors have been in school.
+- [ ] TODO 5) The total days you have all been in school, assuming you spend 180 days per year in school.
+- [ ] TODO 6) The average days you have all spent in school.
+
+```
 Sample Output:
 I have 11.5 years in school and 1.5 years to graduate.
 Total people: 1, total years: 11.5
@@ -296,15 +306,7 @@ Total people: 4, total years: 36.0
 
 Average years in school: 9.0
 Average days in school: 6480.0
-Average days per person: 1620.0
-```
-- [ ] Rewrite the statements of the program above to use the compound assignment and/or the increment/decrement operators.
-- [ ] TODO 1) Add at least three other people to your program, such as siblings, friends, or neighbors.
-- [ ] TODO 2) Use people that are in different grades to validate your program can work for different school grades.
-- [ ] TODO 3) For their years in school, use values that indicate they will soon be halfway through their current school year, as shown in the provided code.
-- [ ] TODO 4)The average years you and your friends, siblings, neighbors have been in school.
-- [ ] TODO 5) The total days you have all been in school, assuming you spend 180 days per year in school.
-- [ ] TODO 6) The average days you have all spent in school.
+Average days per person: 1620.0 ```
 
 <p align="center">---------------------------------------------------------------------------- </p>
 
