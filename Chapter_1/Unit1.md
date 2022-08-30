@@ -318,6 +318,20 @@ Average days per person: 1620.0
 
 <p align="center">---------------------------------------------------------------------------- </p>
 
+When you are using replit, you can create different programs and have them execute on the Main.java page.
+
+```ruby
+public class Main {
+  public static void main(String[] args) {
+    ProgramOne.main(args);
+    ProgramTwo.main(args);
+    ProgramThree.main(args);
+  }
+}
+```
+Use this format for Assignment 2 and all future programs where you are asked to create two different programs.
+
+
 ## Assignment 2
 ### Average Test Score
 Directions: Write two programs that will do the following:
