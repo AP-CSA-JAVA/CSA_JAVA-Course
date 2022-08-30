@@ -265,7 +265,14 @@ x = x + 1
 // What would happen if you accidently type the plus sign in after the equal sign?
 // How would that affect your program?
 ```
-
+Java supports 11 compound-assignment operators, but for this course we will use just five.
+```
+ +=   assigns the result of the addition.
+ -=   assigns the result of the subtraction.
+ *=   assigns the result of the multiplication
+ /=   assigns the result of the division.
+ %=   assigns the remainder of the division.
+ ```
 ## Assignment 1
 ### Compound Operators
 ```ruby
@@ -310,19 +317,6 @@ Average days per person: 1620.0
 ```
 
 <p align="center">---------------------------------------------------------------------------- </p>
-
-When you are using replit, you can create different programs and have them execute on the Main.java page.
-
-```ruby
-public class Main {
-  public static void main(String[] args) {
-    ProgramOne.main(args);
-    ProgramTwo.main(args);
-    ProgramThree.main(args);
-  }
-}
-```
-Use this format for Assignment 2 and all future programs where you are asked to create two different programs.
 
 ## Assignment 2
 ### Average Test Score
