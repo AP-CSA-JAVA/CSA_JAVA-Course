@@ -327,7 +327,7 @@ public class Main {
   }
 }
 ```
-Use this format for Assignment 2 and all future programs where you are asked to create two different programs.
+Example of this in use can be found [here](https://replit.com/@jonvirak/Activity-361-Array-Creation#Main.java).  Use this format for Assignment 2 and all future programs where you are asked to create two different programs.
 
 ### Assignment 2
 #### Average Test Score
