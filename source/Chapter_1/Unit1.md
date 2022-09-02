@@ -438,6 +438,7 @@ public class FivePlanetTravel
   }
 }
 ```
+**Example Output:**
 ```java
 Travel time to ...
  Mercury 0 hours
