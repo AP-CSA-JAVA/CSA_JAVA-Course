@@ -371,9 +371,9 @@ Total Sales: $64.3
 
 
 ## Casting and Range of Variables
-There are some unique features to Java that help programmers create programs that are flexible in how they display data.  We learned earlier </br>
-that we need to declare a variable by it's type.  It can be an int or a double.  As you may remember, an int is any whole negative or positive number.</br>
-A double is any number with a decimal.  1.0 is a whole number, but it has a decimal. So, Java considers 1.0 as a double.</br>  
+There are some unique features to Java that help programmers create programs that are flexible in how they display data.  We learned earlier 
+that we need to declare a variable by it's type.  It can be an int or a double.  As you may remember, an int is any whole negative or positive number.
+A double is any number with a decimal.  1.0 is a whole number, but it has a decimal. So, Java considers 1.0 as a double.  
 We can convert the double by declaring a new variable that changes the double to an int.
 
 ``` 
@@ -387,8 +387,8 @@ You will need to be familiar with some terms:
 - [ ] **widening** - converting from a smaller data type (int) to a larger data type (double).
 - [ ] **narrowing** - converting a larger data type (double) to a smaller data type (int).
 
-In this instance, we 'narrowed' the value of temp.  There is another term that you need to be familiar with and it is called **casting**.  Casting </br>
-is converting from one data type to another, such as from a double to an int, potentially losing information. Take a look at this program:
+In this instance, we 'narrowed' the value of temp.  There is another term that you need to be familiar with and it is called **casting**.  Casting 
+is converting from one data type to another, such as from a *double* to an *int*, potentially losing information. Take a look at this program:
 ```java
 int eggs = 9;
 final int dozen = 12;// a dozen will not change
