@@ -438,11 +438,25 @@ public class FivePlanetTravel
   }
 }
 ```
-    In place of /* your code here */ you will write a widening algorithm with new variables to show the travel time to
-    and from all planets.
+```java
+Travel time to ...
+ Mercury 0 hours
+ Venus: 0 hours
+ Mars: 0 hours
+ Jupiter: 5 hours
+ Saturn:11 hours
+Total travel time:16.0
 
-    You will write a casting version without new variables to show the travel times. 
-    The one rule is that you must use the provided code and not change any provided data types.
+Travel time to ...
+ Mercury: 0.8495784968765016 hours
+ Venus: 0.38359870949813324 hours
+ Mars: 0.7258725410056196 hours
+ Jupiter: 5.825604352006665 hours
+ Saturn: 11.813728535388819 hours
+Total travel time:19.59838263477574
+```
+
+You will write a widening algorithm with new variables to show the travel time to and from all planets.  You will write a casting version without new variables to show the travel times. The one rule is that you must use the provided code and not change any provided data types.
 
 Complete STEPS 17 - 21, 23
 Comment out your code as appropriate (4 points)
