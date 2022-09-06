@@ -457,6 +457,8 @@ Travel time to ...
 Total travel time:19.59838263477574
 ```
 
+*Your ouput should look like the example above.  I am not asking you to find the average for this assignment.*
+
 You will write a widening algorithm with new variables to show the travel time to and from all planets.  You will write a casting version without new variables to show the travel times. The one rule is that you must use the provided code and not change any provided data types.
 
 Complete STEPS 17 - 21
