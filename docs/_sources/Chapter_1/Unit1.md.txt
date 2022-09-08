@@ -513,4 +513,4 @@ Create variables and choose numbers that match the following six number types to
 
 #### Document and Present
 
-Create a slideshow of your program and how your program works. As part of your project documentation, you will take screenshots of your program’s code and output.
+Create a slideshow of your program and how your program works. As part of your project documentation, you will take screenshots of your program’s code and output.  *Please include your java program with your submission.*
