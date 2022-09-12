@@ -104,8 +104,9 @@ public class Main
 ```
 It is a *best practice* to keep your class definitions in a separate file from the file containing the main method that executes a program. This way, your class definitions can be used in another program without connecting to unnecessary code.
 
-<details><summary>Program 1</summary>
-<p>
+*Object Reference variables holds a memory address that refers to a specific object*
+Take a look at the program below:
+**Program 1**
 ```java
 import java.io.*;
 
@@ -129,15 +130,16 @@ class Main {
  }
 }
 ```
+***Output***
+```java
+Demo@214c265e
+x = 10
+0
+```
 
-</p>
-</details>
-
-
-----------
-
-<details><summary>Program 2</summary>
-<p>
+---------------------------------------------------------------
+Take a look a Program 2 and notice the changes in the Main class:
+**Program 2**
 ```java
 import java.io.*;
 class Demo {
@@ -165,8 +167,12 @@ class Main {
  }
 }
 ```
-</p>
-</details>
+***Output***
+```java
+10
+x = 10
+```
+
 
 A **toString()** is a prebuilt method in Java that returns the value in a string format. Therefore, any object that this method is applied on, will return as a string object.
 
