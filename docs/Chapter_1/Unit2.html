@@ -316,65 +316,73 @@ Object-oriented Programming Facts:</p>
 </pre></div>
 </div>
 <p>It is a <em>best practice</em> to keep your class definitions in a separate file from the file containing the main method that executes a program. This way, your class definitions can be used in another program without connecting to unnecessary code.</p>
-<details><summary>Program 1</summary>
-<p>
-```java
-import java.io.*;
-<p>class Demo {
-int x = 10;
-int display()
-{
-System.out.println(“x = ” + x);
-return 0;
-}
-}</p>
-<p>class Main {
-public static void main(String[] args)
-{
-Demo D1 = new Demo(); // point 1</p>
-<p>System.out.println(D1); // point 2</p>
-<p>System.out.println(D1.display()); // point 3
-}
-}</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-&lt;/p&gt;
-&lt;/details&gt;
+<p><em>Object Reference variables holds a memory address that refers to a specific object</em>
+Take a look at the program below:
+<strong>Program 1</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span><span class="w"></span>
 
+<span class="kd">class</span> <span class="nc">Demo</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
+<span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">display</span><span class="p">()</span><span class="w"></span>
+<span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;x = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 
-----------
+<span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">Demo</span><span class="w"> </span><span class="n">D1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Demo</span><span class="p">();</span><span class="w"> </span><span class="c1">// point 1</span><span class="w"></span>
 
-&lt;details&gt;&lt;summary&gt;Program 2&lt;/summary&gt;
-&lt;p&gt;
-```java
-import java.io.*;
-class Demo {
- int x = 10;
+<span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">D1</span><span class="p">);</span><span class="w"> </span><span class="c1">// point 2</span><span class="w"></span>
 
- int display()
- {
-  System.out.println(&quot;x = &quot; + x);
-  return 0;
- }
-}
-
-class Main {
- public static void main(String[] args)
- {
-  // create instance
-  Demo D1 = new Demo();
-
-  // accessing instance(object) variable
-  System.out.println(D1.x);
-
-  // point 3
-  // accessing instance(object) method
-  D1.display();
- }
-}
+<span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">D1</span><span class="p">.</span><span class="na">display</span><span class="p">());</span><span class="w"> </span><span class="c1">// point 3</span><span class="w"></span>
+<span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</p>
-</details>
+<p><em><strong>Output</strong></em></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span>Demo@214c265e
+x = 10
+0
+</pre></div>
+</div>
+<hr class="docutils" />
+<p>Take a look a Program 2 and notice the changes in the Main class:
+<strong>Program 2</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span><span class="w"></span>
+<span class="kd">class</span> <span class="nc">Demo</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
+
+<span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">display</span><span class="p">()</span><span class="w"></span>
+<span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;x = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// create instance</span><span class="w"></span>
+<span class="w">  </span><span class="n">Demo</span><span class="w"> </span><span class="n">D1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Demo</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">// accessing instance(object) variable</span><span class="w"></span>
+<span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">D1</span><span class="p">.</span><span class="na">x</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">// point 3</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// accessing instance(object) method</span><span class="w"></span>
+<span class="w">  </span><span class="n">D1</span><span class="p">.</span><span class="na">display</span><span class="p">();</span><span class="w"></span>
+<span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p><em><strong>Output</strong></em></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="mi">10</span><span class="w"></span>
+<span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="w"></span>
+</pre></div>
+</div>
 <p>A <strong>toString()</strong> is a prebuilt method in Java that returns the value in a string format. Therefore, any object that this method is applied on, will return as a string object.</p>
 <p>The first example below is when it is called as a method of an object instance.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
