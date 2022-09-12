@@ -105,7 +105,7 @@ public class Main
 It is a *best practice* to keep your class definitions in a separate file from the file containing the main method that executes a program. This way, your class definitions can be used in another program without connecting to unnecessary code.
 
 | Program 1 | Program 2  | 
-| :---:  | :---: |
+| :---  | :--- |
 | import java.io.*; |  import java.io.*; |
 | Class Demo { | Class Demo { |
 |     int x = 10; |      int x = 10; |
