@@ -383,17 +383,20 @@ x = 10
 <span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="w"></span>
 </pre></div>
 </div>
-<p>A <strong>toString()</strong> is a prebuilt method in Java that returns the value in a string format. Therefore, any object that this method is applied on, will return as a string object.</p>
-<p>The first example below is when it is called as a method of an object instance.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">args</span><span class="o">[]</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<div class="highlight-The notranslate"><div class="highlight"><pre><span></span>
+A **toString()** is a prebuilt method in Java that returns the value in a string format. Therefore, any object that this method is applied on, will return as a string object.
 
-<span class="w">        </span><span class="c1">//Creating an integer of value 1</span><span class="w"></span>
-<span class="w">        </span><span class="n">integer</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="c1">// Calling the toString method as a function of the Integer variable</span><span class="w"></span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="na">toString</span><span class="p">()</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+The first example below is when it is called as a method of an object instance.
+```java
+public class Main {
+    public static void main( String args[] ) {
+
+        //Creating an integer of value 1
+        integer x = 1;
+        // Calling the toString method as a function of the Integer variable
+        System.out.println( x.toString() );
+    }
+}
 </pre></div>
 </div>
 <p>The second example is when you call the method of a class by passing the value as an argument.</p>

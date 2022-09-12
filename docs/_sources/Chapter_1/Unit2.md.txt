@@ -173,7 +173,7 @@ class Main {
 10
 x = 10
 ```
-
+```The keyword null is a special value used to indicate that a reference variable is not associated with any object.
 
 A **toString()** is a prebuilt method in Java that returns the value in a string format. Therefore, any object that this method is applied on, will return as a string object.
 
