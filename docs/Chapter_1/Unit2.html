@@ -316,32 +316,62 @@ Object-oriented Programming Facts:</p>
 </pre></div>
 </div>
 <p>It is a <em>best practice</em> to keep your class definitions in a separate file from the file containing the main method that executes a program. This way, your class definitions can be used in another program without connecting to unnecessary code.</p>
-<div class="table-wrapper colwidths-auto docutils container">
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head text-left"><p>Program 1</p></th>
-<th class="head text-left"><p>Program 2</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-left"><p>import java.io.*;</p></td>
-<td class="text-left"><p>import java.io.*;</p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p>Class Demo {</p></td>
-<td class="text-left"><p>Class Demo {</p></td>
-</tr>
-<tr class="row-even"><td class="text-left"><p>int x = 10;</p></td>
-<td class="text-left"><p>int x = 10;</p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p>int display() {</p></td>
-<td class="text-left"><p>int display() {</p></td>
-</tr>
-<tr class="row-even"><td class="text-left"><p>System.out.println(“x = ” + x);</p></td>
-<td class="text-left"><p>System.out.println(“x = ” + x);</p></td>
-</tr>
-</tbody>
-</table>
+<details><summary>Program 1</summary>
+<p>
+```java
+import java.io.*;
+<p>class Demo {
+int x = 10;
+int display()
+{
+System.out.println(“x = ” + x);
+return 0;
+}
+}</p>
+<p>class Main {
+public static void main(String[] args)
+{
+Demo D1 = new Demo(); // point 1</p>
+<p>System.out.println(D1); // point 2</p>
+<p>System.out.println(D1.display()); // point 3
+}
+}</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+&lt;/p&gt;
+&lt;/details&gt;
+
+&lt;details&gt;&lt;summary&gt;Program 2&lt;/summary&gt;
+&lt;p&gt;
+```java
+import java.io.*;
+class Demo {
+ int x = 10;
+
+ int display()
+ {
+  System.out.println(&quot;x = &quot; + x);
+  return 0;
+ }
+}
+
+class Main {
+ public static void main(String[] args)
+ {
+  // create instance
+  Demo D1 = new Demo();
+
+  // accessing instance(object) variable
+  System.out.println(D1.x);
+
+  // point 3
+  // accessing instance(object) method
+  D1.display();
+ }
+}
+</pre></div>
 </div>
+</p>
+</details>
 <p>A <strong>toString()</strong> is a prebuilt method in Java that returns the value in a string format. Therefore, any object that this method is applied on, will return as a string object.</p>
 <p>The first example below is when it is called as a method of an object instance.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
