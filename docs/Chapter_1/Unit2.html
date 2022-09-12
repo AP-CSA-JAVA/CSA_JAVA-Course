@@ -257,12 +257,12 @@ Object-oriented Programming Facts:</p>
 <p>The next two concepts will be used in most of your programs moving forward.  Read through <strong>constructor</strong> and <strong>toString()</strong> below.</p>
 <p>A <strong>constructor</strong> in Java is a special method that is used to initialize objects. The constructor is called when an object of a class is created. It can be used to set initial values for object attributes.</p>
 <p>Take a look at the example below:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Constructor Overloading</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Example of Constructor Overloading</span><span class="w"></span>
 <span class="kd">class</span> <span class="nc">Box</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">depth</span><span class="p">;</span><span class="w"></span>
 
-<span class="w"> </span><span class="c1">// constructor used when all dimensions are specified</span><span class="w"></span>
+<span class="w"> </span><span class="c1">// constructor with three parameters specified</span><span class="w"></span>
 <span class="w"> </span><span class="n">Box</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">d</span><span class="p">)</span><span class="w"></span>
 <span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">w</span><span class="p">;</span><span class="w"></span>
@@ -270,7 +270,7 @@ Object-oriented Programming Facts:</p>
 <span class="w">  </span><span class="n">depth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">;</span><span class="w"></span>
 <span class="w"> </span><span class="p">}</span><span class="w"></span>
 
-<span class="w"> </span><span class="c1">// constructor used when no dimensions</span><span class="w"></span>
+<span class="w"> </span><span class="c1">// constructor with no parameters specified</span><span class="w"></span>
 <span class="w"> </span><span class="n">Box</span><span class="p">()</span><span class="w"></span>
 <span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
@@ -278,7 +278,7 @@ Object-oriented Programming Facts:</p>
 <span class="w">  </span><span class="n">depth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
 <span class="w"> </span><span class="p">}</span><span class="w"></span>
 
-<span class="w"> </span><span class="c1">// constructor used when cube is created</span><span class="w"></span>
+<span class="w"> </span><span class="c1">// constructor for a cube using a single parameter</span><span class="w"></span>
 <span class="w"> </span><span class="n">Box</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">len</span><span class="p">)</span><span class="w"></span>
 <span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">depth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">len</span><span class="p">;</span><span class="w"></span>
