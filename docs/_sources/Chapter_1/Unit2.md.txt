@@ -44,20 +44,67 @@ A **constructor** in Java is a special method that is used to initialize objects
 Take a look at the example below:
 
 ```java
-// Create a Main class
-public class Main {
-  int age;  // Create a class attribute
+// Constructor Overloading
+class Box
+{
+ double width, height, depth;
 
-  // Create a class constructor for the Main class
-  public Main() {
-    age = 5;  // Set the initial value for the class attribute age
-  }
+ // constructor used when all dimensions are specified
+ Box(double w, double h, double d)
+ {
+  width = w;
+  height = h;
+  depth = d;
+ }
 
-  public static void main(String[] args) {
-    Main myObj = new Main(); // Create an object of class Main (This will call the constructor)
-    System.out.println("My age is " + myObj.age); // Print the value of age
-  }
+ // constructor used when no dimensions
+ Box()
+ {
+  width = 0;
+  height = 0;
+  depth = 0;
+ }
+
+ // constructor used when cube is created
+ Box(double len)
+ {
+  width = height = depth = len;
+ }
+
+ // compute and return volume
+ double volume()
+ {
+  return width * height * depth;
+ }
 }
+
+// Main Class 
+public class Main
+{
+ public static void main(String args[])
+ {
+  // create boxes using the various
+  // constructors
+  Box mybox1 = new Box(10, 20, 15);
+  Box mybox2 = new Box();
+  Box mycube = new Box(7);
+
+  double vol;
+
+  // get volume of first box
+  vol = mybox1.volume();
+  System.out.println(" Volume of mybox1 is " + vol);
+
+  // get volume of second box
+  vol = mybox2.volume();
+  System.out.println(" Volume of mybox2 is " + vol);
+
+  // get volume of cube
+  vol = mycube.volume();
+  System.out.println(" Volume of mycube is " + vol);
+ }
+}
+
 ```
 It is a *best practice* to keep your class definitions in a separate file from the file containing the main method that executes a program. This way, your class definitions can be used in another program without connecting to unnecessary code.
 
