@@ -44,36 +44,32 @@ A **constructor** in Java is a special method that is used to initialize objects
 Take a look at the example below:
 
 ```java
-// Example of Constructor Overloading
+// Example of Overloading Constructors 
 class Box
 {
  double width, height, depth;
 
+ // constructor with no parameters specified
+ Box() {
+  width = 0;
+  height = 0;
+  depth = 0;
+ }
+ 
  // constructor with three parameters specified
- Box(double w, double h, double d)
- {
+ Box(double w, double h, double d) {
   width = w;
   height = h;
   depth = d;
  }
 
- // constructor with no parameters specified
- Box()
- {
-  width = 0;
-  height = 0;
-  depth = 0;
- }
-
  // constructor for a cube using a single parameter
- Box(double len)
- {
+ Box(double len) {
   width = height = depth = len;
  }
 
  // compute and return volume
- double volume()
- {
+ double volume() {
   return width * height * depth;
  }
 }
