@@ -104,6 +104,14 @@ public class Main
 ```
 It is a *best practice* to keep your class definitions in a separate file from the file containing the main method that executes a program. This way, your class definitions can be used in another program without connecting to unnecessary code.
 
+| Program 1 | Program 2  | 
+| :---:  | :---: |
+| import java.io.*; |  import java.io.*; |
+| Class Demo { | Class Demo { |
+|     int x = 10; |      int x = 10; |
+|     int display() { |    int display() { |
+|     System.out.println("x = " + x); |     System.out.println("x = " + x); |
+
 A **toString()** is a prebuilt method in Java that returns the value in a string format. Therefore, any object that this method is applied on, will return as a string object.
 
 The first example below is when it is called as a method of an object instance.
