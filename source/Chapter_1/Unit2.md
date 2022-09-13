@@ -79,8 +79,7 @@ public class Main
 {
  public static void main(String args[])
  {
-  // create boxes using the various
-  // constructors
+  // create boxes using various constructors
   Box mybox1 = new Box(10, 20, 15);
   Box mybox2 = new Box();
   Box mycube = new Box(7);
