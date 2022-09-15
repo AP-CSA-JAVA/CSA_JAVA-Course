@@ -197,11 +197,17 @@ public class Main {
     public static void main( String args[] ) {
 
         //Creating an integer of value 1
-        integer x = 1;
+        Integer x = 1;
         // Calling the toString method as a function of the Integer variable
-        System.out.println( x.toString() );
+        System.out.println(x.toString());
+	System.out.println(Integer.toString(7));
     }
 }
+```
+### Sample Output
+```java
+1
+7
 ```
 
 The second example is when you call the method of a class by passing the value as an argument.
