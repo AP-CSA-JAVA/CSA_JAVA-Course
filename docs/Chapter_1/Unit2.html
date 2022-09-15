@@ -400,11 +400,18 @@ x = 10
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">args</span><span class="o">[]</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
 <span class="w">        </span><span class="c1">//Creating an integer of value 1</span><span class="w"></span>
-<span class="w">        </span><span class="n">integer</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">Integer</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
 <span class="w">        </span><span class="c1">// Calling the toString method as a function of the Integer variable</span><span class="w"></span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="na">toString</span><span class="p">()</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span><span class="w"></span>
+<span class="w">	</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Integer</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="mi">7</span><span class="p">));</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<section id="sample-output">
+<h3>Sample Output<a class="headerlink" href="#sample-output" title="Permalink to this heading">#</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="w"></span>
+<span class="mi">7</span><span class="w"></span>
 </pre></div>
 </div>
 <p>The second example is when you call the method of a class by passing the value as an argument.</p>
@@ -437,8 +444,9 @@ x = 10
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<section id="sample-output">
-<h3>Sample Output<a class="headerlink" href="#sample-output" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="id1">
+<h3>Sample Output<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">The</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">child</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">Francis</span><span class="p">.</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">child</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="mf">10.</span><span class="w"></span>
 <span class="mi">12</span><span class="w"></span>
 </pre></div>
@@ -612,8 +620,8 @@ x = 10
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">void</span></code> keyword will not return <em>anything</em> from the method declaration.  While the void method of the class does not return any value, the constructors return an object reference.  Thus, they can be called as a part of an expression.  Explained another way, void means that nothing is returned from a method, nor will anything ever be returned. It is an absence of any value.</p>
 <p><strong>NOTE:</strong> ‘Null’ is a place holder for a reference that does not have an object.  If defines a memory address that may eventually hold a value.</p>
-<section id="id1">
-<h3>Assignment 1<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<section id="id2">
+<h3>Assignment 1<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
 <section id="instructions-digipet">
 <h4>Instructions DigiPet<a class="headerlink" href="#instructions-digipet" title="Permalink to this heading">#</a></h4>
 <p>You will create a class DigiPet</p>
@@ -722,6 +730,7 @@ x = 10
 </li>
 <li><a class="reference internal" href="#creating-and-storing-objects">Creating and Storing Objects</a><ul>
 <li><a class="reference internal" href="#sample-output">Sample Output</a></li>
+<li><a class="reference internal" href="#id1">Sample Output</a></li>
 <li><a class="reference internal" href="#assignment-1">Assignment 1</a></li>
 <li><a class="reference internal" href="#assignment-2">Assignment 2</a></li>
 <li><a class="reference internal" href="#extra-credit">Extra Credit</a></li>
@@ -729,7 +738,7 @@ x = 10
 </li>
 <li><a class="reference internal" href="#scanner-class-revisited">Scanner Class Revisited</a></li>
 <li><a class="reference internal" href="#calling-a-void-method">Calling a Void Method</a><ul>
-<li><a class="reference internal" href="#id1">Assignment 1</a><ul>
+<li><a class="reference internal" href="#id2">Assignment 1</a><ul>
 <li><a class="reference internal" href="#instructions-digipet">Instructions DigiPet</a></li>
 <li><a class="reference internal" href="#steps">Steps</a></li>
 </ul>
