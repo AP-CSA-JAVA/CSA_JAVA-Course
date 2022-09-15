@@ -10,7 +10,7 @@ As stated earlier, a *class* is a blueprint of an object.  So we can also say th
 
 We can also create a *method* that will call the attributes within a class.  For example, we can create a method called running or sleeping.  Now each of these methods will use an attribute or attributes of its class to perform something within the `human` class.  If we create an instance of the `human` class, let say Object John , then John will have all the attributes (nose , ears, eyes, hands, legs) unique to it and will also have access to these methods to carry out basic functions. **NOTE:** Method and behavior are interchangable terms.
 
-The value of the attributes define the state of the object. What makes this efficient is that the class does not hold any space in the memory becaue we just create a definition.  The moment we *instantiate* the class the object will require a dedicated space in memory.  Thus we can say that a Class defines how the object should look and object is the actual representation of the same.  
+The value of the attributes define the state of the object. What makes this efficient is that the class does not hold any space in the memory because we just create a definition.  The moment we *instantiate* the class the object will require a dedicated space in memory.  Thus we can say that a Class defines how the object should look and object is the actual representation of the same.  
 
 ### Example:
 ```java
@@ -103,7 +103,8 @@ public class Main
 ```
 It is a *best practice* to keep your class definitions in a separate file from the file containing the main method that executes a program. This way, your class definitions can be used in another program without connecting to unnecessary code.
 
-***Object Reference*** variables holds a memory address that refers to a specific object
+***Object Reference*** variables holds a memory address that refers to a specific object.
+
 Take a look at the program below:
 
 **Program 1**
@@ -139,6 +140,7 @@ x = 10
 
 ---------------------------------------------------------------
 Take a look a Program 2 and notice the changes in the Main class:
+
 **Program 2**
 ```java
 import java.io.*;
@@ -175,12 +177,12 @@ x = 10
 
 ---------------------------------------------------------------
 
-```
-The keyword null is a special value used to indicate that a reference variable is not associated with any object.
-You can 
+
+The keyword **null** is a special value used to indicate that a reference variable is not associated with any object.
+You can do the following: 
     Demo D2 = null;
     System.out.println("Storage Value = " + D2);
-```
+
 
 ***Output***
 ```java

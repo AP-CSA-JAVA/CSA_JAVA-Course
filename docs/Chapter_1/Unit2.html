@@ -224,7 +224,7 @@
 </ul>
 <p>As stated earlier, a <em>class</em> is a blueprint of an object.  So we can also say that an <em>object</em> is an instance of a class.  What we define as a class determines what objects that will be associated with the class and how things will operate within it.  For example, we can define <code class="docutils literal notranslate"><span class="pre">human</span></code> as a class.  We can assign attributes to that class like a nose, ears, eyes, hands, feet, etc.  <strong>NOTE:</strong> Attribute and state are interchangable terms.</p>
 <p>We can also create a <em>method</em> that will call the attributes within a class.  For example, we can create a method called running or sleeping.  Now each of these methods will use an attribute or attributes of its class to perform something within the <code class="docutils literal notranslate"><span class="pre">human</span></code> class.  If we create an instance of the <code class="docutils literal notranslate"><span class="pre">human</span></code> class, let say Object John , then John will have all the attributes (nose , ears, eyes, hands, legs) unique to it and will also have access to these methods to carry out basic functions. <strong>NOTE:</strong> Method and behavior are interchangable terms.</p>
-<p>The value of the attributes define the state of the object. What makes this efficient is that the class does not hold any space in the memory becaue we just create a definition.  The moment we <em>instantiate</em> the class the object will require a dedicated space in memory.  Thus we can say that a Class defines how the object should look and object is the actual representation of the same.</p>
+<p>The value of the attributes define the state of the object. What makes this efficient is that the class does not hold any space in the memory because we just create a definition.  The moment we <em>instantiate</em> the class the object will require a dedicated space in memory.  Thus we can say that a Class defines how the object should look and object is the actual representation of the same.</p>
 <section id="example">
 <h3>Example:<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h3>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Bicycle</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -315,8 +315,8 @@ Object-oriented Programming Facts:</p>
 </pre></div>
 </div>
 <p>It is a <em>best practice</em> to keep your class definitions in a separate file from the file containing the main method that executes a program. This way, your class definitions can be used in another program without connecting to unnecessary code.</p>
-<p><em><strong>Object Reference</strong></em> variables holds a memory address that refers to a specific object
-Take a look at the program below:</p>
+<p><em><strong>Object Reference</strong></em> variables holds a memory address that refers to a specific object.</p>
+<p>Take a look at the program below:</p>
 <p><strong>Program 1</strong></p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span><span class="w"></span>
 
@@ -348,8 +348,8 @@ x = 10
 </pre></div>
 </div>
 <hr class="docutils" />
-<p>Take a look a Program 2 and notice the changes in the Main class:
-<strong>Program 2</strong></p>
+<p>Take a look a Program 2 and notice the changes in the Main class:</p>
+<p><strong>Program 2</strong></p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span><span class="w"></span>
 <span class="kd">class</span> <span class="nc">Demo</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
@@ -383,12 +383,10 @@ x = 10
 </pre></div>
 </div>
 <hr class="docutils" />
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">keyword</span> <span class="n">null</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">special</span> <span class="n">value</span> <span class="n">used</span> <span class="n">to</span> <span class="n">indicate</span> <span class="n">that</span> <span class="n">a</span> <span class="n">reference</span> <span class="n">variable</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">associated</span> <span class="k">with</span> <span class="nb">any</span> <span class="nb">object</span><span class="o">.</span>
-<span class="n">You</span> <span class="n">can</span> 
-    <span class="n">Demo</span> <span class="n">D2</span> <span class="o">=</span> <span class="n">null</span><span class="p">;</span>
-    <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;Storage Value = &quot;</span> <span class="o">+</span> <span class="n">D2</span><span class="p">);</span>
-</pre></div>
-</div>
+<p>The keyword <strong>null</strong> is a special value used to indicate that a reference variable is not associated with any object.
+You can do the following:
+Demo D2 = null;
+System.out.println(“Storage Value = ” + D2);</p>
 <p><em><strong>Output</strong></em></p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="n">Storage</span><span class="w"> </span><span class="n">Value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
 </pre></div>
