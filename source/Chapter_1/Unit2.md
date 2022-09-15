@@ -266,7 +266,7 @@ Starting: True
 **Instructions:**
 
 1. Edit the Bike class to have the following attributes:
-   - `kind`
+   - `kind`  (Cruiser, 10 Speed, Hybrid)
    - `size`
    - `cost`
 2. Create a no argument constructor. The values are Cruiser, 26, and 175.99
