@@ -180,9 +180,10 @@ x = 10
 
 The keyword **null** is a special value used to indicate that a reference variable is not associated with any object.
 You can do the following:
+```java
 	Demo D2 = null;
 	System.out.println("Storage Value = " + D2);
-
+```
 
 ***Output***
 ```java
