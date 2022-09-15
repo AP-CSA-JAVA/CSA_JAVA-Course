@@ -29,7 +29,7 @@ class Bicycle {
 **Things to Remember**
 Object-oriented Programming Facts:
 - [ ] Properties are the characteristics of your objects
-- [ ] Object-Oriented programming focuses on the data represented inthe problem
+- [ ] Object-Oriented programming focuses on the data represented in the problem
 - [ ] Object-Oriented programs remove details from many programs, making the code rewrite less frequent.
 - [ ] Methods are the actions that your object can take.
 - [ ] A class is like a blueprint or a recipe.
