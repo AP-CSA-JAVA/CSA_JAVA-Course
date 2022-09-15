@@ -234,6 +234,11 @@ class Main {
     }
 }
 ```
+### Sample Output
+```java
+The name of the child is Francis. The age of the child is 10.
+12
+```
 
 ### Assignment 1
 
