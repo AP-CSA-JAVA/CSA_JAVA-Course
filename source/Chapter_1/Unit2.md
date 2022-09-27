@@ -436,6 +436,37 @@ You will create a class DigiPet
   - `sleep()` - if energy is 20 or more, print out the pet is not sleepy and decrease `happy` by 10. Otherwise, print "zzzzzzzzzzzzzzz!", increase `happy` by 15 and set energy to 50.
 5. Call the methods according to the comments in main
 
+**Sample Output:**
+```java
+Hangry the cat
+Hunger: 20
+Energy: 20
+Happy: 20
+
+Fido the dog
+Hunger: 20
+Energy: 20
+Happy: 20
+
+Purr! Purr!
+Bark! Bark!
+Yay! Let's play!
+Hangry's not sleepy!
+zzzzzzzzzzzzzzz!
+Hangry's not hungry!
+Yay! Food!
+
+Hangry the cat
+Hunger: 20
+Energy: 20
+Happy: 0
+
+Fido the dog
+Hunger: 20
+Energy: 60
+Happy: 45
+```
+
 ### Calling a Void Method with Parameters
 
 Using parameters allows us the freedom to write a program that is more flexible and specific.  It is similar to providing specific instructions for the program.  When you pass multiple parameters, it is important to make sure that the order is correct.  Incorrect order will return incorrect results.  As we did with constructors, we can overload a method.  Recall that the method name has also an ordered list of parameters.  You can also overload a method by giving the method the same name as another method, and provide a different set of parameters.
