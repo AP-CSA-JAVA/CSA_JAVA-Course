@@ -26,6 +26,12 @@ class Bicycle {
     }
 } 
 ```
+**Sample Output**
+```java
+My bicycle has 1 gear and is painted white!
+Pedaling to accelerate!
+```
+
 **Things to Remember**
 Object-oriented Programming Facts:
 - [ ] Properties are the characteristics of your objects
