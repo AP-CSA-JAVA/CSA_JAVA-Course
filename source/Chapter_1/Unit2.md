@@ -434,7 +434,7 @@ You will create a class DigiPet
   - `play()` - print out "Do you wanna play?", increase `happy` by 10, decrease `food` and `energy` by 10.
   - `feed()` - If food is greater than 15, print out the pet is not hungry and decrease `happy` by 10. Otherwise, print "Yay! Food!", increase `food` and `energy` by 10.
   - `sleep()` - if energy is 20 or more, print out the pet is not sleepy and decrease `happy` by 10. Otherwise, print "zzzzzzzzzzzzzzz!", increase `happy` by 15 and set energy to 50.
-5. Call the methods according to the comments in main
+5. Call each of the methods according to the order listed in item 4.
 
 **Sample Output:**
 ```java
