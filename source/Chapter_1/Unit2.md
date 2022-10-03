@@ -517,7 +517,7 @@ System.out.println("Avg = " + calculateAverage();
 System.out.println(getName() + " is my name");
 ```
 
-The method call can be inside a Java structure such as an **if statement** or **looping structure** (you will learn about loops in the next unit).
+The method call can be inside a Java structure such as a **conditional statement** or a **looping structure**.
 
 ```java
 if(sum() > 500)
