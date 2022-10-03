@@ -700,6 +700,44 @@ Happy: 45
 </section>
 </section>
 </section>
+<section id="non-void-methods">
+<h2>Non-Void Methods<a class="headerlink" href="#non-void-methods" title="Permalink to this heading">#</a></h2>
+<p>If you’ve programmed in Python, you may remember that we used functions to execute a small chunk of code in other areas of the program.  Non-Void methods are very similar to functions in that they return a value of some type.  You have used non-void methods already, you just may not have recognized it. For example, the Scanner Class has non-voiid methods like nextInt(), nextDouble(), nextLine(), and next().  There are a number of methods that can be found in the Java standard library methods that are non-void methods.  Take a look at the example below.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">sum</span><span class="p">(){</span><span class="w"></span>
+<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">num2</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>The keyword <strong>return</strong> is <em>required</em> in all non-void methods. Since the method sum has a <strong>return</strong> type of <code class="docutils literal notranslate"><span class="pre">int</span></code> the return line is required to return a value of this type.</p>
+<section id="calling-a-non-void-method">
+<h3>Calling a non-void method<a class="headerlink" href="#calling-a-non-void-method" title="Permalink to this heading">#</a></h3>
+<p>The way that a non-void method is called differs from the way that a void method is called in that the call is made from within other Java statements. Since a non-void method always returns a value, this value has to be stored in a variable, printed, or returned to a Java control structure or another method. Here are some examples.</p>
+<p>The method call can be in an <strong>assignment statement</strong>.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sum</span><span class="p">();</span><span class="w"></span>
+<span class="kt">double</span><span class="w"> </span><span class="n">avg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calculateAverage</span><span class="p">();</span><span class="w"></span>
+<span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getName</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
+<p>The method call can be in a <strong>print</strong> or <strong>println statement</strong>.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;The sum is &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sum</span><span class="p">());</span><span class="w"></span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Avg = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">calculateAverage</span><span class="p">();</span><span class="w"></span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">getName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; is my name&quot;</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>The method call can be inside a Java structure such as an <strong>if statement</strong> or <strong>looping structure</strong> (you will learn about loops in the next unit).</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="n">sum</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">500</span><span class="p">)</span><span class="w"></span>
+<span class="k">if</span><span class="p">(</span><span class="n">calculateAverage</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="w"></span>
+<span class="k">if</span><span class="p">(</span><span class="n">getName</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;John Wayne&quot;</span><span class="p">))</span><span class="w"></span>
+<span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">getName</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;stop&quot;</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+</div>
+<p>The method call can be on the <strong>return line</strong> of another method.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">return</span><span class="w"> </span><span class="n">sum</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">numItems</span><span class="p">;</span><span class="w"></span>
+<span class="k">return</span><span class="w"> </span><span class="n">calculateAverage</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">70</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
 </section>
 
         </article>
@@ -780,6 +818,10 @@ Happy: 45
 <li><a class="reference internal" href="#steps">Steps</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li><a class="reference internal" href="#non-void-methods">Non-Void Methods</a><ul>
+<li><a class="reference internal" href="#calling-a-non-void-method">Calling a non-void method</a></li>
 </ul>
 </li>
 </ul>
