@@ -485,5 +485,52 @@ Energy: 60
 Happy: 45
 ```
 
+## Non-Void Methods
+
+If you've programmed in Python, you may remember that we used functions to execute a small chunk of code in other areas of the program.  Non-Void methods are very similar to functions in that they return a value of some type.  You have used non-void methods already, you just may not have recognized it. For example, the Scanner Class has non-voiid methods like nextInt(), nextDouble(), nextLine(), and next().  There are a number of methods that can be found in the Java standard library methods that are non-void methods.  Take a look at the example below.
+
+```java
+public int sum(){
+   return num1 + num2;
+}
+```
+
+ The keyword **return** is *required* in all non-void methods. Since the method sum has a **return** type of `int` the return line is required to return a value of this type.
+ 
+ ### Calling a non-void method
+ 
+The way that a non-void method is called differs from the way that a void method is called in that the call is made from within other Java statements. Since a non-void method always returns a value, this value has to be stored in a variable, printed, or returned to a Java control structure or another method. Here are some examples.
+
+The method call can be in an **assignment statement**.
+
+```java
+int num = sum();
+double avg = calculateAverage();
+String name = getName();
+```
+
+The method call can be in a **print** or **println statement**.
+
+```java
+System.out.println("The sum is " + sum());
+System.out.println("Avg = " + calculateAverage();
+System.out.println(getName() + " is my name");
+```
+
+The method call can be inside a Java structure such as an **if statement** or **looping structure** (you will learn about loops in the next unit).
+
+```java
+if(sum() > 500)
+if(calculateAverage() == 100)
+if(getName().equals("John Wayne"))
+while(!getName().equals("stop")
+```
+
+The method call can be on the **return line** of another method.
+
+```java
+return sum() / numItems;
+return calculateAverage() > 70;
+```
 
 	
