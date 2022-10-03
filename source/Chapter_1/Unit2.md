@@ -421,6 +421,18 @@ The `void` keyword will not return *anything* from the method declaration.  Whil
 
 **NOTE:** 'Null' is a place holder for a reference that does not have an object.  If defines a memory address that may eventually hold a value.
 
+### Calling a Void Method with Parameters
+
+Using parameters allows us the freedom to write a program that is more flexible and specific.  It is similar to providing specific instructions for the program.  When you pass multiple parameters, it is important to make sure that the order is correct.  Incorrect order will return incorrect results.  As we did with constructors, we can overload a method.  Recall that the method name has also an ordered list of parameters.  You can also overload a method by giving the method the same name as another method, and provide a different set of parameters.
+
+For example:
+```java
+public void school(int grade, double gpa) {}
+public void school(int grade, double gpa, String name) {}
+```
+
+
+
 ### Assignment 1
 #### Instructions DigiPet
 You will create a class DigiPet
@@ -473,13 +485,5 @@ Energy: 60
 Happy: 45
 ```
 
-### Calling a Void Method with Parameters
 
-Using parameters allows us the freedom to write a program that is more flexible and specific.  It is similar to providing specific instructions for the program.  When you pass multiple parameters, it is important to make sure that the order is correct.  Incorrect order will return incorrect results.  As we did with constructors, we can overload a method.  Recall that the method name has also an ordered list of parameters.  You can also overload a method by giving the method the same name as another method, and provide a different set of parameters.
-
-For example:
-```java
-public void school(int grade, double gpa) {}
-public void school(int grade, double gpa, String name) {}
-```
 	
