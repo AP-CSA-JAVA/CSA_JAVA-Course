@@ -562,3 +562,8 @@ Submit your link to the finished program
 ### Assignment 2
 
 
+## String Objects: Concatenation, Literals, and Other Things
+
+| String literal assignment | String class constructor |
+| ----------- | ---------- |
+| String state = "Maine"; | String state = new String("Maine"); |
