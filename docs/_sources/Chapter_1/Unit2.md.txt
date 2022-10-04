@@ -684,3 +684,11 @@ public class Main
 
 Submit your program link.  Do not send me a screen shot of your program.  
 Comment your code showing that you completed each of the bullet points above.
+_____________________________________________________________________________________________________
+## String Methods
+
+**Note** 
+- [ ] Application programming interfaces (APIs) simplify complex programming tasks.
+- [ ] In APIs, classes are grouped into packages, also called modules.
+- [ ] The String class is part of the java.lang package. Classes in the java.lang package are available by default.
+- [ ] Documentation for APIs and libraries is essential to understanding the attributes and behaviors of a class and its methods.
