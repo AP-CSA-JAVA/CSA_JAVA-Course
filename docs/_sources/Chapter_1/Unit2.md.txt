@@ -522,7 +522,7 @@ The method call can be inside a Java structure such as a **conditional statement
 ```java
 if(sum() > 500)
 if(calculateAverage() == 100)
-if(getName().equals("John Wayne"))
+if(getName().equals("John Wang"))
 while(!getName().equals("stop")
 ```
 
@@ -533,4 +533,9 @@ return sum() / numItems;
 return calculateAverage() > 70;
 ```
 
-	
+### Assignment 1
+
+
+### Assignment 2
+
+
