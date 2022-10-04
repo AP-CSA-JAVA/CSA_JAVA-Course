@@ -774,6 +774,7 @@ The area of a circle is <code class="docutils literal notranslate"><span class="
 </section>
 <section id="string-objects-concatenation-literals-and-other-things">
 <h2>String Objects: Concatenation, Literals, and Other Things<a class="headerlink" href="#string-objects-concatenation-literals-and-other-things" title="Permalink to this heading">#</a></h2>
+<p>String objects can be instantiated in <strong>two different</strong> ways, either by assigning a <strong>String literal</strong> directly to a String variable or by calling the <strong>String class constructor</strong>. In the example below, the code on the left uses a String literal assignment, and the code on the right uses the String class constructor.</p>
 <div class="table-wrapper colwidths-auto docutils container">
 <table class="docutils align-default">
 <thead>
@@ -788,6 +789,51 @@ The area of a circle is <code class="docutils literal notranslate"><span class="
 </tbody>
 </table>
 </div>
+<p>String objects have the benefit of many methods, one such method is <em>concat</em>. Concatenation means appending one string to the end of another and is the function performed by the concat method.
+String objects are <em>immutable</em>. This means that you cannot change the String object, rather a new spot within the same memory location with the necessary changes. In this case, the program created a String object with a specific value. When the concat method is called, it creates a <em>new String object</em> in memory with the new value. This does not replace the original reference.</p>
+<p><strong>Example</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">stateHerb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Winter&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">//initial reference</span><span class="w"></span>
+<span class="w">    </span><span class="n">stateHerb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stateHerb</span><span class="p">.</span><span class="na">concat</span><span class="p">(</span><span class="s">&quot;green&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">//new reference</span><span class="w"></span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">stateHerb</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Output</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Wintergreen</span><span class="w"></span>
+</pre></div>
+</div>
+<section id="recall">
+<h3>Recall:###<a class="headerlink" href="#recall" title="Permalink to this heading">#</a></h3>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> A String is not a primitive type.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> A String object references a location in memory.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> String objects cannot be changed.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> The word immutable means “cannot be changed”</p></li>
+</ul>
+<p>Take a look at the following programs:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">stateCat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Maine&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="n">stateCat</span><span class="p">.</span><span class="na">concat</span><span class="p">(</span><span class="s">&quot;Coon&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">stateCat</span><span class="p">);</span><span class="w"></span>
+<span class="c1">// What will be the output?</span><span class="w"></span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Maine &quot;</span><span class="p">.</span><span class="na">concat</span><span class="p">(</span><span class="s">&quot;Coon&quot;</span><span class="p">));</span><span class="w"></span>
+<span class="c1">// What will be the output?</span><span class="w"></span>
+
+<span class="n">String</span><span class="w"> </span><span class="n">stateFish</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Landlocked&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="n">String</span><span class="w"> </span><span class="n">otherFish</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;River&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="n">stateFish</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stateFish</span><span class="p">.</span><span class="na">concat</span><span class="p">(</span><span class="s">&quot;Salmon&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">otherFish</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stateFish</span><span class="p">.</span><span class="na">concat</span><span class="p">(</span><span class="s">&quot;Trout&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">otherFish</span><span class="p">);</span><span class="w"></span>
+<span class="c1">// What is the output of this last program?</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
 </section>
 </section>
 
@@ -880,7 +926,10 @@ The area of a circle is <code class="docutils literal notranslate"><span class="
 <li><a class="reference internal" href="#id4">Assignment 2</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#string-objects-concatenation-literals-and-other-things">String Objects: Concatenation, Literals, and Other Things</a></li>
+<li><a class="reference internal" href="#string-objects-concatenation-literals-and-other-things">String Objects: Concatenation, Literals, and Other Things</a><ul>
+<li><a class="reference internal" href="#recall">Recall:###</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

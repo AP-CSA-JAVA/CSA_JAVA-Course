@@ -564,6 +564,52 @@ Submit your link to the finished program
 
 ## String Objects: Concatenation, Literals, and Other Things
 
+String objects can be instantiated in **two different** ways, either by assigning a **String literal** directly to a String variable or by calling the **String class constructor**. In the example below, the code on the left uses a String literal assignment, and the code on the right uses the String class constructor.
+
 | String literal assignment | String class constructor |
 | ----------- | ---------- |
 | String state = "Maine"; | String state = new String("Maine"); |
+
+String objects have the benefit of many methods, one such method is *concat*. Concatenation means appending one string to the end of another and is the function performed by the concat method.
+String objects are *immutable*. This means that you cannot change the String object, rather a new spot within the same memory location with the necessary changes. In this case, the program created a String object with a specific value. When the concat method is called, it creates a *new String object* in memory with the new value. This does not replace the original reference.
+
+**Example**
+```java
+public class Main 
+{
+  public static void main(String[] args) 
+  {
+    String stateHerb = "Winter"; //initial reference
+    stateHerb = stateHerb.concat("green"); //new reference
+    
+    System.out.println(stateHerb);
+  }
+}
+```
+**Output**
+```java
+Wintergreen
+```
+### Recall:###
+- [ ] A String is not a primitive type.
+- [ ] A String object references a location in memory.
+- [ ] String objects cannot be changed.
+- [ ] The word immutable means "cannot be changed"
+
+Take a look at the following programs:
+```java
+String stateCat = "Maine";
+stateCat.concat("Coon");
+System.out.println(stateCat);
+// What will be the output?
+
+System.out.println("Maine ".concat("Coon"));
+// What will be the output?
+
+String stateFish = "Landlocked";
+String otherFish = "River";
+stateFish = stateFish.concat("Salmon");
+otherFish = stateFish.concat("Trout");
+System.out.println(otherFish);
+// What is the output of this last program?
+```
