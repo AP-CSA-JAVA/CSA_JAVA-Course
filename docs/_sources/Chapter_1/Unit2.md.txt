@@ -534,8 +534,29 @@ return calculateAverage() > 70;
 ```
 
 ### Assignment 1
+#### Instructions  Shape
+
+1. In the Shape class, the attributes and constructor is complete. Look them over.
+2. In the Main class, instantiate the three objects described in the comments
+3. In the Shape class, write the following methods:
+     - `getPerimeter()` - calculates and returns perimeter depending on the shape. The perimeter of a circle is `2*3.14*length`
+     - `getArea()` - calculates and returns area depending on the shape. The area of an equilateral triangle is `0.25*1.732*length*length`. 
+        The area of a circle is `3.14*length*length`	
+
+4. In the Main class, follow the comments and call the appropriate methods. 
 
 
+```java
+Perimeter of Triangle: 18.0
+Area of Triangle: 15.588
+
+Perimeter of Square: 20.0
+Area of Square: 25.0
+
+Perimeter of Circle: 50.24
+Area of Circle: 200.96
+```
+Submit your link to the finished program
 ### Assignment 2
 
 
