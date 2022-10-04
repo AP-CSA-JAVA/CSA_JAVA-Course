@@ -647,4 +647,4 @@ Escape sequences begin with the \ character (back slash as opposed to a forward 
 | Escape Sequence |  |   |
 | ---------------- | ---------------- | ---------------- |
 | Newline | The \ character | the " character |
-| \n | \\ | \" |
+| \n | \\\ | \\" |
