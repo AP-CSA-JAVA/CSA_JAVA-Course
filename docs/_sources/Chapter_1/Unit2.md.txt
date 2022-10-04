@@ -644,7 +644,7 @@ public class Main
 
 Escape sequences begin with the \ character (back slash as opposed to a forward slash) and allow a programmer to type these characters in String literals. Take a look at the three examples below.
 
-| Escape Sequence |
+| Escape Sequence |  |   |
 | ---------------- | ---------------- | ---------------- |
 | Newline | The \ character | the " character |
 | \n | \\ | \" |
