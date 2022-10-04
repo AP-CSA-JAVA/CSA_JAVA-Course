@@ -545,7 +545,9 @@ return calculateAverage() > 70;
 
 4. In the Main class, follow the comments and call the appropriate methods. 
 
+[Assignment1_Shape.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9708290/Assignment1_Shape.zip)
 
+**Sample Output**
 ```java
 Perimeter of Triangle: 18.0
 Area of Triangle: 15.588
