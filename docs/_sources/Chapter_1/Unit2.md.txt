@@ -704,3 +704,14 @@ Navigate to and review the information that can be found at [Java API Specificat
 | `int indexOf(String str)` | Returns the index of the first occurrence of str; returns –1 if not found. |
 | `boolean equals(String other)` | Returns true if this is equal to other; returns false otherwise. |
 | `int compareTo(String other)` | Returns a value < 0 if this is less than other; returns zero if this is equal to other; returns a value > 0 if this is greater than other. |
+
+Take a look at the code below:
+```java
+     String horse = "percheron";
+     System.out.println(horse.length());
+```
+
+**Output**
+```
+9
+```
