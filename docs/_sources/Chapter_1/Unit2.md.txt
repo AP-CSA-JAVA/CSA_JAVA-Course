@@ -590,7 +590,7 @@ public class Main
 ```java
 Wintergreen
 ```
-### Recall:###
+### Recall:
 - [ ] A String is not a primitive type.
 - [ ] A String object references a location in memory.
 - [ ] String objects cannot be changed.
@@ -612,4 +612,29 @@ stateFish = stateFish.concat("Salmon");
 otherFish = stateFish.concat("Trout");
 System.out.println(otherFish);
 // What is the output of this last program?
+```
+Using Notepad: Copy and complete the code below using each of the concatenation operators where noted in the comments. When the program runs, it should display Whoopie Pie and Wild Blueberry.
+
+```java
+public class Main
+{
+  public static void main(String[] args) 
+  {
+    String stateTreat = "Whoopie";
+    String stateBerry = "Wild ";
+    
+    /* Use the + operator on stateTreat to append " Pie" */
+    
+    
+    
+    
+    /* Use the += operator on stateBerry to append "Blueberry" */
+    
+    
+    
+    
+    System.out.println(stateTreat);
+    System.out.println(stateBerry);
+  }
+}
 ```
