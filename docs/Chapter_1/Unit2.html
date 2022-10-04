@@ -860,27 +860,58 @@ String objects are <em>immutable</em>. This means that you cannot change the Str
 <p><strong>NOTE</strong> Java allows for <em>implicit type conversion</em> during concatenation. This means that even if a primitive is stored as a primitive type (be it <em>int</em> or <em>double</em>), it can still be concatenated to a String. The <em>int</em> is converted to a String before the + operator is applied.</p>
 <p><strong>NOTE</strong> Certain characters need special treatment to be included in strings in Java. Either they are “non-printable,” such as the character that indicates a new line of output (called the newline character), or they already have other meanings in the Java language.</p>
 <p>Escape sequences begin with the \ character (back slash as opposed to a forward slash) and allow a programmer to type these characters in String literals. Take a look at the three examples below.</p>
-<div class="table-wrapper colwidths-auto docutils container">
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Escape Sequence</p></th>
-<th class="head"><p></p></th>
-<th class="head"><p></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Newline</p></td>
-<td><p>The \ character</p></td>
-<td><p>the “ character</p></td>
-</tr>
-<tr class="row-odd"><td><p>\n</p></td>
-<td><p>\</p></td>
-<td><p>&quot;</p></td>
-</tr>
-</tbody>
-</table>
-</div>
 </section>
+<section id="escape-sequence">
+<h3>Escape Sequence<a class="headerlink" href="#escape-sequence" title="Permalink to this heading">#</a></h3>
+<p>| —————- | —————- | —————- |
+| Newline | The \ character | the “ character |
+| \n | \ | &quot; |</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Notice a new line in your code does not mean</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// a newline in your output, line breaks after</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// operators are allowed</span><span class="w"></span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">stateSong</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>
+<span class="w">      </span><span class="s">&quot;\&quot;Oh, Pine Tree State,\n Your woods\\ fields\\ and hills\\\&quot;&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">stateSong</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Output</strong>
+“Oh, Pine Tree State,
+Your woods\ fields\ and hills”</p>
+</section>
+</section>
+<section id="id5">
+<h2>Extra Credit<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Create a new file and save it as StateSong.java.</p></li>
+<li><p>Copy and paste the code stub into your new file.</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="k">class</span> <span class="nc">FightSong</span>
+<span class="p">{</span>
+  <span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+  <span class="p">{</span>
+
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Implement the following features (in any order) and comment where they occur.</p></li>
+</ol>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> A <code class="docutils literal notranslate"><span class="pre">String</span></code> created using a literal</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> A <code class="docutils literal notranslate"><span class="pre">String</span></code> created using the <code class="docutils literal notranslate"><span class="pre">String</span></code> class constructor</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> An immutable <code class="docutils literal notranslate"><span class="pre">String</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> An implicit conversion via concatenation</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> The += operator for concatenation</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> The + operator for concatenation</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Three escape sequences</p></li>
+</ul>
 </section>
 </section>
 
@@ -975,8 +1006,10 @@ String objects are <em>immutable</em>. This means that you cannot change the Str
 </li>
 <li><a class="reference internal" href="#string-objects-concatenation-literals-and-other-things">String Objects: Concatenation, Literals, and Other Things</a><ul>
 <li><a class="reference internal" href="#recall">Recall:</a></li>
+<li><a class="reference internal" href="#escape-sequence">Escape Sequence</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#id5">Extra Credit</a></li>
 </ul>
 </li>
 </ul>

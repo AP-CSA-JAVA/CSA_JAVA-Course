@@ -644,7 +644,51 @@ public class Main
 
 Escape sequences begin with the \ character (back slash as opposed to a forward slash) and allow a programmer to type these characters in String literals. Take a look at the three examples below.
 
-| Escape Sequence |  |   |
+### Escape Sequence
 | ---------------- | ---------------- | ---------------- |
 | Newline | The \ character | the " character |
 | \n | \\\ | \\" |
+
+```java
+public class Main
+{
+  public static void main(String[] args) 
+  {
+    // Notice a new line in your code does not mean
+    // a newline in your output, line breaks after
+    // operators are allowed
+    String stateSong = 
+      "\"Oh, Pine Tree State,\n Your woods\\ fields\\ and hills\\\"";
+    System.out.println(stateSong);
+  }
+}
+```
+**Output**
+"Oh, Pine Tree State,
+ Your woods\ fields\ and hills\"
+ 
+ 
+## Extra Credit
+
+1. Create a new file and save it as StateSong.java.
+2. Copy and paste the code stub into your new file.
+
+```
+public class FightSong
+{
+  public static void main(String[] args)
+  {
+
+  }
+}
+```
+
+3. Implement the following features (in any order) and comment where they occur.
+- [ ] A `String` created using a literal
+- [ ] A `String` created using the `String` class constructor
+- [ ] An immutable `String`
+- [ ] An implicit conversion via concatenation
+- [ ] The += operator for concatenation
+- [ ] The + operator for concatenation
+- [ ] Three escape sequences
+
