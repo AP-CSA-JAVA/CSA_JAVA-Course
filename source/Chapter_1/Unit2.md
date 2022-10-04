@@ -692,3 +692,15 @@ ________________________________________________________________________________
 - [ ] In APIs, classes are grouped into packages, also called modules.
 - [ ] The String class is part of the java.lang package. Classes in the java.lang package are available by default.
 - [ ] Documentation for APIs and libraries is essential to understanding the attributes and behaviors of a class and its methods.
+
+Navigate to and review the information that can be found at [Java API Specification](https://docs.oracle.com/en/java/javase/14/docs/api/index.html).
+
+| String Class Constructors and Methods | Explanation |
+| --------------- | --------------- |
+| `String(String str) | Constructs a new String object that represents the same sequence of characters as str. |
+| int length() | Returns the number of characters in a String object. |
+| String substring(int from, int to) | Returns the substring beginning at index from and ending at index to – 1. |
+| String substring(int from) | Returns substring(from, length()). |
+| int indexOf(String str) | Returns the index of the first occurrence of str; returns –1 if not found. |
+| boolean equals(String other) | Returns true if this is equal to other; returns false otherwise. |
+| int compareTo(String other) | Returns a value < 0 if this is less than other; returns zero if \n this is equal to other; returns a value > 0 if this is greater than other. |
