@@ -638,3 +638,12 @@ public class Main
   }
 }
 ```
+**NOTE** Java allows for *implicit type conversion* during concatenation. This means that even if a primitive is stored as a primitive type (be it *int* or *double*), it can still be concatenated to a String. The *int* is converted to a String before the + operator is applied.
+
+**NOTE** Certain characters need special treatment to be included in strings in Java. Either they are “non-printable,” such as the character that indicates a new line of output (called the newline character), or they already have other meanings in the Java language.
+
+Escape sequences begin with the \ character (back slash as opposed to a forward slash) and allow a programmer to type these characters in String literals. Take a look at the three examples below.
+
+| Escape Sequence |
+| Newline | The \ character | the " character |
+| \n | \\ | \" |

@@ -857,6 +857,12 @@ String objects are <em>immutable</em>. This means that you cannot change the Str
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
+<p><strong>NOTE</strong> Java allows for <em>implicit type conversion</em> during concatenation. This means that even if a primitive is stored as a primitive type (be it <em>int</em> or <em>double</em>), it can still be concatenated to a String. The <em>int</em> is converted to a String before the + operator is applied.</p>
+<p><strong>NOTE</strong> Certain characters need special treatment to be included in strings in Java. Either they are “non-printable,” such as the character that indicates a new line of output (called the newline character), or they already have other meanings in the Java language.</p>
+<p>Escape sequences begin with the \ character (back slash as opposed to a forward slash) and allow a programmer to type these characters in String literals. Take a look at the three examples below.</p>
+<p>| Escape Sequence |
+| Newline | The \ character | the “ character |
+| \n | \ | “ |</p>
 </section>
 </section>
 </section>
