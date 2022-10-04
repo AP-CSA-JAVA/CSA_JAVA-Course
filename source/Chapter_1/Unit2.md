@@ -670,20 +670,10 @@ public class Main
  
 ## Extra Credit
 
-1. Create a new file and save it as StateSong.java.
-2. Copy and paste the code stub into your new file.
+1. Create a new java file.
+     - Research a College Fight Song to use for this assignment.
 
-```
-public class FightSong
-{
-  public static void main(String[] args)
-  {
-
-  }
-}
-```
-
-3. Implement the following features (in any order) and comment where they occur.
+2. Implement the following features (in any order) and comment where they occur.
 - [ ] A `String` created using a literal
 - [ ] A `String` created using the `String` class constructor
 - [ ] An immutable `String`
@@ -692,3 +682,5 @@ public class FightSong
 - [ ] The + operator for concatenation
 - [ ] Three escape sequences
 
+Submit your program link.  Do not send me a screen shot of your program.  
+Comment your code showing that you completed each of the bullet points above.
