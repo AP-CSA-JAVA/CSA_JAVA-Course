@@ -566,6 +566,8 @@ ________________________________________________________________________________
 
 ## Car RoadTrip
 
+Starter file: [125-RoadTrip.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9717372/125-RoadTrip.zip)
+
 1. In the Car class, the attributes and constructor are complete. Look them over.
 2. In the Main class, create car object that has 20 mpg and a 15 gallon tank
 3. In the Car class, create the following methods:	
@@ -681,7 +683,7 @@ Escape sequences begin with the \ character (back slash as opposed to a forward 
 
 | Newline | The \ character | the " character |
 | ---------------- | ---------------- | ---------------- |
-| \n | \\\ | \\" |
+| `\n` | `\\` | `\"` |
 
 ```java
 public class Main
@@ -742,10 +744,14 @@ Navigate to and review the information that can be found at [Java API Specificat
 Take a look at the code below:
 ```java
      String horse = "percheron";
-     System.out.println(horse.length());
+     System.out.print("Percheron is ");
+     //
+     System.out.print(horse.length());
+     //
+     System.out.println(" letters long.");
 ```
 
 **Output**
 ```
-9
+Percheron is 9 letters long.
 ```
