@@ -683,7 +683,7 @@ Escape sequences begin with the \ character (back slash as opposed to a forward 
 
 | Newline | The \ character | the " character |
 | ---------------- | ---------------- | ---------------- |
-| \n | \\\ | \\" |
+| `\n` | `\\` | `\"` |
 
 ```java
 public class Main
