@@ -566,6 +566,8 @@ ________________________________________________________________________________
 
 ## Car RoadTrip
 
+Starter file: [125-RoadTrip.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9717372/125-RoadTrip.zip)
+
 1. In the Car class, the attributes and constructor are complete. Look them over.
 2. In the Main class, create car object that has 20 mpg and a 15 gallon tank
 3. In the Car class, create the following methods:	
