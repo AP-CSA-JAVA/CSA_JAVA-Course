@@ -721,13 +721,13 @@ Comment your code showing that you completed each of the bullet points above.
 _____________________________________________________________________________________________________
 ## String Methods
 
+Navigate to and review the information that can be found at [Java API Specification](https://docs.oracle.com/en/java/javase/14/docs/api/index.html).
+
 **Note** 
 - [ ] Application programming interfaces (APIs) simplify complex programming tasks.
 - [ ] In APIs, classes are grouped into packages, also called modules.
 - [ ] The String class is part of the java.lang package. Classes in the java.lang package are available by default.
 - [ ] Documentation for APIs and libraries is essential to understanding the attributes and behaviors of a class and its methods.
-
-Navigate to and review the information that can be found at [Java API Specification](https://docs.oracle.com/en/java/javase/14/docs/api/index.html).
 
 | String Class Constructors and Methods | Explanation |
 | --------------- | --------------- |
