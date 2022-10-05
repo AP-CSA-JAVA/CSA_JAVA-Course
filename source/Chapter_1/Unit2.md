@@ -744,10 +744,14 @@ Navigate to and review the information that can be found at [Java API Specificat
 Take a look at the code below:
 ```java
      String horse = "percheron";
-     System.out.println(horse.length());
+     System.out.print("Percheron is ");
+     //
+     System.out.print(horse.length());
+     //
+     System.out.println(" letters long.");
 ```
 
 **Output**
 ```
-9
+Percheron is 9 letters long.
 ```
