@@ -559,8 +559,41 @@ Perimeter of Circle: 50.24
 Area of Circle: 200.96
 ```
 Submit your link to the finished program
+
+__________________________________________________________________________________________________________________
+
 ### Assignment 2
 
+## Car RoadTrip
+
+1. In the Car class, the attributes and constructor are complete. Look them over.
+2. In the Main class, create car object that has 20 mpg and a 15 gallon tank
+3. In the Car class, create the following methods:	
+- `odometer()` - prints out how many miles driven like this: `Miles Driven: 300.0`
+- `milesAvailable()` - prints out how many miles the car can drive on that much gas. For example: `Miles Available: 240.0`
+- `addGas()` - This should add amount to the tank. If the amount is greater than the capacity, set the gas to the tank capacity. The method should print `Adding gas ...`
+- `drive()` - checks if car can drive that number of miles, and then adds miles to totalMilesDriven and subtracts the amount of gas needed to go those miles. The method should print Driving [distance] or, if the distance is too far, it should print Can't drive [distance]. That's too far!
+
+4. In the Main class, follow the comments and call the appropriate methods.
+
+
+**Sample Output:**
+```java
+Miles Driven: 0.0
+Miles Available: 0.0
+Adding gas ...
+Miles Available: 300.0
+Driving 100.0
+Miles Available: 200.0
+Adding gas ...
+Miles Available: 240.0
+Can't drive 365.0. That's too far!
+Driving 200.0
+Miles Driven: 300.0
+```
+
+Submit your link to the finished program
+_____________________________________________________________________________________________________
 
 ## String Objects: Concatenation, Literals, and Other Things
 
@@ -645,8 +678,9 @@ public class Main
 Escape sequences begin with the \ character (back slash as opposed to a forward slash) and allow a programmer to type these characters in String literals. Take a look at the three examples below.
 
 ### Escape Sequence
-| ---------------- | ---------------- | ---------------- |
+
 | Newline | The \ character | the " character |
+| ---------------- | ---------------- | ---------------- |
 | \n | \\\ | \\" |
 
 ```java
