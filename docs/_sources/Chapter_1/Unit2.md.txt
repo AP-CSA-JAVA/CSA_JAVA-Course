@@ -534,7 +534,7 @@ return calculateAverage() > 70;
 ```
 
 ### Assignment 1
-#### Instructions  Shape
+#### Instructions Shape using Non-Void Methods
 
 1. In the Shape class, the attributes and constructor is complete. Look them over.
 2. In the Main class, instantiate the three objects described in the comments
@@ -564,7 +564,7 @@ ________________________________________________________________________________
 
 ### Assignment 2
 
-## Car RoadTrip
+#### RoadTrip Shape using Non-Void Methods
 
 Starter file: [125-RoadTrip.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9717372/125-RoadTrip.zip)
 
