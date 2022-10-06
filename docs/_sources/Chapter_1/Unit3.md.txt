@@ -6,6 +6,10 @@
 | :-----------------: | ----------- | ------------- |
 | a < b | a less than b | Equates to 'true' if a is less than b,'false' otherwise |
 | a <= b | a less than or equal to b | Equates to 'true' if a is less than or equal to b, 'false' otherwise. |
+| a > b | a greater than b | Equates to 'true' if a is greater than b, 'false' otherwise. |
+| a >= b | a greater than or equal to b | Equates to 'true' if a is greater than or equal to b, 'false' otherwise. |
+| a == b | a equals b\* | Equates to 'true' if a has the same value as b. |
+| a != b | a does not equal b | Equates to 'true' if a does not have the same value as b, 'false' otherwise. |
 
 ## If Statements and Control Flow
 
