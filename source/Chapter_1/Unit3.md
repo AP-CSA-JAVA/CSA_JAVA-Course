@@ -11,6 +11,8 @@
 | a == b | a equals b\* | Equates to 'true' if a has the same value as b. |
 | a != b | a does not equal b | Equates to 'true' if a does not have the same value as b, 'false' otherwise. |
 
+\* Sometimes this comparison can be misleading.  `==` can look at the value `a` and compare it to `b` to see if it is located at the same memory location.
+
 ## If Statements and Control Flow
 
 ## If/ Else Statements
