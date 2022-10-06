@@ -608,7 +608,7 @@ String objects can be instantiated in **two different** ways, either by assignin
 String objects have the benefit of many methods, one such method is *concat*. Concatenation means appending one string to the end of another and is the function performed by the concat method.
 String objects are *immutable*. This means that you cannot change the String object, rather a new spot within the same memory location with the necessary changes. In this case, the program created a String object with a specific value. When the concat method is called, it creates a *new String object* in memory with the new value. This does not replace the original reference.
 
-**Example**
+***Example***
 ```java
 public class Main 
 {
