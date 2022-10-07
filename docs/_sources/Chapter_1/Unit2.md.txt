@@ -902,6 +902,14 @@ What is the output of String1 and String2 if they are both 'parkway'?
 **Sample Output**
 `0`
 
+Take a look at this ASCII table: [ascii-table-characters.pdf](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9737398/ascii-table-characters.pdf)
+
+Experiment with the program above by changing the values of the two Strings until you can answer the questions that follow definitively. Use the ASCII table resource to help guide your exploration.
+
+1. Which is greater, a capital letter or a lowercase letter? 
+2. Which is greater given two Strings that vary only in their last character? 
+3. Which is greater, a String beginning with a number, or one that begins with a letter? 
+4. When two Strings begin with the same substring and one is longer, which is greater? 
 
 
 Wrapper Classes
