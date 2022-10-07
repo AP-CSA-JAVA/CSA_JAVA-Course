@@ -755,19 +755,6 @@ Take a look at the code below:
 ```
 Percheron is 9 letters long.
 ```
-```java
-public class Main
-{
-  public static void main(String[] args)
-  {
-    String cat = "Figaro";
-    System.out.println(cat.length());
-  }
-}
-```
-**Sample Output**
-
-`6`
 
 Use the program as a reference, create a program that:
 - [ ] Creates a `String` of length three that references the `String` literal "cat"
@@ -815,6 +802,30 @@ Exception in thread "main" java.lang.StringIndexOutOfBoundsException: String ind
 How would you fix this error?
 
 ```java
+class Main {
+  public static void main(String[] args) {
+	String pangram = "The quick brown fox jumps over the lazy dog";
+    System.out.println(pangram.indexOf("b")); 
+
+  }
+}
+```
+**Output**
+`10`
+
+```java
+class Main {
+  public static void main(String[] args) {
+	String pangram = "The quick brown fox jumps over the lazy dog";
+    System.out.println(pangram.indexOf(44)); 
+
+  }
+}
+```
+**Output**
+`-1`
+
+```java
 public class Main
 {
   public static void main(String[] args)
@@ -825,6 +836,7 @@ public class Main
   }
 }
 ```
+
 What would go within the println statement?
 
 ```java
