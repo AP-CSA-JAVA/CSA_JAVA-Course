@@ -725,10 +725,20 @@ ________________________________________________________________________________
 
 Navigate to and review the information that can be found at [Java API Specification](https://docs.oracle.com/en/java/javase/14/docs/api/index.html).
 
+| Navigation |
+| ---------- |
+| Select java.base > java.lang |
+| Scroll through Class Summary until you find `String` |
+| Review String class description |
+| Click on `String` class link to explore the class |
+|  |
+| Click on 'Constructor Summary' to explore how you can call the String Constructor |
+| Click on 'Method' to view the Method Summary |
+
 **Note** 
 - [ ] Application programming interfaces (APIs) simplify complex programming tasks.
 - [ ] In APIs, classes are grouped into packages, also called modules.
-- [ ] The String class is part of the java.lang package. Classes in the java.lang package are available by default.
+- [ ] The `String` class is part of the `java.lang` package. Classes in the `java.lang` package are available by default.
 - [ ] Documentation for APIs and libraries is essential to understanding the attributes and behaviors of a class and its methods.
 
 | String Class Constructors and Methods | Explanation |
