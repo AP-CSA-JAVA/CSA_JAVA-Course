@@ -755,11 +755,42 @@ Take a look at the code below:
 ```
 Percheron is 9 letters long.
 ```
+```java
+public class Main
+{
+  public static void main(String[] args)
+  {
+    String cat = "Figaro";
+    System.out.println(cat.length());
+  }
+}
+```
+**Sample Output**
 
-## Wrapper Classes
+`6`
+
+Use the program as a reference, create a program that:
+- [ ] Creates a `String` of length three that references the `String` literal "cat"
+- [ ] Calls the `length` method of that object, storing the result in a variable of type `int`
+- [ ] Displays the value store in that variable
+- [ ] Concatenates a `String` of your choice to the end of "cat"
+- [ ] Displays the new length of the `String`
+
+**String** 
+`substring(int from, int to)` - ***Returns the substring beginning at index `from` and ending at index `to` -1.***
+
+**Example**
+`myName.substring(1,3)`
+
+| J | o | n | a | t | h | a | n |
+| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
 
 
-## Using the Math Class
 
-## Project Mad Libs
+Wrapper Classes
+
+
+Using the Math Class
+
+Project Mad Libs
 
