@@ -18,8 +18,8 @@
 # -- Project information -----------------------------------------------------
 
 project = 'CSA JAVA Course'
-copyright = '2022, Jonathan Virak'
-author = 'Jonathan Virak'
+copyright = '2022, Mr. V'
+author = 'Mr, V'
 
 # The full version, including alpha/beta/rc tags
 release = '0.1'
@@ -51,7 +51,7 @@ exclude_patterns = []
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'furo'
+html_theme = 'sphinx_rtd_theme'
 
 html_title = project
 
