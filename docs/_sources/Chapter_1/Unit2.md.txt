@@ -842,6 +842,9 @@ public class Main
 ```
 How would you modify the calls to substring so that the program below will print true. 
 
+String Objects Practice: 
+[Activity 126 String Objects_Vers1.docx](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9735560/Activity.126.String.Objects_Vers1.docx)
+
 
 Wrapper Classes
 
