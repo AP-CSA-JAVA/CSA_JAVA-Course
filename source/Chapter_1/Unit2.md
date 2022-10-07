@@ -280,7 +280,42 @@ Starting: True
 - [ ] Submit your program code
 
 **Sample Output**
-![cakeRunner](https://user-images.githubusercontent.com/12989939/167034699-91f78db4-b728-41cf-9eb3-d151d1c9c9b3.PNG)
+```java
+        ,,,
+        |||
+    (**********)
+    (*        *)
+    (*        *)
+  (**************)
+  (*            *)
+  (*            *)
+(******************)
+(*                *)
+(*                *)
+(******************)
+
+In Cake, formal param t started as 3.0 and changed to 0.0
+   ,,,
+   |||
+(~~~~~~~)
+(       )
+(~~~~~~~)
+
+      ,,,
+      |||
+  (**********)
+  (*        *)
+  (*        *)
+(**************)
+(*            *)
+(*            *)
+(**************)
+
+myCake=Cake@15db9742
+yourCake=Cake@6d06d69c
+ourCake=Cake@7852e922
+emptyCake=null
+```
 
 ### Extra Credit
 **Instructions:**
