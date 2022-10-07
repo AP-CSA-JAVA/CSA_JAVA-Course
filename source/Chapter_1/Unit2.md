@@ -803,6 +803,9 @@ public class Main
   }
 }
 ```
+
+**Note** A String object has index values from 0 to length – 1. Attempting to access indices outside this range will result in an IndexOutOfBoundsException.
+
 **Sample Output**
 ```
 Exception in thread "main" java.lang.StringIndexOutOfBoundsException: String index out of range: 44
@@ -866,6 +869,39 @@ How would you modify the calls to substring so that the program below will print
 
 String Objects Practice: 
 [Activity 126 String Objects_Vers1.docx](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9735560/Activity.126.String.Objects_Vers1.docx)
+
+| compareTo | |
+| --------- | --------- |
+| int compareTo(String other) | Returns a value < 0 if this is less than other; returns zero if this is equal to other; returns a value > 0 if this is greater than other. |
+
+```java
+public class Main
+{
+  public static void main(String[] args)
+  {
+    String string1 = "park";
+    String string2 = "parkway";
+    
+    System.out.println(string1.compareTo(string2));
+  }
+}
+```
+
+What is the output of this program?
+
+**Sample Output**
+`-3`
+
+What is the output if String1 was `parkway` and string2 was `park`?
+
+**Sample Output**
+`3`
+
+What is the output of String1 and String2 if they are both 'parkway'?
+
+**Sample Output**
+`0`
+
 
 
 Wrapper Classes
