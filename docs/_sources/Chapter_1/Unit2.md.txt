@@ -779,12 +779,68 @@ Use the program as a reference, create a program that:
 **String** 
 `substring(int from, int to)` - ***Returns the substring beginning at index `from` and ending at index `to` -1.***
 
+![5973746a769a40f78540dfbd24529a0c](https://user-images.githubusercontent.com/12989939/194594983-728dab7d-02bb-406c-896e-6e081001fbd5.png)
 
+**Example 1** 
+```java
+public class Main
+{
+  public static void main (String[] args)
+  {
+    String pangram = "The quick brown fox jumps over the lazy dog";
+    System.out.println(pangram.substring(4, 19));
+  }
+}
+```
 
- 
+**Sample Output**
+`quick brown fox`
 
+```java
+public class Main
+{
+  public static void main (String[] args)
+  {
+    String pangram = "The quick brown fox jumps over the lazy dog";
+    System.out.println(pangram.substring(41, 44));
+  }
+}
+```
+**Sample Output**
+```
+Exception in thread "main" java.lang.StringIndexOutOfBoundsException: String index out of range: 44
+	at java.lang.String.substring(String.java:1963)
+	at IndexTester.main(IndexTester.java:9)
+```
+How would you fix this error?
 
+```java
+public class Main
+{
+  public static void main(String[] args)
+  {
+    String placeName = "New Brunswick";
+    /* Add your code within the parentheses below. */
+    System.out.println();
+  }
+}
+```
+What would go within the println statement?
 
+```java
+public class Main
+{
+  public static void main(String[] args){
+    String word1 = "motorcycle";
+    String word2 = "recycle";
+    
+    String word1part2 = word1.substring(5);
+    String word2part2 = word2.substring(5);
+    System.out.println(word1part2.equals(word2part2));
+  }
+}
+```
+How would you modify the calls to substring so that the program below will print true. 
 
 
 Wrapper Classes
