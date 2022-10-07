@@ -564,7 +564,7 @@ ________________________________________________________________________________
 
 ### Assignment 2
 
-#### RoadTrip Shape using Non-Void Methods
+#### Instructions RoadTrip using Non-Void Methods
 
 Starter file: [125-RoadTrip.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9717372/125-RoadTrip.zip)
 
