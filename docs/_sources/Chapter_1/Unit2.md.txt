@@ -779,13 +779,11 @@ Use the program as a reference, create a program that:
 **String** 
 `substring(int from, int to)` - ***Returns the substring beginning at index `from` and ending at index `to` -1.***
 
-**Example**
-`myName.substring(1,3)`
+
+
  
 
-| J | o | n | a | t | h | a | n | \n
 
-| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
 
 
 
