@@ -1047,7 +1047,9 @@ public class Main
   public static void main(String[] args)
   {
     Double d = new Double(1.5); // instantiates a Double
-    System.out.println("d value is: " + d.doubleValue()); // Uses the doubleValue method in a print statement
+    // Uses the doubleValue method in a print statement
+    System.out.println("d value is: " + d.doubleValue()); 
+    
   } 
 }
 ```
