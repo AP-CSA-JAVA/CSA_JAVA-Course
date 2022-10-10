@@ -924,18 +924,10 @@ public class Main
 
 What is the output of this program?
 
-**Sample Output**
-`-3`
-
 What is the output if String1 was `parkway` and string2 was `park`?
-
-**Sample Output**
-`3`
 
 What is the output of String1 and String2 if they are both 'parkway'?
 
-**Sample Output**
-`0`
 
 **boolean equals(String other)** - Compares the current string to the specified **other** string anmd returns **true** if they are equal, **false** otherwise.  Given the following code segment, predict whether the output will be **true** or **false**.
 
@@ -1005,8 +997,164 @@ Give papa a proper bup of boffee in a bopper boffee bup.
 Submit your repl.it file on Canvas.
 ```
 
-Wrapper Classes
+## Wrapper Classes
 
+Recall that primitive data types are int, double, boolean & String.  A wrapper class is a class that allows you to extend a primitive type into an object.  A wrapper class contains a single attribute that is its primitive type.  For example, `Integer` is a wrapper class for primitive type `int`.  Integer belongs to the Java.lang package that can be found in the API documentation that we reviewed in a prior lesson.
+
+| Integer Class Constructors and Methods | Explanation |
+| --------------------- | --------- |
+| Integer(int value) | Constructs a new Integer object that represents the specified int value. |
+| Integer.MIN_VALUE | The minimum value represented by int or Integer. |
+| Integer.MAX_VALUE | The maximum value represented by int or Integer. |
+| int intValue() | Returns the value of this Integer as an int. |
+
+The program below retrieves the value wrapped by an Integer and stores it in a primitive int before using that value. 
+Modify the program so that it stores the value of int1 in int2.
+
+```java
+public class Main
+{
+  public static void main(String[] args)
+  {
+    Integer int1;
+    Integer int2;
+    int primitiveInt;
+    
+    int1 = new Integer(20);
+    int2 = new Integer(int1.intValue()); // solution 1
+    int2 = int1.intValue(); // solution 2
+    
+    System.out.println("int2 value is: " + int2.intValue());
+  }
+  
+}
+```
+
+**Sample Output**
+`int2 value is: 20`
+
+| Double Class Constructors and Methods | Explanation |
+| ----------------- | ------------ |
+| Double(double value) | Constructs a new Double object that represents the specified double value. |
+| double doubleValue() | Returns the value of this Double as a double. |
+
+```java 
+public class Main
+{
+  public static void main(String[] args)
+  {
+    Double d = new Double(1.5); // instantiates a Double
+    System.out.println("d value is: " + d.doubleValue()); // Uses the doubleValue method in a print statement
+  } 
+}
+```
+
+**Sample Output**
+`d value is: 1.5`
+
+#### Autoboxing/ Unboxing
+In the program below the JVM did some extra work at lines 5 and 6. Java automatically converted from the int and double primitive types to their corresponding object reference types. This is called autoboxing, an automatic conversion that the Java compiler makes between primitive types and their corresponding object wrapper classes.
+
+```java
+1 public class Main
+2 {
+3   public static void main(String[] args)
+4   {
+5     Integer integerInstance = 5;
+6     Double doubleInstance = 2.0;
+7     // recall newlines are allowed around operators
+8     System.out.println("integerInstance: " + integerInstance.intValue() +
+9                        " doubleInstance: " + doubleInstance.doubleValue());
+10  }
+11 }
+```
+**Note:** Autoboxing is the automatic conversion that the Java compiler makes between primitive types and their corresponding object wrapper classes, including int to Integer, double to Double, and boolean to Boolean.
+
+The program below demonstrates the opposite of autoboxing called **unboxing**. Java automatically converted the Integer reference types to its corresponding int primitive types.
+
+```java
+public class Main
+{
+  public static void main(String[] args)
+  {
+    unboxInt(new Integer(42));
+    unboxDouble(new Double(3.14159));
+    unboxBoolean(new Boolean(true));
+  }
+  
+  public static void unboxInt(int i)
+  {
+    System.out.println(i);
+  }
+  
+  public static void unboxDouble(double d)
+  {
+    System.out.println(d);
+  }
+  
+  public static void unboxBoolean(boolean b)
+  {
+    System.out.println(b);
+  }
+}
+```
+**Note:** Unboxing is the automatic conversion that the Java compiler makes from the wrapper class to the primitive type. 
+This includes converting an Integer to an int and a Double to a double.
+
+The Java compiler applies unboxing when a wrapper class object is:
+i. Passed as a parameter to a method that expects a value of the corresponding primitive type.
+ii. Assigned to a variable of the corresponding primitive type.
+
+```java
+1 public class Main
+2 {
+3   public static void main(String[] args){
+4    Integer cardboardWidth = new Integer(4);
+5    Integer cardboardHeight = new Integer(5);
+6    
+7    Box cardboardBox = new Box(cardboardWidth, cardboardHeight);
+8    cardboardBox.changeDimensions(2,3);
+9    System.out.println("Ending box dimensions: " + cardboardBox.getWidth() + " x " + cardboardBox.getHeight());
+10  }
+11  
+12  private static class Box
+13  {
+14    private int width, height;
+15    
+16    public Box(int w, int h){
+17      width = w;
+18      height = h;
+19    }
+20    
+21    public void changeDimensions(Integer w, Integer h){
+22      width = w.intValue();
+23      height = h.intValue();
+24    }
+25    
+26    public int getWidth(){
+27      return width;
+28    }
+29    public int getHeight(){
+30      return height;
+31    }
+32  }
+33 }
+```
+
+What line of code contains an example of autoboxing?
+What line of code contains an example of unboxing?
+
+### Assignment 1 Wrapper Classes Practice
+
+Create a program that contains an example of each of the following. Add in-line comments to describe each example.
+- [ ] An Integer constructor
+- [ ] The intValue method
+- [ ] A Double constructor
+- [ ] The doubleValue method
+- [ ] The maximum double value
+- [ ] The minimum double value
+- [ ] Autoboxing
+- [ ] Unboxing
 
 Using the Math Class
 

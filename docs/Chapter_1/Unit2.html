@@ -1189,14 +1189,8 @@ Comment your code showing that you completed each of the bullet points above.</p
 </pre></div>
 </div>
 <p>What is the output of this program?</p>
-<p><strong>Sample Output</strong>
-<code class="docutils literal notranslate"><span class="pre">-3</span></code></p>
 <p>What is the output if String1 was <code class="docutils literal notranslate"><span class="pre">parkway</span></code> and string2 was <code class="docutils literal notranslate"><span class="pre">park</span></code>?</p>
-<p><strong>Sample Output</strong>
-<code class="docutils literal notranslate"><span class="pre">3</span></code></p>
 <p>What is the output of String1 and String2 if they are both ‘parkway’?</p>
-<p><strong>Sample Output</strong>
-<code class="docutils literal notranslate"><span class="pre">0</span></code></p>
 <p><strong>boolean equals(String other)</strong> - Compares the current string to the specified <strong>other</strong> string anmd returns <strong>true</strong> if they are equal, <strong>false</strong> otherwise.  Given the following code segment, predict whether the output will be <strong>true</strong> or <strong>false</strong>.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">word1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;motorcycle&quot;</span><span class="p">;</span><span class="w"></span>
 <span class="n">String</span><span class="w"> </span><span class="n">word2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;recycle&quot;</span><span class="p">;</span><span class="w"></span>
@@ -1254,7 +1248,185 @@ bompton() - returns the phrase with all the c&#39;s replaced by b&#39;s
 <span class="n">Submit</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">repl</span><span class="p">.</span><span class="na">it</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">Canvas</span><span class="p">.</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Wrapper Classes</p>
+</section>
+</section>
+<section id="wrapper-classes">
+<h2>Wrapper Classes<a class="headerlink" href="#wrapper-classes" title="Permalink to this heading">#</a></h2>
+<p>Recall that primitive data types are int, double, boolean &amp; String.  A wrapper class is a class that allows you to extend a primitive type into an object.  A wrapper class contains a single attribute that is its primitive type.  For example, <code class="docutils literal notranslate"><span class="pre">Integer</span></code> is a wrapper class for primitive type <code class="docutils literal notranslate"><span class="pre">int</span></code>.  Integer belongs to the Java.lang package that can be found in the API documentation that we reviewed in a prior lesson.</p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Integer Class Constructors and Methods</p></th>
+<th class="head"><p>Explanation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Integer(int value)</p></td>
+<td><p>Constructs a new Integer object that represents the specified int value.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Integer.MIN_VALUE</p></td>
+<td><p>The minimum value represented by int or Integer.</p></td>
+</tr>
+<tr class="row-even"><td><p>Integer.MAX_VALUE</p></td>
+<td><p>The maximum value represented by int or Integer.</p></td>
+</tr>
+<tr class="row-odd"><td><p>int intValue()</p></td>
+<td><p>Returns the value of this Integer as an int.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The program below retrieves the value wrapped by an Integer and stores it in a primitive int before using that value.
+Modify the program so that it stores the value of int1 in int2.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Integer</span><span class="w"> </span><span class="n">int1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">Integer</span><span class="w"> </span><span class="n">int2</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">primitiveInt</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">int1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Integer</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">int2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Integer</span><span class="p">(</span><span class="n">int1</span><span class="p">.</span><span class="na">intValue</span><span class="p">());</span><span class="w"> </span><span class="c1">// solution 1</span><span class="w"></span>
+<span class="w">    </span><span class="n">int2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">int1</span><span class="p">.</span><span class="na">intValue</span><span class="p">();</span><span class="w"> </span><span class="c1">// solution 2</span><span class="w"></span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;int2 value is: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">int2</span><span class="p">.</span><span class="na">intValue</span><span class="p">());</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Sample Output</strong>
+<code class="docutils literal notranslate"><span class="pre">int2</span> <span class="pre">value</span> <span class="pre">is:</span> <span class="pre">20</span></code></p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Double Class Constructors and Methods</p></th>
+<th class="head"><p>Explanation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Double(double value)</p></td>
+<td><p>Constructs a new Double object that represents the specified double value.</p></td>
+</tr>
+<tr class="row-odd"><td><p>double doubleValue()</p></td>
+<td><p>Returns the value of this Double as a double.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Double</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Double</span><span class="p">(</span><span class="mf">1.5</span><span class="p">);</span><span class="w"> </span><span class="c1">// instantiates a Double</span><span class="w"></span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;d value is: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="na">doubleValue</span><span class="p">());</span><span class="w"> </span><span class="c1">// Uses the doubleValue method in a print statement</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Sample Output</strong>
+<code class="docutils literal notranslate"><span class="pre">d</span> <span class="pre">value</span> <span class="pre">is:</span> <span class="pre">1.5</span></code></p>
+<section id="autoboxing-unboxing">
+<h3>Autoboxing/ Unboxing<a class="headerlink" href="#autoboxing-unboxing" title="Permalink to this heading">#</a></h3>
+<p>In the program below the JVM did some extra work at lines 5 and 6. Java automatically converted from the int and double primitive types to their corresponding object reference types. This is called autoboxing, an automatic conversion that the Java compiler makes between primitive types and their corresponding object wrapper classes.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"></span>
+<span class="mi">2</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="mi">3</span><span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="mi">4</span><span class="w">   </span><span class="p">{</span><span class="w"></span>
+<span class="mi">5</span><span class="w">     </span><span class="n">Integer</span><span class="w"> </span><span class="n">integerInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
+<span class="mi">6</span><span class="w">     </span><span class="n">Double</span><span class="w"> </span><span class="n">doubleInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.0</span><span class="p">;</span><span class="w"></span>
+<span class="mi">7</span><span class="w">     </span><span class="c1">// recall newlines are allowed around operators</span><span class="w"></span>
+<span class="mi">8</span><span class="w">     </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;integerInstance: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">integerInstance</span><span class="p">.</span><span class="na">intValue</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"></span>
+<span class="mi">9</span><span class="w">                        </span><span class="s">&quot; doubleInstance: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">doubleInstance</span><span class="p">.</span><span class="na">doubleValue</span><span class="p">());</span><span class="w"></span>
+<span class="mi">10</span><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="mi">11</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Note:</strong> Autoboxing is the automatic conversion that the Java compiler makes between primitive types and their corresponding object wrapper classes, including int to Integer, double to Double, and boolean to Boolean.</p>
+<p>The program below demonstrates the opposite of autoboxing called <strong>unboxing</strong>. Java automatically converted the Integer reference types to its corresponding int primitive types.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">unboxInt</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Integer</span><span class="p">(</span><span class="mi">42</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="n">unboxDouble</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Double</span><span class="p">(</span><span class="mf">3.14159</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="n">unboxBoolean</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Boolean</span><span class="p">(</span><span class="kc">true</span><span class="p">));</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">unboxInt</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">unboxDouble</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">d</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">d</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">unboxBoolean</span><span class="p">(</span><span class="kt">boolean</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">b</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>Note:</strong> Unboxing is the automatic conversion that the Java compiler makes from the wrapper class to the primitive type.
+This includes converting an Integer to an int and a Double to a double.</p>
+<p>The Java compiler applies unboxing when a wrapper class object is:
+i. Passed as a parameter to a method that expects a value of the corresponding primitive type.
+ii. Assigned to a variable of the corresponding primitive type.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"></span>
+<span class="mi">2</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="mi">3</span><span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">){</span><span class="w"></span>
+<span class="mi">4</span><span class="w">    </span><span class="n">Integer</span><span class="w"> </span><span class="n">cardboardWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Integer</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span><span class="w"></span>
+<span class="mi">5</span><span class="w">    </span><span class="n">Integer</span><span class="w"> </span><span class="n">cardboardHeight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Integer</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w"></span>
+<span class="mi">6</span><span class="w">    </span>
+<span class="mi">7</span><span class="w">    </span><span class="n">Box</span><span class="w"> </span><span class="n">cardboardBox</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Box</span><span class="p">(</span><span class="n">cardboardWidth</span><span class="p">,</span><span class="w"> </span><span class="n">cardboardHeight</span><span class="p">);</span><span class="w"></span>
+<span class="mi">8</span><span class="w">    </span><span class="n">cardboardBox</span><span class="p">.</span><span class="na">changeDimensions</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
+<span class="mi">9</span><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Ending box dimensions: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cardboardBox</span><span class="p">.</span><span class="na">getWidth</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; x &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cardboardBox</span><span class="p">.</span><span class="na">getHeight</span><span class="p">());</span><span class="w"></span>
+<span class="mi">10</span><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="mi">11</span><span class="w">  </span>
+<span class="mi">12</span><span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Box</span><span class="w"></span>
+<span class="mi">13</span><span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="mi">14</span><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">;</span><span class="w"></span>
+<span class="mi">15</span><span class="w">    </span>
+<span class="mi">16</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Box</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">h</span><span class="p">){</span><span class="w"></span>
+<span class="mi">17</span><span class="w">      </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">w</span><span class="p">;</span><span class="w"></span>
+<span class="mi">18</span><span class="w">      </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">h</span><span class="p">;</span><span class="w"></span>
+<span class="mi">19</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="mi">20</span><span class="w">    </span>
+<span class="mi">21</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">changeDimensions</span><span class="p">(</span><span class="n">Integer</span><span class="w"> </span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="w"> </span><span class="n">h</span><span class="p">){</span><span class="w"></span>
+<span class="mi">22</span><span class="w">      </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">w</span><span class="p">.</span><span class="na">intValue</span><span class="p">();</span><span class="w"></span>
+<span class="mi">23</span><span class="w">      </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">h</span><span class="p">.</span><span class="na">intValue</span><span class="p">();</span><span class="w"></span>
+<span class="mi">24</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="mi">25</span><span class="w">    </span>
+<span class="mi">26</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getWidth</span><span class="p">(){</span><span class="w"></span>
+<span class="mi">27</span><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">width</span><span class="p">;</span><span class="w"></span>
+<span class="mi">28</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="mi">29</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getHeight</span><span class="p">(){</span><span class="w"></span>
+<span class="mi">30</span><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">height</span><span class="p">;</span><span class="w"></span>
+<span class="mi">31</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="mi">32</span><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="mi">33</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>What line of code contains an example of autoboxing?
+What line of code contains an example of unboxing?</p>
+</section>
+<section id="assignment-1-wrapper-classes-practice">
+<h3>Assignment 1 Wrapper Classes Practice<a class="headerlink" href="#assignment-1-wrapper-classes-practice" title="Permalink to this heading">#</a></h3>
+<p>Create a program that contains an example of each of the following. Add in-line comments to describe each example.</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> An Integer constructor</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> The intValue method</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> A Double constructor</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> The doubleValue method</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> The maximum double value</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> The minimum double value</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Autoboxing</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Unboxing</p></li>
+</ul>
 <p>Using the Math Class</p>
 <p>Project Mad Libs</p>
 </section>
@@ -1361,6 +1533,11 @@ bompton() - returns the phrase with all the c&#39;s replaced by b&#39;s
 </li>
 <li><a class="reference internal" href="#string-methods">String Methods</a><ul>
 <li><a class="reference internal" href="#activity-1-wordplay">Activity 1 - Wordplay</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#wrapper-classes">Wrapper Classes</a><ul>
+<li><a class="reference internal" href="#autoboxing-unboxing">Autoboxing/ Unboxing</a></li>
+<li><a class="reference internal" href="#assignment-1-wrapper-classes-practice">Assignment 1 Wrapper Classes Practice</a></li>
 </ul>
 </li>
 </ul>
