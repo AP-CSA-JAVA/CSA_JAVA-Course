@@ -711,9 +711,7 @@ public class Main
     
     
     
-    
     /* Use the += operator on stateBerry to append "Blueberry" */
-    
     
     
     
@@ -1346,14 +1344,14 @@ public class MathPractice
   public static void main(String[] args)
   {
     // Find 8x8x8x8
-    System.out.println(Math.pow());
+    System.out.println(     );
     // Find the square root of 64
-    System.out.println(Math.sqrt());
+    System.out.println(     );
     // Find the square root of 65
-    System.out.println(Math.sqrt());
+    System.out.println(     );
     // Find the square root of the absolute value of the difference
     // between 12 squared and 5 squared.
-    System.out.println(Math.sqrt(Math.abs(Math.pow() - Math.pow())));
+    System.out.println(     );
   }
 }
 ```
