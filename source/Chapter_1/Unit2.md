@@ -923,11 +923,28 @@ public class Main
 ```
 
 What is the output of this program?
+<details><summary>Answer</summary>
+<p>
+
+`3`
+</p>
+</details>
 
 What is the output if String1 was `parkway` and string2 was `park`?
+<details><summary>Answer</summary>
+<p>
+
+`-3`
+</p>
+</details>
 
 What is the output of String1 and String2 if they are both 'parkway'?
+<details><summary>Answer</summary>
+<p>
 
+`0`
+</p>
+</details>
 
 **boolean equals(String other)** - Compares the current string to the specified **other** string anmd returns **true** if they are equal, **false** otherwise.  Given the following code segment, predict whether the output will be **true** or **false**.
 
@@ -1163,9 +1180,11 @@ In the program below, which line of code contains an example of *unboxing*?
 
 
 ```java
-   Unboxing occurs on line 10 when Integer parameters are automatically converted to ints in the constructor.
+ Unboxing occurs on line 10 when Integer parameters are automatically converted to ints in the 
+ constructor.
    
-   Autoboxing occurs on line 11 when int parameters are automatically converted to Integers in the method.
+ Autoboxing occurs on line 11 when int parameters are automatically converted to Integers 
+ in the method.
 ```
 
 </p>
