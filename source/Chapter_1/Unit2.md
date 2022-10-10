@@ -1223,5 +1223,113 @@ Create a program that contains an example of each of the following. Add in-line 
 
 ### Using the Math Class
 
+- [ ]  Incorporate randomness into a program
+- [ ]  Use methods from the Math package.
+
+The Math class can be found in the java.lang package.  The Math class contains only static methods.  Some of the more commonly use Math methods are listed below.
+
+| Math Class Methods | Explanations |
+| ----------- | --------- |
+| int abs(int x) | Returns the absolute value of an int value |
+| double abs(double x) | Returns the absolute value of a double value |
+| double pow(double base, double exponent) | Returns the value of the first parameter raised to the power of the second parameter |
+| double sqrt(double x) | Returns the positive square root of a double value |
+| double random() | Returns a double value greater than or equal to 0.0 and less than 1.0 |
+
+As stated above, Math methods are static.  This means that you do not use an object reference like you did with non-static methods (cat.length()).  Instead, you reference the class name itself followed by the static method. Some examples are listed below.
+
+| Math Method Examples |
+| --------- |
+| Math.abs(-5) |
+| Math.abd(2.3) |
+| Math.sqrt(4) |
+|Math.random() |
+
+If you were to write your program using a constructor your program will return an error.
+
+```
+Math m = new Math();
+m.random();
+```
+
+Take a look at the program below.
+
+```java
+public class Main
+{
+  public static void main(String[] args)
+  {
+    int path1 = -1; // The car drives West 1 block
+    int path2 = -1; // The car drives West 1 block
+    int path3 = -1; // The car drives West 1 block
+    int path4 = 3; // The car drives East 3 blocks
+    // Added calls to Math.abs in the print statement below.
+    System.out.println(Math.abs(path1) + Math.abs(path2) + Math.abs(path3) + Math.abs(path4)); 
+  }
+}
+```
+
+Review the Math Class Methods in the table above.
+
+```java
+public class MathPractice
+{
+  public static void main(String[] args)
+  {
+    // Find 8x8x8x8
+    System.out.println(Math.pow());
+    // Find the square root of 64
+    System.out.println(Math.sqrt());
+    // Find the square root of 65
+    System.out.println(Math.sqrt());
+    // Find the square root of the absolute value of the difference
+    // between 12 squared and 5 squared.
+    System.out.println(Math.sqrt(Math.abs(Math.pow() - Math.pow())));
+  }
+}
+```
+
+<details><summary>Find 8x8x8x8 answer</summary>
+<p>
+
+```java
+System.out.println(Math.pow(8, 4));
+```
+</p>
+</details>
+
+
+
+<details><summary>square root of 64 answer</summary>
+<p>
+
+```java
+System.out.println(Math.sqrt(64));
+```
+</p>
+</details>
+
+
+
+<details><summary>square root of 65 answer</summary>
+<p>
+
+```java
+System.out.println(Math.sqrt(65));
+```
+</p>
+</details>
+
+
+
+<details><summary>difference between 12 squared and 5 squared answer</summary>
+<p>
+
+```java
+System.out.println(Math.sqrt(Math.abs(Math.pow(12, 2) - Math.pow(5, 2))));
+```
+</p>
+</details>
+
 Project Mad Libs
 
