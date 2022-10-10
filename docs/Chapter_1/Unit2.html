@@ -1524,6 +1524,52 @@ In the program below, which line of code contains an example of <em>unboxing</em
 </tbody>
 </table>
 </div>
+<p>Having seen the Math method abs method in use, refer to the Java Quick Reference to predict
+how you could use the <code class="docutils literal notranslate"><span class="pre">pow</span></code> method to raise a base of 2 to the exponent 10 (2<sup>10</sup>).</p>
+<details><Answer</summary>
+<p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Math</span><span class="p">.</span><span class="na">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+</div>
+</p>
+</details>
+<p>How would you write the <code class="docutils literal notranslate"><span class="pre">sqrt</span></code> method to get the square root of 9.</p>
+<details><Answer</summary>
+<p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Math</span><span class="p">.</span><span class="na">sqrt</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+</div>
+</p>
+</details>
+</section>
+<section id="the-random-method">
+<h3>The random Method<a class="headerlink" href="#the-random-method" title="Permalink to this heading">#</a></h3>
+<p>For programs that require some amount of randomness, such as games, security, simulations, and statistics, Java’s Math class provides a random method. This method returns a double value that falls in the range from 0.0 to 1.0 non-inclusive, expressed mathematically as (0.0, 1.0) to indicate that it includes 0.0 but that its highest value is .999999999999999. With random values from 0 to .99…, you can mathematically generate any random number you may need. As you will see, you can manipulate the results in a variety of ways to fit your needs.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">rnum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">24</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// This program produces a random integer between 0 and 23 inclusive.</span><span class="w"></span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">rnum</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>You can also create a range using the random method in the formula below.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Math.random()</span> <span class="pre">*</span> <span class="pre">n&lt;sup&gt;1&lt;/sup&gt;</span> <span class="pre">+</span> <span class="pre">m&lt;sup&gt;2&lt;/sup&gt;</span></code></p>
+<p><sup>1</sup> = Number of integers included in range
+<sup>2</sup> = Lowest integer in range</p>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">Math.random</span></code> method to generate a double value greater than or equal to 10.0 (inclusive) and less than 15.0 (exclusive).</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
 <p>As stated above, Math methods are static.  This means that you do not use an object reference like you did with non-static methods (cat.length()).  Instead, you reference the class name itself followed by the static method. Some examples are listed below.</p>
 <div class="table-wrapper colwidths-auto docutils container">
 <table class="docutils align-default">
@@ -1534,7 +1580,7 @@ In the program below, which line of code contains an example of <em>unboxing</em
 <tbody>
 <tr class="row-even"><td><p>Math.abs(-5)</p></td>
 </tr>
-<tr class="row-odd"><td><p>Math.abd(2.3)</p></td>
+<tr class="row-odd"><td><p>Math.abs(2.3)</p></td>
 </tr>
 <tr class="row-even"><td><p>Math.sqrt(4)</p></td>
 </tr>
@@ -1581,7 +1627,7 @@ In the program below, which line of code contains an example of <em>unboxing</em
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<details><summary>Find 8x8x8x8 answer</summary>
+<details><summary>8x8x8x8 answer</summary>
 <p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">pow</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">));</span><span class="w"></span>
 </pre></div>
@@ -1720,6 +1766,7 @@ In the program below, which line of code contains an example of <em>unboxing</em
 <li><a class="reference internal" href="#autoboxing-unboxing">Autoboxing/ Unboxing</a></li>
 <li><a class="reference internal" href="#assignment-1-wrapper-classes-practice">Assignment 1 Wrapper Classes Practice</a></li>
 <li><a class="reference internal" href="#using-the-math-class">Using the Math Class</a></li>
+<li><a class="reference internal" href="#the-random-method">The random Method</a></li>
 </ul>
 </li>
 </ul>

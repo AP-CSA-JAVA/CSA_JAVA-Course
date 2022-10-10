@@ -1236,12 +1236,69 @@ The Math class can be found in the java.lang package.  The Math class contains o
 | double sqrt(double x) | Returns the positive square root of a double value |
 | double random() | Returns a double value greater than or equal to 0.0 and less than 1.0 |
 
+Having seen the Math method abs method in use, refer to the Java Quick Reference to predict 
+how you could use the `pow` method to raise a base of 2 to the exponent 10 (2<sup>10</sup>).
+
+<details><Answer</summary>
+<p>
+
+```java
+Math.pow(2, 10)
+```
+</p>
+</details>
+
+How would you write the `sqrt` method to get the square root of 9.
+
+<details><Answer</summary>
+<p>
+
+```java
+Math.sqrt(9)
+```
+</p>
+</details>
+
+### The random Method
+
+For programs that require some amount of randomness, such as games, security, simulations, and statistics, Java’s Math class provides a random method. This method returns a double value that falls in the range from 0.0 to 1.0 non-inclusive, expressed mathematically as (0.0, 1.0) to indicate that it includes 0.0 but that its highest value is .999999999999999. With random values from 0 to .99..., you can mathematically generate any random number you may need. As you will see, you can manipulate the results in a variety of ways to fit your needs.
+
+```java
+public class Main
+{
+  public static void main(String[] args)
+  {
+    int rnum = (int) (Math.random() * 24 );
+    // This program produces a random integer between 0 and 23 inclusive.
+    System.out.println(rnum);
+  }
+}
+```
+You can also create a range using the random method in the formula below.
+
+`Math.random() * n<sup>1</sup> + m<sup>2</sup>`
+
+<sup>1</sup> = Number of integers included in range
+<sup>2</sup> = Lowest integer in range
+
+Use the `Math.random` method to generate a double value greater than or equal to 10.0 (inclusive) and less than 15.0 (exclusive).
+
+```java
+public class Main
+{
+  public static void main(String[] args)
+  {
+    System.out.println(Math.random() * 5 + 10);
+  }
+}
+```
+
 As stated above, Math methods are static.  This means that you do not use an object reference like you did with non-static methods (cat.length()).  Instead, you reference the class name itself followed by the static method. Some examples are listed below.
 
 | Math Method Examples |
 | --------- |
 | Math.abs(-5) |
-| Math.abd(2.3) |
+| Math.abs(2.3) |
 | Math.sqrt(4) |
 |Math.random() |
 
@@ -1289,7 +1346,7 @@ public class MathPractice
 }
 ```
 
-<details><summary>Find 8x8x8x8 answer</summary>
+<details><summary>8x8x8x8 answer</summary>
 <p>
 
 ```java
@@ -1297,7 +1354,6 @@ System.out.println(Math.pow(8, 4));
 ```
 </p>
 </details>
-
 
 
 <details><summary>square root of 64 answer</summary>
@@ -1310,7 +1366,6 @@ System.out.println(Math.sqrt(64));
 </details>
 
 
-
 <details><summary>square root of 65 answer</summary>
 <p>
 
@@ -1319,7 +1374,6 @@ System.out.println(Math.sqrt(65));
 ```
 </p>
 </details>
-
 
 
 <details><summary>difference between 12 squared and 5 squared answer</summary>
