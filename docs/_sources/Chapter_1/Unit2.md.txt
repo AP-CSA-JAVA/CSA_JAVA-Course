@@ -1001,12 +1001,14 @@ Submit your repl.it file on Canvas.
 
 Recall that primitive data types are int, double, boolean & String.  A wrapper class is a class that allows you to extend a primitive type into an object.  A wrapper class contains a single attribute that is its primitive type.  For example, `Integer` is a wrapper class for primitive type `int`.  Integer belongs to the Java.lang package that can be found in the API documentation that we reviewed in a prior lesson.
 
+
 | Integer Class Constructors and Methods | Explanation |
 | --------------------- | --------- |
 | Integer(int value) | Constructs a new Integer object that represents the specified int value. |
 | Integer.MIN_VALUE | The minimum value represented by int or Integer. |
 | Integer.MAX_VALUE | The maximum value represented by int or Integer. |
 | int intValue() | Returns the value of this Integer as an int. |
+
 
 The program below retrieves the value wrapped by an Integer and stores it in a primitive int before using that value. 
 Modify the program so that it stores the value of int1 in int2.
@@ -1033,6 +1035,7 @@ public class Main
 **Sample Output**
 `int2 value is: 20`
 
+
 | Double Class Constructors and Methods | Explanation |
 | ----------------- | ------------ |
 | Double(double value) | Constructs a new Double object that represents the specified double value. |
@@ -1051,6 +1054,7 @@ public class Main
 
 **Sample Output**
 `d value is: 1.5`
+
 
 #### Autoboxing/ Unboxing
 In the program below the JVM did some extra work at lines 5 and 6. Java automatically converted from the int and double primitive types to their corresponding object reference types. This is called autoboxing, an automatic conversion that the Java compiler makes between primitive types and their corresponding object wrapper classes.
@@ -1117,31 +1121,32 @@ In the program below, which line of code contains an example of *unboxing*?
 6    
 7    Box cardboardBox = new Box(cardboardWidth, cardboardHeight);
 8    cardboardBox.changeDimensions(2,3);
-9    System.out.println("Ending box dimensions: " + cardboardBox.getWidth() + " x " + cardboardBox.getHeight());
-10  }
-11  
-12  private static class Box
-13  {
-14    private int width, height;
-15    
-16    public Box(int w, int h){
-17      width = w;
-18      height = h;
-19    }
-20    
-21    public void changeDimensions(Integer w, Integer h){
-22      width = w.intValue();
-23      height = h.intValue();
-24    }
-25    
-26    public int getWidth(){
-27      return width;
-28    }
-29    public int getHeight(){
-30      return height;
-31    }
-32  }
-33 }
+9    System.out.println("Ending box dimensions: " + cardboardBox.getWidth() 
+10                       + " x " + cardboardBox.getHeight());
+11  }
+12
+13  private static class Box
+14  {
+15    private int width, height;
+16    
+17    public Box(int w, int h){
+18      width = w;
+19      height = h;
+20    }
+21    
+22    public void changeDimensions(Integer w, Integer h){
+23      width = w.intValue();
+24      height = h.intValue();
+25    }
+26    
+27    public int getWidth(){
+28      return width;
+29    }
+30    public int getHeight(){
+31      return height;
+32    }
+33  }
+34 }
 ```
 
 
@@ -1157,7 +1162,8 @@ Create a program that contains an example of each of the following. Add in-line 
 - [ ] Autoboxing
 - [ ] Unboxing
 
-Using the Math Class
+
+### Using the Math Class
 
 Project Mad Libs
 
