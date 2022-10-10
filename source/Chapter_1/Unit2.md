@@ -971,7 +971,8 @@ String Object Practice Part II: [Activity 126 String Objects_Vers2.docx](https:/
 
 ### Activity 1 - Wordplay
 
-Starter File: 
+Starter File: [127-wordPlay.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9747405/127-wordPlay.zip)
+
 ```java
 You will write a program that asks the user to enter their first name and their last name, separated by a space. 
 Then it asks the user to enter a phrase. You will write and call the following methods:
@@ -981,6 +982,8 @@ getInitials() - returns the initials from the full name of user
 makePassword() - returns a password created by the following:
 length of first name + first half of first name + last name + last half of last name + length of last name
 bompton() - returns the phrase with all the c's replaced by b's
+
+**Hint:** You may want to use API documentation to understand: .split(), charAt(), substring(), replace()
 ```
 
 **Sample Output:**
