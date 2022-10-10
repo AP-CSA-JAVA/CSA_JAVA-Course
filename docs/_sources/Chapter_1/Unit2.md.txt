@@ -1212,10 +1212,10 @@ In the program below, which line of code contains an example of *unboxing*?
 
 
 ```java
- Unboxing occurs on line 10 when Integer parameters are automatically converted to ints in the 
+ Unboxing occurs on line 7 when Integer parameters are automatically converted to ints in the 
  constructor.
    
- Autoboxing occurs on line 11 when int parameters are automatically converted to Integers 
+ Autoboxing occurs on line 8 when int parameters are automatically converted to Integers 
  in the method.
 ```
 
@@ -1223,7 +1223,7 @@ In the program below, which line of code contains an example of *unboxing*?
 </details>
 
 
-### Assignment 1 Wrapper Classes Practice
+### Assignment 1 Wrapper Classes
 
 Create a program that contains an example of each of the following. Add in-line comments to describe each example.
 - [ ] An Integer constructor
@@ -1252,7 +1252,7 @@ The Math class can be found in the java.lang package.  The Math class contains o
 | double random() | Returns a double value greater than or equal to 0.0 and less than 1.0 |
 
 Having seen the Math method abs method in use, refer to the Java Quick Reference to predict 
-how you could use the `pow` method to raise a base of 2 to the exponent 10 (2<sup>10</sup>).
+how you could use the `pow` method to raise a base of 2 to the exponent 10 (2<sup>10</sup> ).
 
 <details><Answer</summary>
 <p>
@@ -1329,7 +1329,7 @@ As stated above, Math methods are static.  This means that you do not use an obj
 | Math.sqrt(4) |
 | Math.random() |
 
-If you were to write your program using a constructor your program will return an error.
+If you were to write your program using a constructor and reference the object your program will return an error.
 
 ```
 Math m = new Math();
@@ -1353,24 +1353,24 @@ public class Main
 }
 ```
 
-Review the Math Class Methods in the table above.
+Review the Math Class Methods in the table above and determine the correct syntax to execute each print statement.
 
 ```java
-public class MathPractice
-{
-  public static void main(String[] args)
-  {
-    // Find 8x8x8x8
-    System.out.println(     );
-    // Find the square root of 64
-    System.out.println(     );
-    // Find the square root of 65
-    System.out.println(     );
-    // Find the square root of the absolute value of the difference
-    // between 12 squared and 5 squared.
-    System.out.println(     );
-  }
-}
+1 public class MathPractice
+2 {
+3  public static void main(String[] args)
+4  {
+5    // Find 8x8x8x8
+6    System.out.println(     );
+7    // Find the square root of 64
+8    System.out.println(     );
+9    // Find the square root of 65
+10    System.out.println(     );
+11    // Find the square root of the absolute value of the difference
+12    // between 12 squared and 5 squared.
+13    System.out.println(     );
+14  }
+15 }
 ```
 
 <details><summary>8x8x8x8 answer</summary>
@@ -1412,5 +1412,24 @@ System.out.println(Math.sqrt(Math.abs(Math.pow(12, 2) - Math.pow(5, 2))));
 </p>
 </details>
 
-Project Mad Libs
+## Project Mad Libs
 
+- [ ] Apply coding concepts you have learned up to this point.
+- [ ] Apply the programming development process to create a project.
+- [ ] Capture your project and communicate how each part of your program works.
+
+### Requirements of this project
+
+Give a Mad Lib with three user inputs, create a user-generated story with the correct parts of speech. 
+Your program should allow a user to enter values that change the output of a story. Specifically, it should include:
+- [ ] a class definition header that matches the file name
+- [ ] a main method for the program
+- [ ] the use of camelCase when appropriate
+- [ ] comments describing the algorithms 
+- [ ] a variable containing the incomplete Mad Lib
+- [ ] methods from String class
+- [ ] algorithm(s) that process user input
+- [ ] algorithm(s) to parse for the parts of speech to replace
+- [ ] algorithm(s) to parse for sections to include
+	[ ] various prompts to keep the user on track
+	[ ] a final print statement to display the completed story

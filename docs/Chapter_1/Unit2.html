@@ -1504,18 +1504,18 @@ In the program below, which line of code contains an example of <em>unboxing</em
 </div>
 <details><summary>Answer</summary>
 <p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="n">Unboxing</span><span class="w"> </span><span class="n">occurs</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="n">when</span><span class="w"> </span><span class="n">Integer</span><span class="w"> </span><span class="n">parameters</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">automatically</span><span class="w"> </span><span class="n">converted</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">ints</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="n">Unboxing</span><span class="w"> </span><span class="n">occurs</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="n">when</span><span class="w"> </span><span class="n">Integer</span><span class="w"> </span><span class="n">parameters</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">automatically</span><span class="w"> </span><span class="n">converted</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">ints</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span>
 <span class="w"> </span><span class="n">constructor</span><span class="p">.</span><span class="w"></span>
 <span class="w">   </span>
-<span class="w"> </span><span class="n">Autoboxing</span><span class="w"> </span><span class="n">occurs</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="mi">11</span><span class="w"> </span><span class="n">when</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">parameters</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">automatically</span><span class="w"> </span><span class="n">converted</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">Integers</span><span class="w"> </span>
+<span class="w"> </span><span class="n">Autoboxing</span><span class="w"> </span><span class="n">occurs</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="n">when</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">parameters</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">automatically</span><span class="w"> </span><span class="n">converted</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">Integers</span><span class="w"> </span>
 <span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">method</span><span class="p">.</span><span class="w"></span>
 </pre></div>
 </div>
 </p>
 </details>
 </section>
-<section id="assignment-1-wrapper-classes-practice">
-<h3>Assignment 1 Wrapper Classes Practice<a class="headerlink" href="#assignment-1-wrapper-classes-practice" title="Permalink to this heading">#</a></h3>
+<section id="assignment-1-wrapper-classes">
+<h3>Assignment 1 Wrapper Classes<a class="headerlink" href="#assignment-1-wrapper-classes" title="Permalink to this heading">#</a></h3>
 <p>Create a program that contains an example of each of the following. Add in-line comments to describe each example.</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> An Integer constructor</p></li>
@@ -1563,7 +1563,7 @@ In the program below, which line of code contains an example of <em>unboxing</em
 </table>
 </div>
 <p>Having seen the Math method abs method in use, refer to the Java Quick Reference to predict
-how you could use the <code class="docutils literal notranslate"><span class="pre">pow</span></code> method to raise a base of 2 to the exponent 10 (2<sup>10</sup>).</p>
+how you could use the <code class="docutils literal notranslate"><span class="pre">pow</span></code> method to raise a base of 2 to the exponent 10 (2<sup>10</sup> ).</p>
 <details><Answer</summary>
 <p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Math</span><span class="p">.</span><span class="na">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"></span>
@@ -1634,7 +1634,7 @@ how you could use the <code class="docutils literal notranslate"><span class="pr
 </tbody>
 </table>
 </div>
-<p>If you were to write your program using a constructor your program will return an error.</p>
+<p>If you were to write your program using a constructor and reference the object your program will return an error.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Math</span> <span class="n">m</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Math</span><span class="p">();</span>
 <span class="n">m</span><span class="o">.</span><span class="n">random</span><span class="p">();</span>
 </pre></div>
@@ -1654,22 +1654,22 @@ how you could use the <code class="docutils literal notranslate"><span class="pr
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Review the Math Class Methods in the table above.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MathPractice</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// Find 8x8x8x8</span><span class="w"></span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="w">     </span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// Find the square root of 64</span><span class="w"></span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="w">     </span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// Find the square root of 65</span><span class="w"></span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="w">     </span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// Find the square root of the absolute value of the difference</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// between 12 squared and 5 squared.</span><span class="w"></span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="w">     </span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<p>Review the Math Class Methods in the table above and determine the correct syntax to execute each print statement.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MathPractice</span><span class="w"></span>
+<span class="mi">2</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="mi">3</span><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="mi">4</span><span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="mi">5</span><span class="w">    </span><span class="c1">// Find 8x8x8x8</span><span class="w"></span>
+<span class="mi">6</span><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="w">     </span><span class="p">);</span><span class="w"></span>
+<span class="mi">7</span><span class="w">    </span><span class="c1">// Find the square root of 64</span><span class="w"></span>
+<span class="mi">8</span><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="w">     </span><span class="p">);</span><span class="w"></span>
+<span class="mi">9</span><span class="w">    </span><span class="c1">// Find the square root of 65</span><span class="w"></span>
+<span class="mi">10</span><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="w">     </span><span class="p">);</span><span class="w"></span>
+<span class="mi">11</span><span class="w">    </span><span class="c1">// Find the square root of the absolute value of the difference</span><span class="w"></span>
+<span class="mi">12</span><span class="w">    </span><span class="c1">// between 12 squared and 5 squared.</span><span class="w"></span>
+<span class="mi">13</span><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="w">     </span><span class="p">);</span><span class="w"></span>
+<span class="mi">14</span><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="mi">15</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <details><summary>8x8x8x8 answer</summary>
@@ -1700,7 +1700,32 @@ how you could use the <code class="docutils literal notranslate"><span class="pr
 </div>
 </p>
 </details>
-<p>Project Mad Libs</p>
+</section>
+</section>
+<section id="project-mad-libs">
+<h2>Project Mad Libs<a class="headerlink" href="#project-mad-libs" title="Permalink to this heading">#</a></h2>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Apply coding concepts you have learned up to this point.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Apply the programming development process to create a project.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Capture your project and communicate how each part of your program works.</p></li>
+</ul>
+<section id="requirements-of-this-project">
+<h3>Requirements of this project<a class="headerlink" href="#requirements-of-this-project" title="Permalink to this heading">#</a></h3>
+<p>Give a Mad Lib with three user inputs, create a user-generated story with the correct parts of speech.
+Your program should allow a user to enter values that change the output of a story. Specifically, it should include:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> a class definition header that matches the file name</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> a main method for the program</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> the use of camelCase when appropriate</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> comments describing the algorithms</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> a variable containing the incomplete Mad Lib</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> methods from String class</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> algorithm(s) that process user input</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> algorithm(s) to parse for the parts of speech to replace</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> algorithm(s) to parse for sections to include
+[ ] various prompts to keep the user on track
+[ ] a final print statement to display the completed story</p></li>
+</ul>
 </section>
 </section>
 </section>
@@ -1809,11 +1834,15 @@ how you could use the <code class="docutils literal notranslate"><span class="pr
 </li>
 <li><a class="reference internal" href="#wrapper-classes">Wrapper Classes</a><ul>
 <li><a class="reference internal" href="#autoboxing-unboxing">Autoboxing/ Unboxing</a></li>
-<li><a class="reference internal" href="#assignment-1-wrapper-classes-practice">Assignment 1 Wrapper Classes Practice</a></li>
+<li><a class="reference internal" href="#assignment-1-wrapper-classes">Assignment 1 Wrapper Classes</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#using-the-math-class">Using the Math Class</a><ul>
 <li><a class="reference internal" href="#the-random-method">The random Method</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#project-mad-libs">Project Mad Libs</a><ul>
+<li><a class="reference internal" href="#requirements-of-this-project">Requirements of this project</a></li>
 </ul>
 </li>
 </ul>
