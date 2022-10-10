@@ -1276,7 +1276,7 @@ public class Main
 ```
 You can also create a range using the random method in the formula below.
 
-`Math.random() * n<sup>1</sup> + m<sup>2</sup>`
+Math.random() * n<sup>1</sup> + m<sup>2</sup>
 
 <sup>1</sup> = Number of integers included in range
 <sup>2</sup> = Lowest integer in range
