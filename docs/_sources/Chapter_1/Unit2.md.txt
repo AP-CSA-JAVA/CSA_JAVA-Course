@@ -1221,7 +1221,7 @@ Create a program that contains an example of each of the following. Add in-line 
 - [ ] Unboxing
 
 
-### Using the Math Class
+## Using the Math Class
 
 - [ ]  Incorporate randomness into a program
 - [ ]  Use methods from the Math package.
@@ -1279,6 +1279,7 @@ You can also create a range using the random method in the formula below.
 Math.random() * n<sup>1</sup> + m<sup>2</sup>
 
 <sup>1</sup> = Number of integers included in range
+
 <sup>2</sup> = Lowest integer in range
 
 Use the `Math.random` method to generate a double value greater than or equal to 10.0 (inclusive) and less than 15.0 (exclusive).
@@ -1292,6 +1293,17 @@ public class Main
   }
 }
 ```
+How would you modify a program to produce `int` values between **70** inclusive and **100** exclusive?
+
+<details><Answer</summary>
+<p>
+
+```java
+System.out.println(Math.random() * 30 + 70);
+```
+</p>
+</details>
+
 
 As stated above, Math methods are static.  This means that you do not use an object reference like you did with non-static methods (cat.length()).  Instead, you reference the class name itself followed by the static method. Some examples are listed below.
 
@@ -1300,7 +1312,7 @@ As stated above, Math methods are static.  This means that you do not use an obj
 | Math.abs(-5) |
 | Math.abs(2.3) |
 | Math.sqrt(4) |
-|Math.random() |
+| Math.random() |
 
 If you were to write your program using a constructor your program will return an error.
 
