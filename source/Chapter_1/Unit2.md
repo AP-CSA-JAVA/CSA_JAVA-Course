@@ -937,6 +937,27 @@ What is the output of String1 and String2 if they are both 'parkway'?
 **Sample Output**
 `0`
 
+**boolean equals(String other)** - Compares the current string to the specified **other** string anmd returns **true** if they are equal, **false** otherwise.  Given the following code segment, predict whether the output will be **true** or **false**.
+
+```java
+String word1 = "motorcycle";
+String word2 = "recycle";
+System.out.println(word1.equals(word2));
+```
+
+**String substring(int beginIndex)** - Returns a string that is a substring of the current string. The substring begins with the character at the specified **beginIndex** and extends to the end of the current string.
+
+Given the following code segment, predict whether the output will be **true** or **false**.
+
+```java
+String word1 = "motorcycle";
+String word2 = "recycle";
+
+String word1part2 = word1.substring(5);
+String word2part2 = word2.substring(5);
+System.out.println(word1part2.equals(word2part2));
+```
+    
 Take a look at this ASCII table: [ascii-table-characters.pdf](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9737398/ascii-table-characters.pdf)
 
 Experiment with the program above by changing the values of the two Strings until you can answer the questions that follow definitively. Use the ASCII table resource to help guide your exploration.
@@ -948,6 +969,38 @@ Experiment with the program above by changing the values of the two Strings unti
 
 String Object Practice Part II: [Activity 126 String Objects_Vers2.docx](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9737627/Activity.126.String.Objects_Vers2.docx)
 
+### Activity 1 - Wordplay
+
+Starter File: 
+```java
+You will write a program that asks the user to enter their first name and their last name, separated by a space. 
+Then it asks the user to enter a phrase. You will write and call the following methods:
+getFirstName() - returns the first name from the full name of user
+getLastName() - returns the last name from the full name of user
+getInitials() - returns the initials from the full name of user
+makePassword() - returns a password created by the following:
+length of first name + first half of first name + last name + last half of last name + length of last name
+bompton() - returns the phrase with all the c's replaced by b's
+```
+
+**Sample Output:**
+
+```java
+Enter your first name and last name, separated by a space: 
+Jonathan Virak
+Enter a phrase: 
+Give papa a proper cup of coffee in a copper coffee cup.
+
+Your first name is Jonathan
+Your last name is Virak
+Your initials are JV
+
+Your new password: 8JonaVirakrak5
+
+Give papa a proper bup of boffee in a bopper boffee bup.
+
+Submit your repl.it file on Canvas.
+```
 
 Wrapper Classes
 
