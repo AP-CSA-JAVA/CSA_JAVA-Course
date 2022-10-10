@@ -1105,6 +1105,9 @@ The Java compiler applies unboxing when a wrapper class object is:
 i. Passed as a parameter to a method that expects a value of the corresponding primitive type.
 ii. Assigned to a variable of the corresponding primitive type.
 
+In the program below, which line of code contains an example of *autoboxing*?
+In the program below, which line of code contains an example of *unboxing*?
+
 ```java
 1 public class Main
 2 {
@@ -1141,8 +1144,6 @@ ii. Assigned to a variable of the corresponding primitive type.
 33 }
 ```
 
-What line of code contains an example of autoboxing?
-What line of code contains an example of unboxing?
 
 ### Assignment 1 Wrapper Classes Practice
 
