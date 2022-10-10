@@ -219,7 +219,6 @@
 <h1>Unit 2 - Using Objects<a class="headerlink" href="#unit-2-using-objects" title="Permalink to this heading">#</a></h1>
 <section id="objects-instances-of-classes">
 <h2>Objects: Instances of Classes<a class="headerlink" href="#objects-instances-of-classes" title="Permalink to this heading">#</a></h2>
-<p><strong>GOALS</strong></p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Explain the relationship between a class and an object</p></li>
 </ul>
@@ -260,6 +259,11 @@ Object-oriented Programming Facts:</p>
 </section>
 <section id="creating-and-storing-objects">
 <h2>Creating and Storing Objects<a class="headerlink" href="#creating-and-storing-objects" title="Permalink to this heading">#</a></h2>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Explain the relationship between a class and an object</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Identify different constructor signatures and create objects using them</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use variables to represent object references</p></li>
+</ul>
 <p>The next two concepts will be used in most of your programs moving forward.  Read through <strong>constructor</strong> and <strong>toString()</strong> below.</p>
 <p>A <strong>constructor</strong> in Java is a special method that is used to initialize objects. The constructor is called when an object of a class is created. It can be used to set the initial values for object attributes.  It is possible to write two or more constructors within a program.  The difference between the constructors are the parameters that are defined within the constructor itself.  This is known as constructor <strong>overloading</strong>.</p>
 <p>Take a look at the example below:</p>
@@ -539,9 +543,8 @@ emptyCake=null
 <li><p>Create two more objects that will match the sample output.</p></li>
 </ol>
 </section>
-</section>
 <section id="scanner-class-revisited">
-<h2>Scanner Class Revisited<a class="headerlink" href="#scanner-class-revisited" title="Permalink to this heading">#</a></h2>
+<h3>Scanner Class Revisited<a class="headerlink" href="#scanner-class-revisited" title="Permalink to this heading">#</a></h3>
 <p>As you recall, the scanner class is a package that provides primitive input within Java programs.  It can be found in the <a class="reference external" href="https://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html">java.util Package</a> website.</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> First you need to import the class from the online Oracle repository by typing <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">java.util.Scanner;</span></code></p></li>
@@ -598,8 +601,12 @@ emptyCake=null
 </pre></div>
 </div>
 </section>
+</section>
 <section id="calling-a-void-method">
 <h2>Calling a Void Method<a class="headerlink" href="#calling-a-void-method" title="Permalink to this heading">#</a></h2>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Call non-static void methods without parameters</p></li>
+</ul>
 <p>Class methods represent an object’s behavior, defining what an object can do within a program.</p>
 <p>Recall the Child program created above.  We will use the one constructor that has no defined parameters to create behaviors of our object.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Child</span><span class="p">{</span><span class="w"></span>
@@ -663,6 +670,10 @@ emptyCake=null
 <p><strong>NOTE:</strong> ‘Null’ is a place holder for a reference that does not have an object.  If defines a memory address that may eventually hold a value.</p>
 <section id="calling-a-void-method-with-parameters">
 <h3>Calling a Void Method with Parameters<a class="headerlink" href="#calling-a-void-method-with-parameters" title="Permalink to this heading">#</a></h3>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Call non-static void methods with parameters</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use overloaded methods</p></li>
+</ul>
 <p>Using parameters allows us the freedom to write a program that is more flexible and specific.  It is similar to providing specific instructions for the program.  When you pass multiple parameters, it is important to make sure that the order is correct.  Incorrect order will return incorrect results.  As we did with constructors, we can overload a method.  Recall that the method name has also an ordered list of parameters.  You can also overload a method by giving the method the same name as another method, and provide a different set of parameters.</p>
 <p>For example:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">school</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">grade</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">gpa</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
@@ -746,6 +757,10 @@ Happy: 45
 <p>The keyword <strong>return</strong> is <em>required</em> in all non-void methods. Since the method sum has a <strong>return</strong> type of <code class="docutils literal notranslate"><span class="pre">int</span></code> the return line is required to return a value of this type.</p>
 <section id="calling-a-non-void-method">
 <h3>Calling a non-void method<a class="headerlink" href="#calling-a-non-void-method" title="Permalink to this heading">#</a></h3>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox">  Call a non-void method</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox">  Use a return value from a non-void method in a variable or as part of an expression</p></li>
+</ul>
 <p>The way that a non-void method is called differs from the way that a void method is called in that the call is made from within other Java statements. Since a non-void method always returns a value, this value has to be stored in a variable, printed, or returned to a Java control structure or another method. Here are some examples.</p>
 <p>The method call can be in an <strong>assignment statement</strong>.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sum</span><span class="p">();</span><span class="w"></span>
@@ -844,6 +859,10 @@ Miles Driven: 300.0
 <hr class="docutils" />
 <section id="string-objects-concatenation-literals-and-other-things">
 <h2>String Objects: Concatenation, Literals, and Other Things<a class="headerlink" href="#string-objects-concatenation-literals-and-other-things" title="Permalink to this heading">#</a></h2>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create String objects</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Reference String objects</p></li>
+</ul>
 <p>String objects can be instantiated in <strong>two different</strong> ways, either by assigning a <strong>String literal</strong> directly to a String variable or by calling the <strong>String class constructor</strong>. In the example below, the code on the left uses a String literal assignment, and the code on the right uses the String class constructor.</p>
 <div class="table-wrapper colwidths-auto docutils container">
 <table class="docutils align-default">
@@ -993,6 +1012,10 @@ Comment your code showing that you completed each of the bullet points above.</p
 <hr class="docutils" />
 <section id="string-methods">
 <h2>String Methods<a class="headerlink" href="#string-methods" title="Permalink to this heading">#</a></h2>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Compare <code class="docutils literal notranslate"><span class="pre">String</span></code> Objects</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use <code class="docutils literal notranslate"><span class="pre">String</span></code> Methods</p></li>
+</ul>
 <p>Navigate to and review the information that can be found at <a class="reference external" href="https://docs.oracle.com/en/java/javase/14/docs/api/index.html">Java API Specification</a>.</p>
 <div class="table-wrapper colwidths-auto docutils container">
 <table class="docutils align-default">
@@ -1543,9 +1566,9 @@ In the program below, which line of code contains an example of <em>unboxing</em
 <li><a class="reference internal" href="#assignment-1">Assignment 1</a></li>
 <li><a class="reference internal" href="#assignment-2">Assignment 2</a></li>
 <li><a class="reference internal" href="#extra-credit">Extra Credit</a></li>
+<li><a class="reference internal" href="#scanner-class-revisited">Scanner Class Revisited</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#scanner-class-revisited">Scanner Class Revisited</a></li>
 <li><a class="reference internal" href="#calling-a-void-method">Calling a Void Method</a><ul>
 <li><a class="reference internal" href="#calling-a-void-method-with-parameters">Calling a Void Method with Parameters</a></li>
 <li><a class="reference internal" href="#id2">Assignment 1</a><ul>
