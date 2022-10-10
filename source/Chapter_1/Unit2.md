@@ -1431,5 +1431,5 @@ Your program should allow a user to enter values that change the output of a sto
 - [ ] algorithm(s) that process user input
 - [ ] algorithm(s) to parse for the parts of speech to replace
 - [ ] algorithm(s) to parse for sections to include
-	[ ] various prompts to keep the user on track
-	[ ] a final print statement to display the completed story
+	- [ ] various prompts to keep the user on track
+	- [ ] a final print statement to display the completed story
