@@ -999,6 +999,13 @@ Submit your repl.it file on Canvas.
 
 ## Wrapper Classes
 
+- [ ] Convert between primitive data types and objects.
+	- [ ] I will be able to identify a wrapper class
+	- [ ] I will be able to convert primitives to an object of a wrapper class
+	- [ ] I will be able to identify autoboxing/ unboxing of primitive and reference types
+- [ ] I will be able to write programs my understanding of wrapper classes
+
+
 Recall that primitive data types are int, double, boolean & String.  A wrapper class is a class that allows you to extend a primitive type into an object.  A wrapper class contains a single attribute that is its primitive type.  For example, `Integer` is a wrapper class for primitive type `int`.  Integer belongs to the Java.lang package that can be found in the API documentation that we reviewed in a prior lesson.
 
 
