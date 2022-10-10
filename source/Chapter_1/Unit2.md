@@ -2,7 +2,6 @@
 
 ## Objects: Instances of Classes
 
-**GOALS**
 - [ ] Explain the relationship between a class and an object
 
 
@@ -42,6 +41,10 @@ Object-oriented Programming Facts:
 - [ ] A class is used to create an instance of a class, called an object
 
 ## Creating and Storing Objects
+
+- [ ] Explain the relationship between a class and an object
+- [ ] Identify different constructor signatures and create objects using them
+- [ ] Use variables to represent object references
 
 The next two concepts will be used in most of your programs moving forward.  Read through **constructor** and **toString()** below.
 
@@ -329,7 +332,7 @@ emptyCake=null
 4. Create a constructor that takes all the parameters
 5. Create two more objects that will match the sample output.
 
-## Scanner Class Revisited
+### Scanner Class Revisited
 As you recall, the scanner class is a package that provides primitive input within Java programs.  It can be found in the [java.util Package](https://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html) website.
 
 - [ ] First you need to import the class from the online Oracle repository by typing `import java.util.Scanner;`
@@ -388,6 +391,8 @@ GPA: 3.0
 ```
 
 ## Calling a Void Method
+
+- [ ] Call non-static void methods without parameters
 
 Class methods represent an object's behavior, defining what an object can do within a program.
 
@@ -457,6 +462,9 @@ The `void` keyword will not return *anything* from the method declaration.  Whil
 **NOTE:** 'Null' is a place holder for a reference that does not have an object.  If defines a memory address that may eventually hold a value.
 
 ### Calling a Void Method with Parameters
+
+- [ ] Call non-static void methods with parameters
+- [ ] Use overloaded methods
 
 Using parameters allows us the freedom to write a program that is more flexible and specific.  It is similar to providing specific instructions for the program.  When you pass multiple parameters, it is important to make sure that the order is correct.  Incorrect order will return incorrect results.  As we did with constructors, we can overload a method.  Recall that the method name has also an ordered list of parameters.  You can also overload a method by giving the method the same name as another method, and provide a different set of parameters.
 
@@ -533,6 +541,9 @@ public int sum(){
  The keyword **return** is *required* in all non-void methods. Since the method sum has a **return** type of `int` the return line is required to return a value of this type.
  
  ### Calling a non-void method
+ 
+ - [ ]  Call a non-void method
+ - [ ]  Use a return value from a non-void method in a variable or as part of an expression
  
 The way that a non-void method is called differs from the way that a void method is called in that the call is made from within other Java statements. Since a non-void method always returns a value, this value has to be stored in a variable, printed, or returned to a Java control structure or another method. Here are some examples.
 
@@ -633,6 +644,9 @@ Submit your link to the finished program
 _____________________________________________________________________________________________________
 
 ## String Objects: Concatenation, Literals, and Other Things
+
+- [ ] Create String objects
+- [ ] Reference String objects
 
 String objects can be instantiated in **two different** ways, either by assigning a **String literal** directly to a String variable or by calling the **String class constructor**. In the example below, the code on the left uses a String literal assignment, and the code on the right uses the String class constructor.
 
@@ -757,6 +771,9 @@ Submit your program link.  Do not send me a screen shot of your program.
 Comment your code showing that you completed each of the bullet points above.
 _____________________________________________________________________________________________________
 ## String Methods
+
+- [ ] Compare `String` Objects
+- [ ] Use `String` Methods
 
 Navigate to and review the information that can be found at [Java API Specification](https://docs.oracle.com/en/java/javase/14/docs/api/index.html).
 
