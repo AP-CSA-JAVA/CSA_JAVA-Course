@@ -941,7 +941,7 @@ What is the output of this program?
 <details><summary>Answer</summary>
 <p>
 
-`3`
+`-3`
 </p>
 </details>
 
@@ -949,7 +949,7 @@ What is the output if String1 was `parkway` and string2 was `park`?
 <details><summary>Answer</summary>
 <p>
 
-`-3`
+`3`
 </p>
 </details>
 
@@ -961,21 +961,25 @@ What is the output of String1 and String2 if they are both 'parkway'?
 </p>
 </details>
 
-**boolean equals(String other)** - Compares the current string to the specified **other** string anmd returns **true** if they are equal, **false** otherwise.  Given the following code segment, predict whether the output will be **true** or **false**.
+| boolean equals | |
+| -------------------------------  | ------- |
+| boolean equals(String other) | Compares the current string to the specified other string and returns **true** if they are equal, **false** otherwise.  Given the following code segment, predict whether the output will be **true** or **false**. |
 
 ```java
-String word1 = "motorcycle";
+String word1 = "tricycle";
 String word2 = "recycle";
 System.out.println(word1.equals(word2));
 ```
 
-**String substring(int beginIndex)** - Returns a string that is a substring of the current string. The substring begins with the character at the specified **beginIndex** and extends to the end of the current string.
+| String Substring | |
+| ------------------------------------ | -------- |
+| String substring(int beginIndex) | Returns a string that is a substring of the current string. The substring begins with the character at the specified **beginIndex** and extends to the end of the current string. |
 
 Given the following code segment, predict whether the output will be **true** or **false**.
 
 ```java
-String word1 = "motorcycle";
-String word2 = "recycle";
+String word1 = "tricycle";
+String word2 = "bicycle";
 
 String word1part2 = word1.substring(5);
 String word2part2 = word2.substring(5);
@@ -1000,14 +1004,14 @@ Starter Files: [127-wordPlay.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course
 ```java
 You will write a program that asks the user to enter their first name and their last name, 
 separated by a space. 
-Then it asks the user to enter a phrase. You will write and call the following methods:
-getFirstName() - returns the first name from the full name of user
-getLastName() - returns the last name from the full name of user
-getInitials() - returns the initials from the full name of user
-makePassword() - returns a password created by the following:
-length of first name + first half of first name + last name + last half of last name + 
-length of last name
-bompton() - returns the phrase with all the c's replaced by b's
+Then it asks the user to enter a phrase. You will write and call the following:
+| Methods |  |
+| --------- | --------- |
+| getFirstName() | returns the first name from the full name of user |
+| getLastName() | returns the last name from the full name of user |
+| getInitials() | returns the initials from the full name of user |
+| makePassword() | returns a password created by the following: length of first name + first half of first name + last name + last half of last name + length of last name |
+| ceeBee() | returns the phrase with all the c's replaced by b's |
 
 **Hint:** You may want to use API documentation to understand: .split(), charAt(), substring(), 
 replace()
@@ -1028,22 +1032,22 @@ Your initials are JV
 Your new password: 8JonaVirakrak5
 
 Give papa a proper bup of boffee in a bopper boffee bup.
+```
 
 Submit your repl.it file on Canvas.
-```
+
 ### Activity 2 - Speaking
 
 Starter files: [127-Speaking.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9757536/127-Speaking.zip)
 
-Create a program that will ask the user for their name and their partners name. Create the following methods:
+Create a program that will ask the user for their name and their partners name. Create the following:
 
-yelling() - returns a name in all caps
-
-whisper() - returns a name in all lower case
-
-pigLatin() - takes a word and take the first letter and put it at the end of the word and add the letters “ay” to the end. For example, “pig” becomes “igpay”
-
-nameJoin() - takes two parameters, name1 and name2, and combines them by taking the first half of name1 and second half of name2 and combine them
+| Methods |  |
+| ------- | ---- |
+| yelling() | returns a name in all caps |
+| whisper() | returns a name in all lower case |
+| pigLatin() | takes a word and take the first letter and put it at the end of the word and add the letters “ay” to the end. For example, “pig” becomes “igpay” |
+| nameJoin() | takes two parameters, name1 and name2, and combines them by taking the first half of name1 and second half of name2 and combine them |
 
 
 **Sample Output**
@@ -1057,7 +1061,7 @@ Yelling your name: JONATHAN
 Whispering your partner's name: julia
 Your name in Pig Latin: onathanjay
 Your partner's name in Pig Latin: uliajay
-Your team name is Jonathan or Julia
+Your team name is Jonalia
 ```
 _______________________________________________________________________________________________________________
 
