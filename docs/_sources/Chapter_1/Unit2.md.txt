@@ -995,7 +995,7 @@ String Object Practice Part II: [Activity 126 String Objects_Vers2.docx](https:/
 
 ### Activity 1 - Wordplay
 
-Starter File: [127-wordPlay.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9747405/127-wordPlay.zip)
+Starter Files: [127-wordPlay.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9747405/127-wordPlay.zip)
 
 ```java
 You will write a program that asks the user to enter their first name and their last name, separated by a space. 
@@ -1030,6 +1030,8 @@ Submit your repl.it file on Canvas.
 ```
 ### Activity 2 - Speaking
 
+Starter files: [127-Speaking.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9757536/127-Speaking.zip)
+
 Create a program that will ask the user for their name and their partners name. Create the following methods:
 
     `yelling()` - returns a name in all caps 
@@ -1061,7 +1063,8 @@ ________________________________________________________________________________
 	- [ ] I will be able to identify autoboxing/ unboxing of primitive and reference types
 - [ ] I will be able to write programs my understanding of wrapper classes
 
-_________________________________________________________________________________________________________________________________
+___________________________________________________________________________________________________________________
+
 Recall that primitive data types are int, double, boolean & String.  A wrapper class is a class that allows you to extend a primitive type into an object.  A wrapper class contains a single attribute that is its primitive type.  For example, `Integer` is a wrapper class for primitive type `int`.  For every Wrapper Class there is a corresponding primitive type <see below>.  Integer belongs to the Java.lang package that can be found in the [API documentation](https://docs.oracle.com/en/java/javase/14/docs/api/index.html) that we reviewed in a prior lesson.
 	
 <details><summary>Wrapper Classes</summary>
