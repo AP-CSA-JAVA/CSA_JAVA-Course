@@ -998,16 +998,19 @@ String Object Practice Part II: [Activity 126 String Objects_Vers2.docx](https:/
 Starter Files: [127-wordPlay.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9747405/127-wordPlay.zip)
 
 ```java
-You will write a program that asks the user to enter their first name and their last name, separated by a space. 
+You will write a program that asks the user to enter their first name and their last name, 
+separated by a space. 
 Then it asks the user to enter a phrase. You will write and call the following methods:
 getFirstName() - returns the first name from the full name of user
 getLastName() - returns the last name from the full name of user
 getInitials() - returns the initials from the full name of user
 makePassword() - returns a password created by the following:
-length of first name + first half of first name + last name + last half of last name + length of last name
+length of first name + first half of first name + last name + last half of last name + 
+length of last name
 bompton() - returns the phrase with all the c's replaced by b's
 
-**Hint:** You may want to use API documentation to understand: .split(), charAt(), substring(), replace()
+**Hint:** You may want to use API documentation to understand: .split(), charAt(), substring(), 
+replace()
 ```
 
 **Sample Output:**
@@ -1034,10 +1037,12 @@ Starter files: [127-Speaking.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course
 
 Create a program that will ask the user for their name and their partners name. Create the following methods:
 
-    `yelling()` - returns a name in all caps 
-    `whisper()` - returns a name in all lower case
-    `pigLatin()` - takes a word and take the first letter and put it at the end of the word and add the letters “ay” to the end. For example, “pig” becomes “igpay” 
-    `nameJoin()` - takes two parameters, name1 and name2, and combines them by taking the first half of name1 and second half of name2 and combine them
+`yelling()` - returns a name in all caps 
+`whisper()` - returns a name in all lower case
+`pigLatin()` - takes a word and take the first letter and put it at the end of the word and add 
+    	       the letters “ay” to the end. For example, “pig” becomes “igpay” 
+`nameJoin()` - takes two parameters, name1 and name2, and combines them by taking the first half 
+    	       of name1 and second half of name2 and combine them
 
 
 **Sample Output**
