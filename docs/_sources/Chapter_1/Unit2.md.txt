@@ -1412,6 +1412,28 @@ System.out.println(Math.sqrt(Math.abs(Math.pow(12, 2) - Math.pow(5, 2))));
 </p>
 </details>
 
+	
+### Assignment 1 - Race Car
+
+Starter Files: 
+
+Complete the computeTime method and the comments in main.java
+
+	// Length of the track in meters
+        double distance = 2414; // ~ 1.5 miles
+        
+        // Generate a random acceleration (integer) 
+        // for each car from 20 - 50 (inclusive)
+
+        // Create two Racecar objects
+
+        // Compute the finishing times for both cars
+        // Print times of each car
+
+You will need to complete some of the methods in Racecar.java
+	
+________________________________________________________________________________________________________
+	
 ## Project Mad Libs
 
 - [ ] Apply coding concepts you have learned up to this point.
