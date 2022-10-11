@@ -1415,7 +1415,7 @@ System.out.println(Math.sqrt(Math.abs(Math.pow(12, 2) - Math.pow(5, 2))));
 	
 ### Assignment 1 - Race Car
 
-Starter Files: 
+Starter Files: [Activity129RaceCar.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9757289/Activity129RaceCar.zip)
 
 Complete the computeTime method and the comments in main.java
 
@@ -1433,6 +1433,33 @@ Complete the computeTime method and the comments in main.java
 ```
 
 You will need to complete the methods and toString within Racecar.java
+	
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+	
+<details><summary>Free Response Question (FRQ)</summary>
+<p>
+
+**Free Response Question**
+	
+Students will work in pairs during this activity.
+
+In this part of the activity, you and a partner will answer your first Free Response Question (FRQ). FRQs define a set of requirements that an algorithm must meet. You provide answers to the FRQ in the form of handwritten Java code.
+
+FRQs are also great ways to apply the knowledge and skills you have learned. They are also on the College Board’s AP exam, representing approximately 45 percent of the Exam. You should practice hand writing your answers to FRQs since this is the format you will use on the exam.
+
+As to the structure of FRQs, the one you will complete now is a shortened version of an FRQ you might see on an exam. Other FRQs in this course will be longer and more like the FRQs you will see in an exam. In general, FRQs describe a scenario and specific requirements that your code must meet. Sometimes FRQs provide code to enhance. They can also omit irrelevant code, using comments similar to /* implementation not shown */. 
+
+Your first FRQ is titled Annuity. It requires you to write expressions using a Math method you learned in this activity and to use a return statement to return a value from a method.
+
+    Your teacher will distribute the Annuity FRQ. Work together with a partner to write your solution.
+
+    Once you complete the FRQ, ask your teacher for the scoring guidelines and with the guidelines in hand, join another team of two. Exchange solutions and grade each other’s FRQs according to the canonical (most well-established or ideal) solution.
+	
+
+</p>
+</details>
+
+
 	
 ________________________________________________________________________________________________________
 	
