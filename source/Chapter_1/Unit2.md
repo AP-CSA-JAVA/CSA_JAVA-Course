@@ -1038,8 +1038,11 @@ Starter files: [127-Speaking.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course
 Create a program that will ask the user for their name and their partners name. Create the following methods:
 
 yelling() - returns a name in all caps
+
 whisper() - returns a name in all lower case
+
 pigLatin() - takes a word and take the first letter and put it at the end of the word and add the letters “ay” to the end. For example, “pig” becomes “igpay”
+
 nameJoin() - takes two parameters, name1 and name2, and combines them by taking the first half of name1 and second half of name2 and combine them
 
 
