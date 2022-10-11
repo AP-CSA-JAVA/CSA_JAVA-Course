@@ -1419,7 +1419,8 @@ Starter Files:
 
 Complete the computeTime method and the comments in main.java
 
-	// Length of the track in meters
+```java
+	//Length of the track in meters
         double distance = 2414; // ~ 1.5 miles
         
         // Generate a random acceleration (integer) 
@@ -1429,11 +1430,13 @@ Complete the computeTime method and the comments in main.java
 
         // Compute the finishing times for both cars
         // Print times of each car
+```
 
-You will need to complete some of the methods in Racecar.java
+You will need to complete the methods and toString within Racecar.java
 	
 ________________________________________________________________________________________________________
 	
+
 ## Project Mad Libs
 
 - [ ] Apply coding concepts you have learned up to this point.
