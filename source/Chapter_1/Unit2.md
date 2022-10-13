@@ -1287,6 +1287,7 @@ The Math class can be found in the java.lang package.  The Math class contains o
 | double pow(double base, double exponent) | Returns the value of the first parameter raised to the power of the second parameter |
 | double sqrt(double x) | Returns the positive square root of a double value |
 | double random() | Returns a double value greater than or equal to 0.0 and less than 1.0 |
+| round() | Returns the round of the decimal number to the nearest value |
 
 Having seen the Math method abs method in use, refer to the Java Quick Reference to predict 
 how you could use the `pow` method to raise a base of 2 to the exponent 10 (2<sup>10</sup> ).
@@ -1307,6 +1308,17 @@ How would you write the `sqrt` method to get the square root of 9.
 
 ```java
 Math.sqrt(9)
+```
+</p>
+</details>
+	
+How would you write the `round` method to get the round of 79.52.
+
+<details><Answer</summary>
+<p>
+
+```java
+Math.round(79.52) 
 ```
 </p>
 </details>
