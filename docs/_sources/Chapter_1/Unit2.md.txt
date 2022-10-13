@@ -1471,6 +1471,37 @@ In pairs, work on worksheet 1 in class.  We will review your work in class.
 Complete worksheet 2 for homework.  We will review your work next class.
 
 ** Download: ** [mathClassWorksheet2.docx](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9778287/mathClassWorksheet2.docx)
+
+<details><summary>Prefix & Postfix Operators</summary>
+<p>
+
+** ++ and -- used as a prefix or as a postfix **
+
+Assume for what is being discussed that what works for increment operators(`++`) will also work with decrement operators(`--`).  I will only use increment operators for the sake of brevity.
+	
+If you use the `++` operator as a prefix like: `++var`, the value of `var` is incremented by 1; then it returns the value.
+If you use the `++` operator as a postfix like: `var++`, the original value of `var` is returned first; then `var` is incremented by 1.
+
+```java
+class Main {
+    public static void main(String[] args) {
+        int var1 = 5, var2 = 5;
+
+        // 5 is displayed
+        // Then, var1 is increased to 6.
+        System.out.println(var1++); //output is 5
+
+        // var2 is increased to 6
+        // Then, var2 is displayed
+        System.out.println(++var2); //output is 6
+		System.out.println(var1); // output is now 6
+		System.out.println(var2); // output is still 6
+    }
+}
+```
+
+</p>
+</details>
 	
 ### Assignment 2 - Race Car
 

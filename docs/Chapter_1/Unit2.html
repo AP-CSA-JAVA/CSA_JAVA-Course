@@ -1811,6 +1811,31 @@ how you could use the <code class="docutils literal notranslate"><span class="pr
 ** ascii Table: ** <a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9737398/ascii-table-characters.pdf">ascii-table-characters.pdf</a></p>
 <p>Complete worksheet 2 for homework.  We will review your work next class.</p>
 <p>** Download: ** <a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9778287/mathClassWorksheet2.docx">mathClassWorksheet2.docx</a></p>
+<details><summary>Prefix & Postfix Operators</summary>
+<p>
+<p>** ++ and – used as a prefix or as a postfix **</p>
+<p>Assume for what is being discussed that what works for increment operators(<code class="docutils literal notranslate"><span class="pre">++</span></code>) will also work with decrement operators(<code class="docutils literal notranslate"><span class="pre">--</span></code>).  I will only use increment operators for the sake of brevity.</p>
+<p>If you use the <code class="docutils literal notranslate"><span class="pre">++</span></code> operator as a prefix like: <code class="docutils literal notranslate"><span class="pre">++var</span></code>, the value of <code class="docutils literal notranslate"><span class="pre">var</span></code> is incremented by 1; then it returns the value.
+If you use the <code class="docutils literal notranslate"><span class="pre">++</span></code> operator as a postfix like: <code class="docutils literal notranslate"><span class="pre">var++</span></code>, the original value of <code class="docutils literal notranslate"><span class="pre">var</span></code> is returned first; then <code class="docutils literal notranslate"><span class="pre">var</span></code> is incremented by 1.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">var1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">var2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// 5 is displayed</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Then, var1 is increased to 6.</span><span class="w"></span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">var1</span><span class="o">++</span><span class="p">);</span><span class="w"> </span><span class="c1">//output is 5</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// var2 is increased to 6</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Then, var2 is displayed</span><span class="w"></span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="o">++</span><span class="n">var2</span><span class="p">);</span><span class="w"> </span><span class="c1">//output is 6</span><span class="w"></span>
+<span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">var1</span><span class="p">);</span><span class="w"> </span><span class="c1">// output is now 6</span><span class="w"></span>
+<span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">var2</span><span class="p">);</span><span class="w"> </span><span class="c1">// output is still 6</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</p>
+</details>
 </section>
 <section id="assignment-2-race-car">
 <h3>Assignment 2 - Race Car<a class="headerlink" href="#assignment-2-race-car" title="Permalink to this heading">#</a></h3>
