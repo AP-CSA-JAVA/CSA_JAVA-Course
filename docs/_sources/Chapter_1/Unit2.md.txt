@@ -1273,9 +1273,11 @@ Create a program that contains an example of each of the following. Add in-line 
 
 ## Using the Math Class
 
+- [ ]  Use methods from the Math package
+	- [ ] I will be able to write a program using math methods	
 - [ ]  Incorporate randomness into a program
-- [ ]  Use methods from the Math package.
-
+	- [ ] I will be able to write a program using random method
+	
 The Math class can be found in the java.lang package.  The Math class contains only static methods.  Some of the more commonly use Math methods are listed below.
 
 | Math Class Methods | Explanations |
