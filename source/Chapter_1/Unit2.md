@@ -1447,8 +1447,15 @@ System.out.println(Math.sqrt(Math.abs(Math.pow(12, 2) - Math.pow(5, 2))));
 </p>
 </details>
 
+### Assignment 1 - Math Class Worksheet 1 & 2	
+
+In pairs, work on worksheet 1 in class.  We will review your work in class.
+Download: [mathclassworksheet1.docx](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9778281/mathclassworksheet1.docx)
+
+Complete worksheet 2 for homework.  We will review your work next class.
+[mathClassWorksheet2.docx](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9778287/mathClassWorksheet2.docx)
 	
-### Assignment 1 - Race Car
+### Assignment 2 - Race Car
 
 Starter Files: [Activity129RaceCar.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9757289/Activity129RaceCar.zip)
 
