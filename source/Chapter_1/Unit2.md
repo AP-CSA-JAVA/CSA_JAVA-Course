@@ -1466,6 +1466,7 @@ System.out.println(Math.sqrt(Math.abs(Math.pow(12, 2) - Math.pow(5, 2))));
 In pairs, work on worksheet 1 in class.  We will review your work in class.
 
 ** Download: ** [mathclassworksheet1.docx](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9778281/mathclassworksheet1.docx)
+** ascii Table: ** [ascii-table-characters.pdf](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9737398/ascii-table-characters.pdf)
 
 Complete worksheet 2 for homework.  We will review your work next class.
 
