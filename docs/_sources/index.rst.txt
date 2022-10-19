@@ -45,4 +45,9 @@ Welcome to CSA JAVA!
    Unit 10 <./Chapter_4/Unit10.md>
    Final Project <./Chapter_4/Final_Project.md>
    
+Indices and tables
+==================
 
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
