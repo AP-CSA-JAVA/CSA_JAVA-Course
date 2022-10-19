@@ -11,7 +11,7 @@ Welcome to CSA JAVA!
    :caption: Contents:
 
    Home <../home.md>
-   Resources <./Resource/Resources.md>
+   Resources <./Resources/Resources.md>
    
 
 .. toctree:: 
