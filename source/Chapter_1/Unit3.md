@@ -17,13 +17,19 @@ George Boole formulated the basic rules of Boolean algebra back in 1847. His end
 
 ![Boolean_image](https://user-images.githubusercontent.com/12989939/197050044-5b998b58-f916-4f02-944c-9523d5a05f38.PNG)
 
-| A | !A |  |  | A | B | A \|| B |
-| --- | --- | --- | --- | --- | --- | --- | 
-| false | true |  |  | false | false |   |
-| true | false |  |  | false | true |   |
-|      |       |  |  | true | false |   |
-|      |       |  |  | true | true |    |
+| A | !A |  
+| ------ | ------ |   
+| false | true |    
+| true | false |    
+|      |       |  
+|      |       |  
 
+| A | B | A \|| B |
+| ----- | ----- | ----- |
+| false | false |       |
+| false | true  |       |
+| true  | false |       |
+| true  | true  |       |
 
 
 ## If Statements and Control Flow
