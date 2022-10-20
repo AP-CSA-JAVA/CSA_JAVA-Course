@@ -1474,6 +1474,25 @@ Complete worksheet 2 for homework.  We will review your work next class.
 
 ** Download: ** [mathClassWorksheet2.docx](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9778287/mathClassWorksheet2.docx)
 
+<details><summary>An example of single vs double quotes</summary>
+<p>
+```java
+	
+class Main {
+  public static void main(String[] args) {
+    System.out.println( "a" + (char)1 ); // output is a
+	System.out.println( "a" ); // out is a
+	System.out.println( 'a' + (char)1 ); // output is 98
+	System.out.println( "a" + 1 ); //output a1
+	System.out.println( 'a' + 1 ); //output 98
+  }
+}
+```
+	
+</p>
+</details>
+	
+
 <details><summary>Prefix & Postfix Operators</summary>
 <p>
 
