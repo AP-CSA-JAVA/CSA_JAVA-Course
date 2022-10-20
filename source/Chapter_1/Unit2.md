@@ -1475,8 +1475,6 @@ Complete worksheet 2 for homework.  We will review your work next class.
 
 **Download:** [mathClassWorksheet2.docx](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9778287/mathClassWorksheet2.docx)
 
-
-
 <details><summary>An example of single vs double quotes</summary>
 <p>
 ```java
@@ -1494,8 +1492,6 @@ class Main {
 	
 </p>
 </details>
-
-
 
 
 <details><summary>Prefix & Postfix Operators</summary>
