@@ -31,6 +31,23 @@ George Boole formulated the basic rules of Boolean algebra back in 1847. His end
 | true  | false |       |
 | true  | true  |       |
 
+1. Write the body of the method given the following requirements. /n *You have three numbers to work with: `ints a`, `b` and `c`.  If the numbers are all different from each other, print "unique".  If all of the numbers are the same, print "boring".  If two of the numbers are the same, print "twins!".
+
+```java
+public void suchFun(int a, int b, int c) {
+
+
+
+
+
+
+
+}
+```
+
+
+**Assignment 1:** ![Boolean Exercises.docx](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9834076/Boolean.Exercises.docx)
+
 
 
 
