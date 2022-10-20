@@ -15,14 +15,14 @@ George Boole formulated the basic rules of Boolean algebra back in 1847. His end
 
 \* Sometimes this comparison can be misleading.  `==` can look at the value `a` and compare it to `b` to see if it is located at the same memory location.
 
-![Boolean_image](https://user-images.githubusercontent.com/12989939/197050044-5b998b58-f916-4f02-944c-9523d5a05f38.PNG)
-
+![Boolean_1](https://user-images.githubusercontent.com/12989939/197055817-30b782a8-c6fb-4610-bf3c-03db4db06cf5.PNG)
 
 | A | !A |  
 | ------ | ------ |   
 | false | true |    
 | true | false |    
   
+![Boolean_2](https://user-images.githubusercontent.com/12989939/197055928-de3c4faa-0c52-4284-9c9e-e9f93b26225e.PNG)
 
 | A | B | A \|\| B |
 | ----- | ----- | ----- |
@@ -31,7 +31,7 @@ George Boole formulated the basic rules of Boolean algebra back in 1847. His end
 | true  | false |       |
 | true  | true  |       |
 
-![Boolean_image](https://user-images.githubusercontent.com/12989939/197050044-5b998b58-f916-4f02-944c-9523d5a05f38.PNG)
+
 
 
 ## If Statements and Control Flow
