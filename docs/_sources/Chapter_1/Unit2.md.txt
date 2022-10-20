@@ -1479,6 +1479,7 @@ Complete worksheet 2 for homework.  We will review your work next class.
 
 <details><summary>Click Here</summary>
 <p>
+
 ```java
 	
 class Main {
@@ -1491,7 +1492,8 @@ class Main {
   }
 }
 ```
-	
+
+        
 </p>
 </details>
 
