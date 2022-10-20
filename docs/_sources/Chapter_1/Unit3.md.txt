@@ -17,14 +17,14 @@ George Boole formulated the basic rules of Boolean algebra back in 1847. His end
 
 ![Boolean_image](https://user-images.githubusercontent.com/12989939/197050044-5b998b58-f916-4f02-944c-9523d5a05f38.PNG)
 
-| A | !A |  
+
+1. | A | !A |  
 | ------ | ------ |   
 | false | true |    
 | true | false |    
-|      |       |  
-|      |       |  
+  
 
-| A | B | A \|\| B |
+2. | A | B | A \|\| B |
 | ----- | ----- | ----- |
 | false | false |       |
 | false | true  |       |
