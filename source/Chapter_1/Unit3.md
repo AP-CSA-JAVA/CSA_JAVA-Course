@@ -24,7 +24,7 @@ George Boole formulated the basic rules of Boolean algebra back in 1847. His end
 |      |       |  
 |      |       |  
 
-| A | B | A \|| B |
+| A \| B | A \|| B |
 | ----- | ----- | ----- |
 | false | false |       |
 | false | true  |       |
