@@ -60,6 +60,7 @@ George Boole formulated the basic rules of Boolean algebra back in 1847. His end
 - [ ] happy | | pink
 - [ ] pink | | happy
 
+
 **Assignment 1:**
 
 [Boolean Exercises.docx](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9834076/Boolean.Exercises.docx)
@@ -72,12 +73,7 @@ George Boole formulated the basic rules of Boolean algebra back in 1847. His end
 public void suchFun(int a, int b, int c) {
 
 
-
-
-
-
-
 }
 ```
 
-
+[BlankAnswerSheet.pdf](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9862940/FRQ_BlankAnswerSheet.pdf)
