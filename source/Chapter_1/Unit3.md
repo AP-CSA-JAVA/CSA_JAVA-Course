@@ -61,6 +61,15 @@ George Boole formulated the basic rules of Boolean algebra back in 1847. His end
 - [ ] pink | | happy
 
 
+<details><summary>Solution</summary>
+
+An `&&` statement short circuits when the left operand is `false`. `!happy` is `false`, so `!happy && pink` will short circuit to `false`.
+    
+An \|\| statement short circuits when the left operand is `true`.  `happy` is `true`, so `!happy || pink` will short circuit to `true`.
+
+</details>
+
+
 **Assignment 1:**  [Boolean Exercises.docx](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9834076/Boolean.Exercises.docx)
 
 
