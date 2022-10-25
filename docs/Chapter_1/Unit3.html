@@ -378,6 +378,70 @@ NOT Operator ( ! ) – !(a&lt;b) [returns false if a is smaller than b]
 </tbody>
 </table>
 </div>
+<details><summary>Solution</summary>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>a</p></th>
+<th class="head"><p>b</p></th>
+<th class="head"><p>c</p></th>
+<th class="head"><p>b || c</p></th>
+<th class="head"><p>a &amp;&amp; (b || c)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+</tr>
+<tr class="row-odd"><td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>F</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+</tr>
+<tr class="row-even"><td><p>T</p></td>
+<td><p>F</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+</tr>
+<tr class="row-odd"><td><p>T</p></td>
+<td><p>F</p></td>
+<td><p>F</p></td>
+<td><p>F</p></td>
+<td><p>F</p></td>
+</tr>
+<tr class="row-even"><td><p>F</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>F</p></td>
+</tr>
+<tr class="row-odd"><td><p>F</p></td>
+<td><p>T</p></td>
+<td><p>F</p></td>
+<td><p>T</p></td>
+<td><p>F</p></td>
+</tr>
+<tr class="row-even"><td><p>F</p></td>
+<td><p>F</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>F</p></td>
+</tr>
+<tr class="row-odd"><td><p>F</p></td>
+<td><p>F</p></td>
+<td><p>F</p></td>
+<td><p>F</p></td>
+<td><p>F</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
 <ol class="arabic simple" start="2">
 <li><p>Which of the following expressions will short circuit when <code class="docutils literal notranslate"><span class="pre">happy</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">pink</span></code> is <code class="docutils literal notranslate"><span class="pre">false</span></code>?  Why?</p></li>
 </ol>
