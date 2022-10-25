@@ -68,19 +68,3 @@ public void suchFun(int a, int b, int c) {
 
 **Assignment 1:** ![Boolean Exercises.docx](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9834076/Boolean.Exercises.docx)
 
-
-
-
-## If Statements and Control Flow
-
-## If/ Else Statements
-
-## Else if Statements
-
-## Compound Boolean Expressions
-
-## Equivalent Boolean Expressions
-
-## Comparing Objects
-
-## Project Choose your Path
