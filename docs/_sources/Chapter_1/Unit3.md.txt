@@ -1,5 +1,14 @@
 # Unit 3
 
+## Logical Operators
+
+Logical operators are used to performing logical “AND”, “OR” and “NOT” operations, i.e. the function similar to AND gate and OR gate in digital electronics. They are used to combine two or more conditions/constraints or to complement the evaluation of the original condition under particular consideration. One thing to keep in mind is the second condition is not evaluated if the first one is false, i.e. it has a short-circuiting effect. Used extensively to test for several conditions for making a decision.
+
+    AND Operator ( && ) – if( a && b ) [if true execute else don’t]
+    OR Operator ( || ) – if( a || b) [if one of them is true execute else don’t]
+    NOT Operator ( ! ) – !(a<b) [returns false if a is smaller than b]
+    
+    
 ## Boolean Expressions
 
 George Boole formulated the basic rules of Boolean algebra back in 1847. His endeavor created the mathematical logic that we use today.  Below are the relational operators that you will need to know for the AP exam.
@@ -68,5 +77,5 @@ public void suchFun(int a, int b, int c) {
 
 **Assignment 1:**
 
-![Boolean Exercises](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9834076/Boolean.Exercises.docx)
+![Logical Operator Exercises](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9834076/Boolean.Exercises.docx)
 
