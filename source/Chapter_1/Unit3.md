@@ -54,6 +54,21 @@ George Boole formulated the basic rules of Boolean algebra back in 1847. His end
 | F | F | T |  |  |
 | F | F | F |  |  |
 
+<details><summary>Solution</summary>
+
+| a | b | c | b \|\| c | a && (b \|\| c) |
+| -----  |  ----- | -----  | ------ | ------ |
+| T | T | T | T | T |
+| T | T | F | T | T |
+| T | F | T | T | T |
+| T | F | F | F | F |
+| F | T | T | T | F |
+| F | T | F | T | F |
+| F | F | T | T | F |
+| F | F | F | F | F |
+    
+</details>
+
 2.  Which of the following expressions will short circuit when `happy` is `true` and `pink` is `false`?  Why?
 
 - [ ] ! happy && pink
