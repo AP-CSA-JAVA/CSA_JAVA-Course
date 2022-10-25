@@ -77,5 +77,4 @@ public void suchFun(int a, int b, int c) {
 
 **Assignment 1:**
 
-![Logical Operator Exercises](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9834076/Boolean.Exercises.docx)
-
+[Boolean Exercises.docx](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9834076/Boolean.Exercises.docx)
