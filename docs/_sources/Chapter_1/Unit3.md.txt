@@ -52,9 +52,9 @@ public void suchFun(int a, int b, int c) {
 - [ ] happy | | pink
 - [ ] pink | | happy
 
-3.  Given `boolean` **variables** `a` ,`b` , and `c`, fill in the truth table for `a && (B \|\| c)`.
+3.  Given `boolean` **variables** `a` ,`b` , and `c`, fill in the truth table for `a && (B || c)`.
 
-| a | b | c | b \|\| c | a && (b || c) |
+| a | b | c | b \|\| c | a && (b \|\| c) |
 | -----  |  ----- | -----  | ------ | ------ |
 | T | T | T |  |  |
 | T | T | F |  |  |
