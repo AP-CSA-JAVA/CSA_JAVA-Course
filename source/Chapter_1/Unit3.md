@@ -66,5 +66,5 @@ public void suchFun(int a, int b, int c) {
 | F | F | F |  |  |
 
 
-**Assignment 1:** ![Boolean Exercises.docx](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9834076/Boolean.Exercises.docx)
+**Assignment 1:** ![Boolean Exercises](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9834076/Boolean.Exercises.docx)
 
