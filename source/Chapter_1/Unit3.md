@@ -40,6 +40,7 @@ George Boole formulated the basic rules of Boolean algebra back in 1847. His end
 | true  | false |       |
 | true  | true  |       |
 
+
 1.  Given `boolean` **variables** `a` ,`b` , and `c`, fill in the truth table for `a && (B || c)`.
 
 | a | b | c | b \|\| c | a && (b \|\| c) |
