@@ -169,6 +169,14 @@ In Java, the order of operation works pretty much the same with the exception of
 |  4    | Add 5 + 216      | = 221  |
 |  5    | Subtract 221 - 1 | = 220  |
 
+<details><summary>JAVA Order of Operations</summary>
+
+| Operator Type | Operator | Java Flow of Control |
+| ------------- | :------: | -------------------- |
+| Unary | ` 1, ++, +, - ` | 1<sup>st</sup> |
+
+</details>
+
 ### Assignment 1
 #### Calculate your weight on Jupiter
 
