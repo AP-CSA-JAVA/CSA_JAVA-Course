@@ -178,9 +178,9 @@ In Java, the order of operation works pretty much the same with the exception of
 | Additive | ` +  -  ` |   |
 | Relational | ` <  >  <=  => ` |       |
 | Equality | ` ==  != ` |         |
-| Logical "AND" | ` && ` |        |
-| Logical "OR" | ` || ` |        |
-| Assignment | ` =  +=  -=  *=  /=  %=  &&=  ||= ` |       |
+| Logical "AND" | `&&` |        |
+| Logical "OR" | `||` |        |
+| Assignment | `=  +=  -=  *=  /=  %=  &&=  ||=` |       |
 
 </details>
 
