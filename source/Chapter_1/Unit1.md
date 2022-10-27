@@ -172,8 +172,15 @@ In Java, the order of operation works pretty much the same with the exception of
 <details><summary>JAVA Order of Operations</summary>
 
 | Operator Type | Operator | Java Flow of Control |
-| ------------- | :------: | -------------------- |
-| Unary | ` 1, ++, +, - ` | 1<sup>st</sup> |
+| ------------- | :------: | :------------------: |
+| Unary | ` !  ++  +  - ` | 1<sup>st</sup> |
+| Multiplicative | ` *  /  % ` |        |
+| Additive | ` +  -  ` |   |
+| Relational | ` <  >  <=  => ` |       |
+| Equality | ` ==  != ` |         |
+| Logical "AND" | ` && ` |        |
+| Logical "OR" | ` || ` |        |
+| Assignment | ` =  +=  -=  *=  /=  %=  &&=  ||= ` |       |
 
 </details>
 
