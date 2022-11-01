@@ -286,3 +286,55 @@ class Main {
   }
 }
 ```
+### Assignment 1
+
+**Starter Code: **
+
+**Directions:**
+*Shipping*
+- [ ] ask user for the weight of package, method of shipping, and coupon code
+- **Weight**
+- - [ ] if weight is between 0 and 1, shippingCost is $1.
+- - [ ] if weight is between 1 and 5,
+shippingCost is $7.50 and add 1 day to shippingDays.
+- - [ ] if weight is over 5, shippingCost is $10.25 and add 3 days to shippingDays.
+- **Method of Shipping**
+- - [ ] "Standard" adds 3 days to shippingDays 
+- - [ ] "Express" subtracts 3 days from shippingDays and add $10 to shippingCosts
+- - [ ] "Overnight" sets shippingDays to be 1 and add $10 to shippingCosts
+- **CouponCode** If the user had the correct coupon code, subtract $10 from the shippingCost
+
+**Sample Outputs:**
+```java
+Weight of Package:
+0.5
+Method of Shipping: Standard, Express, or Overnight:
+Standard
+Coupon Code:
+none
+
+Total Shipping Cost: $1.0
+Days to Deliver: 8
+```
+```java
+Weight of Package:
+10
+Method of Shipping: Standard, Express, or Overnight:
+Express
+Coupon Code:
+none    
+
+Total Shipping Cost: $20.25
+Days to Deliver: 5
+```
+```java
+Weight of Package:
+7.5
+Method of Shipping: Standard, Express, or Overnight:
+Overnight
+Coupon Code:
+COUPON17 
+
+Total Shipping Cost: $20.25
+Days to Deliver: 1
+```

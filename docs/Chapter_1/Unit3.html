@@ -653,6 +653,77 @@ like indentation, spacing is used to improve readability.</p>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
+<section id="id1">
+<h3>Assignment 1<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<p>**Starter Code: **</p>
+<p><strong>Directions:</strong>
+<em>Shipping</em></p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> ask user for the weight of package, method of shipping, and coupon code</p></li>
+<li><p><strong>Weight</strong></p></li>
+<li><ul class="contains-task-list">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> if weight is between 0 and 1, shippingCost is $1.</p></li>
+</ul>
+</li>
+<li><ul class="contains-task-list">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> if weight is between 1 and 5,
+shippingCost is $7.50 and add 1 day to shippingDays.</p></li>
+</ul>
+</li>
+<li><ul class="contains-task-list">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> if weight is over 5, shippingCost is $10.25 and add 3 days to shippingDays.</p></li>
+</ul>
+</li>
+<li><p><strong>Method of Shipping</strong></p></li>
+<li><ul class="contains-task-list">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> “Standard” adds 3 days to shippingDays</p></li>
+</ul>
+</li>
+<li><ul class="contains-task-list">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> “Express” subtracts 3 days from shippingDays and add $10 to shippingCosts</p></li>
+</ul>
+</li>
+<li><ul class="contains-task-list">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> “Overnight” sets shippingDays to be 1 and add $10 to shippingCosts</p></li>
+</ul>
+</li>
+<li><p><strong>CouponCode</strong> If the user had the correct coupon code, subtract $10 from the shippingCost</p></li>
+</ul>
+<p><strong>Sample Outputs:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Weight</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Package</span><span class="p">:</span><span class="w"></span>
+<span class="mf">0.5</span><span class="w"></span>
+<span class="n">Method</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Shipping</span><span class="p">:</span><span class="w"> </span><span class="n">Standard</span><span class="p">,</span><span class="w"> </span><span class="n">Express</span><span class="p">,</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">Overnight</span><span class="p">:</span><span class="w"></span>
+<span class="n">Standard</span><span class="w"></span>
+<span class="n">Coupon</span><span class="w"> </span><span class="n">Code</span><span class="p">:</span><span class="w"></span>
+<span class="n">none</span><span class="w"></span>
+
+<span class="n">Total</span><span class="w"> </span><span class="n">Shipping</span><span class="w"> </span><span class="n">Cost</span><span class="p">:</span><span class="w"> </span><span class="n">$1</span><span class="mf">.0</span><span class="w"></span>
+<span class="n">Days</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">Deliver</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Weight</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Package</span><span class="p">:</span><span class="w"></span>
+<span class="mi">10</span><span class="w"></span>
+<span class="n">Method</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Shipping</span><span class="p">:</span><span class="w"> </span><span class="n">Standard</span><span class="p">,</span><span class="w"> </span><span class="n">Express</span><span class="p">,</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">Overnight</span><span class="p">:</span><span class="w"></span>
+<span class="n">Express</span><span class="w"></span>
+<span class="n">Coupon</span><span class="w"> </span><span class="n">Code</span><span class="p">:</span><span class="w"></span>
+<span class="n">none</span><span class="w">    </span>
+
+<span class="n">Total</span><span class="w"> </span><span class="n">Shipping</span><span class="w"> </span><span class="n">Cost</span><span class="p">:</span><span class="w"> </span><span class="n">$20</span><span class="mf">.25</span><span class="w"></span>
+<span class="n">Days</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">Deliver</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Weight</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Package</span><span class="p">:</span><span class="w"></span>
+<span class="mf">7.5</span><span class="w"></span>
+<span class="n">Method</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Shipping</span><span class="p">:</span><span class="w"> </span><span class="n">Standard</span><span class="p">,</span><span class="w"> </span><span class="n">Express</span><span class="p">,</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">Overnight</span><span class="p">:</span><span class="w"></span>
+<span class="n">Overnight</span><span class="w"></span>
+<span class="n">Coupon</span><span class="w"> </span><span class="n">Code</span><span class="p">:</span><span class="w"></span>
+<span class="n">COUPON17</span><span class="w"> </span>
+
+<span class="n">Total</span><span class="w"> </span><span class="n">Shipping</span><span class="w"> </span><span class="n">Cost</span><span class="p">:</span><span class="w"> </span><span class="n">$20</span><span class="mf">.25</span><span class="w"></span>
+<span class="n">Days</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">Deliver</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
 </section>
 </section>
 
@@ -720,7 +791,10 @@ like indentation, spacing is used to improve readability.</p>
 <li><a class="reference internal" href="#assignment-1">Assignment 1</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#if-else-statements">If/ Else Statements</a></li>
+<li><a class="reference internal" href="#if-else-statements">If/ Else Statements</a><ul>
+<li><a class="reference internal" href="#id1">Assignment 1</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
