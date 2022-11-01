@@ -233,3 +233,12 @@ Modify the above code where you see `/*your code here*/` in the following ways:
 - Implement a "hit" counter that increase by one if theuser's guessed digit matches the random number digit in the same position
 - Display the total number of hits at the end of your program
 - line 14: System.out.println(targetStr);  // leave this line uncommented
+
+**Sample output:**
+```java
+3768 // random number that was generated
+Guess a 4-digit number from 1000 to 9999 with no duplicate digits:  7658
+Number of hits:1
+Guess a 4-digit number from 1000 to 9999 with no duplicate digits:  3658
+Number of hits:2
+```
