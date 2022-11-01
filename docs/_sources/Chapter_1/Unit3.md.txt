@@ -242,3 +242,47 @@ Number of hits:1
 Guess a 4-digit number from 1000 to 9999 with no duplicate digits:  3658
 Number of hits:2
 ```
+
+## If/ Else Statements
+
+```java
+class Main {
+  public static void main(String[] args) {
+  int grade = 95;
+  if (grade >92)
+	{
+	System.out.println("You have an A in the class.");
+	}
+   else
+	{
+	System.out.println("You do not have an A in the class");
+	}
+  }
+}
+```
+
+Take a look at the code below...
+```java
+class Main {
+  public static void main(String[] args) {
+    int Age = 25;
+    int Weight = 89;
+
+	if  (Age >= 18)
+	{
+		if (Weight > 90)
+		{
+			System.out.println("You are eligible to donate blood.");
+		}
+		else
+		{
+			System.out.println("You are not eligible to donate blood.");
+		}
+	}
+	else
+	{
+		System.out.println("Age must be greater than 18.");
+	}
+  }
+}
+```
