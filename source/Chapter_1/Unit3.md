@@ -104,3 +104,132 @@ public void suchFun(int a, int b, int c) {
 ```
 
 [BlankAnswerSheet.pdf](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9862940/FRQ_BlankAnswerSheet.pdf)
+
+## If Statements and Control Flow
+
+Java supports the usual logical conditions from mathematics:
+
+- Less than: a < b
+- Less than or equal to: a <= b
+- Greater than: a > b
+- Greater than or equal to: a >= b
+- Equal to a == b
+- Not Equal to: a != b
+
+You can use these conditions to perform different actions for different decisions.
+
+Java has the following conditional statements:
+
+- Use if to specify a block of code to be executed, if a specified condition is true
+- Use else to specify a block of code to be executed, if the same condition is false
+- Use else if to specify a new condition to test, if the first condition is false
+
+Use the if statement to specify a block of Java code to be executed if a condition is true.
+
+**Note** The body of an if statement in Java is not dependent on indentation. Indenting in Java is a strong convention 
+that makes code segments readable. Java is often flexible about spacing. The three constructs below are equivalent and 
+like indentation, spacing is used to improve readability.
+
+`if(b!=0)System.out.println("...");`
+
+`if (b!=0) System.out.println("...");`
+
+`if (b!=0)
+  System.out.println("...");`
+  
+  **Note College Board Exclusion:** You will not be required to use the `parseInt` or `parseDouble` methods on the AP exam.
+  
+ Look at the code below.
+
+```java
+
+import java.util.Scanner;
+ 
+public class GuessChecker
+{
+	public static void main(String[] args)
+	{
+    /* Add any variables you will need throughout the program here. */
+  
+    // Generate the random number
+    String targetStr = makeCode();
+    //System.out.println(targetStr);  // uncomment for debugging
+    
+    // Break the random number into four variables.
+    int r1 = Integer.parseInt(targetStr.substring(0, 1));
+    int r2 = Integer.parseInt(targetStr.substring(1, 2));
+    int r3 = Integer.parseInt(targetStr.substring(2, 3));
+    int r4 = Integer.parseInt(targetStr.substring(3, 4));
+    
+    // Get the user's guess.
+    String guess = getGuess();
+    //System.out.println(guess);   // uncomment for debugging
+    
+    // Break the user's guess into four variables.
+    int g1 = Integer.parseInt(guess.substring(0, 1));
+    int g2 = Integer.parseInt(guess.substring(1, 2));
+    int g3 = Integer.parseInt(guess.substring(2, 3));
+    int g4 = Integer.parseInt(guess.substring(3, 4));
+
+    /*your code here*/
+   
+	}
+ 
+  // Checks to ensure no duplicate digits in a int.
+	public static boolean hasDupes(int num)
+	{ 
+		boolean[] digs = new boolean[10];
+		while (num > 0)
+		{
+			if (digs[num % 10])
+			  return true;
+			digs[num % 10] = true;
+			num /= 10;
+		}
+		return false;
+	}
+
+  // Creates a new random 4 digit code 1000-9999 with no duplicates.
+  public static String makeCode() 
+  { 
+		int target = (int) (Math.random() * 9000 + 1000);
+		while (hasDupes(target))
+		  target = (int) (Math.random() * 9000 + 1000);
+    String targetStr = target + "";
+    return targetStr;
+  }
+
+  // Prompts the user for a guess and repeats until valid guess is made.
+  public static String getGuess() 
+  { 
+    Scanner sc = new Scanner(System.in);
+    boolean validGuess = false;
+    int userGuess = 0;
+    while (!validGuess)
+    {
+      System.out.print("Guess a 4-digit number from 1000 to 9999 with no duplicate digits: ");
+      userGuess = sc.nextInt();
+      if (!(hasDupes(userGuess) || (userGuess < 1000))) 
+        validGuess = true;
+    }
+    String userStr = userGuess + "";
+    return userStr;
+  }
+}
+
+```
+
+| Method Summary |      |
+| -------------- | ---- |
+| `getGuess()` | Prompts the user for a four-digit guess |
+| `makeCode()` | Creates the random code that will try to be guessed |
+| `boolean hasDupes(int sum)` | Used by `getGuess()` and `makeCode() to ensure that no digits are duplicated |
+
+
+### Assignment 1 
+
+Modify the above code where you see `/*your code herec*/` in the following ways:
+- Use if statements to compare each digit in the user's guess to the digit in the same position of the random number to see if they match.
+- Implement a "hit" counter that increase by one if theuser's guessed digit matches the random number digit in the same position
+- Display the total number of hits at the end of your program
+- line 14: System.out.println(targetStr);  // leave this line uncommented
