@@ -228,7 +228,7 @@ public class GuessChecker
 
 ### Assignment 1 
 
-Modify the above code where you see `/*your code herec*/` in the following ways:
+Modify the above code where you see `/*your code here*/` in the following ways:
 - Use if statements to compare each digit in the user's guess to the digit in the same position of the random number to see if they match.
 - Implement a "hit" counter that increase by one if theuser's guessed digit matches the random number digit in the same position
 - Display the total number of hits at the end of your program
