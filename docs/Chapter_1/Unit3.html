@@ -470,6 +470,139 @@ NOT Operator ( ! ) – !(a&lt;b) [returns false if a is smaller than b]
 </div>
 <p><a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9862940/FRQ_BlankAnswerSheet.pdf">BlankAnswerSheet.pdf</a></p>
 </section>
+<section id="if-statements-and-control-flow">
+<h2>If Statements and Control Flow<a class="headerlink" href="#if-statements-and-control-flow" title="Permalink to this heading">#</a></h2>
+<p>Java supports the usual logical conditions from mathematics:</p>
+<ul class="simple">
+<li><p>Less than: a &lt; b</p></li>
+<li><p>Less than or equal to: a &lt;= b</p></li>
+<li><p>Greater than: a &gt; b</p></li>
+<li><p>Greater than or equal to: a &gt;= b</p></li>
+<li><p>Equal to a == b</p></li>
+<li><p>Not Equal to: a != b</p></li>
+</ul>
+<p>You can use these conditions to perform different actions for different decisions.</p>
+<p>Java has the following conditional statements:</p>
+<ul class="simple">
+<li><p>Use if to specify a block of code to be executed, if a specified condition is true</p></li>
+<li><p>Use else to specify a block of code to be executed, if the same condition is false</p></li>
+<li><p>Use else if to specify a new condition to test, if the first condition is false</p></li>
+</ul>
+<p>Use the if statement to specify a block of Java code to be executed if a condition is true.</p>
+<p><strong>Note</strong> The body of an if statement in Java is not dependent on indentation. Indenting in Java is a strong convention
+that makes code segments readable. Java is often flexible about spacing. The three constructs below are equivalent and
+like indentation, spacing is used to improve readability.</p>
+<p><code class="docutils literal notranslate"><span class="pre">if(b!=0)System.out.println(&quot;...&quot;);</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">(b!=0)</span> <span class="pre">System.out.println(&quot;...&quot;);</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">(b!=0)</span>&#160;&#160; <span class="pre">System.out.println(&quot;...&quot;);</span></code></p>
+<p><strong>Note College Board Exclusion:</strong> You will not be required to use the <code class="docutils literal notranslate"><span class="pre">parseInt</span></code> or <code class="docutils literal notranslate"><span class="pre">parseDouble</span></code> methods on the AP exam.</p>
+<p>Look at the code below.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span><span class="w"></span>
+<span class="w"> </span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">GuessChecker</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="w">	</span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="cm">/* Add any variables you will need throughout the program here. */</span><span class="w"></span>
+<span class="w">  </span>
+<span class="w">    </span><span class="c1">// Generate the random number</span><span class="w"></span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">targetStr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">makeCode</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//System.out.println(targetStr);  // uncomment for debugging</span><span class="w"></span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// Break the random number into four variables.</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">r1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">targetStr</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">r2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">targetStr</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">r3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">targetStr</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">r4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">targetStr</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// Get the user&#39;s guess.</span><span class="w"></span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">guess</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getGuess</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//System.out.println(guess);   // uncomment for debugging</span><span class="w"></span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// Break the user&#39;s guess into four variables.</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">g1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">guess</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">g2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">guess</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">g3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">guess</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">g4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">guess</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">));</span><span class="w"></span>
+
+<span class="w">    </span><span class="cm">/*your code here*/</span><span class="w"></span>
+<span class="w">   </span>
+<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="w"> </span>
+<span class="w">  </span><span class="c1">// Checks to ensure no duplicate digits in a int.</span><span class="w"></span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">hasDupes</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="p">)</span><span class="w"></span>
+<span class="w">	</span><span class="p">{</span><span class="w"> </span>
+<span class="w">		</span><span class="kt">boolean</span><span class="o">[]</span><span class="w"> </span><span class="n">digs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">boolean</span><span class="o">[</span><span class="mi">10</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
+<span class="w">		</span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">		</span><span class="p">{</span><span class="w"></span>
+<span class="w">			</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">digs</span><span class="o">[</span><span class="n">num</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">10</span><span class="o">]</span><span class="p">)</span><span class="w"></span>
+<span class="w">			  </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">			</span><span class="n">digs</span><span class="o">[</span><span class="n">num</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">10</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">			</span><span class="n">num</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
+<span class="w">		</span><span class="p">}</span><span class="w"></span>
+<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">// Creates a new random 4 digit code 1000-9999 with no duplicates.</span><span class="w"></span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">makeCode</span><span class="p">()</span><span class="w"> </span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span>
+<span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">9000</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1000</span><span class="p">);</span><span class="w"></span>
+<span class="w">		</span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">hasDupes</span><span class="p">(</span><span class="n">target</span><span class="p">))</span><span class="w"></span>
+<span class="w">		  </span><span class="n">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">9000</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1000</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">targetStr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">targetStr</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">// Prompts the user for a guess and repeats until valid guess is made.</span><span class="w"></span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getGuess</span><span class="p">()</span><span class="w"> </span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span>
+<span class="w">    </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">validGuess</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">userGuess</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">validGuess</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Guess a 4-digit number from 1000 to 9999 with no duplicate digits: &quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="n">userGuess</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">hasDupes</span><span class="p">(</span><span class="n">userGuess</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="n">userGuess</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1000</span><span class="p">)))</span><span class="w"> </span>
+<span class="w">        </span><span class="n">validGuess</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">userStr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">userGuess</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">userStr</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Method Summary</p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">getGuess()</span></code></p></td>
+<td><p>Prompts the user for a four-digit guess</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">makeCode()</span></code></p></td>
+<td><p>Creates the random code that will try to be guessed</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">boolean</span> <span class="pre">hasDupes(int</span> <span class="pre">sum)</span></code></p></td>
+<td><p>Used by <code class="docutils literal notranslate"><span class="pre">getGuess()</span></code> and `makeCode() to ensure that no digits are duplicated</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="assignment-1">
+<h3>Assignment 1<a class="headerlink" href="#assignment-1" title="Permalink to this heading">#</a></h3>
+<p>Modify the above code where you see <code class="docutils literal notranslate"><span class="pre">/*your</span> <span class="pre">code</span> <span class="pre">herec*/</span></code> in the following ways:</p>
+<ul class="simple">
+<li><p>Use if statements to compare each digit in the user’s guess to the digit in the same position of the random number to see if they match.</p></li>
+<li><p>Implement a “hit” counter that increase by one if theuser’s guessed digit matches the random number digit in the same position</p></li>
+<li><p>Display the total number of hits at the end of your program</p></li>
+<li><p>line 14: System.out.println(targetStr);  // leave this line uncommented</p></li>
+</ul>
+</section>
+</section>
 </section>
 
         </article>
@@ -532,6 +665,10 @@ NOT Operator ( ! ) – !(a&lt;b) [returns false if a is smaller than b]
 <li><a class="reference internal" href="#">Unit 3</a><ul>
 <li><a class="reference internal" href="#logical-operators">Logical Operators</a></li>
 <li><a class="reference internal" href="#boolean-expressions">Boolean Expressions</a></li>
+<li><a class="reference internal" href="#if-statements-and-control-flow">If Statements and Control Flow</a><ul>
+<li><a class="reference internal" href="#assignment-1">Assignment 1</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
