@@ -288,7 +288,7 @@ class Main {
 ```
 ### Assignment 1
 
-**Starter Code: **
+**Starter Code:**  [starterFile_Shipping.txt](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9913050/starterFile_Shipping.txt)
 
 **Directions:**
 *Shipping*
