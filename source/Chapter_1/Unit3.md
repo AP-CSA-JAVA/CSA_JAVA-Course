@@ -338,3 +338,42 @@ COUPON17
 Total Shipping Cost: $20.25
 Days to Deliver: 1
 ```
+
+## Else If Statements
+
+#### GOALS
+- Learn multiple selections with the if/else-if conditional.
+- Continue to improve the code of a complex program.
+
+A *multi-way selection* is written when there are a series of conditions with different statements for each condition. Multi-way selection is performed using if/else-if statements such that exactly one section of code is executed based on the first condition that evaluates to true.
+
+```java
+if (condition 1) // true
+    {
+    // body of the first 'if'
+    // statement to be executed
+    }
+else if (condition 2) // if condition 1 is false
+    {
+    // if condition 2 is true
+    // body of second 'if'
+    // statements to be executed
+    }
+else if (condition 3) // if condition 2 is false
+    {
+    // if condition 3 is true
+    // body of third 'if'
+    // statements to be executed
+    }
+else // if condition 3 is false
+    {
+    // body of the 'else'
+    // statements to be executed
+    }
+
+```
+
+**Assignment 1**
+
+Directions: Modify the GuestChecker program to use if/else-if/else statements.  Comment where you made the changes.
+Submit your program digitally.
