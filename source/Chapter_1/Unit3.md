@@ -375,5 +375,9 @@ else // if condition 3 is false
 
 **Assignment 1**
 
-Directions: Modify the GuestChecker(section: If Statements and Control Flow) program to use if/else-if/else statements.  
+Directions: Modify your program to include “near hits.” These are correctly guessed numbers that are in the wrong position.
+- Report actual `hits` at the end of the program
+- Report the `near hit` counter at the end of your program 
+- Use if/else-if/else statements
+
 Comment where you made the changes.  Submit your program digitally.
