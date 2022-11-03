@@ -226,7 +226,7 @@ public class GuessChecker
 | `boolean hasDupes(int sum)` | Used by `getGuess()` and `makeCode() to ensure that no digits are duplicated |
 
 
-### Assignment 1 
+**Assignment 1** 
 
 Modify the above code where you see `/*your code here*/` in the following ways:
 - Use if statements to compare each digit in the user's guess to the digit in the same position of the random number to see if they match.
@@ -286,7 +286,7 @@ class Main {
   }
 }
 ```
-### Assignment 1
+**Assignment 1**
 
 **Starter Code:**  [starterFile_Shipping.txt](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9913050/starterFile_Shipping.txt)
 
@@ -375,5 +375,5 @@ else // if condition 3 is false
 
 **Assignment 1**
 
-Directions: Modify the GuestChecker program to use if/else-if/else statements.  Comment where you made the changes.
-Submit your program digitally.
+Directions: Modify the GuestChecker(section: If Statements and Control Flow) program to use if/else-if/else statements.  
+Comment where you made the changes.  Submit your program digitally.
