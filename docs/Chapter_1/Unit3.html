@@ -984,7 +984,7 @@ Again, distribute the not and switch the logical operator to get (not a) and (no
 </section>
 <section id="assignment-1-clue">
 <h3>Assignment 1: Clue<a class="headerlink" href="#assignment-1-clue" title="Permalink to this heading">#</a></h3>
-<p><strong>Directions</strong>  Your object is to review the current program as it is currently written.  Look at “what works” and “what needs work”.  Make the necessary changes to the program.</p>
+<p><strong>Directions</strong>  Review the current program as it is currently written. Look at “what works” and “what needs work”. Make the necessary changes to the program so it produces the intended outcome (see sample below).</p>
 <p>This is a program simulates Clue.</p>
 <p>Here is what works:</p>
 <ul class="simple">
@@ -1007,6 +1007,29 @@ check() should only get called if our guess isn&#39;t 100% correct
 <li><p>if we want to ignore case, we can use .equalsIgnoreCase()</p></li>
 <li><p>should allow the user to iterate through the program to pick the correct Suspect, Weapon and Room</p></li>
 </ul>
+<p><strong>Sample Output:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Welcome</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">Clue</span><span class="o">!</span><span class="w"> </span><span class="n">Choose</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">category</span><span class="p">.</span><span class="w"></span>
+
+<span class="n">Suspect</span><span class="w">     	</span><span class="n">Weapon</span><span class="w">      	</span><span class="n">Room</span><span class="w"></span>
+<span class="n">Miss</span><span class="w"> </span><span class="n">Scarlett</span><span class="w">   </span><span class="n">Candlestick</span><span class="w">     </span><span class="n">Kitchen</span><span class="w"></span>
+<span class="n">Mr</span><span class="p">.</span><span class="w"> </span><span class="n">Green</span><span class="w">   	</span><span class="n">Knife</span><span class="w">       	</span><span class="n">Ballroom</span><span class="w"></span>
+<span class="n">Colonel</span><span class="w"> </span><span class="n">Mustard</span><span class="w"> </span><span class="n">Lead</span><span class="w"> </span><span class="n">Pipe</span><span class="w">   	</span><span class="n">Conservatory</span><span class="w"></span>
+<span class="n">Professor</span><span class="w"> </span><span class="n">Plum</span><span class="w">  </span><span class="n">Revolver</span><span class="w">    	</span><span class="n">Billiard</span><span class="w"> </span><span class="n">Room</span><span class="w"></span>
+<span class="n">Mrs</span><span class="p">.</span><span class="w"> </span><span class="n">Peacock</span><span class="w">    </span><span class="n">Rope</span><span class="w">        	</span><span class="n">Library</span><span class="w"></span>
+<span class="n">Mrs</span><span class="p">.</span><span class="w"> </span><span class="n">White</span><span class="w">  	</span><span class="n">Wrench</span><span class="w">      	</span><span class="n">Study</span><span class="w"></span>
+<span class="w">                </span><span class="n">Hall</span><span class="w"></span>
+<span class="w">                </span><span class="n">Lounge</span><span class="w"></span>
+<span class="w">                </span><span class="n">Dining</span><span class="w"> </span><span class="n">Room</span><span class="w"></span>
+
+<span class="n">Make</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">accusation</span><span class="p">,</span><span class="w"> </span><span class="n">separated</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">enter</span><span class="w"> </span><span class="n">key</span><span class="p">:</span><span class="w"></span>
+<span class="n">Miss</span><span class="w"> </span><span class="n">Scarlett</span><span class="w"></span>
+<span class="n">Knife</span><span class="w"></span>
+<span class="n">Kitchen</span><span class="w"></span>
+
+<span class="n">Congratulations</span><span class="o">!</span><span class="w"></span>
+<span class="n">It</span><span class="w"> </span><span class="n">was</span><span class="w"> </span><span class="n">Miss</span><span class="w"> </span><span class="n">Scarlett</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Knife</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Kitchen</span><span class="w"></span>
+</pre></div>
+</div>
 <details><summary>New Java keyWord: switch</summary>
 <p>For the purposes of this program, you can use the jave keyword <code class="docutils literal notranslate"><span class="pre">switch</span></code>.  I discourage you from using it for the AP exam as it is not a part of the AP exam.<br />
 Instead of writing many <code class="docutils literal notranslate"><span class="pre">if..else</span></code> statements, you can use the switch statement.  The switch statement selects one of many code blocks to be executed.  Take a look at the pseudocode below:</p>
