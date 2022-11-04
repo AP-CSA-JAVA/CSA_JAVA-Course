@@ -695,3 +695,43 @@ switch (day) {
 </details>
 
 Submit your replit program to Canvas.
+
+## Choose Your Own Adventure
+
+**Goals**
+-  Apply all you’ve learned about conditionals to create a “Choose Your Own Adventure” game.
+-  Apply the development process to create a project.
+-  Each student will create their own project
+
+In this project, you will create a “Choose Your Own Adventure” game or story. You will ask the user for several inputs and use conditionals to display different choices and results. You will first plan out the path and the flow of your program on paper.
+
+#### Requirements of this project
+
+    Your program should present the user with several choices. Each of those choices will branch into other choices. This can be done by setting Boolean variables or executing different sections of code based on the user’s input.
+
+Looking back at previous programs and the requirements stated above, you know you will need:
+- At least three Boolean expressions that change the path in the program 
+- Print statements, depending on current and previous choices. 
+- At least three nested if/else-if/else clauses
+
+#### You Must Include
+- Flowchart of your program
+- Develop a timeline chart of when you plan to start and complete a specific task within your project
+- If you modify the program, add new additions within your timeline
+
+#### Deliverables
+Document and collect the following items:
+- Development process of your program
+	- documented brainstorming ideas
+	- flowchart
+	- timeline chart
+	- Quality screenshots of your program’s output 
+		- To convey your program’s functionality
+		- Use more than one screenshot and explain what each one illustrates
+	- A description of two code segments related to the program requirements 
+		- Be sure your description identifies the name of the variables being processed
+- Your completed code submitted as a replit
+- Your documentation submitted digitally as one document
+
+
+
