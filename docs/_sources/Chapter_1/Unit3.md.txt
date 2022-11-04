@@ -588,7 +588,7 @@ Take a look at the program above.  Looking at the program, you may have thought 
 
 **Directions**  Review the current program as it is currently written. Look at "what works" and "what needs work". Make the necessary changes to the program so it produces the intended outcome (see sample below).
 
-This is a program simulates Clue.
+This program simulates Clue.
 
 Here is what works:
 - the program randomly generates a final murderer, weapon, and room
@@ -693,3 +693,5 @@ switch (day) {
 ```
 	
 </details>
+
+Submit your replit program to Canvas.
