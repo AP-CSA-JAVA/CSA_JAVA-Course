@@ -586,7 +586,7 @@ Take a look at the program above.  Looking at the program, you may have thought 
 
 ### Assignment 1: Clue
 
-**Directions**  Your object is to review the current program as it is currently written.  Look at "what works" and "what needs work".  Make the necessary changes to the program.
+**Directions**  Review the current program as it is currently written. Look at "what works" and "what needs work". Make the necessary changes to the program so it produces the intended outcome (see sample below).
 
 This is a program simulates Clue.
 
@@ -611,6 +611,30 @@ Extra:
 - if we want to ignore case, we can use .equalsIgnoreCase()
 - should allow the user to iterate through the program to pick the correct Suspect, Weapon and Room
 
+**Sample Output:**
+
+```java
+Welcome to Clue! Choose one from each category.
+
+Suspect     	Weapon      	Room
+Miss Scarlett   Candlestick     Kitchen
+Mr. Green   	Knife       	Ballroom
+Colonel Mustard Lead Pipe   	Conservatory
+Professor Plum  Revolver    	Billiard Room
+Mrs. Peacock    Rope        	Library
+Mrs. White  	Wrench      	Study
+                Hall
+                Lounge
+                Dining Room
+
+Make you final accusation, separated by the enter key:
+Miss Scarlett
+Knife
+Kitchen
+
+Congratulations!
+It was Miss Scarlett with the Knife in the Kitchen
+```
 
 <details><summary>New Java keyWord: switch</summary>
 
