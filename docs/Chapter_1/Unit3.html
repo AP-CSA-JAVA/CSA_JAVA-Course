@@ -916,6 +916,18 @@ Again, distribute the not and switch the logical operator to get (not a) and (no
 <li><p>Show output to confirm the results.</p></li>
 <li><p>Test for all possible values of a and b (true | true, true | false, false | true, false | false).</p></li>
 </ul>
+<p><strong>Sample Output</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span>Enter &#39;true&#39; or &#39;false&#39; for A
+ true
+Enter &#39;true&#39; or &#39;false&#39; for B
+ false
+NOT (a AND b) evaluates to true
+NOT a OR NOT b evaluates to true
+-------------------------------------
+NOT (a OR b) evaluates to false
+NOT a AND NOT b evaluates to false
+</pre></div>
+</div>
 <ol class="arabic simple" start="3">
 <li><p>In DeMorgansLawIf.java, reproduce the compound Boolean expressions provided in the code without using logical operators. Instead, use nested if/else statements to duplicate their logic. Note there are two sections to modify, one to reproduce !(a &amp;&amp; b) and one to reproduce !(a || b).</p></li>
 </ol>
@@ -923,6 +935,18 @@ Again, distribute the not and switch the logical operator to get (not a) and (no
 <li><p>Create truth tables if you find it helpful.</p></li>
 <li><p>Test for all possible values of a and b (true | true, true | false, false | true, false | false).</p></li>
 </ul>
+<p><strong>Sample Output</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span>Enter &#39;true&#39; or &#39;false&#39; for A
+ true
+Enter &#39;true&#39; or &#39;false&#39; for B
+ false
+NOT (a AND b) evaluates to true
+NOT (a AND b) evaluates to true
+-------------------------------------
+NOT (a OR b) evaluates to false
+NOT (a OR b) evaluates to false
+</pre></div>
+</div>
 <ol class="arabic simple" start="4">
 <li><p>In DeMorgansLawGTLT.java, use De Morgan’s Laws to reproduce the provided if statement, creating a new if statement that uses a logical OR. Test for all combinations of positive, negative, and zero values.</p></li>
 </ol>
@@ -930,6 +954,26 @@ Again, distribute the not and switch the logical operator to get (not a) and (no
 <li><p>Comment where short-circuited evaluation could occur and describe how it could occur.</p></li>
 <li><p>Find the equivalent compound Boolean expression in one of your truth tables and use it to create the or version.</p></li>
 </ul>
+<p><strong>Sample Output</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">//program with a negative input</span><span class="w"></span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">X</span><span class="w"></span>
+<span class="w"> </span><span class="o">-</span><span class="mi">5</span><span class="w"></span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">Y</span><span class="w"></span>
+<span class="w"> </span><span class="mi">19</span><span class="w"></span>
+<span class="n">Checking</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">both</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">negative</span><span class="w"> </span><span class="p">...</span><span class="w"> </span>
+<span class="n">at</span><span class="w"> </span><span class="n">least</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">negative</span><span class="w"></span>
+<span class="n">at</span><span class="w"> </span><span class="n">least</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">negative</span><span class="w"></span>
+
+<span class="c1">//program with positive inputs</span><span class="w"></span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">X</span><span class="w"></span>
+<span class="w"> </span><span class="mi">5</span><span class="w"></span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">Y</span><span class="w"></span>
+<span class="w"> </span><span class="mi">15</span><span class="w"></span>
+<span class="n">Checking</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">both</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">negative</span><span class="w"> </span><span class="p">...</span><span class="w"> </span>
+<span class="n">Both</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">negative</span><span class="w"></span>
+<span class="n">Both</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">negative</span><span class="w"></span>
+</pre></div>
+</div>
 <p>Submit your assignment as a replit on Canvas.</p>
 </section>
 </section>

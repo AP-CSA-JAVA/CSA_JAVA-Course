@@ -511,15 +511,63 @@ De Morgan’s laws can also be applied to conditional operators. When negating c
  - Show output to confirm the results.
  - Test for all possible values of a and b (true | true, true | false, false | true, false | false).
 
+**Sample Output**
+```java
+Enter 'true' or 'false' for A
+ true
+Enter 'true' or 'false' for B
+ false
+NOT (a AND b) evaluates to true
+NOT a OR NOT b evaluates to true
+-------------------------------------
+NOT (a OR b) evaluates to false
+NOT a AND NOT b evaluates to false
+```
+
 3.  In DeMorgansLawIf.java, reproduce the compound Boolean expressions provided in the code without using logical operators. Instead, use nested if/else statements to duplicate their logic. Note there are two sections to modify, one to reproduce !(a && b) and one to reproduce !(a || b).
 - Create truth tables if you find it helpful.
 - Test for all possible values of a and b (true | true, true | false, false | true, false | false).
+
+
+**Sample Output**
+```java
+Enter 'true' or 'false' for A
+ true
+Enter 'true' or 'false' for B
+ false
+NOT (a AND b) evaluates to true
+NOT (a AND b) evaluates to true
+-------------------------------------
+NOT (a OR b) evaluates to false
+NOT (a OR b) evaluates to false
+```
 
 
 4.  In DeMorgansLawGTLT.java, use De Morgan’s Laws to reproduce the provided if statement, creating a new if statement that uses a logical OR. Test for all combinations of positive, negative, and zero values.
 
 - Comment where short-circuited evaluation could occur and describe how it could occur.
 - Find the equivalent compound Boolean expression in one of your truth tables and use it to create the or version.
+
+**Sample Output**
+```java
+//program with a negative input
+Enter a number for X
+ -5
+Enter a number for Y
+ 19
+Checking that both x and are not negative ... 
+at least one number is negative
+at least one number is negative
+
+//program with positive inputs
+Enter a number for X
+ 5
+Enter a number for Y
+ 15
+Checking that both x and are not negative ... 
+Both x and y are not negative
+Both x and y are not negative
+```
 
 Submit your assignment as a replit on Canvas.
 
