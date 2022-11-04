@@ -806,11 +806,59 @@ shippingCost is $7.50 and add 1 day to shippingDays.</p></li>
 </section>
 <section id="equivalent-boolean-expressions">
 <h2>Equivalent Boolean Expressions<a class="headerlink" href="#equivalent-boolean-expressions" title="Permalink to this heading">#</a></h2>
-<p><strong>De Morgan’s law</strong>s were developed by the mathematician Augustus De Morgan in the 1800s. He created them to interpret the negation of conditional expressions, like the expressions !(a &gt; b) that you saw in the last activity. This particular negation may seem simple, but conditional expressions can become complex when joined by multiple logical operators, for example, !((x &lt; 3) || (y &gt; 2)). De Morgan created simple laws, or rules, to help handle these types of complex conditional expressions.</p>
+<p><strong>De Morgan’s law</strong> was developed by the mathematician Augustus De Morgan in the 1800s. He created them to interpret the negation of conditional expressions, like the expressions !(a &gt; b) that you saw in the last activity. This particular negation may seem simple, but conditional expressions can become complex when joined by multiple logical operators, for example, !((x &lt; 3) || (y &gt; 2)). De Morgan created simple laws, or rules, to help handle these types of complex conditional expressions.</p>
 <p>Specifically, De Morgan’s laws are:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>not (a and b) is the same as (not a) or (not b)
 not (a or b) is the same as (not a) and (not b)
+
+To better understand these laws, you can use the distributive property of mathematics:
+
+Law 1: not (a and b) is the same as (not a) or (not b)
+Starting with not (a and b), distribute the not and switch the logical operator to get (not a) or (not b). In Java, this can be written as:
+
+ !(a &amp;&amp; b) == (!a || !b)
+Law 2: not (a or b) is the same as (not a) and (not b)
+Again, distribute the not and switch the logical operator to get (not a) and (not b) . In Java:
+ !(a || b) == (!a &amp;&amp; !b)
 </pre></div>
+</div>
+<p>To apply De Morgan’s laws, distribute the not using the distributive property of mathematics and switch the logical operator (from and to or or from or to and).</p>
+<p>De Morgan’s laws can also be applied to conditional operators. When negating conditional operators (such as &lt;, &gt;, &gt;=), they become the opposite of what they are.</p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>Conditional Operator</p></th>
+<th class="head text-center"><p>De Morgan’s Law</p></th>
+<th class="head text-center"><p>De Morgan’s Law Applied</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>&lt;</p></td>
+<td class="text-center"><p>not &lt;</p></td>
+<td class="text-center"><p>&gt;=</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>&gt;</p></td>
+<td class="text-center"><p>not &gt;</p></td>
+<td class="text-center"><p>&lt;=</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>==</p></td>
+<td class="text-center"><p>not ==</p></td>
+<td class="text-center"><p>!=</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>&lt;=</p></td>
+<td class="text-center"><p>not &lt;=</p></td>
+<td class="text-center"><p>&gt;</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>&gt;=</p></td>
+<td class="text-center"><p>not &gt;=</p></td>
+<td class="text-center"><p>&lt;</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>!=</p></td>
+<td class="text-center"><p>not not equal</p></td>
+<td class="text-center"><p>==</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </section>
 </section>
