@@ -586,7 +586,9 @@ Take a look at the program above.  Looking at the program, you may have thought 
 
 ### Assignment 1: Clue
 
-**Directions**  This is a program that kinda simulates Clue.
+**Directions**  Your object is to review the current program as it is currently written.  Look at "what works" and "what needs work".  Make the necessary changes to the program.
+
+This is a program simulates Clue.
 
 Here is what works:
 - the program randomly generates a final murderer, weapon, and room
@@ -599,12 +601,16 @@ Here is what needs work:
     we want to see if our guess is the same as the solution, but something is off with equals()
     check() should only get called if our guess isn't 100% correct
 
+       - The table of the Suspect, Weapon and Room are not aligned.  Use \t to organize each column.
        - Should print "You have the correct muderer." if we have the correct muderer.
        - Should print "You have the correct weapon." if we have the correct weapon.
        - Should print "You have the correct room." if we have the correct room.
 
 
-Extra: if we want to ignore case, we can use .equalsIgnoreCase()
+Extra: 
+- if we want to ignore case, we can use .equalsIgnoreCase()
+- should allow the user to iterate through the program to pick the correct Suspect, Weapon and Room
+
 
 <details><summary>New Java keyWord: switch</summary>
 
