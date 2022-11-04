@@ -703,11 +703,13 @@ Submit your replit program to Canvas.
 -  Apply the development process to create a project.
 -  Each student will create their own project
 
-In this project, you will create a “Choose Your Own Adventure” game or story. You will ask the user for several inputs and use conditionals to display different choices and results. You will first plan out the path and the flow of your program on paper.
+In this project, you will create a “Choose Your Own Adventure” game or story. You will ask the user for several inputs 
+and use conditionals to display different choices and results. You will first plan out the path and the flow of your program on paper.
 
 #### Requirements of this project
 
-    Your program should present the user with several choices. Each of those choices will branch into other choices. This can be done by setting Boolean variables or executing different sections of code based on the user’s input.
+Your program should present the user with several choices. Each of those choices will branch into other choices. 
+This can be done by setting Boolean variables or executing different sections of code based on the user’s input.
 
 Looking back at previous programs and the requirements stated above, you know you will need:
 - At least three Boolean expressions that change the path in the program 
