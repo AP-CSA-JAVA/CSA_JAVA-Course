@@ -219,7 +219,7 @@
 <h1>Unit 3<a class="headerlink" href="#unit-3" title="Permalink to this heading">#</a></h1>
 <section id="logical-operators">
 <h2>Logical Operators<a class="headerlink" href="#logical-operators" title="Permalink to this heading">#</a></h2>
-<p>Logical operators are used to performing logical “AND”, “OR” and “NOT” operations, i.e. the function similar to AND gate and OR gate in digital electronics. They are used to combine two or more conditions/constraints or to complement the evaluation of the original condition under particular consideration. One thing to keep in mind is the second condition is not evaluated if the first one is false, i.e. it has a short-circuiting effect. Used extensively to test for several conditions for making a decision.</p>
+<p>Logical operators are used to performing logical “AND”, “OR” and “NOT” operations, i.e. the function similar to AND gate and OR gate in digital electronics. They are used to combine two or more conditions/constraints or to complement the evaluation of the original condition under particular consideration. One thing to keep in mind is the second condition is not evaluated if the first one is false.  For example, using the <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code> comparison, if the first expression is false, the value of the second expression doesn’t matter. Likewise, for the <code class="docutils literal notranslate"><span class="pre">||</span></code> comparison, if the first expression is true, the second value doesn’t matter.  When the result of a logical expression using <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code> or <code class="docutils literal notranslate"><span class="pre">||</span></code> can be determined by evaluating only the first Boolean operand, the second is not executed or evaluated. This is known as <em>short-circuited</em>.  This is used extensively to test for several conditions for making a decision.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>AND Operator ( &amp;&amp; ) – if( a &amp;&amp; b ) [if true execute else don’t]
 OR Operator ( || ) – if( a || b) [if one of them is true execute else don’t]
 NOT Operator ( ! ) – !(a&lt;b) [returns false if a is smaller than b]
@@ -764,6 +764,45 @@ shippingCost is $7.50 and add 1 day to shippingDays.</p></li>
 <p>Comment where you made the changes. Submit your program digitally.</p>
 </section>
 </section>
+<section id="compound-boolean-expressions">
+<h2>Compound Boolean Expressions<a class="headerlink" href="#compound-boolean-expressions" title="Permalink to this heading">#</a></h2>
+<section id="assignment-1-boolean-expressions">
+<h3>Assignment 1: Boolean Expressions<a class="headerlink" href="#assignment-1-boolean-expressions" title="Permalink to this heading">#</a></h3>
+<p><strong>Directions:</strong> Using logical and relational operators, write a program that will take 3 numbers and return the if the number is greater than, less than or equal to the other two numbers.  Print out the results of your program.  Submit this assignment as a replit on Canvas.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="n">number</span><span class="w"></span>
+<span class="w"> </span><span class="mi">15</span><span class="w"></span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">second</span><span class="w"> </span><span class="n">number</span><span class="w"></span>
+<span class="w"> </span><span class="mi">32</span><span class="w"></span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">third</span><span class="w"> </span><span class="n">number</span><span class="w"></span>
+<span class="w"> </span><span class="mi">56</span><span class="w"></span>
+<span class="n">A</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">less</span><span class="w"> </span><span class="n">than</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">less</span><span class="w"> </span><span class="n">than</span><span class="w"> </span><span class="n">C</span><span class="w"></span>
+<span class="n">A</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">greater</span><span class="w"> </span><span class="n">than</span><span class="w"> </span><span class="n">B</span><span class="w"></span>
+<span class="n">B</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">greater</span><span class="w"> </span><span class="n">than</span><span class="w"> </span><span class="n">C</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="extra-credit-guess-checker-project-problems">
+<h3>EXTRA CREDIT: Guess Checker - Project/ Problems<a class="headerlink" href="#extra-credit-guess-checker-project-problems" title="Permalink to this heading">#</a></h3>
+<p><strong>Directions:</strong> Update GuessChecker to use compound Boolean statements.  Give the user at minimum three opportunities to guess the correct answer and print out how many of the remaining guesses they have.  Submit your program as a replit on Canvas.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="mi">9782</span><span class="w"></span>
+<span class="n">Guess</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="mi">4</span><span class="o">-</span><span class="n">digit</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="mi">9999</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">duplicate</span><span class="w"> </span><span class="n">digits</span><span class="p">:</span><span class="w">  </span><span class="mi">9728</span><span class="w"></span>
+<span class="n">Number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">hits</span><span class="p">:</span><span class="mi">2</span><span class="w"></span>
+<span class="n">Number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">near</span><span class="w"> </span><span class="n">hits</span><span class="p">:</span><span class="mi">2</span><span class="w"></span>
+<span class="n">You</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">guesses</span><span class="w"> </span><span class="n">remaining</span><span class="p">.</span><span class="w"></span>
+
+<span class="n">Guess</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="mi">4</span><span class="o">-</span><span class="n">digit</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="mi">9999</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">duplicate</span><span class="w"> </span><span class="n">digits</span><span class="p">:</span><span class="w">  </span><span class="mi">7928</span><span class="w"></span>
+<span class="n">Number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">hits</span><span class="p">:</span><span class="mi">0</span><span class="w"></span>
+<span class="n">Number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">near</span><span class="w"> </span><span class="n">hits</span><span class="p">:</span><span class="mi">4</span><span class="w"></span>
+<span class="n">You</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">guesses</span><span class="w"> </span><span class="n">remaining</span><span class="p">.</span><span class="w"></span>
+
+<span class="n">Guess</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="mi">4</span><span class="o">-</span><span class="n">digit</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="mi">9999</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">duplicate</span><span class="w"> </span><span class="n">digits</span><span class="p">:</span><span class="w">  </span><span class="mi">9782</span><span class="w"></span>
+<span class="n">Number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">hits</span><span class="p">:</span><span class="mi">4</span><span class="w"></span>
+<span class="n">Number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">near</span><span class="w"> </span><span class="n">hits</span><span class="p">:</span><span class="mi">0</span><span class="w"></span>
+<span class="n">You</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">guesses</span><span class="w"> </span><span class="n">remaining</span><span class="p">.</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
 </section>
 
         </article>
@@ -830,6 +869,11 @@ shippingCost is $7.50 and add 1 day to shippingDays.</p></li>
 <li><a class="reference internal" href="#if-else-statements">If/ Else Statements</a></li>
 <li><a class="reference internal" href="#else-if-statements">Else If Statements</a><ul>
 <li><a class="reference internal" href="#goals">GOALS</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#compound-boolean-expressions">Compound Boolean Expressions</a><ul>
+<li><a class="reference internal" href="#assignment-1-boolean-expressions">Assignment 1: Boolean Expressions</a></li>
+<li><a class="reference internal" href="#extra-credit-guess-checker-project-problems">EXTRA CREDIT: Guess Checker - Project/ Problems</a></li>
 </ul>
 </li>
 </ul>
