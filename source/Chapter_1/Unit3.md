@@ -12,8 +12,8 @@ Logical operators are used to performing logical “AND”, “OR” and “NOT�
 ## Boolean Expressions
 
 **Goals**
-- []  Understand Boolean expressions.
-- []  Use relational operators to compute the value of a Boolean expression.
+-   Understand Boolean expressions.
+-   Use relational operators to compute the value of a Boolean expression.
 
 
 George Boole formulated the basic rules of Boolean algebra back in 1847. His endeavor created the mathematical logic that we use today.  Below are the relational operators that you will need to know for the AP exam.
@@ -113,8 +113,8 @@ public void suchFun(int a, int b, int c) {
 ## If Statements and Control Flow
 
 **Goals**
-- []  Gain an understanding of how to control program flow with if statements.
-- []  Start to implement control flow in a more complex program.
+-   Gain an understanding of how to control program flow with if statements.
+-   Start to implement control flow in a more complex program.
 
 Java supports the usual logical conditions from mathematics:
 
@@ -255,8 +255,8 @@ Number of hits:2
 ## If/ Else Statements
 
 **Goals**
-- []  Learn the if/else statement.
-- []  Simplify a complex program with if/else statements.
+-   Learn the if/else statement.
+-   Simplify a complex program with if/else statements.
 
 
 ```java
@@ -356,8 +356,8 @@ Days to Deliver: 1
 ## Else If Statements
 
 **Goals**
-- []  Learn multiple selections with the if/else-if conditional.
-- []  Continue to improve the code of a complex program.
+-   Learn multiple selections with the if/else-if conditional.
+-   Continue to improve the code of a complex program.
 
 
 #### GOALS
@@ -405,9 +405,9 @@ Comment where you made the changes. Submit your program digitally.
 ## Compound Boolean Expressions
 
 **Goals**
-- []  Understand how to evaluate a Boolean expression with multiple parts.
-- []  Use truth tables to simplify expressions.
-- []  Continue to improve the GuessChecker program.
+-   Understand how to evaluate a Boolean expression with multiple parts.
+-   Use truth tables to simplify expressions.
+-   Continue to improve the GuessChecker program.
 
 
 ### Assignment 1: Boolean Expressions
@@ -454,9 +454,9 @@ You have 0 guesses remaining.
 
  **Goals**
 
-- []  Understand De Morgan’s Laws.
-- []  Students will work independently, but are encouraged to ask each other for help as needed.
-- []  Convert complex Boolean statements to conditional statements in code.
+-   Understand De Morgan’s Laws.
+-   Students will work independently, but are encouraged to ask each other for help as needed.
+-   Convert complex Boolean statements to conditional statements in code.
 
 
 
@@ -608,8 +608,8 @@ Here is what needs work:
 
 
 Extra: 
-- if we want to ignore case, we can use .equalsIgnoreCase()
-- should allow the user to iterate through the program to pick the correct Suspect, Weapon and Room
+- Ignore case, use .equalsIgnoreCase()
+- Allow the user to iterate through the program to pick the correct Suspect, Weapon and Room
 
 **Sample Output:**
 
