@@ -424,3 +424,12 @@ Number of hits:4
 Number of near hits:0
 You have 0 guesses remaining.
 ```
+
+## Equivalent Boolean Expressions
+
+**De Morgan’s law**s were developed by the mathematician Augustus De Morgan in the 1800s. He created them to interpret the negation of conditional expressions, like the expressions !(a > b) that you saw in the last activity. This particular negation may seem simple, but conditional expressions can become complex when joined by multiple logical operators, for example, !((x < 3) || (y > 2)). De Morgan created simple laws, or rules, to help handle these types of complex conditional expressions. 
+
+Specifically, De Morgan’s laws are:
+
+    not (a and b) is the same as (not a) or (not b)
+    not (a or b) is the same as (not a) and (not b)
