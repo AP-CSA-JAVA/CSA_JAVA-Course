@@ -427,7 +427,10 @@ You have 0 guesses remaining.
 
 ## Equivalent Boolean Expressions
 
-**De Morgan’s law** was developed by the mathematician Augustus De Morgan in the 1800s. He created them to interpret the negation of conditional expressions, like the expressions !(a > b) that you saw in the last activity. This particular negation may seem simple, but conditional expressions can become complex when joined by multiple logical operators, for example, !((x < 3) || (y > 2)). De Morgan created simple laws, or rules, to help handle these types of complex conditional expressions. 
+**De Morgan’s law** was developed by the mathematician Augustus De Morgan in the 1800s. He created them to interpret the negation 
+of conditional expressions, like the expressions !(a > b) that you saw in the last activity.  This particular negation may seem simple, 
+but conditional expressions can become complex when joined by multiple logical operators, for example, !((x < 3) || (y > 2)). De Morgan 
+created simple laws, or rules, to help handle these types of complex conditional expressions. 
 
 Specifically, De Morgan’s laws are:
 
@@ -437,7 +440,8 @@ Specifically, De Morgan’s laws are:
     To better understand these laws, you can use the distributive property of mathematics:
 
     Law 1: not (a and b) is the same as (not a) or (not b)
-    Starting with not (a and b), distribute the not and switch the logical operator to get (not a) or (not b). In Java, this can be written as:
+    Starting with not (a and b), distribute the not and switch the logical operator to get (not a) or (not b). 
+    In Java, this can be written as:
 
      !(a && b) == (!a || !b)
     Law 2: not (a or b) is the same as (not a) and (not b)
@@ -459,24 +463,25 @@ De Morgan’s laws can also be applied to conditional operators. When negating c
 
 ### Assignment 1 - DeMorgan's Law
 
-**Directions:** In DeMorgansLaw.java, add the code to validate the first part of De Morgan’s Laws: not (a and b) is the same as (not a) or (not b).
+**Directions:** 
+- []  In DeMorgansLaw.java, add the code to validate the first part of De Morgan’s Laws: not (a and b) is the same as (not a) or (not b).
  - Use two if/else statements, one for each expression.
  - Show output to confirm the results.
  - Test for all possible values of a and b (true | true, true | false, false | true, false | false).
 
 
-Continuing in DeMorgansLaw, add the code to validate the second part of De Morgan’s Laws: not (a or b) is the same as (not a) and (not b).
+- []  Continuing in DeMorgansLaw, add the code to validate the second part of De Morgan’s Laws: not (a or b) is the same as (not a) and (not b).
  - Use two if/else statements, one for each expression.
  - Show output to confirm the results.
  - Test for all possible values of a and b (true | true, true | false, false | true, false | false).
 
 
-In DeMorgansLawIf.java, reproduce the compound Boolean expressions provided in the code without using logical operators. Instead, use nested if/else statements to duplicate their logic. Note there are two sections to modify, one to reproduce !(a && b) and one to reproduce !(a || b).
+- []  In DeMorgansLawIf.java, reproduce the compound Boolean expressions provided in the code without using logical operators. Instead, use nested if/else statements to duplicate their logic. Note there are two sections to modify, one to reproduce !(a && b) and one to reproduce !(a || b).
 - Create truth tables if you find it helpful.
 - Test for all possible values of a and b (true | true, true | false, false | true, false | false).
 
 
-In DeMorgansLawGTLT.java, use De Morgan’s Laws to reproduce the provided if statement, creating a new if statement that uses a logical OR. Test for all combinations of positive, negative, and zero values.
+- []  In DeMorgansLawGTLT.java, use De Morgan’s Laws to reproduce the provided if statement, creating a new if statement that uses a logical OR. Test for all combinations of positive, negative, and zero values.
 
 - Comment where short-circuited evaluation could occur and describe how it could occur.
 - Find the equivalent compound Boolean expression in one of your truth tables and use it to create the or version.
