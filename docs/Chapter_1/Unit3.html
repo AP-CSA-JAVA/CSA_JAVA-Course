@@ -933,6 +933,130 @@ Again, distribute the not and switch the logical operator to get (not a) and (no
 <p>Submit your assignment as a replit on Canvas.</p>
 </section>
 </section>
+<section id="comparing-objects">
+<h2>Comparing Objects<a class="headerlink" href="#comparing-objects" title="Permalink to this heading">#</a></h2>
+<p><strong>Goals</strong></p>
+<ul class="simple">
+<li><p>Learn how to compare instances of classes to one another</p></li>
+<li><p>Create your own <code class="docutils literal notranslate"><span class="pre">equals</span></code> method for a class</p></li>
+<li><p>Practice <code class="docutils literal notranslate"><span class="pre">if</span></code> statements and coding skills</p></li>
+</ul>
+<p>You may recall that the String class is included in the Java language. When you create a String object from its class, the object is a reference variable. For example, the following declarations create two String reference variables.</p>
+<p><code class="docutils literal notranslate"><span class="pre">String</span> <span class="pre">s1</span> <span class="pre">=</span> <span class="pre">null;</span></code>
+<code class="docutils literal notranslate"><span class="pre">String</span> <span class="pre">s2</span> <span class="pre">=</span> <span class="pre">new</span> <span class="pre">String(&quot;HELLO&quot;);</span></code></p>
+<p>Note that the value of the first reference variable s1 is null. It was not assigned an actual String object like s2 was. This reference variable, and in fact any reference variable, can be compared with null, using == or != to determine if the variable actually references an object.</p>
+<p><strong>Note:</strong> You do not need to use the <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">string</span></code> constructor to create a string.  Instead you can use <code class="docutils literal notranslate"><span class="pre">String</span> <span class="pre">s</span> <span class="pre">=</span> <span class="pre">&quot;HELLO&quot;</span></code>.  The <code class="docutils literal notranslate"><span class="pre">String</span></code> constructor is used to demonstrate object equality.</p>
+<section id="object-equality">
+<h3>Object Equality<a class="headerlink" href="#object-equality" title="Permalink to this heading">#</a></h3>
+<p>In addition to comparing an object to <code class="docutils literal notranslate"><span class="pre">null</span></code>, the == operator can be used to test if two variables reference the same object. For example, consider the following code:</p>
+<p><code class="docutils literal notranslate"><span class="pre">String</span> <span class="pre">s1</span> <span class="pre">=</span> <span class="pre">new</span> <span class="pre">String(&quot;HELLO&quot;);</span></code>
+<code class="docutils literal notranslate"><span class="pre">String</span> <span class="pre">s2</span> <span class="pre">=</span> <span class="pre">s1;</span></code></p>
+<p>If you were to compare <code class="docutils literal notranslate"><span class="pre">s1</span> <span class="pre">==</span> <span class="pre">s2</span></code>, the result would be <code class="docutils literal notranslate"><span class="pre">true</span></code>. Both objects refer to the same storage location in memory. Compare the above code to the following:</p>
+<p><code class="docutils literal notranslate"><span class="pre">String</span> <span class="pre">s1</span> <span class="pre">=</span> <span class="pre">new</span> <span class="pre">String(&quot;HELLO&quot;);</span></code>
+<code class="docutils literal notranslate"><span class="pre">String</span> <span class="pre">s2</span> <span class="pre">=</span> <span class="pre">new</span> <span class="pre">String(&quot;HELLO&quot;);</span></code></p>
+<p>Both <code class="docutils literal notranslate"><span class="pre">s1</span></code> and <code class="docutils literal notranslate"><span class="pre">s2</span></code> contain the same string, but they are different objects in memory, so the comparison of <code class="docutils literal notranslate"><span class="pre">s1</span> <span class="pre">==</span> <span class="pre">s2</span> <span class="pre">is</span> <span class="pre">false</span></code>. They are not the same object; they just happen to contain the same value. When comparing objects, <code class="docutils literal notranslate"><span class="pre">==</span></code> is used to compare object references (memory locations.) To compare the values of two objects, you must use a new method called <code class="docutils literal notranslate"><span class="pre">equals</span></code>.  Using <code class="docutils literal notranslate"><span class="pre">s1</span></code> and <code class="docutils literal notranslate"><span class="pre">s2</span></code> as an example, the syntax of the equals method is:</p>
+<p><code class="docutils literal notranslate"><span class="pre">s1.equals(s2);</span></code></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">equals</span></code> method is a Boolean method that returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the contents of <code class="docutils literal notranslate"><span class="pre">s1</span></code> is equal to the contents of <code class="docutils literal notranslate"><span class="pre">s2</span></code>; otherwise, it returns <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+<p><strong>Notes:</strong> The == operator is used to compare object references, and the equals method is used to compare object contents. In other words, == checks if both objects point to the same memory location, whereas the equals method compares the values in the objects.</p>
+</section>
+<section id="aliasing">
+<h3>Aliasing<a class="headerlink" href="#aliasing" title="Permalink to this heading">#</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ShapeEquals</span><span class="w"></span>
+<span class="mi">2</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="mi">3</span><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span>
+<span class="mi">4</span><span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="mi">5</span><span class="w">    </span><span class="n">Shape</span><span class="w"> </span><span class="n">shape1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Shape</span><span class="p">();</span><span class="w"></span>
+<span class="mi">6</span><span class="w">    </span><span class="n">shape1</span><span class="p">.</span><span class="na">setShape</span><span class="p">(</span><span class="s">&quot;Triangle&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
+<span class="mi">7</span><span class="w">  </span>
+<span class="mi">8</span><span class="w">    </span><span class="n">Shape</span><span class="w"> </span><span class="n">shape2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Shape</span><span class="p">();</span><span class="w"></span>
+<span class="mi">9</span><span class="w">    </span><span class="n">shape2</span><span class="p">.</span><span class="na">setShape</span><span class="p">(</span><span class="s">&quot;Square&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span><span class="w"></span>
+<span class="mi">10</span><span class="w">  </span>
+<span class="mi">11</span><span class="w">   </span><span class="n">Shape</span><span class="w"> </span><span class="n">shape3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">shape1</span><span class="p">;</span><span class="w"> </span><span class="o">&lt;---</span><span class="w"></span>
+<span class="mi">12</span><span class="w">    </span><span class="n">shape3</span><span class="p">.</span><span class="na">setShape</span><span class="p">(</span><span class="s">&quot;Hexagon&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">);</span><span class="w"> </span><span class="o">&lt;---</span><span class="w"></span>
+<span class="mi">13</span><span class="w">    </span>
+<span class="mi">14</span><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">shape1</span><span class="p">.</span><span class="na">getShape</span><span class="p">());</span><span class="w"></span>
+<span class="mi">15</span><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="mi">16</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Take a look at the program above.  Looking at the program, you may have thought that the output of “shape1” would display “Triangle”.  Look carefully at lines 11 and 12. When <code class="docutils literal notranslate"><span class="pre">shape3</span></code> is set to <code class="docutils literal notranslate"><span class="pre">shape1</span></code>, <code class="docutils literal notranslate"><span class="pre">shape3</span></code> points to the same address in memory as <code class="docutils literal notranslate"><span class="pre">shape1</span></code>. Any changes to <code class="docutils literal notranslate"><span class="pre">shape1</span></code> or <code class="docutils literal notranslate"><span class="pre">shape3</span></code> will change the contents of the memory, thereby changing the values of both variables. In Java, this is known as aliasing.</p>
+<p><strong>Note:</strong> Two object references are considered aliases when they both reference the same object. Object references can be compared using == and != to identify aliases.</p>
+</section>
+<section id="assignment-1-clue">
+<h3>Assignment 1: Clue<a class="headerlink" href="#assignment-1-clue" title="Permalink to this heading">#</a></h3>
+<p><strong>Directions</strong>  This is a program that kinda simulates Clue.</p>
+<p>Here is what works:</p>
+<ul class="simple">
+<li><p>the program randomly generates a final murderer, weapon, and room</p></li>
+<li><p>prints out choices for the user</p></li>
+<li><p>asks user for final guess</p></li>
+</ul>
+<p>Here is what needs work:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>we want to see if our guess is the same as the solution, but something is off with equals()
+check() should only get called if our guess isn&#39;t 100% correct
+
+   - Should print &quot;You have the correct muderer.&quot; if we have the correct muderer.
+   - Should print &quot;You have the correct weapon.&quot; if we have the correct weapon.
+   - Should print &quot;You have the correct room.&quot; if we have the correct room.
+</pre></div>
+</div>
+<p>Extra: if we want to ignore case, we can use .equalsIgnoreCase()</p>
+<details><summary>**New Java Word:**  switch</summary>
+<p>For the purposes of this program, you can use the jave keyword <code class="docutils literal notranslate"><span class="pre">switch</span></code>.  I discourage you from using it for the AP exam as it is not a part of the AP exam.<br />
+Instead of writing many <code class="docutils literal notranslate"><span class="pre">if..else</span></code> statements, you can use the switch statement.  The switch statement selects one of many code blocks to be executed.  Take a look at the pseudocode below:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span>switch(expression) {
+  case x:
+    // your code
+    break;
+  case y:
+    // your code
+    break;
+  default:
+    // your code
+}
+
+This is how it works:
+
+- The switch expression is evaluated once.
+- The value of the expression is compared with the values of each case.
+- If there is a match, the associated block of code is executed.
+- The break and default keywords are optional.
+	- When Java reaches a `break` keyword, it breaks out of the switch block.
+	- The default keyword specifies some code to run if there is no case match.
+
+```java
+int day = 4;
+switch (day) {
+  case 1:
+    System.out.println(&quot;Monday&quot;);
+    break;
+  case 2:
+    System.out.println(&quot;Tuesday&quot;);
+    break;
+  case 3:
+    System.out.println(&quot;Wednesday&quot;);
+    break;
+  case 4:
+    System.out.println(&quot;Thursday&quot;);
+    break;
+  case 5:
+    System.out.println(&quot;Friday&quot;);
+    break;
+  case 6:
+    System.out.println(&quot;Saturday&quot;);
+    break;
+  case 7:
+    System.out.println(&quot;Sunday&quot;);
+    break;
+    default:
+    	System.out.println(&quot;I don&#39;t even know what day it is!&quot;);
+}
+// Outputs &quot;Thursday&quot; (day 4)
+</pre></div>
+</div>
+</details>
+</section>
+</section>
 </section>
 
         </article>
@@ -1008,6 +1132,12 @@ Again, distribute the not and switch the logical operator to get (not a) and (no
 </li>
 <li><a class="reference internal" href="#equivalent-boolean-expressions">Equivalent Boolean Expressions</a><ul>
 <li><a class="reference internal" href="#assignment-1-demorgan-s-law">Assignment 1 - DeMorgan’s Law</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#comparing-objects">Comparing Objects</a><ul>
+<li><a class="reference internal" href="#object-equality">Object Equality</a></li>
+<li><a class="reference internal" href="#aliasing">Aliasing</a></li>
+<li><a class="reference internal" href="#assignment-1-clue">Assignment 1: Clue</a></li>
 </ul>
 </li>
 </ul>

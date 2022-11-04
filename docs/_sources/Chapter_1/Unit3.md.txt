@@ -524,3 +524,142 @@ De Morgan’s laws can also be applied to conditional operators. When negating c
 Submit your assignment as a replit on Canvas.
 
 
+## Comparing Objects
+
+**Goals**
+- Learn how to compare instances of classes to one another
+- Create your own `equals` method for a class
+- Practice `if` statements and coding skills
+
+You may recall that the String class is included in the Java language. When you create a String object from its class, the object is a reference variable. For example, the following declarations create two String reference variables.
+
+`String s1 = null;`
+`String s2 = new String("HELLO");`
+
+Note that the value of the first reference variable s1 is null. It was not assigned an actual String object like s2 was. This reference variable, and in fact any reference variable, can be compared with null, using == or != to determine if the variable actually references an object.
+
+**Note:** You do not need to use the `new string` constructor to create a string.  Instead you can use `String s = "HELLO"`.  The `String` constructor is used to demonstrate object equality.
+
+#### Object Equality
+
+In addition to comparing an object to `null`, the == operator can be used to test if two variables reference the same object. For example, consider the following code:
+
+`String s1 = new String("HELLO");`
+`String s2 = s1;`
+
+If you were to compare `s1 == s2`, the result would be `true`. Both objects refer to the same storage location in memory. Compare the above code to the following:
+
+`String s1 = new String("HELLO");`
+`String s2 = new String("HELLO");`
+
+Both `s1` and `s2` contain the same string, but they are different objects in memory, so the comparison of `s1 == s2 is false`. They are not the same object; they just happen to contain the same value. When comparing objects, `==` is used to compare object references (memory locations.) To compare the values of two objects, you must use a new method called `equals`.  Using `s1` and `s2` as an example, the syntax of the equals method is:
+
+`s1.equals(s2);`
+
+The `equals` method is a Boolean method that returns `true` if the contents of `s1` is equal to the contents of `s2`; otherwise, it returns `false`.
+
+**Notes:** The == operator is used to compare object references, and the equals method is used to compare object contents. In other words, == checks if both objects point to the same memory location, whereas the equals method compares the values in the objects.
+
+#### Aliasing
+
+```java
+1 public class ShapeEquals
+2 {
+3  public static void main(String[] args) 
+4  {
+5    Shape shape1 = new Shape();
+6    shape1.setShape("Triangle", 3);
+7  
+8    Shape shape2 = new Shape();
+9    shape2.setShape("Square", 4);
+10  
+11   Shape shape3 = shape1; <---
+12    shape3.setShape("Hexagon", 6); <---
+13    
+14    System.out.println(shape1.getShape());
+15  }
+16 }
+```
+Take a look at the program above.  Looking at the program, you may have thought that the output of "shape1" would display "Triangle".  Look carefully at lines 11 and 12. When `shape3` is set to `shape1`, `shape3` points to the same address in memory as `shape1`. Any changes to `shape1` or `shape3` will change the contents of the memory, thereby changing the values of both variables. In Java, this is known as aliasing.  
+
+**Note:** Two object references are considered aliases when they both reference the same object. Object references can be compared using == and != to identify aliases. 
+
+### Assignment 1: Clue
+
+**Directions**  This is a program that kinda simulates Clue.
+
+Here is what works:
+- the program randomly generates a final murderer, weapon, and room
+- prints out choices for the user
+- asks user for final guess
+
+
+Here is what needs work:
+
+    we want to see if our guess is the same as the solution, but something is off with equals()
+    check() should only get called if our guess isn't 100% correct
+
+       - Should print "You have the correct muderer." if we have the correct muderer.
+       - Should print "You have the correct weapon." if we have the correct weapon.
+       - Should print "You have the correct room." if we have the correct room.
+
+
+Extra: if we want to ignore case, we can use .equalsIgnoreCase()
+
+<details><summary>**New Java Word:**  switch</summary>
+
+For the purposes of this program, you can use the jave keyword `switch`.  I discourage you from using it for the AP exam as it is not a part of the AP exam.  
+Instead of writing many `if..else` statements, you can use the switch statement.  The switch statement selects one of many code blocks to be executed.  Take a look at the pseudocode below:
+
+```java
+switch(expression) {
+  case x:
+    // your code
+    break;
+  case y:
+    // your code
+    break;
+  default:
+    // your code
+}
+
+This is how it works:
+
+- The switch expression is evaluated once.
+- The value of the expression is compared with the values of each case.
+- If there is a match, the associated block of code is executed.
+- The break and default keywords are optional.
+	- When Java reaches a `break` keyword, it breaks out of the switch block.
+	- The default keyword specifies some code to run if there is no case match.
+
+```java
+int day = 4;
+switch (day) {
+  case 1:
+    System.out.println("Monday");
+    break;
+  case 2:
+    System.out.println("Tuesday");
+    break;
+  case 3:
+    System.out.println("Wednesday");
+    break;
+  case 4:
+    System.out.println("Thursday");
+    break;
+  case 5:
+    System.out.println("Friday");
+    break;
+  case 6:
+    System.out.println("Saturday");
+    break;
+  case 7:
+    System.out.println("Sunday");
+    break;
+    default:
+    	System.out.println("I don't even know what day it is!");
+}
+// Outputs "Thursday" (day 4)
+```
+	
+</details>
