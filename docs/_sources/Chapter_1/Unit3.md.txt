@@ -606,7 +606,7 @@ Here is what needs work:
 
 Extra: if we want to ignore case, we can use .equalsIgnoreCase()
 
-<details><summary>**New Java Word:**  switch</summary>
+<details><summary>New Java keyWord: switch</summary>
 
 For the purposes of this program, you can use the jave keyword `switch`.  I discourage you from using it for the AP exam as it is not a part of the AP exam.  
 Instead of writing many `if..else` statements, you can use the switch statement.  The switch statement selects one of many code blocks to be executed.  Take a look at the pseudocode below:
