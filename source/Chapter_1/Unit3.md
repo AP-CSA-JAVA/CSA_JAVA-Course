@@ -11,6 +11,11 @@ Logical operators are used to performing logical “AND”, “OR” and “NOT�
     
 ## Boolean Expressions
 
+**Goals**
+- []  Understand Boolean expressions.
+- []  Use relational operators to compute the value of a Boolean expression.
+
+
 George Boole formulated the basic rules of Boolean algebra back in 1847. His endeavor created the mathematical logic that we use today.  Below are the relational operators that you will need to know for the AP exam.
 
 | Relational Operator | Description | Boolean Value |
@@ -106,6 +111,10 @@ public void suchFun(int a, int b, int c) {
 [BlankAnswerSheet.pdf](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9862940/FRQ_BlankAnswerSheet.pdf)
 
 ## If Statements and Control Flow
+
+**Goals**
+- []  Gain an understanding of how to control program flow with if statements.
+- []  Start to implement control flow in a more complex program.
 
 Java supports the usual logical conditions from mathematics:
 
@@ -245,6 +254,11 @@ Number of hits:2
 
 ## If/ Else Statements
 
+**Goals**
+- []  Learn the if/else statement.
+- []  Simplify a complex program with if/else statements.
+
+
 ```java
 class Main {
   public static void main(String[] args) {
@@ -341,6 +355,11 @@ Days to Deliver: 1
 
 ## Else If Statements
 
+**Goals**
+- []  Learn multiple selections with the if/else-if conditional.
+- []  Continue to improve the code of a complex program.
+
+
 #### GOALS
 - Learn multiple selections with the if/else-if conditional.
 - Continue to improve the code of a complex program.
@@ -385,6 +404,12 @@ Comment where you made the changes. Submit your program digitally.
 
 ## Compound Boolean Expressions
 
+**Goals**
+- []  Understand how to evaluate a Boolean expression with multiple parts.
+- []  Use truth tables to simplify expressions.
+- []  Continue to improve the GuessChecker program.
+
+
 ### Assignment 1: Boolean Expressions
 
 **Directions:** Using logical and relational operators, write a program that will take 3 numbers and return the if the number is greater than, less than or equal to the other two numbers.  Print out the results of your program.  Submit this assignment as a replit on Canvas.
@@ -426,6 +451,14 @@ You have 0 guesses remaining.
 ```
 
 ## Equivalent Boolean Expressions
+
+ **Goals**
+
+- []  Understand De Morgan’s Laws.
+- []  Students will work independently, but are encouraged to ask each other for help as needed.
+- []  Convert complex Boolean statements to conditional statements in code.
+
+
 
 **De Morgan’s law** was developed by the mathematician Augustus De Morgan in the 1800s. He created them to interpret the negation 
 of conditional expressions, like the expressions !(a > b) that you saw in the last activity.  This particular negation may seem simple, 
