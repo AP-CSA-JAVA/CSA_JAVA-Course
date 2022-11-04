@@ -463,7 +463,9 @@ De Morgan’s laws can also be applied to conditional operators. When negating c
 
 ### Assignment 1 - DeMorgan's Law
 
-**Directions:**
+[DeMorgan___Starter_Files.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9941153/DeMorgan___Starter_Files.zip)
+
+**Directions:** 
 
 1.  In DeMorgansLaw.java, add the code to validate the first part of De Morgan’s Laws: not (a and b) is the same as (not a) or (not b).
  - Use two if/else statements, one for each expression.
