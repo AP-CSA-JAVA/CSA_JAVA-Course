@@ -401,7 +401,9 @@ A is not greater than B
 B is not greater than C
 ```
 
-### EXTRA CREDIT: Guess Checker - Project/ Problems
+### EXTRA CREDIT: Guess Checker 
+
+This extra credit assignment will be categorized as a Projects/ Presentations.
 
 **Directions:** Update GuessChecker to use compound Boolean statements.  Give the user at minimum three opportunities to guess the correct answer and print out how many of the remaining guesses they have.  Submit your program as a replit on Canvas.
 
