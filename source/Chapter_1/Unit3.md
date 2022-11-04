@@ -2,7 +2,7 @@
 
 ## Logical Operators
 
-Logical operators are used to performing logical “AND”, “OR” and “NOT” operations, i.e. the function similar to AND gate and OR gate in digital electronics. They are used to combine two or more conditions/constraints or to complement the evaluation of the original condition under particular consideration. One thing to keep in mind is the second condition is not evaluated if the first one is false, i.e. it has a short-circuiting effect. Used extensively to test for several conditions for making a decision.
+Logical operators are used to performing logical “AND”, “OR” and “NOT” operations, i.e. the function similar to AND gate and OR gate in digital electronics. They are used to combine two or more conditions/constraints or to complement the evaluation of the original condition under particular consideration. One thing to keep in mind is the second condition is not evaluated if the first one is false.  For example, using the `&&` comparison, if the first expression is false, the value of the second expression doesn’t matter. Likewise, for the `||` comparison, if the first expression is true, the second value doesn’t matter.  When the result of a logical expression using `&&` or `||` can be determined by evaluating only the first Boolean operand, the second is not executed or evaluated. This is known as *short-circuited*.  This is used extensively to test for several conditions for making a decision.
 
     AND Operator ( && ) – if( a && b ) [if true execute else don’t]
     OR Operator ( || ) – if( a || b) [if one of them is true execute else don’t]
@@ -382,3 +382,43 @@ else // if condition 3 is false
 - Use if/else-if/else statements
 
 Comment where you made the changes. Submit your program digitally.
+
+## Compound Boolean Expressions
+
+### Assignment 1: Boolean Expressions
+
+**Directions:** Using logical and relational operators, write a program that will take 3 numbers and return the if the number is greater than, less than or equal to the other two numbers.  Print out the results of your program.  Submit this assignment as a replit on Canvas.
+
+```java
+Enter the first number
+ 15
+Enter the second number
+ 32
+Enter the third number
+ 56
+A is less than B and B is less than C
+A is not greater than B
+B is not greater than C
+```
+
+### EXTRA CREDIT: Guess Checker - Project/ Problems
+
+**Directions:** Update GuessChecker to use compound Boolean statements.  Give the user at minimum three opportunities to guess the correct answer and print out how many of the remaining guesses they have.  Submit your program as a replit on Canvas.
+
+```java
+9782
+Guess a 4-digit number from 1000 to 9999 with no duplicate digits:  9728
+Number of hits:2
+Number of near hits:2
+You have 2 guesses remaining.
+
+Guess a 4-digit number from 1000 to 9999 with no duplicate digits:  7928
+Number of hits:0
+Number of near hits:4
+You have 1 guesses remaining.
+
+Guess a 4-digit number from 1000 to 9999 with no duplicate digits:  9782
+Number of hits:4
+Number of near hits:0
+You have 0 guesses remaining.
+```
