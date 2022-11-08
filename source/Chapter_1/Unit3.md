@@ -315,7 +315,7 @@ shippingCost is $7.50 and add 1 day to shippingDays.
 - **Method of Shipping**
 - - [ ] "Standard" adds 3 days to shippingDays 
 - - [ ] "Express" subtracts 3 days from shippingDays and add $10 to shippingCosts
-- - [ ] "Overnight" sets shippingDays to be 1 and add $10 to shippingCosts
+- - [ ] "Overnight" sets shippingDays to be 1 and add $20 to shippingCosts
 - **CouponCode** If the user had the correct coupon code, subtract $10 from the shippingCost
 
 **Sample Outputs:**
