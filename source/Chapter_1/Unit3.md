@@ -786,5 +786,3 @@ Document and collect the following items:
 - Your completed code submitted as a replit
 - Your documentation submitted digitally as one document
 
-
-
