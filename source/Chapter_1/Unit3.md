@@ -634,6 +634,9 @@ Take a look at the program above.  Looking at the program, you may have thought 
 
 ### Assignment 1: Clue
 
+[137Clue.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/10015355/137Clue.zip)
+
+
 **Directions**  Review the current program as it is currently written. Look at "what works" and "what needs work". Make the necessary changes to the program so it produces the intended outcome (see sample below).
 
 This program simulates Clue.
@@ -671,9 +674,9 @@ Colonel Mustard Lead Pipe   	Conservatory
 Professor Plum  Revolver    	Billiard Room
 Mrs. Peacock    Rope        	Library
 Mrs. White  	Wrench      	Study
-                Hall
-                Lounge
-                Dining Room
+                		Hall
+                		Lounge
+                		Dining Room
 
 Make you final accusation, separated by the enter key:
 Miss Scarlett
