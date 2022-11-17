@@ -1,4 +1,39 @@
 # Unit 4
 
-```{warning} This page is currently under construction. Please return at a later time.
+## While Loops
+
+ **Goals**
+
+- Represent iterative processes using while loops.
+- Use Boolean expressions to determine if a loop body is executed and when the iteration should cease.
+- Write a program code to satisfy method specifications using expressions, conditional statements, and iterative statements.
+
+With some loop programs, the Boolean expression is evaluated before each iteration of the loop body. When the expression evaluates to true, the loop body is executed. This continues until the expression evaluates to false, whereupon the iteration ceases.
+
+Take a look at the program below:
+
+```java
+    public class Main {  
+    public static void main(String[] args) {  
+        int i=1;  
+        while(i<=10){  
+            System.out.println(i);  
+        i++;  
+        }  
+    }  
+    }
 ```
+
+### Assignment 1 - Grades
+
+- Must use a `while` loop
+  - You may not use Arrays for this assignment
+- Use a `scanner` class to recieve `x` amount of `int` inputs
+- Organize the inputted numbers into a traditional grade structure:
+  -  A = 90 - 100
+  -  B = 80 - 90
+  -  C = 70 - 79
+  -  D = 60 - 69
+  -  F = 0 - 59
+- `Return` the total number of A's, B's, C's, D's, and F's
+- submit your program as a replit
