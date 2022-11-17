@@ -134,7 +134,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -209,7 +209,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -217,10 +217,50 @@
         <article role="main">
           <section id="unit-4">
 <h1>Unit 4<a class="headerlink" href="#unit-4" title="Permalink to this heading">#</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This page is currently under construction. Please return at a later time.</p>
+<section id="while-loops">
+<h2>While Loops<a class="headerlink" href="#while-loops" title="Permalink to this heading">#</a></h2>
+<p><strong>Goals</strong></p>
+<ul class="simple">
+<li><p>Represent iterative processes using while loops.</p></li>
+<li><p>Use Boolean expressions to determine if a loop body is executed and when the iteration should cease.</p></li>
+<li><p>Write a program code to satisfy method specifications using expressions, conditional statements, and iterative statements.</p></li>
+</ul>
+<p>With some loop programs, the Boolean expression is evaluated before each iteration of the loop body. When the expression evaluates to true, the loop body is executed. This continues until the expression evaluates to false, whereupon the iteration ceases.</p>
+<p>Take a look at the program below:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w">  </span>
+<span class="w">        </span><span class="k">while</span><span class="p">(</span><span class="n">i</span><span class="o">&lt;=</span><span class="mi">10</span><span class="p">){</span><span class="w">  </span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w">  </span>
+<span class="w">        </span><span class="n">i</span><span class="o">++</span><span class="p">;</span><span class="w">  </span>
+<span class="w">        </span><span class="p">}</span><span class="w">  </span>
+<span class="w">    </span><span class="p">}</span><span class="w">  </span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+</pre></div>
 </div>
+<section id="assignment-1-grades">
+<h3>Assignment 1 - Grades<a class="headerlink" href="#assignment-1-grades" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Must use a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop</p>
+<ul>
+<li><p>You may not use Arrays for this assignment</p></li>
+</ul>
+</li>
+<li><p>Use a <code class="docutils literal notranslate"><span class="pre">scanner</span></code> class to recieve <code class="docutils literal notranslate"><span class="pre">x</span></code> amount of <code class="docutils literal notranslate"><span class="pre">int</span></code> inputs</p></li>
+<li><p>Organize the inputted numbers into a traditional grade structure:</p>
+<ul>
+<li><p>A = 90 - 100</p></li>
+<li><p>B = 80 - 90</p></li>
+<li><p>C = 70 - 79</p></li>
+<li><p>D = 60 - 69</p></li>
+<li><p>F = 0 - 59</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Return</span></code> the total number of A’s, B’s, C’s, D’s, and F’s</p></li>
+<li><p>submit your program as a replit</p></li>
+</ul>
+</section>
+</section>
 </section>
 
         </article>
@@ -268,8 +308,30 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Unit 4</a><ul>
+<li><a class="reference internal" href="#while-loops">While Loops</a><ul>
+<li><a class="reference internal" href="#assignment-1-grades">Assignment 1 - Grades</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
