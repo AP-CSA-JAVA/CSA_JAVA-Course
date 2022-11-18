@@ -225,12 +225,20 @@
 <li><p>Use Boolean expressions to determine if a loop body is executed and when the iteration should cease.</p></li>
 <li><p>Write a program code to satisfy method specifications using expressions, conditional statements, and iterative statements.</p></li>
 </ul>
-<p>In programming, loops are used to repeat a block of code <code class="docutils literal notranslate"><span class="pre">x</span></code> amount of times.  With some loop programs, the Boolean expression is evaluated before each iteration of the loop body. When the expression evaluates to true, the loop body is executed. This continues until the expression evaluates to false, where the loop ends.</p>
+<p>In programming, loops are used to repeat a block of code <code class="docutils literal notranslate"><span class="pre">x</span></code> amount of times.  With some loop programs, the expression is evaluated <em>(Is the condition true or not?)</em> before each iteration of the loop body. When the expression evaluates to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the loop body is executed. This continues until the expression evaluates to false, where the loop ends.</p>
+<p><strong>Note:</strong> While Java is flexible with spacing around conditional expressions, between keywords, before and after operators, it is not however flexible with <em>spacing around the dot operator</em>. The following statements are not equivalent.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">str</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="n">str</span><span class="p">.</span><span class="w"> </span><span class="nf">substring</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span><span class="w">  </span><span class="c1">// syntax error</span><span class="w"></span>
+<span class="n">str</span><span class="w"> </span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span><span class="w">  </span><span class="c1">// syntax error</span><span class="w"></span>
+</pre></div>
+</div>
+<p>One more thing, An <strong>infinite loop</strong> is an instruction sequence that loops endlessly when a terminating condition isn’t met. An infinite loop might be a programming error, but may also be intentional.</p>
+<p>Within Unit 4, we will explore different keyword loop terms and how they are utilized.</p>
 <p>Take a look at the program below:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
 <span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w">  </span>
-<span class="w">        </span><span class="k">while</span><span class="p">(</span><span class="n">i</span><span class="o">&lt;=</span><span class="mi">10</span><span class="p">){</span><span class="w">  </span>
+<span class="w">        </span><span class="k">while</span><span class="p">(</span><span class="n">i</span><span class="o">&lt;=</span><span class="mi">10</span><span class="p">){</span><span class="w">  </span><span class="c1">// use of a Boolean to create a loop</span><span class="w"></span>
 <span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w">  </span>
 <span class="w">        </span><span class="n">i</span><span class="o">++</span><span class="p">;</span><span class="w">  </span>
 <span class="w">        </span><span class="p">}</span><span class="w">  </span>
@@ -243,7 +251,7 @@
 <span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w">   </span><span class="c1">// use of a second variable to create a loop</span><span class="w"></span>
 
 <span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w"></span>
@@ -253,14 +261,16 @@
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
+<p>While the do while loop will not be used for the AP CSA exam, it can be a useful tool when writing programs.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
 <span class="k">do</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w"></span>
 <span class="w">  </span><span class="n">i</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
-<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span><span class="w"></span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span><span class="w">   </span><span class="c1">// use of a do-while loop to essentially do the same as the loops above.</span><span class="w"></span>
 </pre></div>
 </div>
+<p>Using .equals within a while loop.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span><span class="w"></span>
 
 <span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"></span>
@@ -271,7 +281,7 @@
 <span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter your input (q to quit): &quot;</span><span class="p">);</span><span class="w"></span>
 <span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span><span class="w"></span>
 <span class="w">    </span>
-<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">input</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;q&quot;</span><span class="p">))</span><span class="w"></span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">input</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;q&quot;</span><span class="p">))</span><span class="w"> </span><span class="c1">// use of a while loop using .equals</span><span class="w"></span>
 <span class="w">    </span><span class="p">{</span><span class="w"></span>
 <span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter your input (q to quit): &quot;</span><span class="p">);</span><span class="w"></span>
 <span class="w">      </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span><span class="w"></span>
@@ -282,8 +292,7 @@
 </pre></div>
 </div>
 <details><summary>Click Here</summary>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span><span class="w"></span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Arrays</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.*</span><span class="p">;</span><span class="w"></span>
 
 <span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="p">{</span><span class="w"></span>
 <span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
@@ -293,10 +302,10 @@
 <span class="w">			</span>
 <span class="w">		</span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span><span class="w"></span>
 <span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Enter the number of elements you want to store: &quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">		</span><span class="c1">//reading the number of elements from the that we want to enter</span><span class="w"></span>
-<span class="w">		</span><span class="n">n</span><span class="o">=</span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span><span class="w"></span>
-<span class="w">		</span><span class="c1">//creates an array in the memory of length 10</span><span class="w"></span>
-<span class="w">		</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="n">n</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
+<span class="w">		</span>
+<span class="w">		</span><span class="n">n</span><span class="o">=</span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span><span class="w">  </span><span class="c1">// storing the number of elements that you want to store.</span><span class="w"></span>
+<span class="w">		</span>
+<span class="w">		</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="n">n</span><span class="o">]</span><span class="p">;</span><span class="w">  </span><span class="c1">// defining the number of inputs for the array</span><span class="w"></span>
 <span class="w">			</span>
 <span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter the elements of the array: &quot;</span><span class="p">);</span><span class="w"></span>
 <span class="w">		</span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">){</span><span class="w"></span>
@@ -305,6 +314,7 @@
 <span class="w">			</span><span class="n">i</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
 <span class="w">		</span><span class="p">}</span><span class="w"></span>
 <span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Contents of the array are: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">array</span><span class="p">));</span><span class="w"></span>
+<span class="w">		</span><span class="c1">// printing the stored elements within the array.</span><span class="w"></span>
 <span class="w">	</span><span class="p">}</span><span class="w">  </span>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
