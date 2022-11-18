@@ -72,6 +72,7 @@ public class Main
 ```
 
 <details><summary>Click Here</summary>
+
 ```java
 import java.util.Scanner;
 import java.util.Arrays;
@@ -102,6 +103,8 @@ public class Main{
 
 </details>
 
+
+	
 ### Assignment 1 - Grades
 
 - Must use a `while` loop
