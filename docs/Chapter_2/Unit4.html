@@ -281,28 +281,51 @@
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<section id="assignment-1-grades">
-<h3>Assignment 1 - Grades<a class="headerlink" href="#assignment-1-grades" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Must use a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop</p>
-<ul>
-<li><p>You may not use Arrays for this assignment</p></li>
-</ul>
-</li>
-<li><p>Use a <code class="docutils literal notranslate"><span class="pre">scanner</span></code> class to recieve <code class="docutils literal notranslate"><span class="pre">x</span></code> amount of <code class="docutils literal notranslate"><span class="pre">int</span></code> inputs</p></li>
-<li><p>Organize the inputted numbers into a traditional grade structure:</p>
-<ul>
-<li><p>A = 90 - 100</p></li>
-<li><p>B = 80 - 90</p></li>
-<li><p>C = 70 - 79</p></li>
-<li><p>D = 60 - 69</p></li>
-<li><p>F = 0 - 59</p></li>
-</ul>
-</li>
-<li><p>Use a <code class="docutils literal notranslate"><span class="pre">Void</span></code> Method to <code class="docutils literal notranslate"><span class="pre">Return</span></code> the total number of A’s, B’s, C’s, D’s, and F’s</p></li>
-<li><p>submit your program as a replit</p></li>
-</ul>
-</section>
+<details><summary>Click Here</summary>
+```java
+import java.util.Scanner;
+import java.util.Arrays;
+<p>public class Main{
+public static void main(String[] args)
+{
+int i=0;
+int n;</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>	Scanner sc=new Scanner(System.in);
+	System.out.print(&quot;Enter the number of elements you want to store: &quot;);
+	//reading the number of elements from the that we want to enter
+	n=sc.nextInt();
+	//creates an array in the memory of length 10
+	int[] array = new int[n];
+		
+	System.out.println(&quot;Enter the elements of the array: &quot;);
+	while (i&lt;n){
+		//reading array elements from the user
+		array[i]=sc.nextInt();
+		i++;
+	}
+	System.out.println(&quot;Contents of the array are: &quot; + Arrays.toString(array));
+}  
+</pre></div>
+</div>
+<p>}</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+&lt;/details&gt;
+
+### Assignment 1 - Grades
+
+- Must use a `while` loop
+  - You may not use Arrays for this assignment
+- Use a `scanner` class to recieve `x` amount of `int` inputs
+- Organize the inputted numbers into a traditional grade structure:
+  -  A = 90 - 100
+  -  B = 80 - 90
+  -  C = 70 - 79
+  -  D = 60 - 69
+  -  F = 0 - 59
+- Use a `Void` Method to `Return` the total number of A&#39;s, B&#39;s, C&#39;s, D&#39;s, and F&#39;s
+- submit your program as a replit
+</pre></div>
+</div>
 </section>
 </section>
 
@@ -364,10 +387,7 @@
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Unit 4</a><ul>
-<li><a class="reference internal" href="#while-loops">While Loops</a><ul>
-<li><a class="reference internal" href="#assignment-1-grades">Assignment 1 - Grades</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#while-loops">While Loops</a></li>
 </ul>
 </li>
 </ul>

@@ -71,6 +71,37 @@ public class Main
 }
 ```
 
+<details><summary>Click Here</summary>
+```java
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Main{
+	public static void main(String[] args)
+	{
+		int i=0;
+		int n;
+			
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter the number of elements you want to store: ");
+		//reading the number of elements from the that we want to enter
+		n=sc.nextInt();
+		//creates an array in the memory of length 10
+		int[] array = new int[n];
+			
+		System.out.println("Enter the elements of the array: ");
+		while (i<n){
+			//reading array elements from the user
+			array[i]=sc.nextInt();
+			i++;
+		}
+		System.out.println("Contents of the array are: " + Arrays.toString(array));
+	}  
+}
+```
+
+</details>
+
 ### Assignment 1 - Grades
 
 - Must use a `while` loop
