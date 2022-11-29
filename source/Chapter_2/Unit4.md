@@ -133,3 +133,57 @@ public class Main{
   -  F = 0 - 59
 - Use a `Void` Method to `Return` the total number of A's, B's, C's, D's, and F's
 - submit your program as a replit
+
+	
+### Assignment 2 - Arithmetic
+
+```java
+1. Is a Factor?
+Write an algorithm that determines whether divisor is a factor of number. Do not use the modulo or division operators. 
+Sample Ouput:
+
+Enter the number:
+ 104
+Enter the divisor:
+ 13
+13 is a factor of 104
+
+ 
+
+Enter the number:
+ 52
+Enter the divisor:
+ 3
+3 is not a factor of 52
+
+
+2.  Extract Digits
+Using a while loop, create an algorithm extractDigits that prints the individual digits of a positive integer.
+For instance, extractDigits(54321); would create the output:
+
+1
+2
+3
+4
+5
+
+Hint: The % and the / operators are going to be very useful in this program. How can you use these to extract the last digit of the given number?
+
+3. SumAverage
+Write an algorithm that will ask the user for a number until they enter 'q'. Then calculate the sum and everage of those numbers.
+Sample Output:
+
+Enter a number, or the letter 'q' to end the sequence: 
+ 25
+Enter a number, or the letter 'q' to end the sequence: 
+ 78
+Enter a number, or the letter 'q' to end the sequence: 
+ 16
+Enter a number, or the letter 'q' to end the sequence: 
+ 14
+Enter a number, or the letter 'q' to end the sequence: 
+ q
+The sum is: 133
+The average is: 33.25
+```
+	
