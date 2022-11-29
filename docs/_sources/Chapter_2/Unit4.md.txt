@@ -122,7 +122,8 @@ public class Main{
 ### Assignment 1 - Grades
 
 - Must use a `while` loop
-  - You may not use Arrays for this assignment
+  - You may use Arrays for this assignment
+  - I will offer you extra credit if you complete this assignment without using an Array.
 - Use a `scanner` class to recieve `x` amount of `int` inputs
 - Organize the inputted numbers into a traditional grade structure:
   -  A = 90 - 100
