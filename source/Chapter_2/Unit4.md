@@ -233,7 +233,12 @@ while (i < 11)
   i++;
 }
 ```
+	      
+-----------------------------------------------------------------------------------------------------
+
 The variable i can be accessed outside of the the while loop. Now, observe an equivalent for loop.
+	      
+	      
 ```java
 for (int i = 0; i < 11; i++)
 {
@@ -283,7 +288,8 @@ public class Main
 ```
 Predict what is going to happen when you type `aaaaa`.
 
-				      
+---------------------------------------------------------------------------------------------------
+ 
 Look at the program below.  What do you think is going to happen when you type a `string`?
 
 ```java
