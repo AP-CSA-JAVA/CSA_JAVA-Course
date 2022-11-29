@@ -139,7 +139,8 @@ public class Main{
 
 ```java
 1. Is a Factor?
-Write an algorithm that determines whether divisor is a factor of number. Do not use the modulo or division operators. 
+Write an algorithm that determines whether divisor is a factor of number. 
+Do not use the modulo or division operators. 
 Sample Ouput:
 
 Enter the number:
@@ -158,7 +159,8 @@ Enter the divisor:
 
 
 2.  Extract Digits
-Using a while loop, create an algorithm extractDigits that prints the individual digits of a positive integer.
+Using a while loop, create an algorithm extractDigits that prints the 
+individual digits of a positive integer.
 For instance, extractDigits(54321); would create the output:
 
 1
@@ -167,10 +169,13 @@ For instance, extractDigits(54321); would create the output:
 4
 5
 
-Hint: The % and the / operators are going to be very useful in this program. How can you use these to extract the last digit of the given number?
+Hint: The % and the / operators are going to be very useful in this program. 
+How can you use these to extract the last digit of the given number?
 
 3. SumAverage
-Write an algorithm that will ask the user for a number until they enter 'q'. Then calculate the sum and everage of those numbers.
+Write an algorithm that will ask the user for a number until they enter 'q'. 
+Then calculate the sum and everage of those numbers.
+
 Sample Output:
 
 Enter a number, or the letter 'q' to end the sequence: 
