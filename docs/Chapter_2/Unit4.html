@@ -400,7 +400,14 @@
 </pre></div>
 </div>
 <p>Submit your replit link to Canvas.</p>
-<p>##For Loops</p>
+</section>
+</section>
+<section id="for-loops">
+<h2>For Loops<a class="headerlink" href="#for-loops" title="Permalink to this heading">#</a></h2>
+<p><strong>Goals</strong></p>
+<ul class="simple">
+<li><p>Write for loops.</p></li>
+</ul>
 <p><code class="docutils literal notranslate"><span class="pre">For</span></code> loops can provide a more solid foundation when using a loop within your program.  While I have not determined an instance where a  <code class="docutils literal notranslate"><span class="pre">for</span></code> loop is better suited than a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop, I do know that <code class="docutils literal notranslate"><span class="pre">for</span></code> loops seem to be more common based on the readability of the code (personal opinion).  There are four components that make up a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop:
 - Keyword
 - initialization
@@ -440,6 +447,80 @@
 <p>The scope of the loop control variable, i, is within the for loop only; any attempt to access it outside of the for loop results in an error.</p>
 <p><strong>Expected Error</strong>: When you remove the last space in str, the value Blue will fail to print. This is an example of an off-by-one error. Without the space at the end, the last call to indexOf cannot find the last word in str.  “Off-by-one” errors occur when the iteration loops one time too many or one time too few.</p>
 </section>
+<section id="developing-algorithms-using-strings">
+<h2>Developing Algorithms Using Strings<a class="headerlink" href="#developing-algorithms-using-strings" title="Permalink to this heading">#</a></h2>
+<p><strong>Goals</strong></p>
+<ul class="simple">
+<li><p>Manipulate Strings using loops</p></li>
+</ul>
+<p>In this activity, you will observe, modify, and implement some standard String algorithms using <em>traversals</em>.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span><span class="w"></span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter a String: &quot;</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;aaa&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">howMany</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">pattern</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">String</span><span class="w"> </span><span class="n">currSeq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pattern</span><span class="p">.</span><span class="na">length</span><span class="p">());</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">currSeq</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">pattern</span><span class="p">))</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">howMany</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;There were &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">howMany</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<span class="w">      </span><span class="s">&quot; substrings matching &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pattern</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Predict what is going to happen when you type <code class="docutils literal notranslate"><span class="pre">aaaaa</span></code>.</p>
+<p>Look at the program below.  What do you think is going to happen when you type a <code class="docutils literal notranslate"><span class="pre">string</span></code>?</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span><span class="w"></span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter a String: &quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">length</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">--</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">output</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">output</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>There are standard algorithms that utilize String traversals to:</p>
+<ul class="simple">
+<li><p>Find if one or more substring has a particular property.</p></li>
+<li><p>Determine the number of substrings that meet specific criteria.</p></li>
+<li><p>Create a new String with the characters reversed.</p></li>
+</ul>
+<p>###Assigntment 1</p>
+<p>You will write 3 programs that will do the following:</p>
+<ul class="simple">
+<li><p>Write a program that will remove every other letter within a string.</p></li>
+<li><p>Write a second program that will remove vowels from a String.</p></li>
+<li><p>Write a third program that will replace every instance of d,b,p and q with a random d,b, p or q.</p></li>
+</ul>
 </section>
 </section>
 
@@ -506,6 +587,8 @@
 <li><a class="reference internal" href="#assignment-2-arithmetic">Assignment 2 - Arithmetic</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#for-loops">For Loops</a></li>
+<li><a class="reference internal" href="#developing-algorithms-using-strings">Developing Algorithms Using Strings</a></li>
 </ul>
 </li>
 </ul>

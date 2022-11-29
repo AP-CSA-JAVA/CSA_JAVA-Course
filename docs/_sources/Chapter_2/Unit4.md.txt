@@ -195,8 +195,12 @@ The average is: 33.25
 Submit your replit link to Canvas.
 
 
-##For Loops
+## For Loops
 	
+**Goals**
+  - Write for loops.
+	
+
 `For` loops can provide a more solid foundation when using a loop within your program.  While I have not determined an instance where a  `for` loop is better suited than a `while` loop, I do know that `for` loops seem to be more common based on the readability of the code (personal opinion).  There are four components that make up a `for` loop:
 	- Keyword
 	- initialization 
@@ -239,3 +243,81 @@ for (int i = 0; i < 11; i++)
 The scope of the loop control variable, i, is within the for loop only; any attempt to access it outside of the for loop results in an error.
 	
 **Expected Error**: When you remove the last space in str, the value Blue will fail to print. This is an example of an off-by-one error. Without the space at the end, the last call to indexOf cannot find the last word in str.  “Off-by-one” errors occur when the iteration loops one time too many or one time too few.
+	
+## Developing Algorithms Using Strings
+
+**Goals**
+  - Manipulate Strings using loops
+	
+In this activity, you will observe, modify, and implement some standard String algorithms using *traversals*.
+	
+```java
+import java.util.Scanner;
+
+public class Main
+{
+  public static void main(String[] args)
+  {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter a String: ");
+
+    String input = sc.nextLine();
+    
+    String pattern = "aaa";
+    int howMany = 0;
+    
+    for (int i = 0; i < input.length() - pattern.length() + 1; i++)
+    {
+      String currSeq = input.substring(i, i + pattern.length());
+      if (currSeq.equals(pattern))
+      {
+        howMany++;
+      }
+    }
+
+    System.out.println("There were " + howMany + 
+      " substrings matching " + pattern);
+
+  }
+}
+```
+Predict what is going to happen when you type `aaaaa`.
+
+				      
+Look at the program below.  What do you think is going to happen when you type a `string`?
+
+```java
+import java.util.Scanner;
+
+public class Main
+{
+  public static void main(String[] args)
+  {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter a String: ");
+    String input = sc.nextLine();
+    
+    String output = "";
+    
+    for (int i = input.length(); i > 0; i--)
+    {
+      output += input.substring(i - 1, i);
+    }
+    
+    System.out.println(output);
+  }
+}
+```
+	
+There are standard algorithms that utilize String traversals to:
+
+  - Find if one or more substring has a particular property.
+  - Determine the number of substrings that meet specific criteria.
+  - Create a new String with the characters reversed.
+
+###Assigntment 1
+
+You will write 3 programs that will do the following:
+  - Write a program that will remove every other letter within a string.
+  - Write a second program that will remove vowels from a String.
+  - Write a third program that will replace every instance of d,b,p and q with a random d,b, p or q.
