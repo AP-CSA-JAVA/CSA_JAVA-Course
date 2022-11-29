@@ -408,11 +408,13 @@
 <ul class="simple">
 <li><p>Write for loops.</p></li>
 </ul>
-<p><code class="docutils literal notranslate"><span class="pre">For</span></code> and <code class="docutils literal notranslate"><span class="pre">while</span></code> loops can do about the same thing.  From my personal experience, I prefer <code class="docutils literal notranslate"><span class="pre">for</span></code> loops because it seems to provide a more solid foundation when using a loop within your program.  The main difference between <code class="docutils literal notranslate"><span class="pre">for</span></code> and <code class="docutils literal notranslate"><span class="pre">while</span></code> loops is that a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop is <em>finite</em>.  If you look at the modifier of a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop, you will know how many loops will be executed.  With a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop, it can be <em>infinite</em>.  There are four components that make up a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop:
-- Keyword
-- initialization
-- Boolean expression
-- modifier</p>
+<p><code class="docutils literal notranslate"><span class="pre">For</span></code> and <code class="docutils literal notranslate"><span class="pre">while</span></code> loops are, for the most part, interchangable.  From my personal experience, I prefer <code class="docutils literal notranslate"><span class="pre">for</span></code> loops because it is easier to read  within your program.  The main difference between <code class="docutils literal notranslate"><span class="pre">for</span></code> and <code class="docutils literal notranslate"><span class="pre">while</span></code> loops is that a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop is <em>finite</em>.  If you look at the modifier of a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop, you will know how many loops will be executed.  With a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop, it can be <em>infinite</em>.  Another difference between the two loops is that initialization variable of a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop cannot be changed; whereas, a while loop’s initialization variable is outside of the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop.  There are four components that are used to create the syntax of a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop:</p>
+<ul class="simple">
+<li><p>Keyword</p></li>
+<li><p>initialization</p></li>
+<li><p>Boolean expression</p></li>
+<li><p>modifier</p></li>
+</ul>
 <p>Take a look at the program below.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -421,13 +423,12 @@
 <span class="w">    </span><span class="p">}</span><span class="w">  </span>
 <span class="w">  </span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
-<span class="c1">// Keyword =&gt; for</span><span class="w"></span>
-<span class="c1">// initialization =&gt; int i = 0;</span><span class="w"></span>
-<span class="c1">// Boolean expression =&gt; i &lt;= 10;</span><span class="w"></span>
-<span class="c1">// modifier =&gt; i++</span><span class="w"></span>
+<span class="c1">// The syntax of a for loop:</span><span class="w"></span>
+<span class="c1">// keyword (intialization; boolean expression; modifier){ /*Body of the loop*/ }</span><span class="w"></span>
+<span class="c1">// for     (int i = 0;     i &lt;=10;             i++     ){ System.out.println(i);}</span><span class="w"></span>
 </pre></div>
 </div>
-<p>A major difference between while and for loops is the scope of the loop variable. Observe a while loop.</p>
+<p>Notice the initialization variable location.  It is located outside of the while loop.   Observe the program below.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
 <span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">11</span><span class="p">)</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
@@ -438,15 +439,15 @@
 </pre></div>
 </div>
 <hr class="docutils" />
-<p>The variable i can be accessed outside of the the while loop. Now, observe an equivalent for loop.</p>
+<p>Now, observe an equivalent for loop.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">11</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<p>The scope of the loop control variable, i, is within the for loop only; any attempt to access it outside of the for loop results in an error.</p>
-<p><strong>Expected Error</strong>: When you remove the last space in str, the value Blue will fail to print. This is an example of an off-by-one error. Without the space at the end, the last call to indexOf cannot find the last word in str.  “Off-by-one” errors occur when the iteration loops one time too many or one time too few.</p>
+<p>The scope of the intialization variable, i, is within the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop; any attempt to access it outside of the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop results in an error.</p>
+<p><strong>Expected Error</strong>: When you remove the last space in str, the value Blue will fail to print. This is an example of an <code class="docutils literal notranslate"><span class="pre">off-by-one</span> <span class="pre">error</span></code>. Without the space at the end, the last call to indexOf cannot find the last word in str.  <code class="docutils literal notranslate"><span class="pre">Off-by-one</span> <span class="pre">errors</span></code> occur when the iteration loops one time too many or one time too few.</p>
 </section>
 <section id="developing-algorithms-using-strings">
 <h2>Developing Algorithms Using Strings<a class="headerlink" href="#developing-algorithms-using-strings" title="Permalink to this heading">#</a></h2>
