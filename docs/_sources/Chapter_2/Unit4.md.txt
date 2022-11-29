@@ -328,3 +328,19 @@ You will write 3 programs that will do the following:
   - Write a program that will remove every other letter within a string.
   - Write a second program that will remove vowels from a String.
   - Write a third program that will replace every instance of d,b,p and q with a random d,b, p or q.
+	
+Submit your replit file to Canvas.
+	
+
+## Nested Iteration
+	
+**Goals**
+  - Represent nested iterative processes.
+  - Determine code that would be used to complete code segments.
+
+## Informal Code Analysis
+	
+**Goal**
+  - Determine the number of times a code segment will execute.
+	
+### Hand-Tracing
