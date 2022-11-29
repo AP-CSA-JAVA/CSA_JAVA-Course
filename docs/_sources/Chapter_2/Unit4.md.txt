@@ -192,3 +192,4 @@ The sum is: 133
 The average is: 33.25
 ```
 	
+Submit your replit link to Canvas.
