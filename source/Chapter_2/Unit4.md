@@ -201,11 +201,11 @@ Submit your replit link to Canvas.
   - Write for loops.
 	
 
-`For` and `while` loops can do about the same thing.  From my personal experience, I prefer `for` loops because it seems to provide a more solid foundation when using a loop within your program.  The main difference between `for` and `while` loops is that a `for` loop is *finite*.  If you look at the modifier of a `for` loop, you will know how many loops will be executed.  With a `while` loop, it can be *infinite*.  There are four components that make up a `for` loop:
-	- Keyword
-	- initialization 
-	- Boolean expression
-	- modifier
+`For` and `while` loops are, for the most part, interchangable.  From my personal experience, I prefer `for` loops because it is easier to read  within your program.  The main difference between `for` and `while` loops is that a `for` loop is *finite*.  If you look at the modifier of a `for` loop, you will know how many loops will be executed.  With a `while` loop, it can be *infinite*.  Another difference between the two loops is that initialization variable of a `for` loop cannot be changed; whereas, a while loop's initialization variable is outside of the `while` loop.  There are four components that are used to create the syntax of a `for` loop:
+  - Keyword
+  - initialization 
+  - Boolean expression
+  - modifier
 	
 Take a look at the program below.
 
@@ -217,13 +217,13 @@ public class Main {
     }  
   }
 }
-// Keyword => for
-// initialization => int i = 0;
-// Boolean expression => i <= 10;
-// modifier => i++
+// The syntax of a for loop:
+// keyword (intialization; boolean expression; modifier){ /*Body of the loop*/ }
+// for     (int i = 0;     i <=10;             i++     ){ System.out.println(i);}
 ```
 
-A major difference between while and for loops is the scope of the loop variable. Observe a while loop.
+Notice the initialization variable location.  It is located outside of the while loop.   Observe the program below.	
+
 ```java
 int i = 0;
 while (i < 11)
@@ -232,11 +232,11 @@ while (i < 11)
 
   i++;
 }
-```
-	      
+``` 
+
 -----------------------------------------------------------------------------------------------------
 
-The variable i can be accessed outside of the the while loop. Now, observe an equivalent for loop.
+Now, observe an equivalent for loop.
 	      
 	      
 ```java
@@ -245,10 +245,11 @@ for (int i = 0; i < 11; i++)
   System.out.println(i);
 }
 ```
-The scope of the loop control variable, i, is within the for loop only; any attempt to access it outside of the for loop results in an error.
+The scope of the intialization variable, i, is within the `for` loop; any attempt to access it outside of the `for` loop results in an error.
 	
-**Expected Error**: When you remove the last space in str, the value Blue will fail to print. This is an example of an off-by-one error. Without the space at the end, the last call to indexOf cannot find the last word in str.  “Off-by-one” errors occur when the iteration loops one time too many or one time too few.
+**Expected Error**: When you remove the last space in str, the value Blue will fail to print. This is an example of an `off-by-one error`. Without the space at the end, the last call to indexOf cannot find the last word in str.  `Off-by-one errors` occur when the iteration loops one time too many or one time too few.
 	
+
 ## Developing Algorithms Using Strings
 
 **Goals**
