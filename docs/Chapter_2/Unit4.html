@@ -400,6 +400,45 @@
 </pre></div>
 </div>
 <p>Submit your replit link to Canvas.</p>
+<p>##For Loops</p>
+<p><code class="docutils literal notranslate"><span class="pre">For</span></code> loops can provide a more solid foundation when using a loop within your program.  While I have not determined an instance where a  <code class="docutils literal notranslate"><span class="pre">for</span></code> loop is better suited than a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop, I do know that <code class="docutils literal notranslate"><span class="pre">for</span></code> loops seem to be more common based on the readability of the code (personal opinion).  There are four components that make up a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop:
+- Keyword
+- initialization
+- Boolean expression
+- modifier</p>
+<p>Take a look at the program below.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w">  </span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="c1">// Keyword =&gt; for</span><span class="w"></span>
+<span class="c1">// initialization =&gt; int i = 0;</span><span class="w"></span>
+<span class="c1">// Boolean expression =&gt; i &lt;= 10;</span><span class="w"></span>
+<span class="c1">// modifier =&gt; i++</span><span class="w"></span>
+</pre></div>
+</div>
+<p>A major difference between while and for loops is the scope of the loop variable. Observe a while loop.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">11</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">i</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>The variable i can be accessed outside of the the while loop. Now, observe an equivalent for loop.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">11</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>The scope of the loop control variable, i, is within the for loop only; any attempt to access it outside of the for loop results in an error.</p>
+<p><strong>Expected Error</strong>: When you remove the last space in str, the value Blue will fail to print. This is an example of an off-by-one error. Without the space at the end, the last call to indexOf cannot find the last word in str.  “Off-by-one” errors occur when the iteration loops one time too many or one time too few.</p>
 </section>
 </section>
 </section>
