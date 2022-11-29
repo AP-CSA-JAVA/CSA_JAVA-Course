@@ -193,3 +193,49 @@ The average is: 33.25
 ```
 	
 Submit your replit link to Canvas.
+
+
+##For Loops
+	
+`For` loops can provide a more solid foundation when using a loop within your program.  While I have not determined an instance where a  `for` loop is better suited than a `while` loop, I do know that `for` loops seem to be more common based on the readability of the code (personal opinion).  There are four components that make up a `for` loop:
+	- Keyword
+	- initialization 
+	- Boolean expression
+	- modifier
+	
+Take a look at the program below.
+
+```java
+public class Main {
+  public static void main(String[] args) {
+    for (int i = 0; i <= 10; i++) {
+      System.out.println(i);
+    }  
+  }
+}
+// Keyword => for
+// initialization => int i = 0;
+// Boolean expression => i <= 10;
+// modifier => i++
+```
+
+A major difference between while and for loops is the scope of the loop variable. Observe a while loop.
+```java
+int i = 0;
+while (i < 11)
+{
+  System.out.println(i);
+
+  i++;
+}
+```
+The variable i can be accessed outside of the the while loop. Now, observe an equivalent for loop.
+```java
+for (int i = 0; i < 11; i++)
+{
+  System.out.println(i);
+}
+```
+The scope of the loop control variable, i, is within the for loop only; any attempt to access it outside of the for loop results in an error.
+	
+**Expected Error**: When you remove the last space in str, the value Blue will fail to print. This is an example of an off-by-one error. Without the space at the end, the last call to indexOf cannot find the last word in str.  “Off-by-one” errors occur when the iteration loops one time too many or one time too few.
