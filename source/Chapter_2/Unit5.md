@@ -1,4 +1,9 @@
 # Unit 5
 
-```{warning} This page is currently under construction. Please return at a later time.
-```
+## Anatomy of a Class
+
+**Goals**
+  - Understand the design principals of a class.
+  - Use a nonprogramming methodology to design code.
+  - Create a roadmap for the next activities.
+
