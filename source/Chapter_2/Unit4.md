@@ -201,7 +201,7 @@ Submit your replit link to Canvas.
   - Write for loops.
 	
 
-`For` loops can provide a more solid foundation when using a loop within your program.  While I have not determined an instance where a  `for` loop is better suited than a `while` loop, I do know that `for` loops seem to be more common based on the readability of the code (personal opinion).  There are four components that make up a `for` loop:
+`For` and `while` loops can do about the same thing.  From my personal experience, I prefer `for` loops because it seems to provide a more solid foundation when using a loop within your program.  The main difference between `for` and `while` loops is that a `for` loop is *finite*.  If you look at the modifier of a `for` loop, you will know how many loops will be executed.  With a `while` loop, it can be *infinite*.  There are four components that make up a `for` loop:
 	- Keyword
 	- initialization 
 	- Boolean expression
