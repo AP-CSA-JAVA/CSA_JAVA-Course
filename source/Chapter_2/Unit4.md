@@ -344,3 +344,5 @@ Submit your replit file to Canvas.
   - Determine the number of times a code segment will execute.
 	
 ### Hand-Tracing
+	
+https://pythontutor.com/render.html#mode=display
