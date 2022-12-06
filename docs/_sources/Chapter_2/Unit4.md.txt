@@ -131,7 +131,7 @@ public class Main{
   -  C = 70 - 79
   -  D = 60 - 69
   -  F = 0 - 59
-- Use a `Void` Method to `Return` the total number of A's, B's, C's, D's, and F's
+- `Return` the total number of A's, B's, C's, D's, and F's
 - submit your program as a replit
 
 	
