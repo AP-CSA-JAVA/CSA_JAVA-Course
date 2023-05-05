@@ -19,6 +19,7 @@ Inside the curly braces, you can define the variables and methods of the class. 
 used to perform actions. In the NewClass class, we can create an instance variable to store the number of students in a classroom:
 
 public class NewClass {
+
       private int numStudents;
 }
 
