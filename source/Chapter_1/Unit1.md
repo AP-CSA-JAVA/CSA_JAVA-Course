@@ -29,6 +29,33 @@ Lastly, make sure that the Main class is label correctly!  In this instance it w
 
 ![replit](https://user-images.githubusercontent.com/12989939/186237117-a3565f6b-bc38-4edd-be59-f787ed233668.PNG)
 
+### 5.3 Documentation with Comments
+5.3 Documentation with Comments
+Other people who read your class, such as your teacher or your friends, may not understand what the variables and methods in
+your class are for. That's why it's important to document your code with comments. A comment is a piece of text that the
+computer will not recognize as code and will not try to execute. It's only there for the humans to read. While you can write whatever
+you want inside a comment, you should stick to explaining what your code does to document it properly.
+There are three ways in Java to create a comment:
+// Using these two slashes will create a single-line comment.
+/* Using the slash and an asterisk
+will create a multi-line comment
+for longer explanations. Be sure to
+close it with an asterisk, then a slash. */
+/** Using the slash and two asterisks will create a
+Java API documentation comment. In these comments,
+you can use tags to specify the parameters of a method
+and the return values of the method. These comments aren't as important
+for the AP CSA curriculum.
+@param -- explanation of parameter
+@return -- explanation of what the method returns */
+Here is an example of using comments to document our code with the AreaCalculator class:
+public class AreaCalculator {
+private int numShapes;
+// the constructor initializes the numShapes instance variable to 0
+public AreaCalculator() {
+numShapes = 0;
+}
+}
 ### Comments in Code
 Typing comments within your program is considered a professional practice, and I expect you to comment your code as appropriate throughtout the year.  There are two ways to comment in Java.  The first is a single line comment and you would use two foward slashes( // ) to indicate a comment.  The second is a multiline comment that uses a forward slash followed by an asterisks and closed with an asterisk followed by a forward slash ( /* */ )</br></br>
 With **every** program that you submit, I want you to list the following: 
