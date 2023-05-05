@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Unit 2 - Using Objects" href="Unit2.html" /><link rel="prev" title="Resources" href="../Resources/Resources.html" />
 
-    <meta name="generator" content="sphinx-5.3.0, furo 2022.09.29"/>
+    <!-- Generated with Sphinx 6.2.1 and Furo 2023.03.27 -->
         <title>Unit 1 - Primitive Types - CSA JAVA Course</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=fad236701ea90a88636c2a8c73b44ae642ed2a53" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -149,7 +149,7 @@
   <span class="sidebar-brand-text">CSA JAVA Course</span>
   
 </a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
-  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
@@ -584,17 +584,17 @@ this assignment.</strong></p>
 <section id="compound-assignment-operators">
 <h2>Compound Assignment Operators<a class="headerlink" href="#compound-assignment-operators" title="Permalink to this heading">#</a></h2>
 <p>In Java, you can modify a variable by referencing it, performing an operation on it, and assigning the result back to the variable. Thus, you can reference a variable to change its own value. For example, if x equals 0 , the following statement modifies x.</br></p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">//common programming convention</span><span class="w"></span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;x = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-<span class="nl">Output</span><span class="p">:</span><span class="w"></span>
-<span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">//common programming convention</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;x = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="nl">Output</span><span class="p">:</span>
+<span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
 </pre></div>
 </div>
 <p>In algebra, this is an impossible statement, but in programming, the assignment operator makes this a simple and logical statement.
@@ -615,19 +615,19 @@ This is referred to as a <strong>concatenation operator</strong> where you can a
 <h3>Assignment 1<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
 <section id="compound-operators">
 <h4>Compound Operators<a class="headerlink" href="#compound-operators" title="Permalink to this heading">#</a></h4>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CompoundOperators</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CompoundOperators</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">numPeople</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span>
-<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">totalYears</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">totalYears</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 
-<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">years</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">11.5</span><span class="p">;</span><span class="w">  </span><span class="c1">// I will soon be halfway through my junior year.</span><span class="w"></span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">years</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">11.5</span><span class="p">;</span><span class="w">  </span><span class="c1">// I will soon be halfway through my junior year.</span>
 
-<span class="w">    </span><span class="n">totalYears</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">totalYears</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">years</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">numPeople</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numPeople</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">totalYears</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">totalYears</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">years</span><span class="p">;</span>
+<span class="w">    </span><span class="n">numPeople</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numPeople</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <ul class="contains-task-list simple">
@@ -656,13 +656,13 @@ This is referred to as a <strong>concatenation operator</strong> where you can a
 </div>
 <p align="center">---------------------------------------------------------------------------- </p>
 <p>When you are using replit, you can create different programs and have them execute on the Main.java page.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">ProgramOne</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="n">args</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">ProgramTwo</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="n">args</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">ProgramThree</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="n">args</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">ProgramOne</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="n">args</span><span class="p">);</span>
+<span class="w">    </span><span class="n">ProgramTwo</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="n">args</span><span class="p">);</span>
+<span class="w">    </span><span class="n">ProgramThree</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="n">args</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>Example of this in use can be found <a class="reference external" href="https://replit.com/&#64;jonvirak/Activity-361-Array-Creation#Main.java">here</a>.  Use this format for Assignment 2 and all future programs where you are asked to create two different programs.</p>
@@ -733,23 +733,23 @@ We can convert the double by declaring a new variable that changes the double to
 </ul>
 <p>In this instance, we ‘narrowed’ the value of temp.  There is another term that you need to be familiar with and it is called <strong>casting</strong>.  Casting
 is converting from one data type to another, such as from a <em>double</em> to an <em>int</em>, potentially losing information. Take a look at this program:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">eggs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span><span class="w"></span>
-<span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">dozen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span><span class="c1">// a dozen will not change</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">eggs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span>
+<span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">dozen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span><span class="c1">// a dozen will not change</span>
 
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Total eggs = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">eggs</span><span class="o">/</span><span class="w"> </span><span class="n">dozen</span><span class="p">);</span><span class="w"></span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Total eggs = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">eggs</span><span class="o">/</span><span class="w"> </span><span class="n">dozen</span><span class="p">);</span>
 
-<span class="n">Example</span><span class="w"> </span><span class="n">output</span><span class="p">:</span><span class="w"></span>
-<span class="n">Total</span><span class="w"> </span><span class="n">eggs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="n">Example</span><span class="w"> </span><span class="n">output</span><span class="p">:</span>
+<span class="n">Total</span><span class="w"> </span><span class="n">eggs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
 </pre></div>
 </div>
 <p>We know that we don’t have 0 eggs.  We can rewrite our program to show how many eggs we have in decimal form.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">eggs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span><span class="w"></span>
-<span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">dozen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span><span class="c1">// a dozen will not change</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">eggs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span>
+<span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">dozen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span><span class="c1">// a dozen will not change</span>
 
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Total eggs = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">eggs</span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="w"> </span><span class="n">dozen</span><span class="p">);</span><span class="w"></span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Total eggs = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">eggs</span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="w"> </span><span class="n">dozen</span><span class="p">);</span>
 
-<span class="n">Example</span><span class="w"> </span><span class="n">output</span><span class="p">:</span><span class="w"></span>
-<span class="n">Total</span><span class="w"> </span><span class="n">eggs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.75</span><span class="w"></span>
+<span class="n">Example</span><span class="w"> </span><span class="n">output</span><span class="p">:</span>
+<span class="n">Total</span><span class="w"> </span><span class="n">eggs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.75</span>
 </pre></div>
 </div>
 <p>If you were to print the variables of eggs and down, you would see that the values are 9 &amp; 12 respectively.</p>
@@ -782,21 +782,21 @@ is converting from one data type to another, such as from a <em>double</em> to a
 </pre></div>
 </div>
 <p><strong>Example Output:</strong></p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Travel</span><span class="w"> </span><span class="n">time</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="p">...</span><span class="w"></span>
-<span class="w"> </span><span class="n">Mercury</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">hours</span><span class="w"></span>
-<span class="w"> </span><span class="n">Venus</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">hours</span><span class="w"></span>
-<span class="w"> </span><span class="n">Mars</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">hours</span><span class="w"></span>
-<span class="w"> </span><span class="n">Jupiter</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="n">hours</span><span class="w"></span>
-<span class="w"> </span><span class="n">Saturn</span><span class="p">:</span><span class="mi">11</span><span class="w"> </span><span class="n">hours</span><span class="w"></span>
-<span class="n">Total</span><span class="w"> </span><span class="n">travel</span><span class="w"> </span><span class="n">time</span><span class="p">:</span><span class="mf">16.0</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Travel</span><span class="w"> </span><span class="n">time</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="p">...</span>
+<span class="w"> </span><span class="n">Mercury</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">hours</span>
+<span class="w"> </span><span class="n">Venus</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">hours</span>
+<span class="w"> </span><span class="n">Mars</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">hours</span>
+<span class="w"> </span><span class="n">Jupiter</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="n">hours</span>
+<span class="w"> </span><span class="n">Saturn</span><span class="p">:</span><span class="mi">11</span><span class="w"> </span><span class="n">hours</span>
+<span class="n">Total</span><span class="w"> </span><span class="n">travel</span><span class="w"> </span><span class="n">time</span><span class="p">:</span><span class="mf">16.0</span>
 
-<span class="n">Travel</span><span class="w"> </span><span class="n">time</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="p">...</span><span class="w"></span>
-<span class="w"> </span><span class="n">Mercury</span><span class="p">:</span><span class="w"> </span><span class="mf">0.8495784968765016</span><span class="w"> </span><span class="n">hours</span><span class="w"></span>
-<span class="w"> </span><span class="n">Venus</span><span class="p">:</span><span class="w"> </span><span class="mf">0.38359870949813324</span><span class="w"> </span><span class="n">hours</span><span class="w"></span>
-<span class="w"> </span><span class="n">Mars</span><span class="p">:</span><span class="w"> </span><span class="mf">0.7258725410056196</span><span class="w"> </span><span class="n">hours</span><span class="w"></span>
-<span class="w"> </span><span class="n">Jupiter</span><span class="p">:</span><span class="w"> </span><span class="mf">5.825604352006665</span><span class="w"> </span><span class="n">hours</span><span class="w"></span>
-<span class="w"> </span><span class="n">Saturn</span><span class="p">:</span><span class="w"> </span><span class="mf">11.813728535388819</span><span class="w"> </span><span class="n">hours</span><span class="w"></span>
-<span class="n">Total</span><span class="w"> </span><span class="n">travel</span><span class="w"> </span><span class="n">time</span><span class="p">:</span><span class="mf">19.59838263477574</span><span class="w"></span>
+<span class="n">Travel</span><span class="w"> </span><span class="n">time</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="p">...</span>
+<span class="w"> </span><span class="n">Mercury</span><span class="p">:</span><span class="w"> </span><span class="mf">0.8495784968765016</span><span class="w"> </span><span class="n">hours</span>
+<span class="w"> </span><span class="n">Venus</span><span class="p">:</span><span class="w"> </span><span class="mf">0.38359870949813324</span><span class="w"> </span><span class="n">hours</span>
+<span class="w"> </span><span class="n">Mars</span><span class="p">:</span><span class="w"> </span><span class="mf">0.7258725410056196</span><span class="w"> </span><span class="n">hours</span>
+<span class="w"> </span><span class="n">Jupiter</span><span class="p">:</span><span class="w"> </span><span class="mf">5.825604352006665</span><span class="w"> </span><span class="n">hours</span>
+<span class="w"> </span><span class="n">Saturn</span><span class="p">:</span><span class="w"> </span><span class="mf">11.813728535388819</span><span class="w"> </span><span class="n">hours</span>
+<span class="n">Total</span><span class="w"> </span><span class="n">travel</span><span class="w"> </span><span class="n">time</span><span class="p">:</span><span class="mf">19.59838263477574</span>
 </pre></div>
 </div>
 <p><em>Your ouput should look like the example above.  I am not asking you to find the average for this assignment.</em></p>
@@ -898,9 +898,7 @@ Comment out your code as appropriate (4 points)</p>
             
           </div>
           <div class="right-details">
-            <div class="icons">
-              
-            </div>
+            
           </div>
         </div>
         
@@ -985,9 +983,6 @@ Comment out your code as appropriate (4 points)</p>
     </aside>
   </div>
 </div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/scripts/furo.js"></script>

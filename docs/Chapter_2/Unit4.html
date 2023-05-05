@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Unit 5" href="Unit5.html" /><link rel="prev" title="Unit 3" href="../Chapter_1/Unit3.html" />
 
-    <meta name="generator" content="sphinx-5.3.0, furo 2022.09.29"/>
+    <!-- Generated with Sphinx 6.2.1 and Furo 2023.03.27 -->
         <title>Unit 4 - CSA JAVA Course</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=fad236701ea90a88636c2a8c73b44ae642ed2a53" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -149,7 +149,7 @@
   <span class="sidebar-brand-text">CSA JAVA Course</span>
   
 </a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
-  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
@@ -227,9 +227,9 @@
 </ul>
 <p>In programming, loops are used to repeat a block of code <code class="docutils literal notranslate"><span class="pre">x</span></code> amount of times.  With some loop programs, the expression is evaluated <em>(Is the condition true or not?)</em> before each iteration of the loop body. When the expression evaluates to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the loop body is executed. This continues until the expression evaluates to false, where the loop ends.</p>
 <p><strong>Note:</strong> While Java is flexible with spacing around conditional expressions, between keywords, before and after operators, it is not however flexible with <em>spacing around the dot operator</em>. The following statements are not equivalent.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">str</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
-<span class="n">str</span><span class="p">.</span><span class="w"> </span><span class="nf">substring</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span><span class="w">  </span><span class="c1">// syntax error</span><span class="w"></span>
-<span class="n">str</span><span class="w"> </span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span><span class="w">  </span><span class="c1">// syntax error</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">str</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">str</span><span class="p">.</span><span class="w"> </span><span class="nf">substring</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span><span class="w">  </span><span class="c1">// syntax error</span>
+<span class="n">str</span><span class="w"> </span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span><span class="w">  </span><span class="c1">// syntax error</span>
 </pre></div>
 </div>
 <p>One more thing, An <strong>infinite loop</strong> is an instruction sequence that loops endlessly when a terminating condition isn’t met. An infinite loop might be a programming error, but may also be intentional.</p>
@@ -238,85 +238,85 @@
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
 <span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w">  </span>
-<span class="w">        </span><span class="k">while</span><span class="p">(</span><span class="n">i</span><span class="o">&lt;=</span><span class="mi">10</span><span class="p">){</span><span class="w">  </span><span class="c1">// use of a Boolean to create a loop</span><span class="w"></span>
+<span class="w">        </span><span class="k">while</span><span class="p">(</span><span class="n">i</span><span class="o">&lt;=</span><span class="mi">10</span><span class="p">){</span><span class="w">  </span><span class="c1">// use of a Boolean to create a loop</span>
 <span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w">  </span>
 <span class="w">        </span><span class="n">i</span><span class="o">++</span><span class="p">;</span><span class="w">  </span>
 <span class="w">        </span><span class="p">}</span><span class="w">  </span>
 <span class="w">    </span><span class="p">}</span><span class="w">  </span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span>
 </pre></div>
 </div>
 <p>Another example using the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w">   </span><span class="c1">// use of a second variable to create a loop</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w">   </span><span class="c1">// use of a second variable to create a loop</span>
 
-<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w"></span>
-<span class="w">      </span><span class="n">i</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="w">      </span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>While the do while loop will not be used for the AP CSA exam, it can be a useful tool when writing programs.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="k">do</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="n">i</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span><span class="w">   </span><span class="c1">// use of a do-while loop to essentially do the same as the loops above.</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="w">  </span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span><span class="w">   </span><span class="c1">// use of a do-while loop to essentially do the same as the loops above.</span>
 </pre></div>
 </div>
 <p>Using .equals within a while loop.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
 
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter your input (q to quit): &quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span><span class="w"></span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter your input (q to quit): &quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
 <span class="w">    </span>
-<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">input</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;q&quot;</span><span class="p">))</span><span class="w"> </span><span class="c1">// use of a while loop using .equals</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter your input (q to quit): &quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">      </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">input</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;q&quot;</span><span class="p">))</span><span class="w"> </span><span class="c1">// use of a while loop using .equals</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter your input (q to quit): &quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
 <span class="w">    </span><span class="p">}</span><span class="w"> </span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Goodbye.&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Goodbye.&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <details><summary>Click Here</summary>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.*</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.*</span><span class="p">;</span>
 
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
-<span class="w">	</span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"></span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="p">{</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">	</span><span class="p">{</span>
+<span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
 <span class="w">			</span>
-<span class="w">		</span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span><span class="w"></span>
-<span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Enter the number of elements you want to store: &quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">		</span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Enter the number of elements you want to store: &quot;</span><span class="p">);</span>
 <span class="w">		</span>
-<span class="w">		</span><span class="n">n</span><span class="o">=</span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span><span class="w">  </span><span class="c1">// storing the number of elements that you want to store.</span><span class="w"></span>
+<span class="w">		</span><span class="n">n</span><span class="o">=</span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span><span class="w">  </span><span class="c1">// storing the number of elements that you want to store.</span>
 <span class="w">		</span>
-<span class="w">		</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="n">n</span><span class="o">]</span><span class="p">;</span><span class="w">  </span><span class="c1">// defining the number of inputs for the array</span><span class="w"></span>
+<span class="w">		</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="n">n</span><span class="o">]</span><span class="p">;</span><span class="w">  </span><span class="c1">// defining the number of inputs for the array</span>
 <span class="w">			</span>
-<span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter the elements of the array: &quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">		</span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">){</span><span class="w"></span>
-<span class="w">			</span><span class="c1">//reading array elements from the user</span><span class="w"></span>
-<span class="w">			</span><span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]=</span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span><span class="w"></span>
-<span class="w">			</span><span class="n">i</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="p">}</span><span class="w"></span>
-<span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Contents of the array are: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">array</span><span class="p">));</span><span class="w"></span>
-<span class="w">		</span><span class="c1">// printing the stored elements within the array.</span><span class="w"></span>
+<span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter the elements of the array: &quot;</span><span class="p">);</span>
+<span class="w">		</span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">){</span>
+<span class="w">			</span><span class="c1">//reading array elements from the user</span>
+<span class="w">			</span><span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]=</span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<span class="w">			</span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
+<span class="w">		</span><span class="p">}</span>
+<span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Contents of the array are: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">array</span><span class="p">));</span>
+<span class="w">		</span><span class="c1">// printing the stored elements within the array.</span>
 <span class="w">	</span><span class="p">}</span><span class="w">  </span>
-<span class="p">}</span><span class="w"></span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </details>
@@ -345,58 +345,58 @@
 </section>
 <section id="assignment-2-arithmetic">
 <h3>Assignment 2 - Arithmetic<a class="headerlink" href="#assignment-2-arithmetic" title="Permalink to this heading">#</a></h3>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span><span class="w"> </span><span class="n">Is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">Factor</span><span class="o">?</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span><span class="w"> </span><span class="n">Is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">Factor</span><span class="o">?</span>
 <span class="n">Write</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">algorithm</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">determines</span><span class="w"> </span><span class="n">whether</span><span class="w"> </span><span class="n">divisor</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">factor</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">number</span><span class="p">.</span><span class="w"> </span>
 <span class="n">Do</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">use</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">modulo</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">division</span><span class="w"> </span><span class="n">operators</span><span class="p">.</span><span class="w"> </span>
-<span class="n">Sample</span><span class="w"> </span><span class="n">Ouput</span><span class="p">:</span><span class="w"></span>
+<span class="n">Sample</span><span class="w"> </span><span class="n">Ouput</span><span class="p">:</span>
 
-<span class="n">Enter</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">number</span><span class="p">:</span><span class="w"></span>
-<span class="w"> </span><span class="mi">104</span><span class="w"></span>
-<span class="n">Enter</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">divisor</span><span class="p">:</span><span class="w"></span>
-<span class="w"> </span><span class="mi">13</span><span class="w"></span>
-<span class="mi">13</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">factor</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="mi">104</span><span class="w"></span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">number</span><span class="p">:</span>
+<span class="w"> </span><span class="mi">104</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">divisor</span><span class="p">:</span>
+<span class="w"> </span><span class="mi">13</span>
+<span class="mi">13</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">factor</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="mi">104</span>
 
 <span class="w"> </span>
 
-<span class="n">Enter</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">number</span><span class="p">:</span><span class="w"></span>
-<span class="w"> </span><span class="mi">52</span><span class="w"></span>
-<span class="n">Enter</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">divisor</span><span class="p">:</span><span class="w"></span>
-<span class="w"> </span><span class="mi">3</span><span class="w"></span>
-<span class="mi">3</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">factor</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="mi">52</span><span class="w"></span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">number</span><span class="p">:</span>
+<span class="w"> </span><span class="mi">52</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">divisor</span><span class="p">:</span>
+<span class="w"> </span><span class="mi">3</span>
+<span class="mi">3</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">factor</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="mi">52</span>
 
 
-<span class="mf">2.</span><span class="w">  </span><span class="n">Extract</span><span class="w"> </span><span class="n">Digits</span><span class="w"></span>
+<span class="mf">2.</span><span class="w">  </span><span class="n">Extract</span><span class="w"> </span><span class="n">Digits</span>
 <span class="n">Using</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="n">loop</span><span class="p">,</span><span class="w"> </span><span class="n">create</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">algorithm</span><span class="w"> </span><span class="n">extractDigits</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">prints</span><span class="w"> </span><span class="n">the</span><span class="w"> </span>
-<span class="n">individual</span><span class="w"> </span><span class="n">digits</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">positive</span><span class="w"> </span><span class="n">integer</span><span class="p">.</span><span class="w"></span>
-<span class="n">For</span><span class="w"> </span><span class="n">instance</span><span class="p">,</span><span class="w"> </span><span class="n">extractDigits</span><span class="p">(</span><span class="mi">54321</span><span class="p">);</span><span class="w"> </span><span class="n">would</span><span class="w"> </span><span class="n">create</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">output</span><span class="p">:</span><span class="w"></span>
+<span class="n">individual</span><span class="w"> </span><span class="n">digits</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">positive</span><span class="w"> </span><span class="n">integer</span><span class="p">.</span>
+<span class="n">For</span><span class="w"> </span><span class="n">instance</span><span class="p">,</span><span class="w"> </span><span class="n">extractDigits</span><span class="p">(</span><span class="mi">54321</span><span class="p">);</span><span class="w"> </span><span class="n">would</span><span class="w"> </span><span class="n">create</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">output</span><span class="p">:</span>
 
-<span class="mi">1</span><span class="w"></span>
-<span class="mi">2</span><span class="w"></span>
-<span class="mi">3</span><span class="w"></span>
-<span class="mi">4</span><span class="w"></span>
-<span class="mi">5</span><span class="w"></span>
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+<span class="mi">5</span>
 
 <span class="nl">Hint</span><span class="p">:</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">operators</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">going</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">very</span><span class="w"> </span><span class="n">useful</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="k">this</span><span class="w"> </span><span class="n">program</span><span class="p">.</span><span class="w"> </span>
-<span class="n">How</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">use</span><span class="w"> </span><span class="n">these</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">extract</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">last</span><span class="w"> </span><span class="n">digit</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">given</span><span class="w"> </span><span class="n">number</span><span class="o">?</span><span class="w"></span>
+<span class="n">How</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">use</span><span class="w"> </span><span class="n">these</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">extract</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">last</span><span class="w"> </span><span class="n">digit</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">given</span><span class="w"> </span><span class="n">number</span><span class="o">?</span>
 
-<span class="mf">3.</span><span class="w"> </span><span class="n">SumAverage</span><span class="w"></span>
+<span class="mf">3.</span><span class="w"> </span><span class="n">SumAverage</span>
 <span class="n">Write</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">algorithm</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">ask</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">until</span><span class="w"> </span><span class="n">they</span><span class="w"> </span><span class="n">enter</span><span class="w"> </span><span class="sc">&#39;q&#39;</span><span class="p">.</span><span class="w"> </span>
-<span class="n">Then</span><span class="w"> </span><span class="n">calculate</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">everage</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">those</span><span class="w"> </span><span class="n">numbers</span><span class="p">.</span><span class="w"></span>
+<span class="n">Then</span><span class="w"> </span><span class="n">calculate</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">everage</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">those</span><span class="w"> </span><span class="n">numbers</span><span class="p">.</span>
 
-<span class="n">Sample</span><span class="w"> </span><span class="n">Output</span><span class="p">:</span><span class="w"></span>
+<span class="n">Sample</span><span class="w"> </span><span class="n">Output</span><span class="p">:</span>
 
 <span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">number</span><span class="p">,</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">letter</span><span class="w"> </span><span class="sc">&#39;q&#39;</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">sequence</span><span class="p">:</span><span class="w"> </span>
-<span class="w"> </span><span class="mi">25</span><span class="w"></span>
+<span class="w"> </span><span class="mi">25</span>
 <span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">number</span><span class="p">,</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">letter</span><span class="w"> </span><span class="sc">&#39;q&#39;</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">sequence</span><span class="p">:</span><span class="w"> </span>
-<span class="w"> </span><span class="mi">78</span><span class="w"></span>
+<span class="w"> </span><span class="mi">78</span>
 <span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">number</span><span class="p">,</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">letter</span><span class="w"> </span><span class="sc">&#39;q&#39;</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">sequence</span><span class="p">:</span><span class="w"> </span>
-<span class="w"> </span><span class="mi">16</span><span class="w"></span>
+<span class="w"> </span><span class="mi">16</span>
 <span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">number</span><span class="p">,</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">letter</span><span class="w"> </span><span class="sc">&#39;q&#39;</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">sequence</span><span class="p">:</span><span class="w"> </span>
-<span class="w"> </span><span class="mi">14</span><span class="w"></span>
+<span class="w"> </span><span class="mi">14</span>
 <span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">number</span><span class="p">,</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">letter</span><span class="w"> </span><span class="sc">&#39;q&#39;</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">sequence</span><span class="p">:</span><span class="w"> </span>
-<span class="w"> </span><span class="n">q</span><span class="w"></span>
-<span class="n">The</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="n">is</span><span class="p">:</span><span class="w"> </span><span class="mi">133</span><span class="w"></span>
-<span class="n">The</span><span class="w"> </span><span class="n">average</span><span class="w"> </span><span class="n">is</span><span class="p">:</span><span class="w"> </span><span class="mf">33.25</span><span class="w"></span>
+<span class="w"> </span><span class="n">q</span>
+<span class="n">The</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="n">is</span><span class="p">:</span><span class="w"> </span><span class="mi">133</span>
+<span class="n">The</span><span class="w"> </span><span class="n">average</span><span class="w"> </span><span class="n">is</span><span class="p">:</span><span class="w"> </span><span class="mf">33.25</span>
 </pre></div>
 </div>
 <p>Submit your replit link to Canvas.</p>
@@ -416,34 +416,34 @@
 <li><p>modifier</p></li>
 </ul>
 <p>Take a look at the program below.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span><span class="w">  </span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-<span class="c1">// The syntax of a for loop:</span><span class="w"></span>
-<span class="c1">// keyword (intialization; boolean expression; modifier){ /*Body of the loop*/ }</span><span class="w"></span>
-<span class="c1">// for     (int i = 0;     i &lt;=10;             i++     ){ System.out.println(i);}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="c1">// The syntax of a for loop:</span>
+<span class="c1">// keyword (intialization; boolean expression; modifier){ /*Body of the loop*/ }</span>
+<span class="c1">// for     (int i = 0;     i &lt;=10;             i++     ){ System.out.println(i);}</span>
 </pre></div>
 </div>
 <p>Notice the initialization variable location.  It is located outside of the while loop.   Observe the program below.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">11</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">11</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
 
-<span class="w">  </span><span class="n">i</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <hr class="docutils" />
 <p>Now, observe an equivalent for loop.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">11</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">11</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>The scope of the intialization variable, i, is within the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop; any attempt to access it outside of the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop results in an error.</p>
@@ -456,59 +456,59 @@
 <li><p>Manipulate Strings using loops</p></li>
 </ul>
 <p>In this activity, you will observe, modify, and implement some standard String algorithms using <em>traversals</em>.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
 
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter a String: &quot;</span><span class="p">);</span><span class="w"></span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter a String: &quot;</span><span class="p">);</span>
 
-<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
 <span class="w">    </span>
-<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;aaa&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">howMany</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;aaa&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">howMany</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="w">    </span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">pattern</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="n">String</span><span class="w"> </span><span class="n">currSeq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pattern</span><span class="p">.</span><span class="na">length</span><span class="p">());</span><span class="w"></span>
-<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">currSeq</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">pattern</span><span class="p">))</span><span class="w"></span>
-<span class="w">      </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">howMany</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
-<span class="w">      </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">pattern</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="n">String</span><span class="w"> </span><span class="n">currSeq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pattern</span><span class="p">.</span><span class="na">length</span><span class="p">());</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">currSeq</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">pattern</span><span class="p">))</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="n">howMany</span><span class="o">++</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
 
 <span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;There were &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">howMany</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
-<span class="w">      </span><span class="s">&quot; substrings matching &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pattern</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="s">&quot; substrings matching &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pattern</span><span class="p">);</span>
 
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>Predict what is going to happen when you type <code class="docutils literal notranslate"><span class="pre">aaaaa</span></code>.</p>
 <hr class="docutils" />
 <p>Look at the program below.  What do you think is going to happen when you type a <code class="docutils literal notranslate"><span class="pre">string</span></code>?</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
 
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter a String: &quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span><span class="w"></span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter a String: &quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
 <span class="w">    </span>
-<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
 <span class="w">    </span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">length</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">--</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="n">output</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">length</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">--</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="n">output</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="w">    </span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">output</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">output</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>There are standard algorithms that utilize String traversals to:</p>
@@ -586,9 +586,7 @@
             
           </div>
           <div class="right-details">
-            <div class="icons">
-              
-            </div>
+            
           </div>
         </div>
         
@@ -634,9 +632,6 @@
     </aside>
   </div>
 </div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/scripts/furo.js"></script>

@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Unit 4" href="../Chapter_2/Unit4.html" /><link rel="prev" title="Unit 2 - Using Objects" href="Unit2.html" />
 
-    <meta name="generator" content="sphinx-5.3.0, furo 2022.09.29"/>
+    <!-- Generated with Sphinx 6.2.1 and Furo 2023.03.27 -->
         <title>Unit 3 - CSA JAVA Course</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=fad236701ea90a88636c2a8c73b44ae642ed2a53" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -149,7 +149,7 @@
   <span class="sidebar-brand-text">CSA JAVA Course</span>
   
 </a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
-  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
@@ -467,10 +467,10 @@ NOT Operator ( ! ) – !(a&lt;b) [returns false if a is smaller than b]
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> If all of the numbers are the same, print “boring”.</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> If two of the numbers are the same, print “twins!”.</p></li>
 </ul>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">suchFun</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">suchFun</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 
 
-<span class="p">}</span><span class="w"></span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p><a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9862940/FRQ_BlankAnswerSheet.pdf">BlankAnswerSheet.pdf</a></p>
@@ -507,79 +507,79 @@ like indentation, spacing is used to improve readability.</p>
 <p><code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">(b!=0)</span>&#160;&#160; <span class="pre">System.out.println(&quot;...&quot;);</span></code></p>
 <p><strong>Note College Board Exclusion:</strong> You will not be required to use the <code class="docutils literal notranslate"><span class="pre">parseInt</span></code> or <code class="docutils literal notranslate"><span class="pre">parseDouble</span></code> methods on the AP exam.</p>
 <p>Look at the code below.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
 <span class="w"> </span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">GuessChecker</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"></span>
-<span class="w">	</span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="cm">/* Add any variables you will need throughout the program here. */</span><span class="w"></span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">GuessChecker</span>
+<span class="p">{</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">	</span><span class="p">{</span>
+<span class="w">    </span><span class="cm">/* Add any variables you will need throughout the program here. */</span>
 <span class="w">  </span>
-<span class="w">    </span><span class="c1">// Generate the random number</span><span class="w"></span>
-<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">targetStr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">makeCode</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="c1">//System.out.println(targetStr);  // uncomment for debugging</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Generate the random number</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">targetStr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">makeCode</span><span class="p">();</span>
+<span class="w">    </span><span class="c1">//System.out.println(targetStr);  // uncomment for debugging</span>
 <span class="w">    </span>
-<span class="w">    </span><span class="c1">// Break the random number into four variables.</span><span class="w"></span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">r1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">targetStr</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">));</span><span class="w"></span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">r2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">targetStr</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">));</span><span class="w"></span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">r3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">targetStr</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">));</span><span class="w"></span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">r4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">targetStr</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Break the random number into four variables.</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">r1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">targetStr</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">));</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">r2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">targetStr</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">));</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">r3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">targetStr</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">));</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">r4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">targetStr</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">));</span>
 <span class="w">    </span>
-<span class="w">    </span><span class="c1">// Get the user&#39;s guess.</span><span class="w"></span>
-<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">guess</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getGuess</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="c1">//System.out.println(guess);   // uncomment for debugging</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Get the user&#39;s guess.</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">guess</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getGuess</span><span class="p">();</span>
+<span class="w">    </span><span class="c1">//System.out.println(guess);   // uncomment for debugging</span>
 <span class="w">    </span>
-<span class="w">    </span><span class="c1">// Break the user&#39;s guess into four variables.</span><span class="w"></span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">g1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">guess</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">));</span><span class="w"></span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">g2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">guess</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">));</span><span class="w"></span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">g3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">guess</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">));</span><span class="w"></span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">g4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">guess</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Break the user&#39;s guess into four variables.</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">g1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">guess</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">));</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">g2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">guess</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">));</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">g3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">guess</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">));</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">g4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">guess</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">));</span>
 
-<span class="w">    </span><span class="cm">/*your code here*/</span><span class="w"></span>
+<span class="w">    </span><span class="cm">/*your code here*/</span>
 <span class="w">   </span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="p">}</span>
 <span class="w"> </span>
-<span class="w">  </span><span class="c1">// Checks to ensure no duplicate digits in a int.</span><span class="w"></span>
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">hasDupes</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// Checks to ensure no duplicate digits in a int.</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">hasDupes</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="p">)</span>
 <span class="w">	</span><span class="p">{</span><span class="w"> </span>
-<span class="w">		</span><span class="kt">boolean</span><span class="o">[]</span><span class="w"> </span><span class="n">digs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">boolean</span><span class="o">[</span><span class="mi">10</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
-<span class="w">		</span><span class="p">{</span><span class="w"></span>
-<span class="w">			</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">digs</span><span class="o">[</span><span class="n">num</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">10</span><span class="o">]</span><span class="p">)</span><span class="w"></span>
-<span class="w">			  </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w"></span>
-<span class="w">			</span><span class="n">digs</span><span class="o">[</span><span class="n">num</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">10</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w"></span>
-<span class="w">			</span><span class="n">num</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
-<span class="w">		</span><span class="p">}</span><span class="w"></span>
-<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
+<span class="w">		</span><span class="kt">boolean</span><span class="o">[]</span><span class="w"> </span><span class="n">digs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">boolean</span><span class="o">[</span><span class="mi">10</span><span class="o">]</span><span class="p">;</span>
+<span class="w">		</span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">		</span><span class="p">{</span>
+<span class="w">			</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">digs</span><span class="o">[</span><span class="n">num</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">10</span><span class="o">]</span><span class="p">)</span>
+<span class="w">			  </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">			</span><span class="n">digs</span><span class="o">[</span><span class="n">num</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">10</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">			</span><span class="n">num</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="w">		</span><span class="p">}</span>
+<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">	</span><span class="p">}</span>
 
-<span class="w">  </span><span class="c1">// Creates a new random 4 digit code 1000-9999 with no duplicates.</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// Creates a new random 4 digit code 1000-9999 with no duplicates.</span>
 <span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">makeCode</span><span class="p">()</span><span class="w"> </span>
 <span class="w">  </span><span class="p">{</span><span class="w"> </span>
-<span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">9000</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1000</span><span class="p">);</span><span class="w"></span>
-<span class="w">		</span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">hasDupes</span><span class="p">(</span><span class="n">target</span><span class="p">))</span><span class="w"></span>
-<span class="w">		  </span><span class="n">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">9000</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1000</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">targetStr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">targetStr</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">9000</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1000</span><span class="p">);</span>
+<span class="w">		</span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">hasDupes</span><span class="p">(</span><span class="n">target</span><span class="p">))</span>
+<span class="w">		  </span><span class="n">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">9000</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1000</span><span class="p">);</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">targetStr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">targetStr</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
 
-<span class="w">  </span><span class="c1">// Prompts the user for a guess and repeats until valid guess is made.</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// Prompts the user for a guess and repeats until valid guess is made.</span>
 <span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getGuess</span><span class="p">()</span><span class="w"> </span>
 <span class="w">  </span><span class="p">{</span><span class="w"> </span>
-<span class="w">    </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">validGuess</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">userGuess</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">validGuess</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Guess a 4-digit number from 1000 to 9999 with no duplicate digits: &quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">      </span><span class="n">userGuess</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">validGuess</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">userGuess</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">validGuess</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Guess a 4-digit number from 1000 to 9999 with no duplicate digits: &quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">userGuess</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
 <span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">hasDupes</span><span class="p">(</span><span class="n">userGuess</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="n">userGuess</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1000</span><span class="p">)))</span><span class="w"> </span>
-<span class="w">        </span><span class="n">validGuess</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">userStr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">userGuess</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">userStr</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="n">validGuess</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">userStr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">userGuess</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">userStr</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -611,11 +611,11 @@ like indentation, spacing is used to improve readability.</p>
 <li><p>line 14: System.out.println(targetStr);  // leave this line uncommented</p></li>
 </ul>
 <p><strong>Sample output:</strong></p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="mi">3768</span><span class="w"> </span><span class="c1">// random number that was generated</span><span class="w"></span>
-<span class="n">Guess</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="mi">4</span><span class="o">-</span><span class="n">digit</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="mi">9999</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">duplicate</span><span class="w"> </span><span class="n">digits</span><span class="p">:</span><span class="w">  </span><span class="mi">7658</span><span class="w"></span>
-<span class="n">Number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">hits</span><span class="p">:</span><span class="mi">1</span><span class="w"></span>
-<span class="n">Guess</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="mi">4</span><span class="o">-</span><span class="n">digit</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="mi">9999</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">duplicate</span><span class="w"> </span><span class="n">digits</span><span class="p">:</span><span class="w">  </span><span class="mi">3658</span><span class="w"></span>
-<span class="n">Number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">hits</span><span class="p">:</span><span class="mi">2</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="mi">3768</span><span class="w"> </span><span class="c1">// random number that was generated</span>
+<span class="n">Guess</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="mi">4</span><span class="o">-</span><span class="n">digit</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="mi">9999</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">duplicate</span><span class="w"> </span><span class="n">digits</span><span class="p">:</span><span class="w">  </span><span class="mi">7658</span>
+<span class="n">Number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">hits</span><span class="p">:</span><span class="mi">1</span>
+<span class="n">Guess</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="mi">4</span><span class="o">-</span><span class="n">digit</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="mi">9999</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">duplicate</span><span class="w"> </span><span class="n">digits</span><span class="p">:</span><span class="w">  </span><span class="mi">3658</span>
+<span class="n">Number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">hits</span><span class="p">:</span><span class="mi">2</span>
 </pre></div>
 </div>
 </section>
@@ -626,44 +626,44 @@ like indentation, spacing is used to improve readability.</p>
 <li><p>Learn the if/else statement.</p></li>
 <li><p>Simplify a complex program with if/else statements.</p></li>
 </ul>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">95</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">grade</span><span class="w"> </span><span class="o">&gt;</span><span class="mi">92</span><span class="p">)</span><span class="w"></span>
-<span class="w">	</span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You have an A in the class.&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
-<span class="w">   </span><span class="k">else</span><span class="w"></span>
-<span class="w">	</span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You do not have an A in the class&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">95</span><span class="p">;</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">grade</span><span class="w"> </span><span class="o">&gt;</span><span class="mi">92</span><span class="p">)</span>
+<span class="w">	</span><span class="p">{</span>
+<span class="w">	</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You have an A in the class.&quot;</span><span class="p">);</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="w">   </span><span class="k">else</span>
+<span class="w">	</span><span class="p">{</span>
+<span class="w">	</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You do not have an A in the class&quot;</span><span class="p">);</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>Take a look at the code below…</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">Age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">Weight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">89</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">Age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">Weight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">89</span><span class="p">;</span>
 
-<span class="w">	</span><span class="k">if</span><span class="w">  </span><span class="p">(</span><span class="n">Age</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">18</span><span class="p">)</span><span class="w"></span>
-<span class="w">	</span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Weight</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">90</span><span class="p">)</span><span class="w"></span>
-<span class="w">		</span><span class="p">{</span><span class="w"></span>
-<span class="w">			</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You are eligible to donate blood.&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">		</span><span class="p">}</span><span class="w"></span>
-<span class="w">		</span><span class="k">else</span><span class="w"></span>
-<span class="w">		</span><span class="p">{</span><span class="w"></span>
-<span class="w">			</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You are not eligible to donate blood.&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">		</span><span class="p">}</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
-<span class="w">	</span><span class="k">else</span><span class="w"></span>
-<span class="w">	</span><span class="p">{</span><span class="w"></span>
-<span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Age must be greater than 18.&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">	</span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">	</span><span class="k">if</span><span class="w">  </span><span class="p">(</span><span class="n">Age</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">18</span><span class="p">)</span>
+<span class="w">	</span><span class="p">{</span>
+<span class="w">		</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Weight</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">90</span><span class="p">)</span>
+<span class="w">		</span><span class="p">{</span>
+<span class="w">			</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You are eligible to donate blood.&quot;</span><span class="p">);</span>
+<span class="w">		</span><span class="p">}</span>
+<span class="w">		</span><span class="k">else</span>
+<span class="w">		</span><span class="p">{</span>
+<span class="w">			</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You are not eligible to donate blood.&quot;</span><span class="p">);</span>
+<span class="w">		</span><span class="p">}</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="w">	</span><span class="k">else</span>
+<span class="w">	</span><span class="p">{</span>
+<span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Age must be greater than 18.&quot;</span><span class="p">);</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p><strong>Assignment 1</strong></p>
@@ -702,37 +702,37 @@ shippingCost is $7.50 and add 1 day to shippingDays.</p></li>
 <li><p><strong>CouponCode</strong> If the user had the correct coupon code, subtract $10 from the shippingCost</p></li>
 </ul>
 <p><strong>Sample Outputs:</strong></p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Weight</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Package</span><span class="p">:</span><span class="w"></span>
-<span class="mf">0.5</span><span class="w"></span>
-<span class="n">Method</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Shipping</span><span class="p">:</span><span class="w"> </span><span class="n">Standard</span><span class="p">,</span><span class="w"> </span><span class="n">Express</span><span class="p">,</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">Overnight</span><span class="p">:</span><span class="w"></span>
-<span class="n">Standard</span><span class="w"></span>
-<span class="n">Coupon</span><span class="w"> </span><span class="n">Code</span><span class="p">:</span><span class="w"></span>
-<span class="n">none</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Weight</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Package</span><span class="p">:</span>
+<span class="mf">0.5</span>
+<span class="n">Method</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Shipping</span><span class="p">:</span><span class="w"> </span><span class="n">Standard</span><span class="p">,</span><span class="w"> </span><span class="n">Express</span><span class="p">,</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">Overnight</span><span class="p">:</span>
+<span class="n">Standard</span>
+<span class="n">Coupon</span><span class="w"> </span><span class="n">Code</span><span class="p">:</span>
+<span class="n">none</span>
 
-<span class="n">Total</span><span class="w"> </span><span class="n">Shipping</span><span class="w"> </span><span class="n">Cost</span><span class="p">:</span><span class="w"> </span><span class="n">$1</span><span class="mf">.0</span><span class="w"></span>
-<span class="n">Days</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">Deliver</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="w"></span>
+<span class="n">Total</span><span class="w"> </span><span class="n">Shipping</span><span class="w"> </span><span class="n">Cost</span><span class="p">:</span><span class="w"> </span><span class="n">$1</span><span class="mf">.0</span>
+<span class="n">Days</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">Deliver</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span>
 </pre></div>
 </div>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Weight</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Package</span><span class="p">:</span><span class="w"></span>
-<span class="mi">10</span><span class="w"></span>
-<span class="n">Method</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Shipping</span><span class="p">:</span><span class="w"> </span><span class="n">Standard</span><span class="p">,</span><span class="w"> </span><span class="n">Express</span><span class="p">,</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">Overnight</span><span class="p">:</span><span class="w"></span>
-<span class="n">Express</span><span class="w"></span>
-<span class="n">Coupon</span><span class="w"> </span><span class="n">Code</span><span class="p">:</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Weight</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Package</span><span class="p">:</span>
+<span class="mi">10</span>
+<span class="n">Method</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Shipping</span><span class="p">:</span><span class="w"> </span><span class="n">Standard</span><span class="p">,</span><span class="w"> </span><span class="n">Express</span><span class="p">,</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">Overnight</span><span class="p">:</span>
+<span class="n">Express</span>
+<span class="n">Coupon</span><span class="w"> </span><span class="n">Code</span><span class="p">:</span>
 <span class="n">none</span><span class="w">    </span>
 
-<span class="n">Total</span><span class="w"> </span><span class="n">Shipping</span><span class="w"> </span><span class="n">Cost</span><span class="p">:</span><span class="w"> </span><span class="n">$20</span><span class="mf">.25</span><span class="w"></span>
-<span class="n">Days</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">Deliver</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w"></span>
+<span class="n">Total</span><span class="w"> </span><span class="n">Shipping</span><span class="w"> </span><span class="n">Cost</span><span class="p">:</span><span class="w"> </span><span class="n">$20</span><span class="mf">.25</span>
+<span class="n">Days</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">Deliver</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span>
 </pre></div>
 </div>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Weight</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Package</span><span class="p">:</span><span class="w"></span>
-<span class="mf">7.5</span><span class="w"></span>
-<span class="n">Method</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Shipping</span><span class="p">:</span><span class="w"> </span><span class="n">Standard</span><span class="p">,</span><span class="w"> </span><span class="n">Express</span><span class="p">,</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">Overnight</span><span class="p">:</span><span class="w"></span>
-<span class="n">Overnight</span><span class="w"></span>
-<span class="n">Coupon</span><span class="w"> </span><span class="n">Code</span><span class="p">:</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Weight</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Package</span><span class="p">:</span>
+<span class="mf">7.5</span>
+<span class="n">Method</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Shipping</span><span class="p">:</span><span class="w"> </span><span class="n">Standard</span><span class="p">,</span><span class="w"> </span><span class="n">Express</span><span class="p">,</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">Overnight</span><span class="p">:</span>
+<span class="n">Overnight</span>
+<span class="n">Coupon</span><span class="w"> </span><span class="n">Code</span><span class="p">:</span>
 <span class="n">COUPON17</span><span class="w"> </span>
 
-<span class="n">Total</span><span class="w"> </span><span class="n">Shipping</span><span class="w"> </span><span class="n">Cost</span><span class="p">:</span><span class="w"> </span><span class="n">$20</span><span class="mf">.25</span><span class="w"></span>
-<span class="n">Days</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">Deliver</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="n">Total</span><span class="w"> </span><span class="n">Shipping</span><span class="w"> </span><span class="n">Cost</span><span class="p">:</span><span class="w"> </span><span class="n">$20</span><span class="mf">.25</span>
+<span class="n">Days</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">Deliver</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
 </pre></div>
 </div>
 </section>
@@ -750,28 +750,28 @@ shippingCost is $7.50 and add 1 day to shippingDays.</p></li>
 <li><p>Continue to improve the code of a complex program.</p></li>
 </ul>
 <p>A <em>multi-way selection</em> is written when there are a series of conditions with different statements for each condition. Multi-way selection is performed using if/else-if statements such that exactly one section of code is executed based on the first condition that evaluates to true.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">condition</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="c1">// true</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// body of the first &#39;if&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// statement to be executed</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">condition</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="c1">// if condition 1 is false</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// if condition 2 is true</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// body of second &#39;if&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// statements to be executed</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">condition</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="c1">// if condition 2 is false</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// if condition 3 is true</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// body of third &#39;if&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// statements to be executed</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="k">else</span><span class="w"> </span><span class="c1">// if condition 3 is false</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// body of the &#39;else&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// statements to be executed</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">condition</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="c1">// true</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// body of the first &#39;if&#39;</span>
+<span class="w">    </span><span class="c1">// statement to be executed</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">condition</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="c1">// if condition 1 is false</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// if condition 2 is true</span>
+<span class="w">    </span><span class="c1">// body of second &#39;if&#39;</span>
+<span class="w">    </span><span class="c1">// statements to be executed</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">condition</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="c1">// if condition 2 is false</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// if condition 3 is true</span>
+<span class="w">    </span><span class="c1">// body of third &#39;if&#39;</span>
+<span class="w">    </span><span class="c1">// statements to be executed</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="k">else</span><span class="w"> </span><span class="c1">// if condition 3 is false</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// body of the &#39;else&#39;</span>
+<span class="w">    </span><span class="c1">// statements to be executed</span>
+<span class="w">    </span><span class="p">}</span>
 </pre></div>
 </div>
 <p><strong>Assignment 1</strong></p>
@@ -795,15 +795,15 @@ shippingCost is $7.50 and add 1 day to shippingDays.</p></li>
 <section id="assignment-1-boolean-expressions">
 <h3>Assignment 1: Boolean Expressions<a class="headerlink" href="#assignment-1-boolean-expressions" title="Permalink to this heading">#</a></h3>
 <p><strong>Directions:</strong> Using logical and relational operators, write a program that will take 3 numbers and return the if the number is greater than, less than or equal to the other two numbers.  Print out the results of your program.  Submit this assignment as a replit on Canvas.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="n">number</span><span class="w"></span>
-<span class="w"> </span><span class="mi">15</span><span class="w"></span>
-<span class="n">Enter</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">second</span><span class="w"> </span><span class="n">number</span><span class="w"></span>
-<span class="w"> </span><span class="mi">32</span><span class="w"></span>
-<span class="n">Enter</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">third</span><span class="w"> </span><span class="n">number</span><span class="w"></span>
-<span class="w"> </span><span class="mi">56</span><span class="w"></span>
-<span class="n">A</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">less</span><span class="w"> </span><span class="n">than</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">less</span><span class="w"> </span><span class="n">than</span><span class="w"> </span><span class="n">C</span><span class="w"></span>
-<span class="n">A</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">greater</span><span class="w"> </span><span class="n">than</span><span class="w"> </span><span class="n">B</span><span class="w"></span>
-<span class="n">B</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">greater</span><span class="w"> </span><span class="n">than</span><span class="w"> </span><span class="n">C</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="n">number</span>
+<span class="w"> </span><span class="mi">15</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">second</span><span class="w"> </span><span class="n">number</span>
+<span class="w"> </span><span class="mi">32</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">third</span><span class="w"> </span><span class="n">number</span>
+<span class="w"> </span><span class="mi">56</span>
+<span class="n">A</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">less</span><span class="w"> </span><span class="n">than</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">less</span><span class="w"> </span><span class="n">than</span><span class="w"> </span><span class="n">C</span>
+<span class="n">A</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">greater</span><span class="w"> </span><span class="n">than</span><span class="w"> </span><span class="n">B</span>
+<span class="n">B</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">greater</span><span class="w"> </span><span class="n">than</span><span class="w"> </span><span class="n">C</span>
 </pre></div>
 </div>
 </section>
@@ -811,21 +811,21 @@ shippingCost is $7.50 and add 1 day to shippingDays.</p></li>
 <h3>EXTRA CREDIT: Guess Checker<a class="headerlink" href="#extra-credit-guess-checker" title="Permalink to this heading">#</a></h3>
 <p>This extra credit assignment will be categorized as a Projects/ Presentations.</p>
 <p><strong>Directions:</strong> Update GuessChecker to use compound Boolean statements.  Give the user at minimum three opportunities to guess the correct answer and print out how many of the remaining guesses they have.  Submit your program as a replit on Canvas.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="mi">9782</span><span class="w"></span>
-<span class="n">Guess</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="mi">4</span><span class="o">-</span><span class="n">digit</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="mi">9999</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">duplicate</span><span class="w"> </span><span class="n">digits</span><span class="p">:</span><span class="w">  </span><span class="mi">9728</span><span class="w"></span>
-<span class="n">Number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">hits</span><span class="p">:</span><span class="mi">2</span><span class="w"></span>
-<span class="n">Number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">near</span><span class="w"> </span><span class="n">hits</span><span class="p">:</span><span class="mi">2</span><span class="w"></span>
-<span class="n">You</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">guesses</span><span class="w"> </span><span class="n">remaining</span><span class="p">.</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="mi">9782</span>
+<span class="n">Guess</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="mi">4</span><span class="o">-</span><span class="n">digit</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="mi">9999</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">duplicate</span><span class="w"> </span><span class="n">digits</span><span class="p">:</span><span class="w">  </span><span class="mi">9728</span>
+<span class="n">Number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">hits</span><span class="p">:</span><span class="mi">2</span>
+<span class="n">Number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">near</span><span class="w"> </span><span class="n">hits</span><span class="p">:</span><span class="mi">2</span>
+<span class="n">You</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">guesses</span><span class="w"> </span><span class="n">remaining</span><span class="p">.</span>
 
-<span class="n">Guess</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="mi">4</span><span class="o">-</span><span class="n">digit</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="mi">9999</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">duplicate</span><span class="w"> </span><span class="n">digits</span><span class="p">:</span><span class="w">  </span><span class="mi">7928</span><span class="w"></span>
-<span class="n">Number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">hits</span><span class="p">:</span><span class="mi">0</span><span class="w"></span>
-<span class="n">Number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">near</span><span class="w"> </span><span class="n">hits</span><span class="p">:</span><span class="mi">4</span><span class="w"></span>
-<span class="n">You</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">guesses</span><span class="w"> </span><span class="n">remaining</span><span class="p">.</span><span class="w"></span>
+<span class="n">Guess</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="mi">4</span><span class="o">-</span><span class="n">digit</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="mi">9999</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">duplicate</span><span class="w"> </span><span class="n">digits</span><span class="p">:</span><span class="w">  </span><span class="mi">7928</span>
+<span class="n">Number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">hits</span><span class="p">:</span><span class="mi">0</span>
+<span class="n">Number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">near</span><span class="w"> </span><span class="n">hits</span><span class="p">:</span><span class="mi">4</span>
+<span class="n">You</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">guesses</span><span class="w"> </span><span class="n">remaining</span><span class="p">.</span>
 
-<span class="n">Guess</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="mi">4</span><span class="o">-</span><span class="n">digit</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="mi">9999</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">duplicate</span><span class="w"> </span><span class="n">digits</span><span class="p">:</span><span class="w">  </span><span class="mi">9782</span><span class="w"></span>
-<span class="n">Number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">hits</span><span class="p">:</span><span class="mi">4</span><span class="w"></span>
-<span class="n">Number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">near</span><span class="w"> </span><span class="n">hits</span><span class="p">:</span><span class="mi">0</span><span class="w"></span>
-<span class="n">You</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">guesses</span><span class="w"> </span><span class="n">remaining</span><span class="p">.</span><span class="w"></span>
+<span class="n">Guess</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="mi">4</span><span class="o">-</span><span class="n">digit</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="mi">9999</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">duplicate</span><span class="w"> </span><span class="n">digits</span><span class="p">:</span><span class="w">  </span><span class="mi">9782</span>
+<span class="n">Number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">hits</span><span class="p">:</span><span class="mi">4</span>
+<span class="n">Number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">near</span><span class="w"> </span><span class="n">hits</span><span class="p">:</span><span class="mi">0</span>
+<span class="n">You</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">guesses</span><span class="w"> </span><span class="n">remaining</span><span class="p">.</span>
 </pre></div>
 </div>
 </section>
@@ -955,23 +955,23 @@ NOT (a OR b) evaluates to false
 <li><p>Find the equivalent compound Boolean expression in one of your truth tables and use it to create the or version.</p></li>
 </ul>
 <p><strong>Sample Output</strong></p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">//program with a negative input</span><span class="w"></span>
-<span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">X</span><span class="w"></span>
-<span class="w"> </span><span class="o">-</span><span class="mi">5</span><span class="w"></span>
-<span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">Y</span><span class="w"></span>
-<span class="w"> </span><span class="mi">19</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">//program with a negative input</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">X</span>
+<span class="w"> </span><span class="o">-</span><span class="mi">5</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">Y</span>
+<span class="w"> </span><span class="mi">19</span>
 <span class="n">Checking</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">both</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">negative</span><span class="w"> </span><span class="p">...</span><span class="w"> </span>
-<span class="n">at</span><span class="w"> </span><span class="n">least</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">negative</span><span class="w"></span>
-<span class="n">at</span><span class="w"> </span><span class="n">least</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">negative</span><span class="w"></span>
+<span class="n">at</span><span class="w"> </span><span class="n">least</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">negative</span>
+<span class="n">at</span><span class="w"> </span><span class="n">least</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">negative</span>
 
-<span class="c1">//program with positive inputs</span><span class="w"></span>
-<span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">X</span><span class="w"></span>
-<span class="w"> </span><span class="mi">5</span><span class="w"></span>
-<span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">Y</span><span class="w"></span>
-<span class="w"> </span><span class="mi">15</span><span class="w"></span>
+<span class="c1">//program with positive inputs</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">X</span>
+<span class="w"> </span><span class="mi">5</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">Y</span>
+<span class="w"> </span><span class="mi">15</span>
 <span class="n">Checking</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">both</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">negative</span><span class="w"> </span><span class="p">...</span><span class="w"> </span>
-<span class="n">Both</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">negative</span><span class="w"></span>
-<span class="n">Both</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">negative</span><span class="w"></span>
+<span class="n">Both</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">negative</span>
+<span class="n">Both</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">negative</span>
 </pre></div>
 </div>
 <p>Submit your assignment as a replit on Canvas.</p>
@@ -1005,22 +1005,22 @@ NOT (a OR b) evaluates to false
 </section>
 <section id="aliasing">
 <h3>Aliasing<a class="headerlink" href="#aliasing" title="Permalink to this heading">#</a></h3>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ShapeEquals</span><span class="w"></span>
-<span class="mi">2</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ShapeEquals</span>
+<span class="mi">2</span><span class="w"> </span><span class="p">{</span>
 <span class="mi">3</span><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span>
-<span class="mi">4</span><span class="w">  </span><span class="p">{</span><span class="w"></span>
-<span class="mi">5</span><span class="w">    </span><span class="n">Shape</span><span class="w"> </span><span class="n">shape1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Shape</span><span class="p">();</span><span class="w"></span>
-<span class="mi">6</span><span class="w">    </span><span class="n">shape1</span><span class="p">.</span><span class="na">setShape</span><span class="p">(</span><span class="s">&quot;Triangle&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
+<span class="mi">4</span><span class="w">  </span><span class="p">{</span>
+<span class="mi">5</span><span class="w">    </span><span class="n">Shape</span><span class="w"> </span><span class="n">shape1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Shape</span><span class="p">();</span>
+<span class="mi">6</span><span class="w">    </span><span class="n">shape1</span><span class="p">.</span><span class="na">setShape</span><span class="p">(</span><span class="s">&quot;Triangle&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
 <span class="mi">7</span><span class="w">  </span>
-<span class="mi">8</span><span class="w">    </span><span class="n">Shape</span><span class="w"> </span><span class="n">shape2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Shape</span><span class="p">();</span><span class="w"></span>
-<span class="mi">9</span><span class="w">    </span><span class="n">shape2</span><span class="p">.</span><span class="na">setShape</span><span class="p">(</span><span class="s">&quot;Square&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span><span class="w"></span>
+<span class="mi">8</span><span class="w">    </span><span class="n">Shape</span><span class="w"> </span><span class="n">shape2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Shape</span><span class="p">();</span>
+<span class="mi">9</span><span class="w">    </span><span class="n">shape2</span><span class="p">.</span><span class="na">setShape</span><span class="p">(</span><span class="s">&quot;Square&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span>
 <span class="mi">10</span><span class="w">  </span>
-<span class="mi">11</span><span class="w">   </span><span class="n">Shape</span><span class="w"> </span><span class="n">shape3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">shape1</span><span class="p">;</span><span class="w"> </span><span class="o">&lt;---</span><span class="w"></span>
-<span class="mi">12</span><span class="w">    </span><span class="n">shape3</span><span class="p">.</span><span class="na">setShape</span><span class="p">(</span><span class="s">&quot;Hexagon&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">);</span><span class="w"> </span><span class="o">&lt;---</span><span class="w"></span>
+<span class="mi">11</span><span class="w">   </span><span class="n">Shape</span><span class="w"> </span><span class="n">shape3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">shape1</span><span class="p">;</span><span class="w"> </span><span class="o">&lt;---</span>
+<span class="mi">12</span><span class="w">    </span><span class="n">shape3</span><span class="p">.</span><span class="na">setShape</span><span class="p">(</span><span class="s">&quot;Hexagon&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">);</span><span class="w"> </span><span class="o">&lt;---</span>
 <span class="mi">13</span><span class="w">    </span>
-<span class="mi">14</span><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">shape1</span><span class="p">.</span><span class="na">getShape</span><span class="p">());</span><span class="w"></span>
-<span class="mi">15</span><span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="mi">16</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="mi">14</span><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">shape1</span><span class="p">.</span><span class="na">getShape</span><span class="p">());</span>
+<span class="mi">15</span><span class="w">  </span><span class="p">}</span>
+<span class="mi">16</span><span class="w"> </span><span class="p">}</span>
 </pre></div>
 </div>
 <p>Take a look at the program above.  Looking at the program, you may have thought that the output of “shape1” would display “Triangle”.  Look carefully at lines 11 and 12. When <code class="docutils literal notranslate"><span class="pre">shape3</span></code> is set to <code class="docutils literal notranslate"><span class="pre">shape1</span></code>, <code class="docutils literal notranslate"><span class="pre">shape3</span></code> points to the same address in memory as <code class="docutils literal notranslate"><span class="pre">shape1</span></code>. Any changes to <code class="docutils literal notranslate"><span class="pre">shape1</span></code> or <code class="docutils literal notranslate"><span class="pre">shape3</span></code> will change the contents of the memory, thereby changing the values of both variables. In Java, this is known as aliasing.</p>
@@ -1053,26 +1053,26 @@ check() should only get called if our guess isn&#39;t 100% correct
 <li><p>Allow the user to iterate through the program to pick the correct Suspect, Weapon and Room</p></li>
 </ul>
 <p><strong>Sample Output:</strong></p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Welcome</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">Clue</span><span class="o">!</span><span class="w"> </span><span class="n">Choose</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">category</span><span class="p">.</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Welcome</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">Clue</span><span class="o">!</span><span class="w"> </span><span class="n">Choose</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">category</span><span class="p">.</span>
 
-<span class="n">Suspect</span><span class="w">     	</span><span class="n">Weapon</span><span class="w">      	</span><span class="n">Room</span><span class="w"></span>
-<span class="n">Miss</span><span class="w"> </span><span class="n">Scarlett</span><span class="w">   </span><span class="n">Candlestick</span><span class="w">     </span><span class="n">Kitchen</span><span class="w"></span>
-<span class="n">Mr</span><span class="p">.</span><span class="w"> </span><span class="n">Green</span><span class="w">   	</span><span class="n">Knife</span><span class="w">       	</span><span class="n">Ballroom</span><span class="w"></span>
-<span class="n">Colonel</span><span class="w"> </span><span class="n">Mustard</span><span class="w"> </span><span class="n">Lead</span><span class="w"> </span><span class="n">Pipe</span><span class="w">   	</span><span class="n">Conservatory</span><span class="w"></span>
-<span class="n">Professor</span><span class="w"> </span><span class="n">Plum</span><span class="w">  </span><span class="n">Revolver</span><span class="w">    	</span><span class="n">Billiard</span><span class="w"> </span><span class="n">Room</span><span class="w"></span>
-<span class="n">Mrs</span><span class="p">.</span><span class="w"> </span><span class="n">Peacock</span><span class="w">    </span><span class="n">Rope</span><span class="w">        	</span><span class="n">Library</span><span class="w"></span>
-<span class="n">Mrs</span><span class="p">.</span><span class="w"> </span><span class="n">White</span><span class="w">  	</span><span class="n">Wrench</span><span class="w">      	</span><span class="n">Study</span><span class="w"></span>
-<span class="w">                		</span><span class="n">Hall</span><span class="w"></span>
-<span class="w">                		</span><span class="n">Lounge</span><span class="w"></span>
-<span class="w">                		</span><span class="n">Dining</span><span class="w"> </span><span class="n">Room</span><span class="w"></span>
+<span class="n">Suspect</span><span class="w">     	</span><span class="n">Weapon</span><span class="w">      	</span><span class="n">Room</span>
+<span class="n">Miss</span><span class="w"> </span><span class="n">Scarlett</span><span class="w">   </span><span class="n">Candlestick</span><span class="w">     </span><span class="n">Kitchen</span>
+<span class="n">Mr</span><span class="p">.</span><span class="w"> </span><span class="n">Green</span><span class="w">   	</span><span class="n">Knife</span><span class="w">       	</span><span class="n">Ballroom</span>
+<span class="n">Colonel</span><span class="w"> </span><span class="n">Mustard</span><span class="w"> </span><span class="n">Lead</span><span class="w"> </span><span class="n">Pipe</span><span class="w">   	</span><span class="n">Conservatory</span>
+<span class="n">Professor</span><span class="w"> </span><span class="n">Plum</span><span class="w">  </span><span class="n">Revolver</span><span class="w">    	</span><span class="n">Billiard</span><span class="w"> </span><span class="n">Room</span>
+<span class="n">Mrs</span><span class="p">.</span><span class="w"> </span><span class="n">Peacock</span><span class="w">    </span><span class="n">Rope</span><span class="w">        	</span><span class="n">Library</span>
+<span class="n">Mrs</span><span class="p">.</span><span class="w"> </span><span class="n">White</span><span class="w">  	</span><span class="n">Wrench</span><span class="w">      	</span><span class="n">Study</span>
+<span class="w">                		</span><span class="n">Hall</span>
+<span class="w">                		</span><span class="n">Lounge</span>
+<span class="w">                		</span><span class="n">Dining</span><span class="w"> </span><span class="n">Room</span>
 
-<span class="n">Make</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">accusation</span><span class="p">,</span><span class="w"> </span><span class="n">separated</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">enter</span><span class="w"> </span><span class="n">key</span><span class="p">:</span><span class="w"></span>
-<span class="n">Miss</span><span class="w"> </span><span class="n">Scarlett</span><span class="w"></span>
-<span class="n">Knife</span><span class="w"></span>
-<span class="n">Kitchen</span><span class="w"></span>
+<span class="n">Make</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">accusation</span><span class="p">,</span><span class="w"> </span><span class="n">separated</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">enter</span><span class="w"> </span><span class="n">key</span><span class="p">:</span>
+<span class="n">Miss</span><span class="w"> </span><span class="n">Scarlett</span>
+<span class="n">Knife</span>
+<span class="n">Kitchen</span>
 
-<span class="n">Congratulations</span><span class="o">!</span><span class="w"></span>
-<span class="n">It</span><span class="w"> </span><span class="n">was</span><span class="w"> </span><span class="n">Miss</span><span class="w"> </span><span class="n">Scarlett</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Knife</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Kitchen</span><span class="w"></span>
+<span class="n">Congratulations</span><span class="o">!</span>
+<span class="n">It</span><span class="w"> </span><span class="n">was</span><span class="w"> </span><span class="n">Miss</span><span class="w"> </span><span class="n">Scarlett</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Knife</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Kitchen</span>
 </pre></div>
 </div>
 <details><summary>New Java keyWord: switch</summary>
@@ -1227,9 +1227,7 @@ This can be done by setting Boolean variables or executing different sections of
             
           </div>
           <div class="right-details">
-            <div class="icons">
-              
-            </div>
+            
           </div>
         </div>
         
@@ -1289,9 +1287,6 @@ This can be done by setting Boolean variables or executing different sections of
     </aside>
   </div>
 </div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/scripts/furo.js"></script>
