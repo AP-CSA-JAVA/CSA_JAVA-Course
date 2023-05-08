@@ -48,7 +48,47 @@ Object-oriented Programming Facts:
 
 The next two concepts will be used in most of your programs moving forward.  Read through **constructor** and **toString()** below.
 
-A **constructor** in Java is a special method that is used to initialize objects. The constructor is called when an object of a class is created. It can be used to set the initial values for object attributes.  It is possible to write two or more constructors within a program.  The difference between the constructors are the *parameters* that are defined within the constructor itself.  This is known as constructor **overloading**.
+### Unit 5.2 - Constructors 
+
+A **constructor** in Java is a special method that is used to initialize objects. The constructor is called when an object of a class is created. It can be used to set the initial values for object attributes/variable names<sup>1</sup>.  It is possible to write two or more constructors within a program.  The difference between the constructors are the *parameters* that are defined within the constructor itself.  This is known as constructor **overloading**. 
+
+Java is a *pass-by-value* language.  If we pass a primitive value, we are passing a copy of that value. So, if we change the value inside a constructor, the value outside the constructor doesn't change.  However, if we are passing a reference type, we are passing a reference to the data location.  If we modify the parameter values inside a constructor, then the object changes outside the constructor too!
+
+The Box class is located in the file Box.java where you can find the constructor(s).  The signature of the constructor is the class name along with the parameter list, if any.  If you recall from your prior CS courses the word 'abstraction'.  We are taking the complexity out of the action for the user.  The user does not need to know how constructors work, they just need to know that it does what it is supposed to do within the program.
+
+If you use the constructor signature incorrectly, you may get an **IllegalArgumentException**.  Take for example you create a constructor called *Student*.  The *Student* class has parameters *int age, String name, and double gpa*.  If you alter the order of the variables within the parameter, it will return an error.
+
+The **default constructor** is the constructor with no parameters in the parameter list. So, if an overloaded constructor is missing a parameter, then the predetermined value will default to the default constructor.
+
+### Null Objects
+Null is a reserved keyword in Java for literal values. It is a value that shows that the object is referring to nothing.  You cannot call an object that has been declared as *null* since there is not characteristics of that object.  This will create a **NullPointerException** error.  Java, variables of reference types (such as classes and arrays) hold a reference to an object in memory, rather than the actual object itself. This reference is a memory address that points to the location in memory where the object is stored.  If there is no object associated with a reference type, the value of said type is null, which indicates that the variable does not currently reference any object.
+
+Example:
+```
+    /* missing code */
+    Cake emptyCar = null;
+    
+    Cake myCar = new Car(2.0);
+    Cake yourCar = new Car();
+    Cake ourCar = new Car(2);
+    
+    System.out.println("myCar=" + myCar);
+    System.out.println("yourCar=" + yourCar);
+    System.out.println("ourCar=" + ourCar);
+    System.out.println("emptyCar=" +emptyCar);
+```
+Sample Outcome:
+```
+    myCar=Car@6d06d69c
+    yourCar=Car@7852e922
+    ourCar=Car@4e25154f
+    emptyCar=null
+``` 
+
+
+<sup>1 *Object names follow the same rules as variable names (because they can also be used as variables), and also follow camel-case naming conventions, where the first letter is lowercase while the first letter of any other words are uppercase.* </sup>
+
+
 
 ![Constructors_image](https://user-images.githubusercontent.com/12989939/195926575-c2a49adc-afdb-4ef0-91e1-c5d93fb54539.PNG)
 
