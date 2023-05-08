@@ -278,11 +278,12 @@ Object-oriented Programming Facts:</p>
 <p>Null is a reserved keyword in Java for literal values. It is a value that shows that the object is referring to nothing.  You cannot call an object that has been declared as <em>null</em> since there is not characteristics of that object.  This will create a <strong>NullPointerException</strong> error.  Java, variables of reference types (such as classes and arrays) hold a reference to an object in memory, rather than the actual object itself. This reference is a memory address that points to the location in memory where the object is stored.  If there is no object associated with a reference type, the value of said type is null, which indicates that the variable does not currently reference any object.</p>
 <p>Example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="o">/*</span> <span class="n">missing</span> <span class="n">code</span> <span class="o">*/</span>
-    <span class="n">Cake</span> <span class="n">emptyCar</span> <span class="o">=</span> <span class="n">null</span><span class="p">;</span>
     
-    <span class="n">Cake</span> <span class="n">myCar</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Car</span><span class="p">(</span><span class="mf">2.0</span><span class="p">);</span>
-    <span class="n">Cake</span> <span class="n">yourCar</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Car</span><span class="p">();</span>
-    <span class="n">Cake</span> <span class="n">ourCar</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Car</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+    <span class="n">Car</span> <span class="n">emptyCar</span> <span class="o">=</span> <span class="n">null</span><span class="p">;</span>
+    
+    <span class="n">Car</span> <span class="n">myCar</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Car</span><span class="p">(</span><span class="mf">5.6</span><span class="p">);</span>
+    <span class="n">Car</span> <span class="n">yourCar</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Car</span><span class="p">();</span>
+    <span class="n">Car</span> <span class="n">ourCar</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Car</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
     
     <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;myCar=&quot;</span> <span class="o">+</span> <span class="n">myCar</span><span class="p">);</span>
     <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;yourCar=&quot;</span> <span class="o">+</span> <span class="n">yourCar</span><span class="p">);</span>
