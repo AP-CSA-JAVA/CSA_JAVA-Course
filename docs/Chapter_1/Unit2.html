@@ -265,7 +265,39 @@ Object-oriented Programming Facts:</p>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use variables to represent object references</p></li>
 </ul>
 <p>The next two concepts will be used in most of your programs moving forward.  Read through <strong>constructor</strong> and <strong>toString()</strong> below.</p>
-<p>A <strong>constructor</strong> in Java is a special method that is used to initialize objects. The constructor is called when an object of a class is created. It can be used to set the initial values for object attributes.  It is possible to write two or more constructors within a program.  The difference between the constructors are the <em>parameters</em> that are defined within the constructor itself.  This is known as constructor <strong>overloading</strong>.</p>
+<section id="unit-5-2-constructors">
+<h3>Unit 5.2 - Constructors<a class="headerlink" href="#unit-5-2-constructors" title="Permalink to this heading">#</a></h3>
+<p>A <strong>constructor</strong> in Java is a special method that is used to initialize objects. The constructor is called when an object of a class is created. It can be used to set the initial values for object attributes/variable names<sup>1</sup>.  It is possible to write two or more constructors within a program.  The difference between the constructors are the <em>parameters</em> that are defined within the constructor itself.  This is known as constructor <strong>overloading</strong>.</p>
+<p>Java is a <em>pass-by-value</em> language.  If we pass a primitive value, we are passing a copy of that value. So, if we change the value inside a constructor, the value outside the constructor doesn’t change.  However, if we are passing a reference type, we are passing a reference to the data location.  If we modify the parameter values inside a constructor, then the object changes outside the constructor too!</p>
+<p>The Box class is located in the file Box.java where you can find the constructor(s).  The signature of the constructor is the class name along with the parameter list, if any.  If you recall from your prior CS courses the word ‘abstraction’.  We are taking the complexity out of the action for the user.  The user does not need to know how constructors work, they just need to know that it does what it is supposed to do within the program.</p>
+<p>If you use the constructor signature incorrectly, you may get an <strong>IllegalArgumentException</strong>.  Take for example you create a constructor called <em>Student</em>.  The <em>Student</em> class has parameters <em>int age, String name, and double gpa</em>.  If you alter the order of the variables within the parameter, it will return an error.</p>
+<p>The <strong>default constructor</strong> is the constructor with no parameters in the parameter list. So, if an overloaded constructor is missing a parameter, then the predetermined value will default to the default constructor.</p>
+</section>
+<section id="null-objects">
+<h3>Null Objects<a class="headerlink" href="#null-objects" title="Permalink to this heading">#</a></h3>
+<p>Null is a reserved keyword in Java for literal values. It is a value that shows that the object is referring to nothing.  You cannot call an object that has been declared as <em>null</em> since there is not characteristics of that object.  This will create a <strong>NullPointerException</strong> error.  Java, variables of reference types (such as classes and arrays) hold a reference to an object in memory, rather than the actual object itself. This reference is a memory address that points to the location in memory where the object is stored.  If there is no object associated with a reference type, the value of said type is null, which indicates that the variable does not currently reference any object.</p>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="o">/*</span> <span class="n">missing</span> <span class="n">code</span> <span class="o">*/</span>
+    <span class="n">Cake</span> <span class="n">emptyCar</span> <span class="o">=</span> <span class="n">null</span><span class="p">;</span>
+    
+    <span class="n">Cake</span> <span class="n">myCar</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Car</span><span class="p">(</span><span class="mf">2.0</span><span class="p">);</span>
+    <span class="n">Cake</span> <span class="n">yourCar</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Car</span><span class="p">();</span>
+    <span class="n">Cake</span> <span class="n">ourCar</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Car</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+    
+    <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;myCar=&quot;</span> <span class="o">+</span> <span class="n">myCar</span><span class="p">);</span>
+    <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;yourCar=&quot;</span> <span class="o">+</span> <span class="n">yourCar</span><span class="p">);</span>
+    <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;ourCar=&quot;</span> <span class="o">+</span> <span class="n">ourCar</span><span class="p">);</span>
+    <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;emptyCar=&quot;</span> <span class="o">+</span><span class="n">emptyCar</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Sample Outcome:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">myCar</span><span class="o">=</span><span class="n">Car</span><span class="o">@</span><span class="mi">6</span><span class="n">d06d69c</span>
+    <span class="n">yourCar</span><span class="o">=</span><span class="n">Car</span><span class="o">@</span><span class="mf">7852e922</span>
+    <span class="n">ourCar</span><span class="o">=</span><span class="n">Car</span><span class="o">@</span><span class="mf">4e25154</span><span class="n">f</span>
+    <span class="n">emptyCar</span><span class="o">=</span><span class="n">null</span>
+</pre></div>
+</div>
+<p><sup>1 <em>Object names follow the same rules as variable names (because they can also be used as variables), and also follow camel-case naming conventions, where the first letter is lowercase while the first letter of any other words are uppercase.</em> </sup></p>
 <p><img alt="Constructors_image" src="https://user-images.githubusercontent.com/12989939/195926575-c2a49adc-afdb-4ef0-91e1-c5d93fb54539.PNG" /></p>
 <p>Take a look at the example below:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Example of Overloading Constructors </span>
@@ -419,6 +451,7 @@ You can do the following:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
+</section>
 <section id="sample-output">
 <h3>Sample Output<a class="headerlink" href="#sample-output" title="Permalink to this heading">#</a></h3>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span>
@@ -1994,6 +2027,8 @@ Your program should allow a user to enter values that change the output of a sto
 </ul>
 </li>
 <li><a class="reference internal" href="#creating-and-storing-objects">Creating and Storing Objects</a><ul>
+<li><a class="reference internal" href="#unit-5-2-constructors">Unit 5.2 - Constructors</a></li>
+<li><a class="reference internal" href="#null-objects">Null Objects</a></li>
 <li><a class="reference internal" href="#sample-output">Sample Output</a></li>
 <li><a class="reference internal" href="#id1">Sample Output</a></li>
 <li><a class="reference internal" href="#assignment-1">Assignment 1</a></li>
