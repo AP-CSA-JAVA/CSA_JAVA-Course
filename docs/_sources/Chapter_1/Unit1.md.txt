@@ -29,6 +29,24 @@ Lastly, make sure that the Main class is label correctly!  In this instance it w
 
 ![replit](https://user-images.githubusercontent.com/12989939/186237117-a3565f6b-bc38-4edd-be59-f787ed233668.PNG)
 
+
+Another method that you may find useful within replit is that you can create different programs and have them execute on the Main.java page.
+
+```java
+public class Main {
+  public static void main(String[] args) {
+    ProgramOne.main(args);
+    ProgramTwo.main(args);
+    ProgramThree.main(args);
+  }
+}
+```
+Example of this in use can be found [here](https://replit.com/@jonvirak/Activity-361-Array-Creation#Main.java).  Use this format for Assignment 2 and all future programs where you are asked to create two different programs.
+
+
+<p align="center">---------------------------------------------------------------------------- </p>
+
+
 ### Unit 5.3 Documentation with Comments
 
 Typing comments within your program is considered a professional practice, and I expect you to comment your code as appropriate throughtout the year.  When other people read your program, they may not understand the purpose of the variables and/ or methods in
@@ -346,19 +364,6 @@ Average days per person: 1620.0
 ```
 
 <p align="center">---------------------------------------------------------------------------- </p>
-
-When you are using replit, you can create different programs and have them execute on the Main.java page.
-
-```java
-public class Main {
-  public static void main(String[] args) {
-    ProgramOne.main(args);
-    ProgramTwo.main(args);
-    ProgramThree.main(args);
-  }
-}
-```
-Example of this in use can be found [here](https://replit.com/@jonvirak/Activity-361-Array-Creation#Main.java).  Use this format for Assignment 2 and all future programs where you are asked to create two different programs.
 
 ### Assignment 2
 #### Average Test Score
