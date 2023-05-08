@@ -66,11 +66,12 @@ Null is a reserved keyword in Java for literal values. It is a value that shows 
 Example:
 ```
     /* missing code */
-    Cake emptyCar = null;
     
-    Cake myCar = new Car(2.0);
-    Cake yourCar = new Car();
-    Cake ourCar = new Car(2);
+    Car emptyCar = null;
+    
+    Car myCar = new Car(5.6);
+    Car yourCar = new Car();
+    Car ourCar = new Car(2);
     
     System.out.println("myCar=" + myCar);
     System.out.println("yourCar=" + yourCar);
