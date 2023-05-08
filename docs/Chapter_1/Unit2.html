@@ -277,25 +277,25 @@ Object-oriented Programming Facts:</p>
 <h3>Null Objects<a class="headerlink" href="#null-objects" title="Permalink to this heading">#</a></h3>
 <p>Null is a reserved keyword in Java for literal values. It is a value that shows that the object is referring to nothing.  You cannot call an object that has been declared as <em>null</em> since there is not characteristics of that object.  This will create a <strong>NullPointerException</strong> error.  Java, variables of reference types (such as classes and arrays) hold a reference to an object in memory, rather than the actual object itself. This reference is a memory address that points to the location in memory where the object is stored.  If there is no object associated with a reference type, the value of said type is null, which indicates that the variable does not currently reference any object.</p>
 <p>Example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="o">/*</span> <span class="n">missing</span> <span class="n">code</span> <span class="o">*/</span>
-    
-    <span class="n">Car</span> <span class="n">emptyCar</span> <span class="o">=</span> <span class="n">null</span><span class="p">;</span>
-    
-    <span class="n">Car</span> <span class="n">myCar</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Car</span><span class="p">(</span><span class="mf">5.6</span><span class="p">);</span>
-    <span class="n">Car</span> <span class="n">yourCar</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Car</span><span class="p">();</span>
-    <span class="n">Car</span> <span class="n">ourCar</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Car</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-    
-    <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;myCar=&quot;</span> <span class="o">+</span> <span class="n">myCar</span><span class="p">);</span>
-    <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;yourCar=&quot;</span> <span class="o">+</span> <span class="n">yourCar</span><span class="p">);</span>
-    <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;ourCar=&quot;</span> <span class="o">+</span> <span class="n">ourCar</span><span class="p">);</span>
-    <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;emptyCar=&quot;</span> <span class="o">+</span><span class="n">emptyCar</span><span class="p">);</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="cm">/* missing code */</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">Car</span><span class="w"> </span><span class="n">emptyCar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">Car</span><span class="w"> </span><span class="n">myCar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Car</span><span class="p">(</span><span class="mf">5.6</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Car</span><span class="w"> </span><span class="n">yourCar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Car</span><span class="p">();</span>
+<span class="w">    </span><span class="n">Car</span><span class="w"> </span><span class="n">ourCar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Car</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;myCar=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">myCar</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;yourCar=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">yourCar</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;ourCar=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ourCar</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;emptyCar=&quot;</span><span class="w"> </span><span class="o">+</span><span class="n">emptyCar</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Sample Outcome:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">myCar</span><span class="o">=</span><span class="n">Car</span><span class="o">@</span><span class="mi">6</span><span class="n">d06d69c</span>
-    <span class="n">yourCar</span><span class="o">=</span><span class="n">Car</span><span class="o">@</span><span class="mf">7852e922</span>
-    <span class="n">ourCar</span><span class="o">=</span><span class="n">Car</span><span class="o">@</span><span class="mf">4e25154</span><span class="n">f</span>
-    <span class="n">emptyCar</span><span class="o">=</span><span class="n">null</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span>    myCar=Car@6d06d69c
+    yourCar=Car@7852e922
+    ourCar=Car@4e25154f
+    emptyCar=null
 </pre></div>
 </div>
 <p><sup>1 <em>Object names follow the same rules as variable names (because they can also be used as variables), and also follow camel-case naming conventions, where the first letter is lowercase while the first letter of any other words are uppercase.</em> </sup></p>
@@ -424,17 +424,6 @@ x = 10
 <p><em><strong>Output</strong></em></p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="mi">10</span>
 <span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span>
-</pre></div>
-</div>
-<hr class="docutils" />
-<p>The keyword <strong>null</strong> is a special value used to indicate that a reference variable is not associated with any object.
-You can do the following:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">	</span><span class="n">Demo</span><span class="w"> </span><span class="n">D2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
-<span class="w">	</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Storage Value = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">D2</span><span class="p">);</span>
-</pre></div>
-</div>
-<p><em><strong>Output</strong></em></p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="n">Storage</span><span class="w"> </span><span class="n">Value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span>
 </pre></div>
 </div>
 <hr class="docutils" />

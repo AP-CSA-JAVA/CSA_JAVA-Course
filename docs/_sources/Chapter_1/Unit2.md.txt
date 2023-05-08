@@ -64,7 +64,7 @@ The **default constructor** is the constructor with no parameters in the paramet
 Null is a reserved keyword in Java for literal values. It is a value that shows that the object is referring to nothing.  You cannot call an object that has been declared as *null* since there is not characteristics of that object.  This will create a **NullPointerException** error.  Java, variables of reference types (such as classes and arrays) hold a reference to an object in memory, rather than the actual object itself. This reference is a memory address that points to the location in memory where the object is stored.  If there is no object associated with a reference type, the value of said type is null, which indicates that the variable does not currently reference any object.
 
 Example:
-```
+```java
     /* missing code */
     
     Car emptyCar = null;
@@ -79,7 +79,7 @@ Example:
     System.out.println("emptyCar=" +emptyCar);
 ```
 Sample Outcome:
-```
+```java
     myCar=Car@6d06d69c
     yourCar=Car@7852e922
     ourCar=Car@4e25154f
@@ -227,20 +227,6 @@ class Main {
 x = 10
 ```
 
----------------------------------------------------------------
-
-
-The keyword **null** is a special value used to indicate that a reference variable is not associated with any object.
-You can do the following:
-```java
-	Demo D2 = null;
-	System.out.println("Storage Value = " + D2);
-```
-
-***Output***
-```java
-    Storage Value = null
-```
 
 ---------------------------------------------------------------
 
