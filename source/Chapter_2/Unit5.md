@@ -29,6 +29,8 @@ public class NewClass {
 ### 5.2 Constructors
 
 ### 5.3 Documentation with Comments
+This information can be found in: 
+[Unit 1: Primitive Types](https://ap-csa-java.github.io/CSA_JAVA-Course/Chapter_1/Unit1.html#unit-5-3-documentation-with-comments)
 
 ### 5.4 Accessor Methods
 
