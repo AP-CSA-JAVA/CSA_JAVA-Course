@@ -100,6 +100,8 @@ public class Main {
   } 
 } 
 ```
+**Output**
+`The instantiated value of x is 5`
 
 ### 5.10 Ethical and Social Implications of Computing Systems
 **Goals**
