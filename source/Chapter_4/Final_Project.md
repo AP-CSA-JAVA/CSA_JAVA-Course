@@ -17,20 +17,20 @@ Your White Tower Project is to design and develop a Java computer program of you
 ### Project schedule
 | Dates | Activity | Points |
 | :--- | :--- | :---: |
-| May 5 | Create and submit (in Discussions) a written project proposal: | Project Approval |
+| TBD | Create and submit (in Discussions) a written project proposal: | Project Approval |
 |  | -  Brainstorming Notes (extra credit) | 0 |
 |    |
 |  |Your Student Developed program must included: |   |
-|  | variables (appropriately named)| 5 |
-|  | arrays (appropriately named) | 5 |
-|  | nested iterations | 5 |
-|  | loops | 5 |
-|  | boolean logic | 5 |
-|  | constructors | 5 |
-|  | toString | 5 |
-|  | inheritance (Extra Credit:  Effectively demonstrate the use of inheritance) | 0 |
+|  | ***variables (appropriately named)*** | 5 |
+|  | ***arrays (appropriately named)*** | 5 |
+|  | ***nested iterations*** | 5 |
+|  | ***loops*** | 5 |
+|  | ***boolean logic*** | 5 |
+|  | ***constructors*** | 5 |
+|  | ***toString*** | 5 |
+|  | ***inheritance (Extra Credit:  Effectively demonstrate the use of inheritance)*** | 0 |
 |    |
-| June 1 | **Deliverables for your White Tower Project:** |  |
+| TBD | **Deliverables for your White Tower Project:** |  |
 |  | Submission of your written proposal (revised if needed) and/or documentation | 20 |
 |  | Program Code (Java Style Guide)  | 25 |
 |  | Video of your program running with narration | 20 |
