@@ -173,3 +173,6 @@ Computing systems and it's affect on society:
 - Accessibility: 
 - Censorship: 
 - Dependence: 
+
+### Assignment 5.10.1
+Research one of the topics above.  Write a reflection that discusses the pros and cons of the topic you chose.  Is it possible to achieve a balance that will benefit society?  If not, what led you to your conclusions?
