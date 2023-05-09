@@ -332,6 +332,62 @@ used to perform actions. In the NewClass class, we can create an instance variab
 </div>
 <p><strong>Output</strong>
 <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">instantiated</span> <span class="pre">value</span> <span class="pre">of</span> <span class="pre">x</span> <span class="pre">is</span> <span class="pre">5</span></code></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		 </span>
+<span class="w">      </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter your name &quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">next</span><span class="p">();</span>
+<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter your grade &quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+
+<span class="w">		    </span><span class="n">Student</span><span class="w"> </span><span class="n">std</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Student</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">grade</span><span class="p">);</span>
+<span class="w">		    </span><span class="n">Student</span><span class="w"> </span><span class="n">copyOfStd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Student</span><span class="p">().</span><span class="na">copyArgument</span><span class="p">(</span><span class="n">std</span><span class="p">);</span>
+<span class="w">      </span>
+<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Original object&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">std</span><span class="p">.</span><span class="na">showInfo</span><span class="p">();</span>
+<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Copied object&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">copyOfStd</span><span class="p">.</span><span class="na">showInfo</span><span class="p">();</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="cm">/* ------------------- Student Class File ------------------- */</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Student</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">   </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">grade</span><span class="p">;</span>
+<span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="nf">Student</span><span class="p">(){</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="nf">Student</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">grade</span><span class="p">){</span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="na">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">grade</span><span class="p">;</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="n">Student</span><span class="w"> </span><span class="nf">copyArgument</span><span class="p">(</span><span class="n">Student</span><span class="w"> </span><span class="n">std</span><span class="p">){</span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="p">.</span><span class="na">name</span><span class="p">;</span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="na">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="p">.</span><span class="na">grade</span><span class="p">;</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="p">;</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">showInfo</span><span class="p">(){</span>
+<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Name : &quot;</span><span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="p">);</span>
+<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Grade : &quot;</span><span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="na">grade</span><span class="p">);</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Output</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">name</span><span class="w"> </span>
+<span class="n">Samuel</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">grade</span><span class="w"> </span>
+<span class="mi">12</span>
+<span class="n">Original</span><span class="w"> </span><span class="n">object</span>
+<span class="n">Name</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Samuel</span>
+<span class="n">Grade</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">12</span>
+<span class="n">Copied</span><span class="w"> </span><span class="n">object</span>
+<span class="n">Name</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Samuel</span>
+<span class="n">Grade</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">12</span>
+</pre></div>
+</div>
 </section>
 <section id="ethical-and-social-implications-of-computing-systems">
 <h2>5.10 Ethical and Social Implications of Computing Systems<a class="headerlink" href="#ethical-and-social-implications-of-computing-systems" title="Permalink to this heading">#</a></h2>
