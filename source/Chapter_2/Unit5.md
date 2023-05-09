@@ -103,6 +103,64 @@ public class Main {
 **Output**
 `The instantiated value of x is 5`
 
+```java
+import java.util.Scanner;
+
+public class Main {
+   public static void main(String[] args) {
+		 
+      Scanner sc =new Scanner(System.in);
+      System.out.println("Enter your name ");
+      String name = sc.next();
+      System.out.println("Enter your grade ");
+      int grade = sc.nextInt();
+
+		    Student std = new Student(name, grade);
+		    Student copyOfStd = new Student().copyArgument(std);
+      
+      System.out.println("Original object");
+      std.showInfo();
+      System.out.println("Copied object");
+      copyOfStd.showInfo();
+   }
+}
+/* ------------------- Student Class File ------------------- */
+
+public class Student {
+   private String name;
+   private int grade;
+   public Student(){
+   }
+   public Student(String name, int grade){
+      this.name = name;
+      this.grade = grade;
+   }
+   public Student copyArgument(Student std){
+      this.name = std.name;
+      this.grade = std.grade;
+      return std;
+   }
+   public void showInfo(){
+      System.out.println("Name : "+this.name);
+      System.out.println("Grade : "+this.grade);
+   }
+}
+```
+**Output**
+```java
+Enter your name 
+Samuel
+Enter your grade 
+12
+Original object
+Name : Samuel
+Grade : 12
+Copied object
+Name : Samuel
+Grade : 12
+```
+
+
 ### 5.10 Ethical and Social Implications of Computing Systems
 **Goals**
 - Understand the ethical and social implications of computing systems.
