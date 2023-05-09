@@ -84,7 +84,7 @@ Please follow the convention shown below.</br>
 */
 ```
 
-### Assignment 1
+### Assignment 1.1.1
 
  ![76b4e00f998549e6a8717c6e5d5f0f1a](https://user-images.githubusercontent.com/12989939/162492248-21683f86-fc3f-4756-b78f-ddfe9373ab60.png)</br>
 Create the happy face image above using the following criteria:
@@ -96,7 +96,7 @@ Create the happy face image above using the following criteria:
 
 Please screenshot your code with result and include it in your Canvas assignment.
 
-### Assignment 2
+### Assignment 1.1.2
 #### Personal Timeline
 For this assignment, you will create a program that outputs a personal timeline of events in your life. The timeline will proceed vertically. Earlier events will be displayed nearer the top of the timeline while later events are displayed near the bottom.
 
@@ -146,7 +146,7 @@ When you declare a variable, you must state the variable type along with the var
 Once you have declared the variable type, you <b> do not need to do it again </b> to reassign a value to the variable.</br> Example:  </br>*int height = 72;</br>height = 70;*</br></br>
 If you declare a variable as *final* you cannot change the value of it.  We can refer to the *final* variable as immutable (unchanging).  Another variable norm is that *final* variables are written as ALL CAPS to remind you that they cannot change.</br> Example:</br> final double PI = 3.14159;</br></br>
 
-### Assignment 1
+### Assignment 1.2.1
 #### Allowance
 Write a program that will determine who receives an allowance or not.  Use the information below as a guide:
 - [ ] Allowance is always $30.00/ week
@@ -169,7 +169,7 @@ Michael's age is 20<br>
 Eligible for allowance? False<br>
 Michael's weekly allowance is $0.00<br>
 
-### Assignment 2
+### Assignment 1.2.2
 Use a Scanner object to create an input feature in your program.  Click on [Scanner_Input](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/8455326/Scanner_Input.pptx) to learn more.  An example of a Scanner Input can be found [here](https://replit.com/@jonvirak/JavaScannerBasics#Main.java).  Create four questions that will ask the user for a string, int, double, and a boolean.  From the user's response, you will return (print statement) a sentence that includes the data types listed above.  
 - [ ] string
 - [ ] int
@@ -218,7 +218,8 @@ In Java, the order of operation works pretty much the same with the exception of
 
 </details>
 
-### Assignment 1
+
+### Assignment 1.3.1
 #### Calculate your weight on Jupiter
 
 ```
@@ -261,7 +262,7 @@ this assignment.**
 | Uranus | 10.67 |
 | Neptune | 11.15 |
 
-### Assignment 2
+### Assignment 1.3.2
 #### Simple Math
 - [ ] Create a program that will ask the user for two distinct numbers (integers)
 - [ ] Use the scanner class to receive input from the user  
@@ -320,7 +321,7 @@ Java supports 11 compound-assignment operators, but for this course we will use 
  %=   assigns the remainder of the division.
  ```
 
-### Assignment 1
+### Assignment 1.4.1
 #### Compound Operators
 ```java
 
@@ -365,7 +366,7 @@ Average days per person: 1620.0
 
 <p align="center">---------------------------------------------------------------------------- </p>
 
-### Assignment 2
+### Assignment 1.4.2
 #### Average Test Score
 Directions: Write two programs that will do the following:
 
@@ -423,8 +424,7 @@ You will need to be familiar with some terms:
 - [ ] **widening** - converting from a smaller data type (int) to a larger data type (double).
 - [ ] **narrowing** - converting a larger data type (double) to a smaller data type (int).
 
-In this instance, we 'narrowed' the value of temp.  There is another term that you need to be familiar with and it is called **casting**.  Casting 
-is converting from one data type to another, such as from a *double* to an *int*, potentially losing information. Take a look at this program:
+In this instance, we 'narrowed' the value of temp.  There is another term that you need to be familiar with and it is called **casting**.  Casting is converting from one data type to another, such as from a *double* to an *int*, potentially losing information. Take a look at this program:
 ```java
 int eggs = 9;
 final int dozen = 12;// a dozen will not change
@@ -448,6 +448,7 @@ If you were to print the variables of eggs and down, you would see that the valu
 </p>
 </details>
 
+### Assignment 1.5.1
 You will explore the PlanetTravel program called FivePlanetTravel. The program is set up to plan a five-planet tour! STEP 15:
 ```
 /* 
