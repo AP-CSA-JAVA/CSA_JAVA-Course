@@ -1,5 +1,5 @@
 # White Tower Project
-
+  
 Your White Tower Project is to design and develop a Java computer program of your own/ group choosing that addresses a need at your school, club, or community.   Please note that you have a limited amount of time to complete this project. 
 
 ### RULES FOR THE PROJECT:
@@ -16,7 +16,7 @@ Your White Tower Project is to design and develop a Java computer program of you
 
 ### Project schedule
 | Dates | Activity | Points |
-| :--- | :--- | :--- |
+| :--- | :--- | :---: |
 | May 5 | Create and submit (in Discussions) a written project proposal: | Project Approval |
 |  | -  Brainstorming Notes (extra credit) | 0 |
 |    |
