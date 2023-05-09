@@ -76,6 +76,31 @@ This information can be found in:
 **Goals**
 - Evaluate object reference expressions that use the keyword this.
 
+`this` keyword refers to the current object in a method.  It is plausible that attribute and parameters can have the same name.  The use of `this` allows you to refer to a *specific* instance of an object.  `this` can be used to:
+- invoke current method
+- invoke current constructor
+- return the current object
+- pass an argument to the call method
+- pass an argument to the call of a constructor
+
+```java
+public class Main {
+  // declaration of an int
+  int x = 2; 
+ 
+  // Constructor with a parameter
+  public Main(int x) { 
+    this.x = x; 
+  } 
+
+  // Calling the constructor
+  public static void main(String[] args)  { 
+    Main numObj = new Main(5); 
+    System.out.println("The instantiated value of x is " + numObj.x);
+  } 
+} 
+```
+
 ### 5.10 Ethical and Social Implications of Computing Systems
 **Goals**
 - Understand the ethical and social implications of computing systems.
