@@ -56,7 +56,6 @@ This information can be found in:
 
 ### 5.6 Writing Methods
 **Goals**
-- Evaluate object reference expressions that use the keyword this.
 - Define behaviors of an object using non-void class methods with parameters.
 - Create new types using classes.
 - Write code to complete code segments.
@@ -72,6 +71,10 @@ This information can be found in:
 **Goals**
 - Explain where variables can be used in a program
 
+
+### 5.9 this Keyword
+**Goals**
+- Evaluate object reference expressions that use the keyword this.
 
 ### 5.10 Ethical and Social Implications of Computing Systems
 **Goals**
