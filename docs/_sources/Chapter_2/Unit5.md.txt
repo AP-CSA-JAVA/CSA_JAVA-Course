@@ -80,8 +80,8 @@ This information can be found in:
     - Develop awareness around the ethical issues applying to internet service providers.
 
 Computing systems and it's affect on society: 
-• Privacy: 
-• Security: 
-• Accessibility: 
-• Censorship: 
-• Dependence: 
+- Privacy: 
+- Security: 
+- Accessibility: 
+- Censorship: 
+- Dependence: 
