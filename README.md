@@ -1,5 +1,5 @@
 <p align="center">*** This course is designed to prepare students to take the <b>AP Computer Science A </b>Exam *** </br>
-*** Excerpts from the course overview was taken from AP CollegeBoard ***</p>
+*** Excerpts from the course overview was taken from AP CollegeBoard ***</p> 
 
 # AP Computer Science A Course Overview 
 
