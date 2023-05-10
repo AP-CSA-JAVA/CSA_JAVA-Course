@@ -19,69 +19,8 @@ The following computational thinking practices describe what skills students sho
 <b>Documentation</b>: Describe the behavior and conditions thatproduce identified results in a program.</br>
 
 For this course we will be using various Integrated Development Environment (IDE) software to help you manage your programs, data files, & images.  Coding Rooms will be our primary online IDE for this course.  For your personal development and collaboration, you may want to use an online IDE that will allow you to collaborate with peers.  If you are using a personal laptop, a good desktop IDE to install is VS Code.  
-| Units | Exam Weighting |
-| ----- | -------------- |
-| Unit 1: Primitive Types | 2.5 - 5% |
-| Unit 2: Using Objects | 5 - 7.5% |
-| Unit 3: Boolean Expressions and if Statements | 15 -17.5% |
-| Unit 4: Iteration | 17.5 - 22% |
-| Unit 5: Writing Classes | 5 - 7.5% |
-| Unit 6: Array | 10 - 15% |
-| Unit 7: ArrayList | 2.5 - 7.5% |
-| Unit 8: 2D Array | 7.5 - 10% |
-| Unit 9: Inheritance | 5 - 10% |
-| Unit 10: Recursion | 5 - 7.5% |
-
 -------------------------------------------------------------------------------------------------------------
-
-
-### AP Computational Thinking Practices: Skills
-
-<details><summary>Click Here</summary>
- <p>
-
-
-| Practice 1: Program Design and Algorithm Development |
-| ---------------------------------------------------- |
-| **1.A** Determin an appropriate program design to solve a problem or accomplish a task (not assessed) |
-| **1.B** Determine code that would be used to complete code segments |
-| **1.C** Determine colde that would be used to interact with completed program code |
-
-
-| Practice 2: Code Logic |
-| ---------------------------------------------------- |
-| **2.A** Apply the meaning of specific operators |
-| **2.B** Determine the result or ouput based on statement execution order in a code segment without method calls (other than output) |
-| **2.C** Determin the result or output based on the statement execution order in a code segment containing method calls |
-| **2.D** Determine the number of times a code segment will execute |
-
-
-| Practice 3: Code Implementation |
-| ---------------------------------------------------- |
-| **3.A** Write program code to create objects of a class and call methods |
-| **3.B** Write program code to design a new type by creating a class |
-| **3.C** Write program code to satisfy method specifications using expressions, conditional statements, and iterative statements |
-| **3.D** Write program code to create, traverse, and manipulate elements in 1D or ArrayList objects |
-| **3.E** Write program code to create, traverse and manipulate elements in 2D array objects |
-
-| Practice 4: Code Testing |
-| ---------------------------------------------------- |
-| **4.A** Use test-cases to find errors or validate results |
-| **4.B** Identify errors in program code |
-| **4.C** Determine if two or more code segments yield equivalent results |
-
-
-| Practice 5:  Documentation |
-| ---------------------------------------------------- |
-| **5.A** Describe the behavior of a given segment of program code |
-| **5.B** Explain why a code segment will not compile or work as intended |
-| **5.C** Explain how the result of program code changes, given a change to the initial code |
-| **5.D** Describe the initial conditions that must be met for a program segment to work as intended or described |
-
-
- </p></details>
- 
- -------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------
  
 
 ## TABLE OF CONTENTS
@@ -125,6 +64,65 @@ The course content is organized into ten commonly taught units:</br>
 | Project: Choose Your Path |  |  |
 | **Problem:** Escape Room |  |  |
 
+ </p></details>
+ 
+## AP Computational Thinking Practices: Skills
+
+<details><summary>Click Here</summary>
+ <p>
+
+
+| Practice 1: Program Design and Algorithm Development |
+| ---------------------------------------------------- |
+| **1.A** Determin an appropriate program design to solve a problem or accomplish a task (not assessed) |
+| **1.B** Determine code that would be used to complete code segments |
+| **1.C** Determine colde that would be used to interact with completed program code |
+
+
+| Practice 2: Code Logic |
+| ---------------------------------------------------- |
+| **2.A** Apply the meaning of specific operators |
+| **2.B** Determine the result or ouput based on statement execution order in a code segment without method calls (other than output) |
+| **2.C** Determin the result or output based on the statement execution order in a code segment containing method calls |
+| **2.D** Determine the number of times a code segment will execute |
+
+
+| Practice 3: Code Implementation |
+| ---------------------------------------------------- |
+| **3.A** Write program code to create objects of a class and call methods |
+| **3.B** Write program code to design a new type by creating a class |
+| **3.C** Write program code to satisfy method specifications using expressions, conditional statements, and iterative statements |
+| **3.D** Write program code to create, traverse, and manipulate elements in 1D or ArrayList objects |
+| **3.E** Write program code to create, traverse and manipulate elements in 2D array objects |
+
+| Practice 4: Code Testing |
+| ---------------------------------------------------- |
+| **4.A** Use test-cases to find errors or validate results |
+| **4.B** Identify errors in program code |
+| **4.C** Determine if two or more code segments yield equivalent results |
+
+
+| Practice 5:  Documentation |
+| ---------------------------------------------------- |
+| **5.A** Describe the behavior of a given segment of program code |
+| **5.B** Explain why a code segment will not compile or work as intended |
+| **5.C** Explain how the result of program code changes, given a change to the initial code |
+| **5.D** Describe the initial conditions that must be met for a program segment to work as intended or described |
+
+| Units | Exam Weighting |
+| ----- | -------------- |
+| Unit 1: Primitive Types | 2.5 - 5% |
+| Unit 2: Using Objects | 5 - 7.5% |
+| Unit 3: Boolean Expressions and if Statements | 15 -17.5% |
+| Unit 4: Iteration | 17.5 - 22% |
+| Unit 5: Writing Classes | 5 - 7.5% |
+| Unit 6: Array | 10 - 15% |
+| Unit 7: ArrayList | 2.5 - 7.5% |
+| Unit 8: 2D Array | 7.5 - 10% |
+| Unit 9: Inheritance | 5 - 10% |
+| Unit 10: Recursion | 5 - 7.5% |
+  
+  
  </p></details>
 
 ## AP Computer Science A Vocabulary
