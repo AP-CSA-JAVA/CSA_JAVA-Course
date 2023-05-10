@@ -18,10 +18,12 @@ The following computational thinking practices describe what skills students sho
 <b>Code Testing</b>: Analyze program code for correctness, equivalence,and errors.</br>
 <b>Documentation</b>: Describe the behavior and conditions thatproduce identified results in a program.</br>
 
-For this course we will be using various Integrated Development Environment (IDE) software to help you manage your programs, data files, & images.  Coding Rooms will be our primary online IDE for this course.  For your personal development and collaboration, you may want to use an online IDE that will allow you to collaborate with peers.  If you are using a personal laptop, a good desktop IDE to install is VS Code.  
+For this course we will be using various Integrated Development Environment (IDE) software to help you manage your programs, data files, & images.  Coding Rooms will be our primary online IDE for this course.  For your personal development and collaboration, you may want to use an online IDE that will allow you to collaborate with peers.  If you are using a personal laptop, a good desktop IDE to install is VS Code. 
+
+
 -------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------
- 
+
 
 ## TABLE OF CONTENTS
 <details><summary>Click Here</summary>
