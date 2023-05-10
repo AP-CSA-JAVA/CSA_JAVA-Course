@@ -35,7 +35,7 @@ For this course we will be using various Integrated Development Environment (IDE
 -------------------------------------------------------------------------------------------------------------
 
 
-### Computational Thinking Practices: Skills
+### AP Computational Thinking Practices: Skills
 
 <details><summary>Click Here</summary>
  <p>
@@ -80,6 +80,9 @@ For this course we will be using various Integrated Development Environment (IDE
 
 
  </p></details>
+ 
+ -------------------------------------------------------------------------------------------------------------
+ 
 
 ## TABLE OF CONTENTS
 <details><summary>Click Here</summary>
