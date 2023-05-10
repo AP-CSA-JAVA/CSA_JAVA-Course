@@ -18,9 +18,20 @@ The following computational thinking practices describe what skills students sho
 <b>Code Testing</b>: Analyze program code for correctness, equivalence,and errors.</br>
 <b>Documentation</b>: Describe the behavior and conditions thatproduce identified results in a program.</br>
 
-For this course we will be using various Integrated Development Environment (IDE) software to help you manage your programs, data files, & images.  
-Coding Rooms will be our primary online IDE for this course.  For your personal development and collaboration, you may want to use an online IDE 
-that will allow you to collaborate with peers.  If you are using a personal laptop, a good desktop IDE to install is VS Code.  
+For this course we will be using various Integrated Development Environment (IDE) software to help you manage your programs, data files, & images.  Coding Rooms will be our primary online IDE for this course.  For your personal development and collaboration, you may want to use an online IDE that will allow you to collaborate with peers.  If you are using a personal laptop, a good desktop IDE to install is VS Code.  
+| Units | Exam Weighting |
+| ----- | -------------- |
+| Unit 1: Primitive Types | 2.5 - 5% |
+| Unit 2: Using Objects | 5 - 7.5% |
+| Unit 3: Boolean Expressions and if Statements | 15 -17.5% |
+| Unit 4: Iteration | 17.5 - 22% |
+| Unit 5: Writing Classes | 5 - 7.5% |
+| Unit 6: Array | 10 - 15% |
+| Unit 7: ArrayList | 2.5 - 7.5% |
+| Unit 8: 2D Array | 7.5 - 10% |
+| Unit 9: Inheritance | 5 - 10% |
+| Unit 10: Recursion | 5 - 7.5% |
+
 
 ## TABLE OF CONTENTS
 <details><summary>Click Here</summary>
