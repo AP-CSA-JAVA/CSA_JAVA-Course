@@ -462,8 +462,12 @@ If you have any questions, please contact me.
  
  **Important Links** that you may find useful:
  
+ [Java Basics](https://www3.ntu.edu.sg/home/ehchua/programming/java/J2_Basics.html)
+ 
  [Java Visualizer](https://cscircles.cemc.uwaterloo.ca/java_visualize/)
  
  [Oracle: Formatting Numeric Print](https://docs.oracle.com/javase/tutorial/java/data/numberformat.html)
+ 
+ [Practice-It -- Java](https://practiceit.cs.washington.edu/)
 
  </p> </details>
