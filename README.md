@@ -32,6 +32,54 @@ For this course we will be using various Integrated Development Environment (IDE
 | Unit 9: Inheritance | 5 - 10% |
 | Unit 10: Recursion | 5 - 7.5% |
 
+-------------------------------------------------------------------------------------------------------------
+
+
+### Computational Thinking Practices: Skills
+
+<details><summary>Click Here</summary>
+ <p>
+
+
+| Practice 1: Program Design and Algorithm Development |
+| ---------------------------------------------------- |
+| **1.A** Determin an appropriate program design to solve a problem or accomplish a task (not assessed) |
+| **1.B** Determine code that would be used to complete code segments |
+| **1.C** Determine colde that would be used to interact with completed program code |
+
+
+| Practice 2: Code Logic |
+| ---------------------------------------------------- |
+| **2.A** Apply the meaning of specific operators |
+| **2.B** Determine the result or ouput based on statement execution order in a code segment without method calls (other than output) |
+| **2.C** Determin the result or output based on the statement execution order in a code segment containing method calls |
+| **2.D** Determine the number of times a code segment will execute |
+
+
+| Practice 3: Code Implementation |
+| ---------------------------------------------------- |
+| **3.A** Write program code to create objects of a class and call methods |
+| **3.B** Write program code to design a new type by creating a class |
+| **3.C** Write program code to satisfy method specifications using expressions, conditional statements, and iterative statements |
+| **3.D** Write program code to create, traverse, and manipulate elements in 1D or ArrayList objects |
+| **3.E** Write program code to create, traverse and manipulate elements in 2D array objects |
+
+| Practice 4: Code Testing |
+| ---------------------------------------------------- |
+| **4.A** Use test-cases to find errors or validate results |
+| **4.B** Identify errors in program code |
+| **4.C** Determine if two or more code segments yield equivalent results |
+
+
+| Practice 5:  Documentation |
+| ---------------------------------------------------- |
+| **5.A** Describe the behavior of a given segment of program code |
+| **5.B** Explain why a code segment will not compile or work as intended |
+| **5.C** Explain how the result of program code changes, given a change to the initial code |
+| **5.D** Describe the initial conditions that must be met for a program segment to work as intended or described |
+
+
+ </p></details>
 
 ## TABLE OF CONTENTS
 <details><summary>Click Here</summary>
