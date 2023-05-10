@@ -6,17 +6,10 @@
 AP Computer Science A introduces students to computer science through programming. Fundamental topics in this course include the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems. The course emphasizes object-oriented programming and design using the Java programming language.
 
 The following big ideas serve as the foundation of the course, enabling students to create meaningful connections among concepts:</br>
-<b>Modularity</b>: Modularity in object-oriented programming allows usto use abstraction to break complex programs down intoindividual classes and methods.</br>
-<b>Variables</b>: Variables create data abstractions, as they canrepresent a set of possible values or a group of related values.</br>
+<b>Modularity</b>: Modularity in object-oriented programming allows us to use abstraction to break complex programs down into individual classes and methods.</br>
+<b>Variables</b>: Variables create data abstractions, as they can represent a set of possible values or a group of related values.</br>
 <b>Control</b>: Doing things in order, making decisions, and doing thesame process multiple times are represented in code by usingcontrol structures.</br>
 <b>Impact of Computing</b>: Computers and computing haverevolutionized our lives. To use computing safely and responsibly,we need to be aware of privacy, security, and ethical issues.</br>
-
-The following computational thinking practices describe what skills students should develop during the course:</br></br>
-<b>Program Design and Algorithm Development</b>: Determinerequired code segments to produce a given output.</br>
-<b>Code Logic</b>: Determine the output, value, or result of givenprogram code given initial values.</br>
-<b>Code Implementation</b>: Write and implement program code.</br>
-<b>Code Testing</b>: Analyze program code for correctness, equivalence,and errors.</br>
-<b>Documentation</b>: Describe the behavior and conditions thatproduce identified results in a program.</br>
 
 For this course we will be using various Integrated Development Environment (IDE) software to help you manage your programs, data files, & images.  Coding Rooms will be our primary online IDE for this course.  For your personal development and collaboration, you may want to use an online IDE that will allow you to collaborate with peers.  If you are using a personal laptop, a good desktop IDE to install is VS Code. 
 
@@ -24,8 +17,68 @@ For this course we will be using various Integrated Development Environment (IDE
 -------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------
 
+## Syllabus
+<details><summary>Click Here</summary>
+ <p>
+  
+  | Expectations |
+  | ----------- |
+  | - Be on time and prepared for class. This includes but is not limited to having you log in for your Canvas course, course website, and digital notebook. |
+  | - Be on time and prepared for class. This includes, but is not limited to having your notebook, assignments, pen/pencil, and paper. Students should be seated in their desks when the tardy bell rings to avoid confusion. |
+  | - Have a good attitude about learning. Be prepared to actively participate in class. Accept feedback with a positive attitude. |
+  | -	Students will follow all written and oral directions as well as safety precautions. This is for your own safety as there will be hands-on activities. | 
+  | -	Complete all assignments in a timely fashion. |
+  | -	Be respectful of others and their property. |
+  | -	Take care of the learning environment. Keep your area neat and clean. Always clean your space before you leave for the day. Put materials away in their proper place. |
+  
+  
+  | Policy on Academic Honesty |
+  | -------------------------- |
+  | Students are allowed to help each other on assignments with general problem-solving strategies, ideas, and algorithms, but all solutions should be your own. In practice, this means that, while students can discuss programs and questions, all lines of code should originate from your own mind. This course uses technology in ways no other course does. If you are unsure about the ethical implications of what you are doing, you should ask. Claiming that you didn’t understand that what you did was wrong will not be an excuse. |
+  
+  
+  | Electronic Devices |
+  | ------------------ |
+  | Students should be engaged during class, and cell phones and other electronic devices are a distraction that prevent students from fully participating in class. Specifically, students should not be accessing cell phones, smart phones, or any devices during class without permission from the teacher. Phones should be set to silent or turned off in class.  |
+  
+  
+  | Computer Lab Policies |
+  | -------------------- |
+  | Do not change any of the settings on the computers. |
+  | Do not download/ install any programs (including games) to the computer. |
+  | Do not access inappropriate content on the internet. |
+  | Report any broken equipment immediately to the instructor. |
+  
+  
+  | Academic Support |
+  | ---------------- |
+  | Peer Tutoring (Monday - Friday/ before and after school) |
+  | By appointment only |
+  
+  
+  | Grading | Percentage |
+  | ------- | ---------- |
+  | Test/ Quizzes | 40% |
+  | Projects/ Presentations | 40% |
+  | Assignments | 10% |
+  | Portfolio/ Final Project | 10% |
+  
+  
+  | Mak-up & Late work policy |
+  | ------------------------- |
+  | Students are responsible for makeup work when absent. Per district policy, each student will have **one school day** for each day that they are absent. |
+  | *To make up a quiz or a test, it is the student’s responsibility to contact the teacher to set an agreed upon date & time.*  Students must contact the teacher within two school days upon their return to make-up the missing quiz or test.  Failure to do so may result in a zero. |
+  | Handouts will be placed in a makeup folder with the students name and it is the student’s responsibility to check this folder when absent before consulting the instructor. |
+  | Due dates for every assignment are posted in Canvas. Unless otherwise stated, assignments are due on those days. |
+  | I recognize that there are issues beyond your control.  In this instance, you may use your allotted two flex-days in a semester.  These days allow you to submit a late assignment (not projects or presentations) up to two school days beyond the due date, without penalty. You can use these days for any assignment and for any reason. You will need to fill out a **google form** and upload the late assignment. |
+  | Once you’ve exhausted your flex days, then point deductions will occur for any assignment submitted after the deadline. Each day that an assignment is late the assignment or project will be reduced by 5% up to 59%.  |
 
-## TABLE OF CONTENTS
+
+ </p></details>
+ 
+
+
+## Table of Contents 
 <details><summary>Click Here</summary>
  <p>
 
