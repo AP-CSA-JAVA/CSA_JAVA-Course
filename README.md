@@ -34,7 +34,7 @@ For this course we will be using various Integrated Development Environment (IDE
   
   | Policy on Academic Honesty |
   | -------------------------- |
-  | Students are allowed to help each other on assignments with general problem-solving strategies, ideas, and algorithms, but all solutions should be your own. In practice, this means that, while students can discuss programs and questions, all lines of code should originate from your own mind. This course uses technology in ways no other course does. If you are unsure about the ethical implications of what you are doing, you should ask. Claiming that you didn’t understand that what you did was wrong will not be an excuse. |
+  | Students are allowed to help each other on assignments with general problem-solving strategies, ideas, and algorithms, but all solutions should be your own. In practice, this means that, while students can discuss programs and questions, all lines of code should originate from your own mind. This course uses technology in ways no other course does. If you are unsure about the ethical implications of what you are doing, you should ask. Claiming ignorance is not a reasonable excuse. |
   
   
   | Electronic Devices |
