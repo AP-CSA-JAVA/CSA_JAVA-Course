@@ -457,7 +457,13 @@ If you have any questions, please contact me.
  </details>
   
 ## Links 
-
+<details><summary>Click Here</summary>
+ <p></br>
 **Important Links** that you may find useful:
 
+[Java Visualizer](https://cscircles.cemc.uwaterloo.ca/java_visualize/)
+
 [Oracle: Formatting Numeric Print](https://docs.oracle.com/javase/tutorial/java/data/numberformat.html)
+
+ </p>
+ </details>
