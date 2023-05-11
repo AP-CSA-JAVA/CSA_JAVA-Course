@@ -111,7 +111,7 @@ Year                 Age                    Description
 1995             24 years old               Graduated college Long Beach State
 1998             27 years old               Got Married
 1998             27 years old               Began teaching career
-2021             50 years old               1st year at CAMS
+2021             50 years old               First year at CAMS
 ```
 
 
