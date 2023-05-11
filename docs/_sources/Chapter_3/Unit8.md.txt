@@ -1,4 +1,5 @@
-# Unit 8
+# Unit 8 2D Array
 
-```{warning} This page is currently under construction. Please return at a later time.
-```
+## 8.1 2D Arrays
+
+## Traversing 2D Arrays
