@@ -1,5 +1,5 @@
 # Unit 1 - Primitive Types
-
+ 
 ## 1.1 Why Programming Why Java
 
 Every Java program begins with the creation of a class.  Consider a class as a blueprint for your program.  In this instance, we created a class called MyFirstClass.  Within the class there is a main method that is required to execute the program.  Below is a simple program that will print "Hello, World".
