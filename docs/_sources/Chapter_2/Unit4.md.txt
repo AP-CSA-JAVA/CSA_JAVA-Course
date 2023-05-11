@@ -337,6 +337,128 @@ Submit your replit file to Canvas.
 **Goals**
   - Represent nested iterative processes.
   - Determine code that would be used to complete code segments.
+	
+A nested iteration occurs when we have a loop inside of another loop, similar to nested conditional statements back in Unit 3. Here is the general anatomy:
+```loopOne {
+  loopTwo {
+    something
+  }
+}
+```
+When a loop is nested inside another loop, all of the iterations of the inner loop must be completed until the next iteration of the outer loop starts. If there is a break statement inside the inner loop, then it only takes effect in the current iteration of the outer loop. When the next iteration of the outer loop starts, the inner loop starts all over again.
+If there are two nested for loops without break statements, and the outer loop runs n times, and the inner loop runs m times for every iteration of the outer loop, then the inner loop will run m*n times. This can be extended to situations where there are more than 2 nested loops. The total number of times the innermost loop is run is the product of the number of times that each loop runs per iteration.
+```
+    }
+  }
+}
+```
+Explanation of Code
+This is a nested iteration with three loops.
+
+    The outer loop is a for loop that increments whenever a prime number is found until we get to n prime numbers.
+    The middle loop is a while loop that increments the number being checked until it becomes a prime number.
+    Finally, the inner loop is a for loop that checks all possible divisors to see if the number is a prime number or not. 
+
+In the while loop, we assume that the number is prime, but once the number is found to be not prime in the for loop, the for loop breaks and the boolean notPrime is set to true. If the number is actually not prime, notPrime remains false and the while loop exits.
+**Example: Printing a Triangle**
+```java
+public static void printPyramid(int n) {
+  for (int i = 0; i < n; i++) {
+      for (int j = i; j < n; j++) {
+         System.out.print("*");
+      }
+ 
+      System.out.println();
+  }
+```
+	
+**Sample Output:**
+```
+*****
+****
+***
+**
+*
+```
+
+Explanation of Code
+This is a nested iteration with two loops. In the first loop, we go from 0 to n in order to have n rows in the output. In the second loop, we start from the row number and print n-row number of stars for the row.
+Once we exit the second loop, we print an empty line, i is incremented by one, and we enter the second loop to print the stars for the next line.
+Example: Printing a Number Triangle
+```java
+public static void printPyramid(int n) {
+  for (int i = 0; i < n; i++) {
+      for (int j = i; j < n; j++) {
+         System.out.print(i+j);
+      }
+ 
+      System.out.println();
+  }
+```
+	
+**Sample Output:**
+```
+01234
+2345
+456
+67
+8
+```
+
+Explanation of Code
+This is essentially the same code as earlier, except now we print out the sum of the row and column indices. This will allow us to demonstrate the use of break and continue in the next two examples.
+Example: Break in Nested Loops
+```java
+public static void printPyramid(int n) {
+  for (int i = 0; i < n; i++) {
+      for (int j = i; j < n; j++) {
+          if (i == 3 && j == 3) {
+             break;
+          }
+         System.out.print(i+j);
+      }
+ 
+      System.out.println();
+  }
+```
+
+**Sample Output:**
+```
+01234
+2345
+456
+8
+```
+Explanation of Code
+Notice that this time, because we told the program to break when it reaches the fourth row (when i = 3, since Java uses zero-based indexing) and tries to print the first number on that row (since j is always set to the row index when we start a new row), it completely breaks out of the second loop so nothing is printed in the fourth row.
+Once the program breaks out of the second loop, the first loop iterates by one and the program prints the fifth row the same way it did in the example above.
+Example: Continue in Nested Loops
+```java
+public static void printPyramid(int n) {
+  for (int i = 0; i < n; i++) {
+      for (int j = i; j < n; j++) {
+          if (i == 3 && j == 3) {
+             continue;
+          }
+         System.out.print(i+j);
+      }
+ 
+      System.out.println();
+  }
+```
+**Sample Output:**
+```
+01234
+2345
+456
+7
+8
+```
+	
+Explanation of Code
+This time, instead of using a break, we used a continue. This means that we didn't completely break out of the second loop. We just skipped the iteration that happens when j is 3. (It doesn't print 6.) The second loop continues, iterating j to 4 and printing the 7. Then j is incremented again to be 5, but since that is not less than n (which is also 5), we exit the second loop normally.
+Once we exit the second loop, we move on to the fifth row, which is printed normally.
+Pay careful attention to the Break in Nested Loops example and the Continue in Nested Loops example, since they illustrate the important difference between break and continue. Break completely exits the loop it is called in; continue just skips the current iteration of the loop it is called in.
 
 ## 4.5 Informal Code Analysis
 	
