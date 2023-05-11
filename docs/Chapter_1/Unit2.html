@@ -217,8 +217,8 @@
         <article role="main">
           <section id="unit-2-using-objects">
 <h1>Unit 2 - Using Objects<a class="headerlink" href="#unit-2-using-objects" title="Permalink to this heading">#</a></h1>
-<section id="objects-instances-of-classes">
-<h2>Objects: Instances of Classes<a class="headerlink" href="#objects-instances-of-classes" title="Permalink to this heading">#</a></h2>
+<section id="instances-of-classes">
+<h2>2.1 Instances of Classes<a class="headerlink" href="#instances-of-classes" title="Permalink to this heading">#</a></h2>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Explain the relationship between a class and an object</p></li>
 </ul>
@@ -256,22 +256,23 @@ Object-oriented Programming Facts:</p>
 </ul>
 </section>
 <section id="creating-and-storing-objects">
-<h2>Creating and Storing Objects<a class="headerlink" href="#creating-and-storing-objects" title="Permalink to this heading">#</a></h2>
+<h2>2.2 Creating and Storing Objects<a class="headerlink" href="#creating-and-storing-objects" title="Permalink to this heading">#</a></h2>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Explain the relationship between a class and an object</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Identify different constructor signatures and create objects using them</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use variables to represent object references</p></li>
 </ul>
 <p>The next two concepts will be used in most of your programs moving forward.  Read through <strong>constructor</strong> and <strong>toString()</strong> below.</p>
+</section>
 <section id="unit-5-2-constructors">
-<h3>Unit 5.2 - Constructors<a class="headerlink" href="#unit-5-2-constructors" title="Permalink to this heading">#</a></h3>
+<h2>Unit 5.2 - Constructors<a class="headerlink" href="#unit-5-2-constructors" title="Permalink to this heading">#</a></h2>
 <p>A <strong>constructor</strong> in Java is a special method that is used to initialize objects. The constructor is called when an object of a class is created. It can be used to set the initial values for object attributes/variable names<sup>1</sup>.  It is possible to write two or more constructors within a program.  The difference between the constructors are the <em>parameters</em> that are defined within the constructor itself.  This is known as constructor <strong>overloading</strong>.</p>
 <p>Java is a <em>pass-by-value</em> language.  If we pass a primitive value, we are passing a copy of that value. So, if we change the value inside a constructor, the value outside the constructor doesn’t change.  However, if we are passing a reference type, we are passing a reference to the data location.  If we modify the parameter values inside a constructor, then the object changes outside the constructor too!</p>
 <p>The Box class is located in the file Box.java where you can find the constructor(s).  The signature of the constructor is the class name along with the parameter list, if any.  If you recall from your prior CS courses the word ‘abstraction’.  We are taking the complexity out of the action for the user.  The user does not need to know how constructors work, they just need to know that it does what it is supposed to do within the program.</p>
 <p>If you use the constructor signature incorrectly, you may get an <strong>IllegalArgumentException</strong>.  Take for example you create a constructor called <em>Student</em>.  The <em>Student</em> class has parameters <em>int age, String name, and double gpa</em>.  If you alter the order of the variables within the parameter, it will return an error.</p>
 <p>The <strong>default constructor</strong> is the constructor with no parameters in the parameter list. So, if an overloaded constructor is missing a parameter, then the predetermined value will default to the default constructor.</p>
 <section id="null-objects">
-<h4>Null Objects<a class="headerlink" href="#null-objects" title="Permalink to this heading">#</a></h4>
+<h3>Null Objects<a class="headerlink" href="#null-objects" title="Permalink to this heading">#</a></h3>
 <p>Null is a reserved keyword in Java for literal values. It is a value that shows that the object is referring to nothing.  You cannot call an object that has been declared as <em>null</em> since there is not characteristics of that object.  This will create a <strong>NullPointerException</strong> error.  Java, variables of reference types (such as classes and arrays) hold a reference to an object in memory, rather than the actual object itself. This reference is a memory address that points to the location in memory where the object is stored.  If there is no object associated with a reference type, the value of said type is null, which indicates that the variable does not currently reference any object.</p>
 <p>Example:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="cm">/* missing code */</span>
@@ -479,7 +480,6 @@ x = 10
 </pre></div>
 </div>
 </section>
-</section>
 <section id="assignment-2-1-1">
 <h3>Assignment 2.1.1<a class="headerlink" href="#assignment-2-1-1" title="Permalink to this heading">#</a></h3>
 <p>Write a class related to a professional sport (i.e. Football, soccer, basketball, etc)</p>
@@ -619,7 +619,7 @@ emptyCake=null
 </section>
 </section>
 <section id="calling-a-void-method">
-<h2>Calling a Void Method<a class="headerlink" href="#calling-a-void-method" title="Permalink to this heading">#</a></h2>
+<h2>2.3 Calling a Void Method<a class="headerlink" href="#calling-a-void-method" title="Permalink to this heading">#</a></h2>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Call non-static void methods without parameters</p></li>
 </ul>
@@ -685,7 +685,7 @@ emptyCake=null
 <p>The <code class="docutils literal notranslate"><span class="pre">void</span></code> keyword will not return <em>anything</em> from the method declaration.  While the void method of the class does not return any value, the constructors return an object reference.  Thus, they can be called as a part of an expression.  Explained another way, void means that nothing is returned from a method, nor will anything ever be returned. It is an absence of any value.</p>
 <p><strong>NOTE:</strong> ‘Null’ is a place holder for a reference that does not have an object.  If defines a memory address that may eventually hold a value.</p>
 <section id="calling-a-void-method-with-parameters">
-<h3>Calling a Void Method with Parameters<a class="headerlink" href="#calling-a-void-method-with-parameters" title="Permalink to this heading">#</a></h3>
+<h3>2.4 Calling a Void Method with Parameters<a class="headerlink" href="#calling-a-void-method-with-parameters" title="Permalink to this heading">#</a></h3>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Call non-static void methods with parameters</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use overloaded methods</p></li>
@@ -758,7 +758,7 @@ Happy: 45
 </section>
 </section>
 <section id="non-void-methods">
-<h2>Non-Void Methods<a class="headerlink" href="#non-void-methods" title="Permalink to this heading">#</a></h2>
+<h2>2.5 Non-Void Methods<a class="headerlink" href="#non-void-methods" title="Permalink to this heading">#</a></h2>
 <p>If you’ve programmed in Python, you may remember that we used functions to execute a small chunk of code in other areas of the program.  Non-Void methods are very similar to functions in that they return a value of some type.  You have used non-void methods already, you just may not have recognized it. For example, the Scanner Class has non-voiid methods like nextInt(), nextDouble(), nextLine(), and next().  There are a number of methods that can be found in the Java standard library methods that are non-void methods.  Take a look at the example below.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">sum</span><span class="p">(){</span>
 <span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">num2</span><span class="p">;</span>
@@ -768,7 +768,7 @@ Happy: 45
 <p>The keyword <strong>return</strong> is <em>required</em> in all non-void methods. Since the method sum has a <strong>return</strong> type of <code class="docutils literal notranslate"><span class="pre">int</span></code> the return line is required to return a value of this type.</p>
 </section>
 <section id="calling-a-non-void-method">
-<h2>Calling a non-void method<a class="headerlink" href="#calling-a-non-void-method" title="Permalink to this heading">#</a></h2>
+<h2>2.5 Calling a non-void method<a class="headerlink" href="#calling-a-non-void-method" title="Permalink to this heading">#</a></h2>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox">  Call a non-void method</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox">  Use a return value from a non-void method in a variable or as part of an expression</p></li>
@@ -865,7 +865,7 @@ Miles Driven: 300.0
 </section>
 <hr class="docutils" />
 <section id="string-objects-concatenation-literals-and-other-things">
-<h2>String Objects: Concatenation, Literals, and Other Things<a class="headerlink" href="#string-objects-concatenation-literals-and-other-things" title="Permalink to this heading">#</a></h2>
+<h2>2.6 String Objects: Concatenation, Literals, and Other Things<a class="headerlink" href="#string-objects-concatenation-literals-and-other-things" title="Permalink to this heading">#</a></h2>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create String objects</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Reference String objects</p></li>
@@ -1014,7 +1014,7 @@ Comment your code showing that you completed each of the bullet points above.</p
 </section>
 <hr class="docutils" />
 <section id="string-methods">
-<h2>String Methods<a class="headerlink" href="#string-methods" title="Permalink to this heading">#</a></h2>
+<h2>2.7 String Methods<a class="headerlink" href="#string-methods" title="Permalink to this heading">#</a></h2>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Compare <code class="docutils literal notranslate"><span class="pre">String</span></code> Objects</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use <code class="docutils literal notranslate"><span class="pre">String</span></code> Methods</p></li>
@@ -1375,8 +1375,8 @@ Your team name is Samaell
 </section>
 </section>
 <hr class="docutils" />
-<section id="wrapper-classes">
-<h2>Wrapper Classes<a class="headerlink" href="#wrapper-classes" title="Permalink to this heading">#</a></h2>
+<section id="wrapper-classes-integer-and-double">
+<h2>2.8 Wrapper Classes - Integer and Double<a class="headerlink" href="#wrapper-classes-integer-and-double" title="Permalink to this heading">#</a></h2>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Convert between primitive data types and objects.</p>
 <ul class="contains-task-list">
@@ -1617,8 +1617,9 @@ In the program below, which line of code contains an example of <em>unboxing</em
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Unboxing</p></li>
 </ul>
 </section>
+</section>
 <section id="using-the-math-class">
-<h3>Using the Math Class<a class="headerlink" href="#using-the-math-class" title="Permalink to this heading">#</a></h3>
+<h2>2.9 Using the Math Class<a class="headerlink" href="#using-the-math-class" title="Permalink to this heading">#</a></h2>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox">  Use methods from the Math package</p>
 <ul class="contains-task-list">
@@ -1686,7 +1687,6 @@ how you could use the <code class="docutils literal notranslate"><span class="pr
 </div>
 </p>
 </details>
-</section>
 <section id="the-random-method">
 <h3>The random Method<a class="headerlink" href="#the-random-method" title="Permalink to this heading">#</a></h3>
 <p>For programs that require some amount of randomness, such as games, security, simulations, and statistics, Java’s Math class provides a random method. This method returns a double value that falls in the range from 0.0 to 1.0 non-inclusive, expressed mathematically as (0.0, 1.0] to indicate that it includes 0.0 but that its highest value is .999999999999999. With random values from 0 to .99…, you can mathematically generate any random number you may need. As you will see, you can manipulate the results in a variety of ways to fit your needs.</p>
@@ -1991,12 +1991,10 @@ Your program should allow a user to enter values that change the output of a sto
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Unit 2 - Using Objects</a><ul>
-<li><a class="reference internal" href="#objects-instances-of-classes">Objects: Instances of Classes</a></li>
-<li><a class="reference internal" href="#creating-and-storing-objects">Creating and Storing Objects</a><ul>
+<li><a class="reference internal" href="#instances-of-classes">2.1 Instances of Classes</a></li>
+<li><a class="reference internal" href="#creating-and-storing-objects">2.2 Creating and Storing Objects</a></li>
 <li><a class="reference internal" href="#unit-5-2-constructors">Unit 5.2 - Constructors</a><ul>
 <li><a class="reference internal" href="#null-objects">Null Objects</a></li>
-</ul>
-</li>
 <li><a class="reference internal" href="#assignment-2-1-1">Assignment 2.1.1</a></li>
 <li><a class="reference internal" href="#assignment-2-1-2">Assignment 2.1.2</a><ul>
 <li><a class="reference internal" href="#scanner-class-revisited">Scanner Class Revisited</a></li>
@@ -2004,31 +2002,33 @@ Your program should allow a user to enter values that change the output of a sto
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#calling-a-void-method">Calling a Void Method</a><ul>
-<li><a class="reference internal" href="#calling-a-void-method-with-parameters">Calling a Void Method with Parameters</a></li>
+<li><a class="reference internal" href="#calling-a-void-method">2.3 Calling a Void Method</a><ul>
+<li><a class="reference internal" href="#calling-a-void-method-with-parameters">2.4 Calling a Void Method with Parameters</a></li>
 <li><a class="reference internal" href="#assignment-1">Assignment 1</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#non-void-methods">Non-Void Methods</a></li>
-<li><a class="reference internal" href="#calling-a-non-void-method">Calling a non-void method</a><ul>
+<li><a class="reference internal" href="#non-void-methods">2.5 Non-Void Methods</a></li>
+<li><a class="reference internal" href="#calling-a-non-void-method">2.5 Calling a non-void method</a><ul>
 <li><a class="reference internal" href="#id1">Assignment 1</a></li>
 <li><a class="reference internal" href="#assignment-2">Assignment 2</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#string-objects-concatenation-literals-and-other-things">String Objects: Concatenation, Literals, and Other Things</a><ul>
+<li><a class="reference internal" href="#string-objects-concatenation-literals-and-other-things">2.6 String Objects: Concatenation, Literals, and Other Things</a><ul>
 <li><a class="reference internal" href="#escape-sequence">Escape Sequence</a></li>
 <li><a class="reference internal" href="#extra-credit">Extra Credit</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#string-methods">String Methods</a><ul>
+<li><a class="reference internal" href="#string-methods">2.7 String Methods</a><ul>
 <li><a class="reference internal" href="#activity-1-wordplay">Activity 1 - Wordplay</a></li>
 <li><a class="reference internal" href="#activity-2-speaking">Activity 2 - Speaking</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#wrapper-classes">Wrapper Classes</a><ul>
+<li><a class="reference internal" href="#wrapper-classes-integer-and-double">2.8 Wrapper Classes - Integer and Double</a><ul>
 <li><a class="reference internal" href="#autoboxing-unboxing">Autoboxing/ Unboxing</a></li>
 <li><a class="reference internal" href="#assignment-1-wrapper-classes">Assignment 1 Wrapper Classes</a></li>
-<li><a class="reference internal" href="#using-the-math-class">Using the Math Class</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#using-the-math-class">2.9 Using the Math Class</a><ul>
 <li><a class="reference internal" href="#the-random-method">The random Method</a></li>
 <li><a class="reference internal" href="#assignment-1-math-class-worksheet-1-2">Assignment 1 - Math Class Worksheet 1 &amp; 2</a><ul>
 <li><a class="reference internal" href="#an-example-of-single-vs-double-quotes">An example of single vs double quotes</a></li>

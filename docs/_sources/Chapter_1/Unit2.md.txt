@@ -1,6 +1,6 @@
 # Unit 2 - Using Objects
 
-## Objects: Instances of Classes
+## 2.1 Instances of Classes
 
 - [ ] Explain the relationship between a class and an object
 
@@ -40,7 +40,7 @@ Object-oriented Programming Facts:
 - [ ] A class is like a blueprint or a recipe.
 - [ ] A class is used to create an instance of a class, called an object
 
-## Creating and Storing Objects
+## 2.2 Creating and Storing Objects
 
 - [ ] Explain the relationship between a class and an object
 - [ ] Identify different constructor signatures and create objects using them
@@ -48,7 +48,7 @@ Object-oriented Programming Facts:
 
 The next two concepts will be used in most of your programs moving forward.  Read through **constructor** and **toString()** below.
 
-### Unit 5.2 - Constructors 
+## Unit 5.2 - Constructors 
 
 A **constructor** in Java is a special method that is used to initialize objects. The constructor is called when an object of a class is created. It can be used to set the initial values for object attributes/variable names<sup>1</sup>.  It is possible to write two or more constructors within a program.  The difference between the constructors are the *parameters* that are defined within the constructor itself.  This is known as constructor **overloading**. 
 
@@ -420,7 +420,7 @@ Mobile Number: 1236549898
 GPA: 3.0
 ```
 
-## Calling a Void Method
+## 2.3 Calling a Void Method
 
 - [ ] Call non-static void methods without parameters
 
@@ -491,7 +491,7 @@ The `void` keyword will not return *anything* from the method declaration.  Whil
 
 **NOTE:** 'Null' is a place holder for a reference that does not have an object.  If defines a memory address that may eventually hold a value.
 
-### Calling a Void Method with Parameters
+### 2.4 Calling a Void Method with Parameters
 
 - [ ] Call non-static void methods with parameters
 - [ ] Use overloaded methods
@@ -557,7 +557,7 @@ Energy: 60
 Happy: 45
 ```
 
-## Non-Void Methods
+## 2.5 Non-Void Methods
 
 If you've programmed in Python, you may remember that we used functions to execute a small chunk of code in other areas of the program.  Non-Void methods are very similar to functions in that they return a value of some type.  You have used non-void methods already, you just may not have recognized it. For example, the Scanner Class has non-voiid methods like nextInt(), nextDouble(), nextLine(), and next().  There are a number of methods that can be found in the Java standard library methods that are non-void methods.  Take a look at the example below.
 
@@ -569,7 +569,7 @@ public int sum(){
 
  The keyword **return** is *required* in all non-void methods. Since the method sum has a **return** type of `int` the return line is required to return a value of this type.
  
- ## Calling a non-void method
+ ## 2.5 Calling a non-void method
  
  - [ ]  Call a non-void method
  - [ ]  Use a return value from a non-void method in a variable or as part of an expression
@@ -672,7 +672,7 @@ Miles Driven: 300.0
 Submit your link to the finished program
 _____________________________________________________________________________________________________
 
-## String Objects: Concatenation, Literals, and Other Things
+## 2.6 String Objects: Concatenation, Literals, and Other Things
 
 - [ ] Create String objects
 - [ ] Reference String objects
@@ -797,7 +797,7 @@ public class Main
 Submit your program link.  Do not send me a screen shot of your program.  
 Comment your code showing that you completed each of the bullet points above.
 _____________________________________________________________________________________________________
-## String Methods
+## 2.7 String Methods
 
 - [ ] Compare `String` Objects
 - [ ] Use `String` Methods
@@ -1092,7 +1092,7 @@ Your team name is Samaell
 ```
 _______________________________________________________________________________________________________________
 
-## Wrapper Classes
+## 2.8 Wrapper Classes - Integer and Double
 
 - [ ] Convert between primitive data types and objects.
 	- [ ] I will be able to identify a wrapper class
@@ -1300,7 +1300,7 @@ Create a program that contains an example of each of the following. Add in-line 
 - [ ] Unboxing
 
 
-### Using the Math Class
+## 2.9 Using the Math Class
 
 - [ ]  Use methods from the Math package
 	- [ ] I will be able to write a program using math methods	
