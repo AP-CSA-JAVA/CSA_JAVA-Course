@@ -338,27 +338,26 @@ Submit your replit file to Canvas.
   - Represent nested iterative processes.
   - Determine code that would be used to complete code segments.
 	
-A nested iteration occurs when we have a loop inside of another loop, similar to nested conditional statements back in Unit 3. Here is the general anatomy:
+A nested iteration occurs when we have a loop inside of another loop, similar to nested conditional statements back in Unit 3. Here is the general structure:
 ```
+//nested iteration with three loops
 loopOne {
+	do something
   loopTwo {
-    something
+	do something
+    loopThree {
+	do something
+	}
   }
 }
+/* The outer loop is a for loop that increments whenever a prime number is 
+found until we get to n prime numbers. The middle loop is a while loop that 
+increments the number being checked until it becomes a prime number.  Finally,
+the inner loop is a for loop that checks all possible divisors to see if the
+number is a prime number or not. */
 ```
 When a loop is nested inside another loop, all of the iterations of the inner loop must be completed until the next iteration of the outer loop starts. If there is a break statement inside the inner loop, then it only takes effect in the current iteration of the outer loop. When the next iteration of the outer loop starts, the inner loop starts all over again.
-If there are two nested for loops without break statements, and the outer loop runs n times, and the inner loop runs m times for every iteration of the outer loop, then the inner loop will run m*n times. This can be extended to situations where there are more than 2 nested loops. The total number of times the innermost loop is run is the product of the number of times that each loop runs per iteration.
-```
-    }
-  }
-}
-```
-Explanation of Code
-This is a nested iteration with three loops.
-
-    The outer loop is a for loop that increments whenever a prime number is found until we get to n prime numbers.
-    The middle loop is a while loop that increments the number being checked until it becomes a prime number.
-    Finally, the inner loop is a for loop that checks all possible divisors to see if the number is a prime number or not. 
+If there are two nested for loops without break statements, and the outer loop runs x times, and the inner loop runs y times for every iteration of the outer loop, then the inner loop will run x*y times. This can be extended to situations where there are more than 2 nested loops. The total number of times the innermost loop is run is the product of the number of times that each loop runs per iteration.
 
 In the while loop, we assume that the number is prime, but once the number is found to be not prime in the for loop, the for loop breaks and the boolean notPrime is set to true. If the number is actually not prime, notPrime remains false and the while loop exits.
 
