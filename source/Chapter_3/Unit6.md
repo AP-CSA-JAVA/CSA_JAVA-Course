@@ -1,5 +1,12 @@
 # Unit 6
 
+## 6.1 Array Creation and Access
+
+## 6.2 Traversing Arrays
+
+## 6.3 Enhanced for Loop for Arrays
+
+## Developing Algorithms Using Arrays
 Arrays in java is a list of items that are grouped together with a common name.  There are important points you need to know about Java arrays: 
 - In Java, all arrays are dynamically allocated.
 - Arrays are stored in consecutive memory locations.
