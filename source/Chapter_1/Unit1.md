@@ -47,7 +47,7 @@ Example of this in use can be found [here](https://replit.com/@jonvirak/Activity
 <p align="center">---------------------------------------------------------------------------- </p>
 
 
-### Unit 5.3 Documentation with Comments
+### 5.3 Documentation with Comments
 
 Typing comments within your program is considered a professional practice, and I expect you to comment your code as appropriate throughtout the year.  When other people read your program, they may not understand the purpose of the variables and/ or methods in
 your program.  That's why it's important to document your code with comments. A comment is a piece of text that the
