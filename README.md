@@ -412,7 +412,7 @@ The course content is organized into ten commonly taught units:</br>
  | subclass	 | A class that inherits from another class | 
  | subinterface	 | An interface that inherits from another interface | 
  | subscript	 | A way of writing an index to an array in pseudocode | 
- | substring	 | A part of a text value | 
+ | substring	 | There are 2 ways to use the substring method. The first returns a substring of the original string. The second method returns a new string from a specified index and extends to a defined end or up to `endIndex - 1`. | 
  | super	 | A keyword that is used to access methods and fields from a base class | 
  | superclass	 | A class that another class inherits from (aka base class) | 
  | superinterface	 | An interface that another interface inherits from | 
