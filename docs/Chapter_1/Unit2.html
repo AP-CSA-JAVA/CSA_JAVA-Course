@@ -225,8 +225,7 @@
 <p>As stated earlier, a <em>class</em> is a blueprint of an object.  So we can also say that an <em>object</em> is an instance of a class.  What we define as a class determines what objects that will be associated with the class and how things will operate within it.  For example, we can define <code class="docutils literal notranslate"><span class="pre">human</span></code> as a class.  We can assign attributes to that class like a nose, ears, eyes, hands, feet, etc.  <strong>NOTE:</strong> Attribute and state are interchangable terms.</p>
 <p>We can also create a <em>method</em> that will call the attributes within a class.  For example, we can create a method called running or sleeping.  Now each of these methods will use an attribute or attributes of its class to perform something within the <code class="docutils literal notranslate"><span class="pre">human</span></code> class.  If we create an instance of the <code class="docutils literal notranslate"><span class="pre">human</span></code> class, let say Object John , then John will have all the attributes (nose , ears, eyes, hands, legs) unique to it and will also have access to these methods to carry out basic functions. <strong>NOTE:</strong> Method and behavior are interchangable terms.</p>
 <p>The value of the attributes define the state of the object. What makes this efficient is that the class does not hold any space in the memory because we just create a definition.  The moment we <em>instantiate</em> the class the object will require a dedicated space in memory.  Thus we can say that a Class defines how the object should look and object is the actual representation of the same.</p>
-<section id="example">
-<h3>Example:<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h3>
+<p><strong>Example:</strong></p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Bicycle</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="c1">// attribute or state</span>
@@ -256,7 +255,6 @@ Object-oriented Programming Facts:</p>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> A class is used to create an instance of a class, called an object</p></li>
 </ul>
 </section>
-</section>
 <section id="creating-and-storing-objects">
 <h2>Creating and Storing Objects<a class="headerlink" href="#creating-and-storing-objects" title="Permalink to this heading">#</a></h2>
 <ul class="contains-task-list simple">
@@ -272,9 +270,8 @@ Object-oriented Programming Facts:</p>
 <p>The Box class is located in the file Box.java where you can find the constructor(s).  The signature of the constructor is the class name along with the parameter list, if any.  If you recall from your prior CS courses the word ‘abstraction’.  We are taking the complexity out of the action for the user.  The user does not need to know how constructors work, they just need to know that it does what it is supposed to do within the program.</p>
 <p>If you use the constructor signature incorrectly, you may get an <strong>IllegalArgumentException</strong>.  Take for example you create a constructor called <em>Student</em>.  The <em>Student</em> class has parameters <em>int age, String name, and double gpa</em>.  If you alter the order of the variables within the parameter, it will return an error.</p>
 <p>The <strong>default constructor</strong> is the constructor with no parameters in the parameter list. So, if an overloaded constructor is missing a parameter, then the predetermined value will default to the default constructor.</p>
-</section>
 <section id="null-objects">
-<h3>Null Objects<a class="headerlink" href="#null-objects" title="Permalink to this heading">#</a></h3>
+<h4>Null Objects<a class="headerlink" href="#null-objects" title="Permalink to this heading">#</a></h4>
 <p>Null is a reserved keyword in Java for literal values. It is a value that shows that the object is referring to nothing.  You cannot call an object that has been declared as <em>null</em> since there is not characteristics of that object.  This will create a <strong>NullPointerException</strong> error.  Java, variables of reference types (such as classes and arrays) hold a reference to an object in memory, rather than the actual object itself. This reference is a memory address that points to the location in memory where the object is stored.  If there is no object associated with a reference type, the value of said type is null, which indicates that the variable does not currently reference any object.</p>
 <p>Example:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="cm">/* missing code */</span>
@@ -291,7 +288,7 @@ Object-oriented Programming Facts:</p>
 <span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;emptyCar=&quot;</span><span class="w"> </span><span class="o">+</span><span class="n">emptyCar</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>Sample Outcome:</p>
+<p>Sample Output:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span>    myCar=Car@6d06d69c
     yourCar=Car@7852e922
     ourCar=Car@4e25154f
@@ -441,9 +438,7 @@ x = 10
 <span class="p">}</span>
 </pre></div>
 </div>
-</section>
-<section id="sample-output">
-<h3>Sample Output<a class="headerlink" href="#sample-output" title="Permalink to this heading">#</a></h3>
+<p><strong>Sample Output</strong></p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span>
 <span class="mi">7</span>
 </pre></div>
@@ -478,16 +473,15 @@ x = 10
 <span class="p">}</span>
 </pre></div>
 </div>
-</section>
-<section id="id1">
-<h3>Sample Output<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<p><strong>Sample Output</strong></p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">The</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">child</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">Francis</span><span class="p">.</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">child</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="mf">10.</span>
 <span class="mi">12</span>
 </pre></div>
 </div>
 </section>
-<section id="assignment-1">
-<h3>Assignment 1<a class="headerlink" href="#assignment-1" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="assignment-2-1-1">
+<h3>Assignment 2.1.1<a class="headerlink" href="#assignment-2-1-1" title="Permalink to this heading">#</a></h3>
 <p>Write a class related to a professional sport (i.e. Football, soccer, basketball, etc)</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create class related to a professional sport of our choice</p></li>
@@ -506,8 +500,8 @@ x = 10
 </pre></div>
 </div>
 </section>
-<section id="assignment-2">
-<h3>Assignment 2<a class="headerlink" href="#assignment-2" title="Permalink to this heading">#</a></h3>
+<section id="assignment-2-1-2">
+<h3>Assignment 2.1.2<a class="headerlink" href="#assignment-2-1-2" title="Permalink to this heading">#</a></h3>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Complete the cakeRunner program</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Submit your program code</p></li>
@@ -549,9 +543,7 @@ ourCake=Cake@7852e922
 emptyCake=null
 </pre></div>
 </div>
-</section>
-<section id="extra-credit">
-<h3>Extra Credit<a class="headerlink" href="#extra-credit" title="Permalink to this heading">#</a></h3>
+<p><strong>Extra Credit</strong></p>
 <p><strong>Instructions:</strong></p>
 <ol class="arabic simple">
 <li><p>Edit the Bike class to have the following attributes:</p>
@@ -566,9 +558,8 @@ emptyCake=null
 <li><p>Create a constructor that takes all the parameters</p></li>
 <li><p>Create two more objects that will match the sample output.</p></li>
 </ol>
-</section>
 <section id="scanner-class-revisited">
-<h3>Scanner Class Revisited<a class="headerlink" href="#scanner-class-revisited" title="Permalink to this heading">#</a></h3>
+<h4>Scanner Class Revisited<a class="headerlink" href="#scanner-class-revisited" title="Permalink to this heading">#</a></h4>
 <p>As you recall, the scanner class is a package that provides primitive input within Java programs.  It can be found in the <a class="reference external" href="https://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html">java.util Package</a> website.</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> First you need to import the class from the online Oracle repository by typing <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">java.util.Scanner;</span></code></p></li>
@@ -624,6 +615,7 @@ emptyCake=null
 <span class="nl">GPA</span><span class="p">:</span><span class="w"> </span><span class="mf">3.0</span>
 </pre></div>
 </div>
+</section>
 </section>
 </section>
 <section id="calling-a-void-method">
@@ -705,14 +697,10 @@ emptyCake=null
 </pre></div>
 </div>
 </section>
-<section id="id2">
-<h3>Assignment 1<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
-<section id="instructions-digipet">
-<h4>Instructions DigiPet<a class="headerlink" href="#instructions-digipet" title="Permalink to this heading">#</a></h4>
-<p>You will create a class DigiPet</p>
-</section>
-<section id="steps">
-<h4>Steps<a class="headerlink" href="#steps" title="Permalink to this heading">#</a></h4>
+<section id="assignment-1">
+<h3>Assignment 1<a class="headerlink" href="#assignment-1" title="Permalink to this heading">#</a></h3>
+<p><strong>Instructions DigiPet</strong>
+You will create a class DigiPet</p>
 <ol class="arabic simple">
 <li><p>Create a DigiPet class with the following attributes:</p>
 <ul class="simple">
@@ -769,7 +757,6 @@ Happy: 45
 </div>
 </section>
 </section>
-</section>
 <section id="non-void-methods">
 <h2>Non-Void Methods<a class="headerlink" href="#non-void-methods" title="Permalink to this heading">#</a></h2>
 <p>If you’ve programmed in Python, you may remember that we used functions to execute a small chunk of code in other areas of the program.  Non-Void methods are very similar to functions in that they return a value of some type.  You have used non-void methods already, you just may not have recognized it. For example, the Scanner Class has non-voiid methods like nextInt(), nextDouble(), nextLine(), and next().  There are a number of methods that can be found in the Java standard library methods that are non-void methods.  Take a look at the example below.</p>
@@ -779,8 +766,9 @@ Happy: 45
 </pre></div>
 </div>
 <p>The keyword <strong>return</strong> is <em>required</em> in all non-void methods. Since the method sum has a <strong>return</strong> type of <code class="docutils literal notranslate"><span class="pre">int</span></code> the return line is required to return a value of this type.</p>
+</section>
 <section id="calling-a-non-void-method">
-<h3>Calling a non-void method<a class="headerlink" href="#calling-a-non-void-method" title="Permalink to this heading">#</a></h3>
+<h2>Calling a non-void method<a class="headerlink" href="#calling-a-non-void-method" title="Permalink to this heading">#</a></h2>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox">  Call a non-void method</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox">  Use a return value from a non-void method in a variable or as part of an expression</p></li>
@@ -810,11 +798,9 @@ Happy: 45
 <span class="k">return</span><span class="w"> </span><span class="n">calculateAverage</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">70</span><span class="p">;</span>
 </pre></div>
 </div>
-</section>
-<section id="id3">
-<h3>Assignment 1<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
-<section id="instructions-shape-using-non-void-methods">
-<h4>Instructions Shape using Non-Void Methods<a class="headerlink" href="#instructions-shape-using-non-void-methods" title="Permalink to this heading">#</a></h4>
+<section id="id1">
+<h3>Assignment 1<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<p><strong>Instructions Shape using Non-Void Methods</strong></p>
 <ol class="arabic simple">
 <li><p>In the Shape class, the attributes and constructor is complete. Look them over.</p></li>
 <li><p>In the Main class, instantiate the three objects described in the comments</p></li>
@@ -841,12 +827,10 @@ The area of a circle is <code class="docutils literal notranslate"><span class="
 </div>
 <p>Submit your link to the finished program</p>
 </section>
-</section>
 <hr class="docutils" />
-<section id="id4">
-<h3>Assignment 2<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
-<section id="instructions-roadtrip-using-non-void-methods">
-<h4>Instructions RoadTrip using Non-Void Methods<a class="headerlink" href="#instructions-roadtrip-using-non-void-methods" title="Permalink to this heading">#</a></h4>
+<section id="assignment-2">
+<h3>Assignment 2<a class="headerlink" href="#assignment-2" title="Permalink to this heading">#</a></h3>
+<p><strong>Instructions RoadTrip using Non-Void Methods</strong></p>
 <p>Starter file: <a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9717372/125-RoadTrip.zip">125-RoadTrip.zip</a></p>
 <ol class="arabic simple">
 <li><p>In the Car class, the attributes and constructor are complete. Look them over.</p></li>
@@ -877,7 +861,6 @@ Miles Driven: 300.0
 </pre></div>
 </div>
 <p>Submit your link to the finished program</p>
-</section>
 </section>
 </section>
 <hr class="docutils" />
@@ -921,8 +904,7 @@ String objects are <em>immutable</em>. This means that you cannot change the Str
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Wintergreen</span>
 </pre></div>
 </div>
-<section id="recall">
-<h3>Recall:<a class="headerlink" href="#recall" title="Permalink to this heading">#</a></h3>
+<p><strong>Recall:</strong></p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> A String is not a primitive type.</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> A String object references a location in memory.</p></li>
@@ -971,7 +953,6 @@ String objects are <em>immutable</em>. This means that you cannot change the Str
 <p><strong>NOTE</strong> Java allows for <em>implicit type conversion</em> during concatenation. This means that even if a primitive is stored as a primitive type (be it <em>int</em> or <em>double</em>), it can still be concatenated to a String. The <em>int</em> is converted to a String before the + operator is applied.</p>
 <p><strong>NOTE</strong> Certain characters need special treatment to be included in strings in Java. Either they are “non-printable,” such as the character that indicates a new line of output (called the newline character), or they already have other meanings in the Java language.</p>
 <p>Escape sequences begin with the \ character (back slash as opposed to a forward slash) and allow a programmer to type these characters in String literals. Take a look at the three examples below.</p>
-</section>
 <section id="escape-sequence">
 <h3>Escape Sequence<a class="headerlink" href="#escape-sequence" title="Permalink to this heading">#</a></h3>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -1008,8 +989,8 @@ String objects are <em>immutable</em>. This means that you cannot change the Str
 “Oh, Pine Tree State,
 Your woods\ fields\ and hills”</p>
 </section>
-<section id="id5">
-<h3>Extra Credit<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<section id="extra-credit">
+<h3>Extra Credit<a class="headerlink" href="#extra-credit" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Create a new java file.</p>
 <ul class="simple">
@@ -1384,11 +1365,11 @@ separated by a space. Then it asks the user to enter a phrase. You will write an
 Enter your partner&#39;s name:
  Julia
 
-Yelling your name: JONATHAN
-Whispering your partner&#39;s name: julia
-Your name in Pig Latin: onathanjay
-Your partner&#39;s name in Pig Latin: uliajay
-Your team name is Jonalia
+Yelling your name: Samantha
+Whispering your partner&#39;s name: Russell
+Your name in Pig Latin: amanthaSay
+Your partner&#39;s name in Pig Latin: ussellray
+Your team name is Samaell
 </pre></div>
 </div>
 </section>
@@ -1636,9 +1617,8 @@ In the program below, which line of code contains an example of <em>unboxing</em
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Unboxing</p></li>
 </ul>
 </section>
-</section>
 <section id="using-the-math-class">
-<h2>Using the Math Class<a class="headerlink" href="#using-the-math-class" title="Permalink to this heading">#</a></h2>
+<h3>Using the Math Class<a class="headerlink" href="#using-the-math-class" title="Permalink to this heading">#</a></h3>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox">  Use methods from the Math package</p>
 <ul class="contains-task-list">
@@ -1706,6 +1686,7 @@ how you could use the <code class="docutils literal notranslate"><span class="pr
 </div>
 </p>
 </details>
+</section>
 <section id="the-random-method">
 <h3>The random Method<a class="headerlink" href="#the-random-method" title="Permalink to this heading">#</a></h3>
 <p>For programs that require some amount of randomness, such as games, security, simulations, and statistics, Java’s Math class provides a random method. This method returns a double value that falls in the range from 0.0 to 1.0 non-inclusive, expressed mathematically as (0.0, 1.0] to indicate that it includes 0.0 but that its highest value is .999999999999999. With random values from 0 to .99…, you can mathematically generate any random number you may need. As you will see, you can manipulate the results in a variety of ways to fit your needs.</p>
@@ -1926,8 +1907,7 @@ x = ++x; //Pre-increment</p>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Apply the programming development process to create a project.</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Capture your project and communicate how each part of your program works.</p></li>
 </ul>
-<section id="requirements-of-this-project">
-<h3>Requirements of this project<a class="headerlink" href="#requirements-of-this-project" title="Permalink to this heading">#</a></h3>
+<p><strong>Requirements of this project</strong></p>
 <p>Give a Mad Lib with three user inputs, create a user-generated story with the correct parts of speech.
 Your program should allow a user to enter values that change the output of a story. Specifically, it should include:</p>
 <ul class="contains-task-list simple">
@@ -1952,7 +1932,6 @@ Your program should allow a user to enter values that change the output of a sto
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Code that causes errors</p></li>
 </ul>
 <p>Share your link for your project.  No Screenshots needed for this project.</p>
-</section>
 </section>
 </section>
 
@@ -2012,46 +1991,33 @@ Your program should allow a user to enter values that change the output of a sto
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Unit 2 - Using Objects</a><ul>
-<li><a class="reference internal" href="#objects-instances-of-classes">Objects: Instances of Classes</a><ul>
-<li><a class="reference internal" href="#example">Example:</a></li>
+<li><a class="reference internal" href="#objects-instances-of-classes">Objects: Instances of Classes</a></li>
+<li><a class="reference internal" href="#creating-and-storing-objects">Creating and Storing Objects</a><ul>
+<li><a class="reference internal" href="#unit-5-2-constructors">Unit 5.2 - Constructors</a><ul>
+<li><a class="reference internal" href="#null-objects">Null Objects</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#creating-and-storing-objects">Creating and Storing Objects</a><ul>
-<li><a class="reference internal" href="#unit-5-2-constructors">Unit 5.2 - Constructors</a></li>
-<li><a class="reference internal" href="#null-objects">Null Objects</a></li>
-<li><a class="reference internal" href="#sample-output">Sample Output</a></li>
-<li><a class="reference internal" href="#id1">Sample Output</a></li>
-<li><a class="reference internal" href="#assignment-1">Assignment 1</a></li>
-<li><a class="reference internal" href="#assignment-2">Assignment 2</a></li>
-<li><a class="reference internal" href="#extra-credit">Extra Credit</a></li>
+<li><a class="reference internal" href="#assignment-2-1-1">Assignment 2.1.1</a></li>
+<li><a class="reference internal" href="#assignment-2-1-2">Assignment 2.1.2</a><ul>
 <li><a class="reference internal" href="#scanner-class-revisited">Scanner Class Revisited</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a class="reference internal" href="#calling-a-void-method">Calling a Void Method</a><ul>
 <li><a class="reference internal" href="#calling-a-void-method-with-parameters">Calling a Void Method with Parameters</a></li>
-<li><a class="reference internal" href="#id2">Assignment 1</a><ul>
-<li><a class="reference internal" href="#instructions-digipet">Instructions DigiPet</a></li>
-<li><a class="reference internal" href="#steps">Steps</a></li>
+<li><a class="reference internal" href="#assignment-1">Assignment 1</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a class="reference internal" href="#non-void-methods">Non-Void Methods</a><ul>
-<li><a class="reference internal" href="#calling-a-non-void-method">Calling a non-void method</a></li>
-<li><a class="reference internal" href="#id3">Assignment 1</a><ul>
-<li><a class="reference internal" href="#instructions-shape-using-non-void-methods">Instructions Shape using Non-Void Methods</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id4">Assignment 2</a><ul>
-<li><a class="reference internal" href="#instructions-roadtrip-using-non-void-methods">Instructions RoadTrip using Non-Void Methods</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#non-void-methods">Non-Void Methods</a></li>
+<li><a class="reference internal" href="#calling-a-non-void-method">Calling a non-void method</a><ul>
+<li><a class="reference internal" href="#id1">Assignment 1</a></li>
+<li><a class="reference internal" href="#assignment-2">Assignment 2</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#string-objects-concatenation-literals-and-other-things">String Objects: Concatenation, Literals, and Other Things</a><ul>
-<li><a class="reference internal" href="#recall">Recall:</a></li>
 <li><a class="reference internal" href="#escape-sequence">Escape Sequence</a></li>
-<li><a class="reference internal" href="#id5">Extra Credit</a></li>
+<li><a class="reference internal" href="#extra-credit">Extra Credit</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#string-methods">String Methods</a><ul>
@@ -2062,9 +2028,7 @@ Your program should allow a user to enter values that change the output of a sto
 <li><a class="reference internal" href="#wrapper-classes">Wrapper Classes</a><ul>
 <li><a class="reference internal" href="#autoboxing-unboxing">Autoboxing/ Unboxing</a></li>
 <li><a class="reference internal" href="#assignment-1-wrapper-classes">Assignment 1 Wrapper Classes</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#using-the-math-class">Using the Math Class</a><ul>
+<li><a class="reference internal" href="#using-the-math-class">Using the Math Class</a></li>
 <li><a class="reference internal" href="#the-random-method">The random Method</a></li>
 <li><a class="reference internal" href="#assignment-1-math-class-worksheet-1-2">Assignment 1 - Math Class Worksheet 1 &amp; 2</a><ul>
 <li><a class="reference internal" href="#an-example-of-single-vs-double-quotes">An example of single vs double quotes</a></li>
@@ -2074,10 +2038,7 @@ Your program should allow a user to enter values that change the output of a sto
 <li><a class="reference internal" href="#assignment-2-race-car">Assignment 2 - Race Car</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#project-mad-libs">Project Mad Libs</a><ul>
-<li><a class="reference internal" href="#requirements-of-this-project">Requirements of this project</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#project-mad-libs">Project Mad Libs</a></li>
 </ul>
 </li>
 </ul>
