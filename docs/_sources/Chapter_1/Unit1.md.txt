@@ -1,6 +1,6 @@
 # Unit 1 - Primitive Types
 
-## Why Programming Why Java
+## 1.1 Why Programming Why Java
 
 Every Java program begins with the creation of a class.  Consider a class as a blueprint for your program.  In this instance, we created a class called MyFirstClass.  Within the class there is a main method that is required to execute the program.  Below is a simple program that will print "Hello, World".
 
@@ -97,7 +97,8 @@ Create the happy face image above using the following criteria:
 Please screenshot your code with result and include it in your Canvas assignment.
 
 ### Assignment 1.1.2
-#### Personal Timeline
+
+**Personal Timeline**
 For this assignment, you will create a program that outputs a personal timeline of events in your life. The timeline will proceed vertically. Earlier events will be displayed nearer the top of the timeline while later events are displayed near the bottom.
 
 Include seven meaningful events in your life. No repetitive events such as "started kindergarten, started first grade, etc".
@@ -119,7 +120,7 @@ There is no test to run when you are complete. Please screenshot your code with 
 
 
 
-## Variables and Data Types
+## 1.2 Variables and Data Types
 There are eight primitive types in Java. In no particular order, they are int, double, boolean, float, char, byte, long and short.  For this course we will be using only int, double, and boolean.
 - [ ] **int** is short for integer deals with whole numbers and uses 32 bits of memory
 - [ ] **double** is a 64 bit data type that stores decimal numbers
@@ -135,7 +136,7 @@ Non-primitive data types include a String, Arrays and Classes.
 - [ ] **Arrays** are used to store multiple values (think 'list')
 - [ ] **Class** is an object constructor, blueprint, for creating objects.
 
-### Variable Naming Convention
+**Variable Naming Convention**
 - [ ] Always choose a name that indicates the purpose of the variable
 - [ ] A variable cannot begin with a number
 - [ ] A variable must not have spaces
@@ -147,7 +148,7 @@ Once you have declared the variable type, you <b> do not need to do it again </b
 If you declare a variable as *final* you cannot change the value of it.  We can refer to the *final* variable as immutable (unchanging).  Another variable norm is that *final* variables are written as ALL CAPS to remind you that they cannot change.</br> Example:</br> final double PI = 3.14159;</br></br>
 
 ### Assignment 1.2.1
-#### Allowance
+**Allowance**
 Write a program that will determine who receives an allowance or not.  Use the information below as a guide:
 - [ ] Allowance is always $30.00/ week
 - [ ] Non-teenagers do not receive an allowance
@@ -180,7 +181,7 @@ Use a Scanner object to create an input feature in your program.  Click on [Scan
 There is no test to run when you are complete. Please screenshot your code with result and include it in your assignment.
 
 
-## Expressions and Assignment Statements
+## 1.3 Expressions and Assignment Statements
 Math Operators are a very important part of computing. Below are the most common operators that we will be using in this course.
 | Symbol | Name  | Usage |
 | :---:  | :---: | :---: |
@@ -192,7 +193,7 @@ Math Operators are a very important part of computing. Below are the most common
 
 **Note** When you divide an integer by zero your program will return an <i>ArthmeticException</i> error.
 
-### Please Excuse My Dear Aunt Sally
+**Please Excuse My Dear Aunt Sally**
 In Java, the order of operation works pretty much the same with the exception of the modulo.</br>Take for example the following math equation: **5 + 12 * 18 - 10 / 2 % 2**
 
 | Step  | Operation        | Result |
@@ -220,7 +221,7 @@ In Java, the order of operation works pretty much the same with the exception of
 
 
 ### Assignment 1.3.1
-#### Calculate your weight on Jupiter
+**Calculate your weight on Jupiter**
 
 ```
 The expression F=ma allows you to calculate your weight (in newtons) based on your mass (in kilograms)
@@ -263,7 +264,7 @@ this assignment.**
 | Neptune | 11.15 |
 
 ### Assignment 1.3.2
-#### Simple Math
+**Simple Math**
 - [ ] Create a program that will ask the user for two distinct numbers (integers)
 - [ ] Use the scanner class to receive input from the user  
 - [ ] Store those values and perform some basic operations with those numbers
@@ -285,7 +286,7 @@ Dividing: 4 with remainder 0
 
 
 
-## Compound Assignment Operators
+## 1.4 Compound Assignment Operators
 
 In Java, you can modify a variable by referencing it, performing an operation on it, and assigning the result back to the variable. Thus, you can reference a variable to change its own value. For example, if x equals 0 , the following statement modifies x.</br>
 
@@ -322,7 +323,8 @@ Java supports 11 compound-assignment operators, but for this course we will use 
  ```
 
 ### Assignment 1.4.1
-#### Compound Operators
+  
+**Compound Operators**
 ```java
 
 public class CompoundOperators
@@ -367,7 +369,7 @@ Average days per person: 1620.0
 <p align="center">---------------------------------------------------------------------------- </p>
 
 ### Assignment 1.4.2
-#### Average Test Score
+**Average Test Score**
 Directions: Write two programs that will do the following:
 
 **Average Test Score**
@@ -380,7 +382,7 @@ Directions: Write two programs that will do the following:
 - [ ] display the total items sold
 - [ ] display the total sales
 
-#### Example Output:
+**Sample Output:**
 ```
 Enter the first test score:
 95
@@ -407,7 +409,7 @@ Total Sales: $64.3
 ```
 
 
-## Casting and Range of Variables
+## 1.5 Casting and Range of Variables
 There are some unique features to Java that help programmers create programs that are flexible in how they display data.  We learned earlier 
 that we need to declare a variable by it's type.  It can be an int or a double.  As you may remember, an int is any whole negative or positive number.
 A double is any number with a decimal.  1.0 is a whole number, but it has a decimal. So, Java considers 1.0 as a double.  
@@ -441,7 +443,7 @@ final int dozen = 12;// a dozen will not change
 
 System.out.println("Total eggs = " + eggs/ (double) dozen);
 
-Example output:
+Sample output:
 Total eggs = 0.75
 ```
 If you were to print the variables of eggs and down, you would see that the values are 9 & 12 respectively.
@@ -503,7 +505,7 @@ Comment out your code as appropriate (4 points)
 
 Take a screenshot of your completed code and the output it produced.
 
-## Numbers Riddle Project 
+### Numbers Riddle Project 
 
 In this project, you will write a program that incorporates the Java™ concepts you have learned throughout this unit.
 
