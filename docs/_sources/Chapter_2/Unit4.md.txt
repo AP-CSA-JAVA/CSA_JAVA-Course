@@ -339,7 +339,8 @@ Submit your replit file to Canvas.
   - Determine code that would be used to complete code segments.
 	
 A nested iteration occurs when we have a loop inside of another loop, similar to nested conditional statements back in Unit 3. Here is the general anatomy:
-```loopOne {
+```
+loopOne {
   loopTwo {
     something
   }
@@ -360,6 +361,7 @@ This is a nested iteration with three loops.
     Finally, the inner loop is a for loop that checks all possible divisors to see if the number is a prime number or not. 
 
 In the while loop, we assume that the number is prime, but once the number is found to be not prime in the for loop, the for loop breaks and the boolean notPrime is set to true. If the number is actually not prime, notPrime remains false and the while loop exits.
+
 **Example: Printing a Triangle**
 ```java
 public static void printPyramid(int n) {
@@ -384,7 +386,9 @@ public static void printPyramid(int n) {
 Explanation of Code
 This is a nested iteration with two loops. In the first loop, we go from 0 to n in order to have n rows in the output. In the second loop, we start from the row number and print n-row number of stars for the row.
 Once we exit the second loop, we print an empty line, i is incremented by one, and we enter the second loop to print the stars for the next line.
-Example: Printing a Number Triangle
+
+**Example: Printing a Number Triangle**
+
 ```java
 public static void printPyramid(int n) {
   for (int i = 0; i < n; i++) {
@@ -407,7 +411,9 @@ public static void printPyramid(int n) {
 
 Explanation of Code
 This is essentially the same code as earlier, except now we print out the sum of the row and column indices. This will allow us to demonstrate the use of break and continue in the next two examples.
-Example: Break in Nested Loops
+	
+**Example: Break in Nested Loops**
+
 ```java
 public static void printPyramid(int n) {
   for (int i = 0; i < n; i++) {
@@ -432,7 +438,9 @@ public static void printPyramid(int n) {
 Explanation of Code
 Notice that this time, because we told the program to break when it reaches the fourth row (when i = 3, since Java uses zero-based indexing) and tries to print the first number on that row (since j is always set to the row index when we start a new row), it completely breaks out of the second loop so nothing is printed in the fourth row.
 Once the program breaks out of the second loop, the first loop iterates by one and the program prints the fifth row the same way it did in the example above.
-Example: Continue in Nested Loops
+	
+**Example: Continue in Nested Loops**
+	
 ```java
 public static void printPyramid(int n) {
   for (int i = 0; i < n; i++) {
@@ -466,12 +474,15 @@ Pay careful attention to the Break in Nested Loops example and the Continue in N
   - Determine the number of times a code segment will execute.
 	
 **What is Informal Code Analysis?**
+	
 Informal code analysis is a process where you will manually check your program line by line. You may also know this as code tracing. Successful code tracing requires you to go through the code line by line, notating of how many times the code is executed, all variable values, and what is output produced to the console. *This is a very important skill to learn!*
 	
 **Debugging**
+	
 Another part of code tracing is debugging. Debugging are syntax or logic errors that prevents your code from executing as intended.  With debugging, you have a panel (located in Tools in replit and Debug Console in VSCode) that displays the program values running in real-time as the program is being executed. When we use the debugging panel, you can even sometimes change the variable values to see what may happen to the code as well. We can also have breakpoints in debugging as well. These breakpoints are points allow you to stop at given sections of  the program. This is useful when you want to see the values at a certain points in the code. After, you go line-by-line through the code you will see how the variables change or see how the variables change after every iteration of a loop.
 
 **Hand-Tracing Tool**
 	
 https://pythontutor.com/render.html#mode=display
+	
 https://cscircles.cemc.uwaterloo.ca/java_visualize/
