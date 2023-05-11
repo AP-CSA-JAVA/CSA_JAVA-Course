@@ -119,7 +119,7 @@ public class Main{
 
 
 	
-### Assignment 1 - Grades
+### Assignment 4.1.1 - Grades
 
 - Must use a `while` loop
   - You may use Arrays for this assignment
@@ -135,7 +135,7 @@ public class Main{
 - submit your program as a replit
 
 	
-### Assignment 2 - Arithmetic
+### Assignment 4.1.2 - Arithmetic
 
 ```java
 1. Is a Factor?
@@ -322,7 +322,7 @@ There are standard algorithms that utilize String traversals to:
   - Determine the number of substrings that meet specific criteria.
   - Create a new String with the characters reversed.
 
-### Assigntment 1
+### Assigntment 4.3.1
 
 You will write 3 programs that will do the following:
   - Write a program that will remove every other letter within a string.
