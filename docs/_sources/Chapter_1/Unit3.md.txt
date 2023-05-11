@@ -9,7 +9,7 @@ Logical operators are used to performing logical “AND”, “OR” and “NOT�
     NOT Operator ( ! ) – !(a<b) [returns false if a is smaller than b]
     
     
-## Boolean Expressions
+## 3.1 Boolean Expressions
 
 **Goals**
 -   Understand Boolean expressions.
@@ -110,7 +110,7 @@ public void suchFun(int a, int b, int c) {
 
 [BlankAnswerSheet.pdf](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9862940/FRQ_BlankAnswerSheet.pdf)
 
-## If Statements and Control Flow
+## 3.2 If Statements and Control Flow
 
 **Goals**
 -   Gain an understanding of how to control program flow with if statements.
@@ -252,7 +252,7 @@ Guess a 4-digit number from 1000 to 9999 with no duplicate digits:  3658
 Number of hits:2
 ```
 
-## If/ Else Statements
+## 3.3 If/ Else Statements
 
 **Goals**
 -   Learn the if/else statement.
@@ -353,7 +353,7 @@ Total Shipping Cost: $20.25
 Days to Deliver: 1
 ```
 
-## Else If Statements
+## 3.4 Else If Statements
 
 **Goals**
 -   Learn multiple selections with the if/else-if conditional.
@@ -402,7 +402,7 @@ else // if condition 3 is false
 
 Comment where you made the changes. Submit your program digitally.
 
-## Compound Boolean Expressions
+## 3.5 Compound Boolean Expressions
 
 **Goals**
 -   Understand how to evaluate a Boolean expression with multiple parts.
@@ -450,7 +450,7 @@ Number of near hits:0
 You have 0 guesses remaining.
 ```
 
-## Equivalent Boolean Expressions
+## 3.6 Equivalent Boolean Expressions
 
  **Goals**
 
@@ -572,7 +572,7 @@ Both x and y are not negative
 Submit your assignment as a replit on Canvas.
 
 
-## Comparing Objects
+## 3.7 Comparing Objects
 
 **Goals**
 - Learn how to compare instances of classes to one another
