@@ -106,12 +106,12 @@ Make it look professional. HINT: use \t</br>
 ```
 Year                 Age                    Description
 1971             0 years old                Born in Long Beach
-1971             .25 years old              Had hernia surgery
 1976             5 years old                Started kindergarten
 1989             17 years old               Graduated high school
 1995             24 years old               Graduated college Long Beach State
 1998             27 years old               Got Married
 1998             27 years old               Began teaching career
+2021             50 years old               1st year at CAMS
 ```
 
 
@@ -505,7 +505,6 @@ Take a screenshot of your completed code and the output it produced.
 
 ## Numbers Riddle Project 
 
-### Your First Project
 In this project, you will write a program that incorporates the Java™ concepts you have learned throughout this unit.
 
 Your program will include:
@@ -518,13 +517,13 @@ Your program will include:
 - [ ] The compound assignment operator
 - [ ] Conversion between int and double data types
 
-### The Numbers Riddle
+**The Numbers Riddle**
 
 <p align="center">Choose any integer, double it, add six, divide it in half, and subtract the number you started with. The answer is always three! </p>
 
 **Important:** No shortcuts! You know the answer to the riddle will always be three, but your program is being used to test and validate the riddle. You should print the result of all calculations, not just “3.”
 
-#### Requirements of this project
+**Requirements of this project**
 
 Your program should allow any number to be stored in a variable and printed out. Then, the program should output its double, output six added to it, output that number divided in half, and, finally, output that number subtracted by the original number. In this way, the program displays each calculation, and of course, the final result of three.
 
@@ -539,7 +538,7 @@ Looking back at previous programs and the requirements stated above, you know yo
 - [ ] comments in your code
 - [ ] use of camelCase when appropriate
 
-#### Test Cases
+**Test Cases**
 Create variables and choose numbers that match the following six number types to verify your program works for each.  
 - [ ] Positive Integer
 - [ ] Negative Integer
@@ -548,6 +547,6 @@ Create variables and choose numbers that match the following six number types to
 - [ ] Positive Double
 - [ ] Negative Double
 
-#### Document and Present
+**Document and Present**
 
 Create a video of your program and how your program works. As part of your project documentation, you will take screenshots of your program’s code and output.  If you are working with a partner, please make sure that both parties are involved with the explanation of the Numbers Riddle.  *Please include your java program with your submission.*
