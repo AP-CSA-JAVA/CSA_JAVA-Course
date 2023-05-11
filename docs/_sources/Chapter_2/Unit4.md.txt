@@ -1,6 +1,6 @@
 # Unit 4
 
-## While Loops
+## 4.1 While Loops
 
  **Goals**
 
@@ -195,7 +195,7 @@ The average is: 33.25
 Submit your replit link to Canvas.
 
 
-## For Loops
+## 4.2 For Loops
 	
 **Goals**
   - Write for loops.
@@ -250,7 +250,7 @@ The scope of the intialization variable, i, is within the `for` loop; any attemp
 **Expected Error**: When you remove the last space in str, the value Blue will fail to print. This is an example of an `off-by-one error`. Without the space at the end, the last call to indexOf cannot find the last word in str.  `Off-by-one errors` occur when the iteration loops one time too many or one time too few.
 	
 
-## Developing Algorithms Using Strings
+## 4.3 Developing Algorithms Using Strings
 
 **Goals**
   - Manipulate Strings using loops
@@ -332,17 +332,24 @@ You will write 3 programs that will do the following:
 Submit your replit file to Canvas.
 	
 
-## Nested Iteration
+## 4.4 Nested Iteration
 	
 **Goals**
   - Represent nested iterative processes.
   - Determine code that would be used to complete code segments.
 
-## Informal Code Analysis
+## 4.5 Informal Code Analysis
 	
 **Goal**
   - Determine the number of times a code segment will execute.
 	
-### Hand-Tracing
+**What is Informal Code Analysis?**
+Informal code analysis is a process where you will manually check your program line by line. You may also know this as code tracing. Successful code tracing requires you to go through the code line by line, notating of how many times the code is executed, all variable values, and what is output produced to the console. *This is a very important skill to learn!*
+	
+**Debugging**
+Another part of code tracing is debugging. Debugging are syntax or logic errors that prevents your code from executing as intended.  With debugging, you have a panel (located in Tools in replit and Debug Console in VSCode) that displays the program values running in real-time as the program is being executed. When we use the debugging panel, you can even sometimes change the variable values to see what may happen to the code as well. We can also have breakpoints in debugging as well. These breakpoints are points allow you to stop at given sections of  the program. This is useful when you want to see the values at a certain points in the code. After, you go line-by-line through the code you will see how the variables change or see how the variables change after every iteration of a loop.
+
+**Hand-Tracing Tool**
 	
 https://pythontutor.com/render.html#mode=display
+https://cscircles.cemc.uwaterloo.ca/java_visualize/
