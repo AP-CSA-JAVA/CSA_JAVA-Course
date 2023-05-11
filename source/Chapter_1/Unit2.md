@@ -11,7 +11,7 @@ We can also create a *method* that will call the attributes within a class.  For
 
 The value of the attributes define the state of the object. What makes this efficient is that the class does not hold any space in the memory because we just create a definition.  The moment we *instantiate* the class the object will require a dedicated space in memory.  Thus we can say that a Class defines how the object should look and object is the actual representation of the same.  
 
-### Example:
+**Example:**
 ```java
 class Bicycle {
 
@@ -60,7 +60,7 @@ If you use the constructor signature incorrectly, you may get an **IllegalArgume
 
 The **default constructor** is the constructor with no parameters in the parameter list. So, if an overloaded constructor is missing a parameter, then the predetermined value will default to the default constructor.
 
-### Null Objects
+#### Null Objects
 Null is a reserved keyword in Java for literal values. It is a value that shows that the object is referring to nothing.  You cannot call an object that has been declared as *null* since there is not characteristics of that object.  This will create a **NullPointerException** error.  Java, variables of reference types (such as classes and arrays) hold a reference to an object in memory, rather than the actual object itself. This reference is a memory address that points to the location in memory where the object is stored.  If there is no object associated with a reference type, the value of said type is null, which indicates that the variable does not currently reference any object.
 
 Example:
@@ -78,7 +78,7 @@ Example:
     System.out.println("ourCar=" + ourCar);
     System.out.println("emptyCar=" +emptyCar);
 ```
-Sample Outcome:
+Sample Output:
 ```java
     myCar=Car@6d06d69c
     yourCar=Car@7852e922
@@ -245,7 +245,7 @@ public class Main {
     }
 }
 ```
-### Sample Output
+**Sample Output**
 ```java
 1
 7
@@ -281,13 +281,13 @@ class Main {
     }
 }
 ```
-### Sample Output
+**Sample Output**
 ```java
 The name of the child is Francis. The age of the child is 10.
 12
 ```
 
-### Assignment 1
+### Assignment 2.1.1
 
 Write a class related to a professional sport (i.e. Football, soccer, basketball, etc)
 
@@ -307,7 +307,7 @@ Goals: 0
 Starting: True
 ```
 
-### Assignment 2
+### Assignment 2.1.2
 - [ ] Complete the cakeRunner program
 - [ ] Submit your program code
 
@@ -349,7 +349,8 @@ ourCake=Cake@7852e922
 emptyCake=null
 ```
 
-### Extra Credit
+**Extra Credit**
+
 **Instructions:**
 
 1. Edit the Bike class to have the following attributes:
@@ -361,7 +362,7 @@ emptyCake=null
 4. Create a constructor that takes all the parameters
 5. Create two more objects that will match the sample output.
 
-### Scanner Class Revisited
+#### Scanner Class Revisited
 As you recall, the scanner class is a package that provides primitive input within Java programs.  It can be found in the [java.util Package](https://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html) website.
 
 - [ ] First you need to import the class from the online Oracle repository by typing `import java.util.Scanner;`
@@ -506,10 +507,9 @@ public void school(int grade, double gpa, String name) {}
 
 
 ### Assignment 1
-#### Instructions DigiPet
+**Instructions DigiPet**
 You will create a class DigiPet
 
-#### Steps
 1. Create a DigiPet class with the following attributes:  
 	- `animal`
 	- `name`
@@ -569,7 +569,7 @@ public int sum(){
 
  The keyword **return** is *required* in all non-void methods. Since the method sum has a **return** type of `int` the return line is required to return a value of this type.
  
- ### Calling a non-void method
+ ## Calling a non-void method
  
  - [ ]  Call a non-void method
  - [ ]  Use a return value from a non-void method in a variable or as part of an expression
@@ -609,7 +609,7 @@ return calculateAverage() > 70;
 ```
 
 ### Assignment 1
-#### Instructions Shape using Non-Void Methods
+**Instructions Shape using Non-Void Methods**
 
 1. In the Shape class, the attributes and constructor is complete. Look them over.
 2. In the Main class, instantiate the three objects described in the comments
@@ -639,7 +639,7 @@ ________________________________________________________________________________
 
 ### Assignment 2
 
-#### Instructions RoadTrip using Non-Void Methods
+**Instructions RoadTrip using Non-Void Methods**
 
 Starter file: [125-RoadTrip.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9717372/125-RoadTrip.zip)
 
@@ -703,7 +703,7 @@ public class Main
 ```java
 Wintergreen
 ```
-### Recall:
+**Recall:**
 - [ ] A String is not a primitive type.
 - [ ] A String object references a location in memory.
 - [ ] String objects cannot be changed.
@@ -1084,11 +1084,11 @@ Enter your first name:
 Enter your partner's name:
  Julia
 
-Yelling your name: JONATHAN
-Whispering your partner's name: julia
-Your name in Pig Latin: onathanjay
-Your partner's name in Pig Latin: uliajay
-Your team name is Jonalia
+Yelling your name: Samantha
+Whispering your partner's name: Russell
+Your name in Pig Latin: amanthaSay
+Your partner's name in Pig Latin: ussellray
+Your team name is Samaell
 ```
 _______________________________________________________________________________________________________________
 
@@ -1178,7 +1178,7 @@ public class Main
 `d value is: 1.5`
 
 
-#### Autoboxing/ Unboxing
+### Autoboxing/ Unboxing
 In the program below the JVM did some extra work at lines 5 and 6. Java automatically converted from the int and double primitive types to their corresponding object reference types. This is called autoboxing, an automatic conversion that the Java compiler makes between primitive types and their corresponding object wrapper classes.
 
 ```java
@@ -1300,7 +1300,7 @@ Create a program that contains an example of each of the following. Add in-line 
 - [ ] Unboxing
 
 
-## Using the Math Class
+### Using the Math Class
 
 - [ ]  Use methods from the Math package
 	- [ ] I will be able to write a program using math methods	
@@ -1620,7 +1620,7 @@ ________________________________________________________________________________
 - [ ] Apply the programming development process to create a project.
 - [ ] Capture your project and communicate how each part of your program works.
 
-### Requirements of this project
+**Requirements of this project**
 
 Give a Mad Lib with three user inputs, create a user-generated story with the correct parts of speech. 
 Your program should allow a user to enter values that change the output of a story. Specifically, it should include:
