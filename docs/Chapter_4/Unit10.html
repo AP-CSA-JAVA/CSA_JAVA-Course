@@ -220,7 +220,21 @@
 <section id="recursion">
 <h2>10.1 Recursion<a class="headerlink" href="#recursion" title="Permalink to this heading">#</a></h2>
 <p>Recursion is the technique of making a function call itself. This technique provides a way to break complicated problems down into simple problems which are easier to solve.</p>
-<p>Recursion can be challenging. The best way to understand the nuances of it, is to experiment with it.</p>
+<p>Recursion can be challenging, but the best way to understand the nuances of it, is to experiment with it.  The basics of a recursive method is the recursive call and the base case.  The recursive call, calls itself.  It can start over with the same parameter or a different one.  After x calls, we reach the base case where the recusion is stopped.</p>
+<p>The basic structure will look something like this:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">()</span>
+<span class="w">  </span><span class="c1">// base case</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">baseCaseCondition</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">    </span><span class="n">baseCaseSteps</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">do</span><span class="w"> </span><span class="n">something</span>
+<span class="w">    </span><span class="c1">// recursive call</span>
+<span class="w">    </span><span class="n">recursiveMethod</span><span class="p">();</span><span class="w"> </span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </section>
 <section id="recursive-searching-and-sorting">
 <h2>10.2 Recursive Searching and Sorting<a class="headerlink" href="#recursive-searching-and-sorting" title="Permalink to this heading">#</a></h2>
