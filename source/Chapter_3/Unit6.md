@@ -12,7 +12,7 @@ Arrays in java is a group of variables referred to by a common name. Below are s
 •	The direct superclass of an array type is Object.
 •	The size of the array cannot be altered(once initialized).   
  
-https://www.geeksforgeeks.org/arrays-in-java/
+
 An array can contain primitives (int, char, etc.) and object (or non-primitive) references of a class depending on the definition of the array. In the case of primitive data types, the actual values are stored in contiguous memory locations. In the case of class objects, the actual objects are stored in a heap segment.
 
 array.length: length is a final variable applicable for arrays. With the help of the length variable, we can obtain the size of the array. 
