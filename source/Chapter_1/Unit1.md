@@ -41,7 +41,7 @@ public class Main {
   }
 }
 ```
-Example of this in use can be found [here](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/blob/main/source/Resources/array.txt).  Use this format for Assignment 2 and all future programs where you are asked to create two different programs.
+Example of this in use can be found [here](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/blob/main/source/Resources/array.MD).  Use this format for Assignment 2 and all future programs where you are asked to create two different programs.
 
 
 <p align="center">---------------------------------------------------------------------------- </p>
