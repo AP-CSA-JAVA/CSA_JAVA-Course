@@ -287,7 +287,7 @@ The name of the child is Francis. The age of the child is 10.
 12
 ```
 
-### Assignment 2.1.1
+### Activity 2.1.1
 
 Write a class related to a professional sport (i.e. Football, soccer, basketball, etc)
 
@@ -307,7 +307,7 @@ Goals: 0
 Starting: True
 ```
 
-### Assignment 2.1.2
+### Activity 2.1.2
 - [ ] Complete the cakeRunner program
 - [ ] Submit your program code
 
@@ -506,7 +506,7 @@ public void school(int grade, double gpa, String name) {}
 
 
 
-### Assignment 2.4.1
+### Activity 2.4.1
 **Instructions DigiPet**
 You will create a class DigiPet
 
@@ -608,7 +608,7 @@ return sum() / numItems;
 return calculateAverage() > 70;
 ```
 
-### Assignment 2.5.1
+### Activity 2.5.1
 **Instructions Shape using Non-Void Methods**
 
 1. In the Shape class, the attributes and constructor is complete. Look them over.
@@ -637,7 +637,7 @@ Submit your link to the finished program
 
 __________________________________________________________________________________________________________________
 
-### Assignment 2.5.2
+### Activity 2.5.2
 
 **Instructions RoadTrip using Non-Void Methods**
 
@@ -1287,7 +1287,7 @@ In the program below, which line of code contains an example of *unboxing*?
 </details>
 
 
-### Assignment 2.8.1 Wrapper Classes
+### Activity 2.8.1 Wrapper Classes
 
 Create a program that contains an example of each of the following. Add in-line comments to describe each example.
 - [ ] An Integer constructor
@@ -1490,7 +1490,7 @@ System.out.println(Math.sqrt(Math.abs(Math.pow(12, 2) - Math.pow(5, 2))));
 </p>
 </details>
 
-### Assignment 2.9.1 - Math Class Worksheet 1 & 2	
+### Activity 2.9.1 - Math Class Worksheet 1 & 2	
 
 In pairs, work on worksheet 1 in class.  We will review your work in class.
 
@@ -1563,7 +1563,7 @@ As a wrap-up, consider the ++ operator as:
 
 
 
-### Assignment 2.9.2 - Race Car
+### Activity 2.9.2 - Race Car
 
 Starter Files: [Activity129RaceCar.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9757289/Activity129RaceCar.zip)
 
