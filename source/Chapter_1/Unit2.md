@@ -506,7 +506,7 @@ public void school(int grade, double gpa, String name) {}
 
 
 
-### Assignment 1
+### Assignment 2.4.1
 **Instructions DigiPet**
 You will create a class DigiPet
 
@@ -608,7 +608,7 @@ return sum() / numItems;
 return calculateAverage() > 70;
 ```
 
-### Assignment 1
+### Assignment 2.5.1
 **Instructions Shape using Non-Void Methods**
 
 1. In the Shape class, the attributes and constructor is complete. Look them over.
@@ -637,7 +637,7 @@ Submit your link to the finished program
 
 __________________________________________________________________________________________________________________
 
-### Assignment 2
+### Assignment 2.5.2
 
 **Instructions RoadTrip using Non-Void Methods**
 
@@ -1026,7 +1026,7 @@ Experiment with the program above by changing the values of the two Strings unti
 
 String Object Practice Part II: [Activity 126 String Objects_Vers2.docx](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9737627/Activity.126.String.Objects_Vers2.docx)
 
-### Activity 1 - Wordplay
+### Activity 2.7.1 - Wordplay
 
 Starter Files: [127-wordPlay.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9747405/127-wordPlay.zip)
 
@@ -1052,18 +1052,18 @@ Jonathan Virak
 Enter a phrase: 
 Give papa a proper cup of coffee in a copper coffee cup.
 
-Your first name is Jonathan
-Your last name is Virak
-Your initials are JV
+Your first name is Bernard
+Your last name is Heally
+Your initials are BH
 
-Your new password: 8JonaVirakrak5
+Your new password: 8BernHeallylly5
 
 Give papa a proper bup of boffee in a bopper boffee bup.
 ```
 
 Submit your repl.it file on Canvas.
 
-### Activity 2 - Speaking
+### Activity 2.7.2 - Speaking
 
 Starter files: [127-Speaking.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9757536/127-Speaking.zip)
 
@@ -1287,7 +1287,7 @@ In the program below, which line of code contains an example of *unboxing*?
 </details>
 
 
-### Assignment 1 Wrapper Classes
+### Assignment 2.8.1 Wrapper Classes
 
 Create a program that contains an example of each of the following. Add in-line comments to describe each example.
 - [ ] An Integer constructor
@@ -1490,7 +1490,7 @@ System.out.println(Math.sqrt(Math.abs(Math.pow(12, 2) - Math.pow(5, 2))));
 </p>
 </details>
 
-### Assignment 1 - Math Class Worksheet 1 & 2	
+### Assignment 2.9.1 - Math Class Worksheet 1 & 2	
 
 In pairs, work on worksheet 1 in class.  We will review your work in class.
 
@@ -1563,7 +1563,7 @@ As a wrap-up, consider the ++ operator as:
 
 
 
-### Assignment 2 - Race Car
+### Assignment 2.9.2 - Race Car
 
 Starter Files: [Activity129RaceCar.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9757289/Activity129RaceCar.zip)
 
