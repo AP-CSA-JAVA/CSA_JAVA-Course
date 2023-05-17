@@ -363,48 +363,63 @@
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Javadoc Comments are denoted with a forward slash and two asterisks and ends with one asterisk and a forward slash.  Each line will also have an asterisk</p></li>
+<li><p>Javadoc Comments are denoted with a forward slash and two asterisks and ends with one asterisk and a forward slash.  Each line will also have an asterisk.</p></li>
 </ul>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span>/**
- *     Returns total sales from all vendors:
- *     sets &lt;code&gt;totalSales&lt;/code&gt; // Can use HTML tags
- *     to 0.
- *
- *     @return total amount of sales from all vendors
- */
-
-
-**Nameing Conventions**
-- Choose meaningful and descriptive names
-- Variables and method names:
-  - User lowercase - if the name consists of several words, concatenate all into one, use lowercase for the first letter of the first word, and capitalize the first letter of each subsequent word in the name.
-- For example, the variables `radius` and `area`, and the method `computeArea`.
-- Class names:
-  - Capitalize the first letter of each word in the name.
-  - For example, the class name `ComputeArea`.
-- Constants:
-  - Capitalize all letters in constants, and use underscores to connect words.
-  - For example, the constant `PI` and `MAX_VALUE`.
-
-
-**Proper Indentation and Spacing**
-- Indentation
-  - Indent two spaces
-- Spacing
-  - Use blank line to separate segments of the code.
-
-
-**Block Styles**
-- Use end-of-line style for braces.
-
-```java
-public class Main
-{  //  &lt;-- Next-line style
-  public static void main(String[] args)
-  {
-     System.out.println(&quot;Block Styles&quot;);
-  }
-}
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> *     Returns total sales from all vendors:</span>
+<span class="cm"> *     sets &lt;code&gt;totalSales&lt;/code&gt; // Can use HTML tags</span>
+<span class="cm"> *     to 0.</span>
+<span class="cm"> *</span>
+<span class="cm"> *     @return total amount of sales from all vendors</span>
+<span class="cm"> */</span>
+</pre></div>
+</div>
+<p><strong>Nameing Conventions</strong></p>
+<ul class="simple">
+<li><p>Choose meaningful and descriptive names</p></li>
+<li><p>Variables and method names:</p>
+<ul>
+<li><p>User lowercase - if the name consists of several words, concatenate all into one, use lowercase for the first letter of the first word, and capitalize the first letter of each subsequent word in the name.</p></li>
+</ul>
+</li>
+<li><p>For example, the variables <code class="docutils literal notranslate"><span class="pre">radius</span></code> and <code class="docutils literal notranslate"><span class="pre">area</span></code>, and the method <code class="docutils literal notranslate"><span class="pre">computeArea</span></code>.</p></li>
+<li><p>Class names:</p>
+<ul>
+<li><p>Capitalize the first letter of each word in the name.</p></li>
+<li><p>For example, the class name <code class="docutils literal notranslate"><span class="pre">ComputeArea</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Constants:</p>
+<ul>
+<li><p>Capitalize all letters in constants, and use underscores to connect words.</p></li>
+<li><p>For example, the constant <code class="docutils literal notranslate"><span class="pre">PI</span></code> and <code class="docutils literal notranslate"><span class="pre">MAX_VALUE</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Proper Indentation and Spacing</strong></p>
+<ul class="simple">
+<li><p>Indentation</p>
+<ul>
+<li><p>Indent two spaces</p></li>
+</ul>
+</li>
+<li><p>Spacing</p>
+<ul>
+<li><p>Use blank line to separate segments of the code.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Block Styles</strong></p>
+<ul class="simple">
+<li><p>Use end-of-line style for braces.</p></li>
+</ul>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span>
+<span class="p">{</span><span class="w">  </span><span class="c1">//  &lt;-- Next-line style</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">     </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Block Styles&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w">  </span><span class="p">{</span><span class="w">      </span><span class="c1">//  &lt;-- End-of-line style</span>
