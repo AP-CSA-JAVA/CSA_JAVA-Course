@@ -17,14 +17,14 @@ For this course we will be using various Integrated Development Environment (IDE
 <details><summary>Click Here</summary>
  <p>
   In this section, I will provide the basics of a Java program.  This information will be covered in more detail in Unit 5.  The topics that will be covered are:
-  - Comments
-  - Reserved Words
-  - Modifiers
-  - Statements
-  - Blocks
-  - Classes
-  - Methods
-  - The main method
+ - Comments
+ - Reserved Words
+ - Modifiers
+ - Statements
+ - Blocks
+ - Classes
+ - Methods
+ - The main method
   
   **Comments**
   - One-line comments are denoted with two forward slashes. //
