@@ -226,7 +226,171 @@
 <b>Control</b>: Doing things in order, making decisions, and doing thesame process multiple times are represented in code by usingcontrol structures.</br>
 <b>Impact of Computing</b>: Computers and computing haverevolutionized our lives. To use computing safely and responsibly,we need to be aware of privacy, security, and ethical issues.</br></p>
 <p>For this course we will be using various Integrated Development Environment (IDE) software to help you manage your programs, data files, &amp; images.  Coding Rooms will be our primary online IDE for this course.  For your personal development and collaboration, you may want to use an online IDE that will allow you to collaborate with peers.  If you are using a personal laptop, a good desktop IDE to install is VS Code.</p>
+<section id="anatomy-of-a-java-program">
+<h2>Anatomy of a Java Program<a class="headerlink" href="#anatomy-of-a-java-program" title="Permalink to this heading">#</a></h2>
+<details><summary>Click Here</summary>
+ <p>
+  In this section, I will provide the basics of a Java program.  This information will be covered in more detail in Unit 5.  The topics that will be covered are:
+  - Comments
+  - Reserved Words
+  - Modifiers
+  - Statements
+  - Blocks
+  - Classes
+  - Methods
+  - The main method
+<p><strong>Comments</strong></p>
+<ul class="simple">
+<li><p>One-line comments are denoted with two forward slashes. //</p></li>
+<li><p>Block comments are denoted with a forward slash followed by an asterisk and concludes with an asterisk followed by a forward slash.  It looks like this:  /* your comments here */</p></li>
+<li><p>Comments are ignored during the program execution</p></li>
+<li><p>Include a summary at the beginning of the program to explain what the program does, its features, its supporting data structures, and any unique techniques it uses.</p></li>
+</ul>
+<p><strong>Reserved Words</strong></p>
+<ul class="simple">
+<li><p>Words that have a specific purpose for the compiler</p></li>
+<li><p>These reserved words cannot be used for any other purpose in the program (variable, method, class, etc.)</p></li>
+<li><p>Key words are lower case (Java is a case sensitive language)</p></li>
+<li><p>Examples of key words include:
+| public | void | boolean | private |
+| class | int | continue | protected |
+| static | double | return | package |</p></li>
+</ul>
+<p><strong>Modifiers</strong></p>
+<ul class="simple">
+<li><p>Java uses certain reserved words called modifiers that *specify the properties of the data, methods, and classes and how they can be used.</p>
+<ul>
+<li><p>Examples include <code class="docutils literal notranslate"><span class="pre">public</span></code>, <code class="docutils literal notranslate"><span class="pre">static</span></code>, <code class="docutils literal notranslate"><span class="pre">private</span></code>, <code class="docutils literal notranslate"><span class="pre">final</span></code>, <code class="docutils literal notranslate"><span class="pre">abstract</span></code>, and <code class="docutils literal notranslate"><span class="pre">protected</span></code></p></li>
+</ul>
+</li>
+<li><p>A <code class="docutils literal notranslate"><span class="pre">public</span></code> datum, method, or claqss can be accessed by other programs.</p></li>
+<li><p>A <code class="docutils literal notranslate"><span class="pre">private</span></code> datum or method cannot be accessed by other programs.</p></li>
+</ul>
+<p><strong>Statements</strong></p>
+<ul class="simple">
+<li><p>A statement is an action or a sequence of actions.</p></li>
+<li><p>The print statement <code class="docutils literal notranslate"><span class="pre">System.out.println(&quot;Hello</span> <span class="pre">World!&quot;);</span></code> in the program is a statement to display the string “Hello World!”</p></li>
+<li><p>Every statement in Java ends with a semicolon(;).</p></li>
+</ul>
+<p><strong>Blocks</strong></p>
+<ul class="simple">
+<li><p>A pair of curly braces {} in a program forms a block that groups contents of a program to be executed.</p></li>
+</ul>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hello World!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Classes</strong></p>
+<ul class="simple">
+<li><p>The class is the most important construct in Java!</p></li>
+<li><p>A class is a template or bluepring for objects. To program in Java you must understand classes and be able to write and use them.</p></li>
+<li><p>A program is defined by using one or more classes.</p></li>
+</ul>
+<p><strong>Method</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">System.out.println</span></code> is a method.</p></li>
+<li><p>Method is a collection of statements that performs a sequence of oeprations to display a message on the console.</p></li>
+<li><p>It is used by invoking a statement with a string argument.  The string argument is enclosed within parentheses.</p>
+<ul>
+<li><p>In this case, the argument is “Hellow World!”  YOu can call the same println method with a different argument to print a different message.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>main() Method</strong></p>
+<ul class="simple">
+<li><p>The main method provides the control of program flow.  The Java interpreter executes the application by invoking the main method.</p></li>
+<li><p>The main method looks like this:</p></li>
+</ul>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">   </span><span class="c1">// Statements;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Programming Style and Documentation in Java</strong></p>
+<ul class="simple">
+<li><p>Appropriate comments and comments style:</p>
+<ul>
+<li><p>Include a summary at the beginning of the program to explain what the program does, its key features, its supporting data structures, and any unique techniques it uses.</p></li>
+<li><p>Include your name, class, lecture’s name, date, and a brief description of your code at the beginning of the program.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Comment Style</strong></p>
+<ul class="simple">
+<li><p>A “block” comment is placed between /* and */ marks:</p></li>
+<li><p>Example:</p></li>
+</ul>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/* Activity 2.5.2 Java Methods</span>
+<span class="cm">   Author: Your Name</span>
+<span class="cm">   Date:   5/17/2023</span>
+<span class="cm">   Notes:  Version 1  */</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>A single-line comment foes from // to the end of the line:</p></li>
+</ul>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">//variable for user quantity</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Javadoc Comments are denoted with a forward slash and two asterisks and ends with one asterisk and a forward slash.  Each line will also have an asterisk</p></li>
+</ul>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span>/**
+ *     Returns total sales from all vendors:
+ *     sets &lt;code&gt;totalSales&lt;/code&gt; // Can use HTML tags
+ *     to 0.
+ *
+ *     @return total amount of sales from all vendors
+ */
+
+
+**Nameing Conventions**
+- Choose meaningful and descriptive names
+- Variables and method names:
+  - User lowercase - if the name consists of several words, concatenate all into one, use lowercase for the first letter of the first word, and capitalize the first letter of each subsequent word in the name.
+- For example, the variables `radius` and `area`, and the method `computeArea`.
+- Class names:
+  - Capitalize the first letter of each word in the name.
+  - For example, the class name `ComputeArea`.
+- Constants:
+  - Capitalize all letters in constants, and use underscores to connect words.
+  - For example, the constant `PI` and `MAX_VALUE`.
+
+
+**Proper Indentation and Spacing**
+- Indentation
+  - Indent two spaces
+- Spacing
+  - Use blank line to separate segments of the code.
+
+
+**Block Styles**
+- Use end-of-line style for braces.
+
+```java
+public class Main
+{  //  &lt;-- Next-line style
+  public static void main(String[] args)
+  {
+     System.out.println(&quot;Block Styles&quot;);
+  }
+}
+</pre></div>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w">  </span><span class="p">{</span><span class="w">      </span><span class="c1">//  &lt;-- End-of-line style</span>
+<span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Block Styles&quot;</span><span class="p">);</span>
+<span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+   </p></details>
 <hr class="docutils" />
+</section>
 <hr class="docutils" />
 <section id="syllabus">
 <h2>Syllabus<a class="headerlink" href="#syllabus" title="Permalink to this heading">#</a></h2>
@@ -1513,6 +1677,7 @@ This is a reminder that each student is responsible for their own work.  Assignm
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">AP Computer Science A Course Overview</a><ul>
+<li><a class="reference internal" href="#anatomy-of-a-java-program">Anatomy of a Java Program</a></li>
 <li><a class="reference internal" href="#syllabus">Syllabus</a></li>
 <li><a class="reference internal" href="#table-of-contents">Table of Contents</a></li>
 <li><a class="reference internal" href="#ap-computational-thinking-practices-skills">AP Computational Thinking Practices: Skills</a></li>
