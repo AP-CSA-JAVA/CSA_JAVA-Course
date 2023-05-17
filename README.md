@@ -112,7 +112,8 @@ For this course we will be using various Integrated Development Environment (IDE
   ```java
      int x = 0; //variable for user quantity
   ```
-  - Javadoc Comments are denoted with a forward slash and two asterisks and ends with one asterisk and a forward slash.  Each line will also have an asterisk
+  - Javadoc Comments are denoted with a forward slash and two asterisks and ends with one asterisk and a forward slash.  Each line will also have an asterisk.
+  
   ```java
   /**
    *     Returns total sales from all vendors:
@@ -121,6 +122,7 @@ For this course we will be using various Integrated Development Environment (IDE
    *
    *     @return total amount of sales from all vendors
    */
+  ```
   
   
   **Nameing Conventions**
