@@ -16,15 +16,16 @@ For this course we will be using various Integrated Development Environment (IDE
 ## Anatomy of a Java Program
 <details><summary>Click Here</summary>
  <p>
-  In this section, I will provide the basics of a Java program.  This information will be covered in more detail in Unit 5.  The topics that will be covered are:
- - Comments
- - Reserved Words
- - Modifiers
- - Statements
- - Blocks
- - Classes
- - Methods
- - The main method
+  In this section, I will provide the basics of a Java program.  This information will be covered in more detail in Unit 5.  
+  The topics that will be covered are:
+  - Comments
+  - Reserved Words
+  - Modifiers
+  - Statements
+  - Blocks
+  - Classes
+  - Methods
+  - The main method
   
   **Comments**
   - One-line comments are denoted with two forward slashes. //
@@ -37,6 +38,9 @@ For this course we will be using various Integrated Development Environment (IDE
   - These reserved words cannot be used for any other purpose in the program (variable, method, class, etc.)
   - Key words are lower case (Java is a case sensitive language)
   - Examples of key words include:
+  
+  |      |     |     |     |
+  | --- | --- | --- | --- |
   | public | void | boolean | private |
   | class | int | continue | protected |
   | static | double | return | package |
