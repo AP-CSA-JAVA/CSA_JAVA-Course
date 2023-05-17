@@ -126,7 +126,7 @@ For this course we will be using various Integrated Development Environment (IDE
   ```
   
   
-  **Nameing Conventions**
+  **Naming Conventions**
   - Choose meaningful and descriptive names
   - Variables and method names:
     - User lowercase - if the name consists of several words, concatenate all into one, use lowercase for the first letter of the first word, and capitalize the first letter of each subsequent word in the name.
@@ -149,6 +149,7 @@ For this course we will be using various Integrated Development Environment (IDE
   **Block Styles**
   - Use end-of-line style for braces.
   
+  
   ```java
   public class Main
   {  //  <-- Next-line style
@@ -158,7 +159,8 @@ For this course we will be using various Integrated Development Environment (IDE
     }
   }
   ```
-            
+
+             
    ```java
   public class Main  {      //  <-- End-of-line style
     public static void main(String[] args) {
