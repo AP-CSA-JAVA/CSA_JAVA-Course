@@ -60,7 +60,7 @@ If you use the constructor signature incorrectly, you may get an **IllegalArgume
 
 The **default constructor** is the constructor with no parameters in the parameter list. So, if an overloaded constructor is missing a parameter, then the predetermined value will default to the default constructor.
 
-#### Null Objects
+**Null Objects**
 Null is a reserved keyword in Java for literal values. It is a value that shows that the object is referring to nothing.  You cannot call an object that has been declared as *null* since there is not characteristics of that object.  This will create a **NullPointerException** error.  Java, variables of reference types (such as classes and arrays) hold a reference to an object in memory, rather than the actual object itself. This reference is a memory address that points to the location in memory where the object is stored.  If there is no object associated with a reference type, the value of said type is null, which indicates that the variable does not currently reference any object.
 
 Example:
@@ -362,7 +362,7 @@ emptyCake=null
 4. Create a constructor that takes all the parameters
 5. Create two more objects that will match the sample output.
 
-#### Scanner Class Revisited
+**Scanner Class Revisited**
 As you recall, the scanner class is a package that provides primitive input within Java programs.  It can be found in the [java.util Package](https://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html) website.
 
 - [ ] First you need to import the class from the online Oracle repository by typing `import java.util.Scanner;`
@@ -491,7 +491,7 @@ The `void` keyword will not return *anything* from the method declaration.  Whil
 
 **NOTE:** 'Null' is a place holder for a reference that does not have an object.  If defines a memory address that may eventually hold a value.
 
-### 2.4 Calling a Void Method with Parameters
+## 2.4 Calling a Void Method with Parameters
 
 - [ ] Call non-static void methods with parameters
 - [ ] Use overloaded methods
@@ -755,7 +755,7 @@ public class Main
 
 Escape sequences begin with the \ character (back slash as opposed to a forward slash) and allow a programmer to type these characters in String literals. Take a look at the three examples below.
 
-### Escape Sequence
+**Escape Sequence**
 
 | Newline | The \ character | the " character |
 | ---------------- | ---------------- | ---------------- |
@@ -780,7 +780,7 @@ public class Main
  Your woods\ fields\ and hills\"
  
  
-### Extra Credit
+**Extra Credit**
 
 1. Create a new java file.
      - Research a College Fight Song to use for this assignment.
@@ -1178,7 +1178,7 @@ public class Main
 `d value is: 1.5`
 
 
-### Autoboxing/ Unboxing
+**Autoboxing/ Unboxing**
 In the program below the JVM did some extra work at lines 5 and 6. Java automatically converted from the int and double primitive types to their corresponding object reference types. This is called autoboxing, an automatic conversion that the Java compiler makes between primitive types and their corresponding object wrapper classes.
 
 ```java
@@ -1352,7 +1352,7 @@ Math.round(79.52)
 </p>
 </details>
 
-### The random Method
+**The random Method**
 
 For programs that require some amount of randomness, such as games, security, simulations, and statistics, Java’s Math class provides a random method. This method returns a double value that falls in the range from 0.0 to 1.0 non-inclusive, expressed mathematically as (0.0, 1.0\] to indicate that it includes 0.0 but that its highest value is .999999999999999. With random values from 0 to .99..., you can mathematically generate any random number you may need. As you will see, you can manipulate the results in a variety of ways to fit your needs.
 
@@ -1502,7 +1502,7 @@ Complete worksheet 2 for homework.  We will review your work next class.
 
 **Download:** [mathClassWorksheet2.docx](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9778287/mathClassWorksheet2.docx)
 
-#### An example of single vs double quotes
+**An example of single vs double quotes**
 
 <details><summary>Click Here</summary>
 <p>
@@ -1524,7 +1524,7 @@ class Main {
 </p>
 </details>
 
-#### Prefix & Postfix Operators
+**Prefix & Postfix Operators**
 
 <details><summary>Click Here</summary>
 <p>
