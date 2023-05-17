@@ -271,9 +271,8 @@ Object-oriented Programming Facts:</p>
 <p>The Box class is located in the file Box.java where you can find the constructor(s).  The signature of the constructor is the class name along with the parameter list, if any.  If you recall from your prior CS courses the word ‘abstraction’.  We are taking the complexity out of the action for the user.  The user does not need to know how constructors work, they just need to know that it does what it is supposed to do within the program.</p>
 <p>If you use the constructor signature incorrectly, you may get an <strong>IllegalArgumentException</strong>.  Take for example you create a constructor called <em>Student</em>.  The <em>Student</em> class has parameters <em>int age, String name, and double gpa</em>.  If you alter the order of the variables within the parameter, it will return an error.</p>
 <p>The <strong>default constructor</strong> is the constructor with no parameters in the parameter list. So, if an overloaded constructor is missing a parameter, then the predetermined value will default to the default constructor.</p>
-<section id="null-objects">
-<h3>Null Objects<a class="headerlink" href="#null-objects" title="Permalink to this heading">#</a></h3>
-<p>Null is a reserved keyword in Java for literal values. It is a value that shows that the object is referring to nothing.  You cannot call an object that has been declared as <em>null</em> since there is not characteristics of that object.  This will create a <strong>NullPointerException</strong> error.  Java, variables of reference types (such as classes and arrays) hold a reference to an object in memory, rather than the actual object itself. This reference is a memory address that points to the location in memory where the object is stored.  If there is no object associated with a reference type, the value of said type is null, which indicates that the variable does not currently reference any object.</p>
+<p><strong>Null Objects</strong>
+Null is a reserved keyword in Java for literal values. It is a value that shows that the object is referring to nothing.  You cannot call an object that has been declared as <em>null</em> since there is not characteristics of that object.  This will create a <strong>NullPointerException</strong> error.  Java, variables of reference types (such as classes and arrays) hold a reference to an object in memory, rather than the actual object itself. This reference is a memory address that points to the location in memory where the object is stored.  If there is no object associated with a reference type, the value of said type is null, which indicates that the variable does not currently reference any object.</p>
 <p>Example:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="cm">/* missing code */</span>
 <span class="w">    </span>
@@ -479,7 +478,6 @@ x = 10
 <span class="mi">12</span>
 </pre></div>
 </div>
-</section>
 <section id="assignment-2-1-1">
 <h3>Assignment 2.1.1<a class="headerlink" href="#assignment-2-1-1" title="Permalink to this heading">#</a></h3>
 <p>Write a class related to a professional sport (i.e. Football, soccer, basketball, etc)</p>
@@ -558,9 +556,8 @@ emptyCake=null
 <li><p>Create a constructor that takes all the parameters</p></li>
 <li><p>Create two more objects that will match the sample output.</p></li>
 </ol>
-<section id="scanner-class-revisited">
-<h4>Scanner Class Revisited<a class="headerlink" href="#scanner-class-revisited" title="Permalink to this heading">#</a></h4>
-<p>As you recall, the scanner class is a package that provides primitive input within Java programs.  It can be found in the <a class="reference external" href="https://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html">java.util Package</a> website.</p>
+<p><strong>Scanner Class Revisited</strong>
+As you recall, the scanner class is a package that provides primitive input within Java programs.  It can be found in the <a class="reference external" href="https://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html">java.util Package</a> website.</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> First you need to import the class from the online Oracle repository by typing <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">java.util.Scanner;</span></code></p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> To create an object of the Scanner class, we must pass a defined object in <code class="docutils literal notranslate"><span class="pre">System.in</span></code> which is the standard input.</p></li>
@@ -615,7 +612,6 @@ emptyCake=null
 <span class="nl">GPA</span><span class="p">:</span><span class="w"> </span><span class="mf">3.0</span>
 </pre></div>
 </div>
-</section>
 </section>
 </section>
 <section id="calling-a-void-method">
@@ -684,8 +680,9 @@ emptyCake=null
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">void</span></code> keyword will not return <em>anything</em> from the method declaration.  While the void method of the class does not return any value, the constructors return an object reference.  Thus, they can be called as a part of an expression.  Explained another way, void means that nothing is returned from a method, nor will anything ever be returned. It is an absence of any value.</p>
 <p><strong>NOTE:</strong> ‘Null’ is a place holder for a reference that does not have an object.  If defines a memory address that may eventually hold a value.</p>
+</section>
 <section id="calling-a-void-method-with-parameters">
-<h3>2.4 Calling a Void Method with Parameters<a class="headerlink" href="#calling-a-void-method-with-parameters" title="Permalink to this heading">#</a></h3>
+<h2>2.4 Calling a Void Method with Parameters<a class="headerlink" href="#calling-a-void-method-with-parameters" title="Permalink to this heading">#</a></h2>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Call non-static void methods with parameters</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use overloaded methods</p></li>
@@ -696,7 +693,6 @@ emptyCake=null
 <span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">school</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">grade</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">gpa</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
 </pre></div>
 </div>
-</section>
 <section id="assignment-1">
 <h3>Assignment 1<a class="headerlink" href="#assignment-1" title="Permalink to this heading">#</a></h3>
 <p><strong>Instructions DigiPet</strong>
@@ -953,8 +949,7 @@ String objects are <em>immutable</em>. This means that you cannot change the Str
 <p><strong>NOTE</strong> Java allows for <em>implicit type conversion</em> during concatenation. This means that even if a primitive is stored as a primitive type (be it <em>int</em> or <em>double</em>), it can still be concatenated to a String. The <em>int</em> is converted to a String before the + operator is applied.</p>
 <p><strong>NOTE</strong> Certain characters need special treatment to be included in strings in Java. Either they are “non-printable,” such as the character that indicates a new line of output (called the newline character), or they already have other meanings in the Java language.</p>
 <p>Escape sequences begin with the \ character (back slash as opposed to a forward slash) and allow a programmer to type these characters in String literals. Take a look at the three examples below.</p>
-<section id="escape-sequence">
-<h3>Escape Sequence<a class="headerlink" href="#escape-sequence" title="Permalink to this heading">#</a></h3>
+<p><strong>Escape Sequence</strong></p>
 <div class="table-wrapper colwidths-auto docutils container">
 <table class="docutils align-default">
 <thead>
@@ -988,9 +983,7 @@ String objects are <em>immutable</em>. This means that you cannot change the Str
 <p><strong>Output</strong>
 “Oh, Pine Tree State,
 Your woods\ fields\ and hills”</p>
-</section>
-<section id="extra-credit">
-<h3>Extra Credit<a class="headerlink" href="#extra-credit" title="Permalink to this heading">#</a></h3>
+<p><strong>Extra Credit</strong></p>
 <ol class="arabic simple">
 <li><p>Create a new java file.</p>
 <ul class="simple">
@@ -1010,7 +1003,6 @@ Your woods\ fields\ and hills”</p>
 </ul>
 <p>Submit your program link.  Do not send me a screen shot of your program.<br />
 Comment your code showing that you completed each of the bullet points above.</p>
-</section>
 </section>
 <hr class="docutils" />
 <section id="string-methods">
@@ -1504,9 +1496,8 @@ Modify the program so that it stores the value of int1 in int2.</p>
 </div>
 <p><strong>Sample Output</strong>
 <code class="docutils literal notranslate"><span class="pre">d</span> <span class="pre">value</span> <span class="pre">is:</span> <span class="pre">1.5</span></code></p>
-<section id="autoboxing-unboxing">
-<h3>Autoboxing/ Unboxing<a class="headerlink" href="#autoboxing-unboxing" title="Permalink to this heading">#</a></h3>
-<p>In the program below the JVM did some extra work at lines 5 and 6. Java automatically converted from the int and double primitive types to their corresponding object reference types. This is called autoboxing, an automatic conversion that the Java compiler makes between primitive types and their corresponding object wrapper classes.</p>
+<p><strong>Autoboxing/ Unboxing</strong>
+In the program below the JVM did some extra work at lines 5 and 6. Java automatically converted from the int and double primitive types to their corresponding object reference types. This is called autoboxing, an automatic conversion that the Java compiler makes between primitive types and their corresponding object wrapper classes.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span>
 <span class="mi">2</span><span class="w"> </span><span class="p">{</span>
 <span class="mi">3</span><span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
@@ -1602,7 +1593,6 @@ In the program below, which line of code contains an example of <em>unboxing</em
 </div>
 </p>
 </details>
-</section>
 <section id="assignment-1-wrapper-classes">
 <h3>Assignment 1 Wrapper Classes<a class="headerlink" href="#assignment-1-wrapper-classes" title="Permalink to this heading">#</a></h3>
 <p>Create a program that contains an example of each of the following. Add in-line comments to describe each example.</p>
@@ -1687,8 +1677,7 @@ how you could use the <code class="docutils literal notranslate"><span class="pr
 </div>
 </p>
 </details>
-<section id="the-random-method">
-<h3>The random Method<a class="headerlink" href="#the-random-method" title="Permalink to this heading">#</a></h3>
+<p><strong>The random Method</strong></p>
 <p>For programs that require some amount of randomness, such as games, security, simulations, and statistics, Java’s Math class provides a random method. This method returns a double value that falls in the range from 0.0 to 1.0 non-inclusive, expressed mathematically as (0.0, 1.0] to indicate that it includes 0.0 but that its highest value is .999999999999999. With random values from 0 to .99…, you can mathematically generate any random number you may need. As you will see, you can manipulate the results in a variety of ways to fit your needs.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span>
 <span class="p">{</span>
@@ -1808,7 +1797,6 @@ how you could use the <code class="docutils literal notranslate"><span class="pr
 </div>
 </p>
 </details>
-</section>
 <section id="assignment-1-math-class-worksheet-1-2">
 <h3>Assignment 1 - Math Class Worksheet 1 &amp; 2<a class="headerlink" href="#assignment-1-math-class-worksheet-1-2" title="Permalink to this heading">#</a></h3>
 <p>In pairs, work on worksheet 1 in class.  We will review your work in class.</p>
@@ -1816,8 +1804,7 @@ how you could use the <code class="docutils literal notranslate"><span class="pr
 <p><strong>ascii Table:</strong> <a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9737398/ascii-table-characters.pdf">ascii-table-characters.pdf</a></p>
 <p>Complete worksheet 2 for homework.  We will review your work next class.</p>
 <p><strong>Download:</strong> <a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9778287/mathClassWorksheet2.docx">mathClassWorksheet2.docx</a></p>
-<section id="an-example-of-single-vs-double-quotes">
-<h4>An example of single vs double quotes<a class="headerlink" href="#an-example-of-single-vs-double-quotes" title="Permalink to this heading">#</a></h4>
+<p><strong>An example of single vs double quotes</strong></p>
 <details><summary>Click Here</summary>
 <p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">	</span>
@@ -1834,9 +1821,7 @@ how you could use the <code class="docutils literal notranslate"><span class="pr
 </div>
 </p>
 </details>
-</section>
-<section id="prefix-postfix-operators">
-<h4>Prefix &amp; Postfix Operators<a class="headerlink" href="#prefix-postfix-operators" title="Permalink to this heading">#</a></h4>
+<p><strong>Prefix &amp; Postfix Operators</strong></p>
 <details><summary>Click Here</summary>
 <p>
 <p>** ++ and – used as a prefix or as a postfix **</p>
@@ -1865,7 +1850,6 @@ x = x++; //Post-increment
 x = ++x; //Pre-increment</p>
 </p>
 </details>
-</section>
 </section>
 <section id="assignment-2-race-car">
 <h3>Assignment 2 - Race Car<a class="headerlink" href="#assignment-2-race-car" title="Permalink to this heading">#</a></h3>
@@ -1994,16 +1978,12 @@ Your program should allow a user to enter values that change the output of a sto
 <li><a class="reference internal" href="#instances-of-classes">2.1 Instances of Classes</a></li>
 <li><a class="reference internal" href="#creating-and-storing-objects">2.2 Creating and Storing Objects</a></li>
 <li><a class="reference internal" href="#unit-5-2-constructors">Unit 5.2 - Constructors</a><ul>
-<li><a class="reference internal" href="#null-objects">Null Objects</a></li>
 <li><a class="reference internal" href="#assignment-2-1-1">Assignment 2.1.1</a></li>
-<li><a class="reference internal" href="#assignment-2-1-2">Assignment 2.1.2</a><ul>
-<li><a class="reference internal" href="#scanner-class-revisited">Scanner Class Revisited</a></li>
+<li><a class="reference internal" href="#assignment-2-1-2">Assignment 2.1.2</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a class="reference internal" href="#calling-a-void-method">2.3 Calling a Void Method</a><ul>
-<li><a class="reference internal" href="#calling-a-void-method-with-parameters">2.4 Calling a Void Method with Parameters</a></li>
+<li><a class="reference internal" href="#calling-a-void-method">2.3 Calling a Void Method</a></li>
+<li><a class="reference internal" href="#calling-a-void-method-with-parameters">2.4 Calling a Void Method with Parameters</a><ul>
 <li><a class="reference internal" href="#assignment-1">Assignment 1</a></li>
 </ul>
 </li>
@@ -2013,28 +1993,18 @@ Your program should allow a user to enter values that change the output of a sto
 <li><a class="reference internal" href="#assignment-2">Assignment 2</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#string-objects-concatenation-literals-and-other-things">2.6 String Objects: Concatenation, Literals, and Other Things</a><ul>
-<li><a class="reference internal" href="#escape-sequence">Escape Sequence</a></li>
-<li><a class="reference internal" href="#extra-credit">Extra Credit</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#string-objects-concatenation-literals-and-other-things">2.6 String Objects: Concatenation, Literals, and Other Things</a></li>
 <li><a class="reference internal" href="#string-methods">2.7 String Methods</a><ul>
 <li><a class="reference internal" href="#activity-1-wordplay">Activity 1 - Wordplay</a></li>
 <li><a class="reference internal" href="#activity-2-speaking">Activity 2 - Speaking</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#wrapper-classes-integer-and-double">2.8 Wrapper Classes - Integer and Double</a><ul>
-<li><a class="reference internal" href="#autoboxing-unboxing">Autoboxing/ Unboxing</a></li>
 <li><a class="reference internal" href="#assignment-1-wrapper-classes">Assignment 1 Wrapper Classes</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#using-the-math-class">2.9 Using the Math Class</a><ul>
-<li><a class="reference internal" href="#the-random-method">The random Method</a></li>
-<li><a class="reference internal" href="#assignment-1-math-class-worksheet-1-2">Assignment 1 - Math Class Worksheet 1 &amp; 2</a><ul>
-<li><a class="reference internal" href="#an-example-of-single-vs-double-quotes">An example of single vs double quotes</a></li>
-<li><a class="reference internal" href="#prefix-postfix-operators">Prefix &amp; Postfix Operators</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#assignment-1-math-class-worksheet-1-2">Assignment 1 - Math Class Worksheet 1 &amp; 2</a></li>
 <li><a class="reference internal" href="#assignment-2-race-car">Assignment 2 - Race Car</a></li>
 </ul>
 </li>
