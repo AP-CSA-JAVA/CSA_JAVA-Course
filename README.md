@@ -169,6 +169,12 @@ For this course we will be using various Integrated Development Environment (IDE
   }
   ```
   
+  Every Java program will begin like this:
+  
+  ![Main Class and Method in java](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/assets/12989939/e7f0bd1f-69b7-42da-b824-0ed8f9d0f460)
+  
+  
+  
    </p></details>
    
    
