@@ -299,7 +299,7 @@ public class GuessChecker
 | `boolean hasDupes(int sum)` | Used by `getGuess()` and `makeCode() to ensure that no digits are duplicated |
 
 
-### Activity 3.2.1
+### Activity 3.2.1 - Guess Checker Pt 1
 
 Modify the above code where you see `/*your code here*/` in the following ways:
 - Use if statements to compare each digit in the user's guess to the digit in the same position of the random number to see if they match.
@@ -556,7 +556,7 @@ else // if condition 3 is false
 
 ```
 
-### Activity 3.4.1
+### Activity 3.4.1 - Guess Checker Pt 2
 
 **Directions:** Modify your program to include “near hits.” These are correctly guessed numbers that are in the wrong position.
 
@@ -646,7 +646,7 @@ You are not allowed to date my grandchild!
 ```
 
 
-### Activity 3.5.3 - Guess Checker 
+### Activity 3.5.3 - Guess Checker - Pt 3
 
 This assignment will be categorized as a Projects.
 
