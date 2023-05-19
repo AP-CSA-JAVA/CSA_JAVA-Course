@@ -90,7 +90,7 @@ An \|\| statement short circuits when the left operand is `true`.  `happy` is `t
 </details>
 
 
-### Activity 3.1.1:  
+### Activity 3.1.1  
 
 [Boolean Exercises.docx](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9834076/Boolean.Exercises.docx)
 
