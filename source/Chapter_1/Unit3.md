@@ -609,7 +609,7 @@ Go skiing!
 
 ### Activity 3.5.1
 
-**Directions:** Using logical and relational operators, write a program that will take 3 numbers and return the if the number is greater than, less than or equal to the other two numbers.  Print out the results of your program.  Submit this assignment as a replit on Canvas.
+**Directions:** Using logical and relational operators, write a program that will take 3 numbers and return the if the number is greater than, less than or equal to the other two numbers.  Print out the results of your program.  Submit your replit link on Canvas.
 
 ```java
 Enter the first number
@@ -648,25 +648,25 @@ You are not allowed to date my grandchild!
 
 ### Activity 3.5.3 guessChecker Pt 3
 
-This assignment will be categorized as a Projects.
+This assignment will be categorized as a **Project**.
 
 **Directions:** Update GuessChecker to use compound Boolean statements.  Give the user at minimum three opportunities to guess the correct answer and print out how many of the remaining guesses they have.  You will submit your completed program with comments via replit.  Please share your link on Canvas.
 
 ```java
 9782
 Guess a 4-digit number from 1000 to 9999 with no duplicate digits:  9728
-Number of hits:2
-Number of near hits:2
+Number of hits: 2
+Number of near hits: 2
 You have 2 guesses remaining.
 
 Guess a 4-digit number from 1000 to 9999 with no duplicate digits:  7928
-Number of hits:0
-Number of near hits:4
+Number of hits: 0
+Number of near hits: 4
 You have 1 guesses remaining.
 
 Guess a 4-digit number from 1000 to 9999 with no duplicate digits:  9782
-Number of hits:4
-Number of near hits:0
+Number of hits: 4
+Number of near hits: 0
 You have 0 guesses remaining.
 ```
 
