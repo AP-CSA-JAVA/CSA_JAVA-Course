@@ -1032,11 +1032,11 @@ Looking back at previous programs and the requirements stated above, you know yo
 
 **You Must Include**
 - Flowchart of your program
- - Must be digital
- - Must use appropriate shapes and lines
+  - Must be digital
+  - Must use appropriate shapes and lines
 - Develop a timeline chart of when you plan to start and complete a specific task within your project
- - Must be digital
- - Must be posted and shared
+  - Must be digital
+  - Must be posted and shared
 - If you modify the program, add new additions within your timeline
 
 **Deliverables**
