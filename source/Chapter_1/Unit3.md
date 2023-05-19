@@ -646,7 +646,7 @@ You are not allowed to date my grandchild!
 ```
 
 
-### Activity 3.5.3 guessChecker - Pt 3
+### Activity 3.5.3 guessChecker Pt 3
 
 This assignment will be categorized as a Projects.
 
