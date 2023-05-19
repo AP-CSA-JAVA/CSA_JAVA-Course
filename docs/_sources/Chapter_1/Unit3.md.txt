@@ -524,11 +524,6 @@ public class Main
 -   Learn multiple selections with the if/else-if conditional.
 -   Continue to improve the code of a complex program.
 
-
-#### GOALS
-- Learn multiple selections with the if/else-if conditional.
-- Continue to improve the code of a complex program.
-
 A *multi-way selection* is written when there are a series of conditions with different statements for each condition. Multi-way selection is performed using if/else-if statements such that exactly one section of code is executed based on the first condition that evaluates to true.
 
 ```java
@@ -557,7 +552,7 @@ else // if condition 3 is false
 
 ```
 
-**Assignment 1**
+### Activity 3.4.1
 
 **Directions:** Modify your program to include “near hits.” These are correctly guessed numbers that are in the wrong position.
 
@@ -566,6 +561,40 @@ else // if condition 3 is false
 - Use if/else-if/else statements
 
 Comment where you made the changes. Submit your program digitally.
+
+### Activity 3.4.2
+
+## Instructions activityDirector:
+Write a program that will do the following:
+- choose a random number from 10 - 101
+- Write a conditional `else if` statements that meet the following requirements
+- As the Activities Director, it is your job to suggest appropriate activities to guests based on the weather:
+- if the temperature is greater than 95 or less than 20, print “Visit our shops!”.   
+
+``` 
+  temp >= 80:           Go swimming!
+  60 <= temp < 80:      Play tennis!
+  40 <  temp < 60:      Play golf!
+  temp <= 40:           Go skiing!
+``` 
+
+**Sample Output:**
+```java
+Temperature:
+72
+Play Tennis!
+```
+```java
+Temperature:
+100
+Go Swimming!
+Visit our shops!
+```
+```java
+Temperature:
+35
+Go skiing!
+```
 
 ## 3.5 Compound Boolean Expressions
 
