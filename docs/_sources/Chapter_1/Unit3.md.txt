@@ -496,6 +496,7 @@ public class Bill
 }
 ```
 ```java
+// starter code
 import java.util.Scanner;
 
 public class Main 
@@ -564,12 +565,11 @@ Comment where you made the changes. Submit your program digitally.
 
 ### Activity 3.4.2
 
-## Instructions activityDirector:
+**Instructions activityDirector:**
 Write a program that will do the following:
-- choose a random number from 10 - 101
-- Write a conditional `else if` statements that meet the following requirements
-- As the Activities Director, it is your job to suggest appropriate activities to guests based on the weather:
-- if the temperature is greater than 95 or less than 20, print “Visit our shops!”.   
+- choose a random number for the temperature from 10 - 101
+- if the temperature is greater than 95 or less than 20, print “Visit our shops!” 
+- As the Activities Director, it is your job to suggest appropriate activities to your guests based on the weather.  Write conditional `else if` statements that meet the following requirements: 
 
 ``` 
   temp >= 80:           Go swimming!
