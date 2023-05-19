@@ -849,7 +849,7 @@ Note that the value of the first reference variable s1 is null. It was not assig
 
 **Note:** You do not need to use the `new string` constructor to create a string.  Instead you can use `String s = "HELLO"`.  The `String` constructor is used to demonstrate object equality.
 
-#### Object Equality
+**IMPORTANT: Object Equality**
 
 In addition to comparing an object to `null`, the == operator can be used to test if two variables reference the same object. For example, consider the following code:
 
@@ -869,7 +869,7 @@ The `equals` method is a Boolean method that returns `true` if the contents of `
 
 **Notes:** The == operator is used to compare object references, and the equals method is used to compare object contents. In other words, == checks if both objects point to the same memory location, whereas the equals method compares the values in the objects.
 
-#### Aliasing
+**Aliasing**
 
 ```java
 1 public class ShapeEquals
@@ -893,7 +893,7 @@ Take a look at the program above.  Looking at the program, you may have thought 
 
 **Note:** Two object references are considered aliases when they both reference the same object. Object references can be compared using == and != to identify aliases. 
 
-### Assignment 1: Clue
+### Activity 3.7.1
 
 [137Clue.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/10015355/137Clue.zip)
 
@@ -1006,9 +1006,11 @@ switch (day) {
 	
 </details>
 
-Submit your replit program to Canvas.
 
-## Project: Choose Your Own Adventure
+
+### 3.8 Project
+
+**Choose Your Own Adventure**
 
 **Goals**
 -  Apply all you’ve learned about conditionals to create a “Choose Your Own Adventure” game.
