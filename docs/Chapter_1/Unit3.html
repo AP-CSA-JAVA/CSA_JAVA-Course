@@ -459,8 +459,13 @@ NOT Operator ( ! ) – !(a&lt;b) [returns false if a is smaller than b]
 <p>An <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code> statement short circuits when the left operand is <code class="docutils literal notranslate"><span class="pre">false</span></code>. <code class="docutils literal notranslate"><span class="pre">!happy</span></code> is <code class="docutils literal notranslate"><span class="pre">false</span></code>, so <code class="docutils literal notranslate"><span class="pre">!happy</span> <span class="pre">&amp;&amp;</span> <span class="pre">pink</span></code> will short circuit to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 <p>An || statement short circuits when the left operand is <code class="docutils literal notranslate"><span class="pre">true</span></code>.  <code class="docutils literal notranslate"><span class="pre">happy</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>, so <code class="docutils literal notranslate"><span class="pre">!happy</span> <span class="pre">||</span> <span class="pre">pink</span></code> will short circuit to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </details>
-<p><strong>Assignment 1:</strong>  <a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9834076/Boolean.Exercises.docx">Boolean Exercises.docx</a></p>
-<p><strong>Assignment 2:</strong>  Write the body of the method given the following requirements.</p>
+<section id="activity-3-1-1">
+<h3>Activity 3.1.1:<a class="headerlink" href="#activity-3-1-1" title="Permalink to this heading">#</a></h3>
+<p><a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9834076/Boolean.Exercises.docx">Boolean Exercises.docx</a></p>
+</section>
+<section id="assignment-3-1-2">
+<h3>Assignment 3.1.2<a class="headerlink" href="#assignment-3-1-2" title="Permalink to this heading">#</a></h3>
+<p><strong>Write the body of the method given the following requirements.</strong></p>
 <p>You have three numbers to work with: <code class="docutils literal notranslate"><span class="pre">ints</span> <span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code> and <code class="docutils literal notranslate"><span class="pre">c</span></code>.</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> If the numbers are all different from each other, print “unique”.</p></li>
@@ -474,6 +479,84 @@ NOT Operator ( ! ) – !(a&lt;b) [returns false if a is smaller than b]
 </pre></div>
 </div>
 <p><a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9862940/FRQ_BlankAnswerSheet.pdf">BlankAnswerSheet.pdf</a></p>
+</section>
+<section id="activity-3-1-3">
+<h3>Activity 3.1.3<a class="headerlink" href="#activity-3-1-3" title="Permalink to this heading">#</a></h3>
+<p><strong>RentaCar:</strong></p>
+<ul class="simple">
+<li><p>ask the user to enter their name, age, and how much money they have</p></li>
+<li><p>write some conditionals, if else statement, to determine whether the user can rent a car</p></li>
+<li><ul>
+<li><p>a person must be 25 or older to rent a car</p></li>
+</ul>
+</li>
+<li><ul>
+<li><ul>
+<li><p>if a person is old enough and has enough money ($100), print they can rent a car</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><ul>
+<li><ul>
+<li><p>if a person is old enough but does not have enough money, tell them to come back with more money</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><ul>
+<li><p>if a person is not old enough, let them know and tell them when they can come back</p></li>
+</ul>
+</li>
+<li><p>take care to match the sample outputs exactly</p></li>
+<li><p>must pass all 3 tests to submit the assignment</p></li>
+<li><p>click submit here on repl after passing the tests, and type done on Canvas and submit on Canvas</p></li>
+</ul>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">//starter code</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span>
+<span class="p">{</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span>
+<span class="w">	</span><span class="p">{</span>
+<span class="w">    </span><span class="n">Scanner</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="w">		</span><span class="c1">//your code goes below</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Sample Output 1:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">name</span><span class="p">:</span>
+<span class="n">Maxim</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">age</span><span class="p">:</span>
+<span class="mi">28</span>
+<span class="n">How</span><span class="w"> </span><span class="n">much</span><span class="w"> </span><span class="n">money</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">have</span><span class="o">?</span>
+<span class="mf">500.12</span>
+<span class="n">Maxim</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">rent</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">car</span>
+</pre></div>
+</div>
+<p><strong>Sample Output 2:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">name</span><span class="p">:</span>
+<span class="n">Jorge</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">age</span><span class="p">:</span>
+<span class="mi">30</span>
+<span class="n">How</span><span class="w"> </span><span class="n">much</span><span class="w"> </span><span class="n">money</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">have</span><span class="o">?</span>
+<span class="mi">23</span>
+<span class="n">Get</span><span class="w"> </span><span class="n">some</span><span class="w"> </span><span class="n">more</span><span class="w"> </span><span class="n">money</span>
+</pre></div>
+</div>
+<p><strong>Sample Output 3:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">name</span><span class="p">:</span>
+<span class="n">Erika</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">age</span><span class="p">:</span>
+<span class="mi">17</span>
+<span class="n">How</span><span class="w"> </span><span class="n">much</span><span class="w"> </span><span class="n">money</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">have</span><span class="o">?</span>
+<span class="mi">542364</span>
+<span class="n">Erika</span><span class="w"> </span><span class="n">cannot</span><span class="w"> </span><span class="n">rent</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">car</span>
+<span class="n">Come</span><span class="w"> </span><span class="n">back</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="n">years</span>
+</pre></div>
+</div>
+</section>
 </section>
 <section id="if-statements-and-control-flow">
 <h2>3.2 If Statements and Control Flow<a class="headerlink" href="#if-statements-and-control-flow" title="Permalink to this heading">#</a></h2>
@@ -1241,7 +1324,12 @@ Document and collect the following items:</p>
             <ul>
 <li><a class="reference internal" href="#">Unit 3</a><ul>
 <li><a class="reference internal" href="#logical-operators">Logical Operators</a></li>
-<li><a class="reference internal" href="#boolean-expressions">3.1 Boolean Expressions</a></li>
+<li><a class="reference internal" href="#boolean-expressions">3.1 Boolean Expressions</a><ul>
+<li><a class="reference internal" href="#activity-3-1-1">Activity 3.1.1:</a></li>
+<li><a class="reference internal" href="#assignment-3-1-2">Assignment 3.1.2</a></li>
+<li><a class="reference internal" href="#activity-3-1-3">Activity 3.1.3</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#if-statements-and-control-flow">3.2 If Statements and Control Flow</a></li>
 <li><a class="reference internal" href="#if-else-statements">3.3 If/ Else Statements</a></li>
 <li><a class="reference internal" href="#else-if-statements">3.4 Else If Statements</a><ul>
