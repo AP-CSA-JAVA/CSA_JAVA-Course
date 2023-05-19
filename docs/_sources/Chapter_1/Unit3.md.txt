@@ -620,7 +620,21 @@ A is not greater than B
 B is not greater than C
 ```
 
-### EXTRA CREDIT: Guess Checker 
+### Activity 3.5.2
+
+**Instructions**
+Sometimes we want to use logic more complicated than just “less than” or “equal to”. Imagine a grandmother who will only approve you dating her grandchild if you are older than 25 and younger than 45 and gainfully employed or very attractive.
+
+**Sample Output**
+```java
+Enter your age: 40
+Enter your yearly income: 49000
+How cute are you, on a scale from 0.0 to 10.0? 7.5
+Allowed to date my grandchild? false
+```
+
+
+### Activity 3.5.3 - Guess Checker 
 
 This extra credit assignment will be categorized as a Projects/ Presentations.
 
