@@ -791,6 +791,41 @@ Both x and y are not negative
 
 Submit your assignment as a replit on Canvas.
 
+### Activity 3.6.2 
+
+**Body Mass Index (BMI)**
+
+**Instructions**
+Body Mass Index (BMI) is a person's weight measured in kilograms or pounds divided by the square of height in meters or feet. A high BMI can indicate high body fat. BMI screens for weight categories that may lead to health problems, but it does not diagnose the health of an individual.
+
+| BMI | Weight Class |
+| --- | ----- |
+| < 18.5 | underweight |
+| 18.5 - 25 | normal |
+| 25.0 - 30 | overweight |
+| 30.0 > | obese |
+
+The formula for body mass index (BMI):
+
+BMI = (weight/height<sup>2</sup>) * 703
+
+Your program must include two methods:
+- the `bmi` method must take two double parameters `height` and `weight` and returns the `bmi`
+- the `weightClass`method must take two double parameters `height` and `weight` and returns a string classifying the weight class. 
+- The `weightClass` method must call the `bmi` method.
+- Reminder: Use the Scanner class for input.  
+- **Extra credit**:  allow the user to calculate in either Metric or Imperial standards.
+
+```java
+Would you like t ocalculate your weight using metric(m) or imperial(i) standard?
+i
+
+Height (in inches): 70.0
+Weight (in pounds): 194.25
+BMI = 27.868928571428572
+You are considered overweight.
+```
+
 
 ## 3.7 Comparing Objects
 
