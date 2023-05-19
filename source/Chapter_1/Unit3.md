@@ -299,7 +299,7 @@ public class GuessChecker
 | `boolean hasDupes(int sum)` | Used by `getGuess()` and `makeCode() to ensure that no digits are duplicated |
 
 
-**Assignment 1** 
+### Activity 3.2.1
 
 Modify the above code where you see `/*your code here*/` in the following ways:
 - Use if statements to compare each digit in the user's guess to the digit in the same position of the random number to see if they match.
@@ -315,6 +315,36 @@ Number of hits:1
 Guess a 4-digit number from 1000 to 9999 with no duplicate digits:  3658
 Number of hits:2
 ```
+
+### Activity 3.2.2
+
+**Sevens**
+
+The number 7 is widely considered a lucky number, but in this game, you want to avoid it at all costs! Will you take the risk to rake in more points?
+
+What You’ll Need:
+
+    2 Players
+    6 Dice
+
+**How to Play** 
+
+Agree upon how many rounds you’ll play and who will begin the game. The first player will then roll all six dice and remove any combination of numbers that add up to seven. The goal is to score the highest possible total by adding the numbers shown on the remaining dice.
+
+The first player will have the option to roll up to three times during their turn. Once they have removed any sets of dice that add up to seven (this can include one or more sets), those dice are set aside and not used again for their turn. Add the numbers on the remaining dice to calculate the score. If the player is not happy with their score, they may roll again. However, any combination of dice that total seven must be removed. They may then choose to accept their score or take the risk of rolling again to increase points. Keep in mind that the second player may only throw as many times as the first player. For example, if the first player only rolled twice, then the second player can not roll more than two times.
+
+The game ends once all the rounds have been completed, and the player with the highest score will be the winner!
+
+**Instructions**
+Write a program that includes the following:
+- variables for player 1 and player 2
+- input from the user to include a user defined number of int rounds (not to exceed 10 rounds)
+- roll six dice and have the user be able to remove all but 1 dice
+- add re-rolls where the first player determines the # of rolls the second player can roll
+- total remaining dice
+- declare a winner after int rounds
+
+
 
 ## 3.3 If/ Else Statements
 
