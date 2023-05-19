@@ -96,7 +96,7 @@ An \|\| statement short circuits when the left operand is `true`.  `happy` is `t
 
 
 
-### Assignment 3.1.2
+### Activity 3.1.2
 
 **Write the body of the method given the following requirements.**
 
