@@ -626,14 +626,23 @@ B is not greater than C
 ### Activity 3.5.2
 
 **Instructions**
-Write a program that will use more than just “less than” or “equal to”. Imagine a grandmother who will only approve you dating her grandchild if you are older than 25 and younger than 45 and gainfully employed or very attractive. I guess grandma is a little shallow.
+Write a program that will use more than just <, > or =. Imagine a grandmother must approve you to date her grandchild. You can date her grandchild if you meet the following requirements:
+
+- age bewteen 25 and 45
+- gainfully employed or very attractive. 
+
+Variables:
+int age
+int income = 76000;
+double cuteScale = 8.5;
+boolean date = false;
 
 **Sample Output**
 ```java
-Enter your age: 40
-Enter your yearly income: 49000
-How cute are you, on a scale from 0.0 to 10.0? 7.5
-Allowed to date my grandchild? false
+How old are you? 40
+How much money do you make?  49000
+On a scale of 0.0 to 10.0, how do you rate your looks? 8
+You are not allowed to date my grandchild!
 ```
 
 
