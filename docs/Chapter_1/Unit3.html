@@ -690,7 +690,7 @@ like indentation, spacing is used to improve readability.</p>
 <p>Modify the above code where you see <code class="docutils literal notranslate"><span class="pre">/*your</span> <span class="pre">code</span> <span class="pre">here*/</span></code> in the following ways:</p>
 <ul class="simple">
 <li><p>Use if statements to compare each digit in the user’s guess to the digit in the same position of the random number to see if they match.</p></li>
-<li><p>Implement a “hit” counter that increase by one if theuser’s guessed digit matches the random number digit in the same position</p></li>
+<li><p>Implement a “hit” counter that increase by one if the user’s guessed digit matches the random number digit in the same position</p></li>
 <li><p>Display the total number of hits at the end of your program</p></li>
 <li><p>line 14: System.out.println(targetStr);  // leave this line uncommented</p></li>
 </ul>
@@ -708,10 +708,10 @@ like indentation, spacing is used to improve readability.</p>
 <p><strong>Sevens</strong></p>
 <p>The number 7 is widely considered a lucky number, but in this game, you want to avoid it at all costs! Will you take the risk to rake in more points?</p>
 <p>What You’ll Need:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>2 Players
-6 Dice
-</pre></div>
-</div>
+<ul class="simple">
+<li><p>2 Players</p></li>
+<li><p>6 Dice</p></li>
+</ul>
 <p><strong>How to Play</strong></p>
 <p>Agree upon how many rounds you’ll play and who will begin the game. The first player will then roll all six dice and remove any combination of numbers that add up to seven. The goal is to score the highest possible total by adding the numbers shown on the remaining dice.</p>
 <p>The first player will have the option to roll up to three times during their turn. Once they have removed any sets of dice that add up to seven (this can include one or more sets), those dice are set aside and not used again for their turn. Add the numbers on the remaining dice to calculate the score. If the player is not happy with their score, they may roll again. However, any combination of dice that total seven must be removed. They may then choose to accept their score or take the risk of rolling again to increase points. Keep in mind that the second player may only throw as many times as the first player. For example, if the first player only rolled twice, then the second player can not roll more than two times.</p>
@@ -720,11 +720,11 @@ like indentation, spacing is used to improve readability.</p>
 Write a program that includes the following:</p>
 <ul class="simple">
 <li><p>variables for player 1 and player 2</p></li>
-<li><p>input from the user to include a user defined number of int rounds (not to exceed 10 rounds)</p></li>
-<li><p>roll six dice and have the user be able to remove all but 1 dice</p></li>
-<li><p>add re-rolls where the first player determines the # of rolls the second player can roll</p></li>
-<li><p>total remaining dice</p></li>
-<li><p>declare a winner after int rounds</p></li>
+<li><p>input from the user to include a user defined number of <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">rounds</span></code> (not to exceed 10 rounds)</p></li>
+<li><p>roll six dice and have the user be able to remove all but 1 die</p></li>
+<li><p>add re-rolls where the first player determines the # of rolls the second player can roll (max 3 re-rolls)</p></li>
+<li><p>total remaining dice and add them to player 1 or player 2, respectively</p></li>
+<li><p>declare a winner after <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">rounds</span></code></p></li>
 </ul>
 </section>
 </section>
@@ -775,7 +775,8 @@ Write a program that includes the following:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p><strong>Assignment 1</strong></p>
+<section id="activity-3-3-1">
+<h3>Activity 3.3.1<a class="headerlink" href="#activity-3-3-1" title="Permalink to this heading">#</a></h3>
 <p><strong>Starter Code:</strong>  <a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9913050/starterFile_Shipping.txt">starterFile_Shipping.txt</a></p>
 <p><strong>Directions:</strong>
 <em>Shipping</em></p>
@@ -844,6 +845,76 @@ shippingCost is $7.50 and add 1 day to shippingDays.</p></li>
 <span class="n">Days</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">Deliver</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
 </pre></div>
 </div>
+</section>
+<section id="activity-3-3-2">
+<h3>Activity 3.3.2<a class="headerlink" href="#activity-3-3-2" title="Permalink to this heading">#</a></h3>
+<p>The Bill class can help you calculate a tip depending on the number of people who have dinner with you.</p>
+<p>Complete addTip() method so it work like this:</p>
+<ul class="simple">
+<li><p>there are 8 or more people the tip is automatically 25%</p></li>
+<li><p>If there are 4 or more people (but less than 8) the tip is automatically 20%</p></li>
+<li><p>If there are 2 or more people (but less than 4) the tip is automatically 15%</p></li>
+<li><p>Otherwise, let the user decide on the percentage of the tip.</p></li>
+</ul>
+<p>Use Main.java to test class method. Make sure to test for all possible outcomes.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Bill</span>
+<span class="p">{</span>
+<span class="w">	</span><span class="c1">//attributes</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">costOfMeal</span><span class="p">;</span>
+<span class="w">	</span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">totalCustomers</span><span class="p">;</span>
+<span class="w">  </span><span class="n">Scanner</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Constructor</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="nf">Bill</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">totalBill</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">numCustomers</span><span class="p">)</span>
+<span class="w">	</span><span class="p">{</span>
+<span class="w">		</span><span class="n">costOfMeal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">totalBill</span><span class="p">;</span>
+<span class="w">		</span><span class="n">totalCustomers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numCustomers</span><span class="p">;</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="w">	</span>
+<span class="w">	</span><span class="c1">// Add a tip based on the number of guests</span>
+
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">addTip</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">    </span><span class="cm">/* Your code here */</span>
+
+<span class="w">    </span><span class="p">}</span>
+
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Round the bill to two decimal places</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">roundedBill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">round</span><span class="p">(</span><span class="n">costOfMeal</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">100.0</span><span class="p">;</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;The total cost of the bill with tip for &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">totalCustomers</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; customers comes to $&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">roundedBill</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">	</span>
+<span class="w">	</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span>
+<span class="p">{</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span>
+<span class="w">	</span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">guests</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">cost</span><span class="p">;</span>
+<span class="w">    </span><span class="n">Scanner</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Number of guests: &quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">guests</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Cost of meal: $&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">cost</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+<span class="w">    </span><span class="n">Bill</span><span class="w"> </span><span class="n">check</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Bill</span><span class="p">(</span><span class="n">cost</span><span class="p">,</span><span class="w"> </span><span class="n">guests</span><span class="p">);</span>
+<span class="w">    </span><span class="n">check</span><span class="p">.</span><span class="na">addTip</span><span class="p">();</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">check</span><span class="p">);</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
 </section>
 <section id="else-if-statements">
 <h2>3.4 Else If Statements<a class="headerlink" href="#else-if-statements" title="Permalink to this heading">#</a></h2>
@@ -1361,7 +1432,11 @@ Document and collect the following items:</p>
 <li><a class="reference internal" href="#activity-3-2-2">Activity 3.2.2</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#if-else-statements">3.3 If/ Else Statements</a></li>
+<li><a class="reference internal" href="#if-else-statements">3.3 If/ Else Statements</a><ul>
+<li><a class="reference internal" href="#activity-3-3-1">Activity 3.3.1</a></li>
+<li><a class="reference internal" href="#activity-3-3-2">Activity 3.3.2</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#else-if-statements">3.4 Else If Statements</a><ul>
 <li><a class="reference internal" href="#goals">GOALS</a></li>
 </ul>
