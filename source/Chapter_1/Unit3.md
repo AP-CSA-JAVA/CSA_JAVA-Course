@@ -714,7 +714,7 @@ De Morgan’s laws can also be applied to conditional operators. When negating c
 | >= |	not >= | < |
 | != |	not not equal |	== |
 
-### Activity 3.6.1 - DeMorgan's Law
+### Activity 3.6.1
 
 [DeMorgan___Starter_Files.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9941153/DeMorgan___Starter_Files.zip)
 
