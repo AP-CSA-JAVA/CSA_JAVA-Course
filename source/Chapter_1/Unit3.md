@@ -1008,7 +1008,7 @@ switch (day) {
 
 
 
-### 3.8 Project
+## 3.8 Project
 
 **Choose Your Own Adventure**
 
