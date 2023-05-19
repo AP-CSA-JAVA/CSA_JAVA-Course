@@ -1207,6 +1207,54 @@ NOT (a OR b) evaluates to false
 </div>
 <p>Submit your assignment as a replit on Canvas.</p>
 </section>
+<section id="activity-3-6-2">
+<h3>Activity 3.6.2<a class="headerlink" href="#activity-3-6-2" title="Permalink to this heading">#</a></h3>
+<p><strong>Body Mass Index (BMI)</strong></p>
+<p><strong>Instructions</strong>
+Body Mass Index (BMI) is a person’s weight measured in kilograms or pounds divided by the square of height in meters or feet. A high BMI can indicate high body fat. BMI screens for weight categories that may lead to health problems, but it does not diagnose the health of an individual.</p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>BMI</p></th>
+<th class="head"><p>Weight Class</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>&lt; 18.5</p></td>
+<td><p>underweight</p></td>
+</tr>
+<tr class="row-odd"><td><p>18.5 - 25</p></td>
+<td><p>normal</p></td>
+</tr>
+<tr class="row-even"><td><p>25.0 - 30</p></td>
+<td><p>overweight</p></td>
+</tr>
+<tr class="row-odd"><td><p>30.0 &gt;</p></td>
+<td><p>obese</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The formula for body mass index (BMI):</p>
+<p>BMI = (weight/height<sup>2</sup>) * 703</p>
+<p>Your program must include two methods:</p>
+<ul class="simple">
+<li><p>the <code class="docutils literal notranslate"><span class="pre">bmi</span></code> method must take two double parameters <code class="docutils literal notranslate"><span class="pre">height</span></code> and <code class="docutils literal notranslate"><span class="pre">weight</span></code> and returns the <code class="docutils literal notranslate"><span class="pre">bmi</span></code></p></li>
+<li><p>the <code class="docutils literal notranslate"><span class="pre">weightClass</span></code>method must take two double parameters <code class="docutils literal notranslate"><span class="pre">height</span></code> and <code class="docutils literal notranslate"><span class="pre">weight</span></code> and returns a string classifying the weight class.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">weightClass</span></code> method must call the <code class="docutils literal notranslate"><span class="pre">bmi</span></code> method.</p></li>
+<li><p>Reminder: Use the Scanner class for input.</p></li>
+<li><p><strong>Extra credit</strong>:  allow the user to calculate in either Metric or Imperial standards.</p></li>
+</ul>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Would</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">like</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="n">ocalculate</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">weight</span><span class="w"> </span><span class="n">using</span><span class="w"> </span><span class="nf">metric</span><span class="p">(</span><span class="n">m</span><span class="p">)</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="nf">imperial</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="n">standard</span><span class="o">?</span>
+<span class="n">i</span>
+
+<span class="nf">Height</span><span class="w"> </span><span class="p">(</span><span class="n">in</span><span class="w"> </span><span class="n">inches</span><span class="p">):</span><span class="w"> </span><span class="mf">70.0</span>
+<span class="n">Weight</span><span class="w"> </span><span class="p">(</span><span class="n">in</span><span class="w"> </span><span class="n">pounds</span><span class="p">):</span><span class="w"> </span><span class="mf">194.25</span>
+<span class="n">BMI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">27.868928571428572</span>
+<span class="n">You</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">considered</span><span class="w"> </span><span class="n">overweight</span><span class="p">.</span>
+</pre></div>
+</div>
+</section>
 </section>
 <section id="comparing-objects">
 <h2>3.7 Comparing Objects<a class="headerlink" href="#comparing-objects" title="Permalink to this heading">#</a></h2>
@@ -1501,6 +1549,7 @@ Document and collect the following items:</p>
 </li>
 <li><a class="reference internal" href="#equivalent-boolean-expressions">3.6 Equivalent Boolean Expressions</a><ul>
 <li><a class="reference internal" href="#activity-3-6-1-demorgan-s-law">Activity 3.6.1 - DeMorgan’s Law</a></li>
+<li><a class="reference internal" href="#activity-3-6-2">Activity 3.6.2</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#comparing-objects">3.7 Comparing Objects</a><ul>
