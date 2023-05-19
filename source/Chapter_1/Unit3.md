@@ -90,11 +90,15 @@ An \|\| statement short circuits when the left operand is `true`.  `happy` is `t
 </details>
 
 
-**Assignment 1:**  [Boolean Exercises.docx](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9834076/Boolean.Exercises.docx)
+### Activity 3.1.1:  
+
+[Boolean Exercises.docx](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9834076/Boolean.Exercises.docx)
 
 
 
-**Assignment 2:**  Write the body of the method given the following requirements.
+### Assignment 3.1.2
+
+**Write the body of the method given the following requirements.**
 
 You have three numbers to work with: `ints a`, `b` and `c`.  
 - [ ] If the numbers are all different from each other, print "unique".  
@@ -109,6 +113,66 @@ public void suchFun(int a, int b, int c) {
 ```
 
 [BlankAnswerSheet.pdf](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9862940/FRQ_BlankAnswerSheet.pdf)
+
+### Activity 3.1.3
+
+**RentaCar:**
+- ask the user to enter their name, age, and how much money they have
+- write some conditionals, if else statement, to determine whether the user can rent a car
+- - a person must be 25 or older to rent a car
+- - - if a person is old enough and has enough money ($100), print they can rent a car
+- - - if a person is old enough but does not have enough money, tell them to come back with more money
+- - if a person is not old enough, let them know and tell them when they can come back
+- take care to match the sample outputs exactly
+- must pass all 3 tests to submit the assignment
+- click submit here on repl after passing the tests, and type done on Canvas and submit on Canvas
+
+```java
+//starter code
+import java.util.Scanner;
+
+class Main 
+{
+  public static void main(String[] args) 
+	{
+    Scanner input = new Scanner(System.in);
+		//your code goes below
+  }
+}
+```
+
+**Sample Output 1:**
+```java
+Enter your name:
+Maxim
+Enter your age:
+28
+How much money do you have?
+500.12
+Maxim can rent a car
+```
+**Sample Output 2:**
+```java
+Enter your name:
+Jorge
+Enter your age:
+30
+How much money do you have?
+23
+Get some more money
+```
+**Sample Output 3:**
+```java
+Enter your name:
+Erika
+Enter your age:
+17
+How much money do you have?
+542364
+Erika cannot rent a a car
+Come back in 8 years
+```
+
 
 ## 3.2 If Statements and Control Flow
 
