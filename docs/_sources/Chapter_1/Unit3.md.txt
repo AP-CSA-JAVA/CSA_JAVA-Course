@@ -807,7 +807,11 @@ Body Mass Index (BMI) is a person's weight measured in kilograms or pounds divid
 
 The formula for body mass index (BMI):
 
-BMI = (weight/height<sup>2</sup>) * 703
+| Measurement Units | Formula |
+| -------------- | ------- |
+| Kilograms and meters (or centimeters) | BMI = weight(kg)/ height(m)<sup>2</sup> |
+|           |  If height has been measured in centimeters, divide by 100 to convert this to meters. |
+| Pounds and inches | BMI = (weight(lbs)/height(in)<sup>2</sup>) * 703 |
 
 Your program must include two methods:
 - the `bmi` method must take two double parameters `height` and `weight` and returns the `bmi`
