@@ -303,7 +303,7 @@ public class GuessChecker
 
 Modify the above code where you see `/*your code here*/` in the following ways:
 - Use if statements to compare each digit in the user's guess to the digit in the same position of the random number to see if they match.
-- Implement a "hit" counter that increase by one if theuser's guessed digit matches the random number digit in the same position
+- Implement a "hit" counter that increase by one if the user's guessed digit matches the random number digit in the same position
 - Display the total number of hits at the end of your program
 - line 14: System.out.println(targetStr);  // leave this line uncommented
 
@@ -323,9 +323,8 @@ Number of hits:2
 The number 7 is widely considered a lucky number, but in this game, you want to avoid it at all costs! Will you take the risk to rake in more points?
 
 What You’ll Need:
-
-    2 Players
-    6 Dice
+- 2 Players
+- 6 Dice
 
 **How to Play** 
 
@@ -338,11 +337,11 @@ The game ends once all the rounds have been completed, and the player with the h
 **Instructions**
 Write a program that includes the following:
 - variables for player 1 and player 2
-- input from the user to include a user defined number of int rounds (not to exceed 10 rounds)
-- roll six dice and have the user be able to remove all but 1 dice
-- add re-rolls where the first player determines the # of rolls the second player can roll
-- total remaining dice
-- declare a winner after int rounds
+- input from the user to include a user defined number of `int rounds` (not to exceed 10 rounds)
+- roll six dice and have the user be able to remove all but 1 die
+- add re-rolls where the first player determines the # of rolls the second player can roll (max 3 re-rolls)
+- total remaining dice and add them to player 1 or player 2, respectively
+- declare a winner after `int rounds`
 
 
 
@@ -394,7 +393,7 @@ class Main {
   }
 }
 ```
-**Assignment 1**
+### Activity 3.3.1
 
 **Starter Code:**  [starterFile_Shipping.txt](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9913050/starterFile_Shipping.txt)
 
@@ -446,6 +445,78 @@ COUPON17
 Total Shipping Cost: $20.25
 Days to Deliver: 1
 ```
+
+### Activity 3.3.2
+
+The Bill class can help you calculate a tip depending on the number of people who have dinner with you.
+
+Complete addTip() method so it work like this:
+- there are 8 or more people the tip is automatically 25%
+- If there are 4 or more people (but less than 8) the tip is automatically 20%
+- If there are 2 or more people (but less than 4) the tip is automatically 15%
+- Otherwise, let the user decide on the percentage of the tip.
+
+Use Main.java to test class method. Make sure to test for all possible outcomes.
+
+```java
+import java.util.Scanner;
+
+public class Bill
+{
+	//attributes
+	private double costOfMeal;
+	private int totalCustomers;
+  Scanner input = new Scanner(System.in);
+
+    // Constructor
+	public Bill(double totalBill, int numCustomers)
+	{
+		costOfMeal = totalBill;
+		totalCustomers = numCustomers;
+	}
+	
+	// Add a tip based on the number of guests
+
+	public void addTip()
+    {
+    /* Your code here */
+
+    }
+
+
+    public String toString()
+    {
+        // Round the bill to two decimal places
+        double roundedBill = Math.round(costOfMeal * 100) / 100.0;
+        
+        return "The total cost of the bill with tip for " + totalCustomers + " customers comes to $" + roundedBill;
+    }
+	
+	
+}
+```
+```java
+import java.util.Scanner;
+
+public class Main 
+{
+	public static void main(String[] args) 
+	{
+    int guests;
+    double cost;
+    Scanner input = new Scanner(System.in);
+    System.out.print("Number of guests: ");
+    guests = input.nextInt();
+    System.out.print("Cost of meal: $");
+    cost = input.nextDouble();
+    Bill check = new Bill(cost, guests);
+    check.addTip();
+    System.out.println(check);
+	}
+}
+
+```
+
 
 ## 3.4 Else If Statements
 
