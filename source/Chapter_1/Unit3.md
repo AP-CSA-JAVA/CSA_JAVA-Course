@@ -604,7 +604,7 @@ Go skiing!
 -   Continue to improve the GuessChecker program.
 
 
-### Assignment 1: Boolean Expressions
+### Activity 3.5.1
 
 **Directions:** Using logical and relational operators, write a program that will take 3 numbers and return the if the number is greater than, less than or equal to the other two numbers.  Print out the results of your program.  Submit this assignment as a replit on Canvas.
 
