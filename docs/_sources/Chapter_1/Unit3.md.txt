@@ -316,6 +316,9 @@ Guess a 4-digit number from 1000 to 9999 with no duplicate digits:  3658
 Number of hits:2
 ```
 
+**NOTE** You will be building this program and making changes to it as we navigate the unit.  You will submit 1 program at the end of **Unit 3.5 Compound Boolean Expressions**
+
+
 ### Activity 3.2.2
 
 **Sevens**
@@ -561,7 +564,7 @@ else // if condition 3 is false
 - Report the `near hit` counter at the end of your program 
 - Use if/else-if/else statements
 
-Comment where you made the changes. Submit your program digitally.
+Comment where you made the changes include the date. No submission.
 
 ### Activity 3.4.2
 
@@ -623,7 +626,7 @@ B is not greater than C
 ### Activity 3.5.2
 
 **Instructions**
-Sometimes we want to use logic more complicated than just “less than” or “equal to”. Imagine a grandmother who will only approve you dating her grandchild if you are older than 25 and younger than 45 and gainfully employed or very attractive.
+Write a program that will use more than just “less than” or “equal to”. Imagine a grandmother who will only approve you dating her grandchild if you are older than 25 and younger than 45 and gainfully employed or very attractive. I guess grandma is a little shallow.
 
 **Sample Output**
 ```java
@@ -636,9 +639,9 @@ Allowed to date my grandchild? false
 
 ### Activity 3.5.3 - Guess Checker 
 
-This extra credit assignment will be categorized as a Projects/ Presentations.
+This assignment will be categorized as a Projects.
 
-**Directions:** Update GuessChecker to use compound Boolean statements.  Give the user at minimum three opportunities to guess the correct answer and print out how many of the remaining guesses they have.  Submit your program as a replit on Canvas.
+**Directions:** Update GuessChecker to use compound Boolean statements.  Give the user at minimum three opportunities to guess the correct answer and print out how many of the remaining guesses they have.  You will submit your completed program with comments via replit.  Please share your link on Canvas.
 
 ```java
 9782
@@ -702,11 +705,11 @@ De Morgan’s laws can also be applied to conditional operators. When negating c
 | >= |	not >= | < |
 | != |	not not equal |	== |
 
-### Assignment 1 - DeMorgan's Law
+### Activity 3.6.1 - DeMorgan's Law
 
 [DeMorgan___Starter_Files.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9941153/DeMorgan___Starter_Files.zip)
 
-**Directions:** 
+**Instructions:** 
 
 1.  In DeMorgansLaw.java, add the code to validate the first part of De Morgan’s Laws: not (a and b) is the same as (not a) or (not b).
  - Use two if/else statements, one for each expression.
