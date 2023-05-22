@@ -36,24 +36,24 @@ classDiagram
     Dog: +fastLearner()
     
     class Boxer{
-      + double height
-      + int lifeSpan
-      + int arf
+      +double height
+      +int lifeSpan
+      +int arf
       +children()
       +play()
     }
     class Doberman{
       +double height
       +int lifeSpan
-      + int arf
+      +int arf
       +children()
-      + trainability()
+      +trainability()
     }
     class Cane_Corso{
       +double height
       +int lifeSpan
-      + int arf
-      + watchdog()
+      +int arf
+      +watchdog()
     }
     
 ```
