@@ -225,13 +225,9 @@
 <li><p>Use a nonprogramming methodology to design code.</p></li>
 <li><p>Create a roadmap for the next activities.</p></li>
 </ul>
-<p>A class is a blueprint for the objects of that class. A class contains variables and methods to store and manipulate information. To
-create a class, you first state whether you want it to be public or private, use the class keyword, and name the class. Then, you
-add a set of curly braces {} that will contain the contents of the class. To understand the key components of classes, we will
-create an NewClass class. This is the class header:</p>
+<p>A class is a blueprint for the objects of that class. A class contains variables and methods to store and manipulate information. To create a class, you first state whether you want it to be public or private, use the class keyword, and name the class. Then, you add a set of curly braces {} that will contain the contents of the class. To understand the key components of classes, we will create an NewClass class. This is the class header:</p>
 <p>public class NewClass {}</p>
-<p>Inside the curly braces, you can define the variables and methods of the class. Variables are used to store data, and methods are
-used to perform actions. In the NewClass class, we can create an instance variable to store the number of students in a classroom:</p>
+<p>Inside the curly braces, you can define the variables and methods of the class. Variables are used to store data, and methods are used to perform actions. In the NewClass class, we can create an instance variable to store the number of students in a classroom:</p>
 <p>public class NewClass {</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  private int numStudents;
 </pre></div>
@@ -283,7 +279,8 @@ used to perform actions. In the NewClass class, we can create an instance variab
 <span class="w">        </span><span class="c1">// Update the max speed using the mutator method</span>
 <span class="w">        </span><span class="n">car</span><span class="p">.</span><span class="na">setMaxSpeed</span><span class="p">(</span><span class="mi">250</span><span class="p">);</span>
 
-<span class="w">        </span><span class="c1">// Access and print the updated brand and max speed using the accessor methods</span>
+<span class="w">        </span><span class="cm">/* Access and print the updated brand and max speed using the </span>
+<span class="cm">	accessor methods*/</span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Updated Brand: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">car</span><span class="p">.</span><span class="na">getBrand</span><span class="p">());</span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Updated Max Speed: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">car</span><span class="p">.</span><span class="na">getMaxSpeed</span><span class="p">());</span>
 <span class="w">    </span><span class="p">}</span>
