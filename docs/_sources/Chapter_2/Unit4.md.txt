@@ -22,6 +22,13 @@ One more thing, An **infinite loop** is an instruction sequence that loops endle
 
 Within Unit 4, we will explore different keyword loop terms and how they are utilized.
 
+```mermaid
+    flowchart TD
+    A[whileLoop-Flowchart]-->B{Test Condition}
+    B -->|True| D[whileLoop Body]-->C[iteration]-->B
+    B -->|False| E[loop terminates]
+ 
+ ```
 
 Take a look at the program below:
 
