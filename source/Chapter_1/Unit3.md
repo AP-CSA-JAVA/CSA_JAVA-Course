@@ -176,7 +176,7 @@ Come back in 8 years
 ### Activity 3.1.4
 
 **Instructions**
-Write a program that will take 2 doubles from the user.  Use Boolean Expression to compare the two values as it relates to the different number of combinations of Boolean Expressions that can be created.  Evaluate if the expression is true or false.
+Write a program that will take 2 doubles from the user.  Use Boolean Expression to compare the two values using: <, <=, =, !=, >, and >=. Evaluate if the expression is true or false.
 
 ```java
 Input a number: 4
