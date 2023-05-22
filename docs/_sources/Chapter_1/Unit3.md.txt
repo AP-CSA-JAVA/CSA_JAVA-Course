@@ -173,6 +173,22 @@ Erika cannot rent a a car
 Come back in 8 years
 ```
 
+### Activity 3.1.4
+
+**Instructions**
+Write a program that will take 2 doubles from the user.  Use Boolean Expression to compare the two values as it relates to the different number of combinations of Boolean Expressions that can be created.  Evaluate if the expression is true or false.
+
+```java
+Input a number: 4
+Input a second number: 5
+4.0 is LESS THAN 5.0: true
+4.0 is LESS THAN/ EQUAL to 5.0: true
+4.0 is EQUAL to 5.0: false
+4.0 is NOT EQUAL to 5.0: true
+4.0 is GREATER THAN 5.0: false
+4.0 is GREATER THAN / EQUAL to 5.0: false
+```
+
 
 ## 3.2 If Statements and Control Flow
 
