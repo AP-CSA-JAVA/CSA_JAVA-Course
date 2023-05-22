@@ -230,6 +230,44 @@
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <b>println()</b> is invoked by the PrintStream class.</br></p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <b>NOTE</b> <i>println()</i> when executed will return to the next line. Whereas <i>print()</i> will execute the string literal but not return to the next line. You can also create a new line inside a print statement by adding   <b>\n</b>  anywhere inside the quotation marks of a print statement.</p></li>
 </ul>
+<hr class="docutils" />
+<hr class="docutils" />
+<p>Take a look at the diagram below:</p>
+<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>
+classDiagram
+    Dog &lt;|-- Boxer
+    Dog &lt;|-- Doberman
+    Dog &lt;|-- Cane_Corso
+    Dog : +int family
+    Dog : +double physical
+    Dog : +double social
+    Dog : +double personality
+    Dog: +bark(arf)
+    Dog: +workingDog()
+    Dog: +fastLearner()
+    
+    Boxer{
+      + double height
+      + int lifeSpan
+      +children()
+      +play()
+    }
+    Doberman{
+      +double height
+      +int lifeSpan
+      +children()
+      + trainability()
+    }
+    Cane_Corso{
+      +double height
+      +int lifeSpan
+      + watchdog()
+    }
+    
+</pre></div>
+</div>
+<p>What observations can you make about the diagram?  Spend a few minutes talking with your group.</p>
+<p>A powerful tool that you can use in OOP is the concept of inheritance.  Inheritance is the concept where a Java Class can inherit properties from another class.  You can think of this as a child inheritiing characteristics of a parent.  Java refers to this as <strong>extending</strong> a class.  The Class that is being extended or “inherited” is called a <strong>superclass</strong>.  The class that extends or “inherits” is referred to as a <strong>subclass</strong>.  We will explore this in more detail in Chapter 4.</p>
 <section id="replit-com">
 <h3>Replit.com<a class="headerlink" href="#replit-com" title="Permalink to this heading">#</a></h3>
 <p>By default, Replit uses Main as the main class.  To change the Main class name to a class name of your choosing, create a new file within replit and call it <i>.repl</i>.  Within the file type the following:</p>

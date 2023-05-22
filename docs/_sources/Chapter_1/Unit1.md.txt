@@ -16,6 +16,49 @@ Notice that within the main method there is a print statement.  Let's break down
 - [ ] <b>println()</b> is invoked by the PrintStream class.</br>
 - [ ] <b>NOTE</b> <i>println()</i> when executed will return to the next line. Whereas <i>print()</i> will execute the string literal but not return to the next line. You can also create a new line inside a print statement by adding   <b>\n</b>  anywhere inside the quotation marks of a print statement.
 
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+
+Take a look at the diagram below:
+
+```mermaid
+
+classDiagram
+    Dog <|-- Boxer
+    Dog <|-- Doberman
+    Dog <|-- Cane_Corso
+    Dog : +int family
+    Dog : +double physical
+    Dog : +double social
+    Dog : +double personality
+    Dog: +bark(arf)
+    Dog: +workingDog()
+    Dog: +fastLearner()
+    
+    Boxer{
+      + double height
+      + int lifeSpan
+      +children()
+      +play()
+    }
+    Doberman{
+      +double height
+      +int lifeSpan
+      +children()
+      + trainability()
+    }
+    Cane_Corso{
+      +double height
+      +int lifeSpan
+      + watchdog()
+    }
+    
+```
+
+What observations can you make about the diagram?  Spend a few minutes talking with your group.
+
+A powerful tool that you can use in OOP is the concept of inheritance.  Inheritance is the concept where a Java Class can inherit properties from another class.  You can think of this as a child inheritiing characteristics of a parent.  Java refers to this as **extending** a class.  The Class that is being extended or "inherited" is called a **superclass**.  The class that extends or "inherits" is referred to as a **subclass**.  We will explore this in more detail in Chapter 4.
+
 ### Replit.com
 By default, Replit uses Main as the main class.  To change the Main class name to a class name of your choosing, create a new file within replit and call it <i>.repl</i>.  Within the file type the following:
 
