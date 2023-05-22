@@ -266,6 +266,82 @@ used to perform actions. In the NewClass class, we can create an instance variab
 <li><p>Understand how to properly encapsulate the attributes of a class.</p></li>
 <li><p>Write methods to display encapsulated attributes of a class.</p></li>
 </ul>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Create a Car object</span>
+<span class="w">        </span><span class="n">Car</span><span class="w"> </span><span class="n">car</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Car</span><span class="p">(</span><span class="s">&quot;Toyota&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Access and print the brand using the accessor method</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Brand: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">car</span><span class="p">.</span><span class="na">getBrand</span><span class="p">());</span>
+
+<span class="w">        </span><span class="c1">// Access and print the max speed using the accessor method</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Max Speed: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">car</span><span class="p">.</span><span class="na">getMaxSpeed</span><span class="p">());</span>
+
+<span class="w">        </span><span class="c1">// Update the brand using the mutator method</span>
+<span class="w">        </span><span class="n">car</span><span class="p">.</span><span class="na">setBrand</span><span class="p">(</span><span class="s">&quot;Honda&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Update the max speed using the mutator method</span>
+<span class="w">        </span><span class="n">car</span><span class="p">.</span><span class="na">setMaxSpeed</span><span class="p">(</span><span class="mi">250</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Access and print the updated brand and max speed using the accessor methods</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Updated Brand: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">car</span><span class="p">.</span><span class="na">getBrand</span><span class="p">());</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Updated Max Speed: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">car</span><span class="p">.</span><span class="na">getMaxSpeed</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="cm">/* New Class file */</span>
+
+<span class="c1">// Parent class</span>
+<span class="kd">class</span> <span class="nc">Vehicle</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">brand</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Constructor</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Vehicle</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">brand</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">brand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">brand</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Accessor method</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getBrand</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">brand</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Mutator method</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setBrand</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">brand</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">brand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">brand</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="cm">/* New Class File */</span>
+
+<span class="c1">// Child class inheriting from the parent class</span>
+<span class="kd">class</span> <span class="nc">Car</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Vehicle</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">maxSpeed</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Constructor</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Car</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">brand</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">maxSpeed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">brand</span><span class="p">);</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">maxSpeed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">maxSpeed</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Accessor method</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getMaxSpeed</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">maxSpeed</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Mutator method</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setMaxSpeed</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">maxSpeed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">maxSpeed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">maxSpeed</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Sample Output</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="nl">Brand</span><span class="p">:</span><span class="w"> </span><span class="n">Toyota</span>
+<span class="n">Max</span><span class="w"> </span><span class="n">Speed</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span>
+<span class="n">Updated</span><span class="w"> </span><span class="n">Brand</span><span class="p">:</span><span class="w"> </span><span class="n">Honda</span>
+<span class="n">Updated</span><span class="w"> </span><span class="n">Max</span><span class="w"> </span><span class="n">Speed</span><span class="p">:</span><span class="w"> </span><span class="mi">250</span>
+</pre></div>
+</div>
 </section>
 <section id="mutator-methods">
 <h2>5.5 Mutator Methods<a class="headerlink" href="#mutator-methods" title="Permalink to this heading">#</a></h2>
