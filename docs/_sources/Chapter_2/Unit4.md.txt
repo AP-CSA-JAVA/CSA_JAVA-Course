@@ -22,13 +22,7 @@ One more thing, An **infinite loop** is an instruction sequence that loops endle
 
 Within Unit 4, we will explore different keyword loop terms and how they are utilized.
 
-```mermaid
-    flowchart TD
-    A[whileLoop-Flowchart]-->B{Test Condition}
-    B -->|True| D[whileLoop Body]-->C[iteration]-->B
-    B -->|False| E[loop terminates]
- 
- ```
+![while_loop](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/assets/12989939/55ea0a3f-349e-4d05-aa8d-eefa58d0dd4c)
 
 Take a look at the program below:
 
