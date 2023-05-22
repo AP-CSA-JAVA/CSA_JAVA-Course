@@ -47,6 +47,83 @@ This information can be found in:
 - Understand how to properly encapsulate the attributes of a class.
 - Write methods to display encapsulated attributes of a class. 
 
+```java
+public class Main {
+    public static void main(String[] args) {
+        // Create a Car object
+        Car car = new Car("Toyota", 200);
+
+        // Access and print the brand using the accessor method
+        System.out.println("Brand: " + car.getBrand());
+
+        // Access and print the max speed using the accessor method
+        System.out.println("Max Speed: " + car.getMaxSpeed());
+
+        // Update the brand using the mutator method
+        car.setBrand("Honda");
+
+        // Update the max speed using the mutator method
+        car.setMaxSpeed(250);
+
+        // Access and print the updated brand and max speed using the accessor methods
+        System.out.println("Updated Brand: " + car.getBrand());
+        System.out.println("Updated Max Speed: " + car.getMaxSpeed());
+    }
+}
+
+/* New Class file */
+
+// Parent class
+class Vehicle {
+    private String brand;
+
+    // Constructor
+    public Vehicle(String brand) {
+        this.brand = brand;
+    }
+
+    // Accessor method
+    public String getBrand() {
+        return brand;
+    }
+
+    // Mutator method
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+}
+
+/* New Class File */
+
+// Child class inheriting from the parent class
+class Car extends Vehicle {
+    private int maxSpeed;
+
+    // Constructor
+    public Car(String brand, int maxSpeed) {
+        super(brand);
+        this.maxSpeed = maxSpeed;
+    }
+
+    // Accessor method
+    public int getMaxSpeed() {
+        return maxSpeed;
+    }
+
+    // Mutator method
+    public void setMaxSpeed(int maxSpeed) {
+        this.maxSpeed = maxSpeed;
+    }
+}
+```
+**Sample Output**
+```java
+Brand: Toyota
+Max Speed: 200
+Updated Brand: Honda
+Updated Max Speed: 250
+```
+
 
 ### 5.5 Mutator Methods
 **Goals**
