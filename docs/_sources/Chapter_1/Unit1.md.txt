@@ -21,42 +21,8 @@ Notice that within the main method there is a print statement.  Let's break down
 
 Take a look at the diagram below:
 
-```mermaid
+![ClassSuperSub](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/assets/12989939/5b1567d7-c25b-44cd-95b7-f6d02d61c277)
 
-classDiagram
-    Dog <|-- Boxer
-    Dog <|-- Doberman
-    Dog <|-- Cane_Corso
-    Dog : +int family
-    Dog : +double physical
-    Dog : +double social
-    Dog : +double personality
-    Dog: +bark(arf)
-    Dog: +workingDog()
-    Dog: +fastLearner()
-    
-    class Boxer{
-      +double height
-      +int lifeSpan
-      +int arf
-      +children()
-      +play()
-    }
-    class Doberman{
-      +double height
-      +int lifeSpan
-      +int arf
-      +children()
-      +trainability()
-    }
-    class Cane_Corso{
-      +double height
-      +int lifeSpan
-      +int arf
-      +watchdog()
-    }
-    
-```
 
 What observations can you make about the diagram?  Spend a few minutes talking with your group.
 
