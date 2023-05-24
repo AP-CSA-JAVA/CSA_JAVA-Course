@@ -2,7 +2,7 @@
 
 ## 8.1 2D Arrays
 
-In Java, a 2D array is organized in rows and columns much like a spreadsheet.  Sometimes it is referred to as an array of arrays.  It is an `object` that contains a set of similar variable data types. Real life examples of 2D Arrays can be a traditional classroom, the game Battleship, or Bingo.
+In Java, a 2D array is organized in rows and columns much like a spreadsheet.  Sometimes it is referred to as an array of arrays.  It is an `object` that contains a set of similar variable data types. Real life examples of 2D Arrays can be a traditional classroom, Chess, or checkers.
 
 Creating a 2D array is easy.  First you must declare the type of an array that you want to create.  In the example, we are using `int`.  Then you use 2 sets of open and closed brackets.  Create a name for the array... in this case it is `newArray`.  From there, you will declare it as a new array and define the size of the array.  The code creates a 2D array with 3 rows and 3 columns, and it initializes all the elements to the default value of 0.
 
