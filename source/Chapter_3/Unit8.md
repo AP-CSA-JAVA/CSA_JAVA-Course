@@ -52,7 +52,7 @@ This statement creates a variable `num` and assigns it the value of the number i
 
 ## Traversing 2D Arrays
 
-Now that you know how to create a 2D array, it is important to know how to navigate a 2D array.  One of the ways that you can do this is reference a specific item within the 2D array.
+Now that you know how to create a 2D array, it is important to know how to navigate a 2D array.  One of the ways that you can do this is to reference a specific element within the 2D array.
 
 ```java
 System.out.println(newArray[1] [1]);
