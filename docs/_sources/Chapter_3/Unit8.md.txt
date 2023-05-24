@@ -51,3 +51,38 @@ int num = newArray[1][2];
 This statement creates a variable `num` and assigns it the value of the number inside the second array and in the third column, so the number 6. Remember that arrays are zero-indexed, so the first element's index is 0. 
 
 ## Traversing 2D Arrays
+
+Now that you know how to create a 2D array, it is important to know how to navigate a 2D array.  One of the ways that you can do this is reference a specific item within the 2D array.
+
+```java
+System.out.println(newArray[1] [1]);
+```
+**Sample output**
+`5`
+
+What if you wanted to see all of the elements within a 2D array.  You can use a nested for loop to iterate through each element in the array.  See the program below:
+
+```java
+class Main {
+  public static void main(String[] args) {
+		int[][] newArray = {{1,2,3,4,5},
+                    		    {6,7,8,9,10},
+                    		    {11,12,13,14,15}
+};
+
+for(int i = 0; i < newArray.length; i++)
+{
+   for(int j = 0; j < newArray[i].length; j++)
+   {
+      System.out.print(newArray[i][j] + ", ");
+   }
+}
+  }
+}
+```
+
+**Sample Output**
+`1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15`
+
+
+
