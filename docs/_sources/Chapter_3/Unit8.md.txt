@@ -6,6 +6,8 @@ In Java, a 2D array is organized in rows and columns much like a spreadsheet.  S
 
 Creating a 2D array is easy.  First you must declare the type of an array that you want to create.  In the example below, we are using `int`.  Then you use 2 sets of open and closed brackets.  Create a name for the array... in this case it is `newArray`.  From there, you will declare it as a new array and define the size of the array.  The code creates a 2D array with 3 rows and 3 columns, and it initializes all the elements to the default value of 0.
 
+**NOTE**: When you initialize a 2D array, you must always specify the first dimension(rows), but you do not need to specify the second dimension(columns).
+
 ```java
 // my preferred initialization method of a 2D array
 int[][] newArray = new int[3][3];
