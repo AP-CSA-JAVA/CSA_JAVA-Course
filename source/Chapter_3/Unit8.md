@@ -22,6 +22,13 @@ Much like one-dimensional arrays:
 - all  elements in the array must be the same type
 - a 2D array can hold primitive types as well as objects.
 
+```java
+        int[][] integer2DArray; // 2D integer array
+        double[][] double2DArray; // 2D double array
+        boolean[][] boolean2DArray; // 2D boolean array
+        String[][] string2DArray; // 2D String array   
+```
+
 Another way to initialize a 2D array is as follows:  
 
 ```java
