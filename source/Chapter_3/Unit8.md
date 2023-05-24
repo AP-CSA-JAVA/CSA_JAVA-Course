@@ -58,6 +58,7 @@ Now that you know how to create a 2D array, it is important to know how to navig
 System.out.println(newArray[1] [1]);
 ```
 **Sample output**
+
 `5`
 
 What if you wanted to see all of the elements within a 2D array.  You can use a nested for loop to iterate through each element in the array.  See the program below:
