@@ -33,9 +33,9 @@ Another way to initialize a 2D array is as follows:
 
 ```java
 int[][] newArray = { 
-                 {1, 2, 3}, 
-                 {4, 5, 6}, 
-                 {7, 8} 
+                 {1, 2, 3, 4, 5}, 
+                 {6, 7, 8, 9, 10}, 
+                 {11, 12, 13, 14, 15} 
 };
 ```
 
@@ -66,9 +66,10 @@ What if you wanted to see all of the elements within a 2D array.  You can use a 
 ```java
 class Main {
   public static void main(String[] args) {
-		int[][] newArray = {{1,2,3,4,5},
-                    		    {6,7,8,9,10},
-                    		    {11,12,13,14,15}
+		int[][] newArray = {
+				   {1,2,3,4,5},
+                    		   {6,7,8,9,10},
+                    		   {11,12,13,14,15}
 };
 
 for(int i = 0; i < newArray.length; i++)
