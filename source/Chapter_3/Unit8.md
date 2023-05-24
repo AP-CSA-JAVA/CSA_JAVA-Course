@@ -35,7 +35,7 @@ Another way to initialize a 2D array is as follows:
 int[][] newArray = { 
                  {1, 2, 3}, 
                  {4, 5, 6}, 
-                 {7, 8, 9} 
+                 {7, 8} 
 };
 ```
 
