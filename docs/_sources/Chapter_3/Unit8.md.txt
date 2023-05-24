@@ -24,7 +24,7 @@ int[][] newArray = {
 };
 ```
 
-**NOTE** 2D arrays can have columns of different lengths.
+**NOTE** It is possible for 2D arrays to have different row lengths.
 
 To access the variables within a 2D array, you can use the syntax newArray[i][j], where i is the index of the row and j is the index of the column. 
 
