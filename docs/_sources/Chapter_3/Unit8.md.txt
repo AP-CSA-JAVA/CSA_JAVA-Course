@@ -10,7 +10,7 @@ Creating a 2D array is easy.  First you must declare the type of an array that y
 
 ```java
 // my preferred initialization method of a 2D array
-int[][] newArray = new int[3][3];
+int[][] newArray = new int[3][5];
 
 // The minimum required is declaring the data type, 
 // 2 open/close brackets, and the array name.
@@ -41,25 +41,27 @@ int[][] newArray = {
 
 **NOTE** It is possible for 2D arrays to have different row lengths.
 
-To access the variables within a 2D array, you can use the syntax newArray[i][j], where i is the index of the row and j is the index of the column. 
 
-Example:
-```java
-int num = newArray[1][2];
-```
 
 This statement creates a variable `num` and assigns it the value of the number inside the second array and in the third column, so the number 6. Remember that arrays are zero-indexed, so the first element's index is 0. 
 
 ## Traversing 2D Arrays
 
-Now that you know how to create a 2D array, it is important to know how to navigate a 2D array.  One of the ways that you can do this is to reference a specific element within the 2D array.
+Now that you know how to create a 2D array, it is important to know how to navigate a 2D array.  One of the ways that you can do this is to reference a specific element within the 2D array.  To access the variables within a 2D array, you can use the syntax newArray[i][j], where i is the index of the row and j is the index of the column. 
+
+|  | index[0] | index[1] | index[2] | index[3] | index[4] |
+| ----- | ----- | ----- | ----- | ----- | ----- |
+| **index[0]** | 1 | 2 | 3 | 4 | 5 |
+| **index[1]** | 6 | 7 | 8 | 9 | 10 |
+| **index[2]** | 11 | 12 | 13 | 14 | 15 |
+
 
 ```java
 System.out.println(newArray[1] [1]);
 ```
 **Sample output**
 
-`5`
+`7`
 
 What if you wanted to see all of the elements within a 2D array.  You can use a nested for loop to iterate through each element in the array.  See the program below:
 
