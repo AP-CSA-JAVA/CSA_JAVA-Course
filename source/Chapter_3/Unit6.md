@@ -1,32 +1,28 @@
 # Unit 6
 
 ## 6.1 Array Creation and Access
-Arrays in java is a group of variables referred to by a common name. Below are some important points to know about Java arrays: 
-•	In Java, all arrays are dynamically allocated.
-•	Arrays are stored in contiguous memory [consecutive memory locations].
-•	Java arrays are objects, so we can find the length of a given array using the object property length. 
-•	A Java array variable can also be declared like other variables with [] after the data type.
-•	The variables in the array are ordered, and each has an index beginning with 0.
-•	Java array can also be used as a static field, a local variable, or a method parameter.
-•	The size of an array must be specified by int or short value.
-•	The direct superclass of an array type is Object.
-•	The size of the array cannot be altered(once initialized).   
+Arrays are a group of variables referred to by a common name. Below are some important points to know about Java arrays:
+
+- In Java, all arrays are dynamically allocated.
+- Arrays are stored in contiguous memory (consecutive memory locations).
+- Java arrays are objects, so we can find the length of a given array using the object property length. 
+- A Java array variable can also be declared like other variables with [] after the data type.
+- The variables in the array are ordered, and each has an index beginning with 0.
+- Java array can also be used as a static field, a local variable, or a method parameter.
+- The size of an array must be specified by int or short value.
+- The direct superclass of an array type is Object.
+- The size of the array cannot be altered(once initialized).   
  
 
-An array can contain primitives (int, char, etc.) and object (or non-primitive) references of a class depending on the definition of the array. In the case of primitive data types, the actual values are stored in contiguous memory locations. In the case of class objects, the actual objects are stored in a heap segment.
+An array can contain primitives (int, double, boolean) and object (String) references of a class depending on the definition of the array. In the case of primitive data types, the actual values are stored in contiguous memory locations. In the case of class objects, the actual objects are stored in a heap segment.
 
 array.length: length is a final variable applicable for arrays. With the help of the length variable, we can obtain the size of the array. 
-string.length() : length() method is a final method which is applicable for string objects. The length() method returns the number of characters present in the string. 
-length vs length()
-1. The length variable is applicable to an array but not for string objects whereas the length() method is applicable for string objects but not for arrays.
-// length can be used for int[], double[], String[] 
-// to know the length of the arrays.
+`string.length()` : `length()` method is a final method which is applicable for string objects. The `length()` method returns the number of characters present in the string. 
+`length` vs `length()`
 
-// length() can be used for String, StringBuilder, etc 
-// String class related Objects to know the length of the String
+The `length` variable is applicable to an array but not for string objects whereas the `length()` method is applicable for string objects but not for arrays.  To directly access a field member of an array we can use `.length`; whereas `.length()` invokes a method to access a field member.
 
-To directly access a field member of an array we can use .length; whereas .length() invokes a method to access a field member.
-
+```java
 // Java program to illustrate the concept of length and length()
 public class Main {
 	public static void main(String[] args)
@@ -40,64 +36,67 @@ public class Main {
 		System.out.println("The size of the String is " + str.length());
 	}
 }
+```
 
-The size of the array is 4
-The size of the String is 13
+**Sample Output**
+
+`The size of the array is 4
+The size of the String is 13`
 
 
-
-
-
+-------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------
 
 
 
 What will be the output of the following program?
 
+```java
 public class Test {
 	public static void main(String[] args)
 	{
 		// Here str is the array name of String type.
-		String[] str = { "GEEKS", "FOR", "GEEKS" };
+		String[] str = { "Apple", "and", "Orange" };
 		System.out.println(str.length);
 	}
 }
+```
 
-Output
-3
+**Sample Output**
+`3`
 
 What will be the output of the following program?
 
-public class Test {
+public class Main {
 	public static void main(String[] args)
 	{
-		// Here str[0] pointing to a string i.e. GEEKS
-		String[] str = { "GEEKS", "FOR", "GEEKS" };
+		// Here str[0] pointing to a string i.e. Apple
+		String[] str = { "Apple", "and", "Orange" };
 		System.out.println(str.length());
 	}
 }
 
-Output:
+**Sample Output:**
 
-error: cannot find symbol
+`error: cannot find symbol
 symbol: method length()
-location: variable str of type String[]
+location: variable str of type String[]`
 
 
 What will be the output of the following program?
 
 
-public class Test {
+public class Main {
 	public static void main(String[] args)
 	{
-		// Here str[0] pointing to String i.e. GEEKS
-		String[] str = { "GEEKS", "FOR", "GEEKS" };
+		// Here str[0] pointing to String i.e. Apple
+		String[] str = { "Apple", "and", "Orange" };
 		System.out.println(str[0].length());
 	}
 }
 
-Output 
-
-5
+**Sample Output:** 
+`5`
 
 // If an array has zero elements, you cannot get the last index by subtracting one. We must check this case.
 public class Program {
