@@ -231,6 +231,56 @@
 <li><p>The direct superclass of an array type is Object.</p></li>
 <li><p>The size of the array cannot be altered(once initialized).</p></li>
 </ul>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Sample Array</p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>list of items in array -&gt;</p></td>
+<td><p>A</p></td>
+<td><p>B</p></td>
+<td><p>C</p></td>
+<td><p>D</p></td>
+<td><p>E</p></td>
+<td><p>F</p></td>
+<td><p>G</p></td>
+<td><p>H</p></td>
+<td><p>I</p></td>
+<td><p>J</p></td>
+<td><p>K</p></td>
+</tr>
+<tr class="row-odd"><td><p>array indices -&gt;</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>2</p></td>
+<td><p>3</p></td>
+<td><p>4</p></td>
+<td><p>5</p></td>
+<td><p>6</p></td>
+<td><p>7</p></td>
+<td><p>8</p></td>
+<td><p>9</p></td>
+<td><p>10</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>array length is 11 indices.
+first index is 0.
+last index is 10.</p>
 <p>An array can contain primitives (int, double, boolean) and object (String) references of a class depending on the definition of the array. In the case of primitive data types, the actual values are stored in contiguous memory locations. In the case of class objects, the actual objects are stored in a heap segment.</p>
 <p>array.length: length is a final variable applicable for arrays. With the help of the length variable, we can obtain the size of the array.
 <code class="docutils literal notranslate"><span class="pre">string.length()</span></code> : <code class="docutils literal notranslate"><span class="pre">length()</span></code> method is a final method which is applicable for string objects. The <code class="docutils literal notranslate"><span class="pre">length()</span></code> method returns the number of characters present in the string.
@@ -442,96 +492,6 @@
 </section>
 <section id="developing-algorithms-using-arrays">
 <h2>6.4 Developing Algorithms Using Arrays<a class="headerlink" href="#developing-algorithms-using-arrays" title="Permalink to this heading">#</a></h2>
-<p>Arrays in java is a list of items that are grouped together with a common name.  There are important points you need to know about Java arrays:</p>
-<ul class="simple">
-<li><p>In Java, all arrays are dynamically allocated.</p></li>
-<li><p>Arrays are stored in consecutive memory locations.</p></li>
-<li><p>Java arrays are objects, so we can find the length of a given array using the object property length.</p></li>
-<li><p>A Java array variable can also be declared like other variables with brackets after the data type.</p></li>
-<li><p>The variables in the array are ordered, and each has an index beginning with 0.</p></li>
-<li><p>Java array can also be used as a static field, a local variable, or a method parameter.</p></li>
-<li><p>The size of an array must be specified by int or short value.</p></li>
-<li><p>The direct superclass of an array type is Object.</p></li>
-<li><p>The size of the array cannot be altered(once initialized).</p></li>
-</ul>
-<div class="table-wrapper colwidths-auto docutils container">
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Sample Array</p></th>
-<th class="head"><p></p></th>
-<th class="head"><p></p></th>
-<th class="head"><p></p></th>
-<th class="head"><p></p></th>
-<th class="head"><p></p></th>
-<th class="head"><p></p></th>
-<th class="head"><p></p></th>
-<th class="head"><p></p></th>
-<th class="head"><p></p></th>
-<th class="head"><p></p></th>
-<th class="head"><p></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>list of items in array -&gt;</p></td>
-<td><p>A</p></td>
-<td><p>B</p></td>
-<td><p>C</p></td>
-<td><p>D</p></td>
-<td><p>E</p></td>
-<td><p>F</p></td>
-<td><p>G</p></td>
-<td><p>H</p></td>
-<td><p>I</p></td>
-<td><p>J</p></td>
-<td><p>K</p></td>
-</tr>
-<tr class="row-odd"><td><p>array indices -&gt;</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-<td><p>2</p></td>
-<td><p>3</p></td>
-<td><p>4</p></td>
-<td><p>5</p></td>
-<td><p>6</p></td>
-<td><p>7</p></td>
-<td><p>8</p></td>
-<td><p>9</p></td>
-<td><p>10</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>array length is 11 indices.
-first index is 0.
-last index is 10.</p>
-<p>An array can contain primitive types and object references.  Primitive data types are stored in consecutive memory locations where class objects are stored in a heap segment which is beyond the scope of this course.</p>
-<p>array.length: length is a final variable applicable for arrays. With the help of the length variable, we can obtain the size of the array.
-string.length() : length() method is a final method which is applicable for string objects. The length() method returns the number of characters present in the string.</p>
-<p>length vs length()</p>
-<ol class="arabic simple">
-<li><p>The length variable is applicable to an array but not for string objects whereas the length() method is applicable for string objects but not for arrays.
-// length can be used for int[], double[], String[]
-// to know the length of the arrays.</p></li>
-</ol>
-<p>// length() can be used for String, StringBuilder, etc
-// String class related Objects to know the length of the String</p>
-<p>To directly access a field member of an array we can use .length.  While .length() uses a method to access a field member.</p>
-<p>// Example for length vs length()
-public class Main {
-public static void main(String[] args)
-{
-// Using length as a variable for an array
-int[] array = new int[4];
-System.out.println(“This is the size my array. “ + array.length);</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>	// Using length() for a string object
-	String str = &quot;This is the size of a string.&quot;;
-	System.out.println(&quot;The size of this String is &quot; + str.length());
-}
-</pre></div>
-</div>
-<p>}</p>
-<p>The size of the array is 4
-The size of the String is 29</p>
 </section>
 </section>
 
