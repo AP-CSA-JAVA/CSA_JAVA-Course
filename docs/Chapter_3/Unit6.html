@@ -256,7 +256,7 @@
 <hr class="docutils" />
 <hr class="docutils" />
 <p>What will be the output of the following program?</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Test</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
 <span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
 <span class="w">	</span><span class="p">{</span>
 <span class="w">		</span><span class="c1">// Here str is the array name of String type.</span>
@@ -279,35 +279,39 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p><strong>Sample Output:</strong>
-<code class="docutils literal notranslate"><span class="pre">error:</span> <span class="pre">cannot</span> <span class="pre">find</span> <span class="pre">symbol</span> <span class="pre">symbol:</span> <span class="pre">method</span> <span class="pre">length()</span> <span class="pre">location:</span> <span class="pre">variable</span> <span class="pre">str</span> <span class="pre">of</span> <span class="pre">type</span> <span class="pre">String[]</span></code></p>
+<p><strong>Sample Output:</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">error:</span> <span class="pre">cannot</span> <span class="pre">find</span> <span class="pre">symbol</span> <span class="pre">symbol:</span> <span class="pre">method</span> <span class="pre">length()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">location:</span> <span class="pre">variable</span> <span class="pre">str</span> <span class="pre">of</span> <span class="pre">type</span> <span class="pre">String[]</span></code></p>
 <p>What will be the output of the following program?</p>
-<p>public class Main {
-public static void main(String[] args)
-{
-// Here str[0] pointing to String i.e. Apple
-String[] str = { “Apple”, “and”, “Orange” };
-System.out.println(str[0].length());
-}
-}</p>
-<p><strong>Sample Output:</strong>
-<code class="docutils literal notranslate"><span class="pre">5</span></code></p>
-<p>// If an array has zero elements, you cannot get the last index by subtracting one. We must check this case.
-public class Program {
-public static void main(String[] args) {</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    String[] array = { &quot;cat&quot;, &quot;apple&quot;, &quot;frog&quot; };
-    
-    // Display length of the array.
-    System.out.println(array.length);
-    
-    // Display first and last elements.
-    System.out.println(array[0]);
-    System.out.println(array[array.length - 1]);
-}
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">	</span><span class="p">{</span>
+<span class="w">		</span><span class="c1">// Here str[0] pointing to String i.e. Apple</span>
+<span class="w">		</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;Apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;and&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Orange&quot;</span><span class="w"> </span><span class="p">};</span>
+<span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">str</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">());</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
-<p>}
-Output:</p>
+<p><strong>Sample Output:</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">5</span></code></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// If an array has zero elements, you cannot get the last index by subtracting one. We must check this case.</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Program</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;cat&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;frog&quot;</span><span class="w"> </span><span class="p">};</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c1">// Display length of the array.</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="p">);</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c1">// Display first and last elements.</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">array</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">array</span><span class="o">[</span><span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="o">]</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Sample Output:</strong></p>
 <p>3
 cat
 frog</p>
