@@ -63,21 +63,23 @@ public class Test {
 ```
 
 **Sample Output**
+
 `3`
 
 What will be the output of the following program?
 
+```java
 public class Main {
 	public static void main(String[] args)
 	{
-		// Here str[0] pointing to a string i.e. Apple
-		String[] str = { "Apple", "and", "Orange" };
-		System.out.println(str.length());
+	  // Here str[0] pointing to a string i.e. Apple
+	  String[] str = { "Apple", "and", "Orange" };
+	  System.out.println(str.length());
 	}
 }
+```
 
 **Sample Output:**
-
 `error: cannot find symbol
 symbol: method length()
 location: variable str of type String[]`
