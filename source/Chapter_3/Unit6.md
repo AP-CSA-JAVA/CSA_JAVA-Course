@@ -248,11 +248,12 @@ public class Main {
     }
 }
 ```
+
 **Sample Output:**
 
 `3114 ms,    loop with length max`
 
-`6785 ms,    loop with local variable max``
+`6785 ms,    loop with local variable max`
 
 
 
