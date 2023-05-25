@@ -128,25 +128,24 @@ public class Program {
 
 `frog`
 
-
+```java
 public class Program {
     public static void main(String[] args) {
         
         int[] numbers = { 5, 10, 15, 20 };
         // Loop over numbers using length.
         for (int i = 0; i < numbers.length; i++) {
-            System.out.println(numbers[i]);
+            System.out.print(numbers[i] + " ");
         }
     }
 }
+```
 
-Output:
+**Sample Output:**
 
-5
-10
-15
-20
+`5 10 15 20`
 
+```java
 /* Version 1 Here we access the array's length each time in a hot inner loop. The length never changes.
 Version 2 In this version of the code we use a cached "length" local instead of accessing length each time.
 Result Checking a local variable that copies the value of an array's length is faster.
@@ -187,14 +186,17 @@ public class Main {
         System.out.println(t3 - t2);
     }
 }
+```
+
+**Sample Output:**
 14 ms,    check array.length
  9 ms,    check local variable
 
+```java
 /*  Version 1 This code loops over a 100,000 element array and accesses array.length in the for-loop limit.
 Version 2 This version uses a local variable instead of array.length. In the loop it accesses the array.
 Result The loop that accesses the array length directly is faster. The compiler is optimizing bounds-checking in the loop body. */
 
-```java
 public class Main {
     public static void main(String[] args) {
         
@@ -245,9 +247,12 @@ public class Main {
         System.out.println(t3 - t2);
     }
 }
-3114 ms,    loop with length max
-6785 ms,    loop with local variable max
 ```
+**Sample Output:**
+
+`3114 ms,    loop with length max`
+
+`6785 ms,    loop with local variable max``
 
 
 
