@@ -122,9 +122,12 @@ public class Program {
 
 **Sample Output:**
 
-3
-cat
-frog
+`3`
+
+`cat`
+
+`frog`
+
 
 public class Program {
     public static void main(String[] args) {
