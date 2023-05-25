@@ -52,7 +52,7 @@ The size of the String is 13`
 What will be the output of the following program?
 
 ```java
-public class Test {
+public class Main {
 	public static void main(String[] args)
 	{
 		// Here str is the array name of String type.
@@ -80,14 +80,15 @@ public class Main {
 ```
 
 **Sample Output:**
-`error: cannot find symbol
-symbol: method length()
-location: variable str of type String[]`
+
+`error: cannot find symbol symbol: method length()`
+
+`location: variable str of type String[]`
 
 
 What will be the output of the following program?
 
-
+```java
 public class Main {
 	public static void main(String[] args)
 	{
@@ -96,10 +97,13 @@ public class Main {
 		System.out.println(str[0].length());
 	}
 }
+```
 
-**Sample Output:** 
+**Sample Output:**
+
 `5`
 
+```java
 // If an array has zero elements, you cannot get the last index by subtracting one. We must check this case.
 public class Program {
     public static void main(String[] args) {
@@ -114,7 +118,9 @@ public class Program {
         System.out.println(array[array.length - 1]);
     }
 }
-Output:
+```
+
+**Sample Output:**
 
 3
 cat
