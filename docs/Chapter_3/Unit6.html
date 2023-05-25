@@ -219,79 +219,77 @@
 <h1>Unit 6<a class="headerlink" href="#unit-6" title="Permalink to this heading">#</a></h1>
 <section id="array-creation-and-access">
 <h2>6.1 Array Creation and Access<a class="headerlink" href="#array-creation-and-access" title="Permalink to this heading">#</a></h2>
-<p>Arrays in java is a group of variables referred to by a common name. Below are some important points to know about Java arrays:
-•	In Java, all arrays are dynamically allocated.
-•	Arrays are stored in contiguous memory [consecutive memory locations].
-•	Java arrays are objects, so we can find the length of a given array using the object property length.
-•	A Java array variable can also be declared like other variables with [] after the data type.
-•	The variables in the array are ordered, and each has an index beginning with 0.
-•	Java array can also be used as a static field, a local variable, or a method parameter.
-•	The size of an array must be specified by int or short value.
-•	The direct superclass of an array type is Object.
-•	The size of the array cannot be altered(once initialized).</p>
-<p>An array can contain primitives (int, char, etc.) and object (or non-primitive) references of a class depending on the definition of the array. In the case of primitive data types, the actual values are stored in contiguous memory locations. In the case of class objects, the actual objects are stored in a heap segment.</p>
+<p>Arrays are a group of variables referred to by a common name. Below are some important points to know about Java arrays:</p>
+<ul class="simple">
+<li><p>In Java, all arrays are dynamically allocated.</p></li>
+<li><p>Arrays are stored in contiguous memory (consecutive memory locations).</p></li>
+<li><p>Java arrays are objects, so we can find the length of a given array using the object property length.</p></li>
+<li><p>A Java array variable can also be declared like other variables with [] after the data type.</p></li>
+<li><p>The variables in the array are ordered, and each has an index beginning with 0.</p></li>
+<li><p>Java array can also be used as a static field, a local variable, or a method parameter.</p></li>
+<li><p>The size of an array must be specified by int or short value.</p></li>
+<li><p>The direct superclass of an array type is Object.</p></li>
+<li><p>The size of the array cannot be altered(once initialized).</p></li>
+</ul>
+<p>An array can contain primitives (int, double, boolean) and object (String) references of a class depending on the definition of the array. In the case of primitive data types, the actual values are stored in contiguous memory locations. In the case of class objects, the actual objects are stored in a heap segment.</p>
 <p>array.length: length is a final variable applicable for arrays. With the help of the length variable, we can obtain the size of the array.
-string.length() : length() method is a final method which is applicable for string objects. The length() method returns the number of characters present in the string.
-length vs length()</p>
-<ol class="arabic simple">
-<li><p>The length variable is applicable to an array but not for string objects whereas the length() method is applicable for string objects but not for arrays.
-// length can be used for int[], double[], String[]
-// to know the length of the arrays.</p></li>
-</ol>
-<p>// length() can be used for String, StringBuilder, etc
-// String class related Objects to know the length of the String</p>
-<p>To directly access a field member of an array we can use .length; whereas .length() invokes a method to access a field member.</p>
-<p>// Java program to illustrate the concept of length and length()
-public class Main {
-public static void main(String[] args)
-{
-// Here array is the array name of int type
-int[] array = new int[4];
-System.out.println(“The size of the array is “ + array.length);</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>	// Here str is a string object
-	String str = &quot;This is a string&quot;;
-	System.out.println(&quot;The size of the String is &quot; + str.length());
-}
+<code class="docutils literal notranslate"><span class="pre">string.length()</span></code> : <code class="docutils literal notranslate"><span class="pre">length()</span></code> method is a final method which is applicable for string objects. The <code class="docutils literal notranslate"><span class="pre">length()</span></code> method returns the number of characters present in the string.
+<code class="docutils literal notranslate"><span class="pre">length</span></code> vs <code class="docutils literal notranslate"><span class="pre">length()</span></code></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">length</span></code> variable is applicable to an array but not for string objects whereas the <code class="docutils literal notranslate"><span class="pre">length()</span></code> method is applicable for string objects but not for arrays.  To directly access a field member of an array we can use <code class="docutils literal notranslate"><span class="pre">.length</span></code>; whereas <code class="docutils literal notranslate"><span class="pre">.length()</span></code> invokes a method to access a field member.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Java program to illustrate the concept of length and length()</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">	</span><span class="p">{</span>
+<span class="w">		</span><span class="c1">// Here array is the array name of int type</span>
+<span class="w">		</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span><span class="p">;</span>
+<span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;The size of the array is &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="p">);</span>
+
+<span class="w">		</span><span class="c1">// Here str is a string object</span>
+<span class="w">		</span><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;This is a string&quot;</span><span class="p">;</span>
+<span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;The size of the String is &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="na">length</span><span class="p">());</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
-<p>}</p>
-<p>The size of the array is 4
-The size of the String is 13</p>
+<p><strong>Sample Output</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">size</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">array</span> <span class="pre">is</span> <span class="pre">4</span> <span class="pre">The</span> <span class="pre">size</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">String</span> <span class="pre">is</span> <span class="pre">13</span></code></p>
+<hr class="docutils" />
+<hr class="docutils" />
 <p>What will be the output of the following program?</p>
-<p>public class Test {
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Test</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">	</span><span class="p">{</span>
+<span class="w">		</span><span class="c1">// Here str is the array name of String type.</span>
+<span class="w">		</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;Apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;and&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Orange&quot;</span><span class="w"> </span><span class="p">};</span>
+<span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">str</span><span class="p">.</span><span class="na">length</span><span class="p">);</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Sample Output</strong>
+<code class="docutils literal notranslate"><span class="pre">3</span></code></p>
+<p>What will be the output of the following program?</p>
+<p>public class Main {
 public static void main(String[] args)
 {
-// Here str is the array name of String type.
-String[] str = { “GEEKS”, “FOR”, “GEEKS” };
-System.out.println(str.length);
-}
-}</p>
-<p>Output
-3</p>
-<p>What will be the output of the following program?</p>
-<p>public class Test {
-public static void main(String[] args)
-{
-// Here str[0] pointing to a string i.e. GEEKS
-String[] str = { “GEEKS”, “FOR”, “GEEKS” };
+// Here str[0] pointing to a string i.e. Apple
+String[] str = { “Apple”, “and”, “Orange” };
 System.out.println(str.length());
 }
 }</p>
-<p>Output:</p>
-<p>error: cannot find symbol
-symbol: method length()
-location: variable str of type String[]</p>
+<p><strong>Sample Output:</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">error:</span> <span class="pre">cannot</span> <span class="pre">find</span> <span class="pre">symbol</span> <span class="pre">symbol:</span> <span class="pre">method</span> <span class="pre">length()</span> <span class="pre">location:</span> <span class="pre">variable</span> <span class="pre">str</span> <span class="pre">of</span> <span class="pre">type</span> <span class="pre">String[]</span></code></p>
 <p>What will be the output of the following program?</p>
-<p>public class Test {
+<p>public class Main {
 public static void main(String[] args)
 {
-// Here str[0] pointing to String i.e. GEEKS
-String[] str = { “GEEKS”, “FOR”, “GEEKS” };
+// Here str[0] pointing to String i.e. Apple
+String[] str = { “Apple”, “and”, “Orange” };
 System.out.println(str[0].length());
 }
 }</p>
-<p>Output</p>
-<p>5</p>
+<p><strong>Sample Output:</strong>
+<code class="docutils literal notranslate"><span class="pre">5</span></code></p>
 <p>// If an array has zero elements, you cannot get the last index by subtracting one. We must check this case.
 public class Program {
 public static void main(String[] args) {</p>
