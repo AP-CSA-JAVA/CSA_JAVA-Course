@@ -13,14 +13,17 @@ Arrays are a group of variables referred to by a common name. Below are some imp
 - The direct superclass of an array type is Object.
 - The size of the array cannot be altered(once initialized).   
  
+ 
 | Sample Array |   |   |  |  |  |  |  |  |  |  |  |
 | ----------- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
 | list of items in array -> | A | B | C | D | E | F | G | H | I | J | K |
 | array indices -> | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
 
-array length is 11 indices.
-first index is 0.
-last index is 10.
+
+The array length is 11 indices.
+The first index is 0.
+The last index is 10.
+
 
 An array can contain primitives (int, double, boolean) and object (String) references of a class depending on the definition of the array. In the case of primitive data types, the actual values are stored in contiguous memory locations. In the case of class objects, the actual objects are stored in a heap segment.
 
