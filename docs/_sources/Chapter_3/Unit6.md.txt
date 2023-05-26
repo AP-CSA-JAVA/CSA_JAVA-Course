@@ -59,6 +59,8 @@ The keyword length returns the current size of an array. An array with five valu
 This, the last index in an array will always be array.length - 1. The `for` loop is set to `i < fruit.length`, so the greatest value of `i` will always be *one less than* the length of the array.
 **Notice** that the `for` loop starts at the first element (0) and ends at the last element (array.length - 1). Each time through the loop, the value of *i* accesses the element at index *i*. This simple `for` loop is able to loop through the array, regardless of how many items there are in the array.
 
+---------------------------------------------------------------------------------------------------------------
+
 <details>
 <summary>.length variable vs. length() method</summary>
 <p>
@@ -208,6 +210,8 @@ public class Program {
 
 </p>
 </details>
+
+---------------------------------------------------------------------------------------------------------------
 
 We can also use a `while` loop to write this *traversal*.
 
