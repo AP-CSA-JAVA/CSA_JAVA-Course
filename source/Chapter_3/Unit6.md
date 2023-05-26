@@ -62,7 +62,9 @@ This, the last index in an array will always be array.length - 1. The `for` loop
 <details>
 <summary>.length variable vs. length() method</summary>
 <p>
+
 **Note**
+
 array.length: length is a final variable applicable for arrays. With the help of the `length` variable, we can obtain the size of the array. 
 `string.length()` : `length()` method is a final method which is applicable for string objects. The `length()` method returns the number of characters present in the string. 
 `length` vs `length()`
