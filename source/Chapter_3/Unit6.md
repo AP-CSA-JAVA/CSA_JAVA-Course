@@ -61,8 +61,10 @@ This, the last index in an array will always be array.length - 1. The `for` loop
 
 ---------------------------------------------------------------------------------------------------------------
 
+**`.length`** variable vs. **`length()`** method
+
 <details>
-<summary>.length variable vs. length() method</summary>
+<summary> Click Here </summary>
 <p>
 
 **Note**
