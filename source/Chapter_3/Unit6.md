@@ -310,6 +310,63 @@ write a program that will use a while loop to traverse a list in reverse order.
 - Write a program to create, traverse, and manipulate elements in a 1D array.
 
 
+In both the for and while loop array traversals, a counter was used to determine the correct index at which an array element could be found:
+
+``java
+
+//for loop
+for(int i = 0; i < array.length; i++){
+   // Do something
+}  
+
+//while loop
+int counter = 0;
+while(counter < array.length) { 
+   // Do something
+   counter++;
+}
+```
+
+Arrays can also be traversed without the use of counters by using an enhanced for loop.
+
+**Enhanced for Loops** 
+Enhanced for loops are an alternate method of traversing an array:
+
+```java
+int[] numList = {5,6,7,4,2};
+for(int number: numList)
+{
+   System.out. println(number);
+}
+```
+
+Instead of initializing a variable for looping, the enhanced for loop header initializes a new variable, number known as the enhanced for loop variable. The type of this variable needs to match the value type of the array. In this example, since numList is an array of integers, number also needs to be an integer.
+After the enhanced for loop variable is defined, the header is completed by placing a colon and the name of the array being iterated on (numList).
+Inside the loop, the enhanced for loop variable is assigned a copy of each value of the array without using the array index. On each iteration, the value of number changes to match an element in the array. The first value of number in this loop is 5. The second value will be 6, as it is the next item in the array. The enhanced for loop iterates in the order that the elements are found in the array, from first to last. Making changes to the enhanced for loop variable does not change the original value in the array.
+Standard for loops can be rewritten as enhanced for loops, and vice versa:
+
+```java
+
+String[] classroom = {"julian", "larisa", "amada", "mikka", "jay"};
+
+//Enhanced For Loop:
+for(String student : classroom)
+{
+   System.out.println(student);
+}
+
+
+//Standard For Loop:
+for(int i = 0; i < classroom.length; i ++)
+{
+    System.out.println(classroom[i]);
+}
+```
+
+**Enhanced For Loop Applications** 
+Both standard and enhanced for loops are useful in different contexts. For example, since enhanced for loops make a copy of each element value, they are incapable of changing the value of the elements in an array. If elements need to be altered, standard for loops are more appropriate. In contrast, if elements just need to be accessed, enhanced for loops provide a more streamlined way to access elements without the need for a counter, or a potential `ArrayIndexOutOfBounds error`. 
+
+
 ## 6.4 Developing Algorithms Using Arrays
 
 **Goals**
