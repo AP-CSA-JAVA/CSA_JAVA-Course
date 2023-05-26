@@ -1,6 +1,12 @@
 # Unit 6
 
 ## 6.1 Array Creation and Access
+
+**Goals**
+- Represent collections of related primitive or object reference data using arrays.
+- Manage relationships in data.
+
+
 Arrays are a group of variables referred to by a common name. Below are some important points to know about Java arrays:
 
 - In Java, all arrays are dynamically allocated.
@@ -299,4 +305,15 @@ write a program that will use a while loop to traverse a list in reverse order.
 
 ## 6.3 Enhanced for Loop for Arrays
 
+**Goals**
+- Traverse the elements in a 1D array using an enhanced for loop.
+- Write a program to create, traverse, and manipulate elements in a 1D array.
+
+
 ## 6.4 Developing Algorithms Using Arrays
+
+**Goals**
+- Identify and modify standard array traversal algorithms.
+- Write standard array traversal algorithms.
+- Develop code to create, traverse, and manipulate elements in 1D array.
+- Describe the initial conditions that must be met for a program segment to work as intended or described.
