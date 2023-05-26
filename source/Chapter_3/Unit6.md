@@ -65,9 +65,8 @@ This, the last index in an array will always be array.length - 1. The `for` loop
 
 **Note**
 
-array.length: length is a final variable applicable for arrays. With the help of the `length` variable, we can obtain the size of the array. 
+`array.length`: length is a final variable applicable for arrays. With the help of the `length` variable, we can obtain the size of the array. 
 `string.length()` : `length()` method is a final method which is applicable for string objects. The `length()` method returns the number of characters present in the string. 
-`length` vs `length()`
 
 The `length` variable is applicable to an array but not for string objects whereas the `length()` method is applicable for string objects but not for arrays.  To directly access a field member of an array we can use `.length`; whereas `.length()` invokes a method to access a field member.
 
@@ -165,8 +164,6 @@ public class Main {
 
 
 
-
-
 ```java
 // If an array has zero elements, you cannot get the last index by subtracting one. We must check this case.
 public class Main {
@@ -211,6 +208,19 @@ public class Program {
 
 </p>
 </details>
+
+We can also use a `while` loop to write this *traversal*.
+
+```java
+int index = 0;
+while(index < fruit.length)
+{
+    System.out.println(fruit[index]);
+    index++;
+}
+```
+
+
 
 ## 6.3 Enhanced for Loop for Arrays
 
