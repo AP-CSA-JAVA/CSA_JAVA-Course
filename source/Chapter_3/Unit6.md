@@ -240,12 +240,14 @@ Another example of traversing an array:
 Traversing an array in reverse order:
 
 ```java
+
     int[] goals = {1, 2, 0, 3, 2, 4, 2, 1, 0, 2, 0, 1, 3, 2};
                    
     for (int i = goals.length; i > 0; i--)
     {
       System.out.print(goals[i-1] + " ");
 ```
+
 **Sample Output**
 
 `2 3 1 0 2 0 1 2 4 2 3 0 2 1`
@@ -257,6 +259,7 @@ Write a program that will use a while loop to traverse a list.
 <summary>Click Here</summary>
 <p>
 ```java
+
     int[] goals = {1, 2, 0, 3, 2, 4, 2, 1, 0, 2, 0, 1, 3, 2};
 
     int i = 0;
@@ -266,6 +269,7 @@ Write a program that will use a while loop to traverse a list.
       i++;
     }
 ```
+
 </p>
 </details>
 
