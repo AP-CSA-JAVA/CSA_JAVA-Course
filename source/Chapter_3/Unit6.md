@@ -341,11 +341,12 @@ for(int number: numList)
 }
 ```
 
-Instead of initializing a variable for looping, the enhanced for loop header initializes a new variable, number known as the enhanced for loop variable. The type of this variable needs to match the value type of the array. In this example, since numList is an array of integers, number also needs to be an integer.
+Instead of initializing a variable for looping, the enhanced for loop header initializes a new variable, `number` known as the enhanced for loop variable. The variable type must be the same value of the array.  In this instance, `numList` is an `int` array, so `number` is also an `int`.
 
-After the enhanced for loop variable is defined, the header is completed by placing a colon and the name of the array being iterated on (numList).
-Inside the loop, the enhanced for loop variable is assigned a copy of each value of the array without using the array index. On each iteration, the value of number changes to match an element in the array. The first value of number in this loop is 5. The second value will be 6, as it is the next item in the array. The enhanced for loop iterates in the order that the elements are found in the array, from first to last. Making changes to the enhanced for loop variable does not change the original value in the array.
-Standard for loops can be rewritten as enhanced for loops, and vice versa:
+Once the enhanced for loop variable is defined, the header is completed by placing a colon and the name of the array being iterated on `numList`.
+Within the loop, the enhanced `for` loop variable is assigned a copy of each value of the array without using the array index. Each iteration, the value of number changes to match an element in the array. The first value of `number` in this loop is 5. The second value is 6, as it is the next item in the array. The enhanced for loop iterates in the order that the elements are placed in the array, from first to last. Making changes to the enhanced for loop variable does not change the original value in the array.
+
+Standard `for` loops can be rewritten as enhanced `for` loops, and vice versa:
 
 ```java
 
@@ -365,9 +366,9 @@ for(int i = 0; i < classroom.length; i ++)
 }
 ```
 
-**Enhanced For Loop Applications** 
+**Enhanced `for` Loop Applications** 
 
-Both standard and enhanced for loops are useful in different contexts. For example, since enhanced for loops make a copy of each element value, they are incapable of changing the value of the elements in an array. If elements need to be altered, standard for loops are more appropriate. In contrast, if elements just need to be accessed, enhanced for loops provide a more streamlined way to access elements without the need for a counter, or a potential `ArrayIndexOutOfBounds error`. 
+Both standard and enhanced `for` loops are useful in different contexts. For example, since *enhanced* `for` loops make a copy of each element value, they are incapable of changing the value of the elements in an array. If elements need to be altered, *standard* `for` loops are more appropriate. In contrast, if elements just need to be accessed, *enhanced* `for` loops provide a more streamlined way to access elements without the need for a counter, or a potential `ArrayIndexOutOfBounds error`. 
 
 
 ## 6.4 Developing Algorithms Using Arrays
