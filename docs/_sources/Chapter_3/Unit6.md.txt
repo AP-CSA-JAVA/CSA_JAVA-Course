@@ -76,8 +76,6 @@ public class Main {
 <details>
 <summary>Click here</summary>
 <br>
-**Sample Output**
-
 `3`
 </details>
 
@@ -97,15 +95,10 @@ public class Main {
 <details>
 <summary>Click here</summary>
 <br>
-**Sample Output:**
 `error: cannot find symbol symbol: method length()`
+	
 `location: variable str of type String[]`
 </details>
-
-
-`error: cannot find symbol symbol: method length()`
-
-`location: variable str of type String[]`
 
 
 What will be the output of the following program?
@@ -120,10 +113,15 @@ public class Main {
 	}
 }
 ```
-
-**Sample Output:**
-
+<details>
+<summary>Click here</summary>
+<br>
 `5`
+</details>
+
+
+
+
 
 ```java
 // If an array has zero elements, you cannot get the last index by subtracting one. We must check this case.
