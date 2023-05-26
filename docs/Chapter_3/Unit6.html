@@ -435,6 +435,62 @@ There are `3` items in the str.
 <span class="p">}</span>
 </pre></div>
 </div>
+<p>Another example of traversing an array:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">goals</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">};</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">goals</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">goals</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Sample Output</strong>
+<code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">2</span> <span class="pre">0</span> <span class="pre">3</span> <span class="pre">2</span> <span class="pre">4</span> <span class="pre">2</span> <span class="pre">1</span> <span class="pre">0</span> <span class="pre">2</span> <span class="pre">0</span> <span class="pre">1</span> <span class="pre">3</span> <span class="pre">2</span></code></p>
+<p>Traversing an array in reverse order:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">goals</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">};</span>
+<span class="w">                   </span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">goals</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">--</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">goals</span><span class="o">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Sample Output</strong>
+2 3 1 0 2 0 1 2 4 2 3 0 2 1</p>
+<hr class="docutils" />
+<p>Write a program that will use a while loop to traverse a list.</p>
+<details>
+<summary>Click Here</summary>
+<p>
+```java
+    int[] goals = {1, 2, 0, 3, 2, 4, 2, 1, 0, 2, 0, 1, 3, 2};
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>int i = 0;
+while (i &lt; goals.length)
+{
+  System.out.print(goals[i] + &quot; &quot;);
+  i++;
+}
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;/p&gt;
+&lt;/details&gt;
+
+---------------------------------------------------------------------------------------------------------------
+
+Write a program that will use a while loop to traverse a list in reverse order. 
+&lt;details&gt;
+&lt;summary&gt;Click Here&lt;/summary&gt;
+&lt;p&gt;
+```java
+    int i = goals.length - 1;
+    while (i &gt;= 0)
+    {
+      int goal = goals[i];
+	System.out.print((goal + &quot; &quot;);
+      i--;
+    }
+</pre></div>
+</div>
+</p>
+</details>
 </section>
 <section id="enhanced-for-loop-for-arrays">
 <h2>6.3 Enhanced for Loop for Arrays<a class="headerlink" href="#enhanced-for-loop-for-arrays" title="Permalink to this heading">#</a></h2>
