@@ -55,7 +55,7 @@ for(int i = 0; i < fruit.length; i++)
 ```
 This `for` loop will *traverse* through every value in the fruit array, and prints out the value at every index.
 
-The keyword length returns the current size of an array. An array with five values is considered an array of length 5. The length of an array corresponds to the number of elements in an array, *not the last index value in an array*. Remember arrays start at index 0 - an array with five elements will start at 0 and end at index 4.
+The keyword `length` returns the current size of an array. An array with five values is considered an array length of 5. The length of an array corresponds to the number of elements in an array, *not the last index value in an array*. Remember arrays start at index 0 - an array with five elements will start at 0 and end at index 4.
 This, the last index in an array will always be array.length - 1. The `for` loop is set to `i < fruit.length`, so the greatest value of `i` will always be *one less than* the length of the array.
 **Notice** that the `for` loop starts at the first element (0) and ends at the last element (array.length - 1). Each time through the loop, the value of *i* accesses the element at index *i*. This simple `for` loop is able to loop through the array, regardless of how many items there are in the array.
 
@@ -96,8 +96,6 @@ The size of the String is 13`
 
 
 -------------------------------------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------------------------------------
-
 
 
 What will be the output of the following program?
