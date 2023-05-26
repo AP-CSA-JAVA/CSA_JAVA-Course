@@ -94,8 +94,14 @@ public class Main {
 	}
 }
 ```
-
+<details>
+<summary>Click here</summary>
+<br>
 **Sample Output:**
+`error: cannot find symbol symbol: method length()`
+`location: variable str of type String[]`
+</details>
+
 
 `error: cannot find symbol symbol: method length()`
 
