@@ -76,9 +76,10 @@ public class Main {
 <details>
 <summary>Click here</summary>
 <p>
-`3`
-	</p>
+There are `3` items in the str.
+</p>
 </details>
+
 
 
 What will be the output of the following program?
@@ -95,11 +96,13 @@ public class Main {
 ```
 <details>
 <summary>Click here</summary>
-<br>
+<p>
 `error: cannot find symbol symbol: method length()`
 	
 `location: variable str of type String[]`
+</p>
 </details>
+
 
 
 What will be the output of the following program?
@@ -116,8 +119,9 @@ public class Main {
 ```
 <details>
 <summary>Click here</summary>
-<br>
+<p>
 `5`
+</p>
 </details>
 
 
@@ -126,17 +130,17 @@ public class Main {
 
 ```java
 // If an array has zero elements, you cannot get the last index by subtracting one. We must check this case.
-public class Program {
+public class Main {
     public static void main(String[] args) {
         
-        String[] array = { "cat", "apple", "frog" };
+        String[] strArray = { "cat", "apple", "frog" };
         
         // Display length of the array.
-        System.out.println(array.length);
+        System.out.println(strArray.length);
         
         // Display first and last elements.
-        System.out.println(array[0]);
-        System.out.println(array[array.length - 1]);
+        System.out.println(strArray[0]);
+        System.out.println(strArray[strArray.length - 1]);
     }
 }
 ```
@@ -166,119 +170,35 @@ public class Program {
 
 `5 10 15 20`
 
-```java
-/* Version 1 Here we access the array's length each time in a hot inner loop. The length never changes.
-Version 2 In this version of the code we use a cached "length" local instead of accessing length each time.
-Result Checking a local variable that copies the value of an array's length is faster.
-Warning This optimization does not work in a loop boundary. The Java runtime applies special optimizations in loops. */
-
-public class Main {
-    public static void main(String[] args) {
-        
-        int[] array = new int[1000];
-        int length = array.length;
-        
-        long t1 = System.currentTimeMillis();
-        
-        // Version 1: check array length.
-        for (int i = 0; i < 10000000; i++) {
-            for (int j = 0; j < 100; j++) {
-                if (array.length != 1000) {
-                    System.out.println(false);
-                }
-            }
-        }
-        
-        long t2 = System.currentTimeMillis();
-        
-        // Version 2: check length cached value.
-        for (int i = 0; i < 10000000; i++) {
-            for (int j = 0; j < 100; j++) {
-                if (length != 1000) {
-                    System.out.println(false);
-                }
-            }
-        }
-        
-        long t3 = System.currentTimeMillis();
-        
-        // ... Timings.
-        System.out.println(t2 - t1);
-        System.out.println(t3 - t2);
-    }
-}
-```
-
-**Sample Output:**
-14 ms,    check array.length
- 9 ms,    check local variable
-
-```java
-/*  Version 1 This code loops over a 100,000 element array and accesses array.length in the for-loop limit.
-Version 2 This version uses a local variable instead of array.length. In the loop it accesses the array.
-Result The loop that accesses the array length directly is faster. The compiler is optimizing bounds-checking in the loop body. */
-
-public class Main {
-    public static void main(String[] args) {
-        
-        int[] array = new int[100000];
-        int length = array.length;
-        
-        // Access all elements in memory (prime the cache).
-        for (int v = 0; v < array.length; v++) {
-            if (array[v] != 0) {
-                System.out.println(false);
-            }
-        }
-        
-        long t1 = System.currentTimeMillis();
-        
-        // Version 1: use array length in for-loop maximum.
-        for (int i = 0; i < 30000000; i++) {
-            for (int j = 0; j < 100; j++) {
-                int count = 0;
-                for (int v = 0; v < array.length; v++) {
-                    count++;
-                }
-                if (count == 0) {
-                    System.out.println(0);
-                }
-            }
-        }
-        
-        long t2 = System.currentTimeMillis();
-        
-        // Version 2: use local variable as for-loop maximum.
-        for (int i = 0; i < 30000000; i++) {
-            for (int j = 0; j < 100; j++) {
-                int count = 0;
-                for (int v = 0; v < length; v++) {
-                    count++;
-                }
-                if (count == 0) {
-                    System.out.println(0);
-                }
-            }
-        }
-        
-        long t3 = System.currentTimeMillis();
-        
-        // ... Timings.
-        System.out.println(t2 - t1);
-        System.out.println(t3 - t2);
-    }
-}
-```
-
-**Sample Output:**
-
-`3114 ms,    loop with length max`
-
-`6785 ms,    loop with local variable max`
-
 
 
 ## 6.2 Traversing Arrays
+
+**Goals**
+- Traverse the elements in a 1D array.
+- Identify errors in a program.
+- Write program code to create, traverse, and manipulate elements in a 1D array.
+
+In this section we will navigate items within an array.  Take a look at the array below:
+
+```java
+String [] fruit = {"Apple", "Banana", "Grapes", "Mango", "Strawberry"};
+```
+To access an element in the fruit array, we can do so by identifying the location of the element within the array.
+
+```java
+String myFruit = fruit[1]; // returns Banana
+```
+If we want to access more items within the fruit array, we can use a `for` loop to *traverse* the array.
+
+```java
+for(int i = 0; i < fruit.length; i++)
+{
+	//This prints the *i*<sup>th</sup> element.
+	System.out.println(fruit[i]);
+}
+```
+
 
 ## 6.3 Enhanced for Loop for Arrays
 
