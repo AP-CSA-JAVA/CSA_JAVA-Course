@@ -75,8 +75,9 @@ public class Main {
 
 <details>
 <summary>Click here</summary>
-<br>
+<p>
 `3`
+	</p>
 </details>
 
 
