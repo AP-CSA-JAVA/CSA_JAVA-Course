@@ -312,8 +312,7 @@ write a program that will use a while loop to traverse a list in reverse order.
 
 In both the for and while loop array traversals, a counter was used to determine the correct index at which an array element could be found:
 
-``java
-
+```java
 //for loop
 for(int i = 0; i < array.length; i++){
    // Do something
@@ -325,6 +324,7 @@ while(counter < array.length) {
    // Do something
    counter++;
 }
+
 ```
 
 Arrays can also be traversed without the use of counters by using an enhanced for loop.
