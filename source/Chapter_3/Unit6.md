@@ -310,7 +310,7 @@ write a program that will use a while loop to traverse a list in reverse order.
 - Write a program to create, traverse, and manipulate elements in a 1D array.
 
 
- A counter was used to traverse both the `for` and `while` loop arrays.  The counter was used to determine the correct index at which an array element could be found:
+ A counter(i) was used to traverse both the `for` and `while` loop arrays.  The counter(i) was used to determine the correct index at which an array element could be found:
 
 ```java
 //for loop
@@ -319,15 +319,15 @@ for(int i = 0; i < array.length; i++){
 }  
 
 //while loop
-int counter = 0;
-while(counter < array.length) { 
+int i = 0;
+while(i < array.length) { 
    // Do something
-   counter++;
+   i++;
 }
 
 ```
 
-Arrays can also be traversed without the use of counters by using an enhanced for loop.
+Arrays can also be traversed without the use of a counter by using an enhanced for loop.
 
 **Enhanced for Loops** 
 
