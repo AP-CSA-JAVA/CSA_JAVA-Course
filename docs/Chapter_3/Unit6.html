@@ -515,6 +515,45 @@ write a program that will use a while loop to traverse a list in reverse order.<
 <li><p>Describe the initial conditions that must be met for a program segment to work as intended or described.</p></li>
 </ul>
 </section>
+<section id="unit-6-project">
+<h2>Unit 6 Project<a class="headerlink" href="#unit-6-project" title="Permalink to this heading">#</a></h2>
+<p><strong>Goals</strong></p>
+<ul class="simple">
+<li><p>Organize and encapsulate a set of required features.</p></li>
+<li><p>Write program code to satisfy method specifications using expressions, conditional statements, and iterative statements.</p></li>
+<li><p>Write program code to create, traverse, and manipulate elements in 1D array.</p></li>
+<li><p>Create test cases and provide evidence of validity testing.</p></li>
+<li><p>Apply the development process to create a project.</p></li>
+</ul>
+<p>The <strong>Memory Game</strong> shows a random sequence of “memory strings” in a variety of buttons.
+After wathcing the memory strings appear in the buttons one at a time, the
+player recreates the sequence from memory.</p>
+<ul class="simple">
+<li><p>Create the “memory strings” - an array of single character strings to show in the buttons, one element at a time. This is the sequence the player will have to remember.</p></li>
+<li><p>Create the game and gameboard. Configure a randomized board with 3 buttons. (Later, you can change options to configure more or less buttons and turn randomization on or off.)</p></li>
+<li><p>Play the game until user wants to quit.</p>
+<ul>
+<li><p>Create a new array that will contain the randomly ordered memory strings.</p></li>
+<li><p>Create a list of randomly ordered integers with no repeats, the length of memory strings.</p>
+<ul>
+<li><p>Use it to create a random sequence of the memory strings.  –OR–</p></li>
+<li><p>Overload the next method in RandomPermutation to create a random sequence of the memory strings, passed as a parameter.</p></li>
+</ul>
+</li>
+<li><p>Play one sequence, delaying half a second for the strings to show in the buttons. Save the player’s guess. (Later, you can speed up or slow down the game.)</p></li>
+<li><p>Determine if player’s guess matches all elements of the random sequence.</p></li>
+<li><p>Cleanup the guess - remove commas and spaces. Refer to a new String method replace to make this easy.</p></li>
+<li><p>iterate to determine if guess matches sequence:</p>
+<ul>
+<li><p>If match, increase score, and signal a match, otherwise, try again.</p></li>
+</ul>
+</li>
+<li><p>Ask if user wants to play another round of the game and track the number of games played.</p></li>
+<li><p>When done playing, show score and end the game.</p></li>
+</ul>
+</li>
+</ul>
+</section>
 </section>
 
         </article>
@@ -577,6 +616,7 @@ write a program that will use a while loop to traverse a list in reverse order.<
 <li><a class="reference internal" href="#traversing-arrays">6.2 Traversing Arrays</a></li>
 <li><a class="reference internal" href="#enhanced-for-loop-for-arrays">6.3 Enhanced for Loop for Arrays</a></li>
 <li><a class="reference internal" href="#developing-algorithms-using-arrays">6.4 Developing Algorithms Using Arrays</a></li>
+<li><a class="reference internal" href="#unit-6-project">Unit 6 Project</a></li>
 </ul>
 </li>
 </ul>
