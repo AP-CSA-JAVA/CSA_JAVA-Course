@@ -20,7 +20,7 @@ Arrays are a group of variables referred to by a common name. Below are some imp
 | array indices -> | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
 
 
-The array length is 11 indices.
+The array length has 11 indices.
 The first index is 0.
 The last index is 10.
 
@@ -73,9 +73,14 @@ public class Main {
 }
 ```
 
+<details>
+<summary>Click here</summary>
+<br>
 **Sample Output**
 
 `3`
+</details>
+
 
 What will be the output of the following program?
 
