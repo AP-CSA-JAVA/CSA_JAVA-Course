@@ -258,6 +258,7 @@ Write a program that will use a while loop to traverse a list.
 <details>
 <summary>Click Here</summary>
 <p>
+
 ```java
 
     int[] goals = {1, 2, 0, 3, 2, 4, 2, 1, 0, 2, 0, 1, 3, 2};
@@ -279,6 +280,7 @@ Write a program that will use a while loop to traverse a list in reverse order.
 <details>
 <summary>Click Here</summary>
 <p>
+
 ```java
     int i = goals.length - 1;
     while (i >= 0)
