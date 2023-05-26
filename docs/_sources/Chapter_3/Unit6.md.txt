@@ -253,7 +253,8 @@ Traversing an array in reverse order:
 
 ---------------------------------------------------------------------------------------------------------------
 
-Write a program that will use a while loop to traverse a list. 
+Using `int[] goals = {1, 2, 0, 3, 2, 4, 2, 1, 0, 2, 0, 1, 3, 2};`, 
+write a program that will use a while loop to traverse a list. 
 <details>
 <summary>Click Here</summary>
 <p>
@@ -275,7 +276,8 @@ Write a program that will use a while loop to traverse a list.
 
 ---------------------------------------------------------------------------------------------------------------
 
-Write a program that will use a while loop to traverse a list in reverse order. 
+Using `int[] goals = {1, 2, 0, 3, 2, 4, 2, 1, 0, 2, 0, 1, 3, 2};`, 
+write a program that will use a while loop to traverse a list in reverse order. 
 <details>
 <summary>Click Here</summary>
 <p>
