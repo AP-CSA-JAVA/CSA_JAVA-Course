@@ -189,12 +189,11 @@ To access an element in the fruit array, we can do so by identifying the locatio
 ```java
 String myFruit = fruit[1]; // returns Banana
 ```
-If we want to access more items within the fruit array, we can use a `for` loop to *traverse* the array.
+If we want to access more items within the fruit array, we can use a `for` loop to *traverse* the array.  This program prints the *i*<sup>th</sup> element.
 
 ```java
 for(int i = 0; i < fruit.length; i++)
 {
-	//This prints the *i*<sup>th</sup> element.
 	System.out.println(fruit[i]);
 }
 ```
