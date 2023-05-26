@@ -244,6 +244,7 @@ Traversing an array in reverse order:
     for (int i = goals.length; i > 0; i--)
     {
       System.out.print(goals[i-1] + " ");
+    }
 ```
 
 **Sample Output**
