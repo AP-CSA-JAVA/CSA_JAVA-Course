@@ -27,11 +27,48 @@ The last index is 10.
 
 An array can contain primitives (int, double, boolean) and object (String) references of a class depending on the definition of the array. In the case of primitive data types, the actual values are stored in contiguous memory locations. In the case of class objects, the actual objects are stored in a heap segment.
 
-array.length: length is a final variable applicable for arrays. With the help of the length variable, we can obtain the size of the array. 
+
+## 6.2 Traversing Arrays
+
+**Goals**
+- Traverse the elements in a 1D array.
+- Identify errors in a program.
+- Write program code to create, traverse, and manipulate elements in a 1D array.
+
+In this section we will navigate items within an array.  Take a look at the array below:
+
+```java
+String [] fruit = {"Apple", "Banana", "Grapes", "Mango", "Strawberry"};
+```
+To access an element in the fruit array, we can do so by identifying the location of the element within the array.
+
+```java
+String myFruit = fruit[1]; // returns Banana
+```
+If we want to access more items within the fruit array, we can use a `for` loop to *traverse* the array.  This program prints the *i*<sup>th</sup> element.
+
+```java
+for(int i = 0; i < fruit.length; i++)
+{
+	System.out.println(fruit[i]);
+}
+```
+This `for` loop will *traverse* through every value in the fruit array, and prints out the value at every index.
+
+The keyword length returns the current size of an array. An array with five values is considered an array of length 5. The length of an array corresponds to the number of elements in an array, *not the last index value in an array*. Remember arrays start at index 0 - an array with five elements will start at 0 and end at index 4.
+This, the last index in an array will always be array.length - 1. The `for` loop is set to `i < fruit.length`, so the greatest value of `i` will always be *one less than* the length of the array.
+**Notice** that the `for` loop starts at the first element (0) and ends at the last element (array.length - 1). Each time through the loop, the value of *i* accesses the element at index *i*. This simple `for` loop is able to loop through the array, regardless of how many items there are in the array.
+
+<details>
+<summary>.length variable vs. length() method</summary>
+<p>
+**Note**
+array.length: length is a final variable applicable for arrays. With the help of the `length` variable, we can obtain the size of the array. 
 `string.length()` : `length()` method is a final method which is applicable for string objects. The `length()` method returns the number of characters present in the string. 
 `length` vs `length()`
 
 The `length` variable is applicable to an array but not for string objects whereas the `length()` method is applicable for string objects but not for arrays.  To directly access a field member of an array we can use `.length`; whereas `.length()` invokes a method to access a field member.
+
 
 ```java
 // Java program to illustrate the concept of length and length()
@@ -170,34 +207,8 @@ public class Program {
 
 `5 10 15 20`
 
-
-
-## 6.2 Traversing Arrays
-
-**Goals**
-- Traverse the elements in a 1D array.
-- Identify errors in a program.
-- Write program code to create, traverse, and manipulate elements in a 1D array.
-
-In this section we will navigate items within an array.  Take a look at the array below:
-
-```java
-String [] fruit = {"Apple", "Banana", "Grapes", "Mango", "Strawberry"};
-```
-To access an element in the fruit array, we can do so by identifying the location of the element within the array.
-
-```java
-String myFruit = fruit[1]; // returns Banana
-```
-If we want to access more items within the fruit array, we can use a `for` loop to *traverse* the array.  This program prints the *i*<sup>th</sup> element.
-
-```java
-for(int i = 0; i < fruit.length; i++)
-{
-	System.out.println(fruit[i]);
-}
-```
-
+</p>
+</details>
 
 ## 6.3 Enhanced for Loop for Arrays
 
