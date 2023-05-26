@@ -314,9 +314,8 @@ This, the last index in an array will always be array.length - 1. The <code clas
 <summary>.length variable vs. length() method</summary>
 <p>
 <p><strong>Note</strong></p>
-<p>array.length: length is a final variable applicable for arrays. With the help of the <code class="docutils literal notranslate"><span class="pre">length</span></code> variable, we can obtain the size of the array.
-<code class="docutils literal notranslate"><span class="pre">string.length()</span></code> : <code class="docutils literal notranslate"><span class="pre">length()</span></code> method is a final method which is applicable for string objects. The <code class="docutils literal notranslate"><span class="pre">length()</span></code> method returns the number of characters present in the string.
-<code class="docutils literal notranslate"><span class="pre">length</span></code> vs <code class="docutils literal notranslate"><span class="pre">length()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">array.length</span></code>: length is a final variable applicable for arrays. With the help of the <code class="docutils literal notranslate"><span class="pre">length</span></code> variable, we can obtain the size of the array.
+<code class="docutils literal notranslate"><span class="pre">string.length()</span></code> : <code class="docutils literal notranslate"><span class="pre">length()</span></code> method is a final method which is applicable for string objects. The <code class="docutils literal notranslate"><span class="pre">length()</span></code> method returns the number of characters present in the string.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">length</span></code> variable is applicable to an array but not for string objects whereas the <code class="docutils literal notranslate"><span class="pre">length()</span></code> method is applicable for string objects but not for arrays.  To directly access a field member of an array we can use <code class="docutils literal notranslate"><span class="pre">.length</span></code>; whereas <code class="docutils literal notranslate"><span class="pre">.length()</span></code> invokes a method to access a field member.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Java program to illustrate the concept of length and length()</span>
 <span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
@@ -425,6 +424,15 @@ There are `3` items in the str.
 <p><code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">10</span> <span class="pre">15</span> <span class="pre">20</span></code></p>
 </p>
 </details>
+<p>We can also use a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop to write this <em>traversal</em>.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="k">while</span><span class="p">(</span><span class="n">index</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">fruit</span><span class="p">.</span><span class="na">length</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">fruit</span><span class="o">[</span><span class="n">index</span><span class="o">]</span><span class="p">);</span>
+<span class="w">    </span><span class="n">index</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </section>
 <section id="enhanced-for-loop-for-arrays">
 <h2>6.3 Enhanced for Loop for Arrays<a class="headerlink" href="#enhanced-for-loop-for-arrays" title="Permalink to this heading">#</a></h2>
