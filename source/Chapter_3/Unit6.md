@@ -223,7 +223,67 @@ while(index < fruit.length)
     index++;
 }
 ```
+Another example of traversing an array:
 
+```java
+    int[] goals = {1, 2, 0, 3, 2, 4, 2, 1, 0, 2, 0, 1, 3, 2};
+    for (int i = 0; i < goals.length; i++)
+    {
+      System.out.print(goals[i] + " ");
+    }
+```
+**Sample Output**
+`1 2 0 3 2 4 2 1 0 2 0 1 3 2`
+
+
+Traversing an array in reverse order:
+
+```java
+    int[] goals = {1, 2, 0, 3, 2, 4, 2, 1, 0, 2, 0, 1, 3, 2};
+                   
+    for (int i = goals.length; i > 0; i--)
+    {
+      System.out.print(goals[i-1] + " ");
+```
+**Sample Output**
+2 3 1 0 2 0 1 2 4 2 3 0 2 1
+
+---------------------------------------------------------------------------------------------------------------
+
+Write a program that will use a while loop to traverse a list. 
+<details>
+<summary>Click Here</summary>
+<p>
+```java
+    int[] goals = {1, 2, 0, 3, 2, 4, 2, 1, 0, 2, 0, 1, 3, 2};
+
+    int i = 0;
+    while (i < goals.length)
+    {
+      System.out.print(goals[i] + " ");
+      i++;
+    }
+```
+</p>
+</details>
+
+---------------------------------------------------------------------------------------------------------------
+
+Write a program that will use a while loop to traverse a list in reverse order. 
+<details>
+<summary>Click Here</summary>
+<p>
+```java
+    int i = goals.length - 1;
+    while (i >= 0)
+    {
+      int goal = goals[i];
+	System.out.print((goal + " ");
+      i--;
+    }
+```
+</p>
+</details>
 
 
 ## 6.3 Enhanced for Loop for Arrays
