@@ -447,9 +447,40 @@ You will write 3 programs that will do the following:
   - Write a program that will remove every other letter within a string.
   - Write a second program that will remove vowels from a String.
   - Write a third program that will replace every instance of d,b,p and q with a random d,b, p or q.
+
+
+### Activity 4.3.2
+
+1. wordCount and vowelCount
+Write an algorithm that will ask the user for a phrase and return the number of words and vowels. HINT: the number of words is the number of spaces + 1.
+
+Sample Output:
+```java
+Enter a phrase:
+This phrase has eight words and twelve vowels.
+Words: 8
+Vowels: 12
+```
+
+
+2. Hexidecimal
+The hexadecimal (hex) number system uses 16 symbols, 0-9 and A-F (or a-f). Write a program to verify a hex string. The program shall prompt user for a hex string; and decide if the input string is a valid hex string.
+
+Sample Output:
 	
-Submit your replit file to Canvas.
+```java
+Enter a hex string: 
+
+ 123aBc
+"123aBc" is a hex string
+
+Enter a hex string: 
+
+ 123aBcx
+"123aBcx" is NOT a hex string
+```
 	
+
 
 ## 4.4 Nested Iteration
 	
