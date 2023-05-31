@@ -64,7 +64,7 @@ do {
 }
 while (i < 10);   // use of a do-while loop to essentially do the same as the loops above.
 ```
-Using .equals within a while loop.
+Using `.equals` within a `while` loop.
 ```java
 import java.util.Scanner;
 
