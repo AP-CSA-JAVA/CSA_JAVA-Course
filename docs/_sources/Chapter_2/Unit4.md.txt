@@ -295,6 +295,43 @@ Enter a number (type 'done' when complete):
 You had 4 odd numbers.
 ```
 	
+### Activity 4.2.2
+
+Factorial
+Implement a program which calculates the factorial of a number given by the user. The factorial of a number is found by multiplying itself by all positive integers less than it (excluding 0). 
+
+```java
+For example, 4 factorial, written as 4!, can be computed as follows:
+4! == 4 * 3 * 2 * 1 == 24 Additionally, it has been specified that the factorial of 0 is 1, so 0! = 1.
+```
+	
+Multiplication Table
+Implement a program which will display a multiplication table. Ask the user for a number and how many mutiples to display. 
+
+Example Output:
+
+```java
+Enter an integer:
+ 4 
+
+Enter the number of mulltiples:
+ 10
+
+4 * 1 = 4
+4 * 2 = 8
+4 * 3 = 12
+4 * 4 = 16
+4 * 5 = 20
+4 * 6 = 24
+4 * 7 = 28
+4 * 8 = 32
+4 * 9 = 36
+4 * 10 = 40
+	
+```
+
+### Activity 4.2.3
+	
 
 ## 4.3 Developing Algorithms Using Strings
 
