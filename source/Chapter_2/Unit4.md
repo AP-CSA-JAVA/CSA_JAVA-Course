@@ -120,7 +120,7 @@ public class Main{
 
 
 	
-### Assignment 4.1.1 - Grades
+### Assignment 4.1.1
 
 - Must use a `while` loop
   - You may use Arrays for this assignment
@@ -136,7 +136,7 @@ public class Main{
 - submit your program as a replit
 
 	
-### Assignment 4.1.2 - Arithmetic
+### Assignment 4.1.2
 
 ```java
 1. Is a Factor?
