@@ -250,6 +250,51 @@ The scope of the intialization variable, i, is within the `for` loop; any attemp
 	
 **Expected Error**: When you remove the last space in str, the value Blue will fail to print. This is an example of an `off-by-one error`. Without the space at the end, the last call to indexOf cannot find the last word in str.  `Off-by-one errors` occur when the iteration loops one time too many or one time too few.
 	
+### Activity 4.2.1
+Task 1: Using a `for` loop, write a program where you ask the user for a number and print out the number of perfect squares up until that number.
+
+```java
+Enter the number of squares:
+ 10
+1 squared = 1
+2 squared = 4
+3 squared = 9
+4 squared = 16
+5 squared = 25
+6 squared = 36
+7 squared = 49
+8 squared = 64
+9 squared = 81
+10 squared = 100
+```
+
+Task 2: Repeatly ask the for a `number`. When the user is *done*, report back the number of odd numbers. **Decide whether to use a `while` loop or a `for` loop**
+
+```java
+Enter a number (type 'done' when complete): 
+ 4 
+
+Enter a number (type 'done' when complete): 
+ 9 
+
+Enter a number (type 'done' when complete): 
+ 12 
+
+Enter a number (type 'done' when complete): 
+ 11 
+
+Enter a number (type 'done' when complete): 
+ 15 
+
+Enter a number (type 'done' when complete): 
+ 3 
+
+Enter a number (type 'done' when complete): 
+ done 
+
+Youhad 4 odd numbers.
+```
+	
 
 ## 4.3 Developing Algorithms Using Strings
 
