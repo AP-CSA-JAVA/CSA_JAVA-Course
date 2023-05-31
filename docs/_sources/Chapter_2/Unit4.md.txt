@@ -632,6 +632,6 @@ Another part of code tracing is debugging. Debugging are syntax or logic errors 
 
 **Hand-Tracing Tool**
 	
-https://pythontutor.com/render.html#mode=display
+[https://pythontutor.com/render.html#mode=display](https://pythontutor.com/render.html#mode=display)
 	
-https://cscircles.cemc.uwaterloo.ca/java_visualize/
+[https://cscircles.cemc.uwaterloo.ca/java_visualize/](https://cscircles.cemc.uwaterloo.ca/java_visualize/)
