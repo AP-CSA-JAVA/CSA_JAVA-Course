@@ -533,7 +533,8 @@ public static void main(String[] args) {
 *
 ```
 
-Explanation of Code
+**Explanation of Code**
+	
 This is a nested iteration with two loops. In the first loop, we go from 0 to n in order to have n rows in the output. In the second loop, we start from the row number and print n-row number of stars for the row.
 Once we exit the second loop, we print an empty line, i is incremented by one, and we enter the second loop to print the stars for the next line.
 
@@ -560,7 +561,8 @@ public static void main(String [] args) {
 8
 ```
 
-Explanation of Code
+**Explanation of Code**
+	
 This is essentially the same code as earlier, except now we print out the sum of the row and column indices. This will allow us to demonstrate the use of break and continue in the next two examples.
 	
 **Example: Break in Nested Loops**
@@ -587,7 +589,8 @@ public static void main(String [] args) {
 456
 8
 ```
-Explanation of Code
+**Explanation of Code**
+	
 Notice that this time, because we told the program to break when it reaches the fourth row (when i = 3, since Java uses zero-based indexing) and tries to print the first number on that row (since j is always set to the row index when we start a new row), it completely breaks out of the second loop so nothing is printed in the fourth row.
 Once the program breaks out of the second loop, the first loop iterates by one and the program prints the fifth row the same way it did in the example above.
 	
@@ -616,7 +619,8 @@ public static void main(String [] args) {
 8
 ```
 	
-Explanation of Code
+**Explanation of Code**
+	
 This time, instead of using a break, we used a continue. This means that we didn't completely break out of the second loop. We just skipped the iteration that happens when j is 3. (It doesn't print 6.) The second loop continues, iterating j to 4 and printing the 7. Then j is incremented again to be 5, but since that is not less than n (which is also 5), we exit the second loop normally.
 Once we exit the second loop, we move on to the fifth row, which is printed normally.
 Pay careful attention to the Break in Nested Loops example and the Continue in Nested Loops example, since they illustrate the important difference between break and continue. Break completely exits the loop it is called in; continue just skips the current iteration of the loop it is called in.
