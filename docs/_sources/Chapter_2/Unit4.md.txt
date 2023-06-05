@@ -513,7 +513,8 @@ In the while loop, we assume that the number is prime, but once the number is fo
 
 **Example: Printing a Triangle**
 ```java
-public static void printPyramid(int n) {
+public static void main(String[] args) {
+  int n = 5;
   for (int i = 0; i < n; i++) {
       for (int j = i; j < n; j++) {
          System.out.print("*");
@@ -539,7 +540,8 @@ Once we exit the second loop, we print an empty line, i is incremented by one, a
 **Example: Printing a Number Triangle**
 
 ```java
-public static void printPyramid(int n) {
+public static void main(String [] args) {
+  int n = 5;
   for (int i = 0; i < n; i++) {
       for (int j = i; j < n; j++) {
          System.out.print(i+j);
@@ -564,7 +566,8 @@ This is essentially the same code as earlier, except now we print out the sum of
 **Example: Break in Nested Loops**
 
 ```java
-public static void printPyramid(int n) {
+public static void main(String [] args) {
+  int n = 5;
   for (int i = 0; i < n; i++) {
       for (int j = i; j < n; j++) {
           if (i == 3 && j == 3) {
@@ -591,7 +594,8 @@ Once the program breaks out of the second loop, the first loop iterates by one a
 **Example: Continue in Nested Loops**
 	
 ```java
-public static void printPyramid(int n) {
+public static void main(String [] args) {
+  int n = 5;
   for (int i = 0; i < n; i++) {
       for (int j = i; j < n; j++) {
           if (i == 3 && j == 3) {
