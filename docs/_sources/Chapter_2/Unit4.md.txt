@@ -331,7 +331,7 @@ Enter the number of mulltiples:
 ```
 
 ### Activity 4.2.3
-Given the array below, loop through the array and print out all odd numbers on a separate line.  Order is not important!  **Do not print** any numbers that come after 894 in the sequence.
+Given the array below, loop through the array and print out all odd numbers on a separate line.  Order is not important!  **Do not print** any numbers that come after 894 in the sequence.  **Hint:** One wayyou will need to use .length
 
 ```java
 public class Main {
@@ -511,12 +511,12 @@ If there are two nested for loops without break statements, and the outer loop r
 
 In the while loop, we assume that the number is prime, but once the number is found to be not prime in the for loop, the for loop breaks and the boolean notPrime is set to true. If the number is actually not prime, notPrime remains false and the while loop exits.
 
-**Example: Printing a Triangle**
+**Example: Printing a Triangle using asterisks**
 ```java
 public static void main(String[] args) {
   int n = 5;
-  for (int i = 0; i < n; i++) {
-      for (int j = i; j < n; j++) {
+  for (int outer = 0; outer < n; outer++) {
+      for (int inner = outer; inner < n; inner++) {
          System.out.print("*");
       }
  
@@ -568,12 +568,12 @@ This is essentially the same code as earlier, except now we print out the sum of
 ```java
 public static void main(String [] args) {
   int n = 5;
-  for (int i = 0; i < n; i++) {
-      for (int j = i; j < n; j++) {
-          if (i == 3 && j == 3) {
+  for (int outer = 0; outer < n; outer++) {
+      for (int inner = outer; inner < n; inner++) {
+          if (outer == 3 && inner == 3) {
              break;
           }
-         System.out.print(i+j);
+         System.out.print(outer+inner);
       }
  
       System.out.println();
@@ -596,12 +596,12 @@ Once the program breaks out of the second loop, the first loop iterates by one a
 ```java
 public static void main(String [] args) {
   int n = 5;
-  for (int i = 0; i < n; i++) {
-      for (int j = i; j < n; j++) {
-          if (i == 3 && j == 3) {
+  for (int outer = 0; outer < n; outer++) {
+      for (int inner = outer; inner < n; inner++) {
+          if (outer == 3 && inner == 3) {
              continue;
           }
-         System.out.print(i+j);
+         System.out.print(outer+inner);
       }
  
       System.out.println();
