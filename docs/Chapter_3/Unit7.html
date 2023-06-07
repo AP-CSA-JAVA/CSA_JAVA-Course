@@ -294,6 +294,62 @@
 </section>
 <section id="arraylist-methods">
 <h2>7.2 ArrayList Methods<a class="headerlink" href="#arraylist-methods" title="Permalink to this heading">#</a></h2>
+<p>The definition of an ArrayList method refers to the signature, parameters, and behavior of a specific method provided by the ArrayList class in Java. It describes how the method can be used, what arguments it accepts (if any), and what it returns (if anything).</p>
+<p>The general format of a method definition in Java is as follows:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">accessModifier</span><span class="w"> </span><span class="n">returnType</span><span class="w"> </span><span class="nf">methodName</span><span class="p">(</span><span class="n">parameterList</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Method body</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Here’s an example of an ArrayList method definition:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">contains</span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">element</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Method body</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Let’s break down the components of this ArrayList method definition:</p>
+<ul class="simple">
+<li><p><strong>accessModifier</strong>: Specifies the visibility of the method. In this case, <code class="docutils literal notranslate"><span class="pre">public</span></code> indicates that the method can be accessed from any class.</p></li>
+<li><p><strong>returnType</strong>: Specifies the type of value the method returns, if any. In this case, boolean indicates that the method returns a <code class="docutils literal notranslate"><span class="pre">boolean</span></code> value (<code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>).</p></li>
+<li><p><strong>methodName</strong>: Specifies the name of the method. In this case, the method is named <code class="docutils literal notranslate"><span class="pre">contains</span></code>.</p></li>
+<li><p><strong>parameterList</strong>: Specifies the parameters the method accepts, if any. In this case, the method accepts a single parameter of type <em>Object</em> named <code class="docutils literal notranslate"><span class="pre">element</span></code>.</p></li>
+<li><p><strong>Method body</strong>: Contains the actual code that is executed when the method is called. It defines the behavior of the method.</p></li>
+</ul>
+<p>For example, the <code class="docutils literal notranslate"><span class="pre">contains</span></code> method in ArrayList returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the specified element is found in the ArrayList, and <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise.</p>
+<p>Note that different methods in the ArrayList class have different definitions, with variations in the return type, method name, parameter types, and behaviors based on the specific functionality they provide.
+Here are some commonly used methods of the ArrayList class in Java:</p>
+<ol class="arabic simple">
+<li><p>add(element): Adds the specified element to the end of the ArrayList.
+java
+ArrayList<String> fruits = new ArrayList&lt;&gt;();
+fruits.add(“Apple”);
+fruits.add(“Banana”);</p></li>
+<li><p>get(index): Retrieves the element at the specified index in the ArrayList.
+java
+String fruit = fruits.get(0);  // Retrieves the element at index 0 (Apple)</p></li>
+<li><p>set(index, element): Replaces the element at the specified index with the specified element.
+java
+fruits.set(1, “Orange”);  // Replaces the element at index 1 with “Orange”</p></li>
+<li><p>remove(index): Removes the element at the specified index from the ArrayList.
+java
+fruits.remove(0);  // Removes the element at index 0 (Apple)</p></li>
+<li><p>size(): Returns the number of elements in the ArrayList.
+java
+int size = fruits.size();  // Returns the number of elements in the ArrayList</p></li>
+<li><p>contains(element): Checks whether the ArrayList contains the specified element.
+java
+boolean containsOrange = fruits.contains(“Orange”);  // Checks if “Orange” is present in the ArrayList</p></li>
+<li><p>indexOf(element): Returns the index of the first occurrence of the specified element in the ArrayList.
+java
+int indexOfBanana = fruits.indexOf(“Banana”);  // Returns the index of “Banana” in the ArrayList</p></li>
+<li><p>isEmpty(): Checks whether the ArrayList is empty.
+java
+boolean isEmpty = fruits.isEmpty();  // Checks if the ArrayList is empty</p></li>
+<li><p>clear(): Removes all elements from the ArrayList.
+java
+fruits.clear();  // Removes all elements from the ArrayList
+These are just a few examples of the methods available in the ArrayList class. The class provides many more methods for various operations like sorting, sublist extraction, iteration, and more. You can refer to the official Java documentation for a complete list of ArrayList methods and their descriptions.</p></li>
+</ol>
 </section>
 <section id="traversing-arraylists">
 <h2>7.3 Traversing ArrayLists<a class="headerlink" href="#traversing-arraylists" title="Permalink to this heading">#</a></h2>
