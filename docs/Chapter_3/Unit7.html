@@ -316,40 +316,67 @@
 <li><p><strong>Method body</strong>: Contains the actual code that is executed when the method is called. It defines the behavior of the method.</p></li>
 </ul>
 <p>For example, the <code class="docutils literal notranslate"><span class="pre">contains</span></code> method in ArrayList returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the specified element is found in the ArrayList, and <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise.</p>
-<p>Note that different methods in the ArrayList class have different definitions, with variations in the return type, method name, parameter types, and behaviors based on the specific functionality they provide.
-Here are some commonly used methods of the ArrayList class in Java:</p>
+<p>Note that different methods in the ArrayList class have different definitions, with variations in the return type, method name, parameter types, and behaviors based on the specific functionality they provide.</p>
+<p>Here are some commonly used methods of the ArrayList class in Java:</p>
 <ol class="arabic simple">
-<li><p>add(element): Adds the specified element to the end of the ArrayList.
-java
-ArrayList<String> fruits = new ArrayList&lt;&gt;();
-fruits.add(“Apple”);
-fruits.add(“Banana”);</p></li>
-<li><p>get(index): Retrieves the element at the specified index in the ArrayList.
-java
-String fruit = fruits.get(0);  // Retrieves the element at index 0 (Apple)</p></li>
-<li><p>set(index, element): Replaces the element at the specified index with the specified element.
-java
-fruits.set(1, “Orange”);  // Replaces the element at index 1 with “Orange”</p></li>
-<li><p>remove(index): Removes the element at the specified index from the ArrayList.
-java
-fruits.remove(0);  // Removes the element at index 0 (Apple)</p></li>
-<li><p>size(): Returns the number of elements in the ArrayList.
-java
-int size = fruits.size();  // Returns the number of elements in the ArrayList</p></li>
-<li><p>contains(element): Checks whether the ArrayList contains the specified element.
-java
-boolean containsOrange = fruits.contains(“Orange”);  // Checks if “Orange” is present in the ArrayList</p></li>
-<li><p>indexOf(element): Returns the index of the first occurrence of the specified element in the ArrayList.
-java
-int indexOfBanana = fruits.indexOf(“Banana”);  // Returns the index of “Banana” in the ArrayList</p></li>
-<li><p>isEmpty(): Checks whether the ArrayList is empty.
-java
-boolean isEmpty = fruits.isEmpty();  // Checks if the ArrayList is empty</p></li>
-<li><p>clear(): Removes all elements from the ArrayList.
-java
-fruits.clear();  // Removes all elements from the ArrayList
-These are just a few examples of the methods available in the ArrayList class. The class provides many more methods for various operations like sorting, sublist extraction, iteration, and more. You can refer to the official Java documentation for a complete list of ArrayList methods and their descriptions.</p></li>
+<li><p><strong>add(element)</strong>: Adds the specified element to the end of the ArrayList.</p></li>
+<li></li>
 </ol>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="n">fruits</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Apple&quot;</span><span class="p">);</span>
+<span class="n">fruits</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Banana&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p><strong>get(index)</strong>: Retrieves the element at the specified index in the ArrayList.</p></li>
+<li></li>
+</ol>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">fruit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fruits</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w">  </span><span class="c1">// Retrieves the element at index 0 (Apple)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p><strong>set(index, element)</strong>: Replaces the element at the specified index with the specified element.</p></li>
+</ol>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">fruits</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Orange&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// Replaces the element at index 1 with &quot;Orange&quot;</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p><strong>remove(index)</strong>: Removes the element at the specified index from the ArrayList.</p></li>
+</ol>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">fruits</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w">  </span><span class="c1">// Removes the element at index 0 (Apple)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p><strong>size()</strong>: Returns the number of elements in the ArrayList.</p></li>
+</ol>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fruits</span><span class="p">.</span><span class="na">size</span><span class="p">();</span><span class="w">  </span><span class="c1">// Returns the number of elements in the ArrayList</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p><strong>contains(element)</strong>: Checks whether the ArrayList contains the specified element.</p></li>
+</ol>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">boolean</span><span class="w"> </span><span class="n">containsOrange</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fruits</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="s">&quot;Orange&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// Checks if &quot;Orange&quot; is present in the ArrayList</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p><strong>indexOf(element)</strong>: Returns the index of the first occurrence of the specified element in the ArrayList.</p></li>
+</ol>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">indexOfBanana</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fruits</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="s">&quot;Banana&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// Returns the index of &quot;Banana&quot; in the ArrayList</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="8">
+<li><p><strong>isEmpty()</strong>: Checks whether the ArrayList is empty.</p></li>
+</ol>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">boolean</span><span class="w"> </span><span class="n">isEmpty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fruits</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">();</span><span class="w">  </span><span class="c1">// Checks if the ArrayList is empty</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="9">
+<li><p><strong>clear()</strong>: Removes all elements from the ArrayList.</p></li>
+</ol>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">fruits</span><span class="p">.</span><span class="na">clear</span><span class="p">();</span><span class="w">  </span><span class="c1">// Removes all elements from the ArrayList</span>
+</pre></div>
+</div>
+<p>These are just a few examples of the methods available in the ArrayList class. The class provides many more methods for various operations like sorting, sublist extraction, iteration, and more. You can refer to the official Java documentation for a complete list of ArrayList methods and their descriptions.</p>
 </section>
 <section id="traversing-arraylists">
 <h2>7.3 Traversing ArrayLists<a class="headerlink" href="#traversing-arraylists" title="Permalink to this heading">#</a></h2>

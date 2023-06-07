@@ -119,36 +119,64 @@ Let's break down the components of this ArrayList method definition:
 For example, the `contains` method in ArrayList returns `true` if the specified element is found in the ArrayList, and `false` otherwise.
 
 Note that different methods in the ArrayList class have different definitions, with variations in the return type, method name, parameter types, and behaviors based on the specific functionality they provide.
+
 Here are some commonly used methods of the ArrayList class in Java:
-1.	add(element): Adds the specified element to the end of the ArrayList.
-java
+
+1.	**add(element)**: Adds the specified element to the end of the ArrayList.
+2.	
+```java
 ArrayList<String> fruits = new ArrayList<>();
 fruits.add("Apple");
 fruits.add("Banana");
-2.	get(index): Retrieves the element at the specified index in the ArrayList.
-java
+```
+
+2.	**get(index)**: Retrieves the element at the specified index in the ArrayList.
+3.	
+```java
 String fruit = fruits.get(0);  // Retrieves the element at index 0 (Apple)
-3.	set(index, element): Replaces the element at the specified index with the specified element.
-java
+```
+
+3.	**set(index, element)**: Replaces the element at the specified index with the specified element.
+
+```java
 fruits.set(1, "Orange");  // Replaces the element at index 1 with "Orange"
-4.	remove(index): Removes the element at the specified index from the ArrayList.
-java
+```
+
+4.	**remove(index)**: Removes the element at the specified index from the ArrayList.
+
+```java
 fruits.remove(0);  // Removes the element at index 0 (Apple)
-5.	size(): Returns the number of elements in the ArrayList.
-java
+```
+
+5.	**size()**: Returns the number of elements in the ArrayList.
+
+```java
 int size = fruits.size();  // Returns the number of elements in the ArrayList
-6.	contains(element): Checks whether the ArrayList contains the specified element.
-java
+```
+6.	**contains(element)**: Checks whether the ArrayList contains the specified element.
+
+```java
 boolean containsOrange = fruits.contains("Orange");  // Checks if "Orange" is present in the ArrayList
-7.	indexOf(element): Returns the index of the first occurrence of the specified element in the ArrayList.
-java
+```
+
+7.	**indexOf(element)**: Returns the index of the first occurrence of the specified element in the ArrayList.
+
+```java
 int indexOfBanana = fruits.indexOf("Banana");  // Returns the index of "Banana" in the ArrayList
-8.	isEmpty(): Checks whether the ArrayList is empty.
-java
+```
+
+8.	**isEmpty()**: Checks whether the ArrayList is empty.
+
+```java
 boolean isEmpty = fruits.isEmpty();  // Checks if the ArrayList is empty
-9.	clear(): Removes all elements from the ArrayList.
-java
+```
+
+9.	**clear()**: Removes all elements from the ArrayList.
+
+```java
 fruits.clear();  // Removes all elements from the ArrayList
+```
+
 These are just a few examples of the methods available in the ArrayList class. The class provides many more methods for various operations like sorting, sublist extraction, iteration, and more. You can refer to the official Java documentation for a complete list of ArrayList methods and their descriptions.
 
 
