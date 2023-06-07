@@ -235,6 +235,28 @@
 <span class="p">}</span>
 </pre></div>
 </div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">//Recursion Example</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">RecursionExample</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">factorial</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calculateFactorial</span><span class="p">(</span><span class="n">number</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Factorial of &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">factorial</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">calculateFactorial</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">calculateFactorial</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>In this example, the calculateFactorial method is a recursive function that calculates the factorial of a given number n. If n is equal to 0, it returns 1 (since the factorial of 0 is defined as 1). Otherwise, it calls itself with the argument n - 1 and multiplies the result by n.
+When you run this program, it will output the factorial of the number variable, which is set to 5 in this case. The output will be:</p>
+<p><code class="docutils literal notranslate"><span class="pre">Factorial</span> <span class="pre">of</span> <span class="pre">5</span> <span class="pre">=</span> <span class="pre">120</span></code></p>
+<p>This demonstrates how recursion can be used to solve problems by breaking them down into smaller, simpler subproblems.</p>
 </section>
 <section id="recursive-searching-and-sorting">
 <h2>10.2 Recursive Searching and Sorting<a class="headerlink" href="#recursive-searching-and-sorting" title="Permalink to this heading">#</a></h2>
