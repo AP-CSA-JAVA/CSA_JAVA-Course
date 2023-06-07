@@ -123,7 +123,7 @@ Note that different methods in the ArrayList class have different definitions, w
 Here are some commonly used methods of the ArrayList class in Java:
 
 1.	**add(element)**: Adds the specified element to the end of the ArrayList.
-2.	
+
 ```java
 ArrayList<String> fruits = new ArrayList<>();
 fruits.add("Apple");
@@ -131,7 +131,7 @@ fruits.add("Banana");
 ```
 
 2.	**get(index)**: Retrieves the element at the specified index in the ArrayList.
-3.	
+
 ```java
 String fruit = fruits.get(0);  // Retrieves the element at index 0 (Apple)
 ```
@@ -153,6 +153,7 @@ fruits.remove(0);  // Removes the element at index 0 (Apple)
 ```java
 int size = fruits.size();  // Returns the number of elements in the ArrayList
 ```
+
 6.	**contains(element)**: Checks whether the ArrayList contains the specified element.
 
 ```java
