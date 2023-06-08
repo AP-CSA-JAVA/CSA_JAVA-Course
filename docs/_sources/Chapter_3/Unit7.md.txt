@@ -566,7 +566,9 @@ Andrew Meyenn received master of science and master of education degrees from th
 
 Authored by
 
-Andrew Meyenn \n
-Wesley College \n
-Melbourne, Australia \n
+Andrew Meyenn
+
+Wesley College
+
+Melbourne, Australia
 
