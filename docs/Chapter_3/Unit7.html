@@ -329,49 +329,57 @@
 <ol class="arabic simple" start="2">
 <li><p><strong>get(index)</strong>: Retrieves the element at the specified index in the ArrayList.</p></li>
 </ol>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">fruit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fruits</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w">  </span><span class="c1">// Retrieves the element at index 0 (Apple)</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">fruit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fruits</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w">  </span>
+<span class="c1">// Retrieves the element at index 0 (Apple)</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="3">
 <li><p><strong>set(index, element)</strong>: Replaces the element at the specified index with the specified element.</p></li>
 </ol>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">fruits</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Orange&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// Replaces the element at index 1 with &quot;Orange&quot;</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">fruits</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Orange&quot;</span><span class="p">);</span><span class="w">  </span>
+<span class="c1">// Replaces the element at index 1 with &quot;Orange&quot;</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="4">
 <li><p><strong>remove(index)</strong>: Removes the element at the specified index from the ArrayList.</p></li>
 </ol>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">fruits</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w">  </span><span class="c1">// Removes the element at index 0 (Apple)</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">fruits</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w">  </span>
+<span class="c1">// Removes the element at index 0 (Apple)</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="5">
 <li><p><strong>size()</strong>: Returns the number of elements in the ArrayList.</p></li>
 </ol>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fruits</span><span class="p">.</span><span class="na">size</span><span class="p">();</span><span class="w">  </span><span class="c1">// Returns the number of elements in the ArrayList</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fruits</span><span class="p">.</span><span class="na">size</span><span class="p">();</span><span class="w">  </span>
+<span class="c1">// Returns the number of elements in the ArrayList</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="6">
 <li><p><strong>contains(element)</strong>: Checks whether the ArrayList contains the specified element.</p></li>
 </ol>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">boolean</span><span class="w"> </span><span class="n">containsOrange</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fruits</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="s">&quot;Orange&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// Checks if &quot;Orange&quot; is present in the ArrayList</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">boolean</span><span class="w"> </span><span class="n">containsOrange</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fruits</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="s">&quot;Orange&quot;</span><span class="p">);</span><span class="w">  </span>
+<span class="c1">// Checks if &quot;Orange&quot; is present in the ArrayList</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="7">
 <li><p><strong>indexOf(element)</strong>: Returns the index of the first occurrence of the specified element in the ArrayList.</p></li>
 </ol>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">indexOfBanana</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fruits</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="s">&quot;Banana&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// Returns the index of &quot;Banana&quot; in the ArrayList</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">indexOfBanana</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fruits</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="s">&quot;Banana&quot;</span><span class="p">);</span><span class="w">  </span>
+<span class="c1">// Returns the index of &quot;Banana&quot; in the ArrayList</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="8">
 <li><p><strong>isEmpty()</strong>: Checks whether the ArrayList is empty.</p></li>
 </ol>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">boolean</span><span class="w"> </span><span class="n">isEmpty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fruits</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">();</span><span class="w">  </span><span class="c1">// Checks if the ArrayList is empty</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">boolean</span><span class="w"> </span><span class="n">isEmpty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fruits</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">();</span><span class="w">  </span>
+<span class="c1">// Checks if the ArrayList is empty</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="9">
 <li><p><strong>clear()</strong>: Removes all elements from the ArrayList.</p></li>
 </ol>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">fruits</span><span class="p">.</span><span class="na">clear</span><span class="p">();</span><span class="w">  </span><span class="c1">// Removes all elements from the ArrayList</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">fruits</span><span class="p">.</span><span class="na">clear</span><span class="p">();</span><span class="w">  </span>
+<span class="c1">// Removes all elements from the ArrayList</span>
 </pre></div>
 </div>
 <p>These are just a few examples of the methods available in the ArrayList class. The class provides many more methods for various operations like sorting, sublist extraction, iteration, and more. You can refer to the official Java documentation for a complete list of ArrayList methods and their descriptions.</p>
@@ -656,16 +664,10 @@ Hoboken, New Jersey: Wiley, 2003.</p>
 </ul>
 <p>Generally, if someone reuses a work and benefits commercially, the owner of the copyright may well objec—provided, of course, that the infringement is detected.</p>
 <ul class="simple">
-<li><p>What ethical issues are related to copyright?</p></li>
-<li><ul>
+<li><p>What ethical issues are related to copyright?</p>
+<ul>
 <li><p>Ask students: Is it unethical to steal? (In fact, it is illegal.) Taking someone else’s work is in fact stealing, and you are likely to impact on their fair return; you might also impact on their reputation for creativity.</p></li>
-</ul>
-</li>
-<li><ul>
 <li><p>There are issues of trust involved.</p></li>
-</ul>
-</li>
-<li><ul>
 <li><p>There are issues related to “telling a lie.”</p></li>
 </ul>
 </li>
@@ -683,35 +685,14 @@ Hoboken, New Jersey: Wiley, 2003.</p>
 <p><strong>Ethics for ISPs</strong></p>
 <p>Have the students consider this situation:</p>
 <ul class="simple">
-<li><p>Students are gathered around a dance hall ready for a school dance. Inside the dance hall it is dark, and there are several senior students whose role is to make sure that no alcohol is consumed inside the hall. For students to enter, they need to show their bags to the school captain before entering the hall. The school captain at the door is acting in the role of the ISP.</p></li>
-<li><ul>
+<li><p>Students are gathered around a dance hall ready for a school dance. Inside the dance hall it is dark, and there are several senior students whose role is to make sure that no alcohol is consumed inside the hall. For students to enter, they need to show their bags to the school captain before entering the hall. The school captain at the door is acting in the role of the ISP.</p>
+<ul>
 <li><p>If the school captain did not inspect the bags, we would not be surprised if alcohol got into the hall. Parents would assume that the bags would be inspected.</p></li>
-</ul>
-</li>
-<li><ul>
 <li><p>The teacher and the school would find it very difficult to argue that they did not have an ethical responsibility to prevent students from bringing alcohol into the hall. By inspecting bags, they are exercising due care. Consider the argument: “It is not our responsibility to check what students bring into the hall in their bags; we simply provide the venue.”</p></li>
-</ul>
-</li>
-<li><ul>
-<li><p>Have students respond to this situation and discuss the ethical issues:</p></li>
-</ul>
-</li>
-<li><ul>
-<li><ul>
+<li><p>Have students respond to this situation and discuss the ethical issues:</p>
+<ul>
 <li><p>Is there any case of invasion of privacy?</p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><ul>
-<li><ul>
 <li><p>Who bears the ethical responsibility?</p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><ul>
-<li><ul>
 <li><p>What level of ethical responsibility does the student have</p></li>
 </ul>
 </li>
@@ -721,8 +702,8 @@ Hoboken, New Jersey: Wiley, 2003.</p>
 <p>Now consider the ISP:</p>
 <ul class="simple">
 <li><p>In the above case, the ISP actually inspects each bag. The bag is like a data packet on the Internet. However, on the Internet it is impossible to inspect each set of bits to determine their purpose—ethical or otherwise—as they pass through a server.</p></li>
-<li><p>An ISP has no way of knowing what a bit pattern represents. But they can see the end result of postings on a Web site or conversations in a chat room that they host. For example, consider a chat room that allows people to denigrate particular individuals in a school.</p></li>
-<li><ul>
+<li><p>An ISP has no way of knowing what a bit pattern represents. But they can see the end result of postings on a Web site or conversations in a chat room that they host. For example, consider a chat room that allows people to denigrate particular individuals in a school.</p>
+<ul>
 <li><p>Assume that the ISP claims to monitor conversations and asks chat- room participants to abide by a code of conduct, which does not permit the use of denigrating terminology. However, in this instance, the chat room is not monitored, and an individual is denigrated and is identified to the school group. This results in the student suffering. (Be careful here, as it might be the case that some students in your group have encountered this exact problem!)</p></li>
 </ul>
 </li>

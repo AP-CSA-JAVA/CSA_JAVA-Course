@@ -133,49 +133,57 @@ fruits.add("Banana");
 2.	**get(index)**: Retrieves the element at the specified index in the ArrayList.
 
 ```java
-String fruit = fruits.get(0);  // Retrieves the element at index 0 (Apple)
+String fruit = fruits.get(0);  
+// Retrieves the element at index 0 (Apple)
 ```
 
 3.	**set(index, element)**: Replaces the element at the specified index with the specified element.
 
 ```java
-fruits.set(1, "Orange");  // Replaces the element at index 1 with "Orange"
+fruits.set(1, "Orange");  
+// Replaces the element at index 1 with "Orange"
 ```
 
 4.	**remove(index)**: Removes the element at the specified index from the ArrayList.
 
 ```java
-fruits.remove(0);  // Removes the element at index 0 (Apple)
+fruits.remove(0);  
+// Removes the element at index 0 (Apple)
 ```
 
 5.	**size()**: Returns the number of elements in the ArrayList.
 
 ```java
-int size = fruits.size();  // Returns the number of elements in the ArrayList
+int size = fruits.size();  
+// Returns the number of elements in the ArrayList
 ```
 
 6.	**contains(element)**: Checks whether the ArrayList contains the specified element.
 
 ```java
-boolean containsOrange = fruits.contains("Orange");  // Checks if "Orange" is present in the ArrayList
+boolean containsOrange = fruits.contains("Orange");  
+// Checks if "Orange" is present in the ArrayList
 ```
 
 7.	**indexOf(element)**: Returns the index of the first occurrence of the specified element in the ArrayList.
 
 ```java
-int indexOfBanana = fruits.indexOf("Banana");  // Returns the index of "Banana" in the ArrayList
+int indexOfBanana = fruits.indexOf("Banana");  
+// Returns the index of "Banana" in the ArrayList
 ```
 
 8.	**isEmpty()**: Checks whether the ArrayList is empty.
 
 ```java
-boolean isEmpty = fruits.isEmpty();  // Checks if the ArrayList is empty
+boolean isEmpty = fruits.isEmpty();  
+// Checks if the ArrayList is empty
 ```
 
 9.	**clear()**: Removes all elements from the ArrayList.
 
 ```java
-fruits.clear();  // Removes all elements from the ArrayList
+fruits.clear();  
+// Removes all elements from the ArrayList
 ```
 
 These are just a few examples of the methods available in the ArrayList class. The class provides many more methods for various operations like sorting, sublist extraction, iteration, and more. You can refer to the official Java documentation for a complete list of ArrayList methods and their descriptions.
@@ -502,9 +510,9 @@ Copyright seeks to provide a balance between a fair return to the creator and en
 Generally, if someone reuses a work and benefits commercially, the owner of the copyright may well objec—provided, of course, that the infringement is detected.
 
 - What ethical issues are related to copyright?
-- - Ask students: Is it unethical to steal? (In fact, it is illegal.) Taking someone else's work is in fact stealing, and you are likely to impact on their fair return; you might also impact on their reputation for creativity.
-- - There are issues of trust involved.
-- - There are issues related to "telling a lie."
+  - Ask students: Is it unethical to steal? (In fact, it is illegal.) Taking someone else's work is in fact stealing, and you are likely to impact on their fair return; you might also impact on their reputation for creativity.
+  - There are issues of trust involved.
+  - There are issues related to "telling a lie."
 
 - Have the students consider copyright infringement against their own works. Ask them if they would be happy if such infringements occurred.
 
@@ -523,18 +531,18 @@ Generally, if someone reuses a work and benefits commercially, the owner of the 
 Have the students consider this situation:
 
 - Students are gathered around a dance hall ready for a school dance. Inside the dance hall it is dark, and there are several senior students whose role is to make sure that no alcohol is consumed inside the hall. For students to enter, they need to show their bags to the school captain before entering the hall. The school captain at the door is acting in the role of the ISP.
-- - If the school captain did not inspect the bags, we would not be surprised if alcohol got into the hall. Parents would assume that the bags would be inspected.
-- - The teacher and the school would find it very difficult to argue that they did not have an ethical responsibility to prevent students from bringing alcohol into the hall. By inspecting bags, they are exercising due care. Consider the argument: "It is not our responsibility to check what students bring into the hall in their bags; we simply provide the venue."
-- - Have students respond to this situation and discuss the ethical issues:
-- - - Is there any case of invasion of privacy?
-- - - Who bears the ethical responsibility?
-- - - What level of ethical responsibility does the student have
+  - If the school captain did not inspect the bags, we would not be surprised if alcohol got into the hall. Parents would assume that the bags would be inspected.
+  - The teacher and the school would find it very difficult to argue that they did not have an ethical responsibility to prevent students from bringing alcohol into the hall. By inspecting bags, they are exercising due care. Consider the argument: "It is not our responsibility to check what students bring into the hall in their bags; we simply provide the venue."
+  - Have students respond to this situation and discuss the ethical issues:
+    - Is there any case of invasion of privacy?
+    - Who bears the ethical responsibility?
+    - What level of ethical responsibility does the student have
 
 Now consider the ISP:
 
 - In the above case, the ISP actually inspects each bag. The bag is like a data packet on the Internet. However, on the Internet it is impossible to inspect each set of bits to determine their purpose—ethical or otherwise—as they pass through a server.
 - An ISP has no way of knowing what a bit pattern represents. But they can see the end result of postings on a Web site or conversations in a chat room that they host. For example, consider a chat room that allows people to denigrate particular individuals in a school.
-- - Assume that the ISP claims to monitor conversations and asks chat- room participants to abide by a code of conduct, which does not permit the use of denigrating terminology. However, in this instance, the chat room is not monitored, and an individual is denigrated and is identified to the school group. This results in the student suffering. (Be careful here, as it might be the case that some students in your group have encountered this exact problem!)
+  - Assume that the ISP claims to monitor conversations and asks chat- room participants to abide by a code of conduct, which does not permit the use of denigrating terminology. However, in this instance, the chat room is not monitored, and an individual is denigrated and is identified to the school group. This results in the student suffering. (Be careful here, as it might be the case that some students in your group have encountered this exact problem!)
 
 Putting aside the legal issues raised here, have the students consider the ethical behavior of the actors in this scenario. Refer to my “Proposed Methodology” paper (described above under "Resource Materials").
 
