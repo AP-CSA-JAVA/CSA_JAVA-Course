@@ -378,15 +378,220 @@
 </section>
 <section id="traversing-arraylists">
 <h2>7.3 Traversing ArrayLists<a class="headerlink" href="#traversing-arraylists" title="Permalink to this heading">#</a></h2>
+<p>In this example, we create an ArrayList called myList and add three elements to it. We then traverse the ArrayList using both a enhanced for loop and a for loop.</p>
+<p>The enhanced for loop iterates over each element in the ArrayList and assigns it to the variable element, which we can then print or perform any desired operations with.</p>
+<p>The for loop uses an index variable i to access each element in the ArrayList using the <code class="docutils literal notranslate"><span class="pre">get()</span></code> method. We use the <code class="docutils literal notranslate"><span class="pre">size()</span></code> method to determine the size of the ArrayList, and the loop continues until <code class="docutils literal notranslate"><span class="pre">i</span></code> reaches the size of the ArrayList.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Create an ArrayList</span>
+<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">myList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// Add elements to the ArrayList</span>
+<span class="w">        </span><span class="n">myList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Apple&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">myList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Banana&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">myList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Orange&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Traverse the ArrayList using a for-each loop</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Traversing the ArrayList using a for-each loop:&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">element</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">myList</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">element</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// Traverse the ArrayList using a for loop</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\nTraversing the ArrayList using a for loop:&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">myList</span><span class="p">.</span><span class="na">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myList</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">element</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>When you run the program, it will output:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Traversing</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">ArrayList</span><span class="w"> </span><span class="n">using</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">enhanced</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">loop</span><span class="p">:</span>
+<span class="n">Apple</span>
+<span class="n">Banana</span>
+<span class="n">Orange</span>
+
+<span class="n">Traversing</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">ArrayList</span><span class="w"> </span><span class="n">using</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">loop</span><span class="p">:</span>
+<span class="n">Apple</span>
+<span class="n">Banana</span>
+<span class="n">Orange</span>
+</pre></div>
+</div>
 </section>
 <section id="developing-algorithms-using-arraylists">
 <h2>7.4 Developing Algorithms Using ArrayLists<a class="headerlink" href="#developing-algorithms-using-arraylists" title="Permalink to this heading">#</a></h2>
 </section>
 <section id="searching">
 <h2>7.5 Searching<a class="headerlink" href="#searching" title="Permalink to this heading">#</a></h2>
+<p>To search for an element in an ArrayList in Java, you can use the <code class="docutils literal notranslate"><span class="pre">contains()</span></code> method or iterate through the ArrayList and compare each element with the target value.</p>
+<p>In this example, we create an ArrayList called <code class="docutils literal notranslate"><span class="pre">myList</span></code> and add three elements to it. We then search for an element, “Banana”, in the ArrayList using two different approaches.</p>
+<p>First, we use the <code class="docutils literal notranslate"><span class="pre">contains()</span></code> method to check if the ArrayList contains the target element. The <code class="docutils literal notranslate"><span class="pre">contains()</span></code> method returns a boolean value indicating whether the element is present in the ArrayList.</p>
+<p>Next, we perform a manual search by iterating through each element of the ArrayList using a enhanced for loop. We compare each element with the target element using the <code class="docutils literal notranslate"><span class="pre">equals()</span></code> method. If a match is found, we set the found variable to <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">break</span></code> out of the loop.</p>
+<p>Finally, we print the search results to the console.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Create an ArrayList</span>
+<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">myList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// Add elements to the ArrayList</span>
+<span class="w">        </span><span class="n">myList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Apple&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">myList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Banana&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">myList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Orange&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Search for an element using contains() method</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">targetElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Banana&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">found</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myList</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="n">targetElement</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Using contains(): &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">targetElement</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; found? &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">found</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Search for an element using iteration</span>
+<span class="w">        </span><span class="n">found</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">element</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">myList</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">element</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">targetElement</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">found</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Using iteration: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">targetElement</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; found? &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">found</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>When you run the program, it will output:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Using</span><span class="w"> </span><span class="nf">contains</span><span class="p">():</span><span class="w"> </span><span class="n">Banana</span><span class="w"> </span><span class="n">found</span><span class="o">?</span><span class="w"> </span><span class="kc">true</span>
+<span class="n">Using</span><span class="w"> </span><span class="n">iteration</span><span class="p">:</span><span class="w"> </span><span class="n">Banana</span><span class="w"> </span><span class="n">found</span><span class="o">?</span><span class="w"> </span><span class="kc">true</span>
+</pre></div>
+</div>
 </section>
 <section id="sorting">
 <h2>7.6 Sorting<a class="headerlink" href="#sorting" title="Permalink to this heading">#</a></h2>
+<p>In Java, there are various methods available to sort an ArrayList. The most common approaches include using the Collections.sort() method, implementing the Comparable interface, or providing a custom Comparator. Let’s explore each of these methods with examples:</p>
+<ul class="simple">
+<li><p>Sorting using <code class="docutils literal notranslate"><span class="pre">Collections.sort()</span></code> method:
+This method sorts an ArrayList in ascending order using the natural ordering of its elements. The elements must implement the Comparable interface to define their natural ordering.</p></li>
+</ul>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Collections</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ArrayListSorting</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Create an ArrayList</span>
+<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// Add elements to the ArrayList</span>
+<span class="w">        </span><span class="n">numbers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="w">        </span><span class="n">numbers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="w">        </span><span class="n">numbers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span>
+<span class="w">        </span><span class="n">numbers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">        </span><span class="n">numbers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Sort the ArrayList in ascending order</span>
+<span class="w">        </span><span class="n">Collections</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">numbers</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Print the sorted ArrayList</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">numbers</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Sample Output:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="o">]</span>
+</pre></div>
+</div>
+<p>Sorting by implementing the Comparable interface:
+By implementing the Comparable interface, you can define the natural ordering of your custom objects. The <code class="docutils literal notranslate"><span class="pre">compareTo()</span></code> method is used to compare two objects and return a negative, zero, or positive value based on their order.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Collections</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Student</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Comparable</span><span class="o">&lt;</span><span class="n">Student</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Student</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getId</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getName</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">compareTo</span><span class="p">(</span><span class="n">Student</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Compare students based on their IDs</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">compare</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">id</span><span class="p">,</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="na">id</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Student [id=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, name=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;]&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Create an ArrayList of Student objects</span>
+<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Student</span><span class="o">&gt;</span><span class="w"> </span><span class="n">students</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// Add students to the ArrayList</span>
+<span class="w">        </span><span class="n">students</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Student</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Alice&quot;</span><span class="p">));</span>
+<span class="w">        </span><span class="n">students</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Student</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Bob&quot;</span><span class="p">));</span>
+<span class="w">        </span><span class="n">students</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Student</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Charlie&quot;</span><span class="p">));</span>
+
+<span class="w">        </span><span class="c1">// Sort the ArrayList using natural ordering (by ID)</span>
+<span class="w">        </span><span class="n">Collections</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">students</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Print the sorted ArrayList</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">students</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Sample Output:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="o">[</span><span class="n">Student</span><span class="w"> </span><span class="o">[</span><span class="n">id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="n">Bob</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">Student</span><span class="w"> </span><span class="o">[</span><span class="n">id</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="n">Charlie</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">Student</span><span class="w"> </span><span class="o">[</span><span class="n">id</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="n">Alice</span><span class="o">]]</span>
+</pre></div>
+</div>
+<p>Sorting using a custom Comparator:
+A Comparator allows you to define a custom comparison logic for sorting elements. It is useful when you want to sort objects based on different criteria or when the objects do not implement the Comparable interface.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Collections</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Comparator</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Student</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Student</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getId</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getName</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Student [id=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, name=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;]&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SortByName</span>
+</pre></div>
+</div>
 </section>
 <section id="ethical-issues-around-data-collection">
 <h2>7.7 Ethical Issues Around Data Collection<a class="headerlink" href="#ethical-issues-around-data-collection" title="Permalink to this heading">#</a></h2>
