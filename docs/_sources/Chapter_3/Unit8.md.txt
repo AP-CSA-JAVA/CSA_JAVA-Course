@@ -74,19 +74,20 @@ class Main {
                     		   {11,12,13,14,15}
 };
 
-for(int i = 0; i < newArray.length; i++)
-{
-   for(int j = 0; j < newArray[i].length; j++)
-   {
+for(int i = 0; i < newArray.length; i++) // row {
+   for(int j = 0; j < newArray[i].length; j++) // column {
       System.out.print(newArray[i][j] + ", ");
    }
-}
+   System.out.println(); // Move to the next line after each row
+    }
   }
 }
 ```
 
 **Sample Output**
-`1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15`
+`1, 2, 3, 4, 5, 
+6, 7, 8, 9, 10, 
+11, 12, 13, 14, 15`
 
 
 
