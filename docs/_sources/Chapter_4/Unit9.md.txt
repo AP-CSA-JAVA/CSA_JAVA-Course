@@ -547,4 +547,114 @@ These examples illustrate different aspects of polymorphism in Java, including p
 
 ## 9.7 Object Superclass
 
+In Java, the Object class is the root superclass for all other classes. Every class in Java implicitly inherits from the Object class, either directly or through a chain of class inheritance. The Object class provides some common methods and functionality that are inherited by all classes. Here are several examples of the Object superclass in Java:
+
+`toString()` Method:
+
+```java
+public class Person {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "Person [name=" + name + ", age=" + age + "]";
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Person person = new Person("John Doe", 25);
+        System.out.println(person.toString());
+    }
+}
+```
+
+**Output**
+```java
+Person [name=John Doe, age=25]
+```
+
+In this example, the Person class overrides the toString() method inherited from the Object class. The overridden toString() method returns a string representation of the Person object. When we call person.toString() or implicitly use System.out.println(person), it invokes the overridden toString() method to provide a meaningful string representation of the object.
+
+`equals()` Method:
+```java
+public class Person {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        Person person = (Person) obj;
+        return age == person.age && Objects.equals(name, person.name);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Person person1 = new Person("John Doe", 25);
+        Person person2 = new Person("John Doe", 25);
+        Person person3 = new Person("Jane Smith", 30);
+
+        System.out.println(person1.equals(person2)); // true
+        System.out.println(person1.equals(person3)); // false
+    }
+}
+```
+
+**Output:**
+```java
+true
+false
+```
+
+In this example, the Person class overrides the equals() method inherited from the Object class. The overridden equals() method compares two Person objects based on their name and age attributes. When we call person1.equals(person2), it invokes the overridden equals() method to check if the two objects are equal based on their attributes.
+
+`hashCode()` Method:
+```java
+public class Person {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, age);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Person person = new Person("John Doe", 25);
+        System.out.println(person.hashCode());
+    }
+}
+```
+
+**Output**
+```java
+964396650
+```
+
+In this example, the Person class overrides the hashCode() method inherited from the Object class. The overridden hashCode() method calculates the hash code of the Person object based on its name and age attributes. When we call person.hashCode(), it invokes the overridden hashCode() method to retrieve the hash code value of the object.
 
