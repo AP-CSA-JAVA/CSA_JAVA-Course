@@ -126,12 +126,425 @@ When you run this program, it will demonstrate the different variations of inher
 
 ## 9.2 Writing Constructors for Subclasses
 
+When creating subclasses in Java, constructors are used to initialize the subclass's specific attributes and also to ensure that the superclass's state is properly initialized. To write constructors for subclasses, you can use the super() keyword to invoke the superclass's constructor and provide any additional initialization specific to the subclass. Here's an example that demonstrates how to write constructors for a subclass:
+
+```java
+public class Animal {
+    protected String name;
+
+    public Animal(String name) {
+        this.name = name;
+    }
+
+    public void speak() {
+        System.out.println("Animal speaks");
+    }
+}
+
+public class Dog extends Animal {
+    private String breed;
+
+    public Dog(String name, String breed) {
+        super(name); // Invoking superclass constructor
+        this.breed = breed;
+    }
+
+    public void bark() {
+        System.out.println("Dog barks");
+    }
+
+    @Override
+    public void speak() {
+        System.out.println("Dog speaks");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog dog = new Dog("Buddy", "Labrador");
+        System.out.println("Name: " + dog.name);
+        System.out.println("Breed: " + dog.breed);
+        dog.speak();
+        dog.bark();
+    }
+}
+```
+
+In this example, we have a superclass Animal and a subclass Dog. The Animal class has a constructor that takes a name parameter and initializes the name attribute. It also has a speak() method.
+
+The Dog class extends the Animal class and adds a new attribute breed. The Dog class has a constructor that takes both name and breed parameters. It invokes the superclass constructor using super(name) to initialize the name attribute inherited from Animal. It also initializes the breed attribute. The Dog class overrides the speak() method from the Animal class and adds a new method bark().
+
+In the Main class, we create an instance of Dog and pass values to the constructor for name and breed. We then access the name and breed attributes of the Dog object and call the speak() and bark() methods.
+
+When you run the program, it will output:
+
+```java
+Name: Buddy
+Breed: Labrador
+Dog speaks
+Dog barks
+```
+
+This demonstrates how to write constructors for a subclass in Java, ensuring proper initialization of both superclass and subclass attributes.
+
 ## 9.3 Overriding Methods
+
+In Java, method overriding allows a subclass to provide a different implementation for a method that is already defined in its superclass. This allows the subclass to modify or extend the behavior of the inherited method. To override a method, you need to define a method in the subclass with the same name, return type, and parameter list as the method in the superclass. Here's an example that demonstrates method overriding in Java:
+
+```java
+public class Animal {
+    public void makeSound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+public class Cat extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Cat meows");
+    }
+}
+
+public class Dog extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Dog barks");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal animal1 = new Animal();
+        animal1.makeSound();
+
+        Animal animal2 = new Cat();
+        animal2.makeSound();
+
+        Animal animal3 = new Dog();
+        animal3.makeSound();
+    }
+}
+```
+
+In this example, we have a superclass Animal with a method makeSound(). The Cat and Dog classes are subclasses of Animal and they override the makeSound() method.
+
+The Cat class overrides the makeSound() method and provides its own implementation to print "Cat meows".
+
+The Dog class also overrides the makeSound() method and provides its own implementation to print "Dog barks".
+
+In the Main class, we create instances of Animal, Cat, and Dog. We assign the Cat and Dog objects to Animal references. When we call the makeSound() method on each object, the overridden version of the method in the respective subclass is invoked.
+
+When you run the program, it will output:
+
+```java
+Animal makes a sound
+Cat meows
+Dog barks
+```
+
+This demonstrates how to override methods in Java, allowing subclasses to provide their own implementation and modify the behavior of inherited methods.
 
 ## 9.4 super Keyword
 
+In Java, the super keyword is used to refer to the superclass, allowing you to access its members (fields and methods) from within a subclass. It is particularly useful when you want to distinguish between the superclass's members and the subclass's members that have the same name. The super keyword can be used to invoke the superclass's constructor, access its instance variables or methods, and invoke its overridden methods. Here's an example that demonstrates the usage of the super keyword in Java:
+
+```java
+public class Animal {
+    protected String name;
+
+    public Animal(String name) {
+        this.name = name;
+    }
+
+    public void sleep() {
+        System.out.println("Animal sleeps");
+    }
+}
+
+public class Dog extends Animal {
+    private String breed;
+
+    public Dog(String name, String breed) {
+        super(name); // Invoking superclass constructor
+        this.breed = breed;
+    }
+
+    public void sleep() {
+        super.sleep(); // Invoking superclass method
+        System.out.println("Dog sleeps");
+    }
+
+    public void displayDetails() {
+        System.out.println("Name: " + super.name); // Accessing superclass variable
+        System.out.println("Breed: " + breed);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog dog = new Dog("Buddy", "Labrador");
+        dog.sleep(); // Invoking overridden method
+        dog.displayDetails(); // Accessing superclass variable
+    }
+}
+```
+
+In this example, we have a superclass Animal with a constructor that takes a name parameter and initializes the name attribute. It also has a sleep() method.
+
+The Dog class extends the Animal class and adds a new attribute breed. The Dog class has a constructor that takes both name and breed parameters. It invokes the superclass constructor using super(name) to initialize the name attribute inherited from Animal. It also initializes the breed attribute. The Dog class overrides the sleep() method from the Animal class and adds a new method displayDetails().
+
+In the sleep() method of the Dog class, we invoke the superclass's sleep() method using super.sleep() to execute the superclass's behavior before adding the dog-specific behavior.
+
+In the displayDetails() method, we access the name attribute of the superclass using super.name to distinguish it from the name attribute of the subclass.
+
+In the Main class, we create an instance of Dog and pass values to the constructor for name and breed. We then call the sleep() method, which invokes the overridden method, and the displayDetails() method, which accesses the superclass variable.
+
+When you run the program, it will output:
+
+```java
+Animal sleeps
+Dog sleeps
+Name: Buddy
+Breed: Labrador
+```
+
+This demonstrates how the super keyword can be used in Java to refer to the superclass, invoke its constructor or methods, and access its members from within a subclass.
+
 ## 9.5 Creating References Using Inheritance Hierarchies
+
+In Java, you can create references using inheritance hierarchies to refer to objects of both the superclass and its subclasses. This allows you to treat objects of different classes in the hierarchy as interchangeable, providing flexibility and polymorphic behavior. Here's an example that demonstrates creating references using inheritance hierarchies in Java:
+
+```java
+public class Animal {
+    protected String name;
+
+    public Animal(String name) {
+        this.name = name;
+    }
+
+    public void makeSound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+public class Dog extends Animal {
+    private String breed;
+
+    public Dog(String name, String breed) {
+        super(name); // Invoking superclass constructor
+        this.breed = breed;
+    }
+
+    public void makeSound() {
+        System.out.println("Dog barks");
+    }
+
+    public void fetch() {
+        System.out.println("Dog fetches");
+    }
+}
+
+public class Cat extends Animal {
+    private String color;
+
+    public Cat(String name, String color) {
+        super(name); // Invoking superclass constructor
+        this.color = color;
+    }
+
+    public void makeSound() {
+        System.out.println("Cat meows");
+    }
+
+    public void scratch() {
+        System.out.println("Cat scratches");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal animal1 = new Animal("Generic Animal");
+        Animal animal2 = new Dog("Buddy", "Labrador");
+        Animal animal3 = new Cat("Kitty", "White");
+
+        animal1.makeSound();
+        animal2.makeSound();
+        animal3.makeSound();
+
+        // animal2.fetch(); // Error: fetch() is not defined in the Animal class
+        // animal3.scratch(); // Error: scratch() is not defined in the Animal class
+
+        Dog dog = (Dog) animal2; // Casting the reference to Dog type
+        dog.fetch();
+
+        Cat cat = (Cat) animal3; // Casting the reference to Cat type
+        cat.scratch();
+    }
+}
+```
+
+In this example, we have a superclass Animal with a constructor that takes a name parameter and initializes the name attribute. It also has a makeSound() method.
+
+The Dog class extends the Animal class and adds a new attribute breed. It has a constructor that takes both name and breed parameters. It overrides the makeSound() method and adds a new method fetch().
+
+The Cat class also extends the Animal class and adds a new attribute color. It has a constructor that takes both name and color parameters. It overrides the makeSound() method and adds a new method scratch().
+
+In the Main class, we create references of type Animal and assign them objects of Animal, Dog, and Cat. This demonstrates polymorphism, where objects of different types in the inheritance hierarchy can be referred to by a common superclass reference.
+
+We call the makeSound() method on each reference, which invokes the overridden method based on the actual type of the object.
+
+We cannot directly call the fetch() method on the Animal references because it is not defined in the Animal class. To access the fetch() method, we can cast the Animal reference to Dog type, as demonstrated with Dog dog = (Dog) animal2, and then we can call dog.fetch().
+
+Similarly, we can cast the Animal reference to Cat type, as demonstrated with Cat cat = (Cat) animal3, and then we can call cat.scratch().
+
+When you run the program, it will output:
+
+```java
+Animal makes a sound
+Dog barks
+Cat meows
+Dog fetches
+Cat scratches
+```
+
+This demonstrates how references using inheritance hierarchies in Java allow objects of different classes to be treated interchangeably, with the ability to access overridden methods and specific methods of the subclasses through type casting.
+
 
 ## 9.6 Polymorphism
 
+Polymorphism in Java refers to the ability of objects of different classes in an inheritance hierarchy to be treated as objects of their common superclass. This allows for code reuse, flexibility, and the ability to invoke overridden methods based on the actual type of the object. Here are multiple examples that demonstrate polymorphism in Java:
+
+- Polymorphic Method Invocation:
+
+```java
+public class Animal {
+    public void makeSound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+public class Dog extends Animal {
+    public void makeSound() {
+        System.out.println("Dog barks");
+    }
+}
+
+public class Cat extends Animal {
+    public void makeSound() {
+        System.out.println("Cat meows");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal animal1 = new Animal();
+        Animal animal2 = new Dog();
+        Animal animal3 = new Cat();
+
+        animal1.makeSound();
+        animal2.makeSound();
+        animal3.makeSound();
+    }
+}
+```
+
+**Output**
+```java
+Animal makes a sound
+Dog barks
+Cat meows
+```
+
+In this example, we have a superclass Animal with a makeSound() method. The Dog and Cat classes are subclasses of Animal and override the makeSound() method. In the Main class, we create objects of type Animal, Dog, and Cat, and call the makeSound() method on each object. The actual implementation of the method invoked depends on the type of the object, demonstrating polymorphic method invocation.
+
+Polymorphic Assignments:
+
+```java
+public class Shape {
+    public void draw() {
+        System.out.println("Drawing a shape");
+    }
+}
+
+public class Circle extends Shape {
+    public void draw() {
+        System.out.println("Drawing a circle");
+    }
+}
+
+public class Rectangle extends Shape {
+    public void draw() {
+        System.out.println("Drawing a rectangle");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Shape shape1 = new Circle();
+        Shape shape2 = new Rectangle();
+
+        shape1.draw();
+        shape2.draw();
+    }
+}
+```
+
+**Output**
+```java
+Drawing a circle
+Drawing a rectangle
+```
+
+In this example, we have a superclass Shape with a draw() method. The Circle and Rectangle classes are subclasses of Shape and override the draw() method. In the Main class, we create objects of type Circle and Rectangle, but assign them to references of type Shape. We then call the draw() method on each reference, and the actual implementation of the method invoked is based on the type of the object referred to, demonstrating polymorphic assignments.
+
+Polymorphic Parameter Usage:
+
+```java
+public class Animal {
+    public void makeSound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+public class Dog extends Animal {
+    public void makeSound() {
+        System.out.println("Dog barks");
+    }
+}
+
+public class Cat extends Animal {
+    public void makeSound() {
+        System.out.println("Cat meows");
+    }
+}
+
+public class AnimalShelter {
+    public void makeAnimalsSpeak(Animal[] animals) {
+        for (Animal animal : animals) {
+            animal.makeSound();
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal[] animals = { new Dog(), new Cat() };
+        AnimalShelter shelter = new AnimalShelter();
+        shelter.makeAnimalsSpeak(animals);
+    }
+}
+```
+
+**Output**
+```java
+Dog barks
+Cat meows
+```
+
+In this example, we have a superclass Animal with a makeSound() method. The Dog and Cat classes are subclasses of Animal and override the makeSound() method. The AnimalShelter class has a makeAnimalsSpeak() method that takes an array of Animal objects and calls the makeSound() method on each object. In the Main class, we create an array of Animal objects with a Dog and a Cat, and pass it to the makeAnimalsSpeak() method. The overridden makeSound() method of each object is invoked based on its actual type, demonstrating polymorphic parameter usage.
+
+These examples illustrate different aspects of polymorphism in Java, including polymorphic method invocation, polymorphic assignments, and polymorphic parameter usage. Polymorphism allows for flexible and extensible code by leveraging the inheritance hierarchy and the ability to treat objects of different classes as objects of their common superclass.
+
 ## 9.7 Object Superclass
+
+
