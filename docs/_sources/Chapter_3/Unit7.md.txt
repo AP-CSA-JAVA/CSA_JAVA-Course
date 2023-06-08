@@ -567,8 +567,6 @@ Andrew Meyenn received master of science and master of education degrees from th
 Authored by
 
 Andrew Meyenn
-
 Wesley College
-
 Melbourne, Australia
 
