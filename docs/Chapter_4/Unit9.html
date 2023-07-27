@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Unit 10" href="Unit10.html" /><link rel="prev" title="Unit 8 2D Array" href="../Chapter_3/Unit8.html" />
 
-    <!-- Generated with Sphinx 7.1.0 and Furo 2023.07.26 -->
+    <!-- Generated with Sphinx 7.1.1 and Furo 2023.07.26 -->
         <title>Unit 9 - CSA JAVA Course</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=362ab14a" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
@@ -219,6 +219,11 @@
 <h1>Unit 9<a class="headerlink" href="#unit-9" title="Permalink to this heading">#</a></h1>
 <section id="creating-superclasses-and-subclasses">
 <h2>9.1 Creating Superclasses and Subclasses<a class="headerlink" href="#creating-superclasses-and-subclasses" title="Permalink to this heading">#</a></h2>
+<p><strong>Goals</strong></p>
+<ul class="simple">
+<li><p>Create an inheritance relationship from a subclass to the superclass.</p></li>
+<li><p>Write program code to define a new type by creating superclasses and subclasses.</p></li>
+</ul>
 <p>In Java, there are four different types of inheritance variations that you can demonstrate:</p>
 <ul class="simple">
 <li><p>single inheritance</p></li>
@@ -226,119 +231,234 @@
 <li><p>multilevel inheritance</p></li>
 <li><p>hierarchical inheritance.</p></li>
 </ul>
-<p>Here is an example that illustrates each of these variations:</p>
+<p>Here are examples that illustrates each of these variations:</p>
+<p>Single Inheritance:
+Single inheritance is a type of inheritance where a class extends only one superclass. In this example, we’ll create a base class called Animal and a derived class called Dog, which inherits from Animal.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Single Inheritance</span>
 <span class="kd">class</span> <span class="nc">Animal</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">eat</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Animal is eating.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">sound</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Animals make different sounds.&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 
 <span class="kd">class</span> <span class="nc">Dog</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Animal</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">bark</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Dog is barking.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">sound</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Dog barks.&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 
-<span class="c1">// Multiple Inheritance (through interfaces)</span>
-<span class="kd">interface</span> <span class="nc">Swimming</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">swim</span><span class="p">();</span>
-<span class="p">}</span>
-
-<span class="kd">interface</span> <span class="nc">Flying</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">fly</span><span class="p">();</span>
-<span class="p">}</span>
-
-<span class="kd">class</span> <span class="nc">Duck</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Swimming</span><span class="p">,</span><span class="w"> </span><span class="n">Flying</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">swim</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Duck is swimming.&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">fly</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Duck is flying.&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-
-<span class="c1">// Multilevel Inheritance</span>
-<span class="kd">class</span> <span class="nc">Vehicle</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">start</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Vehicle is starting.&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kd">class</span> <span class="nc">Car</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Vehicle</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">accelerate</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Car is accelerating.&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kd">class</span> <span class="nc">SportsCar</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Car</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">race</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Sports car is racing.&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-
-<span class="c1">// Hierarchical Inheritance</span>
-<span class="kd">class</span> <span class="nc">Shape</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Drawing shape.&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kd">class</span> <span class="nc">Circle</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Shape</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">drawCircle</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Drawing circle.&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kd">class</span> <span class="nc">Rectangle</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Shape</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">drawRectangle</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Drawing rectangle.&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">InheritanceDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SingleInheritanceDemo</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">// Single Inheritance</span>
 <span class="w">        </span><span class="n">Dog</span><span class="w"> </span><span class="n">dog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">();</span>
-<span class="w">        </span><span class="n">dog</span><span class="p">.</span><span class="na">eat</span><span class="p">();</span>
-<span class="w">        </span><span class="n">dog</span><span class="p">.</span><span class="na">bark</span><span class="p">();</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
-
-<span class="w">        </span><span class="c1">// Multiple Inheritance (through interfaces)</span>
-<span class="w">        </span><span class="n">Duck</span><span class="w"> </span><span class="n">duck</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Duck</span><span class="p">();</span>
-<span class="w">        </span><span class="n">duck</span><span class="p">.</span><span class="na">swim</span><span class="p">();</span>
-<span class="w">        </span><span class="n">duck</span><span class="p">.</span><span class="na">fly</span><span class="p">();</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
-
-<span class="w">        </span><span class="c1">// Multilevel Inheritance</span>
-<span class="w">        </span><span class="n">SportsCar</span><span class="w"> </span><span class="n">sportsCar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SportsCar</span><span class="p">();</span>
-<span class="w">        </span><span class="n">sportsCar</span><span class="p">.</span><span class="na">start</span><span class="p">();</span>
-<span class="w">        </span><span class="n">sportsCar</span><span class="p">.</span><span class="na">accelerate</span><span class="p">();</span>
-<span class="w">        </span><span class="n">sportsCar</span><span class="p">.</span><span class="na">race</span><span class="p">();</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
-
-<span class="w">        </span><span class="c1">// Hierarchical Inheritance</span>
-<span class="w">        </span><span class="n">Circle</span><span class="w"> </span><span class="n">circle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Circle</span><span class="p">();</span>
-<span class="w">        </span><span class="n">circle</span><span class="p">.</span><span class="na">draw</span><span class="p">();</span>
-<span class="w">        </span><span class="n">circle</span><span class="p">.</span><span class="na">drawCircle</span><span class="p">();</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
-
-<span class="w">        </span><span class="n">Rectangle</span><span class="w"> </span><span class="n">rectangle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Rectangle</span><span class="p">();</span>
-<span class="w">        </span><span class="n">rectangle</span><span class="p">.</span><span class="na">draw</span><span class="p">();</span>
-<span class="w">        </span><span class="n">rectangle</span><span class="p">.</span><span class="na">drawRectangle</span><span class="p">();</span>
+<span class="w">        </span><span class="n">dog</span><span class="p">.</span><span class="na">sound</span><span class="p">();</span><span class="w"> </span><span class="c1">// Output: Dog barks.</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>In this program, each inheritance variation is demonstrated through different classes and interfaces:</p>
-<ol class="arabic simple">
-<li><p>Single Inheritance: The Animal class serves as the base class, and the Dog class extends it to inherit its methods (eat()) and add its own method (bark()).</p></li>
-<li><p>Multiple Inheritance (through interfaces): The Swimming and Flying interfaces define methods swim() and fly(), respectively. The Duck class implements both interfaces and provides their implementations.</p></li>
-<li><p>Multilevel Inheritance: The Vehicle class is the base class, the Car class extends it, and the SportsCar class further extends the Car class. Each subclass inherits and adds its own methods (start(), accelerate(), race()).</p></li>
-<li><p>Hierarchical Inheritance: The Shape class is the base class, and the Circle and Rectangle classes extend it. Each subclass inherits the draw() method and adds its own specific method (drawCircle(), drawRectangle()).
-When you run this program, it will demonstrate the different variations of inheritance by invoking the appropriate methods on the instantiated objects.</p></li>
-</ol>
+<p>Multiple Inheritance (through interfaces):
+Java does not support multiple inheritance of classes due to the “diamond problem” where ambiguity may arise when two superclasses have the same method name. However, multiple inheritance can be achieved through interfaces. In this example, we’ll create two interfaces, Swim and Fly, and a class Bird that implements both interfaces.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Multiple Inheritance (through interfaces)</span>
+<span class="kd">interface</span> <span class="nc">Swim</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">swim</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kd">interface</span> <span class="nc">Fly</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">fly</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Bird</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Swim</span><span class="p">,</span><span class="w"> </span><span class="n">Fly</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">swim</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Bird can swim.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">fly</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Bird can fly.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MultipleInheritanceDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Bird</span><span class="w"> </span><span class="n">bird</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Bird</span><span class="p">();</span>
+<span class="w">        </span><span class="n">bird</span><span class="p">.</span><span class="na">swim</span><span class="p">();</span><span class="w"> </span><span class="c1">// Output: Bird can swim.</span>
+<span class="w">        </span><span class="n">bird</span><span class="p">.</span><span class="na">fly</span><span class="p">();</span><span class="w">  </span><span class="c1">// Output: Bird can fly.</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Multilevel Inheritance:
+In multilevel inheritance, a class extends another class, and that class further extends another class. In this example, we’ll create a base class Vehicle, a derived class Car that inherits from Vehicle, and another class Sedan that inherits from Car.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Multilevel Inheritance</span>
+<span class="kd">class</span> <span class="nc">Vehicle</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">drive</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Vehicles can be driven.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Car</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Vehicle</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">honk</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Car honks.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Sedan</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Car</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">fuelType</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Sedan uses petrol for fuel.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MultilevelInheritanceDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Sedan</span><span class="w"> </span><span class="n">sedan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Sedan</span><span class="p">();</span>
+<span class="w">        </span><span class="n">sedan</span><span class="p">.</span><span class="na">drive</span><span class="p">();</span><span class="w">    </span><span class="c1">// Output: Vehicles can be driven.</span>
+<span class="w">        </span><span class="n">sedan</span><span class="p">.</span><span class="na">honk</span><span class="p">();</span><span class="w">     </span><span class="c1">// Output: Car honks.</span>
+<span class="w">        </span><span class="n">sedan</span><span class="p">.</span><span class="na">fuelType</span><span class="p">();</span><span class="w"> </span><span class="c1">// Output: Sedan uses petrol for fuel.</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Hierarchical Inheritance:
+Hierarchical inheritance is a type of inheritance where multiple classes inherit from a single base class. In this example, we’ll create a base class Shape and two derived classes Circle and Square, which both inherit from Shape.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Hierarchical Inheritance</span>
+<span class="kd">class</span> <span class="nc">Shape</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Shapes can be drawn.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Circle</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Shape</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Circle can be drawn.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Square</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Shape</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Square can be drawn.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HierarchicalInheritanceDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Circle</span><span class="w"> </span><span class="n">circle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Circle</span><span class="p">();</span>
+<span class="w">        </span><span class="n">Square</span><span class="w"> </span><span class="n">square</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Square</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">circle</span><span class="p">.</span><span class="na">draw</span><span class="p">();</span><span class="w"> </span><span class="c1">// Output: Circle can be drawn.</span>
+<span class="w">        </span><span class="n">square</span><span class="p">.</span><span class="na">draw</span><span class="p">();</span><span class="w"> </span><span class="c1">// Output: Square can be drawn.</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The three Java programs that demonstrate three different types of inheritance: <code class="docutils literal notranslate"><span class="pre">single</span> <span class="pre">inheritance</span></code>, <code class="docutils literal notranslate"><span class="pre">multiple</span> <span class="pre">inheritance</span> <span class="pre">(achieved</span> <span class="pre">through</span> <span class="pre">interfaces)</span></code>, and <code class="docutils literal notranslate"><span class="pre">hierarchical</span> <span class="pre">inheritance</span></code>. Each program will include an <code class="docutils literal notranslate"><span class="pre">ArrayList</span></code> to showcase different aspects of inheritance.</p>
+<p>Single Inheritance:
+In single inheritance, a class extends only one superclass.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+
+<span class="kd">class</span> <span class="nc">Animal</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">sound</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Animal makes a sound&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Dog</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Animal</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">sound</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Dog barks&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SingleInheritanceDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Animal</span><span class="o">&gt;</span><span class="w"> </span><span class="n">animals</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">animals</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Animal</span><span class="p">());</span>
+<span class="w">        </span><span class="n">animals</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">());</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Animal</span><span class="w"> </span><span class="n">animal</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">animals</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">animal</span><span class="p">.</span><span class="na">sound</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Multiple Inheritance (Using Interfaces):
+In Java, multiple inheritance can be achieved through interfaces. A class can implement multiple interfaces.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+
+<span class="kd">interface</span> <span class="nc">Flyable</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">fly</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kd">interface</span> <span class="nc">Swimmable</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">swim</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Bird</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Flyable</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">fly</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Bird is flying&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Fish</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Swimmable</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">swim</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Fish is swimming&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MultipleInheritanceDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;</span><span class="w"> </span><span class="n">entities</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">entities</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Bird</span><span class="p">());</span>
+<span class="w">        </span><span class="n">entities</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Fish</span><span class="p">());</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">entity</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">entities</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">entity</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="n">Flyable</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="p">((</span><span class="n">Flyable</span><span class="p">)</span><span class="w"> </span><span class="n">entity</span><span class="p">).</span><span class="na">fly</span><span class="p">();</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">entity</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="n">Swimmable</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="p">((</span><span class="n">Swimmable</span><span class="p">)</span><span class="w"> </span><span class="n">entity</span><span class="p">).</span><span class="na">swim</span><span class="p">();</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Hierarchical Inheritance:
+In hierarchical inheritance, a single superclass is extended by multiple subclasses.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+
+<span class="kd">class</span> <span class="nc">Shape</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Drawing a shape&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Circle</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Shape</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Drawing a circle&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Rectangle</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Shape</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Drawing a rectangle&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HierarchicalInheritanceDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Shape</span><span class="o">&gt;</span><span class="w"> </span><span class="n">shapes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">shapes</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Circle</span><span class="p">());</span>
+<span class="w">        </span><span class="n">shapes</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Rectangle</span><span class="p">());</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Shape</span><span class="w"> </span><span class="n">shape</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">shapes</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">shape</span><span class="p">.</span><span class="na">draw</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </section>
 <section id="writing-constructors-for-subclasses">
 <h2>9.2 Writing Constructors for Subclasses<a class="headerlink" href="#writing-constructors-for-subclasses" title="Permalink to this heading">#</a></h2>
