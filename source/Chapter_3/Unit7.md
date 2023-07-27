@@ -241,6 +241,92 @@ Orange
 ```
 
 ## 7.4 Developing Algorithms Using ArrayLists
+**Goals**
+- Identify, modify, and develop standard array traversal algorithms using ArrayLists.
+- Use standard traversal algorithms to insert and delete ArrayList elements.
+- Use multiple ArrayLists to accomplish a traversing algorithm.
+
+In this Java program, we'll identify, modify, and develop standard array traversal algorithms using `ArrayLists`. We'll use standard traversal algorithms to insert and delete elements in `ArrayLists`, and we'll also demonstrate how to use multiple `ArrayLists` to accomplish a traversing algorithm.
+
+```java
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class ArrayListTraversalExample {
+    public static void main(String[] args) {
+        // Create an ArrayList of integers
+        ArrayList<Integer> numbersList = new ArrayList<>();
+
+        // Insert elements into the ArrayList using add() method
+        numbersList.add(10);
+        numbersList.add(20);
+        numbersList.add(30);
+        numbersList.add(40);
+        numbersList.add(50);
+
+        // Display the ArrayList using standard traversal (using for-each loop)
+        System.out.println("ArrayList using for-each loop:");
+        for (int number : numbersList) {
+            System.out.print(number + " ");
+        }
+        System.out.println();
+
+        // Delete elements from the ArrayList using remove() method
+        numbersList.remove(2); // Removes the element at index 2 (30)
+        numbersList.remove(Integer.valueOf(40)); // Removes the value 40 from the list
+
+        // Display the modified ArrayList using standard traversal (using iterator)
+        System.out.println("Modified ArrayList using iterator:");
+        Iterator<Integer> iterator = numbersList.iterator();
+        while (iterator.hasNext()) {
+            System.out.print(iterator.next() + " ");
+        }
+        System.out.println();
+
+        // Create another ArrayList to accomplish a traversing algorithm
+        ArrayList<String> fruitsList = new ArrayList<>();
+        fruitsList.add("Apple");
+        fruitsList.add("Banana");
+        fruitsList.add("Orange");
+        fruitsList.add("Mango");
+        fruitsList.add("Grapes");
+
+        // Use multiple ArrayLists to perform a traversing algorithm (combining the lists)
+        ArrayList<Object> combinedList = new ArrayList<>();
+        combinedList.addAll(numbersList);
+        combinedList.addAll(fruitsList);
+
+        // Display the combined ArrayList
+        System.out.println("Combined ArrayList:");
+        for (Object item : combinedList) {
+            System.out.print(item + " ");
+        }
+    }
+}
+```
+
+Explanation:
+
+- We create an ArrayList named numbersList and insert integers into it using the add() method.
+- We demonstrate standard array traversal using a for-each loop to display the elements of numbersList.
+- We then remove elements from the numbersList using the remove() method (by index and by value).
+- We display the modified numbersList using an iterator to traverse the list.
+- We create another ArrayList named fruitsList and insert strings (fruits) into it.
+- We use the addAll() method to combine the numbersList and fruitsList into a new ArrayList named combinedList.
+- We traverse the combinedList using a for-each loop and display its elements.
+
+When you run this program, it will output:
+
+```java
+ArrayList using for-each loop:
+10 20 30 40 50 
+Modified ArrayList using iterator:
+10 20 40 50 
+Combined ArrayList:
+10 20 40 50 Apple Banana Orange Mango Grapes
+```
+
+This program demonstrates various array traversal algorithms using ArrayLists, including standard traversal using for-each loops and iterators. It also shows how to insert and delete elements from ArrayLists and how to use multiple ArrayLists to accomplish a traversing algorithm.
 
 
 ## 7.5 Searching
@@ -564,11 +650,7 @@ The questions will require students to research on the Internet and/or library. 
 
 Andrew Meyenn received master of science and master of education degrees from the University of Melbourne in Australia as part of a doctoral program in e-learning. He is the head of the information technology (IT) learning area at Wesley College in Melbourne and lectures on IT professional issues at the University of Melbourne and at Central Queensland University. Author of a number of textbooks, he is the coauthor, with Richard Jones, of Computer Science: Java Enabled, for use with the International Baccalaureate (IB) diploma program; Meyenn and Jones are developing an online teaching resource for IB computer science. He is a member of the Computer Science Teachers Association (CSTA).
 
-Authored by
+Authored by Andrew Meyenn
 
-Andrew Meyenn
-
-Wesley College
-
-Melbourne, Australia
+Wesley College, Melbourne, Australia
 
