@@ -9,17 +9,126 @@
   - Create a roadmap for the next activities.
 
 
-A class is a blueprint for the objects of that class. A class contains variables and methods to store and manipulate information. To create a class, you first state whether you want it to be public or private, use the class keyword, and name the class. Then, you add a set of curly braces {} that will contain the contents of the class. To understand the key components of classes, we will create an NewClass class. This is the class header:
+A class is a blueprint for the objects of that class. A class contains variables and methods to store and manipulate information. To create a class, you first state whether you want it to be public or private, use the class keyword, and name the class. Then, you add a set of curly braces {} that will contain the contents of the class. 
 
-public class NewClass {}
+Let's create a Java program that explains the anatomy and design principles of a class. We'll define a class called Student to demonstrate the concepts. Here's the code:
 
-Inside the curly braces, you can define the variables and methods of the class. Variables are used to store data, and methods are used to perform actions. In the NewClass class, we can create an instance variable to store the number of students in a classroom:
+```java
 
-public class NewClass {
+// Class definition
+public class Student {
+    // Instance variables (attributes)
+    private String name;
+    private int age;
+    private String studentId;
 
-      private int numStudents;
+    // Constructor
+    public Student(String name, int age, String studentId) {
+        this.name = name;
+        this.age = age;
+        this.studentId = studentId;
+    }
+
+    // Method to get the name of the student
+    public String getName() {
+        return name;
+    }
+
+    // Method to set the name of the student
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // Method to get the age of the student
+    public int getAge() {
+        return age;
+    }
+
+    // Method to set the age of the student
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    // Method to get the student ID
+    public String getStudentId() {
+        return studentId;
+    }
+
+    // Method to set the student ID
+    public void setStudentId(String studentId) {
+        this.studentId = studentId;
+    }
+
+    // Method to display student information
+    public void displayInfo() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Student ID: " + studentId);
+    }
+
+    // Main method to test the Student class
+    public static void main(String[] args) {
+        // Creating a Student object using the constructor
+        Student student1 = new Student("Ted Lasso", 45, "12345");
+
+        // Displaying the initial information
+        System.out.println("Initial Information:");
+        student1.displayInfo();
+
+        // Modifying student attributes using setter methods
+        student1.setName("Roy Kent");
+        student1.setAge(35);
+
+        // Displaying the updated information
+        System.out.println("\nUpdated Information:");
+        student1.displayInfo();
+    }
 }
 
+```
+
+- We define the Student class, which represents a student with attributes such as name, age, and studentId.
+- We use the access modifier private to encapsulate the attributes, ensuring that they can only be accessed or modified through public methods (getters and setters).
+- The constructor public Student(String name, int age, String studentId) is used to initialize the Student object when it's created.
+- We provide public getter and setter methods for each attribute to control access to the class's data. For example, getName() returns the name of the student, and setName(String name) sets the name of the student.
+- The displayInfo() method is used to display the student's information in a formatted manner.
+- In the main method, we create a Student object and demonstrate the usage of getter and setter methods to access and modify the attributes of the object.
+
+Design Principles of a Class:
+
+- Encapsulation: We use access modifiers (private, public, protected) to encapsulate the attributes, allowing controlled access to them. Getter and setter methods help in accessing and modifying the attributes while maintaining data integrity.
+
+- Abstraction: The Student class abstracts the concept of a student by defining its attributes and behaviors. It hides the implementation details and exposes only essential features.
+
+- Modularity: The class is a modular unit that can be used in various parts of the program. It represents a single entity or concept (a student in this case) and can be reused as needed.
+
+- Cohesion: The Student class is designed to have high cohesion, meaning it focuses on a single responsibility, managing student information.
+
+- Single Responsibility Principle (SRP): The Student class adheres to SRP, as it only deals with managing student-related attributes and behaviors.
+
+- Information Hiding: We hide the internal details of the class by making attributes private. External code interacts with the class only through well-defined methods.
+
+- Constructor: The class has a constructor to ensure proper initialization of objects during creation.
+
+- Code Reusability: We can create multiple Student objects using the same class blueprint, promoting code reusability.
+
+- Getter and Setter Methods: The use of getter and setter methods ensures controlled access to attributes and adheres to the principle of encapsulation.
+
+When you run this program, it will output:
+
+```java
+Initial Information:
+Name: Ted Lasso
+Age: 45
+Student ID: 12345
+
+Updated Information:
+Name: Roy Kent
+Age: 35
+Student ID: 12345
+```
+
+This program demonstrates the anatomy and design principles of a class by creating the Student class, encapsulating its attributes, providing getter and setter methods for controlled access, and demonstrating the concept of information hiding and abstraction.
 
 ### 5.2 Constructors
 **Goals**
@@ -537,10 +646,186 @@ This program demonstrates how to define behaviors of an object using non-void cl
 - Define behaviors of a class through static methods.
 - Define the static variables that belong to the class.
 
+In this Java program, we'll define behaviors of a class through static methods and define static variables that belong to the class. We'll create a simple MathUtility class to demonstrate this.
+
+```java
+public class MathUtility {
+    // Static variables (belong to the class)
+    private static final double PI = 3.14159;
+    private static int count = 0;
+
+    // Static method to calculate the area of a circle
+    public static double calculateCircleArea(double radius) {
+        return PI * radius * radius;
+    }
+
+    // Static method to calculate the factorial of a number
+    public static int calculateFactorial(int n) {
+        if (n == 0 || n == 1) {
+            return 1;
+        } else {
+            return n * calculateFactorial(n - 1);
+        }
+    }
+
+    // Static method to increment the count variable
+    public static void incrementCount() {
+        count++;
+    }
+
+    // Static method to get the current count value
+    public static int getCount() {
+        return count;
+    }
+
+    // Main method to test the MathUtility class
+    public static void main(String[] args) {
+        // Calculate the area of a circle
+        double radius = 5.0;
+        double area = calculateCircleArea(radius);
+        System.out.println("Area of the circle with radius " + radius + " is: " + area);
+
+        // Calculate factorial
+        int number = 5;
+        int factorial = calculateFactorial(number);
+        System.out.println("Factorial of " + number + " is: " + factorial);
+
+        // Increment the count and display the current value
+        incrementCount();
+        incrementCount();
+        System.out.println("Current count value: " + getCount());
+    }
+}
+```
+
+Explanation:
+
+- We create a class called MathUtility.
+- Inside the class, we define two static variables: PI (representing the mathematical constant π) and count (to keep track of the number of times we call the incrementCount() method).
+- We define three static methods: calculateCircleArea(), calculateFactorial(), and incrementCount().
+- The calculateCircleArea() method calculates the area of a circle given its radius using the PI static variable.
+- The calculateFactorial() method calculates the factorial of a number using recursion.
+- The incrementCount() method increments the count static variable by 1.
+- The getCount() method returns the current value of the count static variable.
+- In the main method, we test the static methods by calling them with sample values and display the results.
+
+When you run this program, it will output:
+
+```java
+Area of the circle with radius 5.0 is: 78.53975
+Factorial of 5 is: 120
+Current count value: 2
+```
+
+This program demonstrates how to define behaviors of a class through static methods (`calculateCircleArea()`, `calculateFactorial()`, `incrementCount()`) and how to define static variables (PI, count) that belong to the class `MathUtility`. Static methods and variables are associated with the class itself rather than specific instances (objects) of the class.
+
 
 ### 5.8 Scope and Access
 **Goals**
 - Explain where variables can be used in a program
+
+In this Java program, we'll demonstrate the scope and access levels of variables in a program. We'll use different types of variables, including instance variables, local variables, and static variables, and show where they can be accessed.
+
+```java
+public class ScopeAndAccessExample {
+    // Instance variable (accessible throughout the class)
+    private String instanceVariable = "I am an instance variable";
+
+    // Static variable (accessible throughout the class and shared among all instances)
+    private static int staticVariable = 10;
+
+    // Method with local variable
+    public void exampleMethod() {
+        // Local variable (accessible only within this method)
+        int localVariable = 5;
+
+        // Accessing instance and static variables from this method
+        System.out.println("Inside exampleMethod:");
+        System.out.println(instanceVariable); // Accessing instance variable
+        System.out.println("Static variable: " + staticVariable); // Accessing static variable
+        System.out.println("Local variable: " + localVariable); // Accessing local variable
+    }
+
+    // Another method accessing instance and static variables
+    public void anotherMethod() {
+        // Accessing instance and static variables from this method
+        System.out.println("Inside anotherMethod:");
+        System.out.println(instanceVariable); // Accessing instance variable
+        System.out.println("Static variable: " + staticVariable); // Accessing static variable
+
+        // The following line will give a compilation error because localVariable is not accessible here.
+        // System.out.println("Local variable: " + localVariable);
+    }
+
+    // Static method accessing static variable
+    public static void staticMethod() {
+        // Accessing static variable from a static method
+        System.out.println("Inside staticMethod:");
+        System.out.println("Static variable: " + staticVariable);
+        
+        // The following line will give a compilation error because instanceVariable is not accessible here.
+        // System.out.println(instanceVariable);
+        
+        // We can create local variables inside static methods
+        int localVariable = 20;
+        System.out.println("Local variable inside staticMethod: " + localVariable);
+    }
+
+    // Main method to test the ScopeAndAccessExample class
+    public static void main(String[] args) {
+        // Creating an object of the class
+        ScopeAndAccessExample example = new ScopeAndAccessExample();
+
+        // Accessing instance variable
+        System.out.println("Accessing instance variable from the main method:");
+        System.out.println(example.instanceVariable);
+
+        // Accessing static variable
+        System.out.println("Accessing static variable from the main method: " + staticVariable);
+
+        // Accessing local variable from a non-static method
+        example.exampleMethod();
+
+        // Accessing instance and static variables from another non-static method
+        example.anotherMethod();
+
+        // Accessing static variable from a static method
+        staticMethod();
+
+        // The following line will give a compilation error because localVariable is not accessible here.
+        // System.out.println("Local variable from the main method: " + localVariable);
+    }
+}
+```
+
+Explanation:
+
+- We have a class `ScopeAndAccessExample` that contains instance variables, `instanceVariable`, and a static variable, `staticVariable`.
+- We have three methods: `exampleMethod()`, `anotherMethod()`, and `staticMethod()`, each demonstrating different types of variables and their scope and access.
+- Inside `exampleMethod()`, we can access instance and static variables along with the local variable localVariable.
+- Inside `anotherMethod()`, we can access instance and static variables, but we cannot access the localVariable from exampleMethod() because it's a local variable and has a limited scope within that method.
+- In `staticMethod()`, which is a static method, we can only access static variables, not instance variables. However, we can create and access local variables inside static methods.
+- In the `main` method, we demonstrate accessing instance and static variables from the object of the class, and we call the methods to showcase their behavior.
+
+When you run this program, it will output:
+
+```java
+Accessing instance variable from the main method:
+I am an instance variable
+Accessing static variable from the main method: 10
+Inside exampleMethod:
+I am an instance variable
+Static variable: 10
+Local variable: 5
+Inside anotherMethod:
+I am an instance variable
+Static variable: 10
+Inside staticMethod:
+Static variable: 10
+Local variable inside staticMethod: 20
+```
+
+This program demonstrates the scope and access levels of variables in a Java program. It showcases how instance variables are accessible throughout the class, static variables are shared among all instances of the class, and local variables are limited to the method where they are declared. Static methods can only access static variables, whereas non-static methods can access both instance and static variables.
 
 
 ### 5.9 this Keyword
@@ -638,12 +923,46 @@ Grade : 12
 - Understand beneficial and/or harmful effects of programs.
 - Develop awareness around the ethical issues applying to internet service providers.
 
-Computing systems and it's affect on society: 
-- Privacy: 
-- Security: 
-- Accessibility: 
-- Censorship: 
-- Dependence: 
+
+Ethical and social implications of computing systems are becoming increasingly important as technology plays an ever-expanding role in our lives. Here, we'll discuss some of the ethical and social considerations, the beneficial and harmful effects of programs, and how to develop awareness around ethical issues for internet service providers (ISPs).
+
+**Ethical and Social Implications of Computing Systems:**
+
+- Privacy Concerns: Computing systems often collect and store vast amounts of personal data, raising concerns about privacy and data security. Users' personal information must be handled responsibly and ethically to protect their rights.
+
+- Bias and Discrimination: Algorithms and AI systems can inherit biases from the data they are trained on, leading to discriminatory outcomes in decision-making processes. It is essential to ensure fairness and avoid perpetuating existing biases.
+
+- Autonomy and Control: As technology advances, concerns about the increasing automation and decision-making powers of machines arise. Balancing autonomy with human control is crucial to prevent potential harm.
+
+- Cybersecurity: Computing systems' vulnerabilities pose significant risks, as cyberattacks and data breaches can have severe consequences for individuals, organizations, and societies. Developing robust security measures is vital to safeguard against such threats.
+
+- Employment Disruption: Automation and AI can lead to job displacement, affecting people's livelihoods and socio-economic stability. Preparing for reskilling and upskilling workers becomes crucial.
+
+- Digital Divide: Unequal access to technology and the internet can exacerbate existing social inequalities, leaving disadvantaged communities behind. Bridging the digital divide is essential for inclusive and equitable technological development.
+
+**Beneficial and Harmful Effects of Programs:**
+
+- Beneficial Effects: Programs can greatly enhance productivity, efficiency, and communication in various fields, such as healthcare, education, research, and entertainment. They enable advancements in scientific discoveries, medical treatments, and data analysis.
+
+- Harmful Effects: Malicious programs, such as viruses and ransomware, can cause significant harm to individuals, businesses, and critical infrastructure. Additionally, poorly designed or implemented programs may lead to system failures, data loss, and security breaches.
+
+**Developing Awareness Around Ethical Issues for ISPs:**
+
+- Transparency: ISPs should be transparent about their data collection practices, policies, and how they use consumers' data. Providing clear privacy policies and user agreements helps build trust with customers.
+
+- Data Protection: ISPs must implement robust data protection measures to safeguard user data from unauthorized access or data breaches. Compliance with data protection regulations is essential.
+
+- Net Neutrality: ISPs should adhere to net neutrality principles, treating all internet traffic equally and not discriminating against specific websites or services.
+
+- Ethical Use of User Data: ISPs should obtain explicit consent before collecting and using users' personal data. Additionally, they should ensure data is anonymized and used for legitimate purposes only.
+
+- Addressing Bias: ISPs should ensure that their algorithms and AI systems are fair and unbiased to avoid discriminatory practices.
+
+- Customer Education: ISPs can play a role in educating their customers about privacy risks, cybersecurity best practices, and how to protect themselves online.
+
+- Collaboration and Accountability: ISPs should collaborate with regulators, industry peers, and stakeholders to address ethical challenges collectively. They should also be accountable for any breaches or violations.
+
+Computing systems have far-reaching ethical and social implications. Emphasizing responsible development, transparency, and user privacy is essential for building trust and ensuring technology benefits society. Awareness around ethical issues for ISPs can lead to better data protection, fair practices, and an inclusive digital future.
 
 ### Assignment 5.10.1
 Research one of the topics above.  Write a reflection that discusses the pros and cons of the topic you chose.  Is it possible to achieve a balance that will benefit society?  If not, what led you to your conclusions?
