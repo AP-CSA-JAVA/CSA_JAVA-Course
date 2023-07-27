@@ -370,6 +370,76 @@ for(int i = 0; i < classroom.length; i ++)
 
 Both standard and enhanced `for` loops are useful in different contexts. For example, since *enhanced* `for` loops make a copy of each element value, they are incapable of changing the value of the elements in an array. If elements need to be altered, *standard* `for` loops are more appropriate. In contrast, if elements just need to be accessed, *enhanced* `for` loops provide a more streamlined way to access elements without the need for a counter, or a potential `ArrayIndexOutOfBounds error`. 
 
+Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. The process is repeated until the list is sorted. Here's a Java program that demonstrates the bubble sort algorithm:
+
+```java
+public class BubbleSortExample {
+    public static void main(String[] args) {
+        int[] arr = {64, 34, 25, 12, 22, 11, 90};
+
+        System.out.println("Original array:");
+        printArray(arr);
+
+        bubbleSort(arr);
+
+        System.out.println("\nSorted array:");
+        printArray(arr);
+    }
+
+    public static void bubbleSort(int[] arr) {
+        int n = arr.length;
+        boolean swapped;
+        
+        for (int i = 0; i < n - 1; i++) {
+            swapped = false;
+            
+            for (int j = 0; j < n - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    // Swap arr[j] and arr[j+1]
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                    
+                    swapped = true;
+                }
+            }
+            
+            // If no two elements were swapped in the inner loop, the array is already sorted.
+            // So, we can break out of the outer loop.
+            if (!swapped) {
+                break;
+            }
+        }
+    }
+
+    public static void printArray(int[] arr) {
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+    }
+}
+```
+
+Explanation:
+
+- We define a class BubbleSortExample with a main method.
+- Inside the main method, we create an array arr with some unsorted elements.
+- We print the original array using the printArray method.
+- We call the bubbleSort method to sort the array using the bubble sort algorithm.
+- The bubbleSort method performs the bubble sort on the array. It uses two nested loops to compare and swap adjacent elements as necessary.
+- The printArray method is used to print the elements of the array.
+- After sorting, we print the sorted array using the printArray method.
+
+When you run this program, it will output:
+
+```java
+Original array:
+64 34 25 12 22 11 90 
+
+Sorted array:
+11 12 22 25 34 64 90 
+```
 
 ## 6.4 Developing Algorithms Using Arrays
 
