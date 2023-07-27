@@ -225,14 +225,112 @@
 <li><p>Use a nonprogramming methodology to design code.</p></li>
 <li><p>Create a roadmap for the next activities.</p></li>
 </ul>
-<p>A class is a blueprint for the objects of that class. A class contains variables and methods to store and manipulate information. To create a class, you first state whether you want it to be public or private, use the class keyword, and name the class. Then, you add a set of curly braces {} that will contain the contents of the class. To understand the key components of classes, we will create an NewClass class. This is the class header:</p>
-<p>public class NewClass {}</p>
-<p>Inside the curly braces, you can define the variables and methods of the class. Variables are used to store data, and methods are used to perform actions. In the NewClass class, we can create an instance variable to store the number of students in a classroom:</p>
-<p>public class NewClass {</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  private int numStudents;
+<p>A class is a blueprint for the objects of that class. A class contains variables and methods to store and manipulate information. To create a class, you first state whether you want it to be public or private, use the class keyword, and name the class. Then, you add a set of curly braces {} that will contain the contents of the class.</p>
+<p>Let’s create a Java program that explains the anatomy and design principles of a class. We’ll define a class called Student to demonstrate the concepts. Here’s the code:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Class definition</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Student</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Instance variables (attributes)</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">studentId</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Constructor</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Student</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">studentId</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">studentId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">studentId</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Method to get the name of the student</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getName</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Method to set the name of the student</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setName</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Method to get the age of the student</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getAge</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Method to set the age of the student</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setAge</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Method to get the student ID</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getStudentId</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">studentId</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Method to set the student ID</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setStudentId</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">studentId</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">studentId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">studentId</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Method to display student information</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">displayInfo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Name: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Age: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">age</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Student ID: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">studentId</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Main method to test the Student class</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Creating a Student object using the constructor</span>
+<span class="w">        </span><span class="n">Student</span><span class="w"> </span><span class="n">student1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Student</span><span class="p">(</span><span class="s">&quot;Ted Lasso&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">45</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;12345&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Displaying the initial information</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Initial Information:&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">student1</span><span class="p">.</span><span class="na">displayInfo</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// Modifying student attributes using setter methods</span>
+<span class="w">        </span><span class="n">student1</span><span class="p">.</span><span class="na">setName</span><span class="p">(</span><span class="s">&quot;Roy Kent&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">student1</span><span class="p">.</span><span class="na">setAge</span><span class="p">(</span><span class="mi">35</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Displaying the updated information</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\nUpdated Information:&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">student1</span><span class="p">.</span><span class="na">displayInfo</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
-<p>}</p>
+<ul class="simple">
+<li><p>We define the Student class, which represents a student with attributes such as name, age, and studentId.</p></li>
+<li><p>We use the access modifier private to encapsulate the attributes, ensuring that they can only be accessed or modified through public methods (getters and setters).</p></li>
+<li><p>The constructor public Student(String name, int age, String studentId) is used to initialize the Student object when it’s created.</p></li>
+<li><p>We provide public getter and setter methods for each attribute to control access to the class’s data. For example, getName() returns the name of the student, and setName(String name) sets the name of the student.</p></li>
+<li><p>The displayInfo() method is used to display the student’s information in a formatted manner.</p></li>
+<li><p>In the main method, we create a Student object and demonstrate the usage of getter and setter methods to access and modify the attributes of the object.</p></li>
+</ul>
+<p>Design Principles of a Class:</p>
+<ul class="simple">
+<li><p>Encapsulation: We use access modifiers (private, public, protected) to encapsulate the attributes, allowing controlled access to them. Getter and setter methods help in accessing and modifying the attributes while maintaining data integrity.</p></li>
+<li><p>Abstraction: The Student class abstracts the concept of a student by defining its attributes and behaviors. It hides the implementation details and exposes only essential features.</p></li>
+<li><p>Modularity: The class is a modular unit that can be used in various parts of the program. It represents a single entity or concept (a student in this case) and can be reused as needed.</p></li>
+<li><p>Cohesion: The Student class is designed to have high cohesion, meaning it focuses on a single responsibility, managing student information.</p></li>
+<li><p>Single Responsibility Principle (SRP): The Student class adheres to SRP, as it only deals with managing student-related attributes and behaviors.</p></li>
+<li><p>Information Hiding: We hide the internal details of the class by making attributes private. External code interacts with the class only through well-defined methods.</p></li>
+<li><p>Constructor: The class has a constructor to ensure proper initialization of objects during creation.</p></li>
+<li><p>Code Reusability: We can create multiple Student objects using the same class blueprint, promoting code reusability.</p></li>
+<li><p>Getter and Setter Methods: The use of getter and setter methods ensures controlled access to attributes and adheres to the principle of encapsulation.</p></li>
+</ul>
+<p>When you run this program, it will output:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Initial</span><span class="w"> </span><span class="n">Information</span><span class="p">:</span>
+<span class="nl">Name</span><span class="p">:</span><span class="w"> </span><span class="n">Ted</span><span class="w"> </span><span class="n">Lasso</span>
+<span class="nl">Age</span><span class="p">:</span><span class="w"> </span><span class="mi">45</span>
+<span class="n">Student</span><span class="w"> </span><span class="n">ID</span><span class="p">:</span><span class="w"> </span><span class="mi">12345</span>
+
+<span class="n">Updated</span><span class="w"> </span><span class="n">Information</span><span class="p">:</span>
+<span class="nl">Name</span><span class="p">:</span><span class="w"> </span><span class="n">Roy</span><span class="w"> </span><span class="n">Kent</span>
+<span class="nl">Age</span><span class="p">:</span><span class="w"> </span><span class="mi">35</span>
+<span class="n">Student</span><span class="w"> </span><span class="n">ID</span><span class="p">:</span><span class="w"> </span><span class="mi">12345</span>
+</pre></div>
+</div>
+<p>This program demonstrates the anatomy and design principles of a class by creating the Student class, encapsulating its attributes, providing getter and setter methods for controlled access, and demonstrating the concept of information hiding and abstraction.</p>
 </section>
 <section id="constructors">
 <h2>5.2 Constructors<a class="headerlink" href="#constructors" title="Permalink to this heading">#</a></h2>
@@ -738,6 +836,74 @@
 <li><p>Define behaviors of a class through static methods.</p></li>
 <li><p>Define the static variables that belong to the class.</p></li>
 </ul>
+<p>In this Java program, we’ll define behaviors of a class through static methods and define static variables that belong to the class. We’ll create a simple MathUtility class to demonstrate this.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MathUtility</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Static variables (belong to the class)</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14159</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Static method to calculate the area of a circle</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">calculateCircleArea</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">radius</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">radius</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">radius</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Static method to calculate the factorial of a number</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">calculateFactorial</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">calculateFactorial</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Static method to increment the count variable</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">incrementCount</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">count</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Static method to get the current count value</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getCount</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">count</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Main method to test the MathUtility class</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Calculate the area of a circle</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">radius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5.0</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">area</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calculateCircleArea</span><span class="p">(</span><span class="n">radius</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Area of the circle with radius &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">radius</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; is: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">area</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Calculate factorial</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">factorial</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calculateFactorial</span><span class="p">(</span><span class="n">number</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Factorial of &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; is: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">factorial</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Increment the count and display the current value</span>
+<span class="w">        </span><span class="n">incrementCount</span><span class="p">();</span>
+<span class="w">        </span><span class="n">incrementCount</span><span class="p">();</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Current count value: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">getCount</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Explanation:</p>
+<ul class="simple">
+<li><p>We create a class called MathUtility.</p></li>
+<li><p>Inside the class, we define two static variables: PI (representing the mathematical constant π) and count (to keep track of the number of times we call the incrementCount() method).</p></li>
+<li><p>We define three static methods: calculateCircleArea(), calculateFactorial(), and incrementCount().</p></li>
+<li><p>The calculateCircleArea() method calculates the area of a circle given its radius using the PI static variable.</p></li>
+<li><p>The calculateFactorial() method calculates the factorial of a number using recursion.</p></li>
+<li><p>The incrementCount() method increments the count static variable by 1.</p></li>
+<li><p>The getCount() method returns the current value of the count static variable.</p></li>
+<li><p>In the main method, we test the static methods by calling them with sample values and display the results.</p></li>
+</ul>
+<p>When you run this program, it will output:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Area</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">circle</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">radius</span><span class="w"> </span><span class="mf">5.0</span><span class="w"> </span><span class="n">is</span><span class="p">:</span><span class="w"> </span><span class="mf">78.53975</span>
+<span class="n">Factorial</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="n">is</span><span class="p">:</span><span class="w"> </span><span class="mi">120</span>
+<span class="n">Current</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="n">value</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span>
+</pre></div>
+</div>
+<p>This program demonstrates how to define behaviors of a class through static methods (<code class="docutils literal notranslate"><span class="pre">calculateCircleArea()</span></code>, <code class="docutils literal notranslate"><span class="pre">calculateFactorial()</span></code>, <code class="docutils literal notranslate"><span class="pre">incrementCount()</span></code>) and how to define static variables (PI, count) that belong to the class <code class="docutils literal notranslate"><span class="pre">MathUtility</span></code>. Static methods and variables are associated with the class itself rather than specific instances (objects) of the class.</p>
 </section>
 <section id="scope-and-access">
 <h2>5.8 Scope and Access<a class="headerlink" href="#scope-and-access" title="Permalink to this heading">#</a></h2>
@@ -745,6 +911,104 @@
 <ul class="simple">
 <li><p>Explain where variables can be used in a program</p></li>
 </ul>
+<p>In this Java program, we’ll demonstrate the scope and access levels of variables in a program. We’ll use different types of variables, including instance variables, local variables, and static variables, and show where they can be accessed.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ScopeAndAccessExample</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Instance variable (accessible throughout the class)</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">instanceVariable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;I am an instance variable&quot;</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Static variable (accessible throughout the class and shared among all instances)</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">staticVariable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Method with local variable</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">exampleMethod</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Local variable (accessible only within this method)</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">localVariable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// Accessing instance and static variables from this method</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Inside exampleMethod:&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">instanceVariable</span><span class="p">);</span><span class="w"> </span><span class="c1">// Accessing instance variable</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Static variable: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">staticVariable</span><span class="p">);</span><span class="w"> </span><span class="c1">// Accessing static variable</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Local variable: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">localVariable</span><span class="p">);</span><span class="w"> </span><span class="c1">// Accessing local variable</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Another method accessing instance and static variables</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">anotherMethod</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Accessing instance and static variables from this method</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Inside anotherMethod:&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">instanceVariable</span><span class="p">);</span><span class="w"> </span><span class="c1">// Accessing instance variable</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Static variable: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">staticVariable</span><span class="p">);</span><span class="w"> </span><span class="c1">// Accessing static variable</span>
+
+<span class="w">        </span><span class="c1">// The following line will give a compilation error because localVariable is not accessible here.</span>
+<span class="w">        </span><span class="c1">// System.out.println(&quot;Local variable: &quot; + localVariable);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Static method accessing static variable</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">staticMethod</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Accessing static variable from a static method</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Inside staticMethod:&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Static variable: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">staticVariable</span><span class="p">);</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c1">// The following line will give a compilation error because instanceVariable is not accessible here.</span>
+<span class="w">        </span><span class="c1">// System.out.println(instanceVariable);</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c1">// We can create local variables inside static methods</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">localVariable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Local variable inside staticMethod: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">localVariable</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Main method to test the ScopeAndAccessExample class</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Creating an object of the class</span>
+<span class="w">        </span><span class="n">ScopeAndAccessExample</span><span class="w"> </span><span class="n">example</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ScopeAndAccessExample</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// Accessing instance variable</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Accessing instance variable from the main method:&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">example</span><span class="p">.</span><span class="na">instanceVariable</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Accessing static variable</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Accessing static variable from the main method: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">staticVariable</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Accessing local variable from a non-static method</span>
+<span class="w">        </span><span class="n">example</span><span class="p">.</span><span class="na">exampleMethod</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// Accessing instance and static variables from another non-static method</span>
+<span class="w">        </span><span class="n">example</span><span class="p">.</span><span class="na">anotherMethod</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// Accessing static variable from a static method</span>
+<span class="w">        </span><span class="n">staticMethod</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// The following line will give a compilation error because localVariable is not accessible here.</span>
+<span class="w">        </span><span class="c1">// System.out.println(&quot;Local variable from the main method: &quot; + localVariable);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Explanation:</p>
+<ul class="simple">
+<li><p>We have a class <code class="docutils literal notranslate"><span class="pre">ScopeAndAccessExample</span></code> that contains instance variables, <code class="docutils literal notranslate"><span class="pre">instanceVariable</span></code>, and a static variable, <code class="docutils literal notranslate"><span class="pre">staticVariable</span></code>.</p></li>
+<li><p>We have three methods: <code class="docutils literal notranslate"><span class="pre">exampleMethod()</span></code>, <code class="docutils literal notranslate"><span class="pre">anotherMethod()</span></code>, and <code class="docutils literal notranslate"><span class="pre">staticMethod()</span></code>, each demonstrating different types of variables and their scope and access.</p></li>
+<li><p>Inside <code class="docutils literal notranslate"><span class="pre">exampleMethod()</span></code>, we can access instance and static variables along with the local variable localVariable.</p></li>
+<li><p>Inside <code class="docutils literal notranslate"><span class="pre">anotherMethod()</span></code>, we can access instance and static variables, but we cannot access the localVariable from exampleMethod() because it’s a local variable and has a limited scope within that method.</p></li>
+<li><p>In <code class="docutils literal notranslate"><span class="pre">staticMethod()</span></code>, which is a static method, we can only access static variables, not instance variables. However, we can create and access local variables inside static methods.</p></li>
+<li><p>In the <code class="docutils literal notranslate"><span class="pre">main</span></code> method, we demonstrate accessing instance and static variables from the object of the class, and we call the methods to showcase their behavior.</p></li>
+</ul>
+<p>When you run this program, it will output:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Accessing</span><span class="w"> </span><span class="n">instance</span><span class="w"> </span><span class="n">variable</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="n">method</span><span class="p">:</span>
+<span class="n">I</span><span class="w"> </span><span class="n">am</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">instance</span><span class="w"> </span><span class="n">variable</span>
+<span class="n">Accessing</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">variable</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="n">method</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span>
+<span class="n">Inside</span><span class="w"> </span><span class="n">exampleMethod</span><span class="p">:</span>
+<span class="n">I</span><span class="w"> </span><span class="n">am</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">instance</span><span class="w"> </span><span class="n">variable</span>
+<span class="n">Static</span><span class="w"> </span><span class="n">variable</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span>
+<span class="n">Local</span><span class="w"> </span><span class="n">variable</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span>
+<span class="n">Inside</span><span class="w"> </span><span class="n">anotherMethod</span><span class="p">:</span>
+<span class="n">I</span><span class="w"> </span><span class="n">am</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">instance</span><span class="w"> </span><span class="n">variable</span>
+<span class="n">Static</span><span class="w"> </span><span class="n">variable</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span>
+<span class="n">Inside</span><span class="w"> </span><span class="n">staticMethod</span><span class="p">:</span>
+<span class="n">Static</span><span class="w"> </span><span class="n">variable</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span>
+<span class="n">Local</span><span class="w"> </span><span class="n">variable</span><span class="w"> </span><span class="n">inside</span><span class="w"> </span><span class="n">staticMethod</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span>
+</pre></div>
+</div>
+<p>This program demonstrates the scope and access levels of variables in a Java program. It showcases how instance variables are accessible throughout the class, static variables are shared among all instances of the class, and local variables are limited to the method where they are declared. Static methods can only access static variables, whereas non-static methods can access both instance and static variables.</p>
 </section>
 <section id="this-keyword">
 <h2>5.9 this Keyword<a class="headerlink" href="#this-keyword" title="Permalink to this heading">#</a></h2>
@@ -844,14 +1108,32 @@
 <li><p>Understand beneficial and/or harmful effects of programs.</p></li>
 <li><p>Develop awareness around the ethical issues applying to internet service providers.</p></li>
 </ul>
-<p>Computing systems and it’s affect on society:</p>
+<p>Ethical and social implications of computing systems are becoming increasingly important as technology plays an ever-expanding role in our lives. Here, we’ll discuss some of the ethical and social considerations, the beneficial and harmful effects of programs, and how to develop awareness around ethical issues for internet service providers (ISPs).</p>
+<p><strong>Ethical and Social Implications of Computing Systems:</strong></p>
 <ul class="simple">
-<li><p>Privacy:</p></li>
-<li><p>Security:</p></li>
-<li><p>Accessibility:</p></li>
-<li><p>Censorship:</p></li>
-<li><p>Dependence:</p></li>
+<li><p>Privacy Concerns: Computing systems often collect and store vast amounts of personal data, raising concerns about privacy and data security. Users’ personal information must be handled responsibly and ethically to protect their rights.</p></li>
+<li><p>Bias and Discrimination: Algorithms and AI systems can inherit biases from the data they are trained on, leading to discriminatory outcomes in decision-making processes. It is essential to ensure fairness and avoid perpetuating existing biases.</p></li>
+<li><p>Autonomy and Control: As technology advances, concerns about the increasing automation and decision-making powers of machines arise. Balancing autonomy with human control is crucial to prevent potential harm.</p></li>
+<li><p>Cybersecurity: Computing systems’ vulnerabilities pose significant risks, as cyberattacks and data breaches can have severe consequences for individuals, organizations, and societies. Developing robust security measures is vital to safeguard against such threats.</p></li>
+<li><p>Employment Disruption: Automation and AI can lead to job displacement, affecting people’s livelihoods and socio-economic stability. Preparing for reskilling and upskilling workers becomes crucial.</p></li>
+<li><p>Digital Divide: Unequal access to technology and the internet can exacerbate existing social inequalities, leaving disadvantaged communities behind. Bridging the digital divide is essential for inclusive and equitable technological development.</p></li>
 </ul>
+<p><strong>Beneficial and Harmful Effects of Programs:</strong></p>
+<ul class="simple">
+<li><p>Beneficial Effects: Programs can greatly enhance productivity, efficiency, and communication in various fields, such as healthcare, education, research, and entertainment. They enable advancements in scientific discoveries, medical treatments, and data analysis.</p></li>
+<li><p>Harmful Effects: Malicious programs, such as viruses and ransomware, can cause significant harm to individuals, businesses, and critical infrastructure. Additionally, poorly designed or implemented programs may lead to system failures, data loss, and security breaches.</p></li>
+</ul>
+<p><strong>Developing Awareness Around Ethical Issues for ISPs:</strong></p>
+<ul class="simple">
+<li><p>Transparency: ISPs should be transparent about their data collection practices, policies, and how they use consumers’ data. Providing clear privacy policies and user agreements helps build trust with customers.</p></li>
+<li><p>Data Protection: ISPs must implement robust data protection measures to safeguard user data from unauthorized access or data breaches. Compliance with data protection regulations is essential.</p></li>
+<li><p>Net Neutrality: ISPs should adhere to net neutrality principles, treating all internet traffic equally and not discriminating against specific websites or services.</p></li>
+<li><p>Ethical Use of User Data: ISPs should obtain explicit consent before collecting and using users’ personal data. Additionally, they should ensure data is anonymized and used for legitimate purposes only.</p></li>
+<li><p>Addressing Bias: ISPs should ensure that their algorithms and AI systems are fair and unbiased to avoid discriminatory practices.</p></li>
+<li><p>Customer Education: ISPs can play a role in educating their customers about privacy risks, cybersecurity best practices, and how to protect themselves online.</p></li>
+<li><p>Collaboration and Accountability: ISPs should collaborate with regulators, industry peers, and stakeholders to address ethical challenges collectively. They should also be accountable for any breaches or violations.</p></li>
+</ul>
+<p>Computing systems have far-reaching ethical and social implications. Emphasizing responsible development, transparency, and user privacy is essential for building trust and ensuring technology benefits society. Awareness around ethical issues for ISPs can lead to better data protection, fair practices, and an inclusive digital future.</p>
 </section>
 <section id="assignment-5-10-1">
 <h2>Assignment 5.10.1<a class="headerlink" href="#assignment-5-10-1" title="Permalink to this heading">#</a></h2>
