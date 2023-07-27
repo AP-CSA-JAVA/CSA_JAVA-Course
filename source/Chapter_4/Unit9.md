@@ -1,6 +1,10 @@
 # Unit 9
 
 ## 9.1 Creating Superclasses and Subclasses
+**Goals**
+- Create an inheritance relationship from a subclass to the superclass.
+- Write program code to define a new type by creating superclasses and subclasses.
+
 
 In Java, there are four different types of inheritance variations that you can demonstrate:
 
@@ -9,119 +13,253 @@ In Java, there are four different types of inheritance variations that you can d
 - multilevel inheritance
 - hierarchical inheritance. 
 
-Here is an example that illustrates each of these variations:
+Here are examples that illustrates each of these variations:
+
+Single Inheritance:
+Single inheritance is a type of inheritance where a class extends only one superclass. In this example, we'll create a base class called Animal and a derived class called Dog, which inherits from Animal.
 
 ```java
 // Single Inheritance
 class Animal {
-    void eat() {
-        System.out.println("Animal is eating.");
+    void sound() {
+        System.out.println("Animals make different sounds.");
     }
 }
 
 class Dog extends Animal {
-    void bark() {
-        System.out.println("Dog is barking.");
+    void sound() {
+        System.out.println("Dog barks.");
     }
 }
 
-// Multiple Inheritance (through interfaces)
-interface Swimming {
-    void swim();
-}
-
-interface Flying {
-    void fly();
-}
-
-class Duck implements Swimming, Flying {
-    public void swim() {
-        System.out.println("Duck is swimming.");
-    }
-    
-    public void fly() {
-        System.out.println("Duck is flying.");
-    }
-}
-
-// Multilevel Inheritance
-class Vehicle {
-    void start() {
-        System.out.println("Vehicle is starting.");
-    }
-}
-
-class Car extends Vehicle {
-    void accelerate() {
-        System.out.println("Car is accelerating.");
-    }
-}
-
-class SportsCar extends Car {
-    void race() {
-        System.out.println("Sports car is racing.");
-    }
-}
-
-// Hierarchical Inheritance
-class Shape {
-    void draw() {
-        System.out.println("Drawing shape.");
-    }
-}
-
-class Circle extends Shape {
-    void drawCircle() {
-        System.out.println("Drawing circle.");
-    }
-}
-
-class Rectangle extends Shape {
-    void drawRectangle() {
-        System.out.println("Drawing rectangle.");
-    }
-}
-
-public class InheritanceDemo {
+public class SingleInheritanceDemo {
     public static void main(String[] args) {
-        // Single Inheritance
         Dog dog = new Dog();
-        dog.eat();
-        dog.bark();
-        System.out.println();
-
-        // Multiple Inheritance (through interfaces)
-        Duck duck = new Duck();
-        duck.swim();
-        duck.fly();
-        System.out.println();
-
-        // Multilevel Inheritance
-        SportsCar sportsCar = new SportsCar();
-        sportsCar.start();
-        sportsCar.accelerate();
-        sportsCar.race();
-        System.out.println();
-
-        // Hierarchical Inheritance
-        Circle circle = new Circle();
-        circle.draw();
-        circle.drawCircle();
-        System.out.println();
-
-        Rectangle rectangle = new Rectangle();
-        rectangle.draw();
-        rectangle.drawRectangle();
+        dog.sound(); // Output: Dog barks.
     }
 }
 ```
 
-In this program, each inheritance variation is demonstrated through different classes and interfaces:
-1.	Single Inheritance: The Animal class serves as the base class, and the Dog class extends it to inherit its methods (eat()) and add its own method (bark()).
-2.	Multiple Inheritance (through interfaces): The Swimming and Flying interfaces define methods swim() and fly(), respectively. The Duck class implements both interfaces and provides their implementations.
-3.	Multilevel Inheritance: The Vehicle class is the base class, the Car class extends it, and the SportsCar class further extends the Car class. Each subclass inherits and adds its own methods (start(), accelerate(), race()).
-4.	Hierarchical Inheritance: The Shape class is the base class, and the Circle and Rectangle classes extend it. Each subclass inherits the draw() method and adds its own specific method (drawCircle(), drawRectangle()).
-When you run this program, it will demonstrate the different variations of inheritance by invoking the appropriate methods on the instantiated objects.
+Multiple Inheritance (through interfaces):
+Java does not support multiple inheritance of classes due to the "diamond problem" where ambiguity may arise when two superclasses have the same method name. However, multiple inheritance can be achieved through interfaces. In this example, we'll create two interfaces, Swim and Fly, and a class Bird that implements both interfaces.
+
+```java
+// Multiple Inheritance (through interfaces)
+interface Swim {
+    void swim();
+}
+
+interface Fly {
+    void fly();
+}
+
+class Bird implements Swim, Fly {
+    public void swim() {
+        System.out.println("Bird can swim.");
+    }
+
+    public void fly() {
+        System.out.println("Bird can fly.");
+    }
+}
+
+public class MultipleInheritanceDemo {
+    public static void main(String[] args) {
+        Bird bird = new Bird();
+        bird.swim(); // Output: Bird can swim.
+        bird.fly();  // Output: Bird can fly.
+    }
+}
+```
+
+Multilevel Inheritance:
+In multilevel inheritance, a class extends another class, and that class further extends another class. In this example, we'll create a base class Vehicle, a derived class Car that inherits from Vehicle, and another class Sedan that inherits from Car.
+
+```java
+// Multilevel Inheritance
+class Vehicle {
+    void drive() {
+        System.out.println("Vehicles can be driven.");
+    }
+}
+
+class Car extends Vehicle {
+    void honk() {
+        System.out.println("Car honks.");
+    }
+}
+
+class Sedan extends Car {
+    void fuelType() {
+        System.out.println("Sedan uses petrol for fuel.");
+    }
+}
+
+public class MultilevelInheritanceDemo {
+    public static void main(String[] args) {
+        Sedan sedan = new Sedan();
+        sedan.drive();    // Output: Vehicles can be driven.
+        sedan.honk();     // Output: Car honks.
+        sedan.fuelType(); // Output: Sedan uses petrol for fuel.
+    }
+}
+```
+
+Hierarchical Inheritance:
+Hierarchical inheritance is a type of inheritance where multiple classes inherit from a single base class. In this example, we'll create a base class Shape and two derived classes Circle and Square, which both inherit from Shape.
+
+```java
+// Hierarchical Inheritance
+class Shape {
+    void draw() {
+        System.out.println("Shapes can be drawn.");
+    }
+}
+
+class Circle extends Shape {
+    void draw() {
+        System.out.println("Circle can be drawn.");
+    }
+}
+
+class Square extends Shape {
+    void draw() {
+        System.out.println("Square can be drawn.");
+    }
+}
+
+public class HierarchicalInheritanceDemo {
+    public static void main(String[] args) {
+        Circle circle = new Circle();
+        Square square = new Square();
+
+        circle.draw(); // Output: Circle can be drawn.
+        square.draw(); // Output: Square can be drawn.
+    }
+}
+```
+
+The three Java programs that demonstrate three different types of inheritance: `single inheritance`, `multiple inheritance (achieved through interfaces)`, and `hierarchical inheritance`. Each program will include an `ArrayList` to showcase different aspects of inheritance.
+
+
+Single Inheritance:
+In single inheritance, a class extends only one superclass.
+
+```java
+import java.util.ArrayList;
+
+class Animal {
+    void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+public class SingleInheritanceDemo {
+    public static void main(String[] args) {
+        ArrayList<Animal> animals = new ArrayList<>();
+        animals.add(new Animal());
+        animals.add(new Dog());
+
+        for (Animal animal : animals) {
+            animal.sound();
+        }
+    }
+}
+```
+
+Multiple Inheritance (Using Interfaces):
+In Java, multiple inheritance can be achieved through interfaces. A class can implement multiple interfaces.
+
+
+```java
+import java.util.ArrayList;
+
+interface Flyable {
+    void fly();
+}
+
+interface Swimmable {
+    void swim();
+}
+
+class Bird implements Flyable {
+    @Override
+    public void fly() {
+        System.out.println("Bird is flying");
+    }
+}
+
+class Fish implements Swimmable {
+    @Override
+    public void swim() {
+        System.out.println("Fish is swimming");
+    }
+}
+
+public class MultipleInheritanceDemo {
+    public static void main(String[] args) {
+        ArrayList<Object> entities = new ArrayList<>();
+        entities.add(new Bird());
+        entities.add(new Fish());
+
+        for (Object entity : entities) {
+            if (entity instanceof Flyable) {
+                ((Flyable) entity).fly();
+            } else if (entity instanceof Swimmable) {
+                ((Swimmable) entity).swim();
+            }
+        }
+    }
+}
+```
+
+Hierarchical Inheritance:
+In hierarchical inheritance, a single superclass is extended by multiple subclasses.
+
+
+```java
+import java.util.ArrayList;
+
+class Shape {
+    void draw() {
+        System.out.println("Drawing a shape");
+    }
+}
+
+class Circle extends Shape {
+    @Override
+    void draw() {
+        System.out.println("Drawing a circle");
+    }
+}
+
+class Rectangle extends Shape {
+    @Override
+    void draw() {
+        System.out.println("Drawing a rectangle");
+    }
+}
+
+public class HierarchicalInheritanceDemo {
+    public static void main(String[] args) {
+        ArrayList<Shape> shapes = new ArrayList<>();
+        shapes.add(new Circle());
+        shapes.add(new Rectangle());
+
+        for (Shape shape : shapes) {
+            shape.draw();
+        }
+    }
+}
+```
+
 
 
 ## 9.2 Writing Constructors for Subclasses
