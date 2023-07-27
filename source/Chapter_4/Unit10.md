@@ -2,6 +2,83 @@
 
 ## 10.1 Recursion
 
+**Goals**
+- Learn about methods that call themselves.
+- Trace the results of a recursive call to determine the results.
+- Rewrite a recursive algorithm as an interactive method.
+
+In Java, multiple inheritance can be achieved through interfaces, and we can use an ArrayList along with recursion to demonstrate the concept. Let's create a program that models a hierarchy of employees in a company using multiple inheritance through interfaces. We'll also use recursion to calculate the total salary of all employees in the hierarchy.
+
+```java
+import java.util.ArrayList;
+
+interface Employee {
+    double getSalary();
+}
+
+class Manager implements Employee {
+    private double baseSalary;
+    private ArrayList<Employee> subordinates;
+
+    public Manager(double baseSalary) {
+        this.baseSalary = baseSalary;
+        this.subordinates = new ArrayList<>();
+    }
+
+    public void addSubordinate(Employee employee) {
+        subordinates.add(employee);
+    }
+
+    @Override
+    public double getSalary() {
+        double totalSalary = baseSalary;
+        for (Employee subordinate : subordinates) {
+            totalSalary += subordinate.getSalary();
+        }
+        return totalSalary;
+    }
+}
+
+class RegularEmployee implements Employee {
+    private double salary;
+
+    public RegularEmployee(double salary) {
+        this.salary = salary;
+    }
+
+    @Override
+    public double getSalary() {
+        return salary;
+    }
+}
+
+public class MultipleInheritanceWithArrayListAndRecursion {
+    public static void main(String[] args) {
+        RegularEmployee employee1 = new RegularEmployee(3000);
+        RegularEmployee employee2 = new RegularEmployee(2500);
+        RegularEmployee employee3 = new RegularEmployee(2000);
+
+        Manager manager1 = new Manager(5000);
+        manager1.addSubordinate(employee1);
+        manager1.addSubordinate(employee2);
+
+        Manager manager2 = new Manager(4500);
+        manager2.addSubordinate(manager1);
+        manager2.addSubordinate(employee3);
+
+        System.out.println("Total salary for manager1 and his subordinates: $" + manager1.getSalary());
+        System.out.println("Total salary for manager2 and his subordinates: $" + manager2.getSalary());
+    }
+}
+```
+
+In this program, we have three classes: Employee, Manager, and RegularEmployee. The Employee interface ensures that both Manager and RegularEmployee classes have a getSalary() method. The Manager class contains an ArrayList of subordinates, and the addSubordinate() method is used to add employees to the manager's team.
+
+The main method creates instances of employees and managers, arranges them in a hierarchy, and then calculates the total salary using recursion through the getSalary() method of the Manager class. The program outputs the total salaries for the managers and their subordinates.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+
 Recursion is the technique of making a function call itself. This technique provides a way to break complicated problems down into simple problems which are easier to solve.
 
 Recursion can be challenging, but the best way to understand the nuances of it, is to experiment with it.  The basics of a recursive method is the recursive call and the base case.  The recursive call, calls itself.  It can start over with the same parameter or a different one.  After x calls, we reach the base case where the recusion is stopped.
@@ -47,6 +124,38 @@ When you run this program, it will output the factorial of the number variable, 
 ```Factorial of 5 = 120```
 
 This demonstrates how recursion can be used to solve problems by breaking them down into smaller, simpler subproblems.
+
+Let's create a simple Java program that uses recursion to calculate the factorial of a given number. The factorial of a non-negative integer n is the product of all positive integers less than or equal to n. The factorial of n is denoted as n!.
+
+Factorial Formula: `n! = n * (n-1) * (n-2) * ... * 2 * 1`
+
+When you run this program, it will calculate the factorial of the `number` variable (which is set to 5 in this example). The output will be:
+
+Factorial of 5 is: 120
+
+
+public class FactorialRecursion {
+    public static int factorial(int n) {
+        // Base case: 0! and 1! are both equal to 1
+        if (n == 0 || n == 1) {
+            return 1;
+        } else {
+            // Recursive case: n! = n * (n-1)!
+            return n * factorial(n - 1);
+        }
+    }
+
+    public static void main(String[] args) {
+        int number = 5; // Change this number to calculate the factorial of a different value
+
+        int result = factorial(number);
+        System.out.println("Factorial of " + number + " is: " + result);
+    }
+}
+
+
+The program uses recursion to calculate the factorial. When `factorial(n)` is called, it checks if `n` is equal to 0 or 1 (the base case). If `n` is 0 or 1, it returns 1. Otherwise, it recursively calls `factorial(n - 1)` to calculate `(n-1)!` and multiplies it by `n` to get the final result `n!`.
+
 
 ## 10.2 Recursive Searching and Sorting
 
