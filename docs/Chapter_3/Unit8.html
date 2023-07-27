@@ -219,6 +219,11 @@
 <h1>Unit 8 2D Array<a class="headerlink" href="#unit-8-2d-array" title="Permalink to this heading">#</a></h1>
 <section id="d-arrays">
 <h2>8.1 2D Arrays<a class="headerlink" href="#d-arrays" title="Permalink to this heading">#</a></h2>
+<p><strong>Goals</strong></p>
+<ul class="simple">
+<li><p>Represent collections of related primitive or object reference data using two-dimensional (2D) array objects.</p></li>
+<li><p>Write program code to create elements in 2D array objects.</p></li>
+</ul>
 <p>In Java, a 2D array is organized in rows and columns much like a spreadsheet.  Sometimes it is referred to as an array of arrays.  It is an <code class="docutils literal notranslate"><span class="pre">object</span></code> that contains a set of similar variable data types. Real life examples of 2D Arrays can be a traditional classroom seating chart, a chess board, or the game Connect Four.</p>
 <p>Creating a 2D array is easy.  First you must declare the type of an array that you want to create.  In the example below, we are using <code class="docutils literal notranslate"><span class="pre">int</span></code>.  Then you use 2 sets of open and closed brackets.  Create a name for the array… in this case it is <code class="docutils literal notranslate"><span class="pre">newArray</span></code>.  From there, you will declare it as a new array and define the size of the array.  The code creates a 2D array with 3 rows and 3 columns, and it initializes all the elements to the default value of 0.</p>
 <p><strong>NOTE</strong>: When you initialize a 2D array, you must always specify the first dimension(rows), but you do not need to specify the second dimension(columns).</p>
@@ -252,9 +257,66 @@
 </div>
 <p><strong>NOTE</strong> It is possible for 2D arrays to have different row lengths.</p>
 <p>This statement creates a variable <code class="docutils literal notranslate"><span class="pre">num</span></code> and assigns it the value of the number inside the second array and in the third column, so the number 6. Remember that arrays are zero-indexed, so the first element’s index is 0.</p>
+<p>In this Java program, we’ll represent collections of related data using a two-dimensional (2D) array object. We’ll create a 2D array to store information about students and their scores in different subjects.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">TwoDArrayExample</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Create a 2D array to store student scores</span>
+<span class="w">        </span><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">studentScores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">3</span><span class="o">][</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="c1">// 3 students and 5 subjects</span>
+
+<span class="w">        </span><span class="c1">// Assign values to the elements in the 2D array</span>
+<span class="w">        </span><span class="n">studentScores</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">90</span><span class="p">;</span><span class="w"> </span><span class="c1">// Student 1, Subject 1</span>
+<span class="w">        </span><span class="n">studentScores</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">1</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">85</span><span class="p">;</span><span class="w"> </span><span class="c1">// Student 1, Subject 2</span>
+<span class="w">        </span><span class="n">studentScores</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">2</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">78</span><span class="p">;</span><span class="w"> </span><span class="c1">// Student 1, Subject 3</span>
+<span class="w">        </span><span class="n">studentScores</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">3</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">95</span><span class="p">;</span><span class="w"> </span><span class="c1">// Student 1, Subject 4</span>
+<span class="w">        </span><span class="n">studentScores</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">4</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">88</span><span class="p">;</span><span class="w"> </span><span class="c1">// Student 1, Subject 5</span>
+
+<span class="w">        </span><span class="n">studentScores</span><span class="o">[</span><span class="mi">1</span><span class="o">][</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">75</span><span class="p">;</span><span class="w"> </span><span class="c1">// Student 2, Subject 1</span>
+<span class="w">        </span><span class="n">studentScores</span><span class="o">[</span><span class="mi">1</span><span class="o">][</span><span class="mi">1</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">92</span><span class="p">;</span><span class="w"> </span><span class="c1">// Student 2, Subject 2</span>
+<span class="w">        </span><span class="n">studentScores</span><span class="o">[</span><span class="mi">1</span><span class="o">][</span><span class="mi">2</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">84</span><span class="p">;</span><span class="w"> </span><span class="c1">// Student 2, Subject 3</span>
+<span class="w">        </span><span class="n">studentScores</span><span class="o">[</span><span class="mi">1</span><span class="o">][</span><span class="mi">3</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">80</span><span class="p">;</span><span class="w"> </span><span class="c1">// Student 2, Subject 4</span>
+<span class="w">        </span><span class="n">studentScores</span><span class="o">[</span><span class="mi">1</span><span class="o">][</span><span class="mi">4</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">88</span><span class="p">;</span><span class="w"> </span><span class="c1">// Student 2, Subject 5</span>
+
+<span class="w">        </span><span class="n">studentScores</span><span class="o">[</span><span class="mi">2</span><span class="o">][</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">82</span><span class="p">;</span><span class="w"> </span><span class="c1">// Student 3, Subject 1</span>
+<span class="w">        </span><span class="n">studentScores</span><span class="o">[</span><span class="mi">2</span><span class="o">][</span><span class="mi">1</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">78</span><span class="p">;</span><span class="w"> </span><span class="c1">// Student 3, Subject 2</span>
+<span class="w">        </span><span class="n">studentScores</span><span class="o">[</span><span class="mi">2</span><span class="o">][</span><span class="mi">2</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">90</span><span class="p">;</span><span class="w"> </span><span class="c1">// Student 3, Subject 3</span>
+<span class="w">        </span><span class="n">studentScores</span><span class="o">[</span><span class="mi">2</span><span class="o">][</span><span class="mi">3</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">85</span><span class="p">;</span><span class="w"> </span><span class="c1">// Student 3, Subject 4</span>
+<span class="w">        </span><span class="n">studentScores</span><span class="o">[</span><span class="mi">2</span><span class="o">][</span><span class="mi">4</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">92</span><span class="p">;</span><span class="w"> </span><span class="c1">// Student 3, Subject 5</span>
+
+<span class="w">        </span><span class="c1">// Display the 2D array</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Student Scores:&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">studentScores</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">studentScores</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">studentScores</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;\t&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Explanation:</p>
+<ul class="simple">
+<li><p>We create a 2D array studentScores to store student scores for 3 students (rows) and 5 subjects (columns).</p></li>
+<li><p>We assign values to the elements in the 2D array to represent the scores of each student in each subject.</p></li>
+<li><p>We use nested loops to display the 2D array in a tabular format, showing the scores for each student in each subject.</p></li>
+</ul>
+<p>When you run this program, it will output:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Student</span><span class="w"> </span><span class="n">Scores</span><span class="p">:</span>
+<span class="mi">90</span><span class="w">	</span><span class="mi">85</span><span class="w">	</span><span class="mi">78</span><span class="w">	</span><span class="mi">95</span><span class="w">	</span><span class="mi">88</span><span class="w">	</span>
+<span class="mi">75</span><span class="w">	</span><span class="mi">92</span><span class="w">	</span><span class="mi">84</span><span class="w">	</span><span class="mi">80</span><span class="w">	</span><span class="mi">88</span><span class="w">	</span>
+<span class="mi">82</span><span class="w">	</span><span class="mi">78</span><span class="w">	</span><span class="mi">90</span><span class="w">	</span><span class="mi">85</span><span class="w">	</span><span class="mi">92</span><span class="w">	</span>
+</pre></div>
+</div>
+<p>This program demonstrates how to represent collections of related data using a 2D array in Java. It creates a 2D array studentScores and assigns values to its elements to store student scores in different subjects. The program then displays the 2D array to show the scores for each student in each subject.</p>
 </section>
 <section id="traversing-2d-arrays">
-<h2>Traversing 2D Arrays<a class="headerlink" href="#traversing-2d-arrays" title="Permalink to this heading">#</a></h2>
+<h2>8.2 Traversing 2D Arrays<a class="headerlink" href="#traversing-2d-arrays" title="Permalink to this heading">#</a></h2>
+<p><strong>Goals</strong></p>
+<ul class="simple">
+<li><p>Traverse 2D arrays using nested for and enhanced for loops.</p></li>
+<li><p>Write program code to create, traverse, and manipulate elements in 2D array objects.</p></li>
+<li><p>Use test cases to find errors or validate results.</p></li>
+</ul>
 <p>Now that you know how to create a 2D array, it is important to know how to navigate a 2D array.  One of the ways that you can do this is to reference a specific element within the 2D array.  To access the variables within a 2D array, you can use the syntax newArray[i][j], where i is the index of the row and j is the index of the column.</p>
 <div class="table-wrapper colwidths-auto docutils container">
 <table class="docutils align-default">
@@ -322,6 +384,106 @@
 <span class="mi">11</span><span class="w">  </span><span class="mi">12</span><span class="w">  </span><span class="mi">13</span><span class="w">  </span><span class="mi">14</span><span class="w">  </span><span class="mi">15</span>
 </pre></div>
 </div>
+<p>In this Java program, we’ll traverse a 2D array using nested for and enhanced for loops. We’ll also create the 2D array, traverse it, and manipulate its elements. Finally, we’ll use test cases to find errors and validate the results.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">TwoDArrayTraversalExample</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Create a 2D array to store student scores</span>
+<span class="w">        </span><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">studentScores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="p">{</span><span class="mi">90</span><span class="p">,</span><span class="w"> </span><span class="mi">85</span><span class="p">,</span><span class="w"> </span><span class="mi">78</span><span class="p">,</span><span class="w"> </span><span class="mi">95</span><span class="p">,</span><span class="w"> </span><span class="mi">88</span><span class="p">},</span>
+<span class="w">            </span><span class="p">{</span><span class="mi">75</span><span class="p">,</span><span class="w"> </span><span class="mi">92</span><span class="p">,</span><span class="w"> </span><span class="mi">84</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="mi">88</span><span class="p">},</span>
+<span class="w">            </span><span class="p">{</span><span class="mi">82</span><span class="p">,</span><span class="w"> </span><span class="mi">78</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w"> </span><span class="mi">85</span><span class="p">,</span><span class="w"> </span><span class="mi">92</span><span class="p">}</span>
+<span class="w">        </span><span class="p">};</span>
+
+<span class="w">        </span><span class="c1">// Traverse the 2D array using nested for loops</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Student Scores using nested for loop:&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">studentScores</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">studentScores</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">studentScores</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;\t&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// Traverse the 2D array using enhanced for loop</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\nStudent Scores using enhanced for loop:&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">row</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">studentScores</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">row</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">score</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;\t&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// Manipulate elements in the 2D array</span>
+<span class="w">        </span><span class="n">studentScores</span><span class="o">[</span><span class="mi">1</span><span class="o">][</span><span class="mi">3</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">88</span><span class="p">;</span><span class="w"> </span><span class="c1">// Change the score of Student 2 in Subject 4 to 88</span>
+
+<span class="w">        </span><span class="c1">// Display the modified 2D array</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\nModified Student Scores:&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">row</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">studentScores</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">row</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">score</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;\t&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// Test case to validate the results</span>
+<span class="w">        </span><span class="n">validateScores</span><span class="p">(</span><span class="n">studentScores</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Test case to validate the results</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">validateScores</span><span class="p">(</span><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">scores</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Calculate the total score for each student</span>
+<span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">totalScores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="n">scores</span><span class="p">.</span><span class="na">length</span><span class="o">]</span><span class="p">;</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">scores</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">scores</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">totalScores</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">scores</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// Calculate the average score for each student</span>
+<span class="w">        </span><span class="kt">double</span><span class="o">[]</span><span class="w"> </span><span class="n">averageScores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">double</span><span class="o">[</span><span class="n">scores</span><span class="p">.</span><span class="na">length</span><span class="o">]</span><span class="p">;</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">scores</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">averageScores</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="w"> </span><span class="n">totalScores</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">scores</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// Display the validation results</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\nValidation Results:&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">scores</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Student &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;: Total Score = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">totalScores</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, Average Score = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">averageScores</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Explanation:</p>
+<ul class="simple">
+<li><p>We create a 2D array studentScores and initialize it with student scores for different subjects.</p></li>
+<li><p>We traverse the 2D array using nested for loops and enhanced for loop to display the student scores in tabular format.</p></li>
+<li><p>We manipulate the element studentScores[1][3] to change the score of Student 2 in Subject 4 to 88.</p></li>
+<li><p>We display the modified 2D array to show the changes.</p></li>
+<li><p>We use a test case (validateScores()) to calculate the total and average scores for each student and validate the results.</p></li>
+</ul>
+<p>When you run this program, it will output:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Student</span><span class="w"> </span><span class="n">Scores</span><span class="w"> </span><span class="n">using</span><span class="w"> </span><span class="n">nested</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">loop</span><span class="p">:</span>
+<span class="mi">90</span><span class="w">	</span><span class="mi">85</span><span class="w">	</span><span class="mi">78</span><span class="w">	</span><span class="mi">95</span><span class="w">	</span><span class="mi">88</span><span class="w">	</span>
+<span class="mi">75</span><span class="w">	</span><span class="mi">92</span><span class="w">	</span><span class="mi">84</span><span class="w">	</span><span class="mi">80</span><span class="w">	</span><span class="mi">88</span><span class="w">	</span>
+<span class="mi">82</span><span class="w">	</span><span class="mi">78</span><span class="w">	</span><span class="mi">90</span><span class="w">	</span><span class="mi">85</span><span class="w">	</span><span class="mi">92</span><span class="w">	</span>
+
+<span class="n">Student</span><span class="w"> </span><span class="n">Scores</span><span class="w"> </span><span class="n">using</span><span class="w"> </span><span class="n">enhanced</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">loop</span><span class="p">:</span>
+<span class="mi">90</span><span class="w">	</span><span class="mi">85</span><span class="w">	</span><span class="mi">78</span><span class="w">	</span><span class="mi">95</span><span class="w">	</span><span class="mi">88</span><span class="w">	</span>
+<span class="mi">75</span><span class="w">	</span><span class="mi">92</span><span class="w">	</span><span class="mi">84</span><span class="w">	</span><span class="mi">80</span><span class="w">	</span><span class="mi">88</span><span class="w">	</span>
+<span class="mi">82</span><span class="w">	</span><span class="mi">78</span><span class="w">	</span><span class="mi">90</span><span class="w">	</span><span class="mi">85</span><span class="w">	</span><span class="mi">92</span><span class="w">	</span>
+
+<span class="n">Modified</span><span class="w"> </span><span class="n">Student</span><span class="w"> </span><span class="n">Scores</span><span class="p">:</span>
+<span class="mi">90</span><span class="w">	</span><span class="mi">85</span><span class="w">	</span><span class="mi">78</span><span class="w">	</span><span class="mi">95</span><span class="w">	</span><span class="mi">88</span><span class="w">	</span>
+<span class="mi">75</span><span class="w">	</span><span class="mi">92</span><span class="w">	</span><span class="mi">84</span><span class="w">	</span><span class="mi">88</span><span class="w">	</span><span class="mi">88</span><span class="w">	</span>
+<span class="mi">82</span><span class="w">	</span><span class="mi">78</span><span class="w">	</span><span class="mi">90</span><span class="w">	</span><span class="mi">85</span><span class="w">	</span><span class="mi">92</span><span class="w">	</span>
+
+<span class="n">Validation</span><span class="w"> </span><span class="n">Results</span><span class="p">:</span>
+<span class="n">Student</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="w"> </span><span class="n">Total</span><span class="w"> </span><span class="n">Score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">436</span><span class="p">,</span><span class="w"> </span><span class="n">Average</span><span class="w"> </span><span class="n">Score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">87.2</span>
+<span class="n">Student</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span><span class="w"> </span><span class="n">Total</span><span class="w"> </span><span class="n">Score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">417</span><span class="p">,</span><span class="w"> </span><span class="n">Average</span><span class="w"> </span><span class="n">Score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">83.4</span>
+<span class="n">Student</span><span class="w"> </span><span class="mi">3</span><span class="p">:</span><span class="w"> </span><span class="n">Total</span><span class="w"> </span><span class="n">Score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">427</span><span class="p">,</span><span class="w"> </span><span class="n">Average</span><span class="w"> </span><span class="n">Score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">85.4</span>
+</pre></div>
+</div>
+<p>This program demonstrates how to create, traverse, and manipulate elements in a 2D array using nested for loops and enhanced for loop. It also shows the use of test cases to validate the results, ensuring that the array elements are correctly modified and the calculated total and average scores are accurate.</p>
 </section>
 </section>
 
@@ -382,7 +544,7 @@
             <ul>
 <li><a class="reference internal" href="#">Unit 8 2D Array</a><ul>
 <li><a class="reference internal" href="#d-arrays">8.1 2D Arrays</a></li>
-<li><a class="reference internal" href="#traversing-2d-arrays">Traversing 2D Arrays</a></li>
+<li><a class="reference internal" href="#traversing-2d-arrays">8.2 Traversing 2D Arrays</a></li>
 </ul>
 </li>
 </ul>
