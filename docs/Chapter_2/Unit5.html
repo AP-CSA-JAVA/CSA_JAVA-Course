@@ -2,14 +2,14 @@
 <html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Unit 6" href="../Chapter_3/Unit6.html" /><link rel="prev" title="Unit 4" href="Unit4.html" />
 
-    <!-- Generated with Sphinx 6.2.1 and Furo 2023.05.20 -->
+    <!-- Generated with Sphinx 7.1.0 and Furo 2023.07.26 -->
         <title>Unit 5 - CSA JAVA Course</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=e6660623a769aa55fea372102b9bf3151b292993" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=362ab14a" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=36a5483c" />
     
     
 
@@ -243,6 +243,51 @@
 <li><p>Examine call by value and reference with regard to class constructors.</p></li>
 </ul>
 <p>This information can be found in: <a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/blob/main/source/Chapter_1/Unit2.md#unit-52---constructors">Unit 2: Using Objects</a></p>
+<p>Java constructors are special methods that are used to initialize objects of a class. They are called automatically when an object is created and are used to set initial values or perform setup tasks. Constructors have the same name as the class and do not have a return type.</p>
+<p>Let’s create a simple Java program that explains the use of constructors. In this example, we’ll create a class called Car with a constructor to initialize its properties.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Car</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Instance variables</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">make</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">model</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">year</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// Constructor</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Car</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">make</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">model</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">year</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">make</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">make</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">model</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">year</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">year</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// Method to display car information</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">displayInfo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Car: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; (&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">year</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;)&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// Main method to test the Car class</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Creating objects using the constructor</span>
+<span class="w">        </span><span class="n">Car</span><span class="w"> </span><span class="n">car1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Car</span><span class="p">(</span><span class="s">&quot;Toyota&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Camry&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2022</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Car</span><span class="w"> </span><span class="n">car2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Car</span><span class="p">(</span><span class="s">&quot;Honda&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Civic&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2021</span><span class="p">);</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c1">// Calling the displayInfo method to see the car information</span>
+<span class="w">        </span><span class="n">car1</span><span class="p">.</span><span class="na">displayInfo</span><span class="p">();</span>
+<span class="w">        </span><span class="n">car2</span><span class="p">.</span><span class="na">displayInfo</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>In this program we created a class <code class="docutils literal notranslate"><span class="pre">Car</span></code> with three instance variables: <code class="docutils literal notranslate"><span class="pre">make</span></code>, <code class="docutils literal notranslate"><span class="pre">model</span></code>, and <code class="docutils literal notranslate"><span class="pre">year</span></code>.</p></li>
+<li><p>The class has a constructor <code class="docutils literal notranslate"><span class="pre">Car(String</span> <span class="pre">make,</span> <span class="pre">String</span> <span class="pre">model,</span> <span class="pre">int</span> <span class="pre">year)</span></code> that takes three parameters representing the <code class="docutils literal notranslate"><span class="pre">make</span></code>, <code class="docutils literal notranslate"><span class="pre">model</span></code>, and <code class="docutils literal notranslate"><span class="pre">year</span></code> of the car. Inside the constructor, we initialize the instance variables using the this keyword.</p></li>
+<li><p>There is a method displayInfo() that prints the car information.</p></li>
+<li><p>In the main method, we create two Car objects (car1 and car2) using the constructor. We pass the make, model, and year of the cars as arguments to the constructor.</p></li>
+<li><p>Finally, we call the displayInfo() method on each Car object to display their information.</p></li>
+</ul>
+<p>When you run this program, it will output:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="nl">Car</span><span class="p">:</span><span class="w"> </span><span class="n">Toyota</span><span class="w"> </span><span class="nf">Camry</span><span class="w"> </span><span class="p">(</span><span class="mi">2022</span><span class="p">)</span>
+<span class="nl">Car</span><span class="p">:</span><span class="w"> </span><span class="n">Honda</span><span class="w"> </span><span class="nf">Civic</span><span class="w"> </span><span class="p">(</span><span class="mi">2021</span><span class="p">)</span>
+</pre></div>
+</div>
 </section>
 <section id="documentation-with-comments">
 <h2>5.3 Documentation with Comments<a class="headerlink" href="#documentation-with-comments" title="Permalink to this heading">#</a></h2>
@@ -254,6 +299,165 @@
 </ul>
 <p>This information can be found in:
 <a class="reference external" href="https://ap-csa-java.github.io/CSA_JAVA-Course/Chapter_1/Unit1.html#unit-5-3-documentation-with-comments">Unit 1: Primitive Types</a></p>
+<p>Commenting Java code is essential to improve its readability, explain functionality, and provide information about preconditions and postconditions of methods. Let’s create a Java program with proper comments that demonstrate how to use single-line comments for readability and provide preconditions and postconditions for methods.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MathUtils</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * Adds two integers and returns the result.</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param a The first integer to be added.</span>
+<span class="cm">     * @param b The second integer to be added.</span>
+<span class="cm">     * @return The sum of the two integers.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Performing addition and returning the result</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * Divides two integers and returns the result.</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param dividend The number to be divided (numerator).</span>
+<span class="cm">     * @param divisor  The number to divide by (denominator).</span>
+<span class="cm">     * @return The result of the division.</span>
+<span class="cm">     * @throws ArithmeticException If the divisor is zero.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">divide</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">dividend</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">divisor</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">divisor</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArithmeticException</span><span class="p">(</span><span class="s">&quot;Cannot divide by zero.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="c1">// Performing division and returning the result</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="w"> </span><span class="n">dividend</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">divisor</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * Checks if a number is even.</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param number The number to be checked.</span>
+<span class="cm">     * @return True if the number is even, false otherwise.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">isEven</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// A number is even if it is divisible by 2 without remainder</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * Calculates the factorial of a positive integer.</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param n The positive integer for which to calculate the factorial.</span>
+<span class="cm">     * @return The factorial of the given integer.</span>
+<span class="cm">     * @throws IllegalArgumentException If the input is negative.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">factorial</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&quot;Input must be a non-negative integer.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="c1">// Calculating the factorial using recursion</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Main method to test the MathUtils class</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Sum: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sum</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">divide</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Division Result: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">result</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">isFiveEven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">isEven</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Is 5 even? &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">isFiveEven</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">factorialResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">factorial</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Factorial of 5: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">factorialResult</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IllegalArgumentException</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Error: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ex</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>In the above code:</p>
+<ul class="simple">
+<li><p>We use block comments (/** … */) for documenting the class and each method.</p></li>
+<li><p>For each method, we use single-line comments (//) to explain what the method does concisely.</p></li>
+<li><p>The comments for the methods add, divide, isEven, and factorial serve as preconditions, postconditions, and explanations of their functionalities.</p></li>
+<li><p>In the divide and factorial methods, we also throw exceptions with meaningful messages to indicate any violations of preconditions (divisor is zero or input is negative).</p></li>
+<li><p>The main method is used to test the MathUtils class and its methods.</p></li>
+</ul>
+<p>By providing appropriate comments, we make the code more readable, understandable, and maintainable for ourselves and other developers who might work with the code in the future.</p>
+<p>In this Java program, we’ll implement comments to demonstrate how to properly comment code, use single-line comments to make code more readable, and include precondition and postcondition comments to summarize methods.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CommentingExample</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * This method calculates the sum of two integers.</span>
+<span class="cm">     * </span>
+<span class="cm">     * Precondition: Both `num1` and `num2` must be valid integers.</span>
+<span class="cm">     * </span>
+<span class="cm">     * Postcondition: The result will be the sum of `num1` and `num2`.</span>
+<span class="cm">     * </span>
+<span class="cm">     * @param num1 The first integer.</span>
+<span class="cm">     * @param num2 The second integer.</span>
+<span class="cm">     * @return The sum of `num1` and `num2`.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">calculateSum</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Perform the addition of num1 and num2</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">num2</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">sum</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * This method calculates the factorial of a given number.</span>
+<span class="cm">     * </span>
+<span class="cm">     * Precondition: The input number `n` must be a non-negative integer.</span>
+<span class="cm">     * </span>
+<span class="cm">     * Postcondition: The result will be the factorial of `n`.</span>
+<span class="cm">     * </span>
+<span class="cm">     * @param n The number for which to calculate the factorial.</span>
+<span class="cm">     * @return The factorial of `n`.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">calculateFactorial</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Check if n is non-negative</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&quot;Input must be a non-negative integer.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// Calculate the factorial of n</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">factorial</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">factorial</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">factorial</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Main method to test the functions</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Test calculateSum method</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">resultSum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calculateSum</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Sum: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">resultSum</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Test calculateFactorial method</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">resultFactorial</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calculateFactorial</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Factorial: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">resultFactorial</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Explanation:</p>
+<ul class="simple">
+<li><p>We have created a class CommentingExample that contains two methods: calculateSum and calculateFactorial.</p></li>
+<li><p>For each method, we have added Javadoc comments (enclosed in /** … */) to describe what the method does, its parameters, and its return value.</p></li>
+<li><p>We have used single-line comments (with //) to provide additional explanations of the code steps within the methods.</p></li>
+<li><p>We have implemented preconditions and postconditions comments for each method, stating the requirements before calling the method and the expected result after its execution.</p></li>
+<li><p>In the main method, we test both the calculateSum and calculateFactorial methods to demonstrate their functionality.</p></li>
+</ul>
+<p>When you run this program, it will output:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="nl">Sum</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span>
+<span class="nl">Factorial</span><span class="p">:</span><span class="w"> </span><span class="mi">120</span>
+</pre></div>
+</div>
 </section>
 <section id="accessor-methods">
 <h2>5.4 Accessor Methods<a class="headerlink" href="#accessor-methods" title="Permalink to this heading">#</a></h2>
@@ -347,6 +551,96 @@
 <li><p>Understand how to properly encapsulate the attributes of a class.</p></li>
 <li><p>Write methods to change the encapsulated attributes of a class.</p></li>
 </ul>
+<p>In this Java program, we’ll demonstrate how to properly encapsulate the attributes of a class and how to write methods to change those encapsulated attributes.</p>
+<p>Encapsulation is one of the four fundamental concepts of object-oriented programming (OOP), and it helps in hiding the implementation details of a class while providing access to its data through methods. This promotes data integrity and security by controlling access to the class’s attributes.</p>
+<p>Let’s create a simple class called Person, which will have attributes such as name, age, and address, and we’ll provide public methods to change these attributes in a controlled manner.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Person</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Private encapsulated attributes</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">address</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// Constructor</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Person</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">address</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">address</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">address</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// Public methods to access the attributes (getters)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getName</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getAge</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getAddress</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">address</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// Public methods to change the attributes (setters)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setName</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setAge</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setAddress</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">address</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">address</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">address</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// Method to display person information</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">displayInfo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Name: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Age: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">age</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Address: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">address</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// Main method to test the Person class</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Creating a person object using the constructor</span>
+<span class="w">        </span><span class="n">Person</span><span class="w"> </span><span class="n">person</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Person</span><span class="p">(</span><span class="s">&quot;John Doe&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;123 Main St&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Displaying the initial information</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Initial Information:&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">person</span><span class="p">.</span><span class="na">displayInfo</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// Changing attributes using setters</span>
+<span class="w">        </span><span class="n">person</span><span class="p">.</span><span class="na">setName</span><span class="p">(</span><span class="s">&quot;Jane Smith&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">person</span><span class="p">.</span><span class="na">setAge</span><span class="p">(</span><span class="mi">28</span><span class="p">);</span>
+<span class="w">        </span><span class="n">person</span><span class="p">.</span><span class="na">setAddress</span><span class="p">(</span><span class="s">&quot;456 Elm St&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Displaying the updated information</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\nUpdated Information:&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">person</span><span class="p">.</span><span class="na">displayInfo</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>We have created a class Person with private encapsulated attributes: name, age, and address.</p></li>
+<li><p>The class provides public getter methods (getName(), getAge(), and getAddress()) to access the attribute values.</p></li>
+<li><p>It also provides public setter methods (setName(), setAge(), and setAddress()) to change the attribute values.</p></li>
+<li><p>The displayInfo() method is used to display the person’s information.</p></li>
+<li><p>In the main method, we create a Person object and use the setter methods to change the attributes. We then display the initial and updated information.</p></li>
+</ul>
+<p>When you run this program, it will output:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Initial</span><span class="w"> </span><span class="n">Information</span><span class="p">:</span>
+<span class="nl">Name</span><span class="p">:</span><span class="w"> </span><span class="n">John</span><span class="w"> </span><span class="n">Doe</span>
+<span class="nl">Age</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span>
+<span class="nl">Address</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="w"> </span><span class="n">Main</span><span class="w"> </span><span class="n">St</span>
+
+<span class="n">Updated</span><span class="w"> </span><span class="n">Information</span><span class="p">:</span>
+<span class="nl">Name</span><span class="p">:</span><span class="w"> </span><span class="n">Jane</span><span class="w"> </span><span class="n">Smith</span>
+<span class="nl">Age</span><span class="p">:</span><span class="w"> </span><span class="mi">28</span>
+<span class="nl">Address</span><span class="p">:</span><span class="w"> </span><span class="mi">456</span><span class="w"> </span><span class="n">Elm</span><span class="w"> </span><span class="n">St</span>
+</pre></div>
+</div>
+<p>This program demonstrates proper encapsulation by making the attributes private and providing controlled access to them using public getter and setter methods. It allows you to modify the attributes while maintaining data integrity and encapsulation principles.</p>
 </section>
 <section id="writing-methods">
 <h2>5.6 Writing Methods<a class="headerlink" href="#writing-methods" title="Permalink to this heading">#</a></h2>
@@ -356,6 +650,86 @@
 <li><p>Create new types using classes.</p></li>
 <li><p>Write code to complete code segments.</p></li>
 </ul>
+<p>In this Java program, we’ll demonstrate how to define behaviors of an object using non-void class methods with parameters, create new types using classes, and write code to complete code segments. For this example, we’ll create a simple program to model a bank account.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">BankAccount</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Instance variables</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">accountNumber</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">balance</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// Constructor</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">BankAccount</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">accountNumber</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">initialBalance</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">accountNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">accountNumber</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">balance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">initialBalance</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// Method to deposit money into the account</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">deposit</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">amount</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">amount</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">balance</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">amount</span><span class="p">;</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Deposit successful. New balance: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">balance</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Invalid deposit amount. Please enter a positive value.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// Method to withdraw money from the account</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">withdraw</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">amount</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">amount</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">amount</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">balance</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">balance</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">amount</span><span class="p">;</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Withdrawal successful. New balance: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">balance</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Invalid withdrawal amount. Please check your balance and try again.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// Method to display account information</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">displayInfo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Account Number: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">accountNumber</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Balance: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">balance</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// Main method to test the BankAccount class</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Creating a new bank account</span>
+<span class="w">        </span><span class="n">BankAccount</span><span class="w"> </span><span class="n">account</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BankAccount</span><span class="p">(</span><span class="s">&quot;12345&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">1000.0</span><span class="p">);</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c1">// Displaying account information</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Account Information:&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">account</span><span class="p">.</span><span class="na">displayInfo</span><span class="p">();</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c1">// Making some transactions</span>
+<span class="w">        </span><span class="n">account</span><span class="p">.</span><span class="na">deposit</span><span class="p">(</span><span class="mf">500.0</span><span class="p">);</span>
+<span class="w">        </span><span class="n">account</span><span class="p">.</span><span class="na">withdraw</span><span class="p">(</span><span class="mf">200.0</span><span class="p">);</span>
+<span class="w">        </span><span class="n">account</span><span class="p">.</span><span class="na">withdraw</span><span class="p">(</span><span class="mf">1500.0</span><span class="p">);</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c1">// Displaying updated account information</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\nUpdated Account Information:&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">account</span><span class="p">.</span><span class="na">displayInfo</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>We have created a class BankAccount that represents a bank account with attributes accountNumber and balance.</p></li>
+<li><p>The class constructor takes two parameters, accountNumber and initialBalance, to initialize the account.</p></li>
+<li><p>We have defined two non-void methods, deposit(double amount) and withdraw(double amount), to deposit and withdraw money from the account, respectively. These methods take a double parameter, amount, representing the money to be deposited or withdrawn.</p></li>
+<li><p>The displayInfo() method is used to display the account information.</p></li>
+<li><p>In the main method, we create a BankAccount object and test its functionalities by making deposits and withdrawals, and then displaying the updated account information.</p></li>
+</ul>
+<p>When you run this program, it will output:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Account</span><span class="w"> </span><span class="n">Information</span><span class="p">:</span>
+<span class="n">Account</span><span class="w"> </span><span class="n">Number</span><span class="p">:</span><span class="w"> </span><span class="mi">12345</span>
+<span class="nl">Balance</span><span class="p">:</span><span class="w"> </span><span class="mf">1000.0</span>
+<span class="n">Deposit</span><span class="w"> </span><span class="n">successful</span><span class="p">.</span><span class="w"> </span><span class="n">New</span><span class="w"> </span><span class="n">balance</span><span class="p">:</span><span class="w"> </span><span class="mf">1500.0</span>
+<span class="n">Withdrawal</span><span class="w"> </span><span class="n">successful</span><span class="p">.</span><span class="w"> </span><span class="n">New</span><span class="w"> </span><span class="n">balance</span><span class="p">:</span><span class="w"> </span><span class="mf">1300.0</span>
+<span class="n">Invalid</span><span class="w"> </span><span class="n">withdrawal</span><span class="w"> </span><span class="n">amount</span><span class="p">.</span><span class="w"> </span><span class="n">Please</span><span class="w"> </span><span class="n">check</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">balance</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="k">try</span><span class="w"> </span><span class="n">again</span><span class="p">.</span>
+
+<span class="n">Updated</span><span class="w"> </span><span class="n">Account</span><span class="w"> </span><span class="n">Information</span><span class="p">:</span>
+<span class="n">Account</span><span class="w"> </span><span class="n">Number</span><span class="p">:</span><span class="w"> </span><span class="mi">12345</span>
+<span class="nl">Balance</span><span class="p">:</span><span class="w"> </span><span class="mf">1300.0</span>
+</pre></div>
+</div>
+<p>This program demonstrates how to define behaviors of an object using non-void class methods with parameters (deposit and withdraw methods), create a new type using a class (BankAccount class), and write code to complete code segments for managing bank account transactions.</p>
 </section>
 <section id="static-variables-and-methods">
 <h2>5.7 Static Variables and Methods<a class="headerlink" href="#static-variables-and-methods" title="Permalink to this heading">#</a></h2>
@@ -563,9 +937,9 @@
       
     </aside>
   </div>
-</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/scripts/furo.js"></script>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=e031e9a9"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../_static/scripts/furo.js?v=32e29ea5"></script>
     </body>
 </html>

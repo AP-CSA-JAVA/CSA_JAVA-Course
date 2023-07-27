@@ -29,6 +29,55 @@ public class NewClass {
 
 This information can be found in: [Unit 2: Using Objects](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/blob/main/source/Chapter_1/Unit2.md#unit-52---constructors)
 
+Java constructors are special methods that are used to initialize objects of a class. They are called automatically when an object is created and are used to set initial values or perform setup tasks. Constructors have the same name as the class and do not have a return type.
+
+Let's create a simple Java program that explains the use of constructors. In this example, we'll create a class called Car with a constructor to initialize its properties.
+
+```java
+public class Car {
+    // Instance variables
+    private String make;
+    private String model;
+    private int year;
+    
+    // Constructor
+    public Car(String make, String model, int year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+    
+    // Method to display car information
+    public void displayInfo() {
+        System.out.println("Car: " + make + " " + model + " (" + year + ")");
+    }
+    
+    // Main method to test the Car class
+    public static void main(String[] args) {
+        // Creating objects using the constructor
+        Car car1 = new Car("Toyota", "Camry", 2022);
+        Car car2 = new Car("Honda", "Civic", 2021);
+        
+        // Calling the displayInfo method to see the car information
+        car1.displayInfo();
+        car2.displayInfo();
+    }
+}
+```
+
+- In this program we created a class `Car` with three instance variables: `make`, `model`, and `year`.
+- The class has a constructor `Car(String make, String model, int year)` that takes three parameters representing the `make`, `model`, and `year` of the car. Inside the constructor, we initialize the instance variables using the this keyword.
+- There is a method displayInfo() that prints the car information.
+- In the main method, we create two Car objects (car1 and car2) using the constructor. We pass the make, model, and year of the cars as arguments to the constructor.
+- Finally, we call the displayInfo() method on each Car object to display their information.
+
+When you run this program, it will output:
+
+```java
+Car: Toyota Camry (2022)
+Car: Honda Civic (2021)
+```
+
 ### 5.3 Documentation with Comments
 **Goals**
 - Understand how to properly comment code.
@@ -37,6 +86,173 @@ This information can be found in: [Unit 2: Using Objects](https://github.com/AP-
     
 This information can be found in: 
 [Unit 1: Primitive Types](https://ap-csa-java.github.io/CSA_JAVA-Course/Chapter_1/Unit1.html#unit-5-3-documentation-with-comments)
+
+Commenting Java code is essential to improve its readability, explain functionality, and provide information about preconditions and postconditions of methods. Let's create a Java program with proper comments that demonstrate how to use single-line comments for readability and provide preconditions and postconditions for methods.
+
+```java
+
+public class MathUtils {
+    /**
+     * Adds two integers and returns the result.
+     *
+     * @param a The first integer to be added.
+     * @param b The second integer to be added.
+     * @return The sum of the two integers.
+     */
+    public static int add(int a, int b) {
+        // Performing addition and returning the result
+        return a + b;
+    }
+
+    /**
+     * Divides two integers and returns the result.
+     *
+     * @param dividend The number to be divided (numerator).
+     * @param divisor  The number to divide by (denominator).
+     * @return The result of the division.
+     * @throws ArithmeticException If the divisor is zero.
+     */
+    public static double divide(int dividend, int divisor) {
+        if (divisor == 0) {
+            throw new ArithmeticException("Cannot divide by zero.");
+        }
+        // Performing division and returning the result
+        return (double) dividend / divisor;
+    }
+
+    /**
+     * Checks if a number is even.
+     *
+     * @param number The number to be checked.
+     * @return True if the number is even, false otherwise.
+     */
+    public static boolean isEven(int number) {
+        // A number is even if it is divisible by 2 without remainder
+        return number % 2 == 0;
+    }
+
+    /**
+     * Calculates the factorial of a positive integer.
+     *
+     * @param n The positive integer for which to calculate the factorial.
+     * @return The factorial of the given integer.
+     * @throws IllegalArgumentException If the input is negative.
+     */
+    public static int factorial(int n) {
+        if (n < 0) {
+            throw new IllegalArgumentException("Input must be a non-negative integer.");
+        }
+        // Calculating the factorial using recursion
+        if (n == 0 || n == 1) {
+            return 1;
+        } else {
+            return n * factorial(n - 1);
+        }
+    }
+
+    // Main method to test the MathUtils class
+    public static void main(String[] args) {
+        int sum = add(5, 10);
+        System.out.println("Sum: " + sum);
+
+        double result = divide(20, 4);
+        System.out.println("Division Result: " + result);
+
+        boolean isFiveEven = isEven(5);
+        System.out.println("Is 5 even? " + isFiveEven);
+
+        try {
+            int factorialResult = factorial(5);
+            System.out.println("Factorial of 5: " + factorialResult);
+        } catch (IllegalArgumentException ex) {
+            System.out.println("Error: " + ex.getMessage());
+        }
+    }
+}
+```
+
+In the above code:
+
+- We use block comments (/** ... */) for documenting the class and each method.
+- For each method, we use single-line comments (//) to explain what the method does concisely.
+- The comments for the methods add, divide, isEven, and factorial serve as preconditions, postconditions, and explanations of their functionalities.
+- In the divide and factorial methods, we also throw exceptions with meaningful messages to indicate any violations of preconditions (divisor is zero or input is negative).
+- The main method is used to test the MathUtils class and its methods.
+
+By providing appropriate comments, we make the code more readable, understandable, and maintainable for ourselves and other developers who might work with the code in the future.
+
+In this Java program, we'll implement comments to demonstrate how to properly comment code, use single-line comments to make code more readable, and include precondition and postcondition comments to summarize methods.
+
+```java
+public class CommentingExample {
+    /**
+     * This method calculates the sum of two integers.
+     * 
+     * Precondition: Both `num1` and `num2` must be valid integers.
+     * 
+     * Postcondition: The result will be the sum of `num1` and `num2`.
+     * 
+     * @param num1 The first integer.
+     * @param num2 The second integer.
+     * @return The sum of `num1` and `num2`.
+     */
+    public static int calculateSum(int num1, int num2) {
+        // Perform the addition of num1 and num2
+        int sum = num1 + num2;
+        return sum;
+    }
+
+    /**
+     * This method calculates the factorial of a given number.
+     * 
+     * Precondition: The input number `n` must be a non-negative integer.
+     * 
+     * Postcondition: The result will be the factorial of `n`.
+     * 
+     * @param n The number for which to calculate the factorial.
+     * @return The factorial of `n`.
+     */
+    public static int calculateFactorial(int n) {
+        // Check if n is non-negative
+        if (n < 0) {
+            throw new IllegalArgumentException("Input must be a non-negative integer.");
+        }
+
+        // Calculate the factorial of n
+        int factorial = 1;
+        for (int i = 1; i <= n; i++) {
+            factorial *= i;
+        }
+        return factorial;
+    }
+
+    // Main method to test the functions
+    public static void main(String[] args) {
+        // Test calculateSum method
+        int resultSum = calculateSum(5, 7);
+        System.out.println("Sum: " + resultSum);
+
+        // Test calculateFactorial method
+        int resultFactorial = calculateFactorial(5);
+        System.out.println("Factorial: " + resultFactorial);
+    }
+}
+```
+
+Explanation:
+
+- We have created a class CommentingExample that contains two methods: calculateSum and calculateFactorial.
+- For each method, we have added Javadoc comments (enclosed in /** ... */) to describe what the method does, its parameters, and its return value.
+- We have used single-line comments (with //) to provide additional explanations of the code steps within the methods.
+- We have implemented preconditions and postconditions comments for each method, stating the requirements before calling the method and the expected result after its execution.
+- In the main method, we test both the calculateSum and calculateFactorial methods to demonstrate their functionality.
+
+When you run this program, it will output:
+
+```java
+Sum: 12
+Factorial: 120
+```
 
 ### 5.4 Accessor Methods
 **Goals**
@@ -125,7 +341,105 @@ Updated Max Speed: 250
 ### 5.5 Mutator Methods
 **Goals**
 - Understand how to properly encapsulate the attributes of a class.
-- Write methods to change the encapsulated attributes of a class. 
+- Write methods to change the encapsulated attributes of a class.
+
+In this Java program, we'll demonstrate how to properly encapsulate the attributes of a class and how to write methods to change those encapsulated attributes.
+
+Encapsulation is one of the four fundamental concepts of object-oriented programming (OOP), and it helps in hiding the implementation details of a class while providing access to its data through methods. This promotes data integrity and security by controlling access to the class's attributes.
+
+Let's create a simple class called Person, which will have attributes such as name, age, and address, and we'll provide public methods to change these attributes in a controlled manner.
+
+```java
+
+public class Person {
+    // Private encapsulated attributes
+    private String name;
+    private int age;
+    private String address;
+    
+    // Constructor
+    public Person(String name, int age, String address) {
+        this.name = name;
+        this.age = age;
+        this.address = address;
+    }
+    
+    // Public methods to access the attributes (getters)
+    public String getName() {
+        return name;
+    }
+    
+    public int getAge() {
+        return age;
+    }
+    
+    public String getAddress() {
+        return address;
+    }
+    
+    // Public methods to change the attributes (setters)
+    public void setName(String name) {
+        this.name = name;
+    }
+    
+    public void setAge(int age) {
+        this.age = age;
+    }
+    
+    public void setAddress(String address) {
+        this.address = address;
+    }
+    
+    // Method to display person information
+    public void displayInfo() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Address: " + address);
+    }
+    
+    // Main method to test the Person class
+    public static void main(String[] args) {
+        // Creating a person object using the constructor
+        Person person = new Person("John Doe", 30, "123 Main St");
+
+        // Displaying the initial information
+        System.out.println("Initial Information:");
+        person.displayInfo();
+
+        // Changing attributes using setters
+        person.setName("Jane Smith");
+        person.setAge(28);
+        person.setAddress("456 Elm St");
+
+        // Displaying the updated information
+        System.out.println("\nUpdated Information:");
+        person.displayInfo();
+    }
+}
+
+```
+
+- We have created a class Person with private encapsulated attributes: name, age, and address.
+- The class provides public getter methods (getName(), getAge(), and getAddress()) to access the attribute values.
+- It also provides public setter methods (setName(), setAge(), and setAddress()) to change the attribute values.
+- The displayInfo() method is used to display the person's information.
+- In the main method, we create a Person object and use the setter methods to change the attributes. We then display the initial and updated information.
+
+When you run this program, it will output:
+
+```java
+Initial Information:
+Name: John Doe
+Age: 30
+Address: 123 Main St
+
+Updated Information:
+Name: Jane Smith
+Age: 28
+Address: 456 Elm St
+```
+
+This program demonstrates proper encapsulation by making the attributes private and providing controlled access to them using public getter and setter methods. It allows you to modify the attributes while maintaining data integrity and encapsulation principles.
 
 
 ### 5.6 Writing Methods
@@ -133,7 +447,90 @@ Updated Max Speed: 250
 - Define behaviors of an object using non-void class methods with parameters.
 - Create new types using classes.
 - Write code to complete code segments.
+
+In this Java program, we'll demonstrate how to define behaviors of an object using non-void class methods with parameters, create new types using classes, and write code to complete code segments. For this example, we'll create a simple program to model a bank account.
+
+```java
+public class BankAccount {
+    // Instance variables
+    private String accountNumber;
+    private double balance;
     
+    // Constructor
+    public BankAccount(String accountNumber, double initialBalance) {
+        this.accountNumber = accountNumber;
+        this.balance = initialBalance;
+    }
+    
+    // Method to deposit money into the account
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            System.out.println("Deposit successful. New balance: " + balance);
+        } else {
+            System.out.println("Invalid deposit amount. Please enter a positive value.");
+        }
+    }
+    
+    // Method to withdraw money from the account
+    public void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+            System.out.println("Withdrawal successful. New balance: " + balance);
+        } else {
+            System.out.println("Invalid withdrawal amount. Please check your balance and try again.");
+        }
+    }
+    
+    // Method to display account information
+    public void displayInfo() {
+        System.out.println("Account Number: " + accountNumber);
+        System.out.println("Balance: " + balance);
+    }
+    
+    // Main method to test the BankAccount class
+    public static void main(String[] args) {
+        // Creating a new bank account
+        BankAccount account = new BankAccount("12345", 1000.0);
+        
+        // Displaying account information
+        System.out.println("Account Information:");
+        account.displayInfo();
+        
+        // Making some transactions
+        account.deposit(500.0);
+        account.withdraw(200.0);
+        account.withdraw(1500.0);
+        
+        // Displaying updated account information
+        System.out.println("\nUpdated Account Information:");
+        account.displayInfo();
+    }
+}
+```
+
+- We have created a class BankAccount that represents a bank account with attributes accountNumber and balance.
+- The class constructor takes two parameters, accountNumber and initialBalance, to initialize the account.
+- We have defined two non-void methods, deposit(double amount) and withdraw(double amount), to deposit and withdraw money from the account, respectively. These methods take a double parameter, amount, representing the money to be deposited or withdrawn.
+- The displayInfo() method is used to display the account information.
+- In the main method, we create a BankAccount object and test its functionalities by making deposits and withdrawals, and then displaying the updated account information.
+
+When you run this program, it will output:
+
+```java
+Account Information:
+Account Number: 12345
+Balance: 1000.0
+Deposit successful. New balance: 1500.0
+Withdrawal successful. New balance: 1300.0
+Invalid withdrawal amount. Please check your balance and try again.
+
+Updated Account Information:
+Account Number: 12345
+Balance: 1300.0
+```
+
+This program demonstrates how to define behaviors of an object using non-void class methods with parameters (deposit and withdraw methods), create a new type using a class (BankAccount class), and write code to complete code segments for managing bank account transactions.
     
 ### 5.7 Static Variables and Methods
 **Goals**
