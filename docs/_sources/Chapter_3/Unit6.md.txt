@@ -443,6 +443,73 @@ Sorted array:
 11 12 22 25 34 64 90 
 ```
 
+### Insertion Sort ###
+
+Insertion sort is another simple sorting algorithm that builds the final sorted array one item at a time. It takes each element from the input and inserts it into its correct position in the sorted part of the array. Here's a Java program that demonstrates the insertion sort algorithm:
+
+```java
+public class InsertionSortExample {
+    public static void main(String[] args) {
+        int[] arr = {64, 34, 25, 12, 22, 11, 90};
+
+        System.out.println("Original array:");
+        printArray(arr);
+
+        insertionSort(arr);
+
+        System.out.println("\nSorted array:");
+        printArray(arr);
+    }
+
+    public static void insertionSort(int[] arr) {
+        int n = arr.length;
+
+        for (int i = 1; i < n; i++) {
+            int key = arr[i];
+            int j = i - 1;
+
+            // Move elements that are greater than the key to one position ahead of their current position
+            while (j >= 0 && arr[j] > key) {
+                arr[j + 1] = arr[j];
+                j--;
+            }
+
+            // Insert the key in its correct position
+            arr[j + 1] = key;
+        }
+    }
+
+    public static void printArray(int[] arr) {
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+    }
+}
+```
+
+Explanation:
+
+- We define a class InsertionSortExample with a main method.
+- Inside the main method, we create an array arr with some unsorted elements.
+- We print the original array using the printArray method.
+- We call the insertionSort method to sort the array using the insertion sort algorithm.
+- The insertionSort method performs the insertion sort on the array. It iterates through the array and inserts each element in its correct position in the sorted part of the array.
+- The printArray method is used to print the elements of the array.
+- After sorting, we print the sorted array using the printArray method.
+
+When you run this program, it will output:
+
+```java
+Original array:
+64 34 25 12 22 11 90 
+
+Sorted array:
+11 12 22 25 34 64 90 
+```
+
+
+
 ## 6.4 Developing Algorithms Using Arrays
 
 **Goals**
