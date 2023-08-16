@@ -1,10 +1,15 @@
 // Array Creation File
 
 class Main {
+
   public static void main(String[] args) {
+
     GoalKeeper2.main(args); //Runs GoalKeeper2.java file
+
     Partners.main(args); //Runs Partners.java file
+
     DogArray.main(args); //Runs DogArray.java file
+
   }
 }
 
