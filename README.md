@@ -633,6 +633,8 @@ If you have any questions, please contact me.
  [Java Video Tutorial](https://www.newthinktank.com/videos/java-video-tutorial/)
  
  [Java Visualizer](https://cscircles.cemc.uwaterloo.ca/java_visualize/)
+
+ [Oracle: Class & Methods](https://docs.oracle.com/javase/8/docs/api/overview-summary.html)
  
  [Oracle: Formatting Numeric Print](https://docs.oracle.com/javase/tutorial/java/data/numberformat.html)
  
