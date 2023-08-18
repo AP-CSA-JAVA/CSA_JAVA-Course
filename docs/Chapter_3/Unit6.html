@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Unit 7 ArrayList" href="Unit7.html" /><link rel="prev" title="Unit 5" href="../Chapter_2/Unit5.html" />
 
-    <!-- Generated with Sphinx 7.1.2 and Furo 2023.07.26 -->
+    <!-- Generated with Sphinx 7.2.2 and Furo 2023.08.17 -->
         <title>Unit 6 - CSA JAVA Course</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
@@ -216,9 +216,9 @@
         </div>
         <article role="main">
           <section id="unit-6">
-<h1>Unit 6<a class="headerlink" href="#unit-6" title="Permalink to this heading">#</a></h1>
+<h1>Unit 6<a class="headerlink" href="#unit-6" title="Link to this heading">#</a></h1>
 <section id="array-creation-and-access">
-<h2>6.1 Array Creation and Access<a class="headerlink" href="#array-creation-and-access" title="Permalink to this heading">#</a></h2>
+<h2>6.1 Array Creation and Access<a class="headerlink" href="#array-creation-and-access" title="Link to this heading">#</a></h2>
 <p><strong>Goals</strong></p>
 <ul class="simple">
 <li><p>Represent collections of related primitive or object reference data using arrays.</p></li>
@@ -289,7 +289,7 @@ The last index is 10.</p>
 <p>An array can contain primitives (int, double, boolean) and object (String) references of a class depending on the definition of the array. In the case of primitive data types, the actual values are stored in contiguous memory locations. In the case of class objects, the actual objects are stored in a heap segment.</p>
 </section>
 <section id="traversing-arrays">
-<h2>6.2 Traversing Arrays<a class="headerlink" href="#traversing-arrays" title="Permalink to this heading">#</a></h2>
+<h2>6.2 Traversing Arrays<a class="headerlink" href="#traversing-arrays" title="Link to this heading">#</a></h2>
 <p><strong>Goals</strong></p>
 <ul class="simple">
 <li><p>Traverse the elements in a 1D array.</p></li>
@@ -498,7 +498,7 @@ write a program that will use a while loop to traverse a list in reverse order.<
 </details>
 </section>
 <section id="enhanced-for-loop-for-arrays">
-<h2>6.3 Enhanced for Loop for Arrays<a class="headerlink" href="#enhanced-for-loop-for-arrays" title="Permalink to this heading">#</a></h2>
+<h2>6.3 Enhanced for Loop for Arrays<a class="headerlink" href="#enhanced-for-loop-for-arrays" title="Link to this heading">#</a></h2>
 <p><strong>Goals</strong></p>
 <ul class="simple">
 <li><p>Traverse the elements in a 1D array using an enhanced for loop.</p></li>
@@ -551,7 +551,7 @@ Within the loop, the enhanced <code class="docutils literal notranslate"><span c
 <p><strong>Enhanced <code class="docutils literal notranslate"><span class="pre">for</span></code> Loop Applications</strong></p>
 <p>Both standard and enhanced <code class="docutils literal notranslate"><span class="pre">for</span></code> loops are useful in different contexts. For example, since <em>enhanced</em> <code class="docutils literal notranslate"><span class="pre">for</span></code> loops make a copy of each element value, they are incapable of changing the value of the elements in an array. If elements need to be altered, <em>standard</em> <code class="docutils literal notranslate"><span class="pre">for</span></code> loops are more appropriate. In contrast, if elements just need to be accessed, <em>enhanced</em> <code class="docutils literal notranslate"><span class="pre">for</span></code> loops provide a more streamlined way to access elements without the need for a counter, or a potential <code class="docutils literal notranslate"><span class="pre">ArrayIndexOutOfBounds</span> <span class="pre">error</span></code>.</p>
 <section id="bubble-sort">
-<h3>Bubble Sort<a class="headerlink" href="#bubble-sort" title="Permalink to this heading">#</a></h3>
+<h3>Bubble Sort<a class="headerlink" href="#bubble-sort" title="Link to this heading">#</a></h3>
 <p>Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. The process is repeated until the list is sorted. Here’s a Java program that demonstrates the bubble sort algorithm:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">BubbleSortExample</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -621,7 +621,7 @@ Within the loop, the enhanced <code class="docutils literal notranslate"><span c
 </div>
 </section>
 <section id="insertion-sort">
-<h3>Insertion Sort<a class="headerlink" href="#insertion-sort" title="Permalink to this heading">#</a></h3>
+<h3>Insertion Sort<a class="headerlink" href="#insertion-sort" title="Link to this heading">#</a></h3>
 <p>Insertion sort is another simple sorting algorithm that builds the final sorted array one item at a time. It takes each element from the input and inserts it into its correct position in the sorted part of the array. Here’s a Java program that demonstrates the insertion sort algorithm:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">InsertionSortExample</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -684,7 +684,7 @@ Within the loop, the enhanced <code class="docutils literal notranslate"><span c
 </section>
 </section>
 <section id="developing-algorithms-using-arrays">
-<h2>6.4 Developing Algorithms Using Arrays<a class="headerlink" href="#developing-algorithms-using-arrays" title="Permalink to this heading">#</a></h2>
+<h2>6.4 Developing Algorithms Using Arrays<a class="headerlink" href="#developing-algorithms-using-arrays" title="Link to this heading">#</a></h2>
 <p><strong>Goals</strong></p>
 <ul class="simple">
 <li><p>Identify and modify standard array traversal algorithms.</p></li>
@@ -694,7 +694,7 @@ Within the loop, the enhanced <code class="docutils literal notranslate"><span c
 </ul>
 </section>
 <section id="unit-6-project">
-<h2>Unit 6 Project<a class="headerlink" href="#unit-6-project" title="Permalink to this heading">#</a></h2>
+<h2>Unit 6 Project<a class="headerlink" href="#unit-6-project" title="Link to this heading">#</a></h2>
 <p><strong>Goals</strong></p>
 <ul class="simple">
 <li><p>Organize and encapsulate a set of required features.</p></li>
@@ -810,9 +810,9 @@ player recreates the sequence from memory.</p>
       
     </aside>
   </div>
-</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=e031e9a9"></script>
+</div><script src="../_static/documentation_options.js?v=2709fde1"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
-    <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/furo.js?v=32e29ea5"></script>
     </body>
 </html>

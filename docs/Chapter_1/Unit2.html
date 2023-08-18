@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Unit 3" href="Unit3.html" /><link rel="prev" title="Unit 1 - Primitive Types" href="Unit1.html" />
 
-    <!-- Generated with Sphinx 7.1.2 and Furo 2023.07.26 -->
+    <!-- Generated with Sphinx 7.2.2 and Furo 2023.08.17 -->
         <title>Unit 2 - Using Objects - CSA JAVA Course</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
@@ -216,9 +216,9 @@
         </div>
         <article role="main">
           <section id="unit-2-using-objects">
-<h1>Unit 2 - Using Objects<a class="headerlink" href="#unit-2-using-objects" title="Permalink to this heading">#</a></h1>
+<h1>Unit 2 - Using Objects<a class="headerlink" href="#unit-2-using-objects" title="Link to this heading">#</a></h1>
 <section id="instances-of-classes">
-<h2>2.1 Instances of Classes<a class="headerlink" href="#instances-of-classes" title="Permalink to this heading">#</a></h2>
+<h2>2.1 Instances of Classes<a class="headerlink" href="#instances-of-classes" title="Link to this heading">#</a></h2>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Explain the relationship between a class and an object</p></li>
 </ul>
@@ -256,7 +256,7 @@ Object-oriented Programming Facts:</p>
 </ul>
 </section>
 <section id="creating-and-storing-objects">
-<h2>2.2 Creating and Storing Objects<a class="headerlink" href="#creating-and-storing-objects" title="Permalink to this heading">#</a></h2>
+<h2>2.2 Creating and Storing Objects<a class="headerlink" href="#creating-and-storing-objects" title="Link to this heading">#</a></h2>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Explain the relationship between a class and an object</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Identify different constructor signatures and create objects using them</p></li>
@@ -265,7 +265,7 @@ Object-oriented Programming Facts:</p>
 <p>The next two concepts will be used in most of your programs moving forward.  Read through <strong>constructor</strong> and <strong>toString()</strong> below.</p>
 </section>
 <section id="unit-5-2-constructors">
-<h2>Unit 5.2 - Constructors<a class="headerlink" href="#unit-5-2-constructors" title="Permalink to this heading">#</a></h2>
+<h2>Unit 5.2 - Constructors<a class="headerlink" href="#unit-5-2-constructors" title="Link to this heading">#</a></h2>
 <p>A <strong>constructor</strong> in Java is a special method that is used to initialize objects. The constructor is called when an object of a class is created. It can be used to set the initial values for object attributes/variable names<sup>1</sup>.  It is possible to write two or more constructors within a program.  The difference between the constructors are the <em>parameters</em> that are defined within the constructor itself.  This is known as constructor <strong>overloading</strong>.</p>
 <p>Java is a <em>pass-by-value</em> language.  If we pass a primitive value, we are passing a copy of that value. So, if we change the value inside a constructor, the value outside the constructor doesn’t change.  However, if we are passing a reference type, we are passing a reference to the data location.  If we modify the parameter values inside a constructor, then the object changes outside the constructor too!</p>
 <p>The Box class is located in the file Box.java where you can find the constructor(s).  The signature of the constructor is the class name along with the parameter list, if any.  If you recall from your prior CS courses the word ‘abstraction’.  We are taking the complexity out of the action for the user.  The user does not need to know how constructors work, they just need to know that it does what it is supposed to do within the program.</p>
@@ -289,10 +289,10 @@ Null is a reserved keyword in Java for literal values. It is a value that shows 
 </pre></div>
 </div>
 <p>Sample Output:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span>    myCar=Car@6d06d69c
-    yourCar=Car@7852e922
-    ourCar=Car@4e25154f
-    emptyCar=null
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="n">myCar</span><span class="o">=</span><span class="n">Car</span><span class="err">@</span><span class="mf">6d</span><span class="mo">06</span><span class="n">d69c</span>
+<span class="w">    </span><span class="n">yourCar</span><span class="o">=</span><span class="n">Car</span><span class="err">@</span><span class="mi">7852</span><span class="n">e922</span>
+<span class="w">    </span><span class="n">ourCar</span><span class="o">=</span><span class="n">Car</span><span class="err">@</span><span class="mf">4e25154f</span>
+<span class="w">    </span><span class="n">emptyCar</span><span class="o">=</span><span class="kc">null</span>
 </pre></div>
 </div>
 <p><sup>1 <em>Object names follow the same rules as variable names (because they can also be used as variables), and also follow camel-case naming conventions, where the first letter is lowercase while the first letter of any other words are uppercase.</em> </sup></p>
@@ -383,9 +383,9 @@ Null is a reserved keyword in Java for literal values. It is a value that shows 
 </pre></div>
 </div>
 <p><em><strong>Output</strong></em></p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span>Demo@214c265e
-x = 10
-0
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Demo</span><span class="err">@</span><span class="mi">214</span><span class="n">c265e</span>
+<span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span>
+<span class="mi">0</span>
 </pre></div>
 </div>
 <hr class="docutils" />
@@ -479,7 +479,7 @@ x = 10
 </pre></div>
 </div>
 <section id="activity-2-1-1">
-<h3>Activity 2.1.1<a class="headerlink" href="#activity-2-1-1" title="Permalink to this heading">#</a></h3>
+<h3>Activity 2.1.1<a class="headerlink" href="#activity-2-1-1" title="Link to this heading">#</a></h3>
 <p>Write a class related to a professional sport (i.e. Football, soccer, basketball, etc)</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create class related to a professional sport of our choice</p></li>
@@ -499,46 +499,46 @@ x = 10
 </div>
 </section>
 <section id="activity-2-1-2">
-<h3>Activity 2.1.2<a class="headerlink" href="#activity-2-1-2" title="Permalink to this heading">#</a></h3>
+<h3>Activity 2.1.2<a class="headerlink" href="#activity-2-1-2" title="Link to this heading">#</a></h3>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Complete the cakeRunner program</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Submit your program code</p></li>
 </ul>
 <p><strong>Sample Output</strong></p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span>        ,,,
-        |||
-    (**********)
-    (*        *)
-    (*        *)
-  (**************)
-  (*            *)
-  (*            *)
-(******************)
-(*                *)
-(*                *)
-(******************)
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">        </span><span class="p">,,,</span>
+<span class="w">        </span><span class="o">|||</span>
+<span class="w">    </span><span class="p">(</span><span class="o">**********</span><span class="p">)</span>
+<span class="w">    </span><span class="p">(</span><span class="o">*</span><span class="w">        </span><span class="o">*</span><span class="p">)</span>
+<span class="w">    </span><span class="p">(</span><span class="o">*</span><span class="w">        </span><span class="o">*</span><span class="p">)</span>
+<span class="w">  </span><span class="p">(</span><span class="o">**************</span><span class="p">)</span>
+<span class="w">  </span><span class="p">(</span><span class="o">*</span><span class="w">            </span><span class="o">*</span><span class="p">)</span>
+<span class="w">  </span><span class="p">(</span><span class="o">*</span><span class="w">            </span><span class="o">*</span><span class="p">)</span>
+<span class="p">(</span><span class="o">******************</span><span class="p">)</span>
+<span class="p">(</span><span class="o">*</span><span class="w">                </span><span class="o">*</span><span class="p">)</span>
+<span class="p">(</span><span class="o">*</span><span class="w">                </span><span class="o">*</span><span class="p">)</span>
+<span class="p">(</span><span class="o">******************</span><span class="p">)</span>
 
-In Cake, formal param t started as 3.0 and changed to 0.0
-   ,,,
-   |||
-(~~~~~~~)
-(       )
-(~~~~~~~)
+<span class="n">In</span><span class="w"> </span><span class="n">Cake</span><span class="p">,</span><span class="w"> </span><span class="n">formal</span><span class="w"> </span><span class="n">param</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="n">started</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="mf">3.0</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">changed</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="mf">0.0</span>
+<span class="w">   </span><span class="p">,,,</span>
+<span class="w">   </span><span class="o">|||</span>
+<span class="p">(</span><span class="o">~~~~~~~</span><span class="p">)</span>
+<span class="p">(</span><span class="w">       </span><span class="p">)</span>
+<span class="p">(</span><span class="o">~~~~~~~</span><span class="p">)</span>
 
-      ,,,
-      |||
-  (**********)
-  (*        *)
-  (*        *)
-(**************)
-(*            *)
-(*            *)
-(**************)
+<span class="w">      </span><span class="p">,,,</span>
+<span class="w">      </span><span class="o">|||</span>
+<span class="w">  </span><span class="p">(</span><span class="o">**********</span><span class="p">)</span>
+<span class="w">  </span><span class="p">(</span><span class="o">*</span><span class="w">        </span><span class="o">*</span><span class="p">)</span>
+<span class="w">  </span><span class="p">(</span><span class="o">*</span><span class="w">        </span><span class="o">*</span><span class="p">)</span>
+<span class="p">(</span><span class="o">**************</span><span class="p">)</span>
+<span class="p">(</span><span class="o">*</span><span class="w">            </span><span class="o">*</span><span class="p">)</span>
+<span class="p">(</span><span class="o">*</span><span class="w">            </span><span class="o">*</span><span class="p">)</span>
+<span class="p">(</span><span class="o">**************</span><span class="p">)</span>
 
-myCake=Cake@15db9742
-yourCake=Cake@6d06d69c
-ourCake=Cake@7852e922
-emptyCake=null
+<span class="n">myCake</span><span class="o">=</span><span class="n">Cake</span><span class="err">@</span><span class="mi">15</span><span class="n">db9742</span>
+<span class="n">yourCake</span><span class="o">=</span><span class="n">Cake</span><span class="err">@</span><span class="mf">6d</span><span class="mo">06</span><span class="n">d69c</span>
+<span class="n">ourCake</span><span class="o">=</span><span class="n">Cake</span><span class="err">@</span><span class="mi">7852</span><span class="n">e922</span>
+<span class="n">emptyCake</span><span class="o">=</span><span class="kc">null</span>
 </pre></div>
 </div>
 <p><strong>Extra Credit</strong></p>
@@ -615,7 +615,7 @@ As you recall, the scanner class is a package that provides primitive input with
 </section>
 </section>
 <section id="calling-a-void-method">
-<h2>2.3 Calling a Void Method<a class="headerlink" href="#calling-a-void-method" title="Permalink to this heading">#</a></h2>
+<h2>2.3 Calling a Void Method<a class="headerlink" href="#calling-a-void-method" title="Link to this heading">#</a></h2>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Call non-static void methods without parameters</p></li>
 </ul>
@@ -682,7 +682,7 @@ As you recall, the scanner class is a package that provides primitive input with
 <p><strong>NOTE:</strong> ‘Null’ is a place holder for a reference that does not have an object.  If defines a memory address that may eventually hold a value.</p>
 </section>
 <section id="calling-a-void-method-with-parameters">
-<h2>2.4 Calling a Void Method with Parameters<a class="headerlink" href="#calling-a-void-method-with-parameters" title="Permalink to this heading">#</a></h2>
+<h2>2.4 Calling a Void Method with Parameters<a class="headerlink" href="#calling-a-void-method-with-parameters" title="Link to this heading">#</a></h2>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Call non-static void methods with parameters</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use overloaded methods</p></li>
@@ -694,7 +694,7 @@ As you recall, the scanner class is a package that provides primitive input with
 </pre></div>
 </div>
 <section id="activity-2-4-1">
-<h3>Activity 2.4.1<a class="headerlink" href="#activity-2-4-1" title="Permalink to this heading">#</a></h3>
+<h3>Activity 2.4.1<a class="headerlink" href="#activity-2-4-1" title="Link to this heading">#</a></h3>
 <p><strong>Instructions DigiPet</strong>
 You will create a class DigiPet</p>
 <ol class="arabic simple">
@@ -722,39 +722,39 @@ You will create a class DigiPet</p>
 <li><p>Call each method according to the sample output below.</p></li>
 </ol>
 <p><strong>Sample Output:</strong></p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span>Hangry the cat
-Hunger: 20
-Energy: 20
-Happy: 20
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Hangry</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">cat</span>
+<span class="nl">Hunger</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span>
+<span class="nl">Energy</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span>
+<span class="nl">Happy</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span>
 
-Fido the dog
-Hunger: 20
-Energy: 20
-Happy: 20
+<span class="n">Fido</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">dog</span>
+<span class="nl">Hunger</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span>
+<span class="nl">Energy</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span>
+<span class="nl">Happy</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span>
 
-Purr! Purr!
-Bark! Bark!
-Yay! Let&#39;s play!
-Hangry&#39;s not sleepy!
-zzzzzzzzzzzzzzz!
-Hangry&#39;s not hungry!
-Yay! Food!
+<span class="n">Purr</span><span class="o">!</span><span class="w"> </span><span class="n">Purr</span><span class="o">!</span>
+<span class="n">Bark</span><span class="o">!</span><span class="w"> </span><span class="n">Bark</span><span class="o">!</span>
+<span class="n">Yay</span><span class="o">!</span><span class="w"> </span><span class="n">Let</span><span class="err">&#39;</span><span class="n">s</span><span class="w"> </span><span class="n">play</span><span class="o">!</span>
+<span class="n">Hangry</span><span class="err">&#39;</span><span class="n">s</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">sleepy</span><span class="o">!</span>
+<span class="n">zzzzzzzzzzzzzzz</span><span class="o">!</span>
+<span class="n">Hangry</span><span class="err">&#39;</span><span class="n">s</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">hungry</span><span class="o">!</span>
+<span class="n">Yay</span><span class="o">!</span><span class="w"> </span><span class="n">Food</span><span class="o">!</span>
 
-Hangry the cat
-Hunger: 20
-Energy: 20
-Happy: 0
+<span class="n">Hangry</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">cat</span>
+<span class="nl">Hunger</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span>
+<span class="nl">Energy</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span>
+<span class="nl">Happy</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
 
-Fido the dog
-Hunger: 20
-Energy: 60
-Happy: 45
+<span class="n">Fido</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">dog</span>
+<span class="nl">Hunger</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span>
+<span class="nl">Energy</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span>
+<span class="nl">Happy</span><span class="p">:</span><span class="w"> </span><span class="mi">45</span>
 </pre></div>
 </div>
 </section>
 </section>
 <section id="non-void-methods">
-<h2>2.5 Non-Void Methods<a class="headerlink" href="#non-void-methods" title="Permalink to this heading">#</a></h2>
+<h2>2.5 Non-Void Methods<a class="headerlink" href="#non-void-methods" title="Link to this heading">#</a></h2>
 <p>If you’ve programmed in Python, you may remember that we used functions to execute a small chunk of code in other areas of the program.  Non-Void methods are very similar to functions in that they return a value of some type.  You have used non-void methods already, you just may not have recognized it. For example, the Scanner Class has non-voiid methods like nextInt(), nextDouble(), nextLine(), and next().  There are a number of methods that can be found in the Java standard library methods that are non-void methods.  Take a look at the example below.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">sum</span><span class="p">(){</span>
 <span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">num2</span><span class="p">;</span>
@@ -764,7 +764,7 @@ Happy: 45
 <p>The keyword <strong>return</strong> is <em>required</em> in all non-void methods. Since the method sum has a <strong>return</strong> type of <code class="docutils literal notranslate"><span class="pre">int</span></code> the return line is required to return a value of this type.</p>
 </section>
 <section id="calling-a-non-void-method">
-<h2>2.5 Calling a non-void method<a class="headerlink" href="#calling-a-non-void-method" title="Permalink to this heading">#</a></h2>
+<h2>2.5 Calling a non-void method<a class="headerlink" href="#calling-a-non-void-method" title="Link to this heading">#</a></h2>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox">  Call a non-void method</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox">  Use a return value from a non-void method in a variable or as part of an expression</p></li>
@@ -795,7 +795,7 @@ Happy: 45
 </pre></div>
 </div>
 <section id="activity-2-5-1">
-<h3>Activity 2.5.1<a class="headerlink" href="#activity-2-5-1" title="Permalink to this heading">#</a></h3>
+<h3>Activity 2.5.1<a class="headerlink" href="#activity-2-5-1" title="Link to this heading">#</a></h3>
 <p><strong>Instructions Shape using Non-Void Methods</strong></p>
 <ol class="arabic simple">
 <li><p>In the Shape class, the attributes and constructor is complete. Look them over.</p></li>
@@ -825,7 +825,7 @@ The area of a circle is <code class="docutils literal notranslate"><span class="
 </section>
 <hr class="docutils" />
 <section id="activity-2-5-2">
-<h3>Activity 2.5.2<a class="headerlink" href="#activity-2-5-2" title="Permalink to this heading">#</a></h3>
+<h3>Activity 2.5.2<a class="headerlink" href="#activity-2-5-2" title="Link to this heading">#</a></h3>
 <p><strong>Instructions RoadTrip using Non-Void Methods</strong></p>
 <p>Starter file: <a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9717372/125-RoadTrip.zip">125-RoadTrip.zip</a></p>
 <ol class="arabic simple">
@@ -843,17 +843,17 @@ The area of a circle is <code class="docutils literal notranslate"><span class="
 <li><p>In the Main class, follow the comments and call the appropriate methods.</p></li>
 </ol>
 <p><strong>Sample Output:</strong></p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span>Miles Driven: 0.0
-Miles Available: 0.0
-Adding gas ...
-Miles Available: 300.0
-Driving 100.0
-Miles Available: 200.0
-Adding gas ...
-Miles Available: 240.0
-Can&#39;t drive 365.0. That&#39;s too far!
-Driving 200.0
-Miles Driven: 300.0
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Miles</span><span class="w"> </span><span class="n">Driven</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span>
+<span class="n">Miles</span><span class="w"> </span><span class="n">Available</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span>
+<span class="n">Adding</span><span class="w"> </span><span class="n">gas</span><span class="w"> </span><span class="p">...</span>
+<span class="n">Miles</span><span class="w"> </span><span class="n">Available</span><span class="p">:</span><span class="w"> </span><span class="mf">300.0</span>
+<span class="n">Driving</span><span class="w"> </span><span class="mf">100.0</span>
+<span class="n">Miles</span><span class="w"> </span><span class="n">Available</span><span class="p">:</span><span class="w"> </span><span class="mf">200.0</span>
+<span class="n">Adding</span><span class="w"> </span><span class="n">gas</span><span class="w"> </span><span class="p">...</span>
+<span class="n">Miles</span><span class="w"> </span><span class="n">Available</span><span class="p">:</span><span class="w"> </span><span class="mf">240.0</span>
+<span class="n">Can</span><span class="err">&#39;</span><span class="n">t</span><span class="w"> </span><span class="n">drive</span><span class="w"> </span><span class="mf">365.0</span><span class="p">.</span><span class="w"> </span><span class="n">That</span><span class="err">&#39;</span><span class="n">s</span><span class="w"> </span><span class="n">too</span><span class="w"> </span><span class="n">far</span><span class="o">!</span>
+<span class="n">Driving</span><span class="w"> </span><span class="mf">200.0</span>
+<span class="n">Miles</span><span class="w"> </span><span class="n">Driven</span><span class="p">:</span><span class="w"> </span><span class="mf">300.0</span>
 </pre></div>
 </div>
 <p>Submit your link to the finished program</p>
@@ -861,7 +861,7 @@ Miles Driven: 300.0
 </section>
 <hr class="docutils" />
 <section id="string-objects-concatenation-literals-and-other-things">
-<h2>2.6 String Objects: Concatenation, Literals, and Other Things<a class="headerlink" href="#string-objects-concatenation-literals-and-other-things" title="Permalink to this heading">#</a></h2>
+<h2>2.6 String Objects: Concatenation, Literals, and Other Things<a class="headerlink" href="#string-objects-concatenation-literals-and-other-things" title="Link to this heading">#</a></h2>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create String objects</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Reference String objects</p></li>
@@ -1006,7 +1006,7 @@ Comment your code showing that you completed each of the bullet points above.</p
 </section>
 <hr class="docutils" />
 <section id="string-methods">
-<h2>2.7 String Methods<a class="headerlink" href="#string-methods" title="Permalink to this heading">#</a></h2>
+<h2>2.7 String Methods<a class="headerlink" href="#string-methods" title="Link to this heading">#</a></h2>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Compare <code class="docutils literal notranslate"><span class="pre">String</span></code> Objects</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use <code class="docutils literal notranslate"><span class="pre">String</span></code> Methods</p></li>
@@ -1276,7 +1276,7 @@ Comment your code showing that you completed each of the bullet points above.</p
 </ol>
 <p>String Object Practice Part II: <a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9737627/Activity.126.String.Objects_Vers2.docx">Activity 126 String Objects_Vers2.docx</a></p>
 <section id="activity-2-7-1-wordplay">
-<h3>Activity 2.7.1 - Wordplay<a class="headerlink" href="#activity-2-7-1-wordplay" title="Permalink to this heading">#</a></h3>
+<h3>Activity 2.7.1 - Wordplay<a class="headerlink" href="#activity-2-7-1-wordplay" title="Link to this heading">#</a></h3>
 <p>Starter Files: <a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9747405/127-wordPlay.zip">127-wordPlay.zip</a></p>
 <p>You will write a program that asks the user to enter their first name and their last name,
 separated by a space. Then it asks the user to enter a phrase. You will write and call the following:</p>
@@ -1325,7 +1325,7 @@ separated by a space. Then it asks the user to enter a phrase. You will write an
 <p>Submit your repl.it file on Canvas.</p>
 </section>
 <section id="activity-2-7-2-speaking">
-<h3>Activity 2.7.2 - Speaking<a class="headerlink" href="#activity-2-7-2-speaking" title="Permalink to this heading">#</a></h3>
+<h3>Activity 2.7.2 - Speaking<a class="headerlink" href="#activity-2-7-2-speaking" title="Link to this heading">#</a></h3>
 <p>Starter files: <a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9757536/127-Speaking.zip">127-Speaking.zip</a></p>
 <p>Create a program that will ask the user for their name and their partners name. Create the following:</p>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -1352,23 +1352,23 @@ separated by a space. Then it asks the user to enter a phrase. You will write an
 </table>
 </div>
 <p><strong>Sample Output</strong></p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span>Enter your first name:
- Jonathan
-Enter your partner&#39;s name:
- Julia
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="n">name</span><span class="p">:</span>
+<span class="w"> </span><span class="n">Jonathan</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">partner</span><span class="err">&#39;</span><span class="n">s</span><span class="w"> </span><span class="n">name</span><span class="p">:</span>
+<span class="w"> </span><span class="n">Julia</span>
 
-Yelling your name: Samantha
-Whispering your partner&#39;s name: Russell
-Your name in Pig Latin: amanthaSay
-Your partner&#39;s name in Pig Latin: ussellray
-Your team name is Samaell
+<span class="n">Yelling</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="n">Samantha</span>
+<span class="n">Whispering</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">partner</span><span class="err">&#39;</span><span class="n">s</span><span class="w"> </span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="n">Russell</span>
+<span class="n">Your</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">Pig</span><span class="w"> </span><span class="n">Latin</span><span class="p">:</span><span class="w"> </span><span class="n">amanthaSay</span>
+<span class="n">Your</span><span class="w"> </span><span class="n">partner</span><span class="err">&#39;</span><span class="n">s</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">Pig</span><span class="w"> </span><span class="n">Latin</span><span class="p">:</span><span class="w"> </span><span class="n">ussellray</span>
+<span class="n">Your</span><span class="w"> </span><span class="n">team</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">Samaell</span>
 </pre></div>
 </div>
 </section>
 </section>
 <hr class="docutils" />
 <section id="wrapper-classes-integer-and-double">
-<h2>2.8 Wrapper Classes - Integer and Double<a class="headerlink" href="#wrapper-classes-integer-and-double" title="Permalink to this heading">#</a></h2>
+<h2>2.8 Wrapper Classes - Integer and Double<a class="headerlink" href="#wrapper-classes-integer-and-double" title="Link to this heading">#</a></h2>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Convert between primitive data types and objects.</p>
 <ul class="contains-task-list">
@@ -1594,7 +1594,7 @@ In the program below, which line of code contains an example of <em>unboxing</em
 </p>
 </details>
 <section id="activity-2-8-1-wrapper-classes">
-<h3>Activity 2.8.1 Wrapper Classes<a class="headerlink" href="#activity-2-8-1-wrapper-classes" title="Permalink to this heading">#</a></h3>
+<h3>Activity 2.8.1 Wrapper Classes<a class="headerlink" href="#activity-2-8-1-wrapper-classes" title="Link to this heading">#</a></h3>
 <p>Create a program that contains an example of each of the following. Add in-line comments to describe each example.</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> An Integer constructor</p></li>
@@ -1609,7 +1609,7 @@ In the program below, which line of code contains an example of <em>unboxing</em
 </section>
 </section>
 <section id="using-the-math-class">
-<h2>2.9 Using the Math Class<a class="headerlink" href="#using-the-math-class" title="Permalink to this heading">#</a></h2>
+<h2>2.9 Using the Math Class<a class="headerlink" href="#using-the-math-class" title="Link to this heading">#</a></h2>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox">  Use methods from the Math package</p>
 <ul class="contains-task-list">
@@ -1798,7 +1798,7 @@ how you could use the <code class="docutils literal notranslate"><span class="pr
 </p>
 </details>
 <section id="activity-2-9-1-math-class-worksheet-1-2">
-<h3>Activity 2.9.1 - Math Class Worksheet 1 &amp; 2<a class="headerlink" href="#activity-2-9-1-math-class-worksheet-1-2" title="Permalink to this heading">#</a></h3>
+<h3>Activity 2.9.1 - Math Class Worksheet 1 &amp; 2<a class="headerlink" href="#activity-2-9-1-math-class-worksheet-1-2" title="Link to this heading">#</a></h3>
 <p>In pairs, work on worksheet 1 in class.  We will review your work in class.</p>
 <p><strong>Download:</strong> <a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9778281/mathclassworksheet1.docx">mathclassworksheet1.docx</a></p>
 <p><strong>ascii Table:</strong> <a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9737398/ascii-table-characters.pdf">ascii-table-characters.pdf</a></p>
@@ -1852,7 +1852,7 @@ x = ++x; //Pre-increment</p>
 </details>
 </section>
 <section id="activity-2-9-2-race-car">
-<h3>Activity 2.9.2 - Race Car<a class="headerlink" href="#activity-2-9-2-race-car" title="Permalink to this heading">#</a></h3>
+<h3>Activity 2.9.2 - Race Car<a class="headerlink" href="#activity-2-9-2-race-car" title="Link to this heading">#</a></h3>
 <p>Starter Files: <a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9757289/Activity129RaceCar.zip">Activity129RaceCar.zip</a></p>
 <p>Complete the computeTime method and the comments in main.java</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">	</span><span class="c1">//Length of the track in meters</span>
@@ -1885,7 +1885,7 @@ x = ++x; //Pre-increment</p>
 </section>
 <hr class="docutils" />
 <section id="project-mad-libs">
-<h2>Project Mad Libs<a class="headerlink" href="#project-mad-libs" title="Permalink to this heading">#</a></h2>
+<h2>Project Mad Libs<a class="headerlink" href="#project-mad-libs" title="Link to this heading">#</a></h2>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Apply coding concepts you have learned up to this point.</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Apply the programming development process to create a project.</p></li>
@@ -2020,9 +2020,9 @@ Your program should allow a user to enter values that change the output of a sto
       
     </aside>
   </div>
-</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=e031e9a9"></script>
+</div><script src="../_static/documentation_options.js?v=2709fde1"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
-    <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/furo.js?v=32e29ea5"></script>
     </body>
 </html>
