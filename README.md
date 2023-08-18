@@ -629,6 +629,8 @@ If you have any questions, please contact me.
  **Important Links** that you may find useful:
  
  [Java Basics](https://www3.ntu.edu.sg/home/ehchua/programming/java/J2_Basics.html)
+
+ [Java Video Tutorial](https://www.newthinktank.com/videos/java-video-tutorial/)
  
  [Java Visualizer](https://cscircles.cemc.uwaterloo.ca/java_visualize/)
  
