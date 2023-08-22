@@ -116,6 +116,7 @@ For this assignment, you will create a program that outputs a personal timeline 
 Include seven meaningful events in your life. No repetitive events such as "started kindergarten, started first grade, etc".
 
 Make it look professional. HINT: use \t</br>
+More examples of Escape Sequences can be found [here](https://ap-csa-java.github.io/CSA_JAVA-Course/Chapter_1/Unit2.html#string-objects-concatenation-literals-and-other-things).
 ```
 Year                 Age                    Description
 1971             0 years old                Born in Long Beach
