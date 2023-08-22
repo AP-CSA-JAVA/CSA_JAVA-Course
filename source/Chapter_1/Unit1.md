@@ -172,7 +172,7 @@ Write a program that will determine who receives an allowance or not.  Use the i
 
 ```java
 int JonsAge = 16;
-boolean Teenager = True;
+boolean Teenager = true;
 double allowance = 30.00;
 
 System.out.println("Jon's age is " + JonsAge);
