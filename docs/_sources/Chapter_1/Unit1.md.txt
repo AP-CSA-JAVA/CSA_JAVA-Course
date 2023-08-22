@@ -170,6 +170,17 @@ Write a program that will determine who receives an allowance or not.  Use the i
 - [ ] Michael was born fours years before Jon
 - [ ] Print out who receives an allowance and who does not by using an int, double and boolean variables.
 
+```java
+int JonsAge = 16;
+boolean Teenager = True;
+double allowance = 30.00;
+
+System.out.println("Jon's age is " + JonsAge);
+System.out.println("Eligible for allowance? " + Teenager);
+System.out.println("Jon's weekly allownace is " + allowance);
+```
+
+
 **Example Output:**<br>
 Jon's age is 16<br>
 Eligible for allowance? True<br>
