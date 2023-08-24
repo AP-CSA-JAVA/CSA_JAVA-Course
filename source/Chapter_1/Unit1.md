@@ -490,7 +490,7 @@ You will need to be familiar with some terms:
 	- [ ] `double` -> `float` -> `long` -> `int` -> `char` -> `short` -> `byte`
  	- [ ] the number is not rounded it is truncated
   		- [ ] `double` size = 9.4;
-    		- [ ] newSize = (`int`)size;
+    		- [ ] `int` newSize = (`int`)size;
 
 In this instance, we 'narrowed' the value of temp.  There is another term that you need to be familiar with and it is called **casting**.  Casting is converting from one data type to another, such as from a *double* to an *int*, potentially losing information. Take a look at this program:
 ```java
