@@ -752,7 +752,7 @@ that we need to declare a variable by it’s type.  It can be an int or a double
 A double is any number with a decimal.  1.0 is a whole number, but it has a decimal. So, Java considers 1.0 as a double.<br />
 We can convert the double by declaring a new variable that changes the double to an int.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">98.6</span><span class="p">;</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">newTemp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="err">`</span><span class="kt">int</span><span class="err">`</span><span class="p">)</span><span class="n">temp</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">newTemp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">temp</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>What is the value of newTemp?  Did you guess 99?  The actual value of newTemp is 98.  The variable is not <strong>rounded</strong> it is <em>truncated</em>.  Java does not round unless you tell it to round.</p>
