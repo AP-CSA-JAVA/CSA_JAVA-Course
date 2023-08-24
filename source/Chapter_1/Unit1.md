@@ -478,7 +478,7 @@ We can convert the double by declaring a new variable that changes the double to
 
 ```java 
 double temp = 98.6;
-int newTemp = (`int`)temp;
+int newTemp = (int)temp;
 ```
 What is the value of newTemp?  Did you guess 99?  The actual value of newTemp is 98.  The variable is not **rounded** it is *truncated*.  Java does not round unless you tell it to round.
 
