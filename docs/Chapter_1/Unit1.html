@@ -766,13 +766,15 @@ We can convert the double by declaring a new variable that changes the double to
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>narrowing</strong> - converting a larger data type (double) to a smaller data type (int).</p>
 <ul class="contains-task-list">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">double</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">float</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">long</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">int</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">char</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">short</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">byte</span></code></p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> the number is not rounded it is truncated</p>
-<ul class="contains-task-list">
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">double</span></code> size = 9.4;</p>
-<ul class="contains-task-list">
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">int</span></code> newSize = (<code class="docutils literal notranslate"><span class="pre">int</span></code>)size;</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> the number is not <strong>rounded</strong> it is <em>truncated</em></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">double</span></code> size = 9.9;</p>
+<ul>
+<li><p>prints 9.9</p></li>
 </ul>
 </li>
+<li><p><code class="docutils literal notranslate"><span class="pre">int</span></code> newSize = (<code class="docutils literal notranslate"><span class="pre">int</span></code>)size;</p>
+<ul>
+<li><p>prints 9</p></li>
 </ul>
 </li>
 </ul>
