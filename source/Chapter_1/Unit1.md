@@ -129,7 +129,7 @@ Year                 Age                    Description
 ```
 
 
-There is no test to run when you are complete. Please screenshot your code with result and include it in your Canvas assignment.
+Please screenshot your code with result and include it in your Canvas assignment.
 
 
 
@@ -202,7 +202,7 @@ Use a Scanner object to create an input feature in your program.  Click on [Scan
 - [ ] boolean
 - [ ] print statement that includes all for data types
 
-There is no test to run when you are complete. Please screenshot your code with result and include it in your assignment.
+Please screenshot your code with result and include it in your assignment.
 
 
 ## 1.3 Expressions and Assignment Statements
@@ -230,16 +230,23 @@ In Java, the order of operation works pretty much the same with the exception of
 
 <details><summary>JAVA Order of Operations</summary>
 
-| Operator Type | Operator | Java Flow of Control |
-| ------------- | :------: | :------------------: |
-| Unary | ` !  ++  +  - ` | 1<sup>st</sup> |
-| Multiplicative | ` *  /  % ` |        |
-| Additive | ` +  -  ` |   |
-| Relational | ` <  >  <=  => ` |       |
-| Equality | ` ==  != ` |         |
-| Logical "AND" | `&&` |        |
-| Logical "OR" | `\|\|` |        |
-| Assignment | `=  +=  -=  *=  /=  %=  &&=  \|\|=` |       |
+| Operator Type |
+| ------------- |
+| **P**arentheses |  
+| **A**rray access |  
+| **M**ember access | 
+| **U**nary | 
+| **C**ast | 
+| **O**bject creation ||
+| **M**ultiplication |
+| **D**ivision |
+| **R**emainder |
+| **A**ddition |
+| **C**oncatentation |
+| **S**ubtraction |
+| **S**hift |
+| **R**elational |
+| **E**quality |
 
 </details>
 
@@ -292,10 +299,11 @@ this assignment.**
 - [ ] Create a program that will ask the user for two distinct numbers (integers)
 - [ ] Use the scanner class to receive input from the user  
 - [ ] Store those values and perform some basic operations with those numbers
-- [ ] Make sure to use the exact same wording and spacing to pass the test
+
+Submit your code on Canvas.
 
 **Example Output**
-```
+```java
 Enter first number:
 20
 Enter second number:
@@ -338,7 +346,7 @@ This is referred to as a **concatenation operator** where you can add a string l
 Java like other programs has simplified the compound operators.  **Compound Assignment Operators** performs two tasks in one step.  It performs a mathematical calculation by and assignment.  It is written as:  
 
 Java supports 11 compound-assignment operators, but for this course we will use just five.
-```
+```java
  +=   assigns the result of the addition.
  -=   assigns the result of the subtraction.
  *=   assigns the result of the multiplication
