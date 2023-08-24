@@ -414,7 +414,7 @@ public class CompoundOperators
 ```
 Sample Output:
 I have 11.5 years in school and 0.5 years to graduate.
-Total people: 1, total years: 10.5
+Total people: 1, total years: 11.5
 My best friend has 10.5 years in school and 1.5 years to graduate.
 Total people: 2, total years: 22.0
 My sister has 8.5 years in school and 3.5 years to graduate.
