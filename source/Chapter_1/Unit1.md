@@ -485,7 +485,12 @@ What is the value of newTemp?  Did you guess 99?  The actual value of newTemp is
 You will need to be familiar with some terms:
 
 - [ ] **widening** - converting from a smaller data type (int) to a larger data type (double).
+	- [ ] `byte` -> `short` -> `char` -> `int` -> `long` -> `float` -> `double`
 - [ ] **narrowing** - converting a larger data type (double) to a smaller data type (int).
+	- [ ] `double` -> `float` -> `long` -> `int` -> `char` -> `short` -> `byte`
+ 	- [ ] the number is not rounded it is truncated
+  		- [ ] `double` size = 9.4;
+    		- [ ] newSize = (`int`)size;
 
 In this instance, we 'narrowed' the value of temp.  There is another term that you need to be familiar with and it is called **casting**.  Casting is converting from one data type to another, such as from a *double* to an *int*, potentially losing information. Take a look at this program:
 ```java
@@ -507,9 +512,10 @@ System.out.println("Total eggs = " + eggs/ (double) dozen);
 Sample output:
 Total eggs = 0.75
 ```
-If you were to print the variables of eggs and down, you would see that the values are 9 & 12 respectively.
+If you were to print the variables `eggs` and `dozen`, you would see that the values are 9 & 12 respectively.
 </p>
 </details>
+    
 
 ### Assignment 1.5.1
 You will explore the PlanetTravel program called FivePlanetTravel. The program is set up to plan a five-planet tour! STEP 15:
