@@ -757,9 +757,9 @@ Escape sequences begin with the \ character (back slash as opposed to a forward 
 
 **Escape Sequence**
 
-| Newline | The \ character | the " character |
-| ---------------- | ---------------- | ---------------- |
-| `\n` | `\\` | `\"` |
+| newline | backslash | single quote | double quote | tab | backspace |
+| ---------- | ---------- | ---------- | ---------- | ---------- | ---------- |
+| `\n` | `\\` | `\'` | `\"` | `\t` | `\b` |
 
 ```java
 public class Main
