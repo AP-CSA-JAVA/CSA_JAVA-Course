@@ -335,6 +335,35 @@ public class Main
 Output:
 x = 1
 ```
+```java
+// Compound assignment operators
+class Main {
+public static void main(String args[])
+	{
+		int b = 120; //initial value
+		b += 10;
+		int b1 = 120; //initial value
+		b1 *= 10;
+		int b2 = 330; //initial value
+		b2 -= 30;
+		int b3 = 127; //initial value
+		b3 %= 7;
+
+		System.out.println(b);
+		System.out.println(b1);
+		System.out.println(b2);
+		System.out.println(b3);
+	}
+}
+```
+
+**Sample Output**
+```java
+130
+1200
+300
+1
+```
 
 In algebra, this is an impossible statement, but in programming, the assignment operator makes this a simple and logical statement. 
 To interpret assignment statements such as this, begin with the first instruction to the right of the assignment operator.
@@ -384,13 +413,13 @@ public class CompoundOperators
 
 ```
 Sample Output:
-I have 11.5 years in school and 1.5 years to graduate.
-Total people: 1, total years: 11.5
-My best friend has 10.5 years in school and 2.5 years to graduate.
+I have 11.5 years in school and 0.5 years to graduate.
+Total people: 1, total years: 10.5
+My best friend has 10.5 years in school and 1.5 years to graduate.
 Total people: 2, total years: 22.0
-My sister has 8.5 years in school and 4.5 years to graduate.
+My sister has 8.5 years in school and 3.5 years to graduate.
 Total people: 3, total years: 30.5
-My neighbor has 5.5 years in school and 7.5 years to graduate.
+My neighbor has 5.5 years in school and 6.5 years to graduate.
 Total people: 4, total years: 36.0
 
 Average years in school: 9.0
