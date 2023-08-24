@@ -494,7 +494,7 @@ In this instance, we 'narrowed' the value of temp.  There is another term that y
 Take a look at this program:
 ```java
 int eggs = 9;
-final int dozen = 12;// a dozen will not change
+int dozen = 12;// the variable dozen will not change
 
 System.out.println("Total eggs = " + eggs/ dozen);
 
@@ -504,7 +504,7 @@ Total eggs = 0
 We know that we don't have 0 eggs.  We can rewrite our program to show how many eggs we have in decimal form.
 ```java
 int eggs = 9;
-final int dozen = 12;// a dozen will not change
+int dozen = 12;// the variable dozen will not change
 
 System.out.println("Total eggs = " + eggs/ (double) dozen);
 
