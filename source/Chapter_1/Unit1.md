@@ -323,6 +323,9 @@ Dividing: 4 with remainder 0
 In Java, you can modify a variable by referencing it, performing an operation on it, and assigning the result back to the variable. Thus, you can reference a variable to change its own value. For example, if x equals 0 , the following statement modifies x.</br>
 
 ```java
+
+// Will this program run as written?  Why or why not?
+
 public class Main
 {
   public static void main(String[] args)
@@ -517,7 +520,7 @@ If you were to print the variables `eggs` and `dozen`, you would see that the va
     
 
 ### Assignment 1.5.1
-You will explore the PlanetTravel program called FivePlanetTravel. The program is set up to plan a five-planet tour! STEP 15:
+You will explore the PlanetTravel program called FivePlanetTravel. The program is set up to plan a five-planet tour!:
 ```
 /* 
  * Activity 1.1.5
@@ -539,6 +542,7 @@ public class FivePlanetTravel
     lightSpeed /= 10;
     // total travel time
     double total = 0;
+
     /* your code here */
   }
 }
@@ -562,12 +566,9 @@ Travel time to ...
 Total travel time:19.59838263477574
 ```
 
-*Your ouput should look like the example above.  I am not asking you to find the average for this assignment.*
+*Your ouput should look like the example above.  I am not asking you to find the **average** for this assignment.*
 
 You will write a widening algorithm with new variables to show the travel time to and from all planets.  You will write a casting version without new variables to show the travel times. The one rule is that you must use the provided code and not change any provided data types.
-
-Complete STEPS 17 - 21
-Comment out your code as appropriate (4 points)
 
 Take a screenshot of your completed code and the output it produced.
 
