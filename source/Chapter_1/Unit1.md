@@ -618,4 +618,10 @@ Create variables and choose numbers that match the following six number types to
 
 **Document and Present**
 
-Create a video of your program and how your program works. As part of your project documentation, you will take screenshots of your program’s code and output.  If you are working with a partner, please make sure that both parties are involved with the explanation of the Numbers Riddle.  *Please include your java program with your submission.*
+Create a video with the following items:
+
+    - The purpose of your program. Imagine explaining to someone not in your class what the program should do.
+    - An explanation of the different parts of your program.
+    - Create six different test cases that demonstrates the correct outcome.
+
+*Please include your java program with your submission.*
