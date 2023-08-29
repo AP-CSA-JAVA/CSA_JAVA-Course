@@ -426,7 +426,7 @@ My neighbor has 5.5 years in school and 6.5 years to graduate.
 Total people: 4, total years: 36.0
 
 Average years in school: 9.0
-Average days in school: 6480.0
+Total days in school: 6480.0
 Average days per person: 1620.0 
 ```
 
