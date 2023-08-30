@@ -11,25 +11,27 @@ We can also create a *method* that will call the attributes within a class.  For
 
 The value of the attributes define the state of the object. What makes this efficient is that the class does not hold any space in the memory because we just create a definition.  The moment we *instantiate* the class the object will require a dedicated space in memory.  Thus we can say that a Class defines how the object should look and object is the actual representation of the same.
 
-**CLASS ACTIVITY**
+ -------------------------------------------------------------------------------------------
+**Mr Potato Head Activity:**
 
-Partner Activity:
+Supplies will be provide for you to complete this activity.
 
     Split into pairs.
-    In pairs create: 
-        - a potato head character.
-        - a list describing what it is, what characteristics it has, and what it can do.
+    Each pair will create:
+        a potato head character.
+        a list describing what it is, what characteristics it has, and what it can do(actions).
+			write PROPERTIES/ characteristics 
+			write METHODS/ actions
+    What are the object oriented concepts to your Mr. Potato Head?
+        Class:
+        Object:
+        Properties:
+        Methods: 
 
-    List and write the characteristics and actions of your Mr. Potato Head.
-        write the PROPERTIES of your Mr. Potato Head (these are the characteristics)
-        write the METHODS of your Mr. Potato Head (these are the actions)
-    Identify the object: 
-        
-    Use these ideas to connect object oriented concepts to your Mr. Potato Head.
-        Class: 
-        Object: 
-        Properties/ Characteristics: 
-        Methods/ Actions: 
+
+ -------------------------------------------------------------------------------------------
+
+
 
 **Example:**
 ```java
