@@ -590,6 +590,18 @@ Your program will include:
 
 <p align="center">Choose any integer, double it, add six, divide it in half, and subtract the number you started with. The answer is always three! </p>
 
+**Example:** 
+
+```java
+x = 3 // choose an integer
+x = 3 * 2 // double it
+x = 6 + 6 // add six
+x = 12 / 2 // divide it in half
+x = 6 - 3 // subtract the number you started with
+x = 3 // answer is always three!
+```
+
+
 **Important:** No shortcuts! You know the answer to the riddle will always be three, but your program is being used to test and validate the riddle. You should print the result of all calculations, not just “3.”
 
 **Requirements of this project**
