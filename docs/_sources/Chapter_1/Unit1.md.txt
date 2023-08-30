@@ -600,7 +600,8 @@ Looking back at previous programs and the requirements stated above, you know yo
 - [ ] a class definition header that matches the file name
 - [ ] the main method of the program
 - [ ] a variable defined as the “starting number you choose”
-- [ ] six variables representing integer and double data types and positive, negative, and zero values (see details in Step 5)
+	- [ ] You may use a `scanner` class
+- [ ] six variables representing integer and double data types and positive, negative, and zero values
 - [ ] an algorithm(s) that processes the chosen number
 - [ ] a print statement displaying the number you chose
 - [ ] a print statement displaying each calculation and the final result
