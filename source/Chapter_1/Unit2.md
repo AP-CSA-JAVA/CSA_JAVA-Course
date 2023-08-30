@@ -9,7 +9,27 @@ As stated earlier, a *class* is a blueprint of an object.  So we can also say th
 
 We can also create a *method* that will call the attributes within a class.  For example, we can create a method called running or sleeping.  Now each of these methods will use an attribute or attributes of its class to perform something within the `human` class.  If we create an instance of the `human` class, let say Object John , then John will have all the attributes (nose , ears, eyes, hands, legs) unique to it and will also have access to these methods to carry out basic functions. **NOTE:** Method and behavior are interchangable terms.
 
-The value of the attributes define the state of the object. What makes this efficient is that the class does not hold any space in the memory because we just create a definition.  The moment we *instantiate* the class the object will require a dedicated space in memory.  Thus we can say that a Class defines how the object should look and object is the actual representation of the same.  
+The value of the attributes define the state of the object. What makes this efficient is that the class does not hold any space in the memory because we just create a definition.  The moment we *instantiate* the class the object will require a dedicated space in memory.  Thus we can say that a Class defines how the object should look and object is the actual representation of the same.
+
+**CLASS ACTIVITY**
+
+Partner Activity:
+
+    Split into pairs.
+    In pairs create: 
+        - a potato head character.
+        - a list describing what it is, what characteristics it has, and what it can do.
+
+    List and write the characteristics and actions of your Mr. Potato Head.
+        write the PROPERTIES of your Mr. Potato Head (these are the characteristics)
+        write the METHODS of your Mr. Potato Head (these are the actions)
+    Identify the object: 
+        
+    Use these ideas to connect object oriented concepts to your Mr. Potato Head.
+        Class: 
+        Object: 
+        Properties/ Characteristics: 
+        Methods/ Actions: 
 
 **Example:**
 ```java
