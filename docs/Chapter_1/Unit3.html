@@ -485,26 +485,14 @@ NOT Operator ( ! ) – !(a&lt;b) [returns false if a is smaller than b]
 <p><strong>RentaCar:</strong></p>
 <ul class="simple">
 <li><p>ask the user to enter their name, age, and how much money they have</p></li>
-<li><p>write some conditionals, if else statement, to determine whether the user can rent a car</p></li>
-<li><ul>
-<li><p>a person must be 25 or older to rent a car</p></li>
-</ul>
-</li>
-<li><ul>
-<li><ul>
+<li><p>write some conditionals, if else statement, to determine whether the user can rent a car</p>
+<ul>
+<li><p>a person must be 25 or older to rent a car</p>
+<ul>
 <li><p>if a person is old enough and has enough money ($999), print they can rent a car</p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><ul>
-<li><ul>
 <li><p>if a person is old enough but does not have enough money, tell them to come back with more money</p></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><ul>
 <li><p>if a person is not old enough, let them know and tell them when they can come back</p></li>
 </ul>
 </li>
@@ -631,23 +619,29 @@ Write a program that will take 2 doubles from the user.  Use Boolean Expression 
 </div>
 <p><strong>Example 3</strong></p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">		</span><span class="kt">boolean</span><span class="w"> </span><span class="n">Yes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
-<span class="w">		</span><span class="kt">boolean</span><span class="w"> </span><span class="n">No</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">Yes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">No</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
 <span class="w">		</span>
-<span class="w">		</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Yes</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">			</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;a is true&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
-<span class="w">		</span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">			</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;a is false&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Yes</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;a is true&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;a is false&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
 <span class="w">		</span>
-<span class="w">		</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">No</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">			</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;b is true&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
-<span class="w">		</span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">			</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;b is false&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">No</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;b is true&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;b is false&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
+<p>Advantages of the <code class="docutils literal notranslate"><span class="pre">if-else</span></code> statement –</p>
+<p><strong>Conditional execution</strong>: The <code class="docutils literal notranslate"><span class="pre">if-else</span></code> statement allows code to be executed conditionally based on the result of a Boolean expression. This provides a way to make decisions and control the flow of a program based on different inputs and conditions.
+<strong>Readability</strong>: The <code class="docutils literal notranslate"><span class="pre">if-else</span></code> statement makes code more readable by clearly indicating when a particular block of code should be executed. This makes it easier for others to understand and maintain the code.
+<strong>Reusability</strong>: By using <code class="docutils literal notranslate"><span class="pre">if-else</span></code> statements, developers can write code that can be reused in different parts of the program. This reduces the amount of code that needs to be written and maintained, making the development process more efficient.
+<strong>Debugging</strong>: The <code class="docutils literal notranslate"><span class="pre">if-else</span></code> statement can help simplify the debugging process by making it easier to trace problems in the code. By clearly indicating when a particular block of code should be executed, it becomes easier to determine why a particular piece of code is not working as expected.
+<strong>Flexibility</strong>: The <code class="docutils literal notranslate"><span class="pre">if-else</span></code> statement provides a flexible way to control the flow of a program. It allows developers to handle different scenarios and respond dynamically to changes in the program’s inputs.</p>
 <p><strong>Note</strong> The body of an if statement in Java is not dependent on indentation. Indenting in Java is a strong convention
 that makes code segments readable. Java is often flexible about spacing. The three constructs below are equivalent and
 like indentation, spacing is used to improve readability.</p>
