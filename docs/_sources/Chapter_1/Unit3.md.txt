@@ -282,7 +282,35 @@ Advantages of the `if-else` statement –
 
 **Flexibility**: The `if-else` statement provides a flexible way to control the flow of a program. It allows developers to handle different scenarios and respond dynamically to changes in the program’s inputs.
 
-  
+
+**Example 4**
+
+```java
+if (condition1) {
+  // if condition1 is true then the blocks will be executed. 
+} else if (condition2) {
+  // if the condition1 is false, but condition2 is true then the blocks for block 2 will be executed. 
+} else {
+  // if both condition1 and condition2 are false, the else statement will be executed
+}
+```
+
+```java
+public class Main {
+    public static void main(String[] args) {
+	int age = 21;
+	if (age < 12) {
+             System.out.println("You are a child.");}
+	else if (age < 19) {
+             System.out.println("You are a teenager."); }
+	else {
+             System.out.println("You are an adult."); }
+
+  }
+}
+```
+
+
 **Note** *The body of an if statement in Java is not dependent on indentation. Indenting in Java is a strong convention 
 that makes code segments readable. Java is often flexible about spacing. The three constructs below are equivalent and 
 like indentation, spacing is used to improve readability.*

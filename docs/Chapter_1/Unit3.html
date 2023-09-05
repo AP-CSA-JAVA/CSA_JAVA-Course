@@ -642,6 +642,30 @@ Write a program that will take 2 doubles from the user.  Use Boolean Expression 
 <p><strong>Reusability</strong>: By using <code class="docutils literal notranslate"><span class="pre">if-else</span></code> statements, developers can write code that can be reused in different parts of the program. This reduces the amount of code that needs to be written and maintained, making the development process more efficient.</p>
 <p><strong>Debugging</strong>: The <code class="docutils literal notranslate"><span class="pre">if-else</span></code> statement can help simplify the debugging process by making it easier to trace problems in the code. By clearly indicating when a particular block of code should be executed, it becomes easier to determine why a particular piece of code is not working as expected.</p>
 <p><strong>Flexibility</strong>: The <code class="docutils literal notranslate"><span class="pre">if-else</span></code> statement provides a flexible way to control the flow of a program. It allows developers to handle different scenarios and respond dynamically to changes in the program’s inputs.</p>
+<p><strong>Example 4</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">condition1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// if condition1 is true then the blocks will be executed. </span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">condition2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// if the condition1 is false, but condition2 is true then the blocks for block 2 will be executed. </span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// if both condition1 and condition2 are false, the else statement will be executed</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">21</span><span class="p">;</span>
+<span class="w">	</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">age</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">12</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">             </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You are a child.&quot;</span><span class="p">);}</span>
+<span class="w">	</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">age</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">19</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">             </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You are a teenager.&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">	</span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">             </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You are an adult.&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 <p><strong>Note</strong> <em>The body of an if statement in Java is not dependent on indentation. Indenting in Java is a strong convention
 that makes code segments readable. Java is often flexible about spacing. The three constructs below are equivalent and
 like indentation, spacing is used to improve readability.</em></p>
