@@ -208,9 +208,11 @@ You can use these conditions to perform different actions based on the decisions
 
 The Java if statement is the most simple-decision making statement.  Java has the following conditional statements:
 
-- Use `if` to specify a block of code to be executed, if a specified condition is `true`
-- Use `else` to specify a block of code to be executed, if the same condition is `false`
-- Use `else if` to specify a new condition to test, if the first condition is `false`
+- Use the `if` keyword to specify a block of code to be executed, if a condition is `true`
+- Use the `else if` keyword to specify a new condition to test, if the first condition is `false`
+- Use the `else` keyword to specify a block of code to be executed, if the above conditions are `false`
+
+
 
 **Basic `if` statement format**
 ```java
