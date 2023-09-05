@@ -645,10 +645,15 @@ Write a program that will take 2 doubles from the user.  Use Boolean Expression 
 <p><strong>Note</strong> <em>The body of an if statement in Java is not dependent on indentation. Indenting in Java is a strong convention
 that makes code segments readable. Java is often flexible about spacing. The three constructs below are equivalent and
 like indentation, spacing is used to improve readability.</em></p>
-<p><code class="docutils literal notranslate"><span class="pre">if(b!=0){System.out.println(&quot;...&quot;);}</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">(b!=0){System.out.println(&quot;...&quot;);}</span></code></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">b</span><span class="o">!=</span><span class="mi">0</span><span class="p">){</span>
-<span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;...&quot;</span><span class="p">);</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Example 1</span>
+<span class="k">if</span><span class="p">(</span><span class="n">b</span><span class="o">!=</span><span class="mi">0</span><span class="p">){</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;...&quot;</span><span class="p">);}</span>
+
+<span class="c1">// Example 2</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="o">!=</span><span class="mi">0</span><span class="p">){</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;...&quot;</span><span class="p">);}</span>
+
+<span class="c1">//Example 3</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="o">!=</span><span class="mi">0</span><span class="p">){</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;...&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>

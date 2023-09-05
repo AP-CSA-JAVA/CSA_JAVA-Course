@@ -287,11 +287,14 @@ Advantages of the `if-else` statement –
 that makes code segments readable. Java is often flexible about spacing. The three constructs below are equivalent and 
 like indentation, spacing is used to improve readability.*
 
-```if(b!=0){System.out.println("...");}```
+```java
+// Example 1
+if(b!=0){System.out.println("...");}
 
-```if (b!=0){System.out.println("...");}```
+// Example 2
+if (b!=0){System.out.println("...");}
 
-```
+//Example 3
 if (b!=0){
 System.out.println("...");
 }
