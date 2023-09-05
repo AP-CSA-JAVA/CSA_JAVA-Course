@@ -119,10 +119,10 @@ public void suchFun(int a, int b, int c) {
 **RentaCar:**
 - ask the user to enter their name, age, and how much money they have
 - write some conditionals, if else statement, to determine whether the user can rent a car
-- - a person must be 25 or older to rent a car
-- - - if a person is old enough and has enough money ($999), print they can rent a car
-- - - if a person is old enough but does not have enough money, tell them to come back with more money
-- - if a person is not old enough, let them know and tell them when they can come back
+  - a person must be 25 or older to rent a car
+     - if a person is old enough and has enough money ($999), print they can rent a car
+     - if a person is old enough but does not have enough money, tell them to come back with more money
+  - if a person is not old enough, let them know and tell them when they can come back
 - take care to match the sample outputs exactly
 - must pass all 3 tests to submit the assignment
 - click submit here on repl after passing the tests, and type done on Canvas and submit on Canvas
@@ -253,22 +253,31 @@ class Main {
 **Example 3**
 ```java
 public class Main {
-	public static void main(String[] args) {
-		boolean Yes = true;
-		boolean No = false;
+    public static void main(String[] args) {
+        boolean Yes = true;
+        boolean No = false;
 		
-		if (Yes) {
-			System.out.println("a is true"); }
-		else {
-			System.out.println("a is false"); }
+        if (Yes) {
+            System.out.println("a is true"); }
+        else {
+            System.out.println("a is false"); }
 		
-		if (No) {
-			System.out.println("b is true"); }
-		else {
-			System.out.println("b is false"); }
+        if (No) {
+            System.out.println("b is true"); }
+        else {
+            System.out.println("b is false"); }
   }
 }
 ```
+
+Advantages of the `if-else` statement –
+
+**Conditional execution**: The `if-else` statement allows code to be executed conditionally based on the result of a Boolean expression. This provides a way to make decisions and control the flow of a program based on different inputs and conditions.
+**Readability**: The `if-else` statement makes code more readable by clearly indicating when a particular block of code should be executed. This makes it easier for others to understand and maintain the code.
+**Reusability**: By using `if-else` statements, developers can write code that can be reused in different parts of the program. This reduces the amount of code that needs to be written and maintained, making the development process more efficient.
+**Debugging**: The `if-else` statement can help simplify the debugging process by making it easier to trace problems in the code. By clearly indicating when a particular block of code should be executed, it becomes easier to determine why a particular piece of code is not working as expected.
+**Flexibility**: The `if-else` statement provides a flexible way to control the flow of a program. It allows developers to handle different scenarios and respond dynamically to changes in the program’s inputs.
+
 
 **Note** The body of an if statement in Java is not dependent on indentation. Indenting in Java is a strong convention 
 that makes code segments readable. Java is often flexible about spacing. The three constructs below are equivalent and 
@@ -282,8 +291,8 @@ like indentation, spacing is used to improve readability.
   System.out.println("...");`
   
   **Note College Board Exclusion:** You will not be required to use the `parseInt` or `parseDouble` methods on the AP exam.
-  
- Look at the code below.
+
+Look at the code below.
 
 ```java
 
