@@ -120,7 +120,7 @@ public void suchFun(int a, int b, int c) {
 - ask the user to enter their name, age, and how much money they have
 - write some conditionals, if else statement, to determine whether the user can rent a car
 - - a person must be 25 or older to rent a car
-- - - if a person is old enough and has enough money ($100), print they can rent a car
+- - - if a person is old enough and has enough money ($999), print they can rent a car
 - - - if a person is old enough but does not have enough money, tell them to come back with more money
 - - if a person is not old enough, let them know and tell them when they can come back
 - take care to match the sample outputs exactly
@@ -149,7 +149,7 @@ Enter your age:
 28
 How much money do you have?
 500.12
-Maxim can rent a car
+Maxim please visit us again when you have more money.
 ```
 **Sample Output 2:**
 ```java
@@ -158,8 +158,8 @@ Jorge
 Enter your age:
 30
 How much money do you have?
-23
-Get some more money
+1000
+Jorge we would be happy to rent you a car.  
 ```
 **Sample Output 3:**
 ```java
@@ -169,8 +169,7 @@ Enter your age:
 17
 How much money do you have?
 542364
-Erika cannot rent a a car
-Come back in 8 years
+Erika you are too young to rent a car, please visit us again when you are 25 years old.
 ```
 
 ### Activity 3.1.4
@@ -193,10 +192,10 @@ Input a second number: 5
 ## 3.2 If Statements and Control Flow
 
 **Goals**
--   Gain an understanding of how to control program flow with if statements.
--   Start to implement control flow in a more complex program.
+-   Gain an understanding of how to control program flow with `if` statements.
+-   Start to implement control flow in more complex programs.
 
-In Java, decision driven statements are used in conjuntion with mathematical logical operators to navigate complex programs.  We use these logical operators below to differentiate solutions based on specific information.
+In Java, decision driven statements are used in conjunction with mathematical logical operators to navigate complex programs.  We use these logical operators below to differentiate solutions based on specific information.
 
 - Less than: a < b
 - Less than or equal to: a <= b
@@ -205,18 +204,16 @@ In Java, decision driven statements are used in conjuntion with mathematical log
 - Equal to a == b
 - Not Equal to: a != b
 
-You can use these conditions to perform different actions for different decisions.
+You can use these conditions to perform different actions based on the decisions from user input.  
 
-Java has the following conditional statements:
+The Java if statement is the most simple-decision making statement.  Java has the following conditional statements:
 
 - Use `if` to specify a block of code to be executed, if a specified condition is `true`
 - Use `else` to specify a block of code to be executed, if the same condition is `false`
 - Use `else if` to specify a new condition to test, if the first condition is `false`
 
-The Java if statement is the most simple decision making statement.  The `if` statement in Java will be executed if a condition is `true`.
-
+**Basic `if` statement format**
 ```java
-// basic if statement format
 if(condition) 
 {
    // Statements to execute if
@@ -224,16 +221,51 @@ if(condition)
 }
 ```
 
-**Nested `if` statement**
+**Example 1**
 
 ```java
 class Main {
     public static void main(String args[]) {
 	int i = 1;
-	if (i < 5)
+	if (i < 5) {
   	    System.out.println("1 < 5");
-
+            }
 	System.out.println("This statement is outside of the if statement.");
+  }
+}
+```
+
+**Example 2**
+```java
+class Main {
+    public static void main(String args[]) {
+        String str = "Your Name Here!";
+        int i = 1;
+	if (i == 1) {
+            System.out.println(str);
+            i++;
+            }
+        System.out.println("i = " + i);
+  }
+}
+```
+
+**Example 3**
+```java
+public class Main {
+	public static void main(String[] args) {
+		boolean Yes = true;
+		boolean No = false;
+		
+		if (Yes) {
+			System.out.println("a is true"); }
+		else {
+			System.out.println("a is false"); }
+		
+		if (No) {
+			System.out.println("b is true"); }
+		else {
+			System.out.println("b is false"); }
   }
 }
 ```
