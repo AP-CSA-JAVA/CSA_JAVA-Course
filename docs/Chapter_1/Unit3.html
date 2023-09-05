@@ -645,9 +645,13 @@ Write a program that will take 2 doubles from the user.  Use Boolean Expression 
 <p><strong>Note</strong> <em>The body of an if statement in Java is not dependent on indentation. Indenting in Java is a strong convention
 that makes code segments readable. Java is often flexible about spacing. The three constructs below are equivalent and
 like indentation, spacing is used to improve readability.</em></p>
-<p><code class="docutils literal notranslate"><span class="pre">if(b!=0)System.out.println(&quot;...&quot;);</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">(b!=0)</span> <span class="pre">System.out.println(&quot;...&quot;);</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">(b!=0)</span>&#160;&#160; <span class="pre">System.out.println(&quot;...&quot;);</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">if(b!=0){System.out.println(&quot;...&quot;);}</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">(b!=0){System.out.println(&quot;...&quot;);}</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">b</span><span class="o">!=</span><span class="mi">0</span><span class="p">){</span>
+<span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;...&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 <p><strong>Note College Board Exclusion:</strong> You will not be required to use the <code class="docutils literal notranslate"><span class="pre">parseInt</span></code> or <code class="docutils literal notranslate"><span class="pre">parseDouble</span></code> methods on the AP exam.</p>
 <p>Look at the code below.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
