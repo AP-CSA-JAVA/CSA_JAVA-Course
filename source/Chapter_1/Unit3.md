@@ -287,12 +287,15 @@ Advantages of the `if-else` statement –
 that makes code segments readable. Java is often flexible about spacing. The three constructs below are equivalent and 
 like indentation, spacing is used to improve readability.*
 
-`if(b!=0)System.out.println("...");`
+```if(b!=0){System.out.println("...");}```
 
-`if (b!=0) System.out.println("...");`
+```if (b!=0){System.out.println("...");}```
 
-`if (b!=0)
-  System.out.println("...");`
+```
+if (b!=0){
+System.out.println("...");
+}
+```
   
   **Note College Board Exclusion:** You will not be required to use the `parseInt` or `parseDouble` methods on the AP exam.
 
