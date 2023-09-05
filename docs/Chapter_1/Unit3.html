@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Unit 4" href="../Chapter_2/Unit4.html" /><link rel="prev" title="Unit 2 - Using Objects" href="Unit2.html" />
 
-    <!-- Generated with Sphinx 7.2.4 and Furo 2023.08.19 -->
+    <!-- Generated with Sphinx 7.2.5 and Furo 2023.08.19 -->
         <title>Unit 3 - CSA JAVA Course</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
@@ -580,7 +580,7 @@ Write a program that will take 2 doubles from the user.  Use Boolean Expression 
 <li><p>Gain an understanding of how to control program flow with if statements.</p></li>
 <li><p>Start to implement control flow in a more complex program.</p></li>
 </ul>
-<p>Java supports the usual logical conditions from mathematics:</p>
+<p>In Java, decision driven statements are used in conjuntion with mathematical logical operators to navigate complex programs.  We use these logical operators below to differentiate solutions based on specific information.</p>
 <ul class="simple">
 <li><p>Less than: a &lt; b</p></li>
 <li><p>Less than or equal to: a &lt;= b</p></li>
@@ -592,11 +592,31 @@ Write a program that will take 2 doubles from the user.  Use Boolean Expression 
 <p>You can use these conditions to perform different actions for different decisions.</p>
 <p>Java has the following conditional statements:</p>
 <ul class="simple">
-<li><p>Use if to specify a block of code to be executed, if a specified condition is true</p></li>
-<li><p>Use else to specify a block of code to be executed, if the same condition is false</p></li>
-<li><p>Use else if to specify a new condition to test, if the first condition is false</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">if</span></code> to specify a block of code to be executed, if a specified condition is <code class="docutils literal notranslate"><span class="pre">true</span></code></p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">else</span></code> to specify a block of code to be executed, if the same condition is <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">else</span> <span class="pre">if</span></code> to specify a new condition to test, if the first condition is <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
 </ul>
-<p>Use the if statement to specify a block of Java code to be executed if a condition is true.</p>
+<p>The Java if statement is the most simple decision making statement.  The <code class="docutils literal notranslate"><span class="pre">if</span></code> statement in Java will be executed if a condition is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// basic if statement format</span>
+<span class="k">if</span><span class="p">(</span><span class="n">condition</span><span class="p">)</span><span class="w"> </span>
+<span class="p">{</span>
+<span class="w">   </span><span class="c1">// Statements to execute if</span>
+<span class="w">   </span><span class="c1">// condition is true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Nested <code class="docutils literal notranslate"><span class="pre">if</span></code> statement</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">args</span><span class="o">[]</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">	</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span>
+<span class="w">  	    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;1 &lt; 5&quot;</span><span class="p">);</span>
+
+<span class="w">	</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;This statement is outside of the if statement.&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 <p><strong>Note</strong> The body of an if statement in Java is not dependent on indentation. Indenting in Java is a strong convention
 that makes code segments readable. Java is often flexible about spacing. The three constructs below are equivalent and
 like indentation, spacing is used to improve readability.</p>

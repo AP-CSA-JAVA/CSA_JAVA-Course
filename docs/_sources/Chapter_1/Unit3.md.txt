@@ -196,7 +196,7 @@ Input a second number: 5
 -   Gain an understanding of how to control program flow with if statements.
 -   Start to implement control flow in a more complex program.
 
-Java supports the usual logical conditions from mathematics:
+In Java, decision driven statements are used in conjuntion with mathematical logical operators to navigate complex programs.  We use these logical operators below to differentiate solutions based on specific information.
 
 - Less than: a < b
 - Less than or equal to: a <= b
@@ -209,11 +209,34 @@ You can use these conditions to perform different actions for different decision
 
 Java has the following conditional statements:
 
-- Use if to specify a block of code to be executed, if a specified condition is true
-- Use else to specify a block of code to be executed, if the same condition is false
-- Use else if to specify a new condition to test, if the first condition is false
+- Use `if` to specify a block of code to be executed, if a specified condition is `true`
+- Use `else` to specify a block of code to be executed, if the same condition is `false`
+- Use `else if` to specify a new condition to test, if the first condition is `false`
 
-Use the if statement to specify a block of Java code to be executed if a condition is true.
+The Java if statement is the most simple decision making statement.  The `if` statement in Java will be executed if a condition is `true`.
+
+```java
+// basic if statement format
+if(condition) 
+{
+   // Statements to execute if
+   // condition is true
+}
+```
+
+**Nested `if` statement**
+
+```java
+class Main {
+    public static void main(String args[]) {
+	int i = 1;
+	if (i < 5)
+  	    System.out.println("1 < 5");
+
+	System.out.println("This statement is outside of the if statement.");
+  }
+}
+```
 
 **Note** The body of an if statement in Java is not dependent on indentation. Indenting in Java is a strong convention 
 that makes code segments readable. Java is often flexible about spacing. The three constructs below are equivalent and 
