@@ -518,9 +518,60 @@ Null is a reserved keyword in Java for literal values. It is a value that shows 
 <section id="activity-2-1-2">
 <h3>Activity 2.1.2<a class="headerlink" href="#activity-2-1-2" title="Link to this heading">#</a></h3>
 <ul class="contains-task-list simple">
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Complete the cakeRunner program</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Using the comments, complete the Main Class.</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Submit your program code</p></li>
 </ul>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Cake</span>
+<span class="p">{</span><span class="w">    </span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">tiers</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="nf">Cake</span><span class="p">()</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">tiers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;   ,,,\n   |||\n(~~~~~~~)\n(       )\n(~~~~~~~)\n&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="nf">Cake</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">tiers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="p">;</span>
+<span class="w">  </span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;      ,,,\n      |||\n  (**********)\n  (*        *)\n  (*        *)&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;(**************)\n(*            *)\n(*            *)\n(**************)\n&quot;</span><span class="p">);</span><span class="w">        </span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span>
+<span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="nf">Cake</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">t</span><span class="p">)</span>
+<span class="w">   </span><span class="p">{</span><span class="w"> </span>
+<span class="w">    </span><span class="n">tiers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">t</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;        ,,,\n        |||\n    (**********)\n    (*        *)\n    (*        *)&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;  (**************)\n  (*            *)\n  (*            *)&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;(******************)\n(*                *)\n(*                *)\n(******************)\n&quot;</span><span class="p">);</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// create a double variable named &#39;t&#39; and assign a value of 3.</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// create a variable that can store the object reference myCake created with new Cake(t)</span>
+
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// Create two more object references using yourCake and ourCake constructors</span>
+
+
+<span class="w">    </span><span class="c1">// Print out all three Cake object reference variables</span>
+
+
+<span class="w">    </span><span class="c1">// Initialize the emptyCake variable with a value of null</span>
+
+
+<span class="w">  </span><span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
 <p><strong>Sample Output</strong></p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">        </span><span class="p">,,,</span>
 <span class="w">        </span><span class="o">|||</span>
@@ -535,7 +586,7 @@ Null is a reserved keyword in Java for literal values. It is a value that shows 
 <span class="p">(</span><span class="o">*</span><span class="w">                </span><span class="o">*</span><span class="p">)</span>
 <span class="p">(</span><span class="o">******************</span><span class="p">)</span>
 
-<span class="n">In</span><span class="w"> </span><span class="n">Cake</span><span class="p">,</span><span class="w"> </span><span class="n">formal</span><span class="w"> </span><span class="n">param</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="n">started</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="mf">3.0</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">changed</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="mf">0.0</span>
+
 <span class="w">   </span><span class="p">,,,</span>
 <span class="w">   </span><span class="o">|||</span>
 <span class="p">(</span><span class="o">~~~~~~~</span><span class="p">)</span>
