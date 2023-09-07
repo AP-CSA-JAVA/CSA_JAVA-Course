@@ -330,9 +330,62 @@ Starting: True
 ```
 
 ### Activity 2.1.2
-- [ ] Complete the cakeRunner program
+- [ ] Using the comments, complete the Main Class.
 - [ ] Submit your program code
 
+```java
+
+public class Cake
+{    
+  int tiers;
+
+  public Cake()
+  {
+    tiers = 1;
+    
+    System.out.println("   ,,,\n   |||\n(~~~~~~~)\n(       )\n(~~~~~~~)\n");
+  }
+  
+  public Cake(int t) 
+  {
+    tiers = t;
+  
+    System.out.println("      ,,,\n      |||\n  (**********)\n  (*        *)\n  (*        *)");
+    System.out.println("(**************)\n(*            *)\n(*            *)\n(**************)\n");        
+  }
+  
+   public Cake(double t)
+   { 
+    tiers = (int) t;
+
+    System.out.println("        ,,,\n        |||\n    (**********)\n    (*        *)\n    (*        *)");
+    System.out.println("  (**************)\n  (*            *)\n  (*            *)");
+    System.out.println("(******************)\n(*                *)\n(*                *)\n(******************)\n");
+   }
+}
+public class Main
+{
+  public static void main(String[] args)
+  {
+    // create a double variable named 't' and assign a value of 3.
+    
+    // create a variable that can store the object reference myCake created with new Cake(t)
+
+    
+    // Create two more object references using yourCake and ourCake constructors
+
+
+    // Print out all three Cake object reference variables
+
+
+    // Initialize the emptyCake variable with a value of null
+
+
+  }
+
+}
+
+```
 **Sample Output**
 ```java
         ,,,
@@ -348,7 +401,7 @@ Starting: True
 (*                *)
 (******************)
 
-In Cake, formal param t started as 3.0 and changed to 0.0
+
    ,,,
    |||
 (~~~~~~~)
