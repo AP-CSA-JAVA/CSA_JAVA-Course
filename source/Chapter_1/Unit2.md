@@ -281,8 +281,8 @@ class Child{
   int age; //Integer is a wrapper class for the int data type
 
   Child(){
-    this.name = "Jon";
-    this.age = 50;
+    this.name = "Miguel";
+    this.age = 12;
   }
 	
   Child(String n, int a){
@@ -308,8 +308,8 @@ class Main {
 ```
 **Sample Output**
 ```java
+The name of the child is Miguel. The age of the child is 12.
 The name of the child is Francis. The age of the child is 10.
-12
 ```
 
 ### Activity 2.1.1
