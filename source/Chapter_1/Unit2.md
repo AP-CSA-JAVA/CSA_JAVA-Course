@@ -278,9 +278,14 @@ The second example is when you call the method of a class by passing the value a
 class Child{
 
   String name;
-  Integer age; //Integer is a wrapper class for the int data type
+  int age; //Integer is a wrapper class for the int data type
 
-  Child(String n, Integer a){
+  Child(){
+    this.name = "Jon";
+    this.age = 50;
+  }
+	
+  Child(String n, int a){
     this.name=n;
     this.age=a; //'this' is an instance of the variable
   }
@@ -296,10 +301,8 @@ class Main {
       Child p = new Child("Francis",10); // constructor - overloading
       
       //Calling the class version of toString()
-        System.out.println(p.toString());
-        
-      //Calling the original toString()
-      System.out.println(Integer.toString(12));
+        System.out.println(a.toString());
+        System.out.println(p.toString()); 
     }
 }
 ```
