@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Unit 3" href="Unit3.html" /><link rel="prev" title="Unit 1 - Primitive Types" href="Unit1.html" />
 
-    <!-- Generated with Sphinx 7.2.5 and Furo 2023.09.10 -->
+    <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
         <title>Unit 2 - Using Objects - CSA JAVA Course</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
@@ -681,6 +681,64 @@ As you recall, the scanner class is a package that provides primitive input with
 <span class="nl">Age</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span>
 <span class="n">Mobile</span><span class="w"> </span><span class="n">Number</span><span class="p">:</span><span class="w"> </span><span class="mi">1236549898</span>
 <span class="nl">GPA</span><span class="p">:</span><span class="w"> </span><span class="mf">3.0</span>
+</pre></div>
+</div>
+<p><strong>Constructor Practice</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm">Complete Dog.java by:</span>
+<span class="cm">-filling in the attributes</span>
+<span class="cm">-creating the constructor</span>
+
+<span class="cm">Instantiate 3 pizzas and print them out by:</span>
+<span class="cm">-creating a Pizza class</span>
+<span class="cm">-filling out the attributes</span>
+<span class="cm">-creating the constructor</span>
+<span class="cm">-use this code for the toString() method: </span>
+
+<span class="cm">    public String toString()</span>
+
+<span class="cm">    {</span>
+
+<span class="cm">        return size + &quot; inch &quot; + type + &quot; pizza with &quot; + toppings;</span>
+
+<span class="cm">    }</span>
+
+<span class="cm">-create the 3 pizzas and print them out</span>
+
+<span class="cm">-your output should look like this:</span>
+<span class="cm">12 inch Veggie pizza with Tomatoes, onions, olives</span>
+<span class="cm">15 inch Cheese pizza with Cheese</span>
+<span class="cm">20 inch Meat pizza with Pepperoni, sausage, bacon*/</span>
+<span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span>
+<span class="p">{</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span>
+<span class="w">	</span><span class="p">{</span>
+<span class="w">    	</span><span class="n">Dog</span><span class="w"> </span><span class="n">golden</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">(</span><span class="s">&quot;Golden Retriever&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Sammy&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">golden</span><span class="p">);</span>
+<span class="w">    	</span>
+<span class="w">    	</span><span class="c1">//instantiate 3 pizzas below and print them out below</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Dog</span><span class="w"> </span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">//attributes</span>
+
+
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">//constructor</span>
+
+
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// This method should work after you add the</span>
+<span class="w">    </span><span class="c1">// new instance variable and update the constructor.</span>
+<span class="w">    </span><span class="c1">// DO NOT modify this method.</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; is a &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">breed</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </section>

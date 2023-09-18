@@ -497,6 +497,66 @@ Age: 50
 Mobile Number: 1236549898
 GPA: 3.0
 ```
+**Constructor Practice**
+```java
+/*
+Complete Dog.java by:
+-filling in the attributes
+-creating the constructor
+
+Instantiate 3 pizzas and print them out by:
+-creating a Pizza class
+-filling out the attributes
+-creating the constructor
+-use this code for the toString() method: 
+
+    public String toString()
+
+    {
+
+        return size + " inch " + type + " pizza with " + toppings;
+
+    }
+
+-create the 3 pizzas and print them out
+
+-your output should look like this:
+12 inch Veggie pizza with Tomatoes, onions, olives
+15 inch Cheese pizza with Cheese
+20 inch Meat pizza with Pepperoni, sausage, bacon*/
+class Main 
+{
+	public static void main(String[] args) 
+	{
+    	Dog golden = new Dog("Golden Retriever", "Sammy");
+        System.out.println(golden);
+    	
+    	//instantiate 3 pizzas below and print them out below
+	}
+}
+```
+
+```java
+public class Dog 
+{
+    //attributes
+
+
+    
+    //constructor
+
+
+    
+    // This method should work after you add the
+    // new instance variable and update the constructor.
+    // DO NOT modify this method.
+    public String toString()
+    {
+        return name + " is a " + breed;
+    }
+}
+```
+
 
 ## 2.3 Calling a Void Method
 
