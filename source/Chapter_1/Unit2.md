@@ -281,9 +281,8 @@ class Child{
   int age; //Integer is a wrapper class for the int data type
 
   Child(){
-    // this class is missing code and will return an error
-    this.name = "Miguel";   //this code is placed here so the code will run
-    this.age = 12;          //this code is placed here so the code will run
+    this.name = "Miguel";   
+    this.age = 12;          
   }
 	
   Child(String n, int a){
