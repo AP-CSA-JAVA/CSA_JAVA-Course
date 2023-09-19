@@ -440,6 +440,18 @@ emptyCake=null
 4. Create a constructor that takes all the parameters
 5. Create two more objects that will match the sample output.
 
+```java
+Sample Output
+
+My bicycle has 1 gear and is painted white!
+Pedaling to accelerate!
+My cruiser has 10 gears costs $150.
+Pedaling to accelerate.
+My tricycle has 3 gears costs $310.
+Pedaling to accelerate.
+```
+ 
+
 **Scanner Class Revisited**
 As you recall, the scanner class is a package that provides primitive input within Java programs.  It can be found in the [java.util Package](https://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html) website.
 
