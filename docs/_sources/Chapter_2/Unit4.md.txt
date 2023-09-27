@@ -54,16 +54,8 @@ public class Main {
   }
 }
 ```
-While the do while loop will not be used for the AP CSA exam, it can be a useful tool when writing programs.
+While the do while loop will not be used for the AP CSA exam, it can be a useful tool when writing programs - **See Below**.
 
-```java
-int i = 0;
-do {
-  System.out.println(i);
-  i++;
-}
-while (i < 10);   // use of a do-while loop to essentially do the same as the loops above.
-```
 Using `.equals` within a `while` loop.
 ```java
 import java.util.Scanner;
