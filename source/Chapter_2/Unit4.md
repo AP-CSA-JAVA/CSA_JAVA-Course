@@ -197,12 +197,12 @@ Submit your replit link to Canvas.
 
 ## 4.1.1 Do While Loops
 
-A "do-while" loop in Java is a type of loop where the code block is executed 
-at least once before checking the loop condition. This is in contrast to a "while" 
+A `do-while` loop in Java is a type of loop where the code block is executed 
+at least once before checking the loop condition. This is in contrast to a `while` 
 loop, which checks the condition before entering the loop. Here's a Java program 
-that demonstrates and explains a "do-while" loop:
+that demonstrates and explains a `do-while` loop:
 
-```Main
+```java
 //Do While Example
 import java.util.Scanner;
 
