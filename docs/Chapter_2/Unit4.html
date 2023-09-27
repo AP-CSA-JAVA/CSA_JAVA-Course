@@ -403,6 +403,40 @@
 <p>Submit your replit link to Canvas.</p>
 </section>
 </section>
+<section id="do-while-loops">
+<h2>4.1.1 Do While Loops<a class="headerlink" href="#do-while-loops" title="Link to this heading">#</a></h2>
+<p>A “do-while” loop in Java is a type of loop where the code block is executed
+at least once before checking the loop condition. This is in contrast to a “while”
+loop, which checks the condition before entering the loop. Here’s a Java program
+that demonstrates and explains a “do-while” loop:</p>
+<div class="highlight-Main notranslate"><div class="highlight"><pre><span></span>//Do While Example
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner posNum = new Scanner(System.in);
+        int number;
+        
+        // Prompt the user to enter a positive number
+        do { //keyword do
+            System.out.print(&quot;Enter a positive number: &quot;);
+            number = posNum.nextInt();
+            
+            // Check if the number is positive
+            if (number &lt;= 0) {
+                System.out.println(&quot;Please enter a positive number.&quot;);
+            }
+        } while (number &lt;= 0); // Loop continues as long as the number is not positive
+
+        // Now, we have a positive number
+        System.out.println(&quot;You entered a positive number: &quot; + number);
+    }
+}
+</pre></div>
+</div>
+<p>Inside the “do” block, we use a do-while loop to repeatedly prompt the user for input until they enter a positive number. The loop will always execute at least once because the condition is checked at the end of the loop.  Within the loop,  a message asks the user to enter a positive number and read their input using the scanner class. The program then checks if the entered number is less than or equal to 0. If it is, a message asks the user to enter a positive number again.  The loop will continue to execute as long as the condition (number &lt;= 0) is true.  Once the user enters a positive number, the loop ends, and a message is printed indicating that they entered a positive number.</p>
+<p>This program demonstrates a simple “do-while” loop to ensure that the user provides valid input before proceeding with the program.</p>
+</section>
 <section id="for-loops">
 <h2>4.2 For Loops<a class="headerlink" href="#for-loops" title="Link to this heading">#</a></h2>
 <p><strong>Goals</strong></p>
@@ -869,6 +903,7 @@ Pay careful attention to the Break in Nested Loops example and the Continue in N
 <li><a class="reference internal" href="#activity-4-1-2">Activity 4.1.2</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#do-while-loops">4.1.1 Do While Loops</a></li>
 <li><a class="reference internal" href="#for-loops">4.2 For Loops</a><ul>
 <li><a class="reference internal" href="#activity-4-2-1">Activity 4.2.1</a></li>
 <li><a class="reference internal" href="#activity-4-2-2">Activity 4.2.2</a></li>

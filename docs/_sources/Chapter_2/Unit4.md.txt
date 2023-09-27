@@ -195,6 +195,42 @@ The average is: 33.25
 	
 Submit your replit link to Canvas.
 
+## 4.1.1 Do While Loops
+
+A "do-while" loop in Java is a type of loop where the code block is executed 
+at least once before checking the loop condition. This is in contrast to a "while" 
+loop, which checks the condition before entering the loop. Here's a Java program 
+that demonstrates and explains a "do-while" loop:
+
+```Main
+//Do While Example
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner posNum = new Scanner(System.in);
+        int number;
+        
+        // Prompt the user to enter a positive number
+        do { //keyword do
+            System.out.print("Enter a positive number: ");
+            number = posNum.nextInt();
+            
+            // Check if the number is positive
+            if (number <= 0) {
+                System.out.println("Please enter a positive number.");
+            }
+        } while (number <= 0); // Loop continues as long as the number is not positive
+
+        // Now, we have a positive number
+        System.out.println("You entered a positive number: " + number);
+    }
+}
+```
+
+Inside the "do" block, we use a do-while loop to repeatedly prompt the user for input until they enter a positive number. The loop will always execute at least once because the condition is checked at the end of the loop.  Within the loop,  a message asks the user to enter a positive number and read their input using the scanner class. The program then checks if the entered number is less than or equal to 0. If it is, a message asks the user to enter a positive number again.  The loop will continue to execute as long as the condition (number <= 0) is true.  Once the user enters a positive number, the loop ends, and a message is printed indicating that they entered a positive number.
+    
+This program demonstrates a simple "do-while" loop to ensure that the user provides valid input before proceeding with the program.
 
 ## 4.2 For Loops
 	
