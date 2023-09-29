@@ -432,9 +432,10 @@ emptyCake=null
 **Instructions:**
 
 1. Edit the Bike class to have the following attributes:
-   - `kind`  (Cruiser, 10 Speed, Hybrid)
-   - `size`
-   - `cost`
+   - `kind`  (Cruiser, road bike, tricycle, hybrid)
+   - `gear`  (single, three-speed, 10 speed, 30 speed)
+   - `size`  (20, 22, 26, 28)
+   - `cost`  (175.99, 300.00, 1049.00, 1500.00)
 2. Create a no argument constructor. The values are Cruiser, 26, and 175.99
 3. Create a constructor that only takes type and size as parameters
 4. Create a constructor that takes all the parameters
@@ -447,7 +448,7 @@ My bicycle has 1 gear and is painted white!
 Pedaling to accelerate!
 My cruiser has 10 gears costs $150.
 Pedaling to accelerate.
-My tricycle has 3 gears costs $310.
+My tricycle has 3 gears costs $300.
 Pedaling to accelerate.
 ```
  
