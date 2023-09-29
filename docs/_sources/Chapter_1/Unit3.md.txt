@@ -718,7 +718,7 @@ Temperature:
 35
 Go skiing!
 ```
-## Switch Statement - Oracle 
+## 3.4.2.1 Switch Statements - Oracle 
 
 The switch statement is designed to be simple and fast and is not time-consuming.
 
