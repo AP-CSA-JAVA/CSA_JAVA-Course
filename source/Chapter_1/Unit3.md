@@ -718,6 +718,113 @@ Temperature:
 35
 Go skiing!
 ```
+## Switch Statement - Oracle 
+
+The switch statement is designed to be simple and fast and is not time-consuming.
+
+    A case label can be literals: `characters`, `integers`, or `strings`.
+    A case label can include mathematical operations whose result is an `int` (not a `double`).
+    A case label can include a method invocation whose result is an `int`, `char`, or `String`.
+    A case label does not allow comparison operators, logical operators, or object references other than Strings.
+
+Inside the main method, we prompt the user to enter a number representing a day of the week (1-7).  We use a switch statement to evaluate the value of the `day` variable.  Each `case` represents a different value of `day`. If the value matches one of the `cases`, the corresponding code block is executed.  The `break` statement is used to exit the switch statement after a `case` is matched. Without `break`, the code would continue to execute the code for subsequent cases until it reaches a `break` statement.  If the value of day doesn't match any of the `case` values, the default `case` is executed, which sets `dayName` to "Invalid day."  Finally, we display the result to the user, indicating the `day` of the week based on their input.  When you run this program and enter a number between 1 and 7, it will display the corresponding day of the week.  If you enter a number outside this range, it will show "Invalid day."
+
+```java
+import java.util.Scanner;
+
+public class SwitchDemo {
+    public static void main(String[] args) {
+        // Create a Scanner object to get user input
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user for a day of the week (1-7)
+        System.out.print("Enter a day of the week (1-7): ");
+        int day = scanner.nextInt();
+
+        // Switch statement to determine the day of the week
+        String dayName;
+        switch (day) {
+            case 1:
+                dayName = "Sunday";
+                break;
+            case 2:
+                dayName = "Monday";
+                break;
+            case 3:
+                dayName = "Tuesday";
+                break;
+            case 4:
+                dayName = "Wednesday";
+                break;
+            case 5:
+                dayName = "Thursday";
+                break;
+            case 6:
+                dayName = "Friday";
+                break;
+            case 7:
+                dayName = "Saturday";
+                break;
+            default:
+                dayName = "Invalid day"; // This is the default case if the input is not 1-7
+        }
+
+        // Display the result
+        System.out.println("The day of the week is " + dayName);
+    }
+}
+
+```
+
+Inside the main method, we prompt the user to enter a fruit name.  We convert the input to lowercase using `toLowerCase()` to make the comparison case-insensitive. This ensures that "apple" and "Apple" are treated the same.  We use a `switch` statement to evaluate the fruit variable, which is a string.  Each case represents a different fruit name. If the fruit matches one of the cases, the corresponding code block is executed.  Again, the `break` statement is used to exit the `switch` statement after a `case` is matched.  If the fruit doesn't match any of the case values, the default case is executed, setting the category to "Unknown."  We display the result, indicating the category of the entered fruit.  When you run this program and enter a fruit name, it will display the category of the fruit based on your input. If the entered fruit is not recognized, it will show "Unknown."
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        // Create a Scanner object to get user input
+        Scanner myfruit = new Scanner(System.in);
+
+        // Prompt the user for a fruit name
+        System.out.print("Enter a fruit name: ");
+        String fruit = myfruit.nextLine();
+
+        // Convert the input to lowercase to make the comparison case-insensitive
+        fruit = fruit.toLowerCase();
+
+        // Switch statement to determine the fruit category
+        String category;
+        switch (fruit) {
+            case "apple":
+            case "banana":
+            case "cherry":
+                category = "Tropical fruit";
+                break;
+            case "grape":
+            case "blueberry":
+            case "strawberry":
+                category = "Berry";
+                break;
+            case "orange":
+            case "lemon":
+            case "lime":
+                category = "Citrus fruit";
+                break;
+            default:
+                category = "Unknown";
+        }
+
+        // Display the result
+        if (!category.equals("Unknown")) {
+            System.out.println(fruit + " is a " + category + ".");
+        } else {
+            System.out.println("Sorry, I don't know the category of " + fruit + ".");
+        }
+    }
+}
+```
+
 
 ## 3.5 Compound Boolean Expressions
 
