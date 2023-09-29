@@ -1087,6 +1087,109 @@ Write a program that will do the following:</p>
 </div>
 </section>
 </section>
+<section id="switch-statement-oracle">
+<h2>Switch Statement - Oracle<a class="headerlink" href="#switch-statement-oracle" title="Link to this heading">#</a></h2>
+<p>The switch statement is designed to be simple and fast and is not time-consuming.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>A case label can be literals: `characters`, `integers`, or `strings`.
+A case label can include mathematical operations whose result is an `int` (not a `double`).
+A case label can include a method invocation whose result is an `int`, `char`, or `String`.
+A case label does not allow comparison operators, logical operators, or object references other than Strings.
+</pre></div>
+</div>
+<p>Inside the main method, we prompt the user to enter a number representing a day of the week (1-7).  We use a switch statement to evaluate the value of the <code class="docutils literal notranslate"><span class="pre">day</span></code> variable.  Each <code class="docutils literal notranslate"><span class="pre">case</span></code> represents a different value of <code class="docutils literal notranslate"><span class="pre">day</span></code>. If the value matches one of the <code class="docutils literal notranslate"><span class="pre">cases</span></code>, the corresponding code block is executed.  The <code class="docutils literal notranslate"><span class="pre">break</span></code> statement is used to exit the switch statement after a <code class="docutils literal notranslate"><span class="pre">case</span></code> is matched. Without <code class="docutils literal notranslate"><span class="pre">break</span></code>, the code would continue to execute the code for subsequent cases until it reaches a <code class="docutils literal notranslate"><span class="pre">break</span></code> statement.  If the value of day doesn’t match any of the <code class="docutils literal notranslate"><span class="pre">case</span></code> values, the default <code class="docutils literal notranslate"><span class="pre">case</span></code> is executed, which sets <code class="docutils literal notranslate"><span class="pre">dayName</span></code> to “Invalid day.”  Finally, we display the result to the user, indicating the <code class="docutils literal notranslate"><span class="pre">day</span></code> of the week based on their input.  When you run this program and enter a number between 1 and 7, it will display the corresponding day of the week.  If you enter a number outside this range, it will show “Invalid day.”</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SwitchDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Create a Scanner object to get user input</span>
+<span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Prompt the user for a day of the week (1-7)</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Enter a day of the week (1-7): &quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">day</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// Switch statement to determine the day of the week</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">dayName</span><span class="p">;</span>
+<span class="w">        </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">day</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span>
+<span class="w">                </span><span class="n">dayName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Sunday&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span>
+<span class="w">                </span><span class="n">dayName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Monday&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">3</span><span class="p">:</span>
+<span class="w">                </span><span class="n">dayName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Tuesday&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">4</span><span class="p">:</span>
+<span class="w">                </span><span class="n">dayName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Wednesday&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">5</span><span class="p">:</span>
+<span class="w">                </span><span class="n">dayName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Thursday&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">6</span><span class="p">:</span>
+<span class="w">                </span><span class="n">dayName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Friday&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="mi">7</span><span class="p">:</span>
+<span class="w">                </span><span class="n">dayName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Saturday&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">default</span><span class="p">:</span>
+<span class="w">                </span><span class="n">dayName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Invalid day&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// This is the default case if the input is not 1-7</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// Display the result</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;The day of the week is &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dayName</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Inside the main method, we prompt the user to enter a fruit name.  We convert the input to lowercase using <code class="docutils literal notranslate"><span class="pre">toLowerCase()</span></code> to make the comparison case-insensitive. This ensures that “apple” and “Apple” are treated the same.  We use a <code class="docutils literal notranslate"><span class="pre">switch</span></code> statement to evaluate the fruit variable, which is a string.  Each case represents a different fruit name. If the fruit matches one of the cases, the corresponding code block is executed.  Again, the <code class="docutils literal notranslate"><span class="pre">break</span></code> statement is used to exit the <code class="docutils literal notranslate"><span class="pre">switch</span></code> statement after a <code class="docutils literal notranslate"><span class="pre">case</span></code> is matched.  If the fruit doesn’t match any of the case values, the default case is executed, setting the category to “Unknown.”  We display the result, indicating the category of the entered fruit.  When you run this program and enter a fruit name, it will display the category of the fruit based on your input. If the entered fruit is not recognized, it will show “Unknown.”</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Create a Scanner object to get user input</span>
+<span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">myfruit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Prompt the user for a fruit name</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Enter a fruit name: &quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">fruit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myfruit</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// Convert the input to lowercase to make the comparison case-insensitive</span>
+<span class="w">        </span><span class="n">fruit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fruit</span><span class="p">.</span><span class="na">toLowerCase</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// Switch statement to determine the fruit category</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">category</span><span class="p">;</span>
+<span class="w">        </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">fruit</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="s">&quot;apple&quot;</span><span class="p">:</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="s">&quot;banana&quot;</span><span class="p">:</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="s">&quot;cherry&quot;</span><span class="p">:</span>
+<span class="w">                </span><span class="n">category</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Tropical fruit&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="s">&quot;grape&quot;</span><span class="p">:</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="s">&quot;blueberry&quot;</span><span class="p">:</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="s">&quot;strawberry&quot;</span><span class="p">:</span>
+<span class="w">                </span><span class="n">category</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Berry&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="s">&quot;orange&quot;</span><span class="p">:</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="s">&quot;lemon&quot;</span><span class="p">:</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="s">&quot;lime&quot;</span><span class="p">:</span>
+<span class="w">                </span><span class="n">category</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Citrus fruit&quot;</span><span class="p">;</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">default</span><span class="p">:</span>
+<span class="w">                </span><span class="n">category</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Unknown&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// Display the result</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">category</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;Unknown&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">fruit</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; is a &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">category</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Sorry, I don&#39;t know the category of &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fruit</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
 <section id="compound-boolean-expressions">
 <h2>3.5 Compound Boolean Expressions<a class="headerlink" href="#compound-boolean-expressions" title="Link to this heading">#</a></h2>
 <p><strong>Goals</strong></p>
@@ -1661,6 +1764,7 @@ Document and collect the following items:</p>
 <li><a class="reference internal" href="#activity-3-4-2">Activity 3.4.2</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#switch-statement-oracle">Switch Statement - Oracle</a></li>
 <li><a class="reference internal" href="#compound-boolean-expressions">3.5 Compound Boolean Expressions</a><ul>
 <li><a class="reference internal" href="#activity-3-5-1">Activity 3.5.1</a></li>
 <li><a class="reference internal" href="#activity-3-5-2">Activity 3.5.2</a></li>
