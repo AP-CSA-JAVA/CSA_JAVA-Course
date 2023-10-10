@@ -866,24 +866,46 @@ My string
 My string is immutable, so I have to assign it explicitly here.
 ```
 
-
+**Example 2**
 Take a look at the following programs:
 ```java
-String stateCat = "Maine";
-stateCat.concat("Coon");
-System.out.println(stateCat);
-// What will be the output?
-
-System.out.println("Maine ".concat("Coon"));
-// What will be the output?
-
-String stateFish = "Landlocked";
-String otherFish = "River";
-stateFish = stateFish.concat("Salmon");
-otherFish = stateFish.concat("Trout");
-System.out.println(otherFish);
-// What is the output of this last program?
+public class Main {
+    public static void main(String[] args) {
+	String str1 = "Hello ";
+	String str2 = "neighbor, ";
+	String str3 = "How are you?";
+	// concatentating 1 string
+	String str4 = str1.concat(str2);
+	System.out.println(str4);
+	//concatenating more strings
+	String str5 = str1.concat(str2).concat(str3);
+	System.out.println(str5);
+    }
+}
 ```
+
+**Output**
+```java
+Hello neighbor,
+Hello neighbor, How are you?
+```
+
+```java
+public class Main {
+    public static void main(String[] args) {
+	String str1 = "Coyotes";
+	String str2 = "Our mascot is the ".concat(str1);
+
+	System.out.println(str2);
+    }
+}
+```
+
+```java
+Our mascot is the Coyotes
+```
+
+
 Using Notepad: Copy and complete the code below using each of the concatenation operators where noted in the comments. When the program runs, it should display Whoopie Pie and Wild Blueberry.
 
 ```java
