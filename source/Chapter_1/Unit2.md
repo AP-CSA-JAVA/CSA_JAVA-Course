@@ -835,7 +835,14 @@ String objects can be instantiated in **two different** ways, either by assignin
 | String state = "Maine"; | String state = new String("Maine"); |
 
 String objects have the benefit of many methods, one such method is *concat*. Concatenation means appending one string to the end of another and is the function performed by the concat method.
-String objects are *immutable*. This means that you cannot change the String object, rather a new spot within the same memory location with the necessary changes. In this case, the program created a String object with a specific value. When the concat method is called, it creates a *new String object* in memory with the new value. This does not replace the original reference.
+String objects are *immutable*. This means that you cannot change the String object.  In this case, the program created a String object with a specific value. When the `concat()` method is called, it creates a *new String object* in memory with the new value. This does not replace the original reference.
+
+**concat() vs. the + Operator for Concatenation**
+
+| concat() | + Operator |
+| ----------- | ---------- |
+| Suppose **str1** is `null` and **str2** is "Java".  Result of `str1.concat(str2) will throw a NullPointerException.| Assume **str1** is `null` and **str2** ia "Java".  Result of `str1 + str2` returns "nullJava". |
+| You can only pass a String to the `concat()` method. |  If one of the operands is a string and the other is a non-string value, then the non-string calue is converted to a string before concatentatio.  For example, ` "Java" + 5 ` will return ` "Java5" `. |
 
 ***Example***
 ```java
@@ -843,22 +850,22 @@ public class Main
 {
   public static void main(String[] args) 
   {
-    String stateHerb = "Winter"; //initial reference
-    stateHerb = stateHerb.concat("green"); //new reference
-    
-    System.out.println(stateHerb);
+    String str1 = "My string";
+    // The string str1 does not change even though it is being invoked by the method.
+    // concat(), as it is immutable must have an explicit assignment to produce the desired outcome.
+    str1.concat("is immutable");
+    System.out.println(str1);
+    str1 = str1.concat(" is immutable, so I have to assign it explicitly here.")
+    System.out.println(str1);
   }
 }
 ```
 **Output**
 ```java
-Wintergreen
+My string
+My string is immutable, so I have to assign it explicitly here.
 ```
-**Recall:**
-- [ ] A String is not a primitive type.
-- [ ] A String object references a location in memory.
-- [ ] String objects cannot be changed.
-- [ ] The word immutable means "cannot be changed"
+
 
 Take a look at the following programs:
 ```java
