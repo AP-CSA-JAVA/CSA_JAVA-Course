@@ -1022,31 +1022,46 @@ The area of a circle is <code class="docutils literal notranslate"><span class="
 </table>
 </div>
 <p>String objects have the benefit of many methods, one such method is <em>concat</em>. Concatenation means appending one string to the end of another and is the function performed by the concat method.
-String objects are <em>immutable</em>. This means that you cannot change the String object, rather a new spot within the same memory location with the necessary changes. In this case, the program created a String object with a specific value. When the concat method is called, it creates a <em>new String object</em> in memory with the new value. This does not replace the original reference.</p>
+String objects are <em>immutable</em>. This means that you cannot change the String object.  In this case, the program created a String object with a specific value. When the <code class="docutils literal notranslate"><span class="pre">concat()</span></code> method is called, it creates a <em>new String object</em> in memory with the new value. This does not replace the original reference.</p>
+<p><strong>concat() vs. the + Operator for Concatenation</strong></p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>concat()</p></th>
+<th class="head"><p>+ Operator</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Suppose <strong>str1</strong> is <code class="docutils literal notranslate"><span class="pre">null</span></code> and <strong>str2</strong> is “Java”.  Result of `str1.concat(str2) will throw a NullPointerException.</p></td>
+<td><p>Assume <strong>str1</strong> is <code class="docutils literal notranslate"><span class="pre">null</span></code> and <strong>str2</strong> ia “Java”.  Result of <code class="docutils literal notranslate"><span class="pre">str1</span> <span class="pre">+</span> <span class="pre">str2</span></code> returns “nullJava”.</p></td>
+</tr>
+<tr class="row-odd"><td><p>You can only pass a String to the <code class="docutils literal notranslate"><span class="pre">concat()</span></code> method.</p></td>
+<td><p>If one of the operands is a string and the other is a non-string value, then the non-string calue is converted to a string before concatentatio.  For example, <code class="docutils literal notranslate"><span class="pre">&quot;Java&quot;</span> <span class="pre">+</span> <span class="pre">5</span></code> will return <code class="docutils literal notranslate"><span class="pre">&quot;Java5&quot;</span></code>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><em><strong>Example</strong></em></p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span>
 <span class="p">{</span>
 <span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span>
 <span class="w">  </span><span class="p">{</span>
-<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">stateHerb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Winter&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">//initial reference</span>
-<span class="w">    </span><span class="n">stateHerb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stateHerb</span><span class="p">.</span><span class="na">concat</span><span class="p">(</span><span class="s">&quot;green&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">//new reference</span>
-<span class="w">    </span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">stateHerb</span><span class="p">);</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">str1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;My string&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// The string str1 does not change even though it is being invoked by the method.</span>
+<span class="w">    </span><span class="c1">// concat(), as it is immutable must have an explicit assignment to produce the desired outcome.</span>
+<span class="w">    </span><span class="n">str1</span><span class="p">.</span><span class="na">concat</span><span class="p">(</span><span class="s">&quot;is immutable&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">str1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">str1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str1</span><span class="p">.</span><span class="na">concat</span><span class="p">(</span><span class="s">&quot; is immutable, so I have to assign it explicitly here.&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">str1</span><span class="p">);</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p><strong>Output</strong></p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Wintergreen</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">My</span><span class="w"> </span><span class="n">string</span>
+<span class="n">My</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">immutable</span><span class="p">,</span><span class="w"> </span><span class="n">so</span><span class="w"> </span><span class="n">I</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">assign</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">explicitly</span><span class="w"> </span><span class="n">here</span><span class="p">.</span>
 </pre></div>
 </div>
-<p><strong>Recall:</strong></p>
-<ul class="contains-task-list simple">
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> A String is not a primitive type.</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> A String object references a location in memory.</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> String objects cannot be changed.</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> The word immutable means “cannot be changed”</p></li>
-</ul>
 <p>Take a look at the following programs:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">stateCat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Maine&quot;</span><span class="p">;</span>
 <span class="n">stateCat</span><span class="p">.</span><span class="na">concat</span><span class="p">(</span><span class="s">&quot;Coon&quot;</span><span class="p">);</span>
