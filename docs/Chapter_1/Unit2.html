@@ -1062,21 +1062,39 @@ String objects are <em>immutable</em>. This means that you cannot change the Str
 <span class="n">My</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">immutable</span><span class="p">,</span><span class="w"> </span><span class="n">so</span><span class="w"> </span><span class="n">I</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">assign</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">explicitly</span><span class="w"> </span><span class="n">here</span><span class="p">.</span>
 </pre></div>
 </div>
-<p>Take a look at the following programs:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">stateCat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Maine&quot;</span><span class="p">;</span>
-<span class="n">stateCat</span><span class="p">.</span><span class="na">concat</span><span class="p">(</span><span class="s">&quot;Coon&quot;</span><span class="p">);</span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">stateCat</span><span class="p">);</span>
-<span class="c1">// What will be the output?</span>
+<p><strong>Example 2</strong>
+Take a look at the following programs:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="n">String</span><span class="w"> </span><span class="n">str1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello &quot;</span><span class="p">;</span>
+<span class="w">	</span><span class="n">String</span><span class="w"> </span><span class="n">str2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;neighbor, &quot;</span><span class="p">;</span>
+<span class="w">	</span><span class="n">String</span><span class="w"> </span><span class="n">str3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;How are you?&quot;</span><span class="p">;</span>
+<span class="w">	</span><span class="c1">// concatentating 1 string</span>
+<span class="w">	</span><span class="n">String</span><span class="w"> </span><span class="n">str4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str1</span><span class="p">.</span><span class="na">concat</span><span class="p">(</span><span class="n">str2</span><span class="p">);</span>
+<span class="w">	</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">str4</span><span class="p">);</span>
+<span class="w">	</span><span class="c1">//concatenating more strings</span>
+<span class="w">	</span><span class="n">String</span><span class="w"> </span><span class="n">str5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str1</span><span class="p">.</span><span class="na">concat</span><span class="p">(</span><span class="n">str2</span><span class="p">).</span><span class="na">concat</span><span class="p">(</span><span class="n">str3</span><span class="p">);</span>
+<span class="w">	</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">str5</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Output</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Hello</span><span class="w"> </span><span class="n">neighbor</span><span class="p">,</span>
+<span class="n">Hello</span><span class="w"> </span><span class="n">neighbor</span><span class="p">,</span><span class="w"> </span><span class="n">How</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">you</span><span class="o">?</span>
+</pre></div>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="n">String</span><span class="w"> </span><span class="n">str1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Coyotes&quot;</span><span class="p">;</span>
+<span class="w">	</span><span class="n">String</span><span class="w"> </span><span class="n">str2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Our mascot is the &quot;</span><span class="p">.</span><span class="na">concat</span><span class="p">(</span><span class="n">str1</span><span class="p">);</span>
 
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Maine &quot;</span><span class="p">.</span><span class="na">concat</span><span class="p">(</span><span class="s">&quot;Coon&quot;</span><span class="p">));</span>
-<span class="c1">// What will be the output?</span>
-
-<span class="n">String</span><span class="w"> </span><span class="n">stateFish</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Landlocked&quot;</span><span class="p">;</span>
-<span class="n">String</span><span class="w"> </span><span class="n">otherFish</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;River&quot;</span><span class="p">;</span>
-<span class="n">stateFish</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stateFish</span><span class="p">.</span><span class="na">concat</span><span class="p">(</span><span class="s">&quot;Salmon&quot;</span><span class="p">);</span>
-<span class="n">otherFish</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stateFish</span><span class="p">.</span><span class="na">concat</span><span class="p">(</span><span class="s">&quot;Trout&quot;</span><span class="p">);</span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">otherFish</span><span class="p">);</span>
-<span class="c1">// What is the output of this last program?</span>
+<span class="w">	</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">str2</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Our</span><span class="w"> </span><span class="n">mascot</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Coyotes</span>
 </pre></div>
 </div>
 <p>Using Notepad: Copy and complete the code below using each of the concatenation operators where noted in the comments. When the program runs, it should display Whoopie Pie and Wild Blueberry.</p>
