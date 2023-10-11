@@ -842,7 +842,7 @@ String objects are *immutable*. This means that you cannot change the String obj
 | concat() | + Operator |
 | ----------- | ---------- |
 | Suppose **str1** is `null` and **str2** is "Java".  Result of `str1.concat(str2) will throw a NullPointerException.| Assume **str1** is `null` and **str2** ia "Java".  Result of `str1 + str2` returns "nullJava". |
-| You can only pass a String to the `concat()` method. |  If one of the operands is a string and the other is a non-string value, then the non-string calue is converted to a string before concatentatio.  For example, ` "Java" + 5 ` will return ` "Java5" `. |
+| You can only pass a String to the `concat()` method. |  If one of the operands is a string and the other is a non-string value, then the non-string value is converted to a string before concatentation.  For example, ` "Java" + 5 ` will return ` "Java5" `. |
 
 ***Example***
 ```java
@@ -957,6 +957,7 @@ public class Main
 ```
 **Output**
 "Oh, Pine Tree State,
+
  Your woods\ fields\ and hills\"
  
  
