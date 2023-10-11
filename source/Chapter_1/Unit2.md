@@ -855,7 +855,7 @@ public class Main
     // concat(), as it is immutable must have an explicit assignment to produce the desired outcome.
     str1.concat("is immutable");
     System.out.println(str1);
-    str1 = str1.concat(" is immutable, so I have to assign it explicitly here.")
+    str1 = str1.concat(" is immutable, so I have to assign it explicitly here.");
     System.out.println(str1);
   }
 }
@@ -867,7 +867,7 @@ My string is immutable, so I have to assign it explicitly here.
 ```
 
 **Example 2**
-Take a look at the following programs:
+Take a look at the following program:
 ```java
 public class Main {
     public static void main(String[] args) {
