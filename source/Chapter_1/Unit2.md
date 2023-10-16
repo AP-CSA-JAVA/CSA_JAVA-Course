@@ -1073,7 +1073,7 @@ Exception in thread "main" java.lang.StringIndexOutOfBoundsException: String ind
 	at java.lang.String.substring(String.java:1963)
 	at IndexTester.main(IndexTester.java:9)
 ```
-How would you fix this error?
+How would you fix this error above?
 
 ```java
 class Main {
@@ -1105,7 +1105,8 @@ public class Main
   public static void main(String[] args)
   {
     String placeName = "New Brunswick";
-    /* Add your code within the parentheses below. */
+    /* 	What is the length of placeName?
+	What is the indexOf "N"?        */
     System.out.println();
   }
 }
@@ -1230,7 +1231,7 @@ separated by a space. Then it asks the user to enter a phrase. You will write an
 
 ```java
 Enter your first name and last name, separated by a space: 
-Jonathan Virak
+Bernard Heally
 Enter a phrase: 
 Give papa a proper cup of coffee in a copper coffee cup.
 
@@ -1262,12 +1263,12 @@ Create a program that will ask the user for their name and their partners name. 
 **Sample Output**
 ```java
 Enter your first name:
- Jonathan
+ Samantha
 Enter your partner's name:
- Julia
+ Russell
 
-Yelling your name: Samantha
-Whispering your partner's name: Russell
+Yelling your name: SAMANTHA
+Whispering your partner's name: russell
 Your name in Pig Latin: amanthaSay
 Your partner's name in Pig Latin: ussellray
 Your team name is Samaell
