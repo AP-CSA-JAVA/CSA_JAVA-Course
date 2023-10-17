@@ -1286,6 +1286,22 @@ ________________________________________________________________________________
 ___________________________________________________________________________________________________________________
 
 Recall that primitive data types are int, double, boolean & String.  A wrapper class is a class that allows you to extend a primitive type into an object.  A wrapper class contains a single attribute that is its primitive type.  For example, `Integer` is a wrapper class for primitive type `int`.  For every Wrapper Class there is a corresponding primitive type <see below>.  Integer belongs to the Java.lang package that can be found in the [API documentation](https://docs.oracle.com/en/java/javase/14/docs/api/index.html) that we reviewed in a prior lesson.
+
+**Why do we need Wrapper Classes?**
+
+There are instances that using a Wrapper class in Java is appropriate:
+
+- They convert primitive data types into objects. Objects are needed if we wish to modify the arguments passed into a method (because primitive types are passed by value).
+- The classes in java.util package handles only objects and hence wrapper classes help in this case too.
+- Data structures such as an ArrayList, store only objects and not primitive types.
+
+**What are the advantages of using Wrapper Classes**
+
+- Collections allowed only object data.
+- On object data we can call multiple methods compareTo(), equals(), toString()
+- Cloning process only objects
+- Object data allowed null values.
+
 	
 <details><summary>Wrapper Classes</summary>
 <p>
@@ -1362,7 +1378,7 @@ public class Main
 
 
 **Autoboxing/ Unboxing**
-In the program below the JVM did some extra work at lines 5 and 6. Java automatically converted from the int and double primitive types to their corresponding object reference types. This is called autoboxing, an automatic conversion that the Java compiler makes between primitive types and their corresponding object wrapper classes.
+In the program below the JVM did some extra work at lines 5 and 6. Java automatically converted from the int and double primitive types to their corresponding object reference types. This is called **autoboxing**, an automatic conversion that the Java compiler makes between primitive types and their corresponding object wrapper classes.
 
 ```java
 1 public class Main
