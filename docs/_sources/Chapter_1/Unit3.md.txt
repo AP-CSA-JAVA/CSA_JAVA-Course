@@ -722,10 +722,10 @@ Go skiing!
 
 The switch statement is designed to be simple and fast and is not time-consuming.
 
-    A case label can be literals: `characters`, `integers`, or `strings`.
-    A case label can include mathematical operations whose result is an `int` (not a `double`).
-    A case label can include a method invocation whose result is an `int`, `char`, or `String`.
-    A case label does not allow comparison operators, logical operators, or object references other than Strings.
+- A case label can be literals: `characters`, `integers`, or `strings`.
+- A case label can include mathematical operations whose result is an `int` (not a `double`).
+- A case label can include a method invocation whose result is an `int`, `char`, or `String`.
+- A case label does not allow comparison operators, logical operators, or object references other than Strings.
 
 Inside the main method, we prompt the user to enter a number representing a day of the week (1-7).  We use a switch statement to evaluate the value of the `day` variable.  Each `case` represents a different value of `day`. If the value matches one of the `cases`, the corresponding code block is executed.  The `break` statement is used to exit the switch statement after a `case` is matched. Without `break`, the code would continue to execute the code for subsequent cases until it reaches a `break` statement.  If the value of day doesn't match any of the `case` values, the default `case` is executed, which sets `dayName` to "Invalid day."  Finally, we display the result to the user, indicating the `day` of the week based on their input.  When you run this program and enter a number between 1 and 7, it will display the corresponding day of the week.  If you enter a number outside this range, it will show "Invalid day."
 
