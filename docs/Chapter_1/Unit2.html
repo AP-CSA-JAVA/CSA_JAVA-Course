@@ -1561,6 +1561,20 @@ separated by a space. Then it asks the user to enter a phrase. You will write an
 </ul>
 <hr class="docutils" />
 <p>Recall that primitive data types are int, double, boolean &amp; String.  A wrapper class is a class that allows you to extend a primitive type into an object.  A wrapper class contains a single attribute that is its primitive type.  For example, <code class="docutils literal notranslate"><span class="pre">Integer</span></code> is a wrapper class for primitive type <code class="docutils literal notranslate"><span class="pre">int</span></code>.  For every Wrapper Class there is a corresponding primitive type <see below>.  Integer belongs to the Java.lang package that can be found in the <a class="reference external" href="https://docs.oracle.com/en/java/javase/14/docs/api/index.html">API documentation</a> that we reviewed in a prior lesson.</p>
+<p><strong>Why do we need Wrapper Classes?</strong></p>
+<p>There are instances that using a Wrapper class in Java is appropriate:</p>
+<ul class="simple">
+<li><p>They convert primitive data types into objects. Objects are needed if we wish to modify the arguments passed into a method (because primitive types are passed by value).</p></li>
+<li><p>The classes in java.util package handles only objects and hence wrapper classes help in this case too.</p></li>
+<li><p>Data structures such as an ArrayList, store only objects and not primitive types.</p></li>
+</ul>
+<p><strong>What are the advantages of using Wrapper Classes</strong></p>
+<ul class="simple">
+<li><p>Collections allowed only object data.</p></li>
+<li><p>On object data we can call multiple methods compareTo(), equals(), toString()</p></li>
+<li><p>Cloning process only objects</p></li>
+<li><p>Object data allowed null values.</p></li>
+</ul>
 <details><summary>Wrapper Classes</summary>
 <p>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -1677,7 +1691,7 @@ Modify the program so that it stores the value of int1 in int2.</p>
 <p><strong>Sample Output</strong>
 <code class="docutils literal notranslate"><span class="pre">d</span> <span class="pre">value</span> <span class="pre">is:</span> <span class="pre">1.5</span></code></p>
 <p><strong>Autoboxing/ Unboxing</strong>
-In the program below the JVM did some extra work at lines 5 and 6. Java automatically converted from the int and double primitive types to their corresponding object reference types. This is called autoboxing, an automatic conversion that the Java compiler makes between primitive types and their corresponding object wrapper classes.</p>
+In the program below the JVM did some extra work at lines 5 and 6. Java automatically converted from the int and double primitive types to their corresponding object reference types. This is called <strong>autoboxing</strong>, an automatic conversion that the Java compiler makes between primitive types and their corresponding object wrapper classes.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span>
 <span class="mi">2</span><span class="w"> </span><span class="p">{</span>
 <span class="mi">3</span><span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
