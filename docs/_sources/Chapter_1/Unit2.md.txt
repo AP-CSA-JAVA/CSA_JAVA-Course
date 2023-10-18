@@ -1211,7 +1211,7 @@ String Object Practice Part II: [Activity 126 String Objects_Vers2.docx](https:/
 
 ### Activity 2.7.1 - Wordplay
 
-Starter Files: [127-wordPlay.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9747405/127-wordPlay.zip)
+Starter Files: [WordPlay.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/13031419/WordPlay.zip)
 
 
 You will write a program that asks the user to enter their first name and their last name, 
@@ -1248,7 +1248,7 @@ Submit your repl.it file on Canvas.
 
 ### Activity 2.7.2 - Speaking
 
-Starter files: [127-Speaking.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9757536/127-Speaking.zip)
+Starter files: [Speaking.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/13031428/127-Speaking.zip)
 
 Create a program that will ask the user for their name and their partners name. Create the following:
 
