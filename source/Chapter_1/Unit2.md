@@ -1011,6 +1011,8 @@ Navigate to and review the information that can be found at [Java API Specificat
 | `int indexOf(String str)` | Returns the index of the first occurrence of str; returns –1 if not found. |
 | `boolean equals(String other)` | Returns true if this is equal to other; returns false otherwise. |
 | `int compareTo(String other)` | Returns a value < 0 if this is less than other; returns zero if this is equal to other; returns a value > 0 if this is greater than other. |
+| 'String startsWith(String str)' | The method checks whether a string starts with the specified character(s). |
+| 'String equalsIgnoreCase(String str) ' | The method compares two strings, ignoring lower case and upper case differences. |
 
 Take a look at the code below:
 ```java
