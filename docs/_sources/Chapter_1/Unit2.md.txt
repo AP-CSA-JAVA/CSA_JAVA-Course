@@ -1707,7 +1707,7 @@ Complete worksheet 2 for homework.  We will review your work next class.
 class Main {
   public static void main(String[] args) {
     System.out.println( "a" + (char)1 ); // output is a
-	System.out.println( "a" ); // out is a
+	System.out.println( "a" ); // output is a
 	System.out.println( 'a' + (char)1 ); // output is 98
 	System.out.println( "a" + 1 ); //output a1
 	System.out.println( 'a' + 1 ); //output 98
