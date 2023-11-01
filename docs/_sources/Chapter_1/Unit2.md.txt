@@ -1518,7 +1518,7 @@ The Math class can be found in the java.lang package.  The Math class contains o
 
 <details>
 <summary><Primitive Type Returned</summary>
-<p>
+
 
 **Math.round:**
 - Math.round is designed to round a floating-point number to the nearest integer. Its purpose is to convert a floating-point value to an integer value, effectively removing the decimal part. Rounding to the nearest integer makes sense because it's often used in scenarios where you need an integer result. For example, if you have a floating-point number that represents a measurement and you want to round it to the nearest whole number, Math.round is a convenient function to use.
@@ -1534,8 +1534,6 @@ The Math class can be found in the java.lang package.  The Math class contains o
 **Math.floor:**
 - Math.floor is another method in the Math class, and it is used to round a floating-point number down to the nearest integer less than or equal to the original number (the "floor"). Like Math.ceil, Math.floor also returns a double value.
 
-
-</p>
 </details>
 
 Having seen the Math method abs method in use, refer to the Java Quick Reference to predict 
