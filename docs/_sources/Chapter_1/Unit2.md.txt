@@ -1541,7 +1541,7 @@ The Math class can be found in the java.lang package.  The Math class contains o
 
 --------------------------------------------------------------------------------------------------------------------------------------------
 
-Having seen the Math method abs method in use, refer to the Java Quick Reference to predict 
+Having seen the Math method `abs` method in use, refer to the Java Quick Reference to predict 
 how you could use the `pow` method to raise a base of 2 to the exponent 10 (2<sup>10</sup> ).
 
 <details><summary>Answer</summary>
