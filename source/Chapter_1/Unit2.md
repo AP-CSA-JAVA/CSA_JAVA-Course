@@ -1518,7 +1518,7 @@ The Math class can be found in the java.lang package.  The Math class contains o
 --------------------------------------------------------------------------------------------------------------------------------------------
 
 <details>
-<summary>Primitive Type Returned</summary>
+<summary>Math Method: Primitive Type Returned</summary>
 <p>
 
 **Math.round:**
