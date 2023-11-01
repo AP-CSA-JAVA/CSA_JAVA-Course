@@ -1758,7 +1758,7 @@ As a wrap-up, consider the ++ operator as:
 
 
 
-### Activity 2.9.2 - Race Car
+### Activity 1.2.9 - Race Car
 
 Starter Files: [Activity129RaceCar.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9757289/Activity129RaceCar.zip)
 
