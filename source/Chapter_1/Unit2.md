@@ -1516,7 +1516,8 @@ The Math class can be found in the java.lang package.  The Math class contains o
 | floor() | Returns an integer less than or equal to the orignal number |
 
 
-<details><summary><Primitive_Type_Returned</summary>
+<details>
+<summary><Primitive Type Returned</summary>
 <p>
 
 **Math.round:**
@@ -1540,7 +1541,7 @@ The Math class can be found in the java.lang package.  The Math class contains o
 Having seen the Math method abs method in use, refer to the Java Quick Reference to predict 
 how you could use the `pow` method to raise a base of 2 to the exponent 10 (2<sup>10</sup> ).
 
-<details><Answer</summary>
+<details><summary>Answer</summary>
 <p>
 
 ```java
@@ -1551,7 +1552,7 @@ Math.pow(2, 10)
 
 How would you write the `sqrt` method to get the square root of 9.
 
-<details><Answer</summary>
+<details><summary>Answer</summary>
 <p>
 
 ```java
@@ -1562,7 +1563,7 @@ Math.sqrt(9)
 	
 How would you write the `round` method to get the round of 79.52.
 
-<details><Answer</summary>
+<details><summary>Answer</summary>
 <p>
 
 ```java
