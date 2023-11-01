@@ -1515,7 +1515,8 @@ The Math class can be found in the java.lang package.  The Math class contains o
 | ceil() | Returns an integer greater than or equal to the original number |
 | floor() | Returns an integer less than or equal to the orignal number |
 
-<details><Primitive_Type_Returned</summary>
+
+<details><summary><Primitive_Type_Returned</summary>
 <p>
 
 **Math.round:**
