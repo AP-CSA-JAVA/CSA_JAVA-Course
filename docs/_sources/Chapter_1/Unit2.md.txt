@@ -1515,6 +1515,8 @@ The Math class can be found in the java.lang package.  The Math class contains o
 | ceil() | Returns an integer greater than or equal to the original number |
 | floor() | Returns an integer less than or equal to the orignal number |
 
+--------------------------------------------------------------------------------------------------------------------------------------------
+
 <details>
 <summary>Primitive Type Returned</summary>
 <p>
@@ -1537,7 +1539,7 @@ The Math class can be found in the java.lang package.  The Math class contains o
 </p>
 </details>
 
-
+--------------------------------------------------------------------------------------------------------------------------------------------
 
 Having seen the Math method abs method in use, refer to the Java Quick Reference to predict 
 how you could use the `pow` method to raise a base of 2 to the exponent 10 (2<sup>10</sup> ).
@@ -1551,6 +1553,8 @@ Math.pow(2, 10)
 </p>
 </details>
 
+--------------------------------------------------------------------------------------------------------------------------------------------
+
 How would you write the `sqrt` method to get the square root of 9.
 
 <details><summary>Answer</summary>
@@ -1561,7 +1565,9 @@ Math.sqrt(9)
 ```
 </p>
 </details>
-	
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
 How would you write the `round` method to get the round of 79.52.
 
 <details><summary>Answer</summary>
@@ -1572,6 +1578,8 @@ Math.round(79.52)
 ```
 </p>
 </details>
+
+--------------------------------------------------------------------------------------------------------------------------------------------
 
 **The random Method**
 
