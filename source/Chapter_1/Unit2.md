@@ -1512,6 +1512,24 @@ The Math class can be found in the java.lang package.  The Math class contains o
 | double sqrt(double x) | Returns the positive square root of a double value |
 | double random() | Returns a double value greater than or equal to 0.0 and less than 1.0 |
 | round() | Returns the round of the decimal number to the nearest value |
+| ceil() | Returns an integer greater than or equal to the original number |
+| floor() | Returns an integer less than or equal to the orignal number |
+
+<details><Primitive Type returned</summary>
+<p>
+	**Math.round:**
+	- Math.round is designed to round a floating-point number to the nearest integer. Its purpose is to convert a floating-point value to an integer value, effectively removing the decimal part. Rounding to the nearest integer makes sense because it's often used in scenarios where you need an integer result. For example, if you have a floating-point number that represents a measurement and you want to round it to the nearest whole number, Math.round is a convenient function to use.
+	- The return type of Math.round is long, but if you want an integer result, you can cast it to int or store it in an int variable. This is because rounding can result in a value that may not fit into the range of a 32-bit integer, so it's safer to return a long.
+	**Math.sqrt:**
+	- Math.sqrt is designed to calculate the square root of a number, which may not always result in an integer value. In many cases, the square root of a number is a decimal value (a double in Java). This is because not all numbers have integer square roots. For example, the square root of 25 is exactly 5, but the square root of 26 is approximately 5.09901951359.
+	- To accommodate the fact that square roots can have decimal parts, Math.sqrt returns a double by default to provide a precise and flexible result. If you know that the input value will always have an integer square root and you want the result as an integer, you can cast the result to an int.
+	**Math.ceil:**
+	- Math.ceil is a method in the Math class that is used to round a floating-point number up to the nearest integer greater than or equal to the original number (the "ceiling"). This means that it always returns a double value. The result will have a decimal part of 0.0 if the input is already an integer.
+	**Math.floor:**
+	- Math.floor is another method in the Math class, and it is used to round a floating-point number down to the nearest integer less than or equal to the original number (the "floor"). Like Math.ceil, Math.floor also returns a double value.
+
+
+</p></details>
 
 Having seen the Math method abs method in use, refer to the Java Quick Reference to predict 
 how you could use the `pow` method to raise a base of 2 to the exponent 10 (2<sup>10</sup> ).
