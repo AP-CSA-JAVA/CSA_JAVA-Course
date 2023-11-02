@@ -1535,6 +1535,9 @@ The Math class can be found in the java.lang package.  The Math class contains o
 **Math.floor:**
 - Math.floor is another method in the Math class, and it is used to round a floating-point number down to the nearest integer less than or equal to the original number (the "floor"). Like Math.ceil, Math.floor also returns a double value.
 
+**Math.round**
+- Round is a another method in the Math class which returns the closest long to the argument. The result is rounded to an integer by adding 1/2, taking the floor of the result after adding 1/2, and casting the result to type long. If the argument is NaN, the result is 0.
+
 
 </p>
 </details>
