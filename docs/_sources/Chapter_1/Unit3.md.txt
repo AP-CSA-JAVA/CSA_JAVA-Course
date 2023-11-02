@@ -116,7 +116,7 @@ public void suchFun(int a, int b, int c) {
 
 ### Activity 3.1.3
 
-**RentaCar:**
+**Rent-a-Car:**
 - ask the user to enter their name, age, and how much money they have
 - write some conditionals, if else statement, to determine whether the user can rent a car
   - a person must be 25 or older to rent a car
