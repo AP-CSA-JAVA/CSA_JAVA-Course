@@ -322,7 +322,8 @@ like indentation, spacing is used to improve readability.*
 if(b!=0){System.out.println("...");}
 
 // Example 2
-if (b!=0){System.out.println("...");}
+if (b!=0)
+      {System.out.println("...");}
 
 //Example 3
 if (b!=0){
