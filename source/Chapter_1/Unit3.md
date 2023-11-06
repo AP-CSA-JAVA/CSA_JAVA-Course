@@ -74,6 +74,16 @@ George Boole formulated the basic rules of Boolean algebra back in 1847. His end
     
 </details>
 
+
+In Java logical operators, if the evaluation of a logical expression exits in between before complete evaluation, then it is known as **Short-circuit**. A *short circuit* happens because the result is clear even before the complete evaluation of the expression, and the result is returned. Short circuit evaluation avoids unnecessary work and leads to efficient processing.
+
+**&& short circuit:**
+In the case of &&, the expression is evaluated until we get one false result because the result will always be false, independent of the further conditions. If there is an expression with &&(logical AND), and the first operand itself is false, then a short circuit occurs, the further expression is not evaluated, and false is returned.
+
+**|| short circuit:** 
+In the case of ||, the expression is evaluated until we get one true result because the result will always be true, independent of the further conditions. If there is an expression with ||(logical OR), and the first operand itself is true, a short circuit occurs, evaluation stops, and true is returned.
+
+
 2.  Which of the following expressions will short circuit when `happy` is `true` and `pink` is `false`?  Why?
 
 - [ ] ! happy && pink
@@ -92,7 +102,7 @@ An \|\| statement short circuits when the left operand is `true`.  `happy` is `t
 
 ### Activity 3.1.1  
 
-[Boolean Exercises.docx](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9834076/Boolean.Exercises.docx)
+[Boolean_Exercises_Revised.docx](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/13270729/Boolean_Exercises_Revised.docx)
 
 
 
