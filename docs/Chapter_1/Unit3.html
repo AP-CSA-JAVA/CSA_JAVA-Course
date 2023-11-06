@@ -447,6 +447,11 @@ NOT Operator ( ! ) – !(a&lt;b) [returns false if a is smaller than b]
 </table>
 </div>
 </details>
+<p>In Java logical operators, if the evaluation of a logical expression exits in between before complete evaluation, then it is known as <strong>Short-circuit</strong>. A <em>short circuit</em> happens because the result is clear even before the complete evaluation of the expression, and the result is returned. Short circuit evaluation avoids unnecessary work and leads to efficient processing.</p>
+<p><strong>&amp;&amp; short circuit:</strong>
+In the case of &amp;&amp;, the expression is evaluated until we get one false result because the result will always be false, independent of the further conditions. If there is an expression with &amp;&amp;(logical AND), and the first operand itself is false, then a short circuit occurs, the further expression is not evaluated, and false is returned.</p>
+<p><strong>|| short circuit:</strong>
+In the case of ||, the expression is evaluated until we get one true result because the result will always be true, independent of the further conditions. If there is an expression with ||(logical OR), and the first operand itself is true, a short circuit occurs, evaluation stops, and true is returned.</p>
 <ol class="arabic simple" start="2">
 <li><p>Which of the following expressions will short circuit when <code class="docutils literal notranslate"><span class="pre">happy</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">pink</span></code> is <code class="docutils literal notranslate"><span class="pre">false</span></code>?  Why?</p></li>
 </ol>
@@ -461,7 +466,7 @@ NOT Operator ( ! ) – !(a&lt;b) [returns false if a is smaller than b]
 </details>
 <section id="activity-3-1-1">
 <h3>Activity 3.1.1<a class="headerlink" href="#activity-3-1-1" title="Link to this heading">#</a></h3>
-<p><a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9834076/Boolean.Exercises.docx">Boolean Exercises.docx</a></p>
+<p><a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/13270729/Boolean_Exercises_Revised.docx">Boolean_Exercises_Revised.docx</a></p>
 </section>
 <section id="activity-3-1-2">
 <h3>Activity 3.1.2<a class="headerlink" href="#activity-3-1-2" title="Link to this heading">#</a></h3>
