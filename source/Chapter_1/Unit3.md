@@ -128,7 +128,7 @@ public void suchFun(int a, int b, int c) {
 
 **Rent-a-Car:**
 - ask the user to enter their name, age, and how much money they have
-- write conditional statements using boolean operators, to determine whether the user can rent a car
+- write conditional statements using logical operators, to determine whether the user can rent a car
   - a person must be 25 or older to rent a car
      - if a person is old enough and has enough money ($999), print they can rent a car
      - if a person is old enough but does not have enough money, tell them to come back with more money
