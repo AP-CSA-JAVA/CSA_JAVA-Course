@@ -341,8 +341,24 @@ if (b!=0){
 System.out.println("...");
 }
 ```
-  
+  The `parseint` method is used to get the primitive data type of a certain String.
+
+Following are all the variants of the `parseint` method:
+- `static int parseInt(String s)`
+- `static int parseInt(String s, int radix)`
+
+`parseint` parameter details:
+
+- s − This is a string representation of decimal.
+- radix − This would be used to convert String s into integer.
+
+Return Value:
+- parseInt(String s) − This returns an integer (decimal only).
+- parseInt(int i) − This returns an integer, given a string representation of decimal, binary, octal, or hexadecimal (radix equals 10, 2, 8, or 16 respectively) numbers as input.
+
+
   **Note College Board Exclusion:** You will not be required to use the `parseInt` or `parseDouble` methods on the AP exam.
+
 
 Look at the code below.
 
