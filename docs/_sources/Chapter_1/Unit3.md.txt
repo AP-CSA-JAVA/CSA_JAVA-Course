@@ -349,12 +349,12 @@ Following are all the variants of the `parseint` method:
 
 `parseint` parameter details:
 
-- s − This is a string representation of a decimal.
-- radix − This would be used to convert a String s into an integer.
+- `s` − This is a string representation of a decimal.
+- `radix` − This would be used to convert a String s into an integer.
 
 Return Value:
-- parseInt(String s) − This returns an integer (decimal only).
-- parseInt(int i) − This returns an integer, given a string representation of decimal, binary, octal, or hexadecimal (radix equals 10, 2, 8, or 16 respectively) numbers as input.
+- `parseInt(String s)` − This returns an integer (decimal only).
+- `parseInt(int i)` − This returns an integer, given a string representation of decimal, binary, octal, or hexadecimal (radix equals 10, 2, 8, or 16 respectively) numbers as input.
 
 
   **Note College Board Exclusion:** You will not be required to use the `parseInt` or `parseDouble` methods on the AP exam.
