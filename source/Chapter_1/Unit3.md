@@ -349,8 +349,8 @@ Following are all the variants of the `parseint` method:
 
 `parseint` parameter details:
 
-- s − This is a string representation of decimal.
-- radix − This would be used to convert String s into integer.
+- s − This is a string representation of a decimal.
+- radix − This would be used to convert a String s into an integer.
 
 Return Value:
 - parseInt(String s) − This returns an integer (decimal only).
