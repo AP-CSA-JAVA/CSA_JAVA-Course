@@ -122,7 +122,7 @@ public void suchFun(int a, int b, int c) {
 }
 ```
 
-[BlankAnswerSheet.pdf](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9862940/FRQ_BlankAnswerSheet.pdf)
+[FRQ_FreeResponse_Template.pdf](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/13352571/FRQ_FreeResponse_Template_vrs2.pdf)
 
 ### Activity 3.1.3
 
