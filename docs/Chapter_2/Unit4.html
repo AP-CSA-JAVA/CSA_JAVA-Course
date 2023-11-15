@@ -502,6 +502,205 @@ demonstrates and explains a <code class="docutils literal notranslate"><span cla
 </pre></div>
 </div>
 </section>
+<section id="break-and-continue-keywords-in-java">
+<h3>Break and Continue Keywords in Java<a class="headerlink" href="#break-and-continue-keywords-in-java" title="Link to this heading">#</a></h3>
+<p>Break and Continue keywords in Java
+The <code class="docutils literal notranslate"><span class="pre">Break</span></code> statement in Java is used most often in one of the two cases below.</p>
+<ul class="simple">
+<li><p>Break quits the loop and jumps out of it (both for and while).</p></li>
+<li><p>Break statement exits a case in the switch statement.</p></li>
+</ul>
+<p>Example 1</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">		</span><span class="c1">// Testing break statement in while loop</span>
+<span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Test Break statement in While loop&quot;</span><span class="p">);</span>
+<span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">		</span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">			</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">				</span><span class="k">break</span><span class="p">;</span>
+<span class="w">			</span><span class="p">}</span>
+<span class="w">			</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="o">++</span><span class="p">);</span>
+<span class="w">		</span><span class="p">}</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Sample Output</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Test</span><span class="w"> </span><span class="n">Break</span><span class="w"> </span><span class="n">statement</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">While</span><span class="w"> </span><span class="n">loop</span>
+<span class="mi">0</span>
+<span class="mi">1</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">continue</span></code> statement in Java is most often used in one of the two cases below.</p>
+<ul class="simple">
+<li><p>It skips the following statements and moves to the next iteration in the for loop.</p></li>
+<li><p>Continue in while loops hop the following statements and jump to the conditional statement.</p></li>
+</ul>
+<p>Example 2</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">		</span><span class="c1">// Testing continue statement in while loop</span>
+<span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Test Continue in While loop&quot;</span><span class="p">);</span>
+<span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">		</span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">			</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">				</span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
+<span class="w">				</span><span class="k">continue</span><span class="p">;</span>
+<span class="w">			</span><span class="p">}</span>
+<span class="w">			</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="o">++</span><span class="p">);</span>
+<span class="w">		</span><span class="p">}</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Sample Output</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Test</span><span class="w"> </span><span class="n">Continue</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">While</span><span class="w"> </span><span class="n">loop</span>
+<span class="mi">0</span>
+<span class="mi">1</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+</pre></div>
+</div>
+<p><strong>Differences between continue and break</strong>
+The considerable difference between break and continue is that the break exits a loop at once. Once a break statement is executed, the loop will not run again. However, after executing the continue statement, the following lines of code will be skipped for the current iteration only. The loop will begin to execute again.</p>
+<p><strong>Break and Continue in While Loop</strong>
+Both <code class="docutils literal notranslate"><span class="pre">Break</span></code> and <code class="docutils literal notranslate"><span class="pre">Continue</span></code> can be used in a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop.</p>
+<p>Example 1</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">		</span><span class="c1">// Testing both break and continue statements side by side</span>
+<span class="w">		</span><span class="n">String</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">weekdays</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;Sunday&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Monday&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Tuesday&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Wednesday&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Thursday&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Friday&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Saturday&quot;</span><span class="w"> </span><span class="p">};</span>
+
+<span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Test Break statement in While loop&quot;</span><span class="p">);</span>
+<span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\nWorking Days:\n&quot;</span><span class="p">);</span>
+
+<span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">		</span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">weekdays</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">weekdays</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;Saturday&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w">  </span><span class="n">weekdays</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;Sunday&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">				</span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
+<span class="w">				</span><span class="k">break</span><span class="p">;</span>
+<span class="w">				</span><span class="c1">// Not any working day will be printed</span>
+<span class="w">				</span><span class="c1">// because the loop breaks on Sunday</span>
+<span class="w">				</span><span class="c1">// once the loop breaks it moves out of the loop</span>
+<span class="w">			</span><span class="p">}</span>
+<span class="w">			</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">weekdays</span><span class="o">[</span><span class="n">i</span><span class="o">++]</span><span class="p">);</span>
+<span class="w">		</span><span class="p">}</span>
+
+<span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\nTest Continue statement in While loop&quot;</span><span class="p">);</span>
+<span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\nWorking Days:\n&quot;</span><span class="p">);</span>
+
+<span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">		</span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">weekdays</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">weekdays</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;Saturday&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w">  </span><span class="n">weekdays</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;Sunday&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">				</span><span class="n">j</span><span class="o">++</span><span class="p">;</span>
+<span class="w">				</span><span class="k">continue</span><span class="p">;</span>
+<span class="w">				</span><span class="c1">// All the working/business days will be printed</span>
+<span class="w">				</span><span class="c1">// when the loop encounters Saturday or Sunday</span>
+<span class="w">				</span><span class="c1">// it skips that iteration and continues to the next iteration</span>
+<span class="w">			</span><span class="p">}</span>
+<span class="w">			</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">weekdays</span><span class="o">[</span><span class="n">i</span><span class="o">++]</span><span class="p">);</span>
+<span class="w">		</span><span class="p">}</span>
+
+<span class="w">		</span><span class="c1">// A test case for continue statement using for loop</span>
+<span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\nTest Continue in For loop&quot;</span><span class="p">);</span>
+<span class="w">		</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">x</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">			</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
+<span class="w">				</span><span class="k">continue</span><span class="p">;</span>
+<span class="w">			</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+<span class="w">		</span><span class="p">}</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Sample Output</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Test</span><span class="w"> </span><span class="n">Break</span><span class="w"> </span><span class="n">statement</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">While</span><span class="w"> </span><span class="n">loop</span>
+
+<span class="n">Working</span><span class="w"> </span><span class="n">Days</span><span class="p">:</span>
+
+
+<span class="n">Test</span><span class="w"> </span><span class="n">Continue</span><span class="w"> </span><span class="n">statement</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">While</span><span class="w"> </span><span class="n">loop</span>
+
+<span class="n">Working</span><span class="w"> </span><span class="n">Days</span><span class="p">:</span>
+
+<span class="n">Monday</span>
+<span class="n">Tuesday</span>
+<span class="n">Wednesday</span>
+<span class="n">Thursday</span>
+<span class="n">Friday</span>
+
+<span class="n">Test</span><span class="w"> </span><span class="n">Continue</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">For</span><span class="w"> </span><span class="n">loop</span>
+<span class="mi">0</span>
+<span class="mi">1</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code> keywords can be a valuable tool when writing Java programs.</p>
+</section>
+<section id="activity-break-and-continue">
+<h3>Activity Break and Continue<a class="headerlink" href="#activity-break-and-continue" title="Link to this heading">#</a></h3>
+<p><strong>Directions</strong> Modify the <code class="docutils literal notranslate"><span class="pre">selection</span> <span class="pre">sort</span></code> program below by using the break and continue keywords.</p>
+<ul class="simple">
+<li><p>Use a <code class="docutils literal notranslate"><span class="pre">break</span></code> statement to stop the selection sort when it encounters a negative value.</p></li>
+<li><p>Show a message that the sort was aborted.</p></li>
+<li><p>Use a <code class="docutils literal notranslate"><span class="pre">continue</span></code> statement to continue the sort when the next value is a positive value.</p></li>
+</ul>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ratings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="w">    </span><span class="n">ratings</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="w">    </span><span class="n">ratings</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+<span class="w">    </span><span class="n">ratings</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span>
+<span class="w">    </span><span class="n">ratings</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">9</span><span class="p">);</span>
+<span class="w">    </span><span class="n">ratings</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="w">    </span><span class="n">ratings</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">);</span>
+<span class="w">    </span><span class="n">ratings</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">ratings</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// Iterate through all the values in the list.</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">ratings</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// Keep track of the index of the smallest number.</span>
+<span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">minIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="w">      </span><span class="c1">// Iterate from the next index up to the end of the array</span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">ratings</span><span class="p">.</span><span class="na">size</span><span class="p">();</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// If the current element is smaller than the minimum, we have a new </span>
+<span class="w">        </span><span class="c1">// smallest element, so set minIndex to the index of the current element.</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">ratings</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">ratings</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">minIndex</span><span class="p">))</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="n">minIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">j</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="c1">// Swap current with minimum element if they&#39;re different</span>
+<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="n">ratings</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">ratings</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">minIndex</span><span class="p">))</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// Swap current with minimum element</span>
+<span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ratings</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="w">      </span><span class="n">ratings</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">ratings</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">minIndex</span><span class="p">));</span>
+<span class="w">      </span><span class="n">ratings</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">minIndex</span><span class="p">,</span><span class="w"> </span><span class="n">temp</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="c1">// Print all the elements of the list</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">ratings</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
 </section>
 <section id="for-loops">
 <h2>4.2 For Loops<a class="headerlink" href="#for-loops" title="Link to this heading">#</a></h2>
@@ -972,6 +1171,8 @@ Pay careful attention to the Break in Nested Loops example and the Continue in N
 <li><a class="reference internal" href="#do-while-loops">4.1.1 Do While Loops</a><ul>
 <li><a class="reference internal" href="#activity-4-1-1-1">Activity 4.1.1.1</a></li>
 <li><a class="reference internal" href="#activity-4-1-1-2">Activity 4.1.1.2</a></li>
+<li><a class="reference internal" href="#break-and-continue-keywords-in-java">Break and Continue Keywords in Java</a></li>
+<li><a class="reference internal" href="#activity-break-and-continue">Activity Break and Continue</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#for-loops">4.2 For Loops</a><ul>
