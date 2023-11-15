@@ -220,7 +220,7 @@ public class Main {
 }
 ```
 
-Inside the "do" block, we use a do-while loop to repeatedly prompt the user for input until they enter a positive number. The loop will always execute at least once because the condition is checked at the end of the loop.  Within the loop,  a message asks the user to enter a positive number and read their input using the scanner class. The program then checks if the entered number is less than or equal to 0. If it is, a message asks the user to enter a positive number again.  The loop will continue to execute as long as the condition (number <= 0) is true.  Once the user enters a positive number, the loop ends, and a message is printed indicating that they entered a positive number.
+Inside the "do" block, we use a `do-while` loop to repeatedly prompt the user for input until they enter a positive number. The loop will always execute at least once because the condition is checked at the end of the loop.  Within the loop,  a message asks the user to enter a positive number and read their input using the scanner class. The program then checks if the entered number is less than or equal to 0. If it is, a message asks the user to enter a positive number again.  The loop will continue to execute as long as the condition (number <= 0) is true.  Once the user enters a positive number, the loop ends, and a message is printed indicating that they entered a positive number.
     
 This program demonstrates a simple "do-while" loop to ensure that the user provides valid input before proceeding with the program.
 
@@ -384,7 +384,8 @@ public class Main {
 	public static void main(String[] args) {
 
 		// Testing both break and continue statements side by side
-		String [] weekdays = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
+		String [] weekdays = { 	"Sunday", "Monday", "Tuesday", "Wednesday", 
+					"Thursday", "Friday", "Saturday" };
 
 		System.out.println("Test Break statement in While loop");
 		System.out.println("\nWorking Days:\n");
