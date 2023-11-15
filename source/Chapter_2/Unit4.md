@@ -301,6 +301,215 @@ What is your current age?
 Jonathan is 50 years old.
 ```
 
+### Break and Continue Keywords in Java
+
+Break and Continue keywords in Java
+The `Break` statement in Java is used most often in one of the two cases below.
+- Break quits the loop and jumps out of it (both for and while).
+- Break statement exits a case in the switch statement.
+
+
+Example 1
+```java
+public class Main {
+
+	public static void main(String[] args) {
+
+		// Testing break statement in while loop
+		System.out.println("Test Break statement in While loop");
+		int i = 0;
+		while (i < 5) {
+			if (i == 2) {
+				break;
+			}
+			System.out.println(i++);
+		}
+	}
+}
+```
+
+Sample Output
+```java
+Test Break statement in While loop
+0
+1
+```
+
+
+The `continue` statement in Java is most often used in one of the two cases below.
+- It skips the following statements and moves to the next iteration in the for loop.
+- Continue in while loops hop the following statements and jump to the conditional statement.
+
+Example 2
+
+```java
+public class Main {
+
+	public static void main(String[] args) {
+
+		// Testing continue statement in while loop
+		System.out.println("Test Continue in While loop");
+		int i = 0;
+		while (i < 5) {
+			if (i == 2) {
+				i++;
+				continue;
+			}
+			System.out.println(i++);
+		}
+	}
+}
+```
+
+**Sample Output**
+```java
+Test Continue in While loop
+0
+1
+3
+4
+```
+
+**Differences between continue and break**
+The considerable difference between break and continue is that the break exits a loop at once. Once a break statement is executed, the loop will not run again. However, after executing the continue statement, the following lines of code will be skipped for the current iteration only. The loop will begin to execute again. 
+
+**Break and Continue in While Loop**
+Both `Break` and `Continue` can be used in a `while` loop.
+
+Example 1
+
+```java
+public class Main {
+
+	public static void main(String[] args) {
+
+		// Testing both break and continue statements side by side
+		String [] weekdays = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
+
+		System.out.println("Test Break statement in While loop");
+		System.out.println("\nWorking Days:\n");
+
+		int i = 0;
+		while (i < weekdays.length ) {
+		if (weekdays[i].equals("Saturday") ||  weekdays[i].equals("Sunday")) {
+
+				i++;
+				break;
+				// Not any working day will be printed
+				// because the loop breaks on Sunday
+				// once the loop breaks it moves out of the loop
+			}
+			System.out.println(weekdays[i++]);
+		}
+
+		System.out.println("\nTest Continue statement in While loop");
+		System.out.println("\nWorking Days:\n");
+
+		int j = 0;
+		while (j < weekdays.length ) {
+		if (weekdays[i].equals("Saturday") ||  weekdays[i].equals("Sunday")) {
+
+				j++;
+				continue;
+				// All the working/business days will be printed
+				// when the loop encounters Saturday or Sunday
+				// it skips that iteration and continues to the next iteration
+			}
+			System.out.println(weekdays[i++]);
+		}
+
+		// A test case for continue statement using for loop
+		System.out.println("\nTest Continue in For loop");
+		for (int x = 0; x < 5; x++) {
+			if (x == 2)
+				continue;
+			System.out.println(x);
+		}
+	}
+}
+```
+
+**Sample Output**
+```java
+Test Break statement in While loop
+
+Working Days:
+
+
+Test Continue statement in While loop
+
+Working Days:
+
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+
+Test Continue in For loop
+0
+1
+3
+4
+```
+
+The `break` and `continue` keywords can be a valuable tool when writing Java programs.
+
+### Activity Break and Continue
+
+**Directions** Modify the `selection sort` program below by using the break and continue keywords.
+- Use a `break` statement to stop the selection sort when it encounters a negative value.
+- Show a message that the sort was aborted.
+- Use a `continue` statement to continue the sort when the next value is a positive value.
+
+```java
+import java.util.ArrayList;
+
+public class Main
+{
+  public static void main(String[] args)
+  {
+    ArrayList<Integer> ratings = new ArrayList<Integer>();
+    ratings.add(5);
+    ratings.add(4);
+    ratings.add(8);
+    ratings.add(9);
+    ratings.add(2);
+    ratings.add(-3);
+    ratings.add(1);
+    ratings.add(4);
+    
+    // Iterate through all the values in the list.
+    for (int i = 0; i < ratings.size() - 1; i++)
+    {
+      // Keep track of the index of the smallest number.
+      int minIndex = i;
+      // Iterate from the next index up to the end of the array
+      for (int j = i + 1; j < ratings.size(); j++)
+      {
+        // If the current element is smaller than the minimum, we have a new 
+        // smallest element, so set minIndex to the index of the current element.
+        if(ratings.get(j) < ratings.get(minIndex))
+        {
+          minIndex = j;
+        }
+      }
+      // Swap current with minimum element if they're different
+      if(ratings.get(i) != ratings.get(minIndex))
+      {
+      // Swap current with minimum element
+      int temp = ratings.get(i);
+      ratings.set(i, ratings.get(minIndex));
+      ratings.set(minIndex, temp);
+      }
+    }
+    // Print all the elements of the list
+    System.out.println(ratings);
+  }
+}
+```
+
+
 ## 4.2 For Loops
 	
 **Goals**
