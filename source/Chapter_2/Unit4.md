@@ -419,13 +419,6 @@ public class Main {
 			System.out.println(weekdays[i++]);
 		}
 
-		// A test case for continue statement using for loop
-		System.out.println("\nTest Continue in For loop");
-		for (int x = 0; x < 5; x++) {
-			if (x == 2)
-				continue;
-			System.out.println(x);
-		}
 	}
 }
 ```
@@ -447,11 +440,6 @@ Wednesday
 Thursday
 Friday
 
-Test Continue in For loop
-0
-1
-3
-4
 ```
 
 The `break` and `continue` keywords can be a valuable tool when writing Java programs.
