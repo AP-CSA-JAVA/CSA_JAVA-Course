@@ -853,6 +853,21 @@ public class Main {
 }
 ```
 
+### Activity 3.4.1.1
+**Directions:**  Write a switch that determines if some number num is odd or even. Test with positive and negative values.
+
+```java
+import java.util.Scanner;
+
+public class Main {
+ 	public static void main(String[] args) {
+ 	  Scanner sc = new Scanner(System.in);
+ 	  System.out.print("Number:");
+ 	  int num = sc.nextInt();
+ 	  
+ 	}
+}
+```
 
 ## 3.5 Compound Boolean Expressions
 
