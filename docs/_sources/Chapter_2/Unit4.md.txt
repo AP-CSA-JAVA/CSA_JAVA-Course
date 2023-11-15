@@ -54,7 +54,6 @@ public class Main {
   }
 }
 ```
-While the do while loop will not be used for the AP CSA exam, it can be a useful tool when writing programs - **See Below**.
 
 Using `.equals` within a `while` loop.
 ```java
@@ -189,10 +188,11 @@ Submit your replit link to Canvas.
 
 ## 4.1.1 Do While Loops
 
-A `do-while` loop in Java is a type of loop where the code block is executed 
-at least once before checking the loop condition. This is in contrast to a `while` 
-loop, which checks the condition before entering the loop. Here's a Java program 
-that demonstrates and explains a `do-while` loop:
+The `do-while` loop will not be assessed for the AP CSA exam, it can be a useful tool when writing programs.
+
+A `do-while` loop in Java is a type of loop where the code block is executed at least once before checking the loop condition. 
+This is in contrast to a `while` loop, which checks the condition before entering the loop. Here's a Java program that 
+demonstrates and explains a `do-while` loop:
 
 ```java
 //Do While Example
@@ -223,6 +223,83 @@ public class Main {
 Inside the "do" block, we use a do-while loop to repeatedly prompt the user for input until they enter a positive number. The loop will always execute at least once because the condition is checked at the end of the loop.  Within the loop,  a message asks the user to enter a positive number and read their input using the scanner class. The program then checks if the entered number is less than or equal to 0. If it is, a message asks the user to enter a positive number again.  The loop will continue to execute as long as the condition (number <= 0) is true.  Once the user enters a positive number, the loop ends, and a message is printed indicating that they entered a positive number.
     
 This program demonstrates a simple "do-while" loop to ensure that the user provides valid input before proceeding with the program.
+
+### Activity 4.1.1.1
+
+**Directions:** Convert Program A and Program B from a `for` loop to a `do-while` loop. 
+
+```java
+//Program A
+import java.util.Scanner;
+
+public class Main
+{
+  public static void main(String[] args)
+  {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter a String with at least 3 characters: ");
+
+    String input = sc.nextLine();
+    
+    String pattern = "aaa";
+    int howMany = 0;
+    
+    for (int i = 0; i < input.length() - pattern.length() + 1; i++)
+    {
+      String currSeq = input.substring(i, i + pattern.length());
+      if (currSeq.equals(pattern))
+        howMany++;
+    }
+
+    System.out.println("There were " + howMany + 
+      " substrings matching " + pattern);
+
+  }
+}
+```
+
+```java
+// Program B
+import java.util.Scanner;
+
+public class Main
+{
+  public static void main(String[] args)
+  {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter a String: ");
+    String input = sc.nextLine();
+    String output = "";
+    
+    for (int i = input.length(); i > 0; i--)
+      output += input.substring(i - 1, i);
+    
+    System.out.println(output);
+  }
+}
+```
+
+### Activity 4.1.1.2
+
+**Directions:** Write a program using a `do-while` loop that does the following:
+- Write a do-while loop that asks a user for their name, which must be at least four characters long.
+- Write another do-while that asks for the user’s age, which must be between 18 and 65, inclusive. Recall the nextIntmethod Scanner class.
+
+Submit your program link
+
+**Sample Output**
+```java
+What is your first name?
+Jon
+Your name needs to be at least 4 characters long.
+What is your first name?
+Jonathan
+
+What is your current age?
+50
+
+Jonathan is 50 years old.
+```
 
 ## 4.2 For Loops
 	

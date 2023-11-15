@@ -262,7 +262,6 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>While the do while loop will not be used for the AP CSA exam, it can be a useful tool when writing programs - <strong>See Below</strong>.</p>
 <p>Using <code class="docutils literal notranslate"><span class="pre">.equals</span></code> within a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
 
@@ -397,10 +396,10 @@
 </section>
 <section id="do-while-loops">
 <h2>4.1.1 Do While Loops<a class="headerlink" href="#do-while-loops" title="Link to this heading">#</a></h2>
-<p>A <code class="docutils literal notranslate"><span class="pre">do-while</span></code> loop in Java is a type of loop where the code block is executed
-at least once before checking the loop condition. This is in contrast to a <code class="docutils literal notranslate"><span class="pre">while</span></code>
-loop, which checks the condition before entering the loop. Here’s a Java program
-that demonstrates and explains a <code class="docutils literal notranslate"><span class="pre">do-while</span></code> loop:</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">do-while</span></code> loop will not be assessed for the AP CSA exam, it can be a useful tool when writing programs.</p>
+<p>A <code class="docutils literal notranslate"><span class="pre">do-while</span></code> loop in Java is a type of loop where the code block is executed at least once before checking the loop condition.
+This is in contrast to a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop, which checks the condition before entering the loop. Here’s a Java program that
+demonstrates and explains a <code class="docutils literal notranslate"><span class="pre">do-while</span></code> loop:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">//Do While Example</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
 
@@ -428,6 +427,81 @@ that demonstrates and explains a <code class="docutils literal notranslate"><spa
 </div>
 <p>Inside the “do” block, we use a do-while loop to repeatedly prompt the user for input until they enter a positive number. The loop will always execute at least once because the condition is checked at the end of the loop.  Within the loop,  a message asks the user to enter a positive number and read their input using the scanner class. The program then checks if the entered number is less than or equal to 0. If it is, a message asks the user to enter a positive number again.  The loop will continue to execute as long as the condition (number &lt;= 0) is true.  Once the user enters a positive number, the loop ends, and a message is printed indicating that they entered a positive number.</p>
 <p>This program demonstrates a simple “do-while” loop to ensure that the user provides valid input before proceeding with the program.</p>
+<section id="activity-4-1-1-1">
+<h3>Activity 4.1.1.1<a class="headerlink" href="#activity-4-1-1-1" title="Link to this heading">#</a></h3>
+<p><strong>Directions:</strong> Convert Program A and Program B from a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to a <code class="docutils literal notranslate"><span class="pre">do-while</span></code> loop.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">//Program A</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter a String with at least 3 characters: &quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;aaa&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">howMany</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">pattern</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="n">String</span><span class="w"> </span><span class="n">currSeq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pattern</span><span class="p">.</span><span class="na">length</span><span class="p">());</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">currSeq</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">pattern</span><span class="p">))</span>
+<span class="w">        </span><span class="n">howMany</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;There were &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">howMany</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<span class="w">      </span><span class="s">&quot; substrings matching &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pattern</span><span class="p">);</span>
+
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Program B</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter a String: &quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">length</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">--</span><span class="p">)</span>
+<span class="w">      </span><span class="n">output</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">output</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="activity-4-1-1-2">
+<h3>Activity 4.1.1.2<a class="headerlink" href="#activity-4-1-1-2" title="Link to this heading">#</a></h3>
+<p><strong>Directions:</strong> Write a program using a <code class="docutils literal notranslate"><span class="pre">do-while</span></code> loop that does the following:</p>
+<ul class="simple">
+<li><p>Write a do-while loop that asks a user for their name, which must be at least four characters long.</p></li>
+<li><p>Write another do-while that asks for the user’s age, which must be between 18 and 65, inclusive. Recall the nextIntmethod Scanner class.</p></li>
+</ul>
+<p>Submit your program link</p>
+<p><strong>Sample Output</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">What</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="n">name</span><span class="o">?</span>
+<span class="n">Jon</span>
+<span class="n">Your</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">needs</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">least</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="n">characters</span><span class="w"> </span><span class="kt">long</span><span class="p">.</span>
+<span class="n">What</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="n">name</span><span class="o">?</span>
+<span class="n">Jonathan</span>
+
+<span class="n">What</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">current</span><span class="w"> </span><span class="n">age</span><span class="o">?</span>
+<span class="mi">50</span>
+
+<span class="n">Jonathan</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="n">years</span><span class="w"> </span><span class="n">old</span><span class="p">.</span>
+</pre></div>
+</div>
+</section>
 </section>
 <section id="for-loops">
 <h2>4.2 For Loops<a class="headerlink" href="#for-loops" title="Link to this heading">#</a></h2>
@@ -895,7 +969,11 @@ Pay careful attention to the Break in Nested Loops example and the Continue in N
 <li><a class="reference internal" href="#activity-4-1-2">Activity 4.1.2</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#do-while-loops">4.1.1 Do While Loops</a></li>
+<li><a class="reference internal" href="#do-while-loops">4.1.1 Do While Loops</a><ul>
+<li><a class="reference internal" href="#activity-4-1-1-1">Activity 4.1.1.1</a></li>
+<li><a class="reference internal" href="#activity-4-1-1-2">Activity 4.1.1.2</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#for-loops">4.2 For Loops</a><ul>
 <li><a class="reference internal" href="#activity-4-2-1">Activity 4.2.1</a></li>
 <li><a class="reference internal" href="#activity-4-2-2">Activity 4.2.2</a></li>
