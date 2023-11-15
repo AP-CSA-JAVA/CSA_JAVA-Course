@@ -301,6 +301,37 @@ What is your current age?
 Jonathan is 50 years old.
 ```
 
+You have learned about primitive data types like `int`, `double`, and `boolean`.  Java has a `char` data type that stores a single character. When using a `char` data type, use single quotes to assign a character to your `char` variable.  For example:
+
+`char reply = 'y';`
+
+Java chars and strings are closely related. A String is a sequence of chararcters that reference an object. Using a new method, you can find individual characters in a String.  Remember, a `char` is a primitive data type, you can compare primitive data types with == in conditionals.
+
+### Assignment `char`
+**Directions:** Using a do-while, validate the input so the user types only one character.  Write a `switch` statement to show the character “is a vowel” or “ is a consonant.”
+
+```java
+import java.util.Scanner;
+
+public class Main {
+ 	public static void main(String[] args) {
+ 	  Scanner sc = new Scanner(System.in);
+ 	  System.out.print("Enter a letter");
+ 	  String str = sc.nextLine();
+ 	  
+  } 
+}
+```
+
+**Sample Output**
+```java
+Enter a letter
+b
+
+b is a consonant.
+```
+
+
 ### Break and Continue Keywords in Java
 
 Break and Continue keywords in Java
