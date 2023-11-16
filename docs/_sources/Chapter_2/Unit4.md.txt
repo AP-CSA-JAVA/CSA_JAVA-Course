@@ -186,7 +186,7 @@ The average is: 33.25
 	
 Submit your replit link to Canvas.
 
-## 4.1.1 Do While Loops
+## 4.1.1 Do While Loops - Oracle
 
 The `do-while` loop will not be assessed for the AP CSA exam, it can be a useful tool when writing programs.
 
@@ -307,7 +307,7 @@ You have learned about primitive data types like `int`, `double`, and `boolean`.
 
 Java chars and strings are closely related. A String is a sequence of chararcters that reference an object. Using a new method, you can find individual characters in a String.  Remember, a `char` is a primitive data type, you can compare primitive data types with == in conditionals.
 
-### Assignment `char`
+### Assignment `char` - Oracle
 **Directions:** Using a do-while, validate the input so the user types only one character.  Write a `switch` statement to show the character “is a vowel” or “ is a consonant.”
 
 ```java
@@ -332,7 +332,7 @@ b is a consonant.
 ```
 
 
-### Break and Continue Keywords in Java
+### Break and Continue Keywords in Java - Oracle
 
 Break and Continue keywords in Java
 The `Break` statement in Java is used most often in one of the two cases below.
@@ -475,7 +475,7 @@ Friday
 
 The `break` and `continue` keywords can be a valuable tool when writing Java programs.
 
-### Activity Break and Continue
+### Activity Break and Continue - Oracle
 
 **Directions** Modify the `selection sort` program below by using the break and continue keywords.
 - Use a `break` statement to stop the selection sort when it encounters a negative value.
