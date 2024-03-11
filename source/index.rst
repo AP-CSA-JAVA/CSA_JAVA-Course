@@ -12,6 +12,7 @@ Welcome to CSA JAVA!
 
    Home <../home.md>
    Resources <./Resources/Resources.md>
+   AP Resources <./Resources/AP_Resources.md>
    
 
 .. toctree:: 
