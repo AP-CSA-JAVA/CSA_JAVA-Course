@@ -7,7 +7,7 @@ Welcome to CSA JAVA!
 ===========================================
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Contents:
 
    Home <../home.md>
