@@ -250,10 +250,14 @@ For this course we will be using various Integrated Development Environment (IDE
 
 ---------------------------------------------------------------------------------------
 
+ </p></details>
+ 
+## Note-taking in learning
+<details><summary>Click Here</summary>
+<p>
 
-## Note-Taking in learning
 
-SO, you have the powerpoint, video, textbook, website and/ or whatever other resources were provided to you for this particular lesson.  <ins>Do you need to take notes as well?</ins>
+So, you have the powerpoint, video, textbook, website and/ or whatever other resources were provided to you for this particular lesson.  <ins>Do you need to take notes as well?</ins>
 
 Despite the vast amount of information available in electronic formats, taking notes is an <code style="color : red">important</code> learning strategy. In addition, the way that you take notes matters, and not all note-taking strategies lead to equal results.  By considering your note-taking strategies carefully, you will be able to create a set of notes that will help retain the most important concepts from lectures and tests, and that will assist you in your exam preparation.
 
@@ -484,21 +488,19 @@ Exercise: Note-taking
 1.	Name two advantages of the Cornell system over the list method of note-taking.
 2.	Describe the benefits of—and potential problems with—taking class notes on a laptop.
 3.	List at least three ways to make up for missing notes because you miss a class.
-________________________________________
-Text Attributions
+
+**Text Attributions**
 - This chapter was adapted from “Got Notes?” in University Success by N. Mahoney, B. Klassen, and M. D’Eon. Adapted by Mary Shier. CC BY-NC-SA.
 - The first two paragraphs and text under the “Two Purposes for Taking Notes” heading are from “Take Notes from Lectures – That You’ll Actually Use” in University 101: Study, Strategize and Succeed by Kwantlen Polytechnic University. CC BY-SA.
 
-Video Attributions
+**Video Attributions**
 - “How to Take Great Notes” by watchwellclass. Standard YouTube Licence.
-________________________________________
+
 1.	Pauk, W. & Owens, R.J.Q. (2013). How to Study in College. Boston, MA: Wadsworth, Cengage Learning. ↵
 
 
-
-
- </p></details>
- 
+</p>
+</details>
 
 
 ## Table of Contents 
