@@ -178,8 +178,6 @@ For this course we will be using various Integrated Development Environment (IDE
    </p></details>
    
    
--------------------------------------------------------------------------------------------------------------
-
 
 
 ## Syllabus
