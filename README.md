@@ -185,58 +185,71 @@ For this course we will be using various Integrated Development Environment (IDE
 <details><summary>Click Here</summary>
  <p>
   
-  | Expectations |
-  | ----------- |
-  | - Be on time and prepared for class. This includes but is not limited to having you log in for your Canvas course, course website, and digital notebook. |
-  | - Be on time and prepared for class. This includes, but is not limited to having your notebook, assignments, pen/pencil, and paper. Students should be seated in their desks when the tardy bell rings to avoid confusion. |
-  | - Have a good attitude about learning. Be prepared to actively participate in class. Accept feedback with a positive attitude. |
-  | -	Students will follow all written and oral directions as well as safety precautions. This is for your own safety as there will be hands-on activities. | 
-  | -	Complete all assignments in a timely fashion. |
-  | -	Be respectful of others and their property. |
-  | -	Take care of the learning environment. Keep your area neat and clean. Always clean your space before you leave for the day. Put materials away in their proper place. |
+ ### Expectations
+
+- [ ] Be on time and prepared for class. This includes but is not limited to having you log in for your Canvas course, course website, and digital notebook.
+- [ ] Be on time and prepared for class. This includes, but is not limited to having your notebook, assignments, pen/pencil, and paper. Students should be seated within the first five minutes of class to avoid being marked tardy or absent
+- [ ] Have a good attitude about learning. Be prepared to actively participate in class. Accept feedback with a positive attitude.
+- [ ] Students will follow all written and oral directions as well as safety precautions. This is for your own safety as there will be hands-on activities.
+- [ ] Complete all assignments within a timely fashion.
+- [ ] Be respectful of others and their property.
+- [ ] Take care of the learning environment. Keep your area neat and clean. Always clean your space before you leave for the day. Put materials away in their proper place.
   
+---------------------------------------------------------------------------------------
+
+
+### Policy on Academic Honesty
+
+- [ ] Students are allowed to help each other on assignments with general problem-solving strategies, ideas, and algorithms, but all solutions should be your own. In practice, this means that, while students can discuss programs and questions, all lines of code should originate from your own mind. This course uses technology in ways no other course does. If you are unsure about the ethical implications of what you are doing, you should ask. Claiming ignorance is not a reasonable excuse.
+- [ ] If you use other sources for help (websites like stackoverflow, AI tools like ChatGPT, friends, etc.), please cite them in the comments of your code indicating where you got help and whether certain sections of code came from that help.  Please make sure you understand any code that you use from another source. ChatGPT tends to generate compact and complex code, so make sure you read the explanation of the code and ask for simpler code if you don’t understand it. Never copy the text of my assignments into an AI tool to generate a complete solution. You can use AI tools and other sources for idea generation, code debugging, and help with understanding or generating small parts of code to get you started, but you should not have them do all of the work for you. Be in charge of your own learning, and make sure you learn what the assignment is asking you to practice! 
   
-  | Policy on Academic Honesty |
-  | -------------------------- |
-  | Students are allowed to help each other on assignments with general problem-solving strategies, ideas, and algorithms, but all solutions should be your own. In practice, this means that, while students can discuss programs and questions, all lines of code should originate from your own mind. This course uses technology in ways no other course does. If you are unsure about the ethical implications of what you are doing, you should ask. Claiming ignorance is not a reasonable excuse. |
-  | If you use other sources for help (websites like stackoverflow, AI tools like ChatGPT, friends, etc.), please cite them in the comments of your code indicating where you got help and whether certain sections of code came from that help.  Please make sure you understand any code that you use from another source. ChatGPT tends to generate compact and complex code, so make sure you read the explanation of the code and ask for simpler code if you don’t understand it. Never copy the text of my assignments into an AI tool to generate a complete solution. You can use AI tools and other sources for idea generation, code debugging, and help with understanding or generating small parts of code to get you started, but you should not have them do all of the work for you. Be in charge of your own learning, and make sure you learn what the assignment is asking you to practice! |
+---------------------------------------------------------------------------------------
+
+
+### Electronic Devices
+- [ ] Students should be engaged during class, and cell phones and other electronic devices are a distraction that prevent students from fully participating in class. Specifically, students should not be accessing cell phones, smart phones, or any devices during class without permission from the teacher. Phones should be set to silent or turned off in class.
   
+---------------------------------------------------------------------------------------
+
+
+### Computer Lab Policies
+
+- [ ] Do not change any of the settings on the computers.
+- [ ] Do not download/ install any programs (including games) to the computer.
+- [ ] Do not access inappropriate content on the internet.
+- [ ] Report any broken equipment immediately to the instructor.
   
-  | Electronic Devices |
-  | ------------------ |
-  | Students should be engaged during class, and cell phones and other electronic devices are a distraction that prevent students from fully participating in class. Specifically, students should not be accessing cell phones, smart phones, or any devices during class without permission from the teacher. Phones should be set to silent or turned off in class.  |
+---------------------------------------------------------------------------------------
+
+
+### Academic Support
+
+- [ ] Peer Tutoring (Monday - Friday/ before and after school)
+- [ ] By appointment only
   
-  
-  | Computer Lab Policies |
-  | -------------------- |
-  | Do not change any of the settings on the computers. |
-  | Do not download/ install any programs (including games) to the computer. |
-  | Do not access inappropriate content on the internet. |
-  | Report any broken equipment immediately to the instructor. |
-  
-  
-  | Academic Support |
-  | ---------------- |
-  | Peer Tutoring (Monday - Friday/ before and after school) |
-  | By appointment only |
-  
-  
+---------------------------------------------------------------------------------------
+
+
   | Grading | Percentage |
   | ------- | ---------- |
   | Test/ Quizzes | 40% |
-  | Projects/ Presentations | 40% |
-  | Assignments | 10% |
-  | Portfolio/ Final Project | 10% |
+  | Projects | 30% |
+  | Notes/ Portfolio (2024/25 School Year) | 15% |
+  | IDP (Second Semester) / Final Project / Semester Final (MCQ/ FRQ) | 10% |
+  | Assignments | 5% |
+
   
   
-  | Mak-up & Late work policy |
-  | ------------------------- |
-  | Students are responsible for makeup work when absent. Per district policy, each student will have **one school day** for each day that they are absent. |
-  | *To make up a quiz or a test, it is the student’s responsibility to contact the teacher to set an agreed upon date & time.*  Students must contact the teacher within two school days upon their return to make-up the missing quiz or test.  Failure to do so may result in a zero. |
-  | Handouts will be placed in a makeup folder with the students name and it is the student’s responsibility to check this folder when absent before consulting the instructor. |
-  | Due dates for every assignment are posted in Canvas. Unless otherwise stated, assignments are due on those days. |
-  | I recognize that there are issues beyond your control.  In this instance, you may use your allotted two flex-days in a semester.  These days allow you to submit a late assignment (not projects or presentations) up to two school days beyond the due date, without penalty. You can use these days for any assignment and for any reason. You will need to fill out a **google form** and upload the late assignment. |
-  | Once you’ve exhausted your flex days, then point deductions will occur for any assignment submitted after the deadline. Each day that an assignment is late the assignment or project will be reduced by 5% up to 59%.  |
+### Make-up & Late work policy
+
+- [ ] Students are responsible for makeup work when absent. Per district policy, each student will have **one school day** for each day that they are absent.
+- [ ] *To make up a quiz or a test, it is the student’s responsibility to contact the teacher to set an agreed upon date & time.*  Students must contact the teacher within two school days upon their return to make-up the missing quiz or test.  Failure to do so may result in a zero.
+- [ ] Handouts will be placed in a makeup folder with the students name and it is the student’s responsibility to check this folder when absent before consulting the instructor.
+- [ ] Due dates for every assignment are posted in Canvas. Unless otherwise stated, assignments are due on those days.
+- [ ] **This will not be used after the 2023-2024 school year*** I recognize that there are issues beyond your control.  In this instance, you may use your allotted two flex-days in a semester.  These days allow you to submit a late assignment (not projects or presentations) up to two school days beyond the due date, without penalty. You can use these days for any assignment and for any reason. You will need to fill out a **google form** and upload the late assignment.
+- [ ] **This will not be used after the 2023-2024 school year*** Once you’ve exhausted your flex days, then point deductions will occur for any assignment submitted after the deadline. Each day that an assignment is late the assignment or project will be reduced by 5% up to 59%. 
+
+---------------------------------------------------------------------------------------
 
 
 ## Note-Taking 
