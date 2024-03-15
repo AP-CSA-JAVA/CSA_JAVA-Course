@@ -255,9 +255,9 @@ For this course we will be using various Integrated Development Environment (IDE
 
 ## Note-Taking in learning
 
-SO, you have the powerpoint, video, textbook, website and/ or whatever other resources were provided to you for this particular lesson.  <mark>Do you need to take notes as well?</mark>
+SO, you have the powerpoint, video, textbook, website and/ or whatever other resources were provided to you for this particular lesson.  <ins>Do you need to take notes as well?</ins>
 
-Despite the vast amount of information available in electronic formats, taking notes is an important learning strategy. In addition, the way that you take notes matters, and not all note-taking strategies lead to equal results.  By considering your note-taking strategies carefully, you will be able to create a set of notes that will help retain the most important concepts from lectures and tests, and that will assist you in your exam preparation.
+Despite the vast amount of information available in electronic formats, taking notes is an <font color="red">important</font> learning strategy. In addition, the way that you take notes matters, and not all note-taking strategies lead to equal results.  By considering your note-taking strategies carefully, you will be able to create a set of notes that will help retain the most important concepts from lectures and tests, and that will assist you in your exam preparation.
 
 ### Two Purposes for Taking Notes
 
