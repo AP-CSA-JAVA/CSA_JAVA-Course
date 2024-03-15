@@ -275,7 +275,8 @@ Effective note-taking is important because it
 There are various forms of taking notes, and which one you choose depends on both your personal style and the instructor’s approach to the material. Each can be used in a notebook, index cards, or in a digital form on your laptop. No specific type is good for all students and all situations, so we recommend that you develop your own style, but you should also be ready to modify it to fit the needs of a specific class or instructor. To be effective, all of these methods require you to listen actively and to think; merely jotting down words the instructor is saying will be of little use to you.
 
 ### Note-taking methods
-<center> **Method	Description	When to Use** </center>
+
+**Method	Description	When to Use** 
 
 | Method | Description | When to Use |
 | --- | --------- | --- |
@@ -287,12 +288,17 @@ There are various forms of taking notes, and which one you choose depends on bot
  
 #### The List Method
 
-Example: The List Method of Note-taking
+**Example:** The List Method of Note-taking
 
-Learning Cycle
+Topic
+
 Date
+
 Time
-Prof. Doe
+
+Instructor
+
+
 The learning cycle is an approach to gathering and retaining info that can help students be successful in Col. The cycle consists of 4 steps which should all be app’d. They are preparing, which sets the foundation for learning, absorbing, which exposes us to new knowledge, capturing, which sets the information into our knowledge base and finally reviewing and applying which lets us set the know. into our memory and use it.
 
 Preparing for learning can involve mental preparation, physical prep, and oper. prep. Mental prep includes setting learning goals for self based on what we know the class w/ cover (see syllabus)/ Also it is very important to do any assignments for the class to be able to learn w/ confidence and…. ______________
@@ -308,39 +314,47 @@ The list method is usually not the best choice because it is focused exclusively
  
 #### The Outline Method
 
-Example: The Outline Method of Note-taking
+**Example:** The Outline Method of Note-taking
 
-Learning Cycle
+Topic
+
 Date
+
 Time
-Prof. Doe
+
+Instructor
+
+
 
 Learning is a cycle made up of 4 steps:
   1.	Preparing: Setting the foundation for learning.
   2.	Absorbing: (Data input) Exposure to new knowledge.
   3.	Capturing: Taking ownership of the knowledge.
   4.	Review & Apply: Putting new knowledge to work.
- 
-1.	Preparing 
-   1.	Mental Prep. 
-       1.	Do assignments – New knowledge is built on prior knowledge. 
-          1.	assignments from prior classes.
-          2.	Readings! (May not have been assigned in class – see Syllabus!)
-       2.	Review Syllabus 
-          1.	Know what instructor expects to cover
-          2.	Know what assignments you need to do
-          3.	Set your own objective
-  2.	Physical Prep 
-       1.	Get right about of rest. Don’t zzz in class.
-       2.	Eat right. Hard to focus when you are hungry.
-       3.	Arrive on time.
-  3.	Practical Prep (Organizational Prep): 
-       1.	Bring right supplies – (Notebooks, Texts, Pens, etc.)
-       2.	Arrive on time 
-          1.	Get organized and ready to listen
-          2.	Don’t unterupt the focus of others
-          3.	Get a good seat
-       3.	Sit in the front of the class.
+
+--------------------------------------------------------------------------------------------
+
+- Preparing
+   - Mental Prep. 
+       - Do assignments – New knowledge is built on prior knowledge. 
+           - assignments from prior classes.
+           - Readings! (May not have been assigned in class – see Syllabus!)
+       - Review Syllabus 
+           - Know what instructor expects to cover
+           - Know what assignments you need to do
+           - Set your own objective
+   - Physical Prep 
+       - Get right about of rest. Don’t zzz in class.
+       - Eat right. Hard to focus when you are hungry.
+       - Arrive on time.
+   - Practical Prep (Organizational Prep): 
+       - Bring right supplies – (Notebooks, Texts, Pens, etc.)
+       - Arrive on time 
+           - Get organized and ready to listen
+           - Don’t unterupt the focus of others
+           - Get a good seat
+       - Sit in the front of the class.
+
 
 The advantage of the outline method is that it allows you to prioritize the material. Key ideas are written to the left of the page, subordinate ideas are then indented, and details of the subordinate ideas can be indented further. To further organize your ideas, you can use the typical outlining numbering scheme (starting with roman numerals for key ideas, moving to capital letters on the first subordinate level, Arabic numbers for the next level, and lowercase letters following.) At first you may have trouble identifying when the instructor moves from one idea to another. This takes practice and experience with each instructor, so don’t give up! In the early stages you should use your syllabus to determine what key ideas the instructor plans to present. Your reading assignments before class can also give you guidance in identifying the key ideas.
 
@@ -350,8 +364,9 @@ After class be sure to review your notes and then summarize the class in one or 
  
 #### The Concept Map Method
 
-Example: The Concept Map Method of Note-taking
- <<image>>
+**Example:** The Concept Map Method of Note-taking
+ 
+--- INSERT IMAGE HERE ---
 
 This is a very graphic method of note-taking that is especially good at capturing the relationships among ideas. Concept maps harness your visual sense to understand complex material “at a glance.” They also give you the flexibility to move from one idea to another and back easily (so they are helpful if your instructor moves freely through the material).
 
@@ -360,11 +375,13 @@ To develop a concept map, start by using your syllabus to rank the ideas you wil
 As with all note-taking methods, you should summarize the chart in one or two paragraphs of your own words after class.
  
 #### The Cornell Method
-Example: The Cornell Method of Note-taking
- <<image>> 
 
-The Cornell method was developed in the 1950s by Professor Walter Pauk at Cornell University [1]. It is recommended by many universities because of its usefulness and flexibility. This method is simple to use for capturing notes, is helpful for defining priorities, and is a very helpful study tool
-.
+**Example:** The Cornell Method of Note-taking
+
+--- INSERT IMAGE HERE ---
+
+The Cornell method was developed in the 1950s by Professor Walter Pauk at Cornell University [1]. It is recommended by many universities because of its usefulness and flexibility. This method is simple to use for capturing notes, is helpful for defining priorities, and is a very helpful study tool.
+
 The Cornell method follows a very specific format that consists of four boxes: a header, two columns, and a footer.
 
 The header is a small box across the top of the page. In it you write identification information like the course name and the date of the class. Underneath the header are two columns: a narrow one on the left (no more than one-third of the page) and a wide one on the right. The wide column, called the “notes” column, takes up most of the page and is used to capture your notes using any of the methods outlined earlier. The left column, known as the “cue” or “recall” column, is used to jot down main ideas, keywords, questions, clarifications, and other notes. It should be used both during the class and when reviewing your notes after class. Finally, use the box in the footer to write a summary of the class in your own words. This will help you make sense of your notes in the future and is a valuable tool to aid with recall and studying.
@@ -375,37 +392,60 @@ Some students like to use index cards to take notes. They actually lend themselv
 “I used to tape my lecture classes so I could fill in my sketchy notes afterwards. Now that I’m using the Cornell system, my notes are complete and organized in much less time. And my regular five-minute reviews make learning almost painless. No more taping and listening twice.”
 
 — A student at Southern Methodist University
+
 You will have noticed that all methods end with the same step: reviewing your notes as soon as possible after class. Any review of your notes is helpful (reading them, copying them into your computer, or even recasting them using another note-taking method). But THINK! Make your review of notes a thoughtful activity, not a mindless process. When you review your notes, think about questions you still have and determine how you will get the answers. (From the next class? Studying with a friend? Looking up material in your text or on the net?) Examine how the material applies to the course; make connections with notes from other class sessions, with material in your text, and with concepts covered in class discussions. Finally, it’s fun to think about how the material in your notes applies to real life. Consider this both at the very strategic level (as in “What does this material mean to me in relation to what I want to do with my life?”) as well as at a very mundane level (as in, “Is there anything cool here I can work into a conversation with my friends?”).
-Instructor Handouts
+
+#### Instructor Handouts
+
 Some instructors hand out or post their notes or their PowerPoint slides from their lectures. These handouts should never be considered a substitute for taking notes in class. They are a very useful complement and will help you confirm the accuracy of your notes, but they do not involve you in the process of learning as well as your own notes do. After class, review your notes with highlighter in hand and mark keywords and ideas in your notes. This will help you write a summary of the class in your own words.
-General Tips on Note-Taking
+
+### General Tips on Note-Taking
+
 Regardless of what note-taking method you choose, there are some note-taking habits you should get into for all circumstances and all courses:
-1.	Be prepared. Make sure you have the tools you need to do the job. If you are using a notebook, be sure you have it with you and that you have enough paper. Also be sure to have your pen (as well as a spare) and perhaps a pen with different-coloured ink to use for emphasis. If you are taking notes on your laptop, make sure the battery is charged! Select the application that lends itself best to your style of note-taking. Microsoft Word works very well for outline notes, but you might find taking notes in Excel to work best if you are working within the Cornell method. (It’s easier to align your thoughts in the cue or recall column to your notes in the right column. Just be sure you keep one idea per row!)
-2.	Write on only one side of the paper. This will allow you to integrate your reading notes with your class notes.
-3.	Label, number, and date all notes at the top of each page. This will help you keep organized.
-4.	When using a laptop, position it such that you can see the instructor and white board right over your screen. This will keep the instructor in your field of vision even if you have to glance at your screen or keyboard from time to time. Make sure your focus remains with the instructor and not on your laptop. A word of caution about laptops for note-taking: use them if you are very adept at keyboarding, but remember that not all note-taking methods work well on laptops because they do not easily allow you to draw diagrams and use special notations (scientific and math formulas, for example).
-5.	Don’t try to capture everything that is said. Listen for the big ideas and write them down. Make sure you can recognize the instructor’s emphasis cues and write down all ideas and keywords the instructor emphasizes. Listen for clues like “the four causes were…” or “to sum up.…”
-6.	Copy anything the instructor writes on the board. It’s likely to be important.
-7.	Leave space between ideas. This allows you to add additional notes later (e.g. notes on the answer to a question you or one of your classmates asked).
-8.	Use signals and abbreviations. The ones you use are up to you, but be consistent so you will know exactly what you mean by “att.” when you review your notes. You may find it useful to keep a key to your abbreviations in all your notebooks.
-9.	Use some method for identifying your own thoughts and questions to keep them separate from what the instructor or textbook author is saying. Some students use different colour ink; others box or underline their own thoughts. Do whatever works for you.
-10.	Create a symbol to use when you fall behind or get lost in your note-taking. Jot down the symbol, leave some space, and focus on what the instructor is covering now. Later you can ask a classmate or the professor to help you fill in what you missed, or you can find it in your textbook.
-11.	Review your notes as soon after class as possible (the same day is best). This is the secret to making your notes work! Use the recall column to call out the key ideas and organize facts. Fill in any gaps in your notes and clean up or redraw hastily drawn diagrams.
-12.	Write a summary of the main ideas of the class in your own words. This process is a great aid to recall. Be sure to include any conclusions from the lecture or discussion.
-13.	Use notes when preparing for a test or doing an assignment. Your notes usually have a summary of the most important points and are useful for making sure you incorporate important concepts in your assignments and for focusing on the main concepts when studying for tests and exams.
-This video provides some great tips for note-taking as well.
-Video: “How to Take Great Notes” (length 5:08)
-Exercise: Journal Entry
+
+1.	**Be prepared:** Make sure you have the tools you need to do the job. If you are using a notebook, be sure you have it with you and that you have enough paper. Also be sure to have your pen (as well as a spare) and perhaps a pen with different-coloured ink to use for emphasis. If you are taking notes on your laptop, make sure the battery is charged! Select the application that lends itself best to your style of note-taking. Microsoft Word works very well for outline notes, but you might find taking notes in Excel to work best if you are working within the Cornell method. (It’s easier to align your thoughts in the cue or recall column to your notes in the right column. Just be sure you keep one idea per row!)
+
+2.	**Write on only one side of the paper:** This will allow you to integrate your reading notes with your class notes.
+
+3.	**Label, number, and date all notes at the top of each page:** This will help you keep organized.
+
+4.	**When using a laptop, position it such that you can see the instructor and white board right over your screen:** This will keep the instructor in your field of vision even if you have to glance at your screen or keyboard from time to time. Make sure your focus remains with the instructor and not on your laptop. A word of caution about laptops for note-taking: use them if you are very adept at keyboarding, but remember that not all note-taking methods work well on laptops because they do not easily allow you to draw diagrams and use special notations (scientific and math formulas, for example).
+5.	**Don’t try to capture everything that is said:** Listen for the big ideas and write them down. Make sure you can recognize the instructor’s emphasis cues and write down all ideas and keywords the instructor emphasizes. Listen for clues like “the four causes were…” or “to sum up.…”
+
+6.	**Copy anything the instructor writes on the board:** It’s likely to be important.
+
+7.	**Leave space between ideas:** This allows you to add additional notes later (e.g. notes on the answer to a question you or one of your classmates asked).
+
+8.	**Use signals and abbreviations:** The ones you use are up to you, but be consistent so you will know exactly what you mean by “att.” when you review your notes. You may find it useful to keep a key to your abbreviations in all your notebooks.
+
+9.	**Use some method for identifying your own thoughts and questions to keep them separate from what the instructor or textbook author is saying:** Some students use different colour ink; others box or underline their own thoughts. Do whatever works for you.
+
+10.	**Create a symbol to use when you fall behind or get lost in your note-taking:** Jot down the symbol, leave some space, and focus on what the instructor is covering now. Later you can ask a classmate or the professor to help you fill in what you missed, or you can find it in your textbook.
+
+11.	**Review your notes as soon after class as possible (the same day is best):** This is the secret to making your notes work! Use the recall column to call out the key ideas and organize facts. Fill in any gaps in your notes and clean up or redraw hastily drawn diagrams.
+
+12.	**Write a summary of the main ideas of the class in your own words:** This process is a great aid to recall. Be sure to include any conclusions from the lecture or discussion.
+
+13.	**Use notes when preparing for a test or doing an assignment:** Your notes usually have a summary of the most important points and are useful for making sure you incorporate important concepts in your assignments and for focusing on the main concepts when studying for tests and exams.
+
+
+**Exercise:** Journal Entry
+
 Choose one of your classes where you normally take notes. Make a conscious effort to use the Cornell method with either the outline or concept map method for taking your notes. Follow as many steps listed previously as possible. Now compare these notes with those you took in the previous class. Are your new notes more useful? What did you like about taking notes this way? What are some of the things you need to work on improving? (Remember this will get much easier with more practice.) Write your thoughts down.
-What If You Miss Class?
+
+**What If You Miss Class?**
 Clearly the best way to learn class material is to be at the class and to take your own notes. In university, regular attendance is expected. But life happens. On occasion, you may have to miss a class or lecture. When this happens, here are some strategies you can use to make up for it:
-•	Check with the instructor to see if there is another section of the class you can attend. Never ask the instructor “Did I miss anything important?” (Think about what that’s saying and you’ll see it’s rather insulting.)
-•	If the instructor posts his or her lectures as a podcast, listen to the lecture online and take notes. If the instructor uses PowerPoint slides, request a copy (or download them if posted) and review them carefully, jotting down your own notes and questions. Review your notes with a classmate who did attend.
-•	You may want to borrow class notes from a classmate. If you do, don’t just copy them and insert them in your notebook. They will not be very helpful. When you borrow notes from a classmate, you should photocopy them and then review them carefully and mark your copy with your own notes and questions. Use your textbook to try to fill in the gaps. Finally, schedule a study session with the person who gave you the notes to review the material and confirm your understanding.
-•	If none of these options is available for you, use the course syllabus to determine what was covered in the class, then write a short paper (two pages or so) on the material using the class readings and reliable online sources. See your instructor during office hours to review your key findings and to answer any questions you still may have.
-Group Notes: A Collaborative Approach
+- Check with the instructor to see if there is another section of the class you can attend. Never ask the instructor “Did I miss anything important?” (Think about what that’s saying and you’ll see it’s rather insulting.)
+- If the instructor posts his or her lectures as a podcast, listen to the lecture online and take notes. If the instructor uses PowerPoint slides, request a copy (or download them if posted) and review them carefully, jotting down your own notes and questions. Review your notes with a classmate who did attend.
+- You may want to borrow class notes from a classmate. If you do, don’t just copy them and insert them in your notebook. They will not be very helpful. When you borrow notes from a classmate, you should photocopy them and then review them carefully and mark your copy with your own notes and questions. Use your textbook to try to fill in the gaps. Finally, schedule a study session with the person who gave you the notes to review the material and confirm your understanding.
+- If none of these options is available for you, use the course syllabus to determine what was covered in the class, then write a short paper (two pages or so) on the material using the class readings and reliable online sources. See your instructor during office hours to review your key findings and to answer any questions you still may have.
+
+#### Group Notes: A Collaborative Approach
+
 Groups within a class can take notes together using file-sharing software on the Cloud such as Google Docs. The individuals in the group can add to the document in real time as different individuals are adding themselves. This creates a collaborative document that all can use, download, (or adapt). This won’t work for all situations but can be very useful especially in a fast-moving classroom.
-Keeping Your Notes
+
+#### Keeping Your Notes
+
 Class is over, and you have a beautiful set of notes in your spiral notebook or saved in your laptop. You have written the summary of the class in your own words. Now what?
 Start by organizing your notes. We recommend you use a three-ring binder for each of your subjects. Print your notes if you used a computer. If you used note cards, insert them in plastic photo holders for binders. Group all notes from a class or unit together in a section; this includes class notes, reading notes, and instructor handouts. You might also want to copy the instructor’s syllabus for the unit on the first page of the section.
 
@@ -413,21 +453,22 @@ Next, spend some time linking the information across the various notes. Use the 
 If you have had a quiz or test on the unit, add it to your binder, too, but be sure to write out the correct answer for any item you missed. Link those corrections to your notes, too.
 Use this opportunity to write “notes on your notes.” Review your summary to see if it still is valid in light of your notes on the reading and any handouts you may have added to your notes package.
 You don’t need to become a pack rat with your notes. It is fairly safe to toss them after the end of a course except in the following cases:
+
 1.	If the course you took is a prerequisite for another course, or when the course is part of a standard progression of courses that build upon each other (this is very common in math and science courses), you should keep them as a reference and review for the follow-up course.
 2.	If the course may pertain to your future major, keep your notes. You may not realize it now that they may have future value when you study similar topics or even the same topics in more depth.
 3.	If you are very interested in the course subject and would like to get into the material through a more advanced course, independent study, or even research, keep your notes as a prep tool for further work.
 
 
-Key Takeaways
-•	Good note-taking is a key strategy for academic success.
-•	Choose among effective note-taking styles for what works best for you and modify it to meet the needs of a specific class or instructor.
-•	List notes are generally less effective and not prioritized.
-•	Outlines work well for taking notes on a laptop when the instructor is well organized.
-•	Concept map notes are good for showing the relationships among ideas.
-•	The Cornell method is effective for calling out key concepts and organizing notes for review.
-•	Instructor handouts and PowerPoint presentations help with—but do not replace the need for—personal note-taking.
-•	If you miss a class, explore your options for replacing your missing notes.
-•	Keep your notes organized in a way that makes it easy to study for tests and other uses in the future.
+**Key Takeaways:**
+- Good note-taking is a key strategy for academic success.
+- Choose among effective note-taking styles for what works best for you and modify it to meet the needs of a specific class or instructor.
+- List notes are generally less effective and not prioritized.
+- Outlines work well for taking notes on a laptop when the instructor is well organized.
+- Concept map notes are good for showing the relationships among ideas.
+- The Cornell method is effective for calling out key concepts and organizing notes for review.
+- Instructor handouts and PowerPoint presentations help with—but do not replace the need for—personal note-taking.
+- If you miss a class, explore your options for replacing your missing notes.
+- Keep your notes organized in a way that makes it easy to study for tests and other uses in the future.
 
 Exercise: Note-taking
 1.	Name two advantages of the Cornell system over the list method of note-taking.
@@ -435,10 +476,11 @@ Exercise: Note-taking
 3.	List at least three ways to make up for missing notes because you miss a class.
 ________________________________________
 Text Attributions
-•	This chapter was adapted from “Got Notes?” in University Success by N. Mahoney, B. Klassen, and M. D’Eon. Adapted by Mary Shier. CC BY-NC-SA.
-•	 The first two paragraphs and text under the “Two Purposes for Taking Notes” heading are from “Take Notes from Lectures – That You’ll Actually Use” in University 101: Study, Strategize and Succeed by Kwantlen Polytechnic University. CC BY-SA.
+- This chapter was adapted from “Got Notes?” in University Success by N. Mahoney, B. Klassen, and M. D’Eon. Adapted by Mary Shier. CC BY-NC-SA.
+- The first two paragraphs and text under the “Two Purposes for Taking Notes” heading are from “Take Notes from Lectures – That You’ll Actually Use” in University 101: Study, Strategize and Succeed by Kwantlen Polytechnic University. CC BY-SA.
+
 Video Attributions
-•	“How to Take Great Notes” by watchwellclass. Standard YouTube Licence.
+- “How to Take Great Notes” by watchwellclass. Standard YouTube Licence.
 ________________________________________
 1.	Pauk, W. & Owens, R.J.Q. (2013). How to Study in College. Boston, MA: Wadsworth, Cengage Learning. ↵
 
