@@ -313,13 +313,13 @@ Time
 Instructor
 
 
-The learning cycle is an approach to gathering and retaining info that can help students be successful in Col. The cycle consists of 4 steps which should all be app’d. They are preparing, which sets the foundation for learning, absorbing, which exposes us to new knowledge, capturing, which sets the information into our knowledge base and finally reviewing and applying which lets us set the know. into our memory and use it.
+The learning cycle is an approach to gathering and retaining info that can help students be successful in school. The cycle consists of 4 steps which should all be applied. They are preparing, which sets the foundation for learning, absorbing, which exposes us to new knowledge, capturing, which sets the information into our knowledge base and finally reviewing and applying which lets us set the know. into our memory and use it.
 
-Preparing for learning can involve mental preparation, physical prep, and oper. prep. Mental prep includes setting learning goals for self based on what we know the class w/ cover (see syllabus)/ Also it is very important to do any assignments for the class to be able to learn w/ confidence and…. ______________
+Preparing for learning can involve mental preparation, physical prep, and oper. prep. Mental prep includes setting learning goals for self based on what we know the class will cover.  Also it is very important to do any assignments for the class to be able to learn w/ confidence and…. ______________
 
 Physical Prep means having enough rest and eating well. Its hard to study when you are hungry and you won’t listen well in class if you doze off.
 
-Operation Prep means bringing all supplies to class, or having them at  hand when studying… this includes pens, paper, computer, textbook, etc. Also means setting to school on time and getting a good seat (near the front).
+Operation Prep means bringing all supplies to class, or having them at hand when studying. This includes pens, paper, computer, textbook, etc. This also means getting to school on time and getting a good seat (near the front).
 
 Absorbing new knowledge is a combination of listening and reading. These are two of the most important learning skills you can have.
 
@@ -372,7 +372,7 @@ Learning is a cycle made up of 4 steps:
 
 The advantage of the outline method is that it allows you to prioritize the material. Key ideas are written to the left of the page, subordinate ideas are then indented, and details of the subordinate ideas can be indented further. To further organize your ideas, you can use the typical outlining numbering scheme (starting with roman numerals for key ideas, moving to capital letters on the first subordinate level, Arabic numbers for the next level, and lowercase letters following.) At first you may have trouble identifying when the instructor moves from one idea to another. This takes practice and experience with each instructor, so don’t give up! In the early stages you should use your syllabus to determine what key ideas the instructor plans to present. Your reading assignments before class can also give you guidance in identifying the key ideas.
 
-If you’re using your laptop computer for taking notes, a basic word processing application (like Microsoft Word or Works) is very effective. Format your document by selecting the outline format from the format bullets menu. Use the increase or decrease indent buttons to navigate the level of importance you want to give each item. The software will take care of the numbering for you!
+If you’re using your laptop for taking notes, a basic word processing application can be very effective. Format your document by creating an outline format using bullets/ dashes. Either increase or decrease your indentation to indicate the level of importance you want to give each item.
 
 After class be sure to review your notes and then summarize the class in one or two short paragraphs using your own words. This summary will significantly affect your recall and will help you prepare for the next class.
  
