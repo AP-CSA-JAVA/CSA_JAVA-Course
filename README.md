@@ -276,15 +276,15 @@ Taking notes during class supports your learning in several important ways:
 
 Everybody takes notes, or at least everybody claims to. But if you take a close look, many who are claiming to take notes on their laptops are actually surfing the Web, and paper notebooks are filled with doodles interrupted by a couple of random words with an asterisk next to them reminding you that “This is important!” In college and university, these approaches will not work. Your instructors expect you to make connections between class lectures and reading assignments; they expect you to create an opinion about the material presented; they expect you to make connections between the material and life beyond school. Your notes are your road maps for these thoughts. Do you take good notes? Actively listening and note-taking are key strategies to ensure your student success.
 
-Effective note-taking is important because it
+Effective note-taking is important because it:
 
-  •	supports your listening efforts.
-  •	allows you to test your understanding of the material.
-  •	helps you remember the material better when you write key ideas down.
-  •	gives you a sense of what the instructor thinks is important.
-  •	creates your “ultimate study guide.”
+- [ ] supports your listening efforts.
+- [ ] allows you to test your understanding of the material.
+- [ ] helps you remember the material better when you write key ideas down.
+- [ ] gives you a sense of what the instructor thinks is important.
+- [ ] creates your “ultimate study guide.”
   
-There are various forms of taking notes, and which one you choose depends on both your personal style and the instructor’s approach to the material. Each can be used in a notebook, index cards, or in a digital form on your laptop. No specific type is good for all students and all situations, so we recommend that you develop your own style, but you should also be ready to modify it to fit the needs of a specific class or instructor. To be effective, all of these methods require you to listen actively and to think; merely jotting down words the instructor is saying will be of little use to you.
+There are various forms of taking notes, and which one you choose depends on both your personal style and the instructor’s approach to the material. Each can be used in a notebook, index cards, or in a digital form on your laptop. No specific type is good for all students and all situations, so we recommend that you develop your own style, but you should also be ready to modify it to fit your needs of a specific class or instructor. To be effective, all of these methods require you to *listen actively* and to think; merely jotting down words the instructor is saying will be of little use to you.
 
 ### Note-taking methods
 
