@@ -262,10 +262,10 @@ Despite the vast amount of information available in electronic formats, taking n
 ### Two Purposes for Taking Notes
 
 People take notes for two main reasons:
-  1.	To keep a record of the information they heard. This is also called the external storage function of note-taking.
-  2.	To facilitate learning material they are currently studying.
+  1.	To keep a record of the information that was heard. This is also called the *external storage function* of note-taking.
+  2.	To facilitate learning that you are currently studying.
 
-The availability of information on the internet may reduce the importance of the external storage function of note-taking. When the information is available online, it may seem logical to stop taking notes.  However, by neglecting to take notes, you lose the benefits of note-taking as a learning tool.
+The availability of information on the internet may reduce the importance of the *external storage function* of note-taking. When the information is available online, it may seem logical to stop taking notes.  However, by neglecting to take notes, <ins>you lose the benefits of note-taking as a learning tool</ins>.
 
 ### How Note-Taking Supports Learning
 
