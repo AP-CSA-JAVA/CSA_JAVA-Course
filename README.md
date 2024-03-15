@@ -617,7 +617,347 @@ If you have any questions, please contact me.
  <p></br>
  Please review the Java Style Guidelines
  
- [Java Style Guidelines](http://cit.evc.edu/comsc075/java_style_guide.html)
+**Java Style Guidelines**
+
+Here are guidelines for writing Java programs in this course.
+#### Spaces
+
+Put spaces on both sides of arithmetic operators.
+```java
+// Incorrect
+a=(b*4+7.5/c);
+
+// Correct
+a = (b * 4 + 7.5 / c);
+```
+The keywords if, else, for, do, and while are always followed by a space. Put a space between a closing parenthesis and an opening brace. When a closing brace is on the same line as an else, follow it with a space.
+
+```java
+// Incorrect
+if(a < b){
+    for(int i = 0; i < 10; i++){
+       j += i * a;
+    }
+}else{
+    j = b * 9;
+}
+// Correct
+if (a < b) {
+    for (int i = 0; i < 10; i++) {
+       j += i * a;
+    }
+} else {
+    j = b * 9;
+}
+```
+Do not put spaces after an opening parenthesis or before a closing parenthesis:
+
+```java
+// Incorrect
+for ( int i = 0; i < 5; i++ ) {
+    sum = ( sum + i ) * Math.sqrt( 2 );
+}
+// Correct
+for (int i = 0; i < 5; i++) {
+    sum = (sum + i) * Math.sqrt(2);
+}
+```
+#### Braces and Indenting
+There are several ways of placing braces in your Java source code. One thing they all have in common: closing braces are always the first non-whitespace character on a line. They are never placed at the end of a line:
+
+```java
+// Incorrect
+if (a < b) {
+    result = 22; }
+else
+    result = 99; }
+```
+Any of these are correct; the book we are currently using uses the third style:
+
+```java
+// Correct
+if (a < b) {
+    result = 22;
+} else {
+    result = 99;
+}
+// Correct
+if (a < b)
+{
+    result = 22;
+}
+else
+{
+    result = 99;
+}
+// Correct
+if (a < b) {
+    result = 22;
+}
+else {
+    result = 99;
+}
+```
+
+Always enclose the body of an if clause, else clause, or loop in braces, even when there is only one statement in the body:
+
+```java
+// Incorrect
+if (a < b)
+    result = 22;
+else
+    result = 99;
+
+for (int i = 0; i < 7; i++)
+    result += i * i;
+// Correct
+if (a < b) {
+    result = 22;
+} else {
+    result = 99;
+}
+
+for (int i = 0; i < 7; i++) {
+    result += i * i;
+}
+```
+
+You may indent either two or four spaces, and you may use the TAB character instead of spaces. You have to be correct and consistent in your indenting and placement of braces. Note how the if-else-if chain is aligned in the correct example:
+
+```java
+//Incorrect
+if (a < b) {
+    if (c >= d) {
+      result = 2;
+  } else if (e == f) 
+{
+        result = 99;
+    }
+  }
+//Correct
+if (a < b) {
+    if (c >= d) {
+        result = 2;
+    } else if (e == f) {
+        result = 99;
+    }
+}
+```
+
+#### Names and Declarations
+
+Variable names begin with lower case letters. If you have a multi-word variable name, prefer camelCase to snake_case. If you have a final (constant), use all upper case for its name, and, if it is a multi-word name, use SNAKE_CASE. Names of Java classes begin with a upper case letter:
+
+```java
+// Incorrect
+class example {
+    int Counter;
+    double unitprice;
+    final double salestaxrate = 0.075;
+    // ...
+}
+// Correct
+class Example {
+    int counter;
+    double unit_price; // acceptable
+    double unitPrice;  // preferred
+    final double SALES_TAX_RATE = 0.075;
+    // ..
+}
+````
+
+Put only one declaration per line:
+
+```java
+// Incorrect
+double cut, clarity, caratWeight, color;
+// Correct
+double cut;
+double clarity;
+double caratWeight;
+double color;
+```
+
+#### Long Lines
+
+Limit line length to 75, no more than 79, characters. Many IDEs will let you display a “line length marker” and set its limit. They might also show the current column number in the status bar at the bottom of the editor window.
+
+Prefer multiple println() calls to one print() or println() with multiple \n:
+
+```java
+// difficult to read and edit
+System.out.print("Weight: " + weight + "\nVolume: " + volume + "\nSurface Area: " + area + "\n");
+// better
+System.out.println("Weight: " + weight);
+System.out.println("Volume: " + volume);
+System.out.println("Surface Area: " + area);
+```
+
+If you break a formula across lines, you can break with the operator at the end of a line or beginning of the next line. Just be consistent.
+
+```java
+// Either of these is correct
+double first = (weight * volume) / (length + width / 2 *
+    height * height);
+double second = (weight * volume) / (length + width / 2 
+    * height * height);
+```
+
+#### Comments
+The code tells you what the program does. Comments should tell you why or how. (The book will often have “what” comments because the book has to explain what a concept is.)
+
+```java
+// "what" comment
+month += 1; // add one to month
+// "why" comment
+/* System returns 0-11 for January-December,
+ * but people expect months to be 1-12.
+ */
+month += 1;
+```
+
+The exception to this guideline is the comments at the start of your program. These must have your name, the date, and a description of the purpose of the program. The description must be clear enough that someone who has not read the assignment will understand what the program does. These comments are incorrect:
+
+```java
+/*
+ * Assignment 3
+ * J. Fulano - Oct 4, 2525
+ */
+/*
+ * Program uses if statements
+ * and while loops.
+ * J. Doe - Oct 4, 2525
+ */
+```
+
+This one is correct:
+
+```java
+/*
+* Ask user to enter a positive integer, and print out whether
+* that integer is prime or not.
+* Program does this repeatedly until user enters zero as input; 
+* negative integers give an error message.
+* J. Doe - Oct 4, 2525
+*/
+```
+
+#### Loops
+
+Avoid break and continue whenever possible; instead, carefully think through the loop condition. Do not use while (true) with break to substitute for thinking through the correct condition!
+Consider the following code to read into an array until it is full or the user enters zero:
+
+```java
+// Very bad style
+final int MAX = 4;
+int [] ages = new int[MAX];
+int value = -1;
+int count = 0;
+
+while (true) {
+    System.out.print("Enter age or 0 to quit: ");
+    value = input.nextInt();
+    if (value == 0) {
+        break;
+    }
+    ages[count] = value;
+    count++;
+    if (count == MAX) {
+        break;
+    }
+}
+
+// better
+final int MAX = 4;
+int [] ages = new int[MAX];
+int value = -1;
+int count = 0;
+
+while (value != 0) {
+    System.out.print("Enter age or 0 to quit: ");
+    value = input.nextInt();
+    if (value != 0) {
+        ages[count] = value;
+        count++;
+        if (count == MAX) {
+            break;
+        }
+    }
+}
+// best
+final int MAX = 4;
+int [] ages = new int[MAX];
+int value = -1;
+int count = 0;
+
+while (count < MAX && value != 0) {
+    System.out.print("Enter age or 0 to quit: ");
+    value = input.nextInt();
+    if (value != 0) {
+        ages[count] = value;
+        count++;
+    }
+}
+```
+
+#### Methods
+
+Do not put a space between the method name and the parameter list.
+
+```java
+// Incorrect
+static double cube ( double value ) {
+    return value * value * value;
+}
+// ...
+double result = cube ( 12.0 );
+// Correct
+static double cube(double value) {
+    return value * value * value;
+}
+// ...
+double result = cube(12.0);
+```
+
+It is a good idea to put comments before a method that describes the method’s purpose, inputs, and return value (if any):
+
+```java
+/*
+ * Calculate monthly payment on a loan, given:
+ * principal: amount of the loan
+ * interestRate: annual percentage rate as a decimal (0.075 for 7.5%)
+ * years: number of years of the loan
+ * returns the monthly payment amount of the loan
+ */
+static double payment(double principal, double interestRate, int years) {
+    //...
+}
+```
+
+#### Output
+
+When lining up output, prefer spaces and specific formatting over tabs:
+
+```java
+// OK
+System.out.printf("Height (cm):\t\t%.2f\n", height);
+System.out.printf("Weight (kg):\t\t%.2f\n", weight);
+System.out.printf("Blood alcohol:\t%.3f%%\n", bac);
+Height (cm):            160.30
+Weight (kg):            50.40
+Blood alcohol:  0.032% 
+
+// Better
+System.out.printf("Height (cm):   %6.2f\n", height);
+System.out.printf("Weight (kg):   %6.2f\n", weight);
+System.out.printf("Blood alcohol: %7.3f%%\n", bac);
+
+Height (cm):   160.30
+Weight (kg):    50.40
+Blood alcohol:   0.032%
+```
+
+
  
  </p>
  </details>
