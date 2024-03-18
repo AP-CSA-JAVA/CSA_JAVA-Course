@@ -518,6 +518,12 @@ Sorted array:
 - Develop code to create, traverse, and manipulate elements in 1D array.
 - Describe the initial conditions that must be met for a program segment to work as intended or described.
 
+
+To help you debug, you can quickly and easily print the contents of an array with a convenience method in the **java.util.Arrays** library. 
+
+`System.out.println(java.util.Arrays.toString(r));  // r is an array.  Per request of MGD `
+
+
 ## Unit 6 Project
 
 **Goals**
