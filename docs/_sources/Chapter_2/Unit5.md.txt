@@ -963,6 +963,3 @@ Ethical and social implications of computing systems are becoming increasingly i
 - Collaboration and Accountability: ISPs should collaborate with regulators, industry peers, and stakeholders to address ethical challenges collectively. They should also be accountable for any breaches or violations.
 
 Computing systems have far-reaching ethical and social implications. Emphasizing responsible development, transparency, and user privacy is essential for building trust and ensuring technology benefits society. Awareness around ethical issues for ISPs can lead to better data protection, fair practices, and an inclusive digital future.
-
-### Assignment 5.10.1
-Research one of the topics above.  Write a reflection that discusses the pros and cons of the topic you chose.  Is it possible to achieve a balance that will benefit society?  If not, what led you to your conclusions?
