@@ -188,6 +188,66 @@ fruits.clear();
 
 These are just a few examples of the methods available in the ArrayList class. The class provides many more methods for various operations like sorting, sublist extraction, iteration, and more. You can refer to the official Java documentation for a complete list of ArrayList methods and their descriptions.
 
+### Activity 3.7.1 - List Algorithms
+
+```java
+import java.util.ArrayList;
+
+class Main 
+{
+  	public static void main(String[] args) 
+	{
+    	ArrayList<String> words = new ArrayList<String>();
+		words.add("why");
+		words.add("isn't");
+		words.add("a");
+		words.add("koala");
+		words.add("considered");
+		words.add("a");
+		words.add("bear");
+		words.add("?");
+		System.out.println("Words: " + words);
+
+		//call methods
+		
+  	}
+	//write methods
+
+}
+```
+
+Code the following static Methods
+- `printPairs(ArrayList<String> arrayList)` - print the items of an ArrayList in pairs
+
+```java
+//Code to Call Method
+printPairs(words);
+
+//Output of Method Call
+Why -- isn't
+a -- koala
+considered -- a
+bear -- ?
+```
+- `socal(ArrayList<String> arrayList)` - insert "like" after every two items in the ArrayList
+```java
+//Code to Call Method:
+socal(words);
+System.out.println("Socal: " + words);
+
+//Output of Method Call:
+Socal: [why, isn't, like, a, koala, like, considered, a, like, bear, ?, like]
+```
+- `moveRight(ArrayList<String> arrayList)` - move the items in the list one position to the right. The item at the end of the list is moved to the beginning.
+```java
+//Code to Call Method:
+moveRight(words);
+System.out.println("MoveRight: " + words);
+
+//Output of Method Call:
+MoveRight: [like, why, isn't, like, a, koala, like, considered, a, like, bear, ?]
+```
+
 
 ## 7.3 Traversing ArrayLists
 
