@@ -191,6 +191,9 @@ These are just a few examples of the methods available in the ArrayList class. T
 
 ### Activity 3.7.1 - List Algorithms
 
+**This assignment was intentionally placed in 3.7.2**
+
+
 ```java
 import java.util.ArrayList;
 
@@ -249,8 +252,105 @@ System.out.println("MoveRight: " + words);
 MoveRight: [like, why, isn't, like, a, koala, like, considered, a, like, bear, ?]
 ```
 
+### Activity 3.7.2 - Auto List
+
+**Coding Exercise: Classric Car Showroom List**
+A dealer wants to create a list of classic cars in the showroom. Using the existing `Car` class in this exercise. 
+- Create a __*static*__ ArrayList called `showroom` that adds a `Car` to the showroom whenever a new Car is created.
+  - In the constructor, you will have to add that Car to the ArrayList.
+
+**Now that the `showroom` ArrayList has been implemented, we need to create methods to access the list items.**
+Create the following static methods for the Student class:
+
+- `getBestInShow()` - returns the name of the car in the first position of the showroom. You always show your best car first.
+
+- `gotBought(int index)` - void method that removes the car from the showroom from that position 
+
+- `oldestCar()` - returns the name to the older car in the showroom
+
+**Sample Output:**
+```java
+The oldest car in the showroom is the Pontiac Torpedo
+
+The best car in the showroom is the Chevrolet Bel Air
+I'll buy it!
+
+Here's the new showroom: 
+Chevrolet Impala SS Coupe
+Pontiac Torpedo
+Cadillac Coupe De Ville
+Chevrolet Delray Delivery
+Lincoln Continental Convertible
+```
+**Starter Files (2)**
+
+```java
+class Main 
+{
+	public static void main(String[] args) 
+	{
+		Car belAir = new Car("Chevrolet Bel Air", 1957, 60000);
+        	Car impala = new Car("Chevrolet Impala SS Coupe", 1964, 58000);
+		Car torpedo = new Car("Pontiac Torpedo", 1941, 27000);
+		Car coupe = new Car("Cadillac Coupe De Ville", 1984, 40000);
+		Car delray = new Car("Chevrolet Delray Delivery", 1958, 35000);
+
+		System.out.println("The oldest car in the showroom is the " + Car.oldestCar());
+		System.out.println("\nThe best car in the showroom is the " + Car.getBestInShow());
+		System.out.println("I'll buy it!");
+		Car.gotBought(0);
+		System.out.println("\nHere's the new showroom: " + Car.printShowroom());
+	}
+}
+```
+```java
+import java.util.ArrayList;
+
+public class Car
+{
+	private String model;
+	private int year;
+	private double value;
+	//make static array showroom
 
 
+	public Car(String model, int year, double value)
+	{
+		this.model = model;
+		this.year = year;
+		this.value = value;
+		//add this car to showroom
+
+	}
+
+	//getter methods for each specific object so therefore not static
+	public String getModel()
+	{
+		return this.model;
+	}
+	public int getYear()
+	{
+		return this.year;
+	}
+	public double getValue()
+	{
+		return this.value;
+	}
+
+	//static methods
+
+
+	public static String printShowroom()
+    {
+        String names = "";
+        for(Car name: showroom)
+        {
+            names+= name.getModel() + "\n";
+        }
+        return "\n" + names;
+    }
+}
+```
 ## 7.3 Traversing ArrayLists
 
 In this example, we create an ArrayList called myList and add three elements to it. We then traverse the ArrayList using both a enhanced for loop and a for loop.
