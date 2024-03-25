@@ -128,6 +128,10 @@ Here are some commonly used methods of the ArrayList class in Java:
 ArrayList<String> fruits = new ArrayList<>();
 fruits.add("Apple");
 fruits.add("Banana");
+
+//You can also add an element to a specific location in an ArrayList
+fruit.add(1, "blueberry");
+fruit.add(3, "strawberry");
 ```
 
 2.	**get(index)**: Retrieves the element at the specified index in the ArrayList.
