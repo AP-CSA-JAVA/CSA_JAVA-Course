@@ -188,6 +188,7 @@ fruits.clear();
 
 These are just a few examples of the methods available in the ArrayList class. The class provides many more methods for various operations like sorting, sublist extraction, iteration, and more. You can refer to the official Java documentation for a complete list of ArrayList methods and their descriptions.
 
+
 ### Activity 3.7.1 - List Algorithms
 
 ```java
@@ -247,6 +248,7 @@ System.out.println("MoveRight: " + words);
 //Output of Method Call:
 MoveRight: [like, why, isn't, like, a, koala, like, considered, a, like, bear, ?]
 ```
+
 
 
 ## 7.3 Traversing ArrayLists
