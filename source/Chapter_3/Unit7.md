@@ -298,6 +298,7 @@ class Main
 		Car torpedo = new Car("Pontiac Torpedo", 1941, 27000);
 		Car coupe = new Car("Cadillac Coupe De Ville", 1984, 40000);
 		Car delray = new Car("Chevrolet Delray Delivery", 1958, 35000);
+		Car continental = new Car("Lincoln Continental", 1962, 54995);
 
 		System.out.println("The oldest car in the showroom is the " + Car.oldestCar());
 		System.out.println("\nThe best car in the showroom is the " + Car.getBestInShow());
