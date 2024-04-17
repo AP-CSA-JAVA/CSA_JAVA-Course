@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Unit 2 - Using Objects" href="Unit2.html" /><link rel="prev" title="&lt;no title&gt;" href="../Resources/AP_Resources.html" />
 
-    <!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
+    <!-- Generated with Sphinx 7.3.5 and Furo 2024.01.29 -->
         <title>Unit 1 - Primitive Types - CSA JAVA Course</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
@@ -216,12 +216,26 @@
         </div>
         <article role="main">
           <section id="unit-1-primitive-types">
-<h1>Unit 1 - Primitive Types<a class="headerlink" href="#unit-1-primitive-types" title="Link to this heading">#</a></h1>
+<h1>Unit 1 - Primitive Types<a class="headerlink" href="#unit-1-primitive-types" title="Link to this heading">¶</a></h1>
 <section id="why-programming-why-java">
-<h2>1.1 Why Programming Why Java<a class="headerlink" href="#why-programming-why-java" title="Link to this heading">#</a></h2>
-<p>Every Java program begins with the creation of a class.  Consider a class as a blueprint for your program.  In this instance, we created a class called MyFirstClass.  Within the class there is a main method that is required to execute the program.  Below is a simple program that will print “Hello, World”.</p>
-<p>Notice that with every ‘ { ‘ there is a corresponding ‘ } ‘.  In class, you may hear me refer to it as a curly brace.  A missing a curly brace is one of the most common errors among new programmers.  The name ‘public’ allows users to be able to see the specific parts of your program.  Notice also that the name of the class starts with a capital letter.  The main class with always start with a capital letter.</p>
+<h2>1.1 Why Programming Why Java<a class="headerlink" href="#why-programming-why-java" title="Link to this heading">¶</a></h2>
+<p>Java is an Object Oriented Program.  Within every Java program begins with the creation of a class.  Consider a class as a blueprint for your program.  In this instance, we created a class called MyFirstClass.  Within the class there is a main method that is required to execute the program.  Below is a simple program that will print “Hello, World”.</p>
 <p><img alt="first_Java" src="https://user-images.githubusercontent.com/12989939/162324090-a9292f5d-3c02-46d8-bb05-e69cb0f72845.PNG" /></p>
+<p>Notice that with every ‘ { ‘ there is a corresponding ‘ } ‘.  In class, you may hear me refer to it as a curly brace.  A missing a curly brace is one of the most common errors among new programmers.  The name ‘public’ allows users to be able to see the specific parts of your program.  Notice also that the name of the class starts with a capital letter.  The main class with always start with a capital letter.</p>
+<p>In Java there is a “main method” that is required for all java programs.  The code will always be the same.  It looks like”</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">args</span><span class="o">[]</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">public</span></code> is an access specifier.  As you may infer, public is public and everyone will have access to it.</p>
+<p><code class="docutils literal notranslate"><span class="pre">static</span></code> is a keyword in java.  A <code class="docutils literal notranslate"><span class="pre">static</span></code> method belongs to the class and not to the object (We will learn more about this later!). A <code class="docutils literal notranslate"><span class="pre">static</span></code> method can <strong>only</strong> access static data. It is a method which belongs to the class and not to the instaniation of the object.  There are major differences between <code class="docutils literal notranslate"><span class="pre">static</span></code> nested class and <code class="docutils literal notranslate"><span class="pre">non-static</span></code> nested class. Non-static nested class is also called Inner Class.</p>
+<ul class="simple">
+<li><p>Nested static class doesn’t need reference of Outer class, but Non-static nested class or Inner class requires Outer class reference.</p></li>
+<li><p>Inner class(or non-static nested class) can access both static and non-static members of Outer class. A static class cannot access non-static members of the Outer class. It can access only static members of Outer class.</p></li>
+<li><p>An instance of Inner class cannot be created without an instance of outer class and an Inner class can reference data and methods defined in Outer class in which it nests, so we don’t need to pass reference of an object to the constructor of the Inner class. For this reason Inner classes can make program simple and concise.</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">void</span></code> is also a keyword.  It is a ‘return type’.  What does <code class="docutils literal notranslate"><span class="pre">void</span></code> return? Nothing!  It is used to specify that a method <strong>does not</strong> return anything. If the main method is not void, it will return an error.</p>
+<p><code class="docutils literal notranslate"><span class="pre">main</span></code> is the name of the Java main method.  It identifies the starting point of a Java program.  If we change the name while initiating the main method, it will return an error.</p>
+<p><code class="docutils literal notranslate"><span class="pre">String[]</span> <span class="pre">args</span></code> It is an array of string type.  It stores Java command-line arguments and is an array of type <code class="docutils literal notranslate"><span class="pre">java.lang.String</span></code> class.  The name of the String array is <code class="docutils literal notranslate"><span class="pre">args</span></code>.  It is not fixed and the user can use any name in place of it (It is not recommended as some IDEs will require args in the main method.).</p>
 <p>Notice that within the main method there is a print statement.  Let’s break down this print statement.</p>
 <p align="center"><b> System.out.println("Hello, World");</b></p>
 <ul class="contains-task-list simple">
@@ -237,7 +251,7 @@
 <p>What observations can you make about the diagram?  Spend a few minutes talking with your group.</p>
 <p>A powerful tool that you can use in OOP is the concept of inheritance.  Inheritance is the concept where a Java Class can inherit properties from another class.  You can think of this as a child inheritiing characteristics of a parent.  Java refers to this as <strong>extending</strong> a class.  The Class that is being extended or “inherited” is called a <strong>superclass</strong>.  The class that extends or “inherits” is referred to as a <strong>subclass</strong>.  We will explore this in more detail in Chapter 4.</p>
 <section id="replit-com">
-<h3>Replit.com<a class="headerlink" href="#replit-com" title="Link to this heading">#</a></h3>
+<h3>Replit.com<a class="headerlink" href="#replit-com" title="Link to this heading">¶</a></h3>
 <p>By default, Replit uses Main as the main class.  To change the Main class name to a class name of your choosing, create a new file within replit and call it <i>.repl</i>.  Within the file type the following:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">run</span><span class="o">=</span><span class="s2">&quot;sh main.sh&quot;</span>
 
@@ -260,7 +274,7 @@
 <p align="center">---------------------------------------------------------------------------- </p>
 </section>
 <section id="documentation-with-comments">
-<h3>5.3 Documentation with Comments<a class="headerlink" href="#documentation-with-comments" title="Link to this heading">#</a></h3>
+<h3>5.3 Documentation with Comments<a class="headerlink" href="#documentation-with-comments" title="Link to this heading">¶</a></h3>
 <p>Typing comments within your program is considered a professional practice, and I expect you to comment your code as appropriate throughtout the year.  When other people read your program, they may not understand the purpose of the variables and/ or methods in
 your program.  That’s why it’s important to document your code with comments. A comment is a piece of text that the
 computer will not recognize as code and will not execute. It’s only there for the other programmers to read. While you can write whatever
@@ -290,7 +304,7 @@ you want inside a comment, you should stick to explaining what your code does to
 </div>
 </section>
 <section id="assignment-1-1-1">
-<h3>Assignment 1.1.1<a class="headerlink" href="#assignment-1-1-1" title="Link to this heading">#</a></h3>
+<h3>Assignment 1.1.1<a class="headerlink" href="#assignment-1-1-1" title="Link to this heading">¶</a></h3>
 <p><img alt="76b4e00f998549e6a8717c6e5d5f0f1a" src="https://user-images.githubusercontent.com/12989939/162492248-21683f86-fc3f-4756-b78f-ddfe9373ab60.png" /></br>
 Create the happy face image above using the following criteria:</p>
 <ul class="contains-task-list simple">
@@ -302,7 +316,7 @@ Create the happy face image above using the following criteria:</p>
 <p>Please screenshot your code with result and include it in your Canvas assignment.</p>
 </section>
 <section id="assignment-1-1-2">
-<h3>Assignment 1.1.2<a class="headerlink" href="#assignment-1-1-2" title="Link to this heading">#</a></h3>
+<h3>Assignment 1.1.2<a class="headerlink" href="#assignment-1-1-2" title="Link to this heading">¶</a></h3>
 <p><strong>Personal Timeline</strong>
 For this assignment, you will create a program that outputs a personal timeline of events in your life. The timeline will proceed vertically. Earlier events will be displayed nearer the top of the timeline while later events are displayed near the bottom.</p>
 <p>Include seven meaningful events in your life. No repetitive events such as “started kindergarten, started first grade, etc”.</p>
@@ -322,7 +336,7 @@ More examples of Escape Sequences can be found <a class="reference external" hre
 </section>
 </section>
 <section id="variables-and-data-types">
-<h2>1.2 Variables and Data Types<a class="headerlink" href="#variables-and-data-types" title="Link to this heading">#</a></h2>
+<h2>1.2 Variables and Data Types<a class="headerlink" href="#variables-and-data-types" title="Link to this heading">¶</a></h2>
 <p>There are eight primitive types in Java. In no particular order, they are int, double, boolean, float, char, byte, long and short.  For this course we will be using only int, double, and boolean.</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>int</strong> is short for integer deals with whole numbers and uses 32 bits of memory</p></li>
@@ -352,7 +366,7 @@ More examples of Escape Sequences can be found <a class="reference external" hre
 Once you have declared the variable type, you <b> do not need to do it again </b> to reassign a value to the variable.</br> Example:  </br><em>int height = 72;</br>height = 70;</em></br></br>
 If you declare a variable as <em>final</em> you cannot change the value of it.  We can refer to the <em>final</em> variable as immutable (unchanging).  Another variable norm is that <em>final</em> variables are written as ALL CAPS to remind you that they cannot change.</br> Example:</br> final double PI = 3.14159;</br></br></p>
 <section id="assignment-1-2-1">
-<h3>Assignment 1.2.1<a class="headerlink" href="#assignment-1-2-1" title="Link to this heading">#</a></h3>
+<h3>Assignment 1.2.1<a class="headerlink" href="#assignment-1-2-1" title="Link to this heading">¶</a></h3>
 <p><strong>Allowance</strong>
 Write a program that will determine who receives an allowance or not.  Use the information below as a guide:</p>
 <ul class="contains-task-list simple">
@@ -386,7 +400,7 @@ Eligible for allowance? False<br>
 Michael’s weekly allowance is $0.00<br></p>
 </section>
 <section id="assignment-1-2-2">
-<h3>Assignment 1.2.2<a class="headerlink" href="#assignment-1-2-2" title="Link to this heading">#</a></h3>
+<h3>Assignment 1.2.2<a class="headerlink" href="#assignment-1-2-2" title="Link to this heading">¶</a></h3>
 <p>Use a Scanner object to create an input feature in your program.  Click on <a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/8455326/Scanner_Input.pptx">Scanner_Input</a> to learn more.  An example of a Scanner Input can be found <a class="reference external" href="https://replit.com/&#64;jonvirak/JavaScannerBasics#Main.java">here</a>.  Create four questions that will ask the user for a string, int, double, and a boolean.  From the user’s response, you will return (print statement) a sentence that includes the data types listed above.</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> string</p></li>
@@ -399,7 +413,7 @@ Michael’s weekly allowance is $0.00<br></p>
 </section>
 </section>
 <section id="expressions-and-assignment-statements">
-<h2>1.3 Expressions and Assignment Statements<a class="headerlink" href="#expressions-and-assignment-statements" title="Link to this heading">#</a></h2>
+<h2>1.3 Expressions and Assignment Statements<a class="headerlink" href="#expressions-and-assignment-statements" title="Link to this heading">¶</a></h2>
 <p>Math Operators are a very important part of computing. Below are the most common operators that we will be using in this course.</p>
 <div class="table-wrapper colwidths-auto docutils container">
 <table class="docutils align-default">
@@ -511,7 +525,7 @@ In Java, the order of operation works pretty much the same with the exception of
 </div>
 </details>
 <section id="assignment-1-3-1">
-<h3>Assignment 1.3.1<a class="headerlink" href="#assignment-1-3-1" title="Link to this heading">#</a></h3>
+<h3>Assignment 1.3.1<a class="headerlink" href="#assignment-1-3-1" title="Link to this heading">¶</a></h3>
 <p><strong>Calculate your weight on Jupiter</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">expression</span> <span class="n">F</span><span class="o">=</span><span class="n">ma</span> <span class="n">allows</span> <span class="n">you</span> <span class="n">to</span> <span class="n">calculate</span> <span class="n">your</span> <span class="n">weight</span> <span class="p">(</span><span class="ow">in</span> <span class="n">newtons</span><span class="p">)</span> <span class="n">based</span> <span class="n">on</span> <span class="n">your</span> <span class="n">mass</span> <span class="p">(</span><span class="ow">in</span> <span class="n">kilograms</span><span class="p">)</span>
 <span class="n">the</span> <span class="n">acceleration</span> <span class="n">due</span> <span class="n">to</span> <span class="n">gravity</span> <span class="n">on</span> <span class="n">Earth</span> <span class="p">(</span><span class="mf">9.81</span> <span class="n">m</span><span class="o">/</span><span class="n">sec2</span><span class="p">)</span><span class="o">.</span> <span class="n">A</span> <span class="n">typical</span> <span class="n">mass</span> <span class="n">of</span> <span class="n">a</span> <span class="n">human</span> <span class="n">might</span> <span class="n">be</span> <span class="mf">58.9</span> <span class="n">kg</span><span class="o">.</span>
@@ -578,7 +592,7 @@ this assignment.</strong></p>
 </div>
 </section>
 <section id="assignment-1-3-2">
-<h3>Assignment 1.3.2<a class="headerlink" href="#assignment-1-3-2" title="Link to this heading">#</a></h3>
+<h3>Assignment 1.3.2<a class="headerlink" href="#assignment-1-3-2" title="Link to this heading">¶</a></h3>
 <p><strong>Simple Math</strong></p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create a program that will ask the user for two distinct numbers (integers)</p></li>
@@ -601,7 +615,7 @@ this assignment.</strong></p>
 </section>
 </section>
 <section id="compound-assignment-operators">
-<h2>1.4 Compound Assignment Operators<a class="headerlink" href="#compound-assignment-operators" title="Link to this heading">#</a></h2>
+<h2>1.4 Compound Assignment Operators<a class="headerlink" href="#compound-assignment-operators" title="Link to this heading">¶</a></h2>
 <p>In Java, you can modify a variable by referencing it, performing an operation on it, and assigning the result back to the variable. Thus, you can reference a variable to change its own value. For example, if x equals 0 , the following statement modifies x.</br></p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Will this program run as written?  Why or why not?</span>
 
@@ -661,7 +675,7 @@ This is referred to as a <strong>concatenation operator</strong> where you can a
 </pre></div>
 </div>
 <section id="assignment-1-4-1">
-<h3>Assignment 1.4.1<a class="headerlink" href="#assignment-1-4-1" title="Link to this heading">#</a></h3>
+<h3>Assignment 1.4.1<a class="headerlink" href="#assignment-1-4-1" title="Link to this heading">¶</a></h3>
 <p><strong>Compound Operators</strong></p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CompoundOperators</span>
 <span class="p">{</span>
@@ -705,7 +719,7 @@ This is referred to as a <strong>concatenation operator</strong> where you can a
 <p align="center">---------------------------------------------------------------------------- </p>
 </section>
 <section id="assignment-1-4-2">
-<h3>Assignment 1.4.2<a class="headerlink" href="#assignment-1-4-2" title="Link to this heading">#</a></h3>
+<h3>Assignment 1.4.2<a class="headerlink" href="#assignment-1-4-2" title="Link to this heading">¶</a></h3>
 <p><strong>Average Test Score</strong>
 Directions: Write two programs that will do the following:</p>
 <p><strong>Average Test Score</strong></p>
@@ -748,7 +762,7 @@ Total Sales: $64.3
 </section>
 </section>
 <section id="casting-and-range-of-variables">
-<h2>1.5 Casting and Range of Variables<a class="headerlink" href="#casting-and-range-of-variables" title="Link to this heading">#</a></h2>
+<h2>1.5 Casting and Range of Variables<a class="headerlink" href="#casting-and-range-of-variables" title="Link to this heading">¶</a></h2>
 <p>There are some unique features to Java that help programmers create programs that are flexible in how they display data.  We learned earlier
 that we need to declare a variable by it’s type.  It can be an int or a double.  As you may remember, an int is any whole negative or positive number.
 A double is any number with a decimal.  1.0 is a whole number, but it has a decimal. So, Java considers 1.0 as a double.<br />
@@ -796,7 +810,7 @@ We can convert the double by declaring a new variable that changes the double to
 </p>
 </details>
 <section id="assignment-1-5-1">
-<h3>Assignment 1.5.1<a class="headerlink" href="#assignment-1-5-1" title="Link to this heading">#</a></h3>
+<h3>Assignment 1.5.1<a class="headerlink" href="#assignment-1-5-1" title="Link to this heading">¶</a></h3>
 <p>You will explore the PlanetTravel program called FivePlanetTravel. The program is set up to plan a five-planet tour!:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/*</span> 
  <span class="o">*</span> <span class="n">Activity</span> <span class="mf">1.1.5</span>
@@ -847,7 +861,7 @@ We can convert the double by declaring a new variable that changes the double to
 <p>Take a screenshot of your completed code and the output it produced.</p>
 </section>
 <section id="numbers-riddle-project">
-<h3>Numbers Riddle Project<a class="headerlink" href="#numbers-riddle-project" title="Link to this heading">#</a></h3>
+<h3>Numbers Riddle Project<a class="headerlink" href="#numbers-riddle-project" title="Link to this heading">¶</a></h3>
 <p>In this project, you will write a program that incorporates the Java™ concepts you have learned throughout this unit.</p>
 <p>Your program will include:</p>
 <ul class="contains-task-list simple">
@@ -1006,7 +1020,7 @@ Create variables and choose numbers that match the following six number types to
     </aside>
   </div>
 </div><script src="../_static/documentation_options.js?v=2709fde1"></script>
-    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/furo.js?v=32e29ea5"></script>
     </body>

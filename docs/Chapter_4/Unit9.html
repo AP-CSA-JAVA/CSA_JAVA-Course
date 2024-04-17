@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Unit 10" href="Unit10.html" /><link rel="prev" title="Unit 8 2D Array" href="../Chapter_3/Unit8.html" />
 
-    <!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
+    <!-- Generated with Sphinx 7.3.5 and Furo 2024.01.29 -->
         <title>Unit 9 - CSA JAVA Course</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
@@ -216,9 +216,9 @@
         </div>
         <article role="main">
           <section id="unit-9">
-<h1>Unit 9<a class="headerlink" href="#unit-9" title="Link to this heading">#</a></h1>
+<h1>Unit 9<a class="headerlink" href="#unit-9" title="Link to this heading">¶</a></h1>
 <section id="creating-superclasses-and-subclasses">
-<h2>9.1 Creating Superclasses and Subclasses<a class="headerlink" href="#creating-superclasses-and-subclasses" title="Link to this heading">#</a></h2>
+<h2>9.1 Creating Superclasses and Subclasses<a class="headerlink" href="#creating-superclasses-and-subclasses" title="Link to this heading">¶</a></h2>
 <p><strong>Goals</strong></p>
 <ul class="simple">
 <li><p>Create an inheritance relationship from a subclass to the superclass.</p></li>
@@ -461,7 +461,7 @@ In hierarchical inheritance, a single superclass is extended by multiple subclas
 </div>
 </section>
 <section id="writing-constructors-for-subclasses">
-<h2>9.2 Writing Constructors for Subclasses<a class="headerlink" href="#writing-constructors-for-subclasses" title="Link to this heading">#</a></h2>
+<h2>9.2 Writing Constructors for Subclasses<a class="headerlink" href="#writing-constructors-for-subclasses" title="Link to this heading">¶</a></h2>
 <p>When creating subclasses in Java, constructors are used to initialize the subclass’s specific attributes and also to ensure that the superclass’s state is properly initialized. To write constructors for subclasses, you can use the super() keyword to invoke the superclass’s constructor and provide any additional initialization specific to the subclass. Here’s an example that demonstrates how to write constructors for a subclass:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Animal</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
@@ -517,7 +517,7 @@ In hierarchical inheritance, a single superclass is extended by multiple subclas
 <p>This demonstrates how to write constructors for a subclass in Java, ensuring proper initialization of both superclass and subclass attributes.</p>
 </section>
 <section id="overriding-methods">
-<h2>9.3 Overriding Methods<a class="headerlink" href="#overriding-methods" title="Link to this heading">#</a></h2>
+<h2>9.3 Overriding Methods<a class="headerlink" href="#overriding-methods" title="Link to this heading">¶</a></h2>
 <p>In Java, method overriding allows a subclass to provide a different implementation for a method that is already defined in its superclass. This allows the subclass to modify or extend the behavior of the inherited method. To override a method, you need to define a method in the subclass with the same name, return type, and parameter list as the method in the superclass. Here’s an example that demonstrates method overriding in Java:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Animal</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">makeSound</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -566,7 +566,7 @@ In hierarchical inheritance, a single superclass is extended by multiple subclas
 <p>This demonstrates how to override methods in Java, allowing subclasses to provide their own implementation and modify the behavior of inherited methods.</p>
 </section>
 <section id="super-keyword">
-<h2>9.4 super Keyword<a class="headerlink" href="#super-keyword" title="Link to this heading">#</a></h2>
+<h2>9.4 super Keyword<a class="headerlink" href="#super-keyword" title="Link to this heading">¶</a></h2>
 <p>In Java, the super keyword is used to refer to the superclass, allowing you to access its members (fields and methods) from within a subclass. It is particularly useful when you want to distinguish between the superclass’s members and the subclass’s members that have the same name. The super keyword can be used to invoke the superclass’s constructor, access its instance variables or methods, and invoke its overridden methods. Here’s an example that demonstrates the usage of the super keyword in Java:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Animal</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
@@ -623,7 +623,7 @@ In hierarchical inheritance, a single superclass is extended by multiple subclas
 <p>This demonstrates how the super keyword can be used in Java to refer to the superclass, invoke its constructor or methods, and access its members from within a subclass.</p>
 </section>
 <section id="creating-references-using-inheritance-hierarchies">
-<h2>9.5 Creating References Using Inheritance Hierarchies<a class="headerlink" href="#creating-references-using-inheritance-hierarchies" title="Link to this heading">#</a></h2>
+<h2>9.5 Creating References Using Inheritance Hierarchies<a class="headerlink" href="#creating-references-using-inheritance-hierarchies" title="Link to this heading">¶</a></h2>
 <p>In Java, you can create references using inheritance hierarchies to refer to objects of both the superclass and its subclasses. This allows you to treat objects of different classes in the hierarchy as interchangeable, providing flexibility and polymorphic behavior. Here’s an example that demonstrates creating references using inheritance hierarchies in Java:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Animal</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
@@ -711,7 +711,7 @@ In hierarchical inheritance, a single superclass is extended by multiple subclas
 <p>This demonstrates how references using inheritance hierarchies in Java allow objects of different classes to be treated interchangeably, with the ability to access overridden methods and specific methods of the subclasses through type casting.</p>
 </section>
 <section id="polymorphism">
-<h2>9.6 Polymorphism<a class="headerlink" href="#polymorphism" title="Link to this heading">#</a></h2>
+<h2>9.6 Polymorphism<a class="headerlink" href="#polymorphism" title="Link to this heading">¶</a></h2>
 <p>Polymorphism in Java refers to the ability of objects of different classes in an inheritance hierarchy to be treated as objects of their common superclass. This allows for code reuse, flexibility, and the ability to invoke overridden methods based on the actual type of the object. Here are multiple examples that demonstrate polymorphism in Java:</p>
 <ul class="simple">
 <li><p>Polymorphic Method Invocation:</p></li>
@@ -835,7 +835,7 @@ In hierarchical inheritance, a single superclass is extended by multiple subclas
 <p>These examples illustrate different aspects of polymorphism in Java, including polymorphic method invocation, polymorphic assignments, and polymorphic parameter usage. Polymorphism allows for flexible and extensible code by leveraging the inheritance hierarchy and the ability to treat objects of different classes as objects of their common superclass.</p>
 </section>
 <section id="object-superclass">
-<h2>9.7 Object Superclass<a class="headerlink" href="#object-superclass" title="Link to this heading">#</a></h2>
+<h2>9.7 Object Superclass<a class="headerlink" href="#object-superclass" title="Link to this heading">¶</a></h2>
 <p>In Java, the Object class is the root superclass for all other classes. Every class in Java implicitly inherits from the Object class, either directly or through a chain of class inheritance. The Object class provides some common methods and functionality that are inherited by all classes. Here are several examples of the Object superclass in Java:</p>
 <p><code class="docutils literal notranslate"><span class="pre">toString()</span></code> Method:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Person</span><span class="w"> </span><span class="p">{</span>
@@ -1014,7 +1014,7 @@ In hierarchical inheritance, a single superclass is extended by multiple subclas
     </aside>
   </div>
 </div><script src="../_static/documentation_options.js?v=2709fde1"></script>
-    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/furo.js?v=32e29ea5"></script>
     </body>
