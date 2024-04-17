@@ -6,27 +6,27 @@ Java is an Object Oriented Program.  Within every Java program begins with the c
 
 ![first_Java](https://user-images.githubusercontent.com/12989939/162324090-a9292f5d-3c02-46d8-bb05-e69cb0f72845.PNG)
 
-Notice that with every ' { ' there is a corresponding ' } '.  In class, you may hear me refer to it as a curly brace.  A missing a curly brace is one of the most common errors among new programmers.  The name 'public' allows users to be able to see the specific parts of your program.  Notice also that the name of the class starts with a capital letter.  The main class with always start with a capital letter.
+Notice that with every  { ,  there is a corresponding  } .  You may hear me refer to it as a curly brace.  A missing a curly brace is one of the most common errors among new programmers.  The name 'public' allows users to be able to see the specific parts of your program.  Notice also that the name of the class starts with a **capital letter**.  The main class will always start with a capital letter.
 
-In Java there is a "main method" that is required for all java programs.  The code will always be the same.  It looks like"
+In Java there is a "main method" that is required for all java programs.  The code will always be the same.  It looks like:
 
 ```java
 public static void main(String args[])
 ```
 
-`public` is an access specifier.  As you may infer, public is public and everyone will have access to it.
+**`public`** is an access specifier.  As you may infer, public is public and everyone will have access to it.
 
-`static` is a keyword in java.  A `static` method belongs to the class and not to the object (We will learn more about this later!). A `static` method can **only** access static data. It is a method which belongs to the class and not to the instaniation of the object.  There are major differences between `static` nested class and `non-static` nested class. Non-static nested class is also called Inner Class.
+**`static`** is a keyword in java.  A `static` method belongs to the class and not to the object (We will learn more about this later!). A `static` method can **only** access static data. It is a method which belongs to the class and not to the instaniation of the object.  There are major differences between `static` nested class and `non-static` nested class. Non-static nested class is also called Inner Class.
 
 - Nested static class doesn’t need reference of Outer class, but Non-static nested class or Inner class requires Outer class reference.
 - Inner class(or non-static nested class) can access both static and non-static members of Outer class. A static class cannot access non-static members of the Outer class. It can access only static members of Outer class.
 - An instance of Inner class cannot be created without an instance of outer class and an Inner class can reference data and methods defined in Outer class in which it nests, so we don’t need to pass reference of an object to the constructor of the Inner class. For this reason Inner classes can make program simple and concise.
 
-`void` is also a keyword.  It is a 'return type'.  What does `void` return? Nothing!  It is used to specify that a method **does not** return anything. If the main method is not void, it will return an error.
+**`void`** is also a keyword.  It is a 'return type'.  What does `void` return? Nothing!  It is used to specify that a method **does not** return anything. If the main method is not void, it will return an error.
 
-`main` is the name of the Java main method.  It identifies the starting point of a Java program.  If we change the name while initiating the main method, it will return an error.
+**`main`** is the name of the Java main method.  It identifies the starting point of a Java program.  If we change the name while initiating the main method, it will return an error.
 
-`String[] args` It is an array of string type.  It stores Java command-line arguments and is an array of type `java.lang.String` class.  The name of the String array is `args`.  It is not fixed and the user can use any name in place of it (It is not recommended as some IDEs will require args in the main method.).
+**`String[] args`** It is an array of string type.  It stores Java command-line arguments and is an array of type `java.lang.String` class.  The name of the String array is `args`.  It is not fixed and the user can use any name in place of it (It is not recommended as some IDEs will require args in the main method.).
 
 
 Notice that within the main method there is a print statement.  Let's break down this print statement. 
