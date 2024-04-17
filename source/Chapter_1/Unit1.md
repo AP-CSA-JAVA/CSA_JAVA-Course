@@ -2,7 +2,7 @@
  
 ## 1.1 Why Programming Why Java
 
-Java is an Object Oriented Program.  Within every Java program begins with the creation of a class.  Consider a class as a blueprint for your program.  In this instance, we created a class called MyFirstClass.  Within the class there is a main method that is required to execute the program.  Below is a simple program that will print "Hello, World".
+Java is an Object Oriented Program.  Within every Java program begins with the creation of a class.  Consider a class as a blueprint for your program.  In this instance, we created a class called *MyFirstClass*.  Within the class there is a main method that is required to execute the program.  Below is a simple program that will print "Hello, World".
 
 ![first_Java](https://user-images.githubusercontent.com/12989939/162324090-a9292f5d-3c02-46d8-bb05-e69cb0f72845.PNG)
 
