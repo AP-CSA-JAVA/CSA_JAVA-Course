@@ -134,7 +134,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -209,7 +209,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -217,6 +217,27 @@
         <article role="main">
           <section id="resources">
 <h1>Resources<a class="headerlink" href="#resources" title="Link to this heading">¶</a></h1>
+<section id="replit-com">
+<h2>Replit.com<a class="headerlink" href="#replit-com" title="Link to this heading">¶</a></h2>
+<p>By default, Replit uses Main as the main class.  To change the Main class name to a class name of your choosing, create a new file within replit and call it <i>.repl</i>.  Within the file type the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">run</span><span class="o">=</span><span class="s2">&quot;sh main.sh&quot;</span>
+
+<span class="n">javac</span> <span class="n">NewClass</span><span class="o">.</span><span class="n">java</span>  <span class="c1"># whatever that file is java NewClass</span>
+</pre></div>
+</div>
+<p>Lastly, make sure that the Main class is label correctly!  In this instance it will be called <i>NewClass</i>.</p>
+<p><img alt="replit" src="https://user-images.githubusercontent.com/12989939/186237117-a3565f6b-bc38-4edd-be59-f787ed233668.PNG" /></p>
+<p>Another method that you may find useful within replit is that you can create different programs and have them execute on the Main.java page.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">ProgramOne</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="n">args</span><span class="p">);</span>
+<span class="w">    </span><span class="n">ProgramTwo</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="n">args</span><span class="p">);</span>
+<span class="w">    </span><span class="n">ProgramThree</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="n">args</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Example of this in use can be found <a class="reference external" href="https://replit.com/&#64;jonvirak/Array-Creation#Main.java">here</a>.  Use this format for Assignment 2 and all future programs where you are asked to create two different programs.</p>
 <p><strong>Void Method with inheritance</strong></p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Parent</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">run</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -336,6 +357,7 @@
 </pre></div>
 </div>
 </section>
+</section>
 
         </article>
       </div>
@@ -380,8 +402,27 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Resources</a><ul>
+<li><a class="reference internal" href="#replit-com">Replit.com</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
