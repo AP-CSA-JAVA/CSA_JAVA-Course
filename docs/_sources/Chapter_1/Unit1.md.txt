@@ -18,7 +18,7 @@ public static void main(String args[])
 
 **`static`** is a keyword in java.  A `static` method belongs to the class and not to the object (We will learn more about this later!). A `static` method can **only** access static data. It is a method which belongs to the class and not to the instaniation of the object.  There are differences between `static` nested class and `non-static` nested class.
 
-| Points | Static method | Non-static method |
+|   | Static method | Non-static method |
 | ----- | ----- | ----- |
 | Definition | A static method is a method that belongs to a class, but it does not belong to an instance of that class and this method can be called without the instance or object of that class. | Every method in Java defaults to a non-static method without a static keyword preceding it. non-static methods can access any static method and static variable also, without using the object of the class. |
 | Accessing members and methods | In the static method, the method can only access only static data members and static methods of another class or the same class but cannot access non-static methods and variables. | In the non-static method, the method can access static data members and static methods as well as non-static members and methods of another class or the same class. | 
