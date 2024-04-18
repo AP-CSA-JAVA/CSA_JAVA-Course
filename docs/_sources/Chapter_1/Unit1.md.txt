@@ -56,33 +56,6 @@ What observations can you make about the diagram?
 
 A powerful tool that you can use in OOP is the concept of `inheritance`.  `Inheritance` is the concept where a Java Class can inherit properties from another class.  You can think of this as a child inheritiing characteristics of a parent.  Java refers to this as **extending** a class.  The Class that is being extended or "inherited" is called a **superclass**.  The class that extends or "inherits" is referred to as a **subclass**.  We will explore this in more detail in Chapter 4.
 
-### Replit.com
-By default, Replit uses Main as the main class.  To change the Main class name to a class name of your choosing, create a new file within replit and call it <i>.repl</i>.  Within the file type the following:
-
-```
-run="sh main.sh"
-
-javac NewClass.java  # whatever that file is java NewClass
-```
-
-Lastly, make sure that the Main class is label correctly!  In this instance it will be called <i>NewClass</i>.
-
-![replit](https://user-images.githubusercontent.com/12989939/186237117-a3565f6b-bc38-4edd-be59-f787ed233668.PNG)
-
-
-Another method that you may find useful within replit is that you can create different programs and have them execute on the Main.java page.
-
-```java
-public class Main {
-  public static void main(String[] args) {
-    ProgramOne.main(args);
-    ProgramTwo.main(args);
-    ProgramThree.main(args);
-  }
-}
-```
-Example of this in use can be found [here](https://replit.com/@jonvirak/Array-Creation#Main.java).  Use this format for Assignment 2 and all future programs where you are asked to create two different programs.
-
 
 <p align="center">---------------------------------------------------------------------------- </p>
 
