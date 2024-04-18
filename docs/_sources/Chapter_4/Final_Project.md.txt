@@ -16,7 +16,7 @@ Your White Tower Project is to design and develop a Java computer program of you
  
 *A team is 2 or 3 people.  Each person must have a significant programming role within the group.
 
-**Brainstorming ideas, proposal selection, expected outcome for the project.
+**Executive Summary: project background, proposed solution, deliverables and goals, conclusion.
 
 
 ### Project schedule
