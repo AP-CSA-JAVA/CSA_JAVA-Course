@@ -16,11 +16,18 @@ public static void main(String args[])
 
 **`public`** is an access specifier.  As you may infer, public is public and everyone will have access to it.
 
-**`static`** is a keyword in java.  A `static` method belongs to the class and not to the object (We will learn more about this later!). A `static` method can **only** access static data. It is a method which belongs to the class and not to the instaniation of the object.  There are major differences between `static` nested class and `non-static` nested class. Non-static nested class is also called Inner Class.
+**`static`** is a keyword in java.  A `static` method belongs to the class and not to the object (We will learn more about this later!). A `static` method can **only** access static data. It is a method which belongs to the class and not to the instaniation of the object.  There are differences between `static` nested class and `non-static` nested class.
 
-- Nested static class doesn’t need reference of Outer class, but Non-static nested class or Inner class requires Outer class reference.
-- Inner class(or non-static nested class) can access both static and non-static members of Outer class. A static class cannot access non-static members of the Outer class. It can access only static members of Outer class.
-- An instance of Inner class cannot be created without an instance of outer class and an Inner class can reference data and methods defined in Outer class in which it nests, so we don’t need to pass reference of an object to the constructor of the Inner class. For this reason Inner classes can make program simple and concise.
+| Points | Static method | Non-static method |
+| ----- | ----- | ----- |
+| Definition | A static method is a method that belongs to a class, but it does not belong to an instance of that class and this method can be called without the instance or object of that class. | Every method in Java defaults to a non-static method without a static keyword preceding it. non-static methods can access any static method and static variable also, without using the object of the class. |
+| Accessing members and methods | In the static method, the method can only access only static data members and static methods of another class or the same class but cannot access non-static methods and variables. | In the non-static method, the method can access static data members and static methods as well as non-static members and methods of another class or the same class. | 
+| Binding process | The static method uses compile-time or early binding. | The non-static method uses runtime or dynamic binding. |
+| Overriding | The static method cannot be overridden because of early binding.	| The non-static method can be overridden because of runtime binding. |
+| Memory allocation| In the static method, less memory is used for execution because memory allocation happens only once because the static keyword fixed a particular memory for that method in ram. | In the non-static method, much memory is used for execution because here memory allocation happens when the method is invoked and the memory is allocated every time when the method is called. |
+
+
+
 
 **`void`** is also a keyword.  It is a 'return type'.  What does `void` return? Nothing!  It is used to specify that a method **does not** return anything. If the main method is not void, it will return an error.
 

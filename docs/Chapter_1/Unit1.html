@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Unit 2 - Using Objects" href="Unit2.html" /><link rel="prev" title="&lt;no title&gt;" href="../Resources/AP_Resources.html" />
 
-    <!-- Generated with Sphinx 7.3.5 and Furo 2024.01.29 -->
+    <!-- Generated with Sphinx 7.3.6 and Furo 2024.01.29 -->
         <title>Unit 1 - Primitive Types - CSA JAVA Course</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
@@ -227,12 +227,39 @@
 </pre></div>
 </div>
 <p><strong><code class="docutils literal notranslate"><span class="pre">public</span></code></strong> is an access specifier.  As you may infer, public is public and everyone will have access to it.</p>
-<p><strong><code class="docutils literal notranslate"><span class="pre">static</span></code></strong> is a keyword in java.  A <code class="docutils literal notranslate"><span class="pre">static</span></code> method belongs to the class and not to the object (We will learn more about this later!). A <code class="docutils literal notranslate"><span class="pre">static</span></code> method can <strong>only</strong> access static data. It is a method which belongs to the class and not to the instaniation of the object.  There are major differences between <code class="docutils literal notranslate"><span class="pre">static</span></code> nested class and <code class="docutils literal notranslate"><span class="pre">non-static</span></code> nested class. Non-static nested class is also called Inner Class.</p>
-<ul class="simple">
-<li><p>Nested static class doesn’t need reference of Outer class, but Non-static nested class or Inner class requires Outer class reference.</p></li>
-<li><p>Inner class(or non-static nested class) can access both static and non-static members of Outer class. A static class cannot access non-static members of the Outer class. It can access only static members of Outer class.</p></li>
-<li><p>An instance of Inner class cannot be created without an instance of outer class and an Inner class can reference data and methods defined in Outer class in which it nests, so we don’t need to pass reference of an object to the constructor of the Inner class. For this reason Inner classes can make program simple and concise.</p></li>
-</ul>
+<p><strong><code class="docutils literal notranslate"><span class="pre">static</span></code></strong> is a keyword in java.  A <code class="docutils literal notranslate"><span class="pre">static</span></code> method belongs to the class and not to the object (We will learn more about this later!). A <code class="docutils literal notranslate"><span class="pre">static</span></code> method can <strong>only</strong> access static data. It is a method which belongs to the class and not to the instaniation of the object.  There are differences between <code class="docutils literal notranslate"><span class="pre">static</span></code> nested class and <code class="docutils literal notranslate"><span class="pre">non-static</span></code> nested class.</p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Points</p></th>
+<th class="head"><p>Static method</p></th>
+<th class="head"><p>Non-static method</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Definition</p></td>
+<td><p>A static method is a method that belongs to a class, but it does not belong to an instance of that class and this method can be called without the instance or object of that class.</p></td>
+<td><p>Every method in Java defaults to a non-static method without a static keyword preceding it. non-static methods can access any static method and static variable also, without using the object of the class.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Accessing members and methods</p></td>
+<td><p>In the static method, the method can only access only static data members and static methods of another class or the same class but cannot access non-static methods and variables.</p></td>
+<td><p>In the non-static method, the method can access static data members and static methods as well as non-static members and methods of another class or the same class.</p></td>
+</tr>
+<tr class="row-even"><td><p>Binding process</p></td>
+<td><p>The static method uses compile-time or early binding.</p></td>
+<td><p>The non-static method uses runtime or dynamic binding.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Overriding</p></td>
+<td><p>The static method cannot be overridden because of early binding.</p></td>
+<td><p>The non-static method can be overridden because of runtime binding.</p></td>
+</tr>
+<tr class="row-even"><td><p>Memory allocation</p></td>
+<td><p>In the static method, less memory is used for execution because memory allocation happens only once because the static keyword fixed a particular memory for that method in ram.</p></td>
+<td><p>In the non-static method, much memory is used for execution because here memory allocation happens when the method is invoked and the memory is allocated every time when the method is called.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong><code class="docutils literal notranslate"><span class="pre">void</span></code></strong> is also a keyword.  It is a ‘return type’.  What does <code class="docutils literal notranslate"><span class="pre">void</span></code> return? Nothing!  It is used to specify that a method <strong>does not</strong> return anything. If the main method is not void, it will return an error.</p>
 <p><strong><code class="docutils literal notranslate"><span class="pre">main</span></code></strong> is the name of the Java main method.  It identifies the starting point of a Java program.  If we change the name while initiating the main method, it will return an error.</p>
 <p><strong><code class="docutils literal notranslate"><span class="pre">String[]</span> <span class="pre">args</span></code></strong> It is an array of string type.  It stores Java command-line arguments and is an array of type <code class="docutils literal notranslate"><span class="pre">java.lang.String</span></code> class.  The name of the String array is <code class="docutils literal notranslate"><span class="pre">args</span></code>.  It is not fixed and the user can use any name in place of it (It is not recommended as some IDEs will require args in the main method.).</p>
