@@ -3,7 +3,7 @@
 Your White Tower Project is to design and develop a Java computer program of your own/ group choosing that addresses a need at your school, club, or community.   Please note that you have a limited amount of time to complete this project. 
 
 ### RULES FOR THE PROJECT:
-1) You can work on the project by yourself or have a team* of 2 or 3 people.
+1) You can work on the project by yourself or have a team*.
 2) Written proposal** that explains the need for you to write the program.
 3) The project must be in java.
 4) The project must be approved prior to you/ your team developing your program.
@@ -14,9 +14,9 @@ Your White Tower Project is to design and develop a Java computer program of you
 9) The program must work and be relatively bug-free in order to get full credit.
 
  
-*each person must have a significant programming role within the group
+*A team is 2 or 3 people.  Each person must have a significant programming role within the group.
 
-**Brainstorming ideas, proposal selection, expected outcome for the project
+**Brainstorming ideas, proposal selection, expected outcome for the project.
 
 
 ### Project schedule
