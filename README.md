@@ -229,24 +229,20 @@ For this course we will be using various Integrated Development Environment (IDE
 ---------------------------------------------------------------------------------------
 
 
-  | Grading | Percentage |
-  | ------- | ---------- |
-  | Test/ Quizzes | 40% |
-  | Projects | 30% |
-  | Notes/ Portfolio (2024/25 School Year) | 15% |
-  | IDP (Second Semester) / Final Project / Semester Final (MCQ/ FRQ) | 10% |
-  | Assignments | 5% |
+  | Grading | Percentage | School Year |
+  | ------- | :----------: | :------: |
+  | Projects (IDP, Final Project) | 60% | 2024-25 |
+  | Test/ Quizzes | 30% | 2024-25 |
+  | Classwork/ Portfolio | 15% | 2024-25 |
+  | Notes | 5% | 2024-25 |
 
-  
-  
+
 ### Make-up & Late work policy
 
-- [ ] Students are responsible for makeup work when absent. Per district policy, each student will have **one school day** for each day that they are absent.
-- [ ] *To make up a quiz or a test, it is the student’s responsibility to contact the teacher to set an agreed upon date & time.*  Students must contact the teacher within two school days upon their return to make-up the missing quiz or test.  Failure to do so may result in a zero.
+- [ ] Students are responsible for makeup work when absent. Per district policy, each student will have opportunity to make up assignments when they are absent.
+- [ ] *To make up a quiz or a test, it is the student’s responsibility to contact the teacher to set an agreed upon date & time.*  <u>Students must contact the teacher</u> upon their return to make-up a missing quiz or test.
 - [ ] Handouts will be placed in a makeup folder with the students name and it is the student’s responsibility to check this folder when absent before consulting the instructor.
-- [ ] Due dates for every assignment are posted in Canvas. Unless otherwise stated, assignments are due on those days.
-- [ ] **This will not be used after the 2023-2024 school year*** I recognize that there are issues beyond your control.  In this instance, you may use your allotted two flex-days in a semester.  These days allow you to submit a late assignment (not projects or presentations) up to two school days beyond the due date, without penalty. You can use these days for any assignment and for any reason. You will need to fill out a **google form** and upload the late assignment.
-- [ ] **This will not be used after the 2023-2024 school year*** Once you’ve exhausted your flex days, then point deductions will occur for any assignment submitted after the deadline. Each day that an assignment is late the assignment or project will be reduced by 5% up to 59%. 
+
 
 ---------------------------------------------------------------------------------------
 
