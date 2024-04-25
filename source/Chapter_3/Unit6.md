@@ -567,5 +567,5 @@ In Unit 7, you will learn another method of storing lists.  Take a look at the d
 | Type-Safety | We cannot use generics along with array because it is not a convertible type of array. | ArrayList allows us to store only generic/ type, that is why it is type-safe. |
 | Length | Array provides a length variable which denotes the length of an array. | ArrayList provides the size() method to determine the size of ArrayList. |
 | Adding Elements | We can add elements in an array by using the assignment operator. | Java provides the add() method to determine the size of ArrayList.
-| Single/ Multi-Dimensional | Array can be multi-dimensional | ArrayList is always single-dimensional. |
+| One/ Multi-Dimensional | Array can be multi-dimensional | ArrayList is always one-dimensional. |
 
