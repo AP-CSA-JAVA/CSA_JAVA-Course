@@ -2,21 +2,6 @@
 
 ## 7.1 Introduction to ArrayList
 
-In Unit 7, you will learn another method of storing lists.  Take a look at the differences below:
-
-|   | Arrays | ArrayList |
-| ----- | ------ | ------ |
-| Definition | An array is a dynamically created object.  It serves as a container that holds the constant number of values of the **same** type.  It has contiguous memory location. | The ArrayList is a class of Java Collections framework.  It contains popular classes like Vector, HashTable, and HashMap. |
-| Static/ Dynamic | Array is static in size | ArrayList is dynamic in size |
-| Resizable | An array is a fixed-length data structure | ArrayList is a variable-length data structure.  It can be resized when needed. |
-| Initialization | It is mandatory to provide the size of an array while initializing it directly or indirectly | We can create an instance of ArrayList without specifying its size.  Java creates ArrayList of Default size |
-| Performance | It performs dast in comparision to ArrayList because of fixed size |  ArrayList is internally backed by the array in Java.  The resize operation in ArrayList slows down the performance. |
-| Primitive/ Generic type | An array can store both objects and primitives type. |  We cannot store primitive type in ArrayList.  It automatically converts primitive type to object. |
-| Type-Safety | We cannot use generics along with array because it is not a convertible type of array. | ArrayList allows us to store only generic/ type, that is why it is type-safe. |
-| Length | Array provides a length variable which denotes the length of an array. | ArrayList provides the size() method to determine the size of ArrayList. |
-| Adding Elements | We can add elements in an array by using the assignment operator. | Java provides the add() method to determine the size of ArrayList.
-| Single/ Multi-Dimensional | Array can be multi-dimensional | ArrayList is always single-dimensional. |
-
 In Java, an ArrayList is a class that provides an implementation of a dynamic array-like data structure. It is part of the java.util package and is based on the concept of an array, but with additional functionality and flexibility.
 
 Here are some key differences between ArrayLists and arrays:
