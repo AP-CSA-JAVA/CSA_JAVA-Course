@@ -2,7 +2,7 @@
 
 |  | CSA Topics |   |
 | :---: | :----: | :---: |
-|    | 1.1 Why Programming?  Why Java? | [x] |
+|    | 1.1 Why Programming?  Why Java? | - [] |
 |    | 1.2 Variables and Data Types? | [ ] |
 |    | 1.3 Expressions and Assignment Statements | [ ] |
 |    | 1.4 Compound Assignment Operators | [ ] |
