@@ -1,66 +1,66 @@
 # Resources
 
-|  | CSA Topics |   |
-| :---: | :---- | :---: |
-|  Week 1  | 1.1 Why Programming?  Why Java? | [ ] |
-|  Week 1  | 1.2 Variables and Data Types? | [ ] |
-|  Week 1  | 1.3 Expressions and Assignment Statements | [ ] |
-|  Week 1  | 1.4 Compound Assignment Operators | [ ] |
-|  Week 2  | 1.5 Casting and Ranges of Variables | [ ] |
-|  Week 2  | 3.1 Boolean Expressions | [ ] |
-|  Week 2  | 3.2 if Statements and Control Flow | [ ] |
-|  Week 3  | 3.3 if-else Statements | [ ] |
-|  Week 3  | 3.4 else if Statements | [ ] |
-|  Week 4  | 3.5 Compound Boolean Expressions | [ ] |
-|  Week 4  | 3.6 Equivalent Boolean Expressions | [ ] |
-|  Week 5  | 3.7 Comparing Objects | [ ] |
-|  Week 5  | 2.1 Objects: Instances of Classes | [ ] |
-|  Week 6  | 2.2 Creating and Storing Objects (Instantiation) | [ ] |
-|  Week 6  | 2.3 Calling a Void Method | [ ] |
-|  Week 7  | 2.4 Calling a Void Method with Parameters | [ ] |
-|  Week 7  | 2.5 Calling a Non-Void Method | [ ] |
-|  Week 8  | 2.6 String Objects: Concatenation, Literals, and More | [ ] |
-|  Week 8  | 2.7 String Methods | [ ] |
-|  Week 9  | 2.8 Wrapper: Classes Integer and Double | [ ] |
-|  Week 9  | 2.9 Using the Math Class | [ ] |
-|  Week 10  | 4.1 while Loops | [ ] |
-|  Week 10  | 4.2 for Loops | [ ] |
-|  Week 11  | 4.3 Developing Algorithms Using Strings | [ ] |
-|  Week 11  | 4.4 Nested Iteration | [ ] |
-|  Week 12  | 4.5 Informal Code Analysis | [ ] |
-|  Week 12  | 5.1 Anatomy of a Class | [ ] |
-|  Week 13  | 5.2 Constructors | [ ] |
-|  Week 13  | 5.3 Documentation with Comments | [ ] |
-|  Week 14  | 5.4 Accessor Methods | [ ] |
-|  Week 14  | 5.5 Mutator Methods | [ ] |
-|  Week 15  | 5.6 Writing Methods | [ ] |
-|  Week 15  | 5.7 Static Variables and Methods | [ ] |
-|  Week 16  | 5.8 Scope and Access | [ ] |
-|  Week 16  | 5.9 this Keyword | [ ] |
-|  Week 16  | 5.10 Ethical and Social Implications of Computing Systems | [ ] |
-|  Week 17  | 6.1 Array Creation and Access | [ ] |
-|  Week 17  | 6.2 Traversing Arrays | [ ] |
-|    | ----------------------- **Semester 1 Ends** ----------------------- | |    |
-|  Week 19  | 6.3 Enhanced for Loop for Arrays | [ ] |
-|  Week 19  | 6.4 Developing Algorithms Using Arrays | [ ] |
-|  Week 20  | 7.1 Introduction to ArrayList | [ ] |
-|  Week 20  | 7.2 ArrayList Methods | [ ] |
-|  Week 21  | 7.3 Traversing ArrayLists | [ ] |
-|  Week 21  | 7.4 Developing Algorithms Using ArrayLists | [ ] |
-|  Week 22  | 7.5 Searching | [ ] |
-|  Week 22  | 7.6 Sorting | [ ] |
-|  Week 23  | 7.7 Ethical Issues Around Data Collection (no quiz) | [ ] |
-|  Week 23  | 8.1 2D Arrays | [ ] |
-|  Week 24  | 8.2 Traversing 2D Arrays | [ ] |
-|  Week 24  | 9.1 Creating Superclasses and Subclasses (no quiz) | [ ] |
-|  Week 25  | 9.2 Writing Constructors for Subclasses | [ ] |
-|  Week 25  | 9.3 Overriding Methods | [ ] |
-|  Week 26  | 9.4 super Keyword | [ ] |
-|  Week 26  | 9.5 Creating References Using Inheritance Hierarchies | [ ] |
-|  Week 27  | 9.6 Polymorphism | [ ] |
-|  Week 27  | 9.7 Object Superclass | [ ] |
-|  Week 28  | 10.1 Recursion | [ ] |
-|  Week 28  | 10.2 Recursive Searching and Sorting | [ ] |
+|  | CSA Topics | MCQ | FRQ | Project |
+| :---: | :---- | :---: | :---: | :----: |
+|  Week 1  | 1.1 Why Programming?  Why Java? | MCQ |   |
+|  Week 1  | 1.2 Variables and Data Types? |   |   |
+|  Week 1  | 1.3 Expressions and Assignment Statements |   |   |
+|  Week 1  | 1.4 Compound Assignment Operators |   |   |
+|  Week 2  | 1.5 Casting and Ranges of Variables |   |   |
+|  Week 2  | 3.1 Boolean Expressions |   |   |
+|  Week 2  | 3.2 if Statements and Control Flow |   |   |
+|  Week 3  | 3.3 if-else Statements |    |   |
+|  Week 3  | 3.4 else if Statements |    |   |
+|  Week 4  | 3.5 Compound Boolean Expressions |    |   |
+|  Week 4  | 3.6 Equivalent Boolean Expressions |    |   |
+|  Week 5  | 3.7 Comparing Objects |    |   |
+|  Week 5  | 2.1 Objects: Instances of Classes |    |   |
+|  Week 6  | 2.2 Creating and Storing Objects (Instantiation) |    |   |
+|  Week 6  | 2.3 Calling a Void Method |    |   |
+|  Week 7  | 2.4 Calling a Void Method with Parameters |    |   |
+|  Week 7  | 2.5 Calling a Non-Void Method |    |   |
+|  Week 8  | 2.6 String Objects: Concatenation, Literals, and More |    |   |
+|  Week 8  | 2.7 String Methods |    |   |
+|  Week 9  | 2.8 Wrapper: Classes Integer and Double |   |   |
+|  Week 9  | 2.9 Using the Math Class |   |   |
+|  Week 10  | 4.1 while Loops |   |   |
+|  Week 10  | 4.2 for Loops |    |   |
+|  Week 11  | 4.3 Developing Algorithms Using Strings |    |   |
+|  Week 11  | 4.4 Nested Iteration |    |   |
+|  Week 12  | 4.5 Informal Code Analysis |    |   |
+|  Week 12  | 5.1 Anatomy of a Class |    |   |
+|  Week 13  | 5.2 Constructors |    |   |
+|  Week 13  | 5.3 Documentation with Comments |    |   |
+|  Week 14  | 5.4 Accessor Methods |    |   |
+|  Week 14  | 5.5 Mutator Methods |    |   |
+|  Week 15  | 5.6 Writing Methods |    |   |
+|  Week 15  | 5.7 Static Variables and Methods |   |   |
+|  Week 16  | 5.8 Scope and Access |    |   |
+|  Week 16  | 5.9 this Keyword |    |   |
+|  Week 16  | 5.10 Ethical and Social Implications of Computing Systems |    |   |
+|  Week 17  | 6.1 Array Creation and Access |   |   |
+|  Week 17  | 6.2 Traversing Arrays |    |   |
+|    | ----------------------- **Semester 1 Ends** ----------------------- |   |   |
+|  Week 19  | 6.3 Enhanced for Loop for Arrays |   |   |
+|  Week 19  | 6.4 Developing Algorithms Using Arrays |    |   |
+|  Week 20  | 7.1 Introduction to ArrayList |    |   |
+|  Week 20  | 7.2 ArrayList Methods |    |   |
+|  Week 21  | 7.3 Traversing ArrayLists |   |   |
+|  Week 21  | 7.4 Developing Algorithms Using ArrayLists |    |   |
+|  Week 22  | 7.5 Searching |    |   |
+|  Week 22  | 7.6 Sorting |    |   |
+|  Week 23  | 7.7 Ethical Issues Around Data Collection (no quiz) |    |   |
+|  Week 23  | 8.1 2D Arrays |    |   |
+|  Week 24  | 8.2 Traversing 2D Arrays |    |   |
+|  Week 24  | 9.1 Creating Superclasses and Subclasses (no quiz) |    |   |
+|  Week 25  | 9.2 Writing Constructors for Subclasses |    |   |
+|  Week 25  | 9.3 Overriding Methods |   |   |
+|  Week 26  | 9.4 super Keyword |    |   |
+|  Week 26  | 9.5 Creating References Using Inheritance Hierarchies |   |   |
+|  Week 27  | 9.6 Polymorphism |   |   |
+|  Week 27  | 9.7 Object Superclass |   |   |
+|  Week 28  | 10.1 Recursion |    |   |
+|  Week 28  | 10.2 Recursive Searching and Sorting |   |   |
 
 
 
