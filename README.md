@@ -542,7 +542,7 @@ The course content is organized into ten commonly taught units:</br>
  | assign	 | Set a variable to a value | 
  | attribute	 | A variable property of an object (aka field) | 
  | **autoboxing**	 | A feature of Java that converts primitive types to their class counterpart | 
- | base 2 logarithm	 | A mathematical operation that returns what power of 2 a number is | 
+ | base 2 algorithm	 | A mathematical operation that returns what power of 2 a number is | 
  | base case	 | A condition that triggers a recursive process to end | 
  | base class	 | A class that another class inherits from (aka superclass) | 
  | behavior	 | An ability of an object (aka method) | 
