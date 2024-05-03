@@ -292,98 +292,13 @@ There are various forms of taking notes, and which one you choose depends on bot
 | --- | --------- | --- |
 | Lists	| A sequential listing of ideas as they are presented. Lists may be short phrases or complete paragraphs describing ideas in more detail.	| This method is what most students use as a fallback if they haven’t learned other methods. This method typically requires a lot of writing, and you may find that you are not keeping up with the professor. It is not easy for students to prioritize ideas in this method. |
 | Outlines	| The outline method places most important ideas along the left margin, which are numbered with roman numerals. Supporting ideas to these main concepts are indented and are noted with capital letters. Under each of these ideas, further detail can be added, designated with an Arabic number, a lowercase letter, and so forth.	| A good method to use when material presented by the instructor is well organized. Easy to use when taking notes on your computer. |
-| Concept Maps	| When designing a concept map, place a central idea in the centre of the page and then add lines and new circles in the page for new ideas. Use arrows and lines to connect the various ideas.	Great method to show relationships among ideas. | Also good if the instructor tends to hop from one idea to another and back. |
+| Concept Maps	| When designing a concept map, place a central idea in the center of the page and then add lines and new circles in the page for new ideas. Use arrows and lines to connect the various ideas.	Great method to show relationships among ideas. | Also good if the instructor tends to hop from one idea to another and back. |
 | Cornell Method	| The Cornell method uses a two-column approach. The left column takes up no more than a third of the page and is often referred to as the “cue” or “recall” column. The right column (about two-thirds of the page) is used for taking notes using any of the methods described above or a combination of them. After class or completing the reading, review your notes and write the key ideas and concepts or questions in the left column. You may also include a summary box at the bottom of the page, in which to write a summary of the class or reading in your own words.	| The Cornell method can include any of the methods above and provides a useful format for calling out key concepts, prioritizing ideas, and organizing review work. Most universities recommend using some form of the Cornell method. |
 
- 
-#### The List Method
 
-**Example:** The List Method of Note-taking
-
-Topic
-
-Date
-
-Time
-
-Instructor
+---------------------------------------------------------------------------------------------------------------------------
 
 
-The learning cycle is an approach to gathering and retaining info that can help students be successful in school. The cycle consists of 4 steps which should all be applied. They are preparing, which sets the foundation for learning, absorbing, which exposes us to new knowledge, capturing, which sets the information into our knowledge base and finally reviewing and applying which lets us set the know. into our memory and use it.
-
-Preparing for learning can involve mental preparation, physical prep, and oper. prep. Mental prep includes setting learning goals for self based on what we know the class will cover.  Also it is very important to do any assignments for the class to be able to learn w/ confidence and…. ______________
-
-Physical Prep means having enough rest and eating well. Its hard to study when you are hungry and you won’t listen well in class if you doze off.
-
-Operation Prep means bringing all supplies to class, or having them at hand when studying. This includes pens, paper, computer, textbook, etc. This also means getting to school on time and getting a good seat (near the front).
-
-Absorbing new knowledge is a combination of listening and reading. These are two of the most important learning skills you can have.
-
-The list method is usually not the best choice because it is focused exclusively on capturing as much of what the instructor says as possible, not on processing the information. Most students who have not learned effective study skills use this method, because it’s easy to think that this is what note-taking is all about. Even if you are skilled in some form of shorthand, you should probably also learn one of the other methods described here, because they are all better at helping you process and remember the material. You may want to take notes in class using the list method, but transcribe your notes to an outline or concept map method after class as a part of your review process. It is always important to review your notes as soon as possible after class and write a summary of the class in your own words.
-
- 
-#### The Outline Method
-
-**Example:** The Outline Method of Note-taking
-
-Topic
-
-Date
-
-Time
-
-Instructor
-
-
-
-Learning is a cycle made up of 4 steps:
-  1.	Preparing: Setting the foundation for learning.
-  2.	Absorbing: (Data input) Exposure to new knowledge.
-  3.	Capturing: Taking ownership of the knowledge.
-  4.	Review & Apply: Putting new knowledge to work.
-
---------------------------------------------------------------------------------------------
-
-- Preparing
-   - Mental Prep. 
-       - Do assignments – New knowledge is built on prior knowledge. 
-           - assignments from prior classes.
-           - Readings! (May not have been assigned in class – see Syllabus!)
-       - Review Syllabus 
-           - Know what instructor expects to cover
-           - Know what assignments you need to do
-           - Set your own objective
-   - Physical Prep 
-       - Get right about of rest. Don’t zzz in class.
-       - Eat right. Hard to focus when you are hungry.
-       - Arrive on time.
-   - Practical Prep (Organizational Prep): 
-       - Bring right supplies – (Notebooks, Texts, Pens, etc.)
-       - Arrive on time 
-           - Get organized and ready to listen
-           - Don’t unterupt the focus of others
-           - Get a good seat
-       - Sit in the front of the class.
-
-
-The advantage of the outline method is that it allows you to prioritize the material. Key ideas are written to the left of the page, subordinate ideas are then indented, and details of the subordinate ideas can be indented further. To further organize your ideas, you can use the typical outlining numbering scheme (starting with roman numerals for key ideas, moving to capital letters on the first subordinate level, Arabic numbers for the next level, and lowercase letters following.) At first you may have trouble identifying when the instructor moves from one idea to another. This takes practice and experience with each instructor, so don’t give up! In the early stages you should use your syllabus to determine what key ideas the instructor plans to present. Your reading assignments before class can also give you guidance in identifying the key ideas.
-
-If you’re using your laptop for taking notes, a basic word processing application can be very effective. Format your document by creating an outline format using bullets/ dashes. Either increase or decrease your indentation to indicate the level of importance you want to give each item.
-
-After class be sure to review your notes and then summarize the class in one or two short paragraphs using your own words. This summary will significantly affect your recall and will help you prepare for the next class.
- 
-#### The Concept Map Method
-
-**Example:** The Concept Map Method of Note-taking
- 
---- INSERT IMAGE HERE ---
-
-This is a very graphic method of note-taking that is especially good at capturing the relationships among ideas. Concept maps harness your visual sense to understand complex material “at a glance.” They also give you the flexibility to move from one idea to another and back easily (so they are helpful if your instructor moves freely through the material).
-
-To develop a concept map, start by using your syllabus to rank the ideas you will listen to by level of detail (from high-level or abstract ideas to detailed facts). Select an overriding idea (high level or abstract) from the instructor’s lecture and place it in a circle in the middle of the page. Then create branches off that circle to record the more detailed information, creating additional limbs as you need them. Arrange the branches with others that interrelate closely. When a new high-level idea is presented, create a new circle with its own branches. Link together circles or concepts that are related. Use arrows and symbols to capture the relationship between the ideas. For example, an arrow may be used to illustrate cause or effect, a double-pointed arrow to illustrate dependence, or a dotted arrow to illustrate impact or effect.
-
-As with all note-taking methods, you should summarize the chart in one or two paragraphs of your own words after class.
- 
 #### The Cornell Method
 
 **Example:** The Cornell Method of Note-taking
@@ -438,16 +353,11 @@ Regardless of what note-taking method you choose, there are some note-taking hab
 
 13.	**Use notes when preparing for a test or doing an assignment:** Your notes usually have a summary of the most important points and are useful for making sure you incorporate important concepts in your assignments and for focusing on the main concepts when studying for tests and exams.
 
-
-**Exercise:** Journal Entry
-
-Choose one of your classes where you normally take notes. Make a conscious effort to use the Cornell method with either the outline or concept map method for taking your notes. Follow as many steps listed previously as possible. Now compare these notes with those you took in the previous class. Are your new notes more useful? What did you like about taking notes this way? What are some of the things you need to work on improving? (Remember this will get much easier with more practice.) Write your thoughts down.
-
 **What If You Miss Class?**
-Clearly the best way to learn class material is to be at the class and to take your own notes. In university, regular attendance is expected. But life happens. On occasion, you may have to miss a class or lecture. When this happens, here are some strategies you can use to make up for it:
-- Check with the instructor to see if there is another section of the class you can attend. Never ask the instructor “Did I miss anything important?” (Think about what that’s saying and you’ll see it’s rather insulting.)
-- If the instructor posts his or her lectures as a podcast, listen to the lecture online and take notes. If the instructor uses PowerPoint slides, request a copy (or download them if posted) and review them carefully, jotting down your own notes and questions. Review your notes with a classmate who did attend.
-- You may want to borrow class notes from a classmate. If you do, don’t just copy them and insert them in your notebook. They will not be very helpful. When you borrow notes from a classmate, you should photocopy them and then review them carefully and mark your copy with your own notes and questions. Use your textbook to try to fill in the gaps. Finally, schedule a study session with the person who gave you the notes to review the material and confirm your understanding.
+Clearly the best way to learn class material is to be at the class and to take your own notes. Regular attendance is expected, but life happens. On occasion, you may miss a class or lecture. When this happens, here are some strategies you can use to make up for it:
+- Never ask: “Did I miss anything important?” (Think about what that’s saying and you’ll see it’s rather insulting.)
+- If the instructor posts his or her lectures online... take notes. If the instructor uses PowerPoint slides, request a copy (or download them if posted) and review them carefully, jotting down your own notes and questions. Review your notes with a classmate who did attend.
+- You may want to borrow class notes from a classmate. If you do, don’t just copy them and insert them in your notebook. They will not be very helpful. When you borrow notes from a classmate, you should photocopy them and then review them carefully and mark your copy with your own notes and questions. Use other provided resources to try and fill in the gaps. Finally, schedule a study session with the person who gave you the notes to review the material and confirm your understanding.
 - If none of these options is available for you, use the course syllabus to determine what was covered in the class, then write a short paper (two pages or so) on the material using the class readings and reliable online sources. See your instructor during office hours to review your key findings and to answer any questions you still may have.
 
 #### Group Notes: A Collaborative Approach
