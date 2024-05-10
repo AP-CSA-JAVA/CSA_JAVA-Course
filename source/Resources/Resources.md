@@ -8,10 +8,10 @@
 |  Week 1  | 1.4 Compound Assignment Operators | MCQ  |   |
 |  Week 2  | 1.5 Casting and Ranges of Variables | MCQ  |   |
 |     | Unit Exam | MCQ |    |   Yes  |
-|  Week 2  | 3.1 Boolean Expressions |  MCQ |   |
 |  Week 2  | 3.2 if Statements and Control Flow | MCQ  |   |
-|  Week 3  | 3.3 if-else Statements |  MCQ  |   |
-|  Week 3  | 3.4 else if Statements |  MCQ  |   |
+|  Week 2  | 3.3 if-else Statements |  MCQ  |   |
+|  Week 2  | 3.4 else if Statements |  MCQ  |   |
+|  Week 2  | 3.1 Boolean Expressions |  MCQ |   |
 |  Week 4  | 3.5 Compound Boolean Expressions |  MCQ  | FRQ  |
 |  Week 4  | 3.6 Equivalent Boolean Expressions |  MCQ  |   |
 |  Week 5  | 3.7 Comparing Objects |  MCQ  | FRQ  |
