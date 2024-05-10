@@ -56,7 +56,7 @@
 |    | ----------------------- **Semester 1 Ends** ----------------------- |   |   |
 |  Week 19  | 6.3 Enhanced for Loop for Arrays | MCQ  | FRQ  |
 |  Week 19  | 6.4 Developing Algorithms Using Arrays |  MCQ  | FRQ |
-|     | Unit Exam | MCQ | FRQ  |   Yes  |
+|     | Unit Exam | MCQ | FRQ  |     |
 |  Week 20  | 7.1 Introduction to ArrayList | MCQ   |   |
 |  Week 20  | 7.2 ArrayList Methods |  MCQ  |   |
 |  Week 21  | 7.3 Traversing ArrayLists | MCQ  |   |
