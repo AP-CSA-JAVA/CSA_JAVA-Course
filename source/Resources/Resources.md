@@ -72,7 +72,7 @@
 |  Week 22  | 10.1 Recursion |  MCQ  | FRQ  |
 |  Week 22  | 10.2 Recursive Searching and Sorting |  MCQ |   |
 |  Week 23  | White Tower Final Project |   |   |  Yes |
-|     | Unit Exam | MCQ | FRQ  |     |
+|   **TBD** | Unit Exam | MCQ | FRQ  |     |
 |     | Practice Exam 2014 | MCQ | FRQ |
 |     | Practice Exam 2015 | MCQ | FRQ |
 |     | Practice Exam 2020 | MCQ | FRQ |
