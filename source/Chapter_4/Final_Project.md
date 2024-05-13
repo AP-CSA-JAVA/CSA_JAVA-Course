@@ -22,7 +22,7 @@ Your White Tower Project is to design and develop a Java computer program of you
 ### Project schedule
 | Dates | Activity | Points |
 | :--- | :--- | :---: |
-| TBD | Create and submit a digital project proposal that includes your brainstorming notes: | 5 |
+| 5/17 | Create and submit a digital project proposal that includes your brainstorming notes: | 5 |
 |    |
 |  |Your Student Developed program must included: |   |
 |  | ***variables (appropriately named)*** | 5 |
@@ -35,7 +35,7 @@ Your White Tower Project is to design and develop a Java computer program of you
 |  | ***toString Method*** | 5 |
 |  | ***inheritance*** | 5 |
 |    |
-| TBD | **Deliverables for your White Tower Project:** |  |
+| 5/31 | **Deliverables for your White Tower Project:** |  |
 |  | Submission of your written proposal (revised if needed) and/or supporting documentation | 10 |
 |  | Program Code as a txt file using the Java Style Guide  | 20 |
 |  | Video of your program running with narration (length no more than 2 minutes) | 20 |
