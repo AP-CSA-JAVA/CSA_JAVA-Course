@@ -10,7 +10,7 @@ Your White Tower Project is to design and develop a Java computer program of you
 5) Your program must be created by you and/or your peers.  Plagiarizing code will not be accepted.
 6) You must **comment** out your code where appropriate.
 7) You must have an explanation of the purpose of your program at the beginning of your program.
-8) Your program should include, but not lmited to: *variables, arrays/ arrayList, nested iterations, loops, Boolean logic, constructors, toString*
+8) Your program should include, but not limited to: *variables, arrays/ arrayList, nested iterations, loops, Boolean logic, constructors, toString*
 9) The program must work and be relatively bug-free in order to get full credit.
 
  
@@ -37,6 +37,6 @@ Your White Tower Project is to design and develop a Java computer program of you
 |    |
 | TBD | **Deliverables for your White Tower Project:** |  |
 |  | Submission of your written proposal (revised if needed) and/or supporting documentation | 10 |
-|  | Program Code using the Java Style Guide  | 20 |
+|  | Program Code as a txt file using the Java Style Guide  | 20 |
 |  | Video of your program running with narration | 20 |
 |  | **TOTAL POINTS** | 100 |
