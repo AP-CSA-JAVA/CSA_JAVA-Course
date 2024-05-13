@@ -29,7 +29,7 @@
 |  **TBD**  | Unit Exam | MCQ | FRQ  |   Yes  |
 |  Week 8  | 4.1 while Loops | MCQ  |   |
 |  Week 8  | 4.2 for Loops |  MCQ  |   |
-|  Week 9  | 4.3 Developing Algorithms Using Strings | MCQ   | FRQ  |
+|  Week 8  | 4.3 Developing Algorithms Using Strings | MCQ   | FRQ  |
 |  Week 9  | 4.4 Nested Iteration |  MCQ  | FRQ  |
 |  Week 9  | 4.5 Informal Code Analysis | MCQ  |   |
 |  **TBD** | Unit Exam | MCQ | FRQ  |   Yes  |
@@ -46,33 +46,33 @@
 |  **TBD**  | Unit Exam | MCQ | FRQ  |   Yes  |
 |  Week 13  | 9.1 Creating Superclasses and Subclasses |    |   |
 |  Week 13  | 9.2 Writing Constructors for Subclasses |  MCQ  |   |
-|  Week 13  | 9.3 Overriding Methods | MCQ |   |
+|  Week 14  | 9.3 Overriding Methods | MCQ |   |
 |  Week 14  | 9.4 super Keyword | MCQ  |   |
-|  Week 14  | 9.5 Creating References Using Inheritance Hierarchies | MCQ |   |
+|  Week 15  | 9.5 Creating References Using Inheritance Hierarchies | MCQ |   |
 |  Week 15  | 9.6 Polymorphism | MCQ  |  FRQ |
-|  Week 15  | 9.7 Object Superclass | MCQ  |  FRQ |
+|  Week 16  | 9.7 Object Superclass | MCQ  |  FRQ |
 |   **TBD** | Unit Exam | MCQ | FRQ  |   Yes  |
-|  Week 16  | 6.1 Array Creation and Access | MCQ  |   |
-|  Week 16  | 6.2 Traversing Arrays |  MCQ  |   |
-|  Week 17  | 6.3 Enhanced for Loop for Arrays | MCQ  | FRQ  |
-|  Week 17  | 6.4 Developing Algorithms Using Arrays |  MCQ  | FRQ |
+|  Week 17  | 6.1 Array Creation and Access | MCQ  |   |
+|  Week 17  | 6.2 Traversing Arrays |  MCQ  |   |
+|  Week 18  | 6.3 Enhanced for Loop for Arrays | MCQ  | FRQ  |
+|  Week 18  | 6.4 Developing Algorithms Using Arrays |  MCQ  | FRQ |
 |   **TBD** | Unit Exam | MCQ | FRQ  |     |
 |    | ----------------------- **Semester 1 Ends** ----------------------- |   |   |
-|  Week 18  | 7.1 Introduction to ArrayList | MCQ   |   |
-|  Week 18  | 7.2 ArrayList Methods |  MCQ  |   |
-|  Week 19  | 7.3 Traversing ArrayLists | MCQ  |   |
-|  Week 19  | 7.4 Developing Algorithms Using ArrayLists |  MCQ  |   |
-|  Week 20  | 7.5 Searching |  MCQ  | FRQ  |
-|  Week 20  | 7.6 Sorting |  MCQ  |   |
-|  Week 20  | 7.7 Ethical Issues Around Data Collection  |    |   |
+|  Week 19  | 7.1 Introduction to ArrayList | MCQ   |   |
+|  Week 19  | 7.2 ArrayList Methods |  MCQ  |   |
+|  Week 20  | 7.3 Traversing ArrayLists | MCQ  |   |
+|  Week 20  | 7.4 Developing Algorithms Using ArrayLists |  MCQ  |   |
+|  Week 21  | 7.5 Searching |  MCQ  | FRQ  |
+|  Week 21  | 7.6 Sorting |  MCQ  |   |
+|  Week 21  | 7.7 Ethical Issues Around Data Collection  |    |   |
 |   **TBD**  | Unit Exam | MCQ | FRQ  |   Yes  |
-|  Week 21  | 8.1 2D Arrays |  MCQ  |   |
-|  Week 21  | 8.2 Traversing 2D Arrays |  MCQ  | FRQ  |
+|  Week 22  | 8.1 2D Arrays |  MCQ  |   |
+|  Week 22  | 8.2 Traversing 2D Arrays |  MCQ  | FRQ  |
 |  **TBD**  | Unit Exam | MCQ | FRQ  |   Yes  |
-|  Week 22  | 10.1 Recursion |  MCQ  | FRQ  |
-|  Week 22  | 10.2 Recursive Searching and Sorting |  MCQ |   |
+|  Week 23  | 10.1 Recursion |  MCQ  | FRQ  |
+|  Week 23  | 10.2 Recursive Searching and Sorting |  MCQ |   |
 |   **TBD** | Unit Exam | MCQ | FRQ  |     |
-|  Week 23  | White Tower Final Project |   |   |  Yes |
+|  Week 24  | White Tower Final Project |   |   |  Yes |
 |     | Practice Exam 2014 | MCQ | FRQ |
 |     | Practice Exam 2015 | MCQ | FRQ |
 |     | Practice Exam 2020 | MCQ | FRQ |
