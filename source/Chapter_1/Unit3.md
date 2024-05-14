@@ -1234,7 +1234,7 @@ switch(expression) {
   default:
     // your code
 }
-
+```
 This is how it works:
 
 - The switch expression is evaluated once.
