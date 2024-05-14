@@ -1110,7 +1110,7 @@ You are considered overweight.
 - Create your own `equals` method for a class
 - Practice `if` statements and coding skills
 
-<mark >You may recall that the String class is included in the Java language package.</mark>  When you create a String object from its class, the object is a reference variable. For example, the following declarations create two String reference variables.
+<mark >You may recall that the String class is included in the Java language package.</mark>  [See java.lang)] https://docs.oracle.com/javase/8/docs/api/java/lang/package-summary.html  When you create a String object from its class, the object is a reference variable. For example, the following declarations create two String reference variables.
 
 `String s1 = null;`
 `String s2 = new String("HELLO");`
