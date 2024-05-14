@@ -32,7 +32,7 @@ class Dog extends Animal {
     }
 }
 
-public class SingleInheritanceDemo {
+public class Main {
     public static void main(String[] args) {
         Dog dog = new Dog();
         dog.sound(); // Output: Dog barks.
@@ -63,7 +63,7 @@ class Bird implements Swim, Fly {
     }
 }
 
-public class MultipleInheritanceDemo {
+public class Main {
     public static void main(String[] args) {
         Bird bird = new Bird();
         bird.swim(); // Output: Bird can swim.
@@ -95,7 +95,7 @@ class Sedan extends Car {
     }
 }
 
-public class MultilevelInheritanceDemo {
+public class Main {
     public static void main(String[] args) {
         Sedan sedan = new Sedan();
         sedan.drive();    // Output: Vehicles can be driven.
@@ -128,7 +128,7 @@ class Square extends Shape {
     }
 }
 
-public class HierarchicalInheritanceDemo {
+public class Main {
     public static void main(String[] args) {
         Circle circle = new Circle();
         Square square = new Square();
@@ -161,7 +161,7 @@ class Dog extends Animal {
     }
 }
 
-public class SingleInheritanceDemo {
+public class Main {
     public static void main(String[] args) {
         ArrayList<Animal> animals = new ArrayList<>();
         animals.add(new Animal());
@@ -203,7 +203,7 @@ class Fish implements Swimmable {
     }
 }
 
-public class MultipleInheritanceDemo {
+public class Main {
     public static void main(String[] args) {
         ArrayList<Object> entities = new ArrayList<>();
         entities.add(new Bird());
@@ -247,7 +247,7 @@ class Rectangle extends Shape {
     }
 }
 
-public class HierarchicalInheritanceDemo {
+public class Main {
     public static void main(String[] args) {
         ArrayList<Shape> shapes = new ArrayList<>();
         shapes.add(new Circle());
