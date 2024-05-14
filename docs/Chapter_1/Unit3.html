@@ -1684,18 +1684,21 @@ Instead of writing many <code class="docutils literal notranslate"><span class="
 <span class="w">  </span><span class="k">default</span><span class="p">:</span>
 <span class="w">    </span><span class="c1">// your code</span>
 <span class="p">}</span>
-
-<span class="n">This</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">how</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">works</span><span class="p">:</span>
-
-<span class="o">-</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="k">switch</span><span class="w"> </span><span class="n">expression</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">evaluated</span><span class="w"> </span><span class="n">once</span><span class="p">.</span>
-<span class="o">-</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">expression</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">compared</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">values</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="k">case</span><span class="p">.</span>
-<span class="o">-</span><span class="w"> </span><span class="n">If</span><span class="w"> </span><span class="n">there</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">match</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">associated</span><span class="w"> </span><span class="n">block</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">code</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">executed</span><span class="p">.</span>
-<span class="o">-</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="k">break</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="n">keywords</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">optional</span><span class="p">.</span>
-<span class="w">	</span><span class="o">-</span><span class="w"> </span><span class="n">When</span><span class="w"> </span><span class="n">Java</span><span class="w"> </span><span class="n">reaches</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="err">`</span><span class="k">break</span><span class="err">`</span><span class="w"> </span><span class="n">keyword</span><span class="p">,</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">breaks</span><span class="w"> </span><span class="n">out</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">switch</span><span class="w"> </span><span class="n">block</span><span class="p">.</span>
-<span class="w">	</span><span class="o">-</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="n">keyword</span><span class="w"> </span><span class="n">specifies</span><span class="w"> </span><span class="n">some</span><span class="w"> </span><span class="n">code</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">there</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="n">match</span><span class="p">.</span>
-
-<span class="err">```</span><span class="n">java</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">day</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>This is how it works:</p>
+<ul class="simple">
+<li><p>The switch expression is evaluated once.</p></li>
+<li><p>The value of the expression is compared with the values of each case.</p></li>
+<li><p>If there is a match, the associated block of code is executed.</p></li>
+<li><p>The break and default keywords are optional.</p>
+<ul>
+<li><p>When Java reaches a <code class="docutils literal notranslate"><span class="pre">break</span></code> keyword, it breaks out of the switch block.</p></li>
+<li><p>The default keyword specifies some code to run if there is no case match.</p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">day</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
 <span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">day</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span>
 <span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Monday&quot;</span><span class="p">);</span>
