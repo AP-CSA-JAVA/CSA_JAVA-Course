@@ -1101,7 +1101,7 @@ Weight (in pounds): 194.25
 BMI = 27.868928571428572
 You are considered overweight.
 ```
-
+<span style="color:green"></span>
 
 ## 3.7 Comparing Objects
 
@@ -1110,7 +1110,7 @@ You are considered overweight.
 - Create your own `equals` method for a class
 - Practice `if` statements and coding skills
 
-<span style="color:green">You may recall that the String class is included in the Java language.</span> When you create a String object from its class, the object is a reference variable. For example, the following declarations create two String reference variables.
+<div style="background-color: #FFFF00">You may recall that the String class is included in the Java language.</div> When you create a String object from its class, the object is a reference variable. For example, the following declarations create two String reference variables.
 
 `String s1 = null;`
 `String s2 = new String("HELLO");`
