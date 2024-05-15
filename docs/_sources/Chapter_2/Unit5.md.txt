@@ -928,38 +928,38 @@ Ethical and social implications of computing systems are becoming increasingly i
 
 **Ethical and Social Implications of Computing Systems:**
 
-- Privacy Concerns: Computing systems often collect and store vast amounts of personal data, raising concerns about privacy and data security. Users' personal information must be handled responsibly and ethically to protect their rights.
+- <mark>Privacy Concerns</mark>: Computing systems often collect and store vast amounts of personal data, raising concerns about privacy and data security. Users' personal information must be handled responsibly and ethically to protect their rights.
 
-- Bias and Discrimination: Algorithms and AI systems can inherit biases from the data they are trained on, leading to discriminatory outcomes in decision-making processes. It is essential to ensure fairness and avoid perpetuating existing biases.
+- <mark>Bias and Discrimination</mark>: Algorithms and AI systems can inherit biases from the data they are trained on, leading to discriminatory outcomes in decision-making processes. It is essential to ensure fairness and avoid perpetuating existing biases.
 
-- Autonomy and Control: As technology advances, concerns about the increasing automation and decision-making powers of machines arise. Balancing autonomy with human control is crucial to prevent potential harm.
+- <mark>Autonomy and Control</mark>: As technology advances, concerns about the increasing automation and decision-making powers of machines arise. Balancing autonomy with human control is crucial to prevent potential harm.
 
-- Cybersecurity: Computing systems' vulnerabilities pose significant risks, as cyberattacks and data breaches can have severe consequences for individuals, organizations, and societies. Developing robust security measures is vital to safeguard against such threats.
+- <mark>Cybersecurity</mark>: Computing systems' vulnerabilities pose significant risks, as cyberattacks and data breaches can have severe consequences for individuals, organizations, and societies. Developing robust security measures is vital to safeguard against such threats.
 
-- Employment Disruption: Automation and AI can lead to job displacement, affecting people's livelihoods and socio-economic stability. Preparing for reskilling and upskilling workers becomes crucial.
+- <mark>Employment Disruption</mark>: Automation and AI can lead to job displacement, affecting people's livelihoods and socio-economic stability. Preparing for reskilling and upskilling workers becomes crucial.
 
-- Digital Divide: Unequal access to technology and the internet can exacerbate existing social inequalities, leaving disadvantaged communities behind. Bridging the digital divide is essential for inclusive and equitable technological development.
+- <mark>Digital Divide</mark>: Unequal access to technology and the internet can exacerbate existing social inequalities, leaving disadvantaged communities behind. Bridging the digital divide is essential for inclusive and equitable technological development.
 
 **Beneficial and Harmful Effects of Programs:**
 
-- Beneficial Effects: Programs can greatly enhance productivity, efficiency, and communication in various fields, such as healthcare, education, research, and entertainment. They enable advancements in scientific discoveries, medical treatments, and data analysis.
+- <mark>Beneficial Effects</mark>: Programs can greatly enhance productivity, efficiency, and communication in various fields, such as healthcare, education, research, and entertainment. They enable advancements in scientific discoveries, medical treatments, and data analysis.
 
-- Harmful Effects: Malicious programs, such as viruses and ransomware, can cause significant harm to individuals, businesses, and critical infrastructure. Additionally, poorly designed or implemented programs may lead to system failures, data loss, and security breaches.
+- <mark>Harmful Effects</mark>: Malicious programs, such as viruses and ransomware, can cause significant harm to individuals, businesses, and critical infrastructure. Additionally, poorly designed or implemented programs may lead to system failures, data loss, and security breaches.
 
 **Developing Awareness Around Ethical Issues for ISPs:**
 
-- Transparency: ISPs should be transparent about their data collection practices, policies, and how they use consumers' data. Providing clear privacy policies and user agreements helps build trust with customers.
+- <mark>Transparency</mark>: ISPs should be transparent about their data collection practices, policies, and how they use consumers' data. Providing clear privacy policies and user agreements helps build trust with customers.
 
-- Data Protection: ISPs must implement robust data protection measures to safeguard user data from unauthorized access or data breaches. Compliance with data protection regulations is essential.
+- <mark>Data Protection</mark>: ISPs must implement robust data protection measures to safeguard user data from unauthorized access or data breaches. Compliance with data protection regulations is essential.
 
-- Net Neutrality: ISPs should adhere to net neutrality principles, treating all internet traffic equally and not discriminating against specific websites or services.
+- <mark>Net Neutrality</mark>: ISPs should adhere to net neutrality principles, treating all internet traffic equally and not discriminating against specific websites or services.
 
-- Ethical Use of User Data: ISPs should obtain explicit consent before collecting and using users' personal data. Additionally, they should ensure data is anonymized and used for legitimate purposes only.
+- <mark>Ethical Use of User Data</mark>: ISPs should obtain explicit consent before collecting and using users' personal data. Additionally, they should ensure data is anonymized and used for legitimate purposes only.
 
-- Addressing Bias: ISPs should ensure that their algorithms and AI systems are fair and unbiased to avoid discriminatory practices.
+- <mark>Addressing Bias</mark>: ISPs should ensure that their algorithms and AI systems are fair and unbiased to avoid discriminatory practices.
 
-- Customer Education: ISPs can play a role in educating their customers about privacy risks, cybersecurity best practices, and how to protect themselves online.
+- <mark>Customer Education</mark>: ISPs can play a role in educating their customers about privacy risks, cybersecurity best practices, and how to protect themselves online.
 
-- Collaboration and Accountability: ISPs should collaborate with regulators, industry peers, and stakeholders to address ethical challenges collectively. They should also be accountable for any breaches or violations.
+- <mark>Collaboration and Accountability</mark>: ISPs should collaborate with regulators, industry peers, and stakeholders to address ethical challenges collectively. They should also be accountable for any breaches or violations.
 
 Computing systems have far-reaching ethical and social implications. Emphasizing responsible development, transparency, and user privacy is essential for building trust and ensuring technology benefits society. Awareness around ethical issues for ISPs can lead to better data protection, fair practices, and an inclusive digital future.
