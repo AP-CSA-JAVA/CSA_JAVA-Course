@@ -136,7 +136,7 @@ This program demonstrates the anatomy and design principles of a class by creati
 - Write your own class constructors program.
 - Examine call by value and reference with regard to class constructors.
 
-This information can be found in: [Unit 2: Using Objects](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/blob/main/source/Chapter_1/Unit2.md#unit-52---constructors)
+This information can be found in: [Unit 2: Using Objects](https://ap-csa-java.github.io/CSA_JAVA-Course/Chapter_1/Unit2.html#unit-2-using-objects)
 
 Java constructors are special methods that are used to initialize objects of a class. They are called automatically when an object is created and are used to set initial values or perform setup tasks. Constructors have the same name as the class and do not have a return type.
 
