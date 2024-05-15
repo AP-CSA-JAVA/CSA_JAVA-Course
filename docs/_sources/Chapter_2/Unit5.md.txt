@@ -94,25 +94,25 @@ public class Student {
 - The displayInfo() method is used to display the student's information in a formatted manner.
 - In the main method, we create a Student object and demonstrate the usage of getter and setter methods to access and modify the attributes of the object.
 
-Design Principles of a Class:
+**Design Principles of a Class**:
 
-- Encapsulation: We use access modifiers (private, public, protected) to encapsulate the attributes, allowing controlled access to them. Getter and setter methods help in accessing and modifying the attributes while maintaining data integrity.
+- <mark>Encapsulation</mark>: We use access modifiers (private, public, protected) to encapsulate the attributes, allowing controlled access to them. Getter and setter methods help in accessing and modifying the attributes while maintaining data integrity.
 
-- Abstraction: The Student class abstracts the concept of a student by defining its attributes and behaviors. It hides the implementation details and exposes only essential features.
+- <mark>Abstraction</mark>: The Student class abstracts the concept of a student by defining its attributes and behaviors. It hides the implementation details and exposes only essential features.
 
-- Modularity: The class is a modular unit that can be used in various parts of the program. It represents a single entity or concept (a student in this case) and can be reused as needed.
+- <mark>Modularity</mark>: The class is a modular unit that can be used in various parts of the program. It represents a single entity or concept (a student in this case) and can be reused as needed.
 
-- Cohesion: The Student class is designed to have high cohesion, meaning it focuses on a single responsibility, managing student information.
+- <mark>Cohesion</mark>: The Student class is designed to have high cohesion, meaning it focuses on a single responsibility, managing student information.
 
-- Single Responsibility Principle (SRP): The Student class adheres to SRP, as it only deals with managing student-related attributes and behaviors.
+- <mark>Single Responsibility Principle (SRP)</mark>: The Student class adheres to SRP, as it only deals with managing student-related attributes and behaviors.
 
-- Information Hiding: We hide the internal details of the class by making attributes private. External code interacts with the class only through well-defined methods.
+- <mark>Information Hiding</mark>: We hide the internal details of the class by making attributes private. External code interacts with the class only through well-defined methods.
 
-- Constructor: The class has a constructor to ensure proper initialization of objects during creation.
+- Constructor</mark>: The class has a constructor to ensure proper initialization of objects during creation.
 
-- Code Reusability: We can create multiple Student objects using the same class blueprint, promoting code reusability.
+- <mark>Code Reusability</mark>: We can create multiple Student objects using the same class blueprint, promoting code reusability.
 
-- Getter and Setter Methods: The use of getter and setter methods ensures controlled access to attributes and adheres to the principle of encapsulation.
+- <mark>Getter and Setter Methods</mark>: The use of getter and setter methods ensures controlled access to attributes and adheres to the principle of encapsulation.
 
 When you run this program, it will output:
 
