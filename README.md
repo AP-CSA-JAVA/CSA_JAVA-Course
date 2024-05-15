@@ -303,7 +303,8 @@ There are various forms of taking notes, and which one you choose depends on bot
 
 **Example:** The Cornell Method of Note-taking
 
---- INSERT IMAGE HERE ---
+
+![Cornell_Notes_Sample](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/assets/12989939/6123fb06-f099-4e9e-be37-dab810a49f6d)
 
 The Cornell method was developed in the 1950s by Professor Walter Pauk at Cornell University [1]. It is recommended by many universities because of its usefulness and flexibility. This method is simple to use for capturing notes, is helpful for defining priorities, and is a very helpful study tool.
 
