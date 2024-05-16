@@ -48,22 +48,23 @@ For this course we will be using various Integrated Development Environment (IDE
 
 ### Policy on Academic Honesty
 
-- [ ] I encourage students to work with a peer on assignments.  It can make learning fun!  YOu may help with general problem-solving strategies, ideas, and algorithms, but **all solutions should be your own**. In practice, this means that, while students can discuss programs and questions, *all lines of code should originate from your own mind*. This course uses technology in ways no other course does. If you are unsure about the ethical implications of what you are doing, you should ask. Claiming ignorance is not a reasonable excuse.
-- [ ] If you use other sources for help (websites, AI, friends, etc.), please cite them in the comments of your code indicating where you got help and whether certain sections of code came from that help.  Please make sure you understand any code that you use from another source. ChatGPT tends to generate compact and complex code, so make sure you read the explanation of the code and ask for simpler code if you don’t understand it. Never copy the text of my assignments into an AI tool to generate a complete solution. You can use AI tools and other sources for idea generation, code debugging, and help with understanding or generating small parts of code to get you started, but you should not have them do all of the work for you. <mark>Be in charge of your own learning</mark>, and make sure you learn what the goal of the assignment is asking you to practice! 
+- [x] I encourage students to work with a peer on assignments.  It can make learning fun!  YOu may help with general problem-solving strategies, ideas, and algorithms, but **all solutions should be your own**. In practice, this means that, while students can discuss programs and questions, *all lines of code should originate from your own mind*. This course uses technology in ways no other course does. If you are unsure about the ethical implications of what you are doing, you should ask. Claiming ignorance is not a reasonable excuse.
+- [x] If you use other sources for help (websites, AI, friends, etc.), please cite them in the comments of your code indicating where you got help and whether certain sections of code came from that help.  Please make sure you understand any code that you use from another source. ChatGPT tends to generate compact and complex code, so make sure you read the explanation of the code and ask for simpler code if you don’t understand it. Never copy the text of my assignments into an AI tool to generate a complete solution. You can use AI tools and other sources for idea generation, code debugging, and help with understanding or generating small parts of code to get you started, but you should not have them do all of the work for you. <mark>Be in charge of your own learning</mark>, and make sure you learn what the goal of the assignment is asking you to practice!
+- [x] Assignments that are designated as team/ group assignments must have each students name within the block header.  Other assignments students may collaborate with another student, but each student must submit their own work and the assignment cannot be a facsimile of their peers work.  Submitted assignments that has another student's name on it and not your name will be considered as cheating and subject to the schools policy regarding plagiarism/ cheating.  Furthermore, assignments that have been deemed as plagirised will receive a '0' on the assignment.
   
 ---------------------------------------------------------------------------------------
 
 
 ### Electronic Devices
-- [ ] Students should be engaged during class! Thus, cell phones and other electronic devices are a distraction that prevent students from fully participating in class. Specifically, students should not be accessing cell phones, smart phones, or any devices during class without permission from the teacher. Phones should be set to silent or turned off in class.
-- [ ] Earphones, headphones, and other listening tools should not be used during class.
+- [x] Students should be engaged during class! Thus, cell phones and other electronic devices are a distraction that prevent students from fully participating in class. Specifically, students should not be accessing cell phones, smart phones, or any devices during class without permission from the teacher. Phones should be set to silent or turned off in class.
+- [x] Earphones, headphones, and other listening tools should not be used during class.
   
 ---------------------------------------------------------------------------------------
 
 
 ### Academic Support
 
-- [ ] Peer Tutoring (Monday - Friday/ before and after school)
+- [ ] the **DEN** Peer Tutoring (Monday - Friday/ before and after school)
 - [ ] By appointment only
   
 ---------------------------------------------------------------------------------------
@@ -582,14 +583,7 @@ Exercise: Note-taking
 
 </p></details>
 
-## Academic Integrity
-<details><summary>Click to Open</summary>
-<p>
-This is a reminder that each student is responsible for their own work.  Assignments that are designated as team/ group assignments must have each students name within the block header.  Other assignments students may collaborate with another student, but each student must submit their own work and the assignment cannot be a facsimile of their peers work.  Submitted assignments that has another student's name on it and not your name will be considered as cheating and subject to the schools policy regarding plagiarism/ cheating.  Furthermore, assignments that have been deemed as plagirised will receive a '0' on the assignment.
- 
-If you have any questions, please contact me.
- </p>
- </details>
+
 
 ## Java Style Guidelines
 <details><summary>Click Here</summary>
