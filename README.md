@@ -71,7 +71,7 @@ For this course we will be using various Integrated Development Environment (IDE
 
   | Grading | Percentage | School Year |
   | ------- | :----------: | :------: |
-  | Projects (IDP, Final Project) | 60% | 2024-25 |
+  | Projects (IDP, Final Project) | 50% | 2024-25 |
   | Test/ Quizzes | 30% | 2024-25 |
   | Classwork/ Portfolio | 15% | 2024-25 |
   | Notes | 5% | 2024-25 |
