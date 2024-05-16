@@ -3,7 +3,7 @@
 
 # AP Computer Science A Course Overview 
 
-AP Computer Science A introduces students to computer science through programming. Fundamental topics in this course include the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems. The course emphasizes object-oriented programming and design using the Java programming language.
+AP Computer Science A is an introductory college-level computer science course that introduces one of the more popular programming languages to students. Fundamental topics in this course include the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems. The course emphasizes object-oriented programming and design using the Java programming language.
 
 The following big ideas serve as the foundation of the course, enabling students to create meaningful connections among concepts:</br>
 <b>Modularity</b>: Modularity in object-oriented programming allows us to use abstraction to break complex programs down into individual classes and methods.</br>
