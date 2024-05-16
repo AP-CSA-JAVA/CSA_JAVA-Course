@@ -13,161 +13,10 @@ The following big ideas serve as the foundation of the course, enabling students
 
 For this course we will be using various Integrated Development Environment (IDE) software to help you manage your programs, data files, & images.  Coding Rooms will be our primary online IDE for this course.  For your personal development and collaboration, you may want to use an online IDE that will allow you to collaborate with peers.  If you are using a personal laptop, a good desktop IDE to install is VS Code. 
 
-## Anatomy of a Java Program
+## Java at a glance 
 <details><summary>Click Here</summary>
  <p>
-  In this section, I will provide the basics of a Java program.  This information will be covered in more detail in Unit 5.  
-  
-  The topics that will be covered are:
-  - Comments
-  - Reserved Words
-  - Modifiers
-  - Statements
-  - Blocks
-  - Classes
-  - Methods
-  - The main method
-  
-  **Comments**
-  - One-line comments are denoted with two forward slashes. //
-  - Block comments are denoted with a forward slash followed by an asterisk and concludes with an asterisk followed by a forward slash.  It looks like this:  /* your comments here */
-  - Comments are ignored during the program execution
-  - Include a summary at the beginning of the program to explain what the program does, its features, its supporting data structures, and any unique techniques it uses.
-  
-  **Reserved Words**
-  - Words that have a specific purpose for the compiler
-  - These reserved words cannot be used for any other purpose in the program (variable, method, class, etc.)
-  - Key words are lower case (Java is a case sensitive language)
-  - Examples of key words include:
-  
-  |      |     |     |     |
-  | --- | --- | --- | --- |
-  | public | void | boolean | private |
-  | class | int | continue | protected |
-  | static | double | return | package |
-  
-  
-  **Modifiers**
-  - Java uses certain reserved words called modifiers that *specify the properties of the data, methods, and classes and how they can be used.
-    - Examples include `public`, `static`, `private`, `final`, `abstract`, and `protected`
-  - A `public` datum, method, or claqss can be accessed by other programs.
-  - A `private` datum or method cannot be accessed by other programs.
-  
-  **Statements**
-  - A statement is an action or a sequence of actions.
-  - The print statement `System.out.println("Hello World!");` in the program is a statement to display the string "Hello World!"
-  - Every statement in Java ends with a semicolon(;).
-    
-  **Blocks**
-  - A pair of curly braces {} in a program forms a block that groups contents of a program to be executed.
-  
-  ```java
-  public class Main {
-     public static void main(String[] args) {
-        System.out.println("Hello World!");
-      }
-  }
-  ```
-  
-  **Classes**
-  - The class is the most important construct in Java!
-  - A class is a template or bluepring for objects. To program in Java you must understand classes and be able to write and use them.
-  - A program is defined by using one or more classes.
 
-  
-  **Method**
-  - `System.out.println` is a method.
-  - Method is a collection of statements that performs a sequence of oeprations to display a message on the console.
-  - It is used by invoking a statement with a string argument.  The string argument is enclosed within parentheses.
-    - In this case, the argument is "Hellow World!"  YOu can call the same println method with a different argument to print a different message.
-  
-  **main() Method**
-  - The main method provides the control of program flow.  The Java interpreter executes the application by invoking the main method.
-  - The main method looks like this:
-  
-  ```java
-  public static void main(String[] args) {
-  
-     // Statements;
-  }
-  ```
-  
-  
-  **Programming Style and Documentation in Java**
-  - Appropriate comments and comments style:
-    - Include a summary at the beginning of the program to explain what the program does, its key features, its supporting data structures, and any unique techniques it uses.
-    - Include your name, class, lecture's name, date, and a brief description of your code at the beginning of the program.
-  
-  
-  **Comment Style**
-  - A "block" comment is placed between /* and */ marks:
-  - Example:
-  
-  ```java
-  /* Activity 2.5.2 Java Methods
-     Author: Your Name
-     Date:   5/17/2023
-     Notes:  Version 1  */
-  ```
-  - A single-line comment foes from // to the end of the line:
-  ```java
-     int x = 0; //variable for user quantity
-  ```
-  - Javadoc Comments are denoted with a forward slash and two asterisks and ends with one asterisk and a forward slash.  Each line will also have an asterisk.
-  
-  ```java
-  /**
-   *     Returns total sales from all vendors:
-   *     sets <code>totalSales</code> // Can use HTML tags
-   *     to 0.
-   *
-   *     @return total amount of sales from all vendors
-   */
-  ```
-  
-  
-  **Naming Conventions**
-  - Choose meaningful and descriptive names
-  - Variables and method names:
-    - User lowercase - if the name consists of several words, concatenate all into one, use lowercase for the first letter of the first word, and capitalize the first letter of each subsequent word in the name.
-  - For example, the variables `radius` and `area`, and the method `computeArea`.
-  - Class names:
-    - Capitalize the first letter of each word in the name.
-    - For example, the class name `ComputeArea`.
-  - Constants:
-    - Capitalize all letters in constants, and use underscores to connect words.
-    - For example, the constant `PI` and `MAX_VALUE`.
-  
-  
-  **Proper Indentation and Spacing**
-  - Indentation
-    - Indent two spaces
-  - Spacing
-    - Use blank line to separate segments of the code.
-  
-  
-  **Block Styles**
-  - Use end-of-line style for braces.
-  
-  
-  ```java
-  public class Main
-  {  //  <-- Next-line style
-    public static void main(String[] args)
-    {
-       System.out.println("Block Styles");
-    }
-  }
-  ```
-
-             
-   ```java
-  public class Main  {      //  <-- End-of-line style
-    public static void main(String[] args) {
-       System.out.println("Block Styles");
-    }
-  }
-  ```
   
   Every Java program will begin like this:
   
@@ -176,8 +25,6 @@ For this course we will be using various Integrated Development Environment (IDE
   
   
    </p></details>
-   
-   
 
 
 ## Syllabus
@@ -186,37 +33,30 @@ For this course we will be using various Integrated Development Environment (IDE
   
  ### Expectations
 
-- [ ] Be on time and prepared for class. This includes but is not limited to having you log in for your Canvas course, course website, and digital notebook.
-- [ ] Be on time and prepared for class. This includes, but is not limited to having your notebook, assignments, pen/pencil, and paper. Students should be seated within the first five minutes of class to avoid being marked tardy or absent
-- [ ] Have a good attitude about learning. Be prepared to actively participate in class. Accept feedback with a positive attitude.
-- [ ] Students will follow all written and oral directions as well as safety precautions. This is for your own safety as there will be hands-on activities.
-- [ ] Complete all assignments within a timely fashion.
-- [ ] Be respectful of others and their property.
-- [ ] Take care of the learning environment. Keep your area neat and clean. Always clean your space before you leave for the day. Put materials away in their proper place.
+- [ ] <mark>Be on time for class.</mark> This includes but is not limited to having you log into your Canvas course, course website, and notebook.  Students should be seated within the first five minutes of class to avoid being marked tardy or absent
+- [ ] <mark>Be prepared for class.</mark> This includes having your notebook, assignments, pen/pencil, and paper. 
+- [ ] <mark>Have a good attitude about learning.</mark> Be prepared to actively participate in class. Accept feedback with a positive attitude.
+- [ ] <mark>Be respectful of others and their property.</mark>
+- [ ] <mark>Take care of the learning environment.</mark> Keep your area neat and clean. Always clean your space before you leave for the day. Put materials away in their proper place.
+- [ ] <mark>Report any damaged equipment.</mark>
+- [ ] Do not change any of the settings on the computers.
+- [ ] Do not download/ install any programs (including games) to the computer.
+- [ ] Do not access inappropriate content on the internet.
   
 ---------------------------------------------------------------------------------------
 
 
 ### Policy on Academic Honesty
 
-- [ ] Students are allowed to help each other on assignments with general problem-solving strategies, ideas, and algorithms, but all solutions should be your own. In practice, this means that, while students can discuss programs and questions, all lines of code should originate from your own mind. This course uses technology in ways no other course does. If you are unsure about the ethical implications of what you are doing, you should ask. Claiming ignorance is not a reasonable excuse.
-- [ ] If you use other sources for help (websites like stackoverflow, AI tools like ChatGPT, friends, etc.), please cite them in the comments of your code indicating where you got help and whether certain sections of code came from that help.  Please make sure you understand any code that you use from another source. ChatGPT tends to generate compact and complex code, so make sure you read the explanation of the code and ask for simpler code if you don’t understand it. Never copy the text of my assignments into an AI tool to generate a complete solution. You can use AI tools and other sources for idea generation, code debugging, and help with understanding or generating small parts of code to get you started, but you should not have them do all of the work for you. Be in charge of your own learning, and make sure you learn what the assignment is asking you to practice! 
+- [ ] I encourage students to work with a peer on assignments.  It can make learning fun!  YOu may help with general problem-solving strategies, ideas, and algorithms, but **all solutions should be your own**. In practice, this means that, while students can discuss programs and questions, *all lines of code should originate from your own mind*. This course uses technology in ways no other course does. If you are unsure about the ethical implications of what you are doing, you should ask. Claiming ignorance is not a reasonable excuse.
+- [ ] If you use other sources for help (websites, AI, friends, etc.), please cite them in the comments of your code indicating where you got help and whether certain sections of code came from that help.  Please make sure you understand any code that you use from another source. ChatGPT tends to generate compact and complex code, so make sure you read the explanation of the code and ask for simpler code if you don’t understand it. Never copy the text of my assignments into an AI tool to generate a complete solution. You can use AI tools and other sources for idea generation, code debugging, and help with understanding or generating small parts of code to get you started, but you should not have them do all of the work for you. <mark>Be in charge of your own learning</mark>, and make sure you learn what the goal of the assignment is asking you to practice! 
   
 ---------------------------------------------------------------------------------------
 
 
 ### Electronic Devices
 - [ ] Students should be engaged during class, and cell phones and other electronic devices are a distraction that prevent students from fully participating in class. Specifically, students should not be accessing cell phones, smart phones, or any devices during class without permission from the teacher. Phones should be set to silent or turned off in class.
-  
----------------------------------------------------------------------------------------
-
-
-### Computer Lab Policies
-
-- [ ] Do not change any of the settings on the computers.
-- [ ] Do not download/ install any programs (including games) to the computer.
-- [ ] Do not access inappropriate content on the internet.
-- [ ] Report any broken equipment immediately to the instructor.
+- [ ] Earphones, headphones, and other listening tools should not be used during class.
   
 ---------------------------------------------------------------------------------------
 
@@ -239,9 +79,9 @@ For this course we will be using various Integrated Development Environment (IDE
 
 ### Make-up & Late work policy
 
-- [ ] Students are responsible for makeup work when absent. Per district policy, each student will have opportunity to make up assignments when they are absent.
-- [ ] *To make up a quiz or a test, it is the student’s responsibility to contact the teacher to set an agreed upon date & time.*  <u>Students must contact the teacher</u> upon their return to make-up a missing quiz or test.
-- [ ] Handouts will be placed in a makeup folder with the students name and it is the student’s responsibility to check this folder when absent before consulting the instructor.
+- [ ] Students are responsible for makeup work when absent. Please refer to the district policy regarding make up work when students are absent.
+- [ ] *To make up a quiz or a test, it is the student’s responsibility to contact the teacher with two weeks upon their return to set an agreed upon date & time.*  
+- [ ] <u>Handouts</u> will be placed in a makeup folder with the students name and it is the student’s responsibility to check this folder when absent before consulting the instructor.
 
 
 ---------------------------------------------------------------------------------------
