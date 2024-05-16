@@ -55,7 +55,7 @@ For this course we will be using various Integrated Development Environment (IDE
 
 
 ### Electronic Devices
-- [ ] Students should be engaged during class, and cell phones and other electronic devices are a distraction that prevent students from fully participating in class. Specifically, students should not be accessing cell phones, smart phones, or any devices during class without permission from the teacher. Phones should be set to silent or turned off in class.
+- [ ] Students should be engaged during class! Thus, cell phones and other electronic devices are a distraction that prevent students from fully participating in class. Specifically, students should not be accessing cell phones, smart phones, or any devices during class without permission from the teacher. Phones should be set to silent or turned off in class.
 - [ ] Earphones, headphones, and other listening tools should not be used during class.
   
 ---------------------------------------------------------------------------------------
@@ -75,6 +75,22 @@ For this course we will be using various Integrated Development Environment (IDE
   | Test/ Quizzes | 30% | 2024-25 |
   | Classwork/ Portfolio | 15% | 2024-25 |
   | Notes | 5% | 2024-25 |
+
+---------------------------------------------------------------------------------------
+
+
+### Classroom Attendance, Conduct, & Participation
+
+It is imperative that students consistently attend class.  Most classes will consist of <mark>activities</mark> and <mark>projects</mark> where students are learning the structure and implementation of a language.  Consistent attendance is vitally important to this class and poor attendance will affect their understanding and performance in this class.  This grade is inclusive of attendance, tardies, participation, and behavior within the classroom.  The items are additive.  Example:  Student arrives late to class 4 times, teacher observed the student playing a game on their phone once, slept in class twice, and was completing an assignment six different times for Calc B/C.  The student would receive an **N** as they accumulated 13 distinct mistakes relating to their conduct.
+
+
+| **Tardies, Sleeping, Playing Games, </br>doing other classes' assignments**  |
+|:----:|
+| 0-5 Excellent(**E**)	| 
+| 6-10 Satisfactory(**S**)	| 
+| 11–15 Needs Improvement(**N**)	| 
+| 16+ Unsatisfactory(**U**) |
+
 
 
 ### Make-up & Late work policy
