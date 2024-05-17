@@ -953,4 +953,6 @@ Blood alcohol:   0.032%
  
  [Practice-It -- Java](https://practiceit.cs.washington.edu/)
 
+ [Java Notes: Digital Book](https://math.hws.edu/javanotes/index.html)
+
  </p> </details>
