@@ -115,7 +115,6 @@ public class Main{
 
 - Must use a `while` loop
   - You may use Arrays for this assignment
-  - I will offer you extra credit if you complete this assignment without using an Array.
 - Use a `scanner` class to recieve `x` amount of `int` inputs
 - Organize the inputted numbers into a traditional grade structure:
   -  A = 90 - 100
@@ -124,7 +123,7 @@ public class Main{
   -  D = 60 - 69
   -  F = 0 - 59
 - `Return` the total number of A's, B's, C's, D's, and F's
-- submit your program as a replit
+
 
 	
 ### Activity 4.1.2
@@ -183,8 +182,7 @@ Enter a number, or the letter 'q' to end the sequence:
 The sum is: 133
 The average is: 33.25
 ```
-	
-Submit your replit link to Canvas.
+
 
 ## 4.1.1 Do While Loops - Oracle
 
@@ -284,8 +282,6 @@ public class Main
 **Directions:** Write a program using a `do-while` loop that does the following:
 - Write a do-while loop that asks a user for their name, which must be at least four characters long.
 - Write another do-while that asks for the user’s age, which must be between 18 and 65, inclusive. Recall the nextIntmethod Scanner class.
-
-Submit your program link
 
 **Sample Output**
 ```java
