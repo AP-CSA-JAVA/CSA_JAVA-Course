@@ -78,7 +78,7 @@ Grades are posted online using Canvas. Grades are weighted and assigned as detai
   | Projects (IDP, Final Project) | 50% | 2024-25 |
   | Test/ Quizzes | 30% | 2024-25 |
   | Classwork/ Portfolio | 15% | 2024-25 |
-  | Notes | 5% | 2024-25 |
+  | Notes (students may use the current unit hand-written notes for tests) | 5% | 2024-25 |
 
 ---------------------------------------------------------------------------------------
 
