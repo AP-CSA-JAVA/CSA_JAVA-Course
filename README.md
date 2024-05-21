@@ -139,7 +139,7 @@ It is crucial that students consistently attend class. Most classes will consist
 <details><summary>Click Here</summary>
 <p>
 
-|  | CSA Topics | MCQ | FRQ | Project |
+| Units | Topics | MCQ | FRQ | Project |
 | :---: | :---- | :---: | :---: | :----: |
 |    | **Orientation & Structure** |  |   |
 |  Unit 1  | 1.1 Why Programming?  Why Java? | MCQ |   |
