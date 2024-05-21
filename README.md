@@ -395,7 +395,7 @@ Exercise: Note-taking
 | ---------------------------------------------------- |
 | **1.A** Determin an appropriate program design to solve a problem or accomplish a task (not assessed) |
 | **1.B** Determine code that would be used to complete code segments |
-| **1.C** Determine colde that would be used to interact with completed program code |
+| **1.C** Determine code that would be used to interact with completed program code |
 
 
 | Practice 2: Code Logic |
