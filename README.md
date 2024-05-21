@@ -70,6 +70,8 @@ For this course we will be using various Integrated Development Environment (IDE
   
 ---------------------------------------------------------------------------------------
 
+### Weighted Grading
+Grades are posted online using Canvas. Grades are weighted and assigned as detailed below. Each item is scaled on a point system.
 
   | Grading | Percentage | School Year |
   | ------- | :----------: | :------: |
@@ -80,6 +82,20 @@ For this course we will be using various Integrated Development Environment (IDE
 
 ---------------------------------------------------------------------------------------
 
+### Grading Scale
+
+All projects, presentations, tests, quizzes, classwork, portfolio & notes will be used to calculate your final grade. 
+
+Project grading will follow this scale:
+- [ ] 4 - Exceeded Expectations - The program is fully functional and the student has added functionality that exceeds the brief. (A)
+- [ ] 3 - Met Expectations - All program functionality is evident. (B)
+- [ ] 2 - Approaching Expectations - Most of the program is functional but there are still some functionality issues. (C).
+- [ ] 1 - Below Expectations - Some of the work was completed but the program is not near functional standards. (D)
+- [ ] 0 - Little to no work was Completed (F)
+
+Students who score below 75% on a project, test or quiz (excluding finals) may retake the quiz or test for up to a 75%.  Students will have 1 week to review any feedback and/ or answers and schedule a time to retake the project, test, or quiz.  
+
+---------------------------------------------------------------------------------------
 
 ### Classroom Attendance, Conduct, & Participation
 
@@ -99,7 +115,7 @@ It is crucial that students consistently attend class. Most classes will consist
 
 - [ ] Students are responsible for makeup work when absent. Please refer to the district policy regarding make up work when students are absent.
 - [ ] *To make up a quiz or a test, it is the student’s responsibility to contact the teacher with two weeks upon their return to set an agreed upon date & time.*
-  - [ ] Make-ups will be done either before or after school
+  - [ ] Make-ups or retakes will be done either before or after school
 - [ ] <u>Handouts</u> will be placed in a makeup folder with the student's name and it is the student’s responsibility to check this folder when they return before consulting the instructor.
 
 
