@@ -133,7 +133,97 @@ It is crucial that students consistently attend class. Most classes will consist
 ---------------------------------------------------------------------------------------
 
  </p></details>
+
  
+## Units & Topics
+<details><summary>Click Here</summary>
+<p>
+
+|  | CSA Topics | MCQ | FRQ | Project |
+| :---: | :---- | :---: | :---: | :----: |
+|  Unit 1  | **Orientation & Structure** |  |   |
+|  Unit 1  | 1.1 Why Programming?  Why Java? | MCQ |   |
+|  Unit 1  | 1.2 Variables and Data Types? | MCQ  |   |
+|  Unit 1  | 1.3 Expressions and Assignment Statements | MCQ  |   |
+|  Unit 1  | 1.4 Compound Assignment Operators | MCQ  |   |
+|  Unit 1  | 1.5 Casting and Ranges of Variables | MCQ  |   |
+|  **TBD** | Unit Exam | MCQ |    |   Yes  |
+|  Unit 3  | 3.2 if Statements and Control Flow | MCQ  |   |
+|  Unit 3  | 3.3 if-else Statements |  MCQ  |   |
+|  Unit 3  | 3.4 else if Statements |  MCQ  |   |
+|  Unit 3  | 3.1 Boolean Expressions |  MCQ |   |
+|  Unit 3  | 3.5 Compound Boolean Expressions |  MCQ  | FRQ  |
+|  Unit 3  | 3.6 Equivalent Boolean Expressions |  MCQ  |   |
+|  Unit 3  | 3.7 Comparing Objects |  MCQ  | FRQ  |
+|  **TBD** | Unit Exam | MCQ | FRQ  |   Yes  |
+|  Unit 2  | 2.1 Objects: Instances of Classes |  MCQ  |   |
+|  Unit 2  | 2.2 Creating and Storing Objects (Instantiation) |  MCQ  |   |
+|  Unit 2  | 2.3 Calling a Void Method |  MCQ  |   |
+|  Unit 2  | 2.4 Calling a Void Method with Parameters |  MCQ  |   |
+|  Unit 2  | 2.5 Calling a Non-Void Method |  MCQ  |   |
+|  Unit 2  | 2.6 String Objects: Concatenation, Literals, and More |  MCQ  |   |
+|  Unit 2  | 2.7 String Methods |  MCQ  |   |
+|  Unit 2  | 2.8 Wrapper: Classes Integer and Double | MCQ  |   |
+|  Unit 2  | 2.9 Using the Math Class |  MCQ |  FRQ |
+|  **TBD**  | Unit Exam | MCQ | FRQ  |   Yes  |
+|  Unit 4  | 4.1 while Loops | MCQ  |   |
+|  Unit 4  | 4.2 for Loops |  MCQ  |   |
+|  Unit 4  | 4.3 Developing Algorithms Using Strings | MCQ   | FRQ  |
+|  Unit 4  | 4.4 Nested Iteration |  MCQ  | FRQ  |
+|  Unit 4  | 4.5 Informal Code Analysis | MCQ  |   |
+|  **TBD** | Unit Exam | MCQ | FRQ  |   Yes  |
+|  Unit 5  | 5.1 Anatomy of a Class |  MCQ  |   |
+|  Unit 5  | 5.2 Constructors |  MCQ  |   |
+|  Unit 5  | 5.3 Documentation with Comments |  MCQ  |   |
+|  Unit 5  | 5.4 Accessor Methods |  MCQ  |   |
+|  Unit 5  | 5.5 Mutator Methods |  MCQ  | FRQ  |
+|  Unit 5  | 5.6 Writing Methods |  MCQ  |   |
+|  Unit 5  | 5.7 Static Variables and Methods | MCQ  |   |
+|  Unit 5  | 5.8 Scope and Access |  MCQ  | FCQ  |
+|  Unit 5  | 5.9 this Keyword |  MCQ  |   |
+|  Unit 5  | 5.10 Ethical and Social Implications of Computing Systems |    |   |
+|  **TBD**  | Unit Exam | MCQ | FRQ  |   Yes  |
+|  Unit 9  | 9.1 Creating Superclasses and Subclasses |    |   |
+|  Unit 9  | 9.2 Writing Constructors for Subclasses |  MCQ  |   |
+|  Unit 9  | 9.3 Overriding Methods | MCQ |   |
+|  Unit 9  | 9.4 super Keyword | MCQ  |   |
+|  Unit 9  | 9.5 Creating References Using Inheritance Hierarchies | MCQ |   |
+|  Unit 9  | 9.6 Polymorphism | MCQ  |  FRQ |
+|  Unit 9  | 9.7 Object Superclass | MCQ  |  FRQ |
+|   **TBD** | Unit Exam | MCQ | FRQ  |   Yes  |
+|  Unit 6  | 6.1 Array Creation and Access | MCQ  |   |
+|  Unit 6  | 6.2 Traversing Arrays |  MCQ  |   |
+|  Unit 6  | 6.3 Enhanced for Loop for Arrays | MCQ  | FRQ  |
+|  Unit 7  | 6.4 Developing Algorithms Using Arrays |  MCQ  | FRQ |
+|   **TBD** | Unit Exam | MCQ | FRQ  |     |
+|    | ----------------------- **Semester 1 Ends** ----------------------- |   |   |
+|  Unit 7  | 7.1 Introduction to ArrayList | MCQ   |   |
+|  Unit 7  | 7.2 ArrayList Methods |  MCQ  |   |
+|  Unit 7  | 7.3 Traversing ArrayLists | MCQ  |   |
+|  Unit 7  | 7.4 Developing Algorithms Using ArrayLists |  MCQ  |   |
+|  Unit 7  | 7.5 Searching |  MCQ  | FRQ  |
+|  Week 21  | 7.6 Sorting |  MCQ  |   |
+|  Unit 7  | 7.7 Ethical Issues Around Data Collection  |    |   |
+|   **TBD**  | Unit Exam | MCQ | FRQ  |   Yes  |
+|  Unit 8  | 8.1 2D Arrays |  MCQ  |   |
+|  Unit 8  | 8.2 Traversing 2D Arrays |  MCQ  | FRQ  |
+|  **TBD**  | Unit Exam | MCQ | FRQ  |   Yes  |
+|  Week 10  | 10.1 Recursion |  MCQ  | FRQ  |
+|  Week 10  | 10.2 Recursive Searching and Sorting |  MCQ |   |
+|   **TBD** | Unit Exam | MCQ | FRQ  |     |
+|  Week 24  | White Tower Final Project |   |   |  Yes |
+|     | Practice Exam 2014 | MCQ | FRQ |
+|     | Practice Exam 2015 | MCQ | FRQ |
+|     | Practice Exam 2020 | MCQ | FRQ |
+
+
+
+
+
+
+</p></details>
+ 
+
 ## Note-taking in learning
 <details><summary>Click Here</summary>
 <p>
