@@ -141,7 +141,7 @@ It is crucial that students consistently attend class. Most classes will consist
 
 |  | CSA Topics | MCQ | FRQ | Project |
 | :---: | :---- | :---: | :---: | :----: |
-|  Unit 1  | **Orientation & Structure** |  |   |
+|    | **Orientation & Structure** |  |   |
 |  Unit 1  | 1.1 Why Programming?  Why Java? | MCQ |   |
 |  Unit 1  | 1.2 Variables and Data Types? | MCQ  |   |
 |  Unit 1  | 1.3 Expressions and Assignment Statements | MCQ  |   |
