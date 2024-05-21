@@ -190,28 +190,28 @@ It is crucial that students consistently attend class. Most classes will consist
 |  Unit 9  | 9.5 Creating References Using Inheritance Hierarchies | MCQ |   |
 |  Unit 9  | 9.6 Polymorphism | MCQ  |  FRQ |
 |  Unit 9  | 9.7 Object Superclass | MCQ  |  FRQ |
-|   **TBD** | Unit Exam | MCQ | FRQ  |   Yes  |
+|  **TBD** | Unit Exam | MCQ | FRQ  |   Yes  |
 |  Unit 6  | 6.1 Array Creation and Access | MCQ  |   |
 |  Unit 6  | 6.2 Traversing Arrays |  MCQ  |   |
 |  Unit 6  | 6.3 Enhanced for Loop for Arrays | MCQ  | FRQ  |
 |  Unit 7  | 6.4 Developing Algorithms Using Arrays |  MCQ  | FRQ |
-|   **TBD** | Unit Exam | MCQ | FRQ  |     |
+|  **TBD** | Unit Exam | MCQ | FRQ  |     |
 |    | ----------------------- **Semester 1 Ends** ----------------------- |   |   |
 |  Unit 7  | 7.1 Introduction to ArrayList | MCQ   |   |
 |  Unit 7  | 7.2 ArrayList Methods |  MCQ  |   |
 |  Unit 7  | 7.3 Traversing ArrayLists | MCQ  |   |
 |  Unit 7  | 7.4 Developing Algorithms Using ArrayLists |  MCQ  |   |
 |  Unit 7  | 7.5 Searching |  MCQ  | FRQ  |
-|  Week 21  | 7.6 Sorting |  MCQ  |   |
+|  Unit 7  | 7.6 Sorting |  MCQ  |   |
 |  Unit 7  | 7.7 Ethical Issues Around Data Collection  |    |   |
-|   **TBD**  | Unit Exam | MCQ | FRQ  |   Yes  |
+|  **TBD**  | Unit Exam | MCQ | FRQ  |   Yes  |
 |  Unit 8  | 8.1 2D Arrays |  MCQ  |   |
 |  Unit 8  | 8.2 Traversing 2D Arrays |  MCQ  | FRQ  |
 |  **TBD**  | Unit Exam | MCQ | FRQ  |   Yes  |
-|  Week 10  | 10.1 Recursion |  MCQ  | FRQ  |
-|  Week 10  | 10.2 Recursive Searching and Sorting |  MCQ |   |
-|   **TBD** | Unit Exam | MCQ | FRQ  |     |
-|  Week 24  | White Tower Final Project |   |   |  Yes |
+|  Unit 10  | 10.1 Recursion |  MCQ  | FRQ  |
+|  Unit 10  | 10.2 Recursive Searching and Sorting |  MCQ |   |
+|  **TBD** | Unit Exam | MCQ | FRQ  |     |
+|    | White Tower Final Project |   |   |  Yes |
 |     | Practice Exam 2014 | MCQ | FRQ |
 |     | Practice Exam 2015 | MCQ | FRQ |
 |     | Practice Exam 2020 | MCQ | FRQ |
