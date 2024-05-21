@@ -73,8 +73,8 @@ For this course we will be using various Integrated Development Environment (IDE
 ### Weighted Grading
 Grades are posted online using Canvas. Grades are weighted and assigned as detailed below. Each item is scaled on a point system.
 
-  | Grading | Percentage | School Year |
-  | ------- | :----------: | :------: |
+  | Grading | Percentage |
+  | ------- | :----------: |
   | Projects (IDP, Final Project) | 50% |
   | Test/ Quizzes | 30% |
   | Classwork/ Portfolio | 15% |
