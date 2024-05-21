@@ -49,23 +49,24 @@ For this course we will be using various Integrated Development Environment (IDE
 ### Policy on Academic Honesty
 
 - [x] I encourage students to work with a peer on assignments.  It can make learning fun!  YOu may help with general problem-solving strategies, ideas, and algorithms, but **all solutions should be your own**. In practice, this means that, while students can discuss programs and questions, *all lines of code should originate from your own mind*. This course uses technology in ways no other course does. If you are unsure about the ethical implications of what you are doing, you should ask. Claiming ignorance is not a reasonable excuse.
-- [x] If you use other sources for help (websites, AI, friends, etc.), please cite them in the comments of your code indicating where you got help and whether certain sections of code came from that help.  Please make sure you understand any code that you use from another source. ChatGPT tends to generate compact and complex code, so make sure you read the explanation of the code and ask for simpler code if you don’t understand it. Never copy the text of my assignments into an AI tool to generate a complete solution. You can use AI tools and other sources for idea generation, code debugging, and help with understanding or generating small parts of code to get you started, but you should not have them do all of the work for you. <mark>Be in charge of your own learning</mark>, and make sure you learn what the goal of the assignment is asking you to practice!
-- [x] Assignments that are designated as team/ group assignments must have each students name within the block header.  Other assignments students may collaborate with another student, but each student must submit their own work and the assignment cannot be a facsimile of their peers work.  Submitted assignments that has another student's name on it and not your name will be considered as cheating and subject to the schools policy regarding plagiarism/ cheating.  Furthermore, assignments that have been deemed as plagirised will receive a '0' on the assignment.
+- [x] If you use other sources for help (websites, LLM/ AI, friends, etc.), please cite them in the comments of your code indicating where you got help and whether certain sections of code came from that help. Please make sure you understand any code that you use from another source.  I discourage you from copying my assignments into LLM/ AI tool to generate a complete solution. You can use LLM/ AI tools and other sources for idea generation, code debugging, and help with understanding or generating small parts of code to get you started, but you should not have them do the work for you. <mark>Be in charge of your own learning</mark>, and make sure you learn the goal(s) of the assignment is asking you to practice!
+- [x] Assignments that are designated as team/ group assignments must have each student’s name within the block header. Other assignments students may collaborate with another student, but each student must submit their own work and the assignment cannot be a facsimile of their peer’s work. Submitted assignments that has another student’s name on it and not your name will be considered as cheating and subject to the district’s policy regarding plagiarism/ cheating.
   
 ---------------------------------------------------------------------------------------
 
 
 ### Electronic Devices
-- [x] Students should be engaged during class! Thus, cell phones and other electronic devices are a distraction that prevent students from fully participating in class. Specifically, students should not be accessing cell phones, smart phones, or any devices during class without permission from the teacher. Phones should be set to silent or turned off in class.
-- [x] Earphones, headphones, and other listening tools should not be used during class.
+- [x] Students should be engaged during class! From my experience, most students are using their electronic device(s) for activities not related to the class content.  Thus, during instruction, assessment, classwork, discussions or group collaboration electronic devices should be placed in a secure location where it will not be a distraction.  Specifically, students should not be accessing smart phones, tablets or any device during class without permission from the teacher. Phones should be set to silent or turned off in class.
+- [x] Earphones, headphones, or other listening tools (excluding medically approved listening devices) should not be used during instruction or collaboration time.
   
 ---------------------------------------------------------------------------------------
 
 
 ### Academic Support
 
+- [ ] Before school – 7:30 am – 8:30 am - *please contact me prior to the date you need assistance as I may be meeting with another student or have a meeting*
+- [ ] After school – Tuesday – Thursday: 3:45 pm – 4:15 pm
 - [ ] the **DEN** Peer Tutoring (Monday - Friday/ before and after school)
-- [ ] By appointment only
   
 ---------------------------------------------------------------------------------------
 
@@ -82,7 +83,7 @@ For this course we will be using various Integrated Development Environment (IDE
 
 ### Classroom Attendance, Conduct, & Participation
 
-It is imperative that students consistently attend class.  Most classes will consist of <mark>activities</mark> and <mark>projects</mark> where students are learning the structure and implementation of a language.  Consistent attendance is vitally important to this class and poor attendance will affect their understanding and performance in this class.  This grade is inclusive of attendance, tardies, participation, and behavior within the classroom.  The items are additive.  Example:  Student arrives late to class 4 times, teacher observed the student playing a game on their phone once, slept in class twice, and was completing an assignment six different times for Calc B/C.  The student would receive an **N** as they accumulated 13 distinct mistakes relating to their conduct.
+It is crucial that students consistently attend class. Most classes will consist of activities and projects where students are learning the structure and implementation of a language. Consistent attendance is important to this class and poor attendance will affect their understanding and overall performance in this class. This grade is inclusive of attendance, participation, and behavior within the classroom. The items are additive.
 
 
 | **Tardies, Sleeping, Playing Games, </br>doing other classes' assignments**  |
@@ -97,8 +98,9 @@ It is imperative that students consistently attend class.  Most classes will con
 ### Make-up & Late work policy
 
 - [ ] Students are responsible for makeup work when absent. Please refer to the district policy regarding make up work when students are absent.
-- [ ] *To make up a quiz or a test, it is the student’s responsibility to contact the teacher with two weeks upon their return to set an agreed upon date & time.*  
-- [ ] <u>Handouts</u> will be placed in a makeup folder with the students name and it is the student’s responsibility to check this folder when absent before consulting the instructor.
+- [ ] *To make up a quiz or a test, it is the student’s responsibility to contact the teacher with two weeks upon their return to set an agreed upon date & time.*
+  - [ ] Make-ups will be done either before or after school
+- [ ] <u>Handouts</u> will be placed in a makeup folder with the student's name and it is the student’s responsibility to check this folder when they return before consulting the instructor.
 
 
 ---------------------------------------------------------------------------------------
