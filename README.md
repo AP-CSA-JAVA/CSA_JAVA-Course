@@ -93,11 +93,22 @@ Project grading will follow this scale:
 - [ ] 1 - Below Expectations - Some of the work was completed but the program is not near functional standards. (D)
 - [ ] 0 - Little to no work was Completed (F)
 
-Students who score below 75% on a project, test or quiz (excluding finals) may retake the quiz or test for up to a 75%.  Students will have 1 week to review any feedback and/ or answers and schedule a time to retake the project, test, or quiz.  
+Students who score below 75% on a project, test or quiz (excluding finals) may retake the quiz or test for up to a 75%.  Students will have 1 week to review any feedback and/ or answers and schedule a time to retake the project, test, or quiz.
+
+
+| Grade Letter | Percentage |
+| :----------: | :--------: |
+| A | 90% - 100% |
+| B | 80% - 89% |
+| C | 70% - 79% |
+| D | 60% - 69% |
+| F | 50% - 59% |
+| M | 45% |
+
 
 ---------------------------------------------------------------------------------------
 
-### Classroom Attendance, Conduct, & Participation
+### Classroom Attendance, Conduct, & Participation Grade
 
 It is crucial that students consistently attend class. Most classes will consist of activities and projects where students are learning the structure and implementation of a language. Consistent attendance is important to this class and poor attendance will affect their understanding and overall performance in this class. This grade is inclusive of attendance, participation, and behavior within the classroom. The items are additive.
 
