@@ -338,7 +338,7 @@ Clearly the best way to learn class material is to be at the class and to take y
 
 Groups within a class can take notes together using file-sharing software on the Cloud. The individuals in the group can add to the document in real time as different individuals are adding themselves. This creates a collaborative document that all can use, download, (or adapt). This won’t work for all situations but can be very useful especially in a fast-moving classroom.
 
-#### Keeping Your Notes
+#### Keep Your Notes
 
 Class is over, and you have a beautiful set of notes in your notebook or saved in your laptop. You have written the summary of the class in your own words. Now what?
 Start by organizing your notes. We recommend you use a three-ring binder for each of your subjects. Print your notes if you used a computer. If you used note cards, insert them in plastic photo holders for binders. Group all notes from a class or unit together in a section; this includes class notes, reading notes, and instructor handouts. You might also want to copy the instructor’s syllabus for the unit on the first page of the section.
