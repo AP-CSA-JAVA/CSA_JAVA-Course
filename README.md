@@ -103,7 +103,7 @@ Students who score below 75% on a project, test or quiz (excluding finals) may r
 | C | 70% - 79% |
 | D | 60% - 69% |
 | F | 50% - 59% |
-| M | 45% |
+| M(issing) | 45% |
 
 
 ---------------------------------------------------------------------------------------
