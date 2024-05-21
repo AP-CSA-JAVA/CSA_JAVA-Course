@@ -307,7 +307,7 @@ Regardless of what note-taking method you use, there are some note-taking habits
 
 3.	**Label, number, and date all notes at the top of each page:** This will help you keep organized.
 
-4.	~~**When using a laptop, position it such that you can see the instructor and white board right over your screen:** This will keep the instructor in your field of vision even if you have to glance at your screen or keyboard from time to time. Make sure your focus remains with the instructor and not on your laptop. A word of caution about laptops for note-taking: use them if you are very adept at keyboarding, but remember that not all note-taking methods work well on laptops because they do not easily allow you to draw diagrams and use special notations (scientific and math formulas, for example).~~
+4.	<code style="color : white">**When using a laptop, position it such that you can see the instructor and white board right over your screen:** This will keep the instructor in your field of vision even if you have to glance at your screen or keyboard from time to time. Make sure your focus remains with the instructor and not on your laptop. A word of caution about laptops for note-taking: use them if you are very adept at keyboarding, but remember that not all note-taking methods work well on laptops because they do not easily allow you to draw diagrams and use special notations (scientific and math formulas, for example).</code>
 
 5.	**Don’t try to capture everything that is said:** Listen for the big ideas and write them down. Make sure you can recognize the instructor’s emphasis cues and write down all ideas and keywords the instructor emphasizes. Listen for clues like “the four causes were…” or “to sum up.…”
 
