@@ -1968,8 +1968,157 @@ You don’t need to become a pack rat with your notes. It is fairly safe to toss
 <details><summary>Click Here</summary>
  <p></br>
  Please review the Java Style Guidelines
+<section id="block-comment-templates-with-examples">
+<h3>Block Comment Templates with Examples<a class="headerlink" href="#block-comment-templates-with-examples" title="Link to this heading">¶</a></h3>
+<p>At the top of the file containing your program’s main() method, place an `external’ block comment containing the following content.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/*=============================================================================</span>
+<span class="cm"> |   Assignment:  Program #[n]:  [Assignment Title]</span>
+<span class="cm"> |       Author:  [Your Name (Your E-mail Address)]</span>
+<span class="cm"> |      Partner:  [Partner&#39;s Name (E-mail Address)]</span>
+<span class="cm"> |</span>
+<span class="cm"> |  Course Name:  [Course Name]</span>
+<span class="cm"> |   Instructor:  John Smith</span>
+<span class="cm"> |     Due Date:  [Due Date and Time]</span>
+<span class="cm"> |</span>
+<span class="cm"> |  Description:  [Describe the program&#39;s goal, IN DETAIL.]</span>
+<span class="cm"> |</span>
+<span class="cm"> |     Language:  [Programming language and version used.]</span>
+<span class="cm"> | Ex. Packages:  [List names and sources of all external packages</span>
+<span class="cm"> |                required by this program.]</span>
+<span class="cm"> |                </span>
+<span class="cm"> | Deficiencies:  [If you know of any problems with the code, provide</span>
+<span class="cm"> |                details here, otherwise clearly state that you know</span>
+<span class="cm"> |                of no unsatisfied requirements and no logic errors.]</span>
+<span class="cm"> *===========================================================================*/</span>
+</pre></div>
+</div>
+<p>An internal block comment belongs immediately ahead of each method of your program, with two exceptions. First, main() is assumed to be covered by the external block comment. Second, if your class has a group of getters and setters, you may cover the entire group with one block comment.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/*---------------------------------------------------------------------</span>
+<span class="cm">        |  Method [Method Name]</span>
+<span class="cm">        |</span>
+<span class="cm">        |  Purpose:  [Explain what this method does to support the correct</span>
+<span class="cm">        |      operation of its class, and how it does it.]</span>
+<span class="cm">        |</span>
+<span class="cm">        |  Pre-condition:  [Any non-obvious conditions that must exist</span>
+<span class="cm">        |      or be true before we can expect this method to function</span>
+<span class="cm">        |      correctly.]</span>
+<span class="cm">        |</span>
+<span class="cm">        |  Post-condition: [What we can expect to exist or be true after</span>
+<span class="cm">        |      this method has executed under the pre-condition(s).]</span>
+<span class="cm">        |</span>
+<span class="cm">        |  Parameters:</span>
+<span class="cm">        |      parameter_name -- [Explanation of the purpose of this</span>
+<span class="cm">        |          parameter to the method.  Write one explanation for each</span>
+<span class="cm">        |          formal parameter of this method.]</span>
+<span class="cm">        |</span>
+<span class="cm">        |  Returns:  [If this method sends back a value via the return</span>
+<span class="cm">        |      mechanism, describe the purpose of that value here, otherwise</span>
+<span class="cm">        |      state &#39;None.&#39;]</span>
+<span class="cm">        *-------------------------------------------------------------------*/</span>
+</pre></div>
+</div>
+<p>Each class you write, except the class containing main(), must have a block comment of this form ahead of it.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/*+----------------------------------------------------------------------</span>
+<span class="cm"> ||</span>
+<span class="cm"> ||  Class [Class Name] </span>
+<span class="cm"> ||</span>
+<span class="cm"> ||         Author:  [Your Name]</span>
+<span class="cm"> ||</span>
+<span class="cm"> ||        Purpose:  [A description of why this class exists.  For what</span>
+<span class="cm"> ||                   reason was it written?  Which jobs does it perform?]</span>
+<span class="cm"> ||</span>
+<span class="cm"> ||  Inherits From:  [If this class is a subclass of another, name it.</span>
+<span class="cm"> ||                   If not, just say &quot;None.&quot;]</span>
+<span class="cm"> ||</span>
+<span class="cm"> ||     Interfaces:  [If any predefined interfaces are implemented by</span>
+<span class="cm"> ||                   this class, name them.  If not, ... well, you know.]</span>
+<span class="cm"> ||</span>
+<span class="cm"> |+-----------------------------------------------------------------------</span>
+<span class="cm"> ||</span>
+<span class="cm"> ||      Constants:  [Name all public class constants, and provide a very</span>
+<span class="cm"> ||                   brief (but useful!) description of each.]</span>
+<span class="cm"> ||</span>
+<span class="cm"> |+-----------------------------------------------------------------------</span>
+<span class="cm"> ||</span>
+<span class="cm"> ||   Constructors:  [List the names and arguments of all defined</span>
+<span class="cm"> ||                   constructors.]</span>
+<span class="cm"> ||</span>
+<span class="cm"> ||  Class Methods:  [List the names, arguments, and return types of all</span>
+<span class="cm"> ||                   public class methods.]</span>
+<span class="cm"> ||</span>
+<span class="cm"> ||  Inst. Methods:  [List the names, arguments, and return types of all</span>
+<span class="cm"> ||                   public instance methods.]</span>
+<span class="cm"> ||</span>
+<span class="cm"> ++-----------------------------------------------------------------------*/</span>
+</pre></div>
+</div>
+<p><strong>Examples of Good and Bad Block Comments</strong></p>
+<p>Contrary to popular student opinion, I don’t require all of the commenting as an annoyance to you. It has been estimated that about 70% of programming effort is put into the maintenance of old code, and the rest into the development of new code. It is safe to assume that, should you do some programming in your career, you will be needing to modify someone else’s code to fix an old bug or to extend the code’s functionality. Commenting exists to help those unfortunate programmers who have to look at the code months or years after it was written. When you write comments for your code, keep that in mind and include useful information rather than details that are plainly obvious. The future programmers will know the language; you don’t need to explain what “i ≤ j” means! Instead, <mark>explain why it’s important that this condition be checked at this point in the code. Do you understand the difference?</mark></p>
+<p>As an example, let’s imagine that you’re going to write a subprogram that searches a list of earthquake intensities to find the most powerful quake. I am not going to show any code for this routine; this is intentional! The internal block comment is meant to give an overview of the construction and operation of the routine. If the reader wants more detail, he or she can move on to read the code, which will have its own comments about the code itself.</p>
+<p><strong>A Bad Internal Block Comment</strong></p>
+<p>Here’s our first example of a block comment for our earthquake intensity search routine. This is not an actual example from a student program, but it does (I hope!) capture most of the mistakes students make when they wait until the last minute to write a comment:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">        </span><span class="cm">/*---------------------------------------------------------------------</span>
+<span class="cm">         |  Method FIND_BIGGEST_QUAKE</span>
+<span class="cm">         |</span>
+<span class="cm">         |  Purpose:  Find the biggest earthquake.</span>
+<span class="cm">         |</span>
+<span class="cm">         |  Pre-condition: Earthquakes are available.</span>
+<span class="cm">         |</span>
+<span class="cm">         |  Post-condition: We found the biggest one.</span>
+<span class="cm">         |</span>
+<span class="cm">         |  Parameters:</span>
+<span class="cm">	 |	quakeList -- the quakes</span>
+<span class="cm">	 |	size      -- size of the list</span>
+<span class="cm">         |</span>
+<span class="cm">         |  Returns:  The biggest quake</span>
+<span class="cm">         *-------------------------------------------------------------------*/</span>
+</pre></div>
+</div>
+<p>What’s wrong with this comment? Most everything! Where to start?</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> The description of the purpose of the function is useless; we could have figured as much from the name of the method alone! What we really need to know is exactly what job this method performs. For instance, it would be really nice to know what “biggest” means in this context. Largest measure on the Richter Scale? Most damage caused?</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Pre- and Post-conditions are supposed to tell us what needs to be true before (Pre-) and after (Post-) this method executes. They need to be clear and unambiguous, not wishy-washy. These are wishy-washy.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> The structure of the quake_list parameter is not even mentioned.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> How is the list size measured? By number of items or by index position of the last item?</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Exactly what about the biggest earthquake is being returned? Its position in the list? Its measured size? The entire entry from the list?</p></li>
+</ul>
+<p>Again, the point is that anyone reading this comment will have learned almost nothing about this method. You are forcing the reader to wade through the code to learn anything of substance.</p>
+<p><strong>A Good Internal Block Comment</strong></p>
+<p>Compare the first attempt to this one:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">        </span><span class="cm">/*---------------------------------------------------------------------</span>
+<span class="cm">         |  Method FIND_BIGGEST_QUAKE</span>
+<span class="cm">         |</span>
+<span class="cm">         |  Purpose:  Identify the earthquake from the list of earthquake</span>
+<span class="cm">	 |	intensities (quakeList) that has the largest magnitude.</span>
+<span class="cm">	 |	It is assumed that the given list of quake intensities is</span>
+<span class="cm">	 |	an array-based list of unordered Richter Scale </span>
+<span class="cm">	 |	magnitudes; this function performs a simple sequential</span>
+<span class="cm">	 |	search through the array to locate the position of the</span>
+<span class="cm">	 |	largest magnitude (the largest value) in the list.</span>
+<span class="cm">         |</span>
+<span class="cm">         |  Pre-condition: quakeList holds 1 or more intensities; the</span>
+<span class="cm">         |      intensities are in no particular order; numEntries holds</span>
+<span class="cm">         |      the exact number of entries currently in the list.</span>
+<span class="cm">         |</span>
+<span class="cm">         |  Post-condition: quakeList and numEntries are unchanged; the </span>
+<span class="cm">         |      list position of the entry with the largest magnitude has </span>
+<span class="cm">         |      been identified; the position is within the boundaries</span>
+<span class="cm">         |      of the array.</span>
+<span class="cm">         |</span>
+<span class="cm">         |  Parameters:</span>
+<span class="cm">	 |	quakeList -- the array of earthquake magnitudes.  This</span>
+<span class="cm">	 |		is an array of real numbers; the first magnitude</span>
+<span class="cm">	 |		is assumed to be at index 0.</span>
+<span class="cm">	 |	numEntries -- the quantity of magnitudes in quakeList.</span>
+<span class="cm">         |</span>
+<span class="cm">         |  Returns:  The index (position) of the largest earthquake</span>
+<span class="cm">	 |	magnitude in the quakeList array.</span>
+<span class="cm">         *-------------------------------------------------------------------*/</span>
+</pre></div>
+</div>
 <p><strong>Java Style Guidelines</strong></p>
 <p>Here are guidelines for writing Java programs in this course.</p>
+</section>
 <section id="spaces">
 <h3>Spaces<a class="headerlink" href="#spaces" title="Link to this heading">¶</a></h3>
 <p>Put spaces on both sides of arithmetic operators.</p>
@@ -2391,6 +2540,7 @@ Consider the following code to read into an array until it is full or the user e
 <li><a class="reference internal" href="#ap-computational-thinking-practices-skills">AP Computational Thinking Practices: Skills</a></li>
 <li><a class="reference internal" href="#ap-computer-science-a-vocabulary">AP Computer Science A Vocabulary</a></li>
 <li><a class="reference internal" href="#java-style-guidelines">Java Style Guidelines</a><ul>
+<li><a class="reference internal" href="#block-comment-templates-with-examples">Block Comment Templates with Examples</a></li>
 <li><a class="reference internal" href="#spaces">Spaces</a></li>
 <li><a class="reference internal" href="#braces-and-indenting">Braces and Indenting</a></li>
 <li><a class="reference internal" href="#names-and-declarations">Names and Declarations</a></li>
