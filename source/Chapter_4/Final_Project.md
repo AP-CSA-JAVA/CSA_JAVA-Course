@@ -61,6 +61,6 @@ Your White Tower Project is to design and develop a Java computer program of you
 |    |
 | 5/31 | **Deliverables for your White Tower Project:** |  |
 |  | Submission of your written proposal (revised if needed) and/or supporting documentation | 10 |
-|  | Program Code as a txt file using the Java Style Guide  | 20 |
+|  | Program Code appropriately commented (Block Code) as a .txt/.java file using the [Java Style Guide](https://ap-csa-java.github.io/CSA_JAVA-Course/home.html#java-style-guidelines)  | 20 |
 |  | Video of your program running with narration (length no more than 2 minutes) | 20 | 
 |  | **TOTAL POINTS** | 100 |
