@@ -9,7 +9,7 @@ At the top of the file containing your program's main() method, place an `extern
  |       Author:  [Your Name (Your E-mail Address)]
  |
  |       Course:  Computer Science A
- |   Instructor:  Title First Initial Last Name
+ |   Instructor:  [title, first-initial of the given name, Surname (Ex. Dr. J. Smith) ] 
  |     Due Date:  [Due Date and Time]
  |
  |  Description:  [Describe the program's goal, IN DETAIL.]
