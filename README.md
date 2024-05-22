@@ -707,10 +707,12 @@ Exercise: Note-taking
 ## Java Style Guidelines
 <details><summary>Click Here</summary>
  <p></br>
- Please review the Java Style Guidelines
+ 
+Please review the Java Style Guidelines
 
 #### Block Comment Templates with Examples
 
+[Source Link](https://www2.cs.arizona.edu/~mccann/styletemplates.html#EXAMPLES)
 At the top of the file containing your program's main() method, place an `external' block comment containing the following content. 
 
 ```java
