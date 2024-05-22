@@ -708,10 +708,180 @@ Exercise: Note-taking
 <details><summary>Click Here</summary>
  <p></br>
  Please review the Java Style Guidelines
- 
+
+#### Block Comment Templates with Examples
+
+At the top of the file containing your program's main() method, place an `external' block comment containing the following content. 
+
+```java
+/*=============================================================================
+ |   Assignment:  Program #[n]:  [Assignment Title]
+ |       Author:  [Your Name (Your E-mail Address)]
+ |      Partner:  [Partner's Name (E-mail Address)]
+ |
+ |  Course Name:  [Course Name]
+ |   Instructor:  John Smith
+ |     Due Date:  [Due Date and Time]
+ |
+ |  Description:  [Describe the program's goal, IN DETAIL.]
+ |
+ |     Language:  [Programming language and version used.]
+ | Ex. Packages:  [List names and sources of all external packages
+ |                required by this program.]
+ |                
+ | Deficiencies:  [If you know of any problems with the code, provide
+ |                details here, otherwise clearly state that you know
+ |                of no unsatisfied requirements and no logic errors.]
+ *===========================================================================*/
+
+```
+
+An internal block comment belongs immediately ahead of each method of your program, with two exceptions. First, main() is assumed to be covered by the external block comment. Second, if your class has a group of getters and setters, you may cover the entire group with one block comment.
+
+```java
+/*---------------------------------------------------------------------
+        |  Method [Method Name]
+        |
+        |  Purpose:  [Explain what this method does to support the correct
+        |      operation of its class, and how it does it.]
+        |
+        |  Pre-condition:  [Any non-obvious conditions that must exist
+        |      or be true before we can expect this method to function
+        |      correctly.]
+        |
+        |  Post-condition: [What we can expect to exist or be true after
+        |      this method has executed under the pre-condition(s).]
+        |
+        |  Parameters:
+        |      parameter_name -- [Explanation of the purpose of this
+        |          parameter to the method.  Write one explanation for each
+        |          formal parameter of this method.]
+        |
+        |  Returns:  [If this method sends back a value via the return
+        |      mechanism, describe the purpose of that value here, otherwise
+        |      state 'None.']
+        *-------------------------------------------------------------------*/
+
+```
+
+Each class you write, except the class containing main(), must have a block comment of this form ahead of it.
+
+```java
+/*+----------------------------------------------------------------------
+ ||
+ ||  Class [Class Name] 
+ ||
+ ||         Author:  [Your Name]
+ ||
+ ||        Purpose:  [A description of why this class exists.  For what
+ ||                   reason was it written?  Which jobs does it perform?]
+ ||
+ ||  Inherits From:  [If this class is a subclass of another, name it.
+ ||                   If not, just say "None."]
+ ||
+ ||     Interfaces:  [If any predefined interfaces are implemented by
+ ||                   this class, name them.  If not, ... well, you know.]
+ ||
+ |+-----------------------------------------------------------------------
+ ||
+ ||      Constants:  [Name all public class constants, and provide a very
+ ||                   brief (but useful!) description of each.]
+ ||
+ |+-----------------------------------------------------------------------
+ ||
+ ||   Constructors:  [List the names and arguments of all defined
+ ||                   constructors.]
+ ||
+ ||  Class Methods:  [List the names, arguments, and return types of all
+ ||                   public class methods.]
+ ||
+ ||  Inst. Methods:  [List the names, arguments, and return types of all
+ ||                   public instance methods.]
+ ||
+ ++-----------------------------------------------------------------------*/
+
+```
+
+**Examples of Good and Bad Block Comments** 
+
+Contrary to popular student opinion, I don't require all of the commenting as an annoyance to you. It has been estimated that about 70% of programming effort is put into the maintenance of old code, and the rest into the development of new code. It is safe to assume that, should you do some programming in your career, you will be needing to modify someone else's code to fix an old bug or to extend the code's functionality. Commenting exists to help those unfortunate programmers who have to look at the code months or years after it was written. When you write comments for your code, keep that in mind and include useful information rather than details that are plainly obvious. The future programmers will know the language; you don't need to explain what "i ≤ j" means! Instead, <mark>explain why it's important that this condition be checked at this point in the code. Do you understand the difference?</mark>
+
+As an example, let's imagine that you're going to write a subprogram that searches a list of earthquake intensities to find the most powerful quake. I am not going to show any code for this routine; this is intentional! The internal block comment is meant to give an overview of the construction and operation of the routine. If the reader wants more detail, he or she can move on to read the code, which will have its own comments about the code itself. 
+
+**A Bad Internal Block Comment**
+
+Here's our first example of a block comment for our earthquake intensity search routine. This is not an actual example from a student program, but it does (I hope!) capture most of the mistakes students make when they wait until the last minute to write a comment:
+
+```java
+        /*---------------------------------------------------------------------
+         |  Method FIND_BIGGEST_QUAKE
+         |
+         |  Purpose:  Find the biggest earthquake.
+         |
+         |  Pre-condition: Earthquakes are available.
+         |
+         |  Post-condition: We found the biggest one.
+         |
+         |  Parameters:
+	 |	quakeList -- the quakes
+	 |	size      -- size of the list
+         |
+         |  Returns:  The biggest quake
+         *-------------------------------------------------------------------*/
+
+```
+
+What's wrong with this comment? Most everything! Where to start? 
+- [ ] The description of the purpose of the function is useless; we could have figured as much from the name of the method alone! What we really need to know is exactly what job this method performs. For instance, it would be really nice to know what "biggest" means in this context. Largest measure on the Richter Scale? Most damage caused?
+- [ ] Pre- and Post-conditions are supposed to tell us what needs to be true before (Pre-) and after (Post-) this method executes. They need to be clear and unambiguous, not wishy-washy. These are wishy-washy.
+- [ ] The structure of the quake_list parameter is not even mentioned.
+- [ ] How is the list size measured? By number of items or by index position of the last item?
+- [ ] Exactly what about the biggest earthquake is being returned? Its position in the list? Its measured size? The entire entry from the list? 
+
+Again, the point is that anyone reading this comment will have learned almost nothing about this method. You are forcing the reader to wade through the code to learn anything of substance. 
+
+**A Good Internal Block Comment**
+
+Compare the first attempt to this one:
+
+```java
+        /*---------------------------------------------------------------------
+         |  Method FIND_BIGGEST_QUAKE
+         |
+         |  Purpose:  Identify the earthquake from the list of earthquake
+	 |	intensities (quakeList) that has the largest magnitude.
+	 |	It is assumed that the given list of quake intensities is
+	 |	an array-based list of unordered Richter Scale 
+	 |	magnitudes; this function performs a simple sequential
+	 |	search through the array to locate the position of the
+	 |	largest magnitude (the largest value) in the list.
+         |
+         |  Pre-condition: quakeList holds 1 or more intensities; the
+         |      intensities are in no particular order; numEntries holds
+         |      the exact number of entries currently in the list.
+         |
+         |  Post-condition: quakeList and numEntries are unchanged; the 
+         |      list position of the entry with the largest magnitude has 
+         |      been identified; the position is within the boundaries
+         |      of the array.
+         |
+         |  Parameters:
+	 |	quakeList -- the array of earthquake magnitudes.  This
+	 |		is an array of real numbers; the first magnitude
+	 |		is assumed to be at index 0.
+	 |	numEntries -- the quantity of magnitudes in quakeList.
+         |
+         |  Returns:  The index (position) of the largest earthquake
+	 |	magnitude in the quakeList array.
+         *-------------------------------------------------------------------*/
+
+```
+
+
 **Java Style Guidelines**
 
 Here are guidelines for writing Java programs in this course.
+
 #### Spaces
 
 Put spaces on both sides of arithmetic operators.
