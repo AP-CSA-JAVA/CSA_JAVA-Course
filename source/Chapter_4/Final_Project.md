@@ -9,7 +9,7 @@ Your White Tower Project is to design and develop a Java computer program of you
 4) The project must be approved prior to you/ your team developing your program.
 5) Your program must be created by you and/or your peers.  Plagiarizing code will not be accepted.
 6) You must **comment** out your code where appropriate.
-7) You must have an [**explanation**<sup>3</sup>](https://ap-csa-java.github.io/CSA_JAVA-Course/home.html#java-style-guidelines) of the purpose of your program at the beginning of your program.
+7) You must have an [**explanation**](https://ap-csa-java.github.io/CSA_JAVA-Course/home.html#java-style-guidelines) of the purpose of your program at the beginning of your program.
 8) Your program should include, but not limited to: *variables, arrays/ arrayList, nested iterations, loops, Boolean logic, constructors, toString*, inheritance
 9) The program must work and be relatively bug-free in order to get full credit.
 
@@ -18,30 +18,6 @@ Your White Tower Project is to design and develop a Java computer program of you
 
 <sup>2</sup> - Executive Summary: project background, proposed solution, deliverables and goals, conclusion.
 
-<sup>3</sup> - See Below 
-
-```java
-/*=============================================================================
- |   Assignment:  Program #[n]:  [Assignment Title]
- |       Author:  [Your Name (Your E-mail Address)]
- |                [Partner Name (E-mail Address)  ]
- |
- |       Course:  Computer Science A
- |   Instructor:  [first & Last Name ] 
- |     Due Date:  [Due Date and Time]
- |
- |  Description:  [Describe the program's goal, IN DETAIL.]
- |
- |     Language:  [Programming language and version used.]
- | Ex. Packages:  [List names and sources of all external packages
- |                required by this program.]
- |                
- | Deficiencies:  [If you know of any problems with the code, provide
- |                details here, otherwise clearly state that you know
- |                of no unsatisfied requirements and no logic errors.]
- *===========================================================================*/
-
-```
 
 ### Project schedule
 | Dates | Activity | Points |
