@@ -93,7 +93,7 @@ Project grading will follow this scale:
 - [ ] 1 - Below Expectations - Some of the work was completed but the program is not near functional standards. (D)
 - [ ] 0 - Little to no work was Completed (F)
 
-Students who score below 75% on a project, test or quiz (excluding finals) may retake the quiz or test for up to a 75%.  Students will have 1 week to review any feedback and/ or answers and schedule a time to retake the project, test, or quiz.
+Students who score below 75% on a project, test or quiz (excluding finals) may retake the project, test, or quiz for up to a 75%.  Students will have 1 week to review any feedback and/ or answers and schedule a time to retake the project, test, or quiz.
 
 
 | Grade Letter | Percentage |
