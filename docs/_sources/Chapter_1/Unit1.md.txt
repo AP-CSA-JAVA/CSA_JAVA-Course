@@ -44,8 +44,9 @@ Notice that within the main method there is a print statement.  Let's break down
 - [ ] <b>println()</b> is invoked by the PrintStream class.</br>
 - [ ] <b>NOTE</b> <i>println()</i> when executed will return to the next line. Whereas <i>print()</i> will execute the string literal but not return to the next line. You can also create a new line inside a print statement by adding   <b>\n</b>  anywhere inside the quotation marks of a print statement.
 
+
 -------------------------------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------------------------------
+
 
 Take a look at the diagram below:
 
@@ -107,7 +108,7 @@ Create the happy face image above using the following criteria:
 - [ ] Use System.out.print at least two lines
 - [ ] Use System.out.println at least three times
 
-Please screenshot your code with result and include it in your Canvas assignment.
+
 
 ### Assignment 1.1.2
 
@@ -130,7 +131,7 @@ Year                 Age                    Description
 ```
 
 
-Please screenshot your code with result and include it in your Canvas assignment.
+
 
 
 
@@ -203,7 +204,7 @@ Use a Scanner object to create an input feature in your program.  Click on [Scan
 - [ ] boolean
 - [ ] print statement that includes all for data types
 
-Please screenshot your code with result and include it in your assignment.
+
 
 
 ## 1.3 Expressions and Assignment Statements
@@ -301,7 +302,7 @@ this assignment.**
 - [ ] Use the scanner class to receive input from the user  
 - [ ] Store those values and perform some basic operations with those numbers
 
-Submit your code on Canvas.
+
 
 **Example Output**
 ```java
@@ -571,7 +572,7 @@ Total travel time:19.59838263477574
 
 You will write a widening algorithm with new variables to show the travel time to and from all planets.  You will write a casting version without new variables to show the travel times. The one rule is that you must use the provided code and not change any provided data types.
 
-Take a screenshot of your completed code and the output it produced.
+
 
 ### Numbers Riddle Project 
 
