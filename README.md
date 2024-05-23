@@ -57,10 +57,16 @@ For this course we will be using various Integrated Development Environment (IDE
 
 ### Electronic Devices
 - [x] Students should be engaged during class! From my experience, most students are using their electronic device(s) for activities not related to the class content.  Thus, during instruction, assessment, classwork, discussions or group collaboration electronic devices should be placed in a secure location where it will not be a distraction.  Specifically, students should not be accessing smart phones, tablets or any device during class without permission from the teacher. Phones should be set to silent or turned off in class.
+- [x] **Laptops** are a great tool the school has provided us for the sake of learning.  **Laptops are a privilege, not a right**. Parent(s)/guardian(s) will be notified and conferences will be held should a student persist in using laptops for entertainment purposes.
 - [x] Earphones, headphones, or other listening tools (excluding medically approved listening devices) should not be used during instruction or collaboration time.
   
 ---------------------------------------------------------------------------------------
 
+### Notes/ Notebook
+
+Each student will be responsible for taking, organizing, and maintaining Unit notes  ([Purpose of Note-Taking](https://ap-csa-java.github.io/CSA_JAVA-Course/home.html#note-taking-in-learning)).  Notes should be hand-written.  The method of note-taking will be Cornell Notes.  Students will be provided with the formatted Cornell Notes document for each [subsection of the Unit](https://ap-csa-java.github.io/CSA_JAVA-Course/home.html#units-topics).  Additional pages will be provided as needed.  Students are encouraged to keep their notebooks up-to-date and organized. 
+
+---------------------------------------------------------------------------------------
 
 ### Academic Support
 
