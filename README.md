@@ -92,7 +92,7 @@ Grades are posted online using Canvas. Grades are weighted and assigned as detai
 
 All projects, presentations, tests, quizzes, classwork, portfolio & notes will be used to calculate your final grade. 
 
-Project grading will follow this scale:
+Projects, classwork, portfolio, and notes grading will follow this scale:
 - [ ] 4 - Exceeded Expectations - The program is fully functional and the student has added functionality that exceeds the brief. (A)
 - [ ] 3 - Met Expectations - All program functionality is evident. (B)
 - [ ] 2 - Approaching Expectations - Most of the program is functional but there are still some functionality issues. (C).
