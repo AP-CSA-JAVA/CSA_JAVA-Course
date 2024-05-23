@@ -57,7 +57,7 @@ For this course we will be using various Integrated Development Environment (IDE
 
 ### Electronic Devices
 - [x] Students should be engaged during class! From my experience, most students are using their electronic device(s) for activities not related to the class content.  Thus, during instruction, assessment, classwork, discussions or group collaboration electronic devices should be placed in a secure location where it will not be a distraction.  Specifically, students should not be accessing smart phones, tablets or any device during class without permission from the teacher. Phones should be set to silent or turned off in class.
-- [x] CAMS has provided Windows **Laptops** for student use.  **Personal Laptops are a privilege on our campus and not a right**. Parent(s)/guardian(s) will be notified and conferences will be held should a student persist in using laptops for entertainment purposes.
+- [x] CAMS provides Windows **Laptops** for student use.  **Personal Laptops are a privilege on our campus and not a right**. Parent(s)/guardian(s) will be notified and conferences will be held should a student persist in using laptops for entertainment purposes.
 - [x] Earphones, headphones, or other listening tools (excluding medically approved listening devices) should not be used during instruction or collaboration time.
   
 ---------------------------------------------------------------------------------------
