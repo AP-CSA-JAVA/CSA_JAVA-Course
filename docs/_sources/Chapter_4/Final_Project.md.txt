@@ -42,6 +42,8 @@ Your White Tower Project is to design and develop a Java computer program of you
 |  | Video of your program running with narration (length no more than 2 minutes) | 8 | 
 |  | **TOTAL POINTS** | 100 |
 
+------------------------------------------------------------------------------------------
+
 <sup>**</sup> - see **Example** below
 
 | Test Case # | Test Case Description | Test Steps | Test Data | Expected Result | Actual Result | Pass/Fail |
