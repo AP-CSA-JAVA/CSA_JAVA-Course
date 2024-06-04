@@ -189,6 +189,10 @@ public class DateTimeExample {
 
 ```
 
+
+### Date and Time Functions
+
+
 | Name | Description |
 | :---: | :----: |
 | ADDDATE() | Add time values (intervals) to a date value |
