@@ -183,6 +183,7 @@ The sum is: 133
 The average is: 33.25
 ```
 
+---------------------------------------------------------------------------------------
 
 ## 4.1a Do While Loops - Oracle
 
@@ -222,7 +223,7 @@ Inside the "do" block, we use a `do-while` loop to repeatedly prompt the user fo
     
 This program demonstrates a simple "do-while" loop to ensure that the user provides valid input before proceeding with the program.
 
-### 4.1a - Guessing Game
+### 4.1a - Classwork Guessing Game
 
 **Directions:** Write a java program that will ask the user to pick a number between 1 - 100.  Use a `do` while loop that will compare the random number generated with `Math.random()` method with the choice of the user.  If the user inputs the correct number, end the game with a congratulatory message.  If the user inputs the number wrong, tell the user how close they are to the actual number and give them another chance to pick the number.  Program ends when the number is selected.
 
@@ -272,7 +273,7 @@ public class Name {
 </p></details>
 
 
-### Activity 4.1a - convert program
+### Activity 4.1b - convert program
 
 **Directions:** Convert Program A and Program B from a `for` loop to a `do-while` loop. 
 
@@ -327,7 +328,7 @@ public class Main
 }
 ```
 
-### Activity 4.1b
+### Activity 4.1c
 
 **Directions:** Write a program using a `do-while` loop that does the following:
 - Write a do-while loop that asks a user for their name, which must be at least four characters long.
@@ -352,6 +353,8 @@ You have learned about primitive data types like `int`, `double`, and `boolean`.
 `char reply = 'y';`
 
 Java chars and strings are closely related. A String is a sequence of chararcters that reference an object. Using a new method, you can find individual characters in a String.  Remember, a `char` is a primitive data type, you can compare primitive data types with == in conditionals.
+
+---------------------------------------------------------------------------------------
 
 ### Assignment `char` - Oracle
 **Directions:** Using a do-while, validate the input so the user types only one character.  Write a `switch` statement to show the character “is a vowel” or “ is a consonant.”
