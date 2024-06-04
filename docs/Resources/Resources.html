@@ -782,6 +782,249 @@ At the top of the file containing your program’s main() method, place an `exte
 </pre></div>
 </div>
 <p>Example of this in use can be found <a class="reference external" href="https://replit.com/&#64;jonvirak/Array-Creation#Main.java">here</a>.  Use this format for Assignment 2 and all future programs where you are asked to create two different programs.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.time.LocalDate</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.time.LocalTime</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.time.LocalDateTime</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.time.format.DateTimeFormatter</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.time.Period</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">DateTimeExample</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">printLocalDate</span><span class="p">();</span>
+<span class="w">        </span><span class="n">printLocalTime</span><span class="p">();</span>
+<span class="w">        </span><span class="n">printLocalDateTime</span><span class="p">();</span>
+<span class="w">        </span><span class="n">printFormattedDateTime</span><span class="p">();</span>
+<span class="w">        </span><span class="n">calculatePeriod</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Method to demonstrate LocalDate</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printLocalDate</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">LocalDate</span><span class="w"> </span><span class="n">date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LocalDate</span><span class="p">.</span><span class="na">now</span><span class="p">();</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Current Date: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">date</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Method to demonstrate LocalTime</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printLocalTime</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">LocalTime</span><span class="w"> </span><span class="n">time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LocalTime</span><span class="p">.</span><span class="na">now</span><span class="p">();</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Current Time: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">time</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Method to demonstrate LocalDateTime</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printLocalDateTime</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">LocalDateTime</span><span class="w"> </span><span class="n">dateTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LocalDateTime</span><span class="p">.</span><span class="na">now</span><span class="p">();</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Current Date and Time: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dateTime</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Method to demonstrate formatting LocalDateTime</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printFormattedDateTime</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">LocalDateTime</span><span class="w"> </span><span class="n">dateTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LocalDateTime</span><span class="p">.</span><span class="na">now</span><span class="p">();</span>
+<span class="w">        </span><span class="n">DateTimeFormatter</span><span class="w"> </span><span class="n">formatter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DateTimeFormatter</span><span class="p">.</span><span class="na">ofPattern</span><span class="p">(</span><span class="s">&quot;yyyy-MM-dd HH:mm:ss&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">formattedDateTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dateTime</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="n">formatter</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Formatted Date and Time: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">formattedDateTime</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Method to demonstrate Period</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">calculatePeriod</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">LocalDate</span><span class="w"> </span><span class="n">startDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LocalDate</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">        </span><span class="n">LocalDate</span><span class="w"> </span><span class="n">endDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LocalDate</span><span class="p">.</span><span class="na">now</span><span class="p">();</span>
+<span class="w">        </span><span class="n">Period</span><span class="w"> </span><span class="n">period</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Period</span><span class="p">.</span><span class="na">between</span><span class="p">(</span><span class="n">startDate</span><span class="p">,</span><span class="w"> </span><span class="n">endDate</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Period between &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">startDate</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; and &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">endDate</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">period</span><span class="p">.</span><span class="na">getYears</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; years, &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">period</span><span class="p">.</span><span class="na">getMonths</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; months, and &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">period</span><span class="p">.</span><span class="na">getDays</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; days&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>Name</p></th>
+<th class="head text-center"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>ADDDATE()</p></td>
+<td class="text-center"><p>Add time values (intervals) to a date value</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>ADDTIME()</p></td>
+<td class="text-center"><p>Add time</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>CONVERT_TZ()</p></td>
+<td class="text-center"><p>Convert from one time zone to another</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>CURDATE()</p></td>
+<td class="text-center"><p>Return the current date</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>CURRENT_DATE(), <br>CURRENT_DATE</p></td>
+<td class="text-center"><p>Synonyms for CURDATE()</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>CURRENT_TIME(), <br>CURRENT_TIME</p></td>
+<td class="text-center"><p>Synonyms for CURTIME()</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>CURRENT_TIMESTAMP(), <br>CURRENT_TIMESTAMP</p></td>
+<td class="text-center"><p>Synonyms for NOW()</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>CURTIME()</p></td>
+<td class="text-center"><p>Return the current time</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>DATE()</p></td>
+<td class="text-center"><p>Extract the date part of a date or datetime expression</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>DATE_ADD()</p></td>
+<td class="text-center"><p>Add time values (intervals) to a date value</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>DATE_FORMAT()</p></td>
+<td class="text-center"><p>Format date as specified</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>DATE_SUB()</p></td>
+<td class="text-center"><p>Subtract a time value (interval) from a date</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>DATEDIFF()</p></td>
+<td class="text-center"><p>Subtract two dates</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>DAY()</p></td>
+<td class="text-center"><p>Synonym for DAYOFMONTH()</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>DAYNAME()</p></td>
+<td class="text-center"><p>Return the name of the weekday</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>DAYOFMONTH()</p></td>
+<td class="text-center"><p>Return the day of the month (0-31)</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>DAYOFWEEK()</p></td>
+<td class="text-center"><p>Return the weekday index of the argument</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>DAYOFYEAR()</p></td>
+<td class="text-center"><p>Return the day of the year (1-366)</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>EXTRACT()</p></td>
+<td class="text-center"><p>Extract part of a date</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>FROM_DAYS()</p></td>
+<td class="text-center"><p>Convert a day number to a date</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>FROM_UNIXTIME()</p></td>
+<td class="text-center"><p>Format Unix timestamp as a date</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>GET_FORMAT()</p></td>
+<td class="text-center"><p>Return a date format string</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>HOUR()</p></td>
+<td class="text-center"><p>Extract the hour</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>LAST_DAY</p></td>
+<td class="text-center"><p>Return the last day of the month for the argument</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>LOCALTIME(), <br>LOCALTIME</p></td>
+<td class="text-center"><p>Synonym for NOW()</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>LOCALTIMESTAMP, <br>LOCALTIMESTAMP()</p></td>
+<td class="text-center"><p>Synonym for NOW()</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>MAKEDATE()</p></td>
+<td class="text-center"><p>Create a date from the year and day of year</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>MAKETIME()</p></td>
+<td class="text-center"><p>Create time from hour, minute, second</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>MICROSECOND()</p></td>
+<td class="text-center"><p>Return the microseconds from argument</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>MINUTE()</p></td>
+<td class="text-center"><p>Return the minute from the argument</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>MONTH()</p></td>
+<td class="text-center"><p>Return the month from the date passed</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>MONTHNAME()</p></td>
+<td class="text-center"><p>Return the name of the month</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>NOW()</p></td>
+<td class="text-center"><p>Return the current date and time</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>PERIOD_ADD()</p></td>
+<td class="text-center"><p>Add a period to a year-month</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>PERIOD_DIFF()</p></td>
+<td class="text-center"><p>Return the number of months between periods</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>QUARTER()</p></td>
+<td class="text-center"><p>Return the quarter from a date argument</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>SEC_TO_TIME()</p></td>
+<td class="text-center"><p>Converts seconds to ‘hh:mm:ss’ format</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>SECOND()</p></td>
+<td class="text-center"><p>Return the second (0-59)</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>STR_TO_DATE()</p></td>
+<td class="text-center"><p>Convert a string to a date</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>SUBDATE()</p></td>
+<td class="text-center"><p>Synonym for DATE_SUB() when invoked with three arguments</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>SUBTIME()</p></td>
+<td class="text-center"><p>Subtract times</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>SYSDATE()</p></td>
+<td class="text-center"><p>Return the time at which the function executes</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>TIME()</p></td>
+<td class="text-center"><p>Extract the time portion of the expression passed</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>TIME_FORMAT()</p></td>
+<td class="text-center"><p>Format as time</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>TIME_TO_SEC()</p></td>
+<td class="text-center"><p>Return the argument converted to seconds</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>TIMEDIFF()</p></td>
+<td class="text-center"><p>Subtract time</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>TIMESTAMP()</p></td>
+<td class="text-center"><p>With a single argument, this function returns the date or datetime expression; with two arguments, the sum of the arguments</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>TIMESTAMPADD()</p></td>
+<td class="text-center"><p>Add an interval to a datetime expression</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>TIMESTAMPDIFF()</p></td>
+<td class="text-center"><p>Return the difference of two datetime expressions, using the units specified</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>TO_DAYS()</p></td>
+<td class="text-center"><p>Return the date argument converted to days</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>TO_SECONDS()</p></td>
+<td class="text-center"><p>Return the date or datetime argument converted to seconds since Year 0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>UNIX_TIMESTAMP()</p></td>
+<td class="text-center"><p>Return a Unix timestamp</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>UTC_DATE()</p></td>
+<td class="text-center"><p>Return the current UTC date</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>UTC_TIME()</p></td>
+<td class="text-center"><p>Return the current UTC time</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>UTC_TIMESTAMP()</p></td>
+<td class="text-center"><p>Return the current UTC date and time</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>WEEK()</p></td>
+<td class="text-center"><p>Return the week number</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>WEEKDAY()</p></td>
+<td class="text-center"><p>Return the weekday index</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>WEEKOFYEAR()</p></td>
+<td class="text-center"><p>Return the calendar week of the date (1-53)</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>YEAR()</p></td>
+<td class="text-center"><p>Return the year</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>YEARWEEK()</p></td>
+<td class="text-center"><p>Return the year and week</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 </section>
 
