@@ -359,14 +359,14 @@
 <span class="w">		</span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
 <span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Enter the number of elements you want to store: &quot;</span><span class="p">);</span>
 <span class="w">		</span>
-<span class="w">		</span><span class="n">n</span><span class="o">=</span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span><span class="w">  </span><span class="c1">// storing the number of elements that you want to store.</span>
+<span class="w">		</span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span><span class="w">  </span><span class="c1">// storing the number of elements that you want to store.</span>
 <span class="w">		</span>
 <span class="w">		</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="n">n</span><span class="o">]</span><span class="p">;</span><span class="w">  </span><span class="c1">// defining the number of inputs for the array</span>
 <span class="w">			</span>
 <span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter the elements of the array: &quot;</span><span class="p">);</span>
-<span class="w">		</span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">){</span>
+<span class="w">		</span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">){</span>
 <span class="w">			</span><span class="c1">//reading array elements from the user</span>
-<span class="w">			</span><span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]=</span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<span class="w">			</span><span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
 <span class="w">			</span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
 <span class="w">		</span><span class="p">}</span>
 <span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Contents of the array are: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">array</span><span class="p">));</span>
@@ -455,8 +455,8 @@
 </div>
 </section>
 </section>
-<section id="do-while-loops-oracle">
-<h2>4.1.1 Do While Loops - Oracle<a class="headerlink" href="#do-while-loops-oracle" title="Link to this heading">¶</a></h2>
+<section id="a-do-while-loops-oracle">
+<h2>4.1a Do While Loops - Oracle<a class="headerlink" href="#a-do-while-loops-oracle" title="Link to this heading">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">do-while</span></code> loop will not be assessed for the AP CSA exam, it can be a useful tool when writing programs.</p>
 <p>A <code class="docutils literal notranslate"><span class="pre">do-while</span></code> loop in Java is a type of loop where the code block is executed at least once before checking the loop condition.
 This is in contrast to a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop, which checks the condition before entering the loop. Here’s a Java program that
@@ -488,8 +488,52 @@ demonstrates and explains a <code class="docutils literal notranslate"><span cla
 </div>
 <p>Inside the “do” block, we use a <code class="docutils literal notranslate"><span class="pre">do-while</span></code> loop to repeatedly prompt the user for input until they enter a positive number. The loop will always execute at least once because the condition is checked at the end of the loop.  Within the loop,  a message asks the user to enter a positive number and read their input using the scanner class. The program then checks if the entered number is less than or equal to 0. If it is, a message asks the user to enter a positive number again.  The loop will continue to execute as long as the condition (number &lt;= 0) is true.  Once the user enters a positive number, the loop ends, and a message is printed indicating that they entered a positive number.</p>
 <p>This program demonstrates a simple “do-while” loop to ensure that the user provides valid input before proceeding with the program.</p>
-<section id="activity-4-1-1-1">
-<h3>Activity 4.1.1.1<a class="headerlink" href="#activity-4-1-1-1" title="Link to this heading">¶</a></h3>
+<section id="a-guessing-game">
+<h3>4.1a - Guessing Game<a class="headerlink" href="#a-guessing-game" title="Link to this heading">¶</a></h3>
+<p><strong>Directions:</strong> Write a java program that will ask the user to pick a number between 1 - 100.  Use a <code class="docutils literal notranslate"><span class="pre">do</span></code> while loop that will compare the random number generated with <code class="docutils literal notranslate"><span class="pre">Math.random()</span></code> method with the choice of the user.  If the user inputs the correct number, end the game with a congratulatory message.  If the user inputs the number wrong, tell the user how close they are to the actual number and give them another chance to pick the number.  Program ends when the number is selected.</p>
+<details><summary>Click Here</summary>
+ <p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Name</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">randomNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">userGuess</span><span class="p">;</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Welcome to the Number Guessing Game!&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;I&#39;ve picked a number between 1 and 100. Try to guess it!&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Enter your guess: &quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">userGuess</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">userGuess</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">randomNumber</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Congratulations! You guessed the correct number: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">randomNumber</span><span class="p">);</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="kt">int</span><span class="w"> </span><span class="n">difference</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">abs</span><span class="p">(</span><span class="n">randomNumber</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">userGuess</span><span class="p">);</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">difference</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You&#39;re very close! Try again.&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">difference</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You&#39;re close! Try again.&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">difference</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">30</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You&#39;re getting warmer! Try again.&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You&#39;re far away! Try again.&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">scanner</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</p></details>
+</section>
+<section id="activity-4-1a-convert-program">
+<h3>Activity 4.1a - convert program<a class="headerlink" href="#activity-4-1a-convert-program" title="Link to this heading">¶</a></h3>
 <p><strong>Directions:</strong> Convert Program A and Program B from a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to a <code class="docutils literal notranslate"><span class="pre">do-while</span></code> loop.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">//Program A</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
@@ -541,8 +585,8 @@ demonstrates and explains a <code class="docutils literal notranslate"><span cla
 </pre></div>
 </div>
 </section>
-<section id="activity-4-1-1-2">
-<h3>Activity 4.1.1.2<a class="headerlink" href="#activity-4-1-1-2" title="Link to this heading">¶</a></h3>
+<section id="activity-4-1b">
+<h3>Activity 4.1b<a class="headerlink" href="#activity-4-1b" title="Link to this heading">¶</a></h3>
 <p><strong>Directions:</strong> Write a program using a <code class="docutils literal notranslate"><span class="pre">do-while</span></code> loop that does the following:</p>
 <ul class="simple">
 <li><p>Write a do-while loop that asks a user for their name, which must be at least four characters long.</p></li>
@@ -1242,9 +1286,10 @@ Pay careful attention to the Break in Nested Loops example and the Continue in N
 <li><a class="reference internal" href="#activity-4-1-2">Activity 4.1.2</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#do-while-loops-oracle">4.1.1 Do While Loops - Oracle</a><ul>
-<li><a class="reference internal" href="#activity-4-1-1-1">Activity 4.1.1.1</a></li>
-<li><a class="reference internal" href="#activity-4-1-1-2">Activity 4.1.1.2</a></li>
+<li><a class="reference internal" href="#a-do-while-loops-oracle">4.1a Do While Loops - Oracle</a><ul>
+<li><a class="reference internal" href="#a-guessing-game">4.1a - Guessing Game</a></li>
+<li><a class="reference internal" href="#activity-4-1a-convert-program">Activity 4.1a - convert program</a></li>
+<li><a class="reference internal" href="#activity-4-1b">Activity 4.1b</a></li>
 <li><a class="reference internal" href="#assignment-char-oracle">Assignment <code class="docutils literal notranslate"><span class="pre">char</span></code> - Oracle</a></li>
 <li><a class="reference internal" href="#break-and-continue-keywords-in-java-oracle">Break and Continue Keywords in Java - Oracle</a></li>
 <li><a class="reference internal" href="#activity-break-and-continue-oracle">Activity Break and Continue - Oracle</a></li>
