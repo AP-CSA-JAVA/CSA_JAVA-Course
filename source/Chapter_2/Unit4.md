@@ -91,14 +91,14 @@ public class Main{
 		Scanner sc=new Scanner(System.in);
 		System.out.print("Enter the number of elements you want to store: ");
 		
-		n=sc.nextInt();  // storing the number of elements that you want to store.
+		n = sc.nextInt();  // storing the number of elements that you want to store.
 		
 		int[] array = new int[n];  // defining the number of inputs for the array
 			
 		System.out.println("Enter the elements of the array: ");
-		while (i<n){
+		while (i < n){
 			//reading array elements from the user
-			array[i]=sc.nextInt();
+			array[i] = sc.nextInt();
 			i++;
 		}
 		System.out.println("Contents of the array are: " + Arrays.toString(array));
@@ -184,7 +184,7 @@ The average is: 33.25
 ```
 
 
-## 4.1.1 Do While Loops - Oracle
+## 4.1a Do While Loops - Oracle
 
 The `do-while` loop will not be assessed for the AP CSA exam, it can be a useful tool when writing programs.
 
@@ -222,7 +222,57 @@ Inside the "do" block, we use a `do-while` loop to repeatedly prompt the user fo
     
 This program demonstrates a simple "do-while" loop to ensure that the user provides valid input before proceeding with the program.
 
-### Activity 4.1.1.1
+### 4.1a - Guessing Game
+
+**Directions:** Write a java program that will ask the user to pick a number between 1 - 100.  Use a `do` while loop that will compare the random number generated with `Math.random()` method with the choice of the user.  If the user inputs the correct number, end the game with a congratulatory message.  If the user inputs the number wrong, tell the user how close they are to the actual number and give them another chance to pick the number.  Program ends when the number is selected.
+
+<details><summary>Click Here</summary>
+ <p>
+	 
+```java
+
+import java.util.Scanner;
+
+public class Name {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int randomNumber = (int) (Math.random() * 100) + 1;
+        int userGuess;
+        
+        System.out.println("Welcome to the Number Guessing Game!");
+        System.out.println("I've picked a number between 1 and 100. Try to guess it!");
+
+        do {
+            System.out.print("Enter your guess: ");
+            userGuess = scanner.nextInt();
+
+            if (userGuess == randomNumber) {
+                System.out.println("Congratulations! You guessed the correct number: " + randomNumber);
+                break;
+            } else {
+                int difference = Math.abs(randomNumber - userGuess);
+                if (difference <= 10) {
+                    System.out.println("You're very close! Try again.");
+                } else if (difference <= 20) {
+                    System.out.println("You're close! Try again.");
+                } else if (difference <= 30) {
+                    System.out.println("You're getting warmer! Try again.");
+                } else {
+                    System.out.println("You're far away! Try again.");
+                }
+            }
+        } while (true);
+
+        scanner.close();
+    }
+}
+
+```
+
+</p></details>
+
+
+### Activity 4.1a - convert program
 
 **Directions:** Convert Program A and Program B from a `for` loop to a `do-while` loop. 
 
@@ -277,7 +327,7 @@ public class Main
 }
 ```
 
-### Activity 4.1.1.2
+### Activity 4.1b
 
 **Directions:** Write a program using a `do-while` loop that does the following:
 - Write a do-while loop that asks a user for their name, which must be at least four characters long.
