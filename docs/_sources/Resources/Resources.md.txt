@@ -14,7 +14,7 @@ At the top of the file containing your program's main() method, place an `extern
  |
  |  Description:  [Describe the program's goal, IN DETAIL.]
  |
- |     Language:  [Programming language and version used.]
+ |     Language:  Java version 8
  | Ex. Packages:  [List names and sources of all external packages
  |                required by this program.]
  |                
