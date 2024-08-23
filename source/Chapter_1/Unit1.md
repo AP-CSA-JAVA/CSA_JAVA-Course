@@ -87,8 +87,8 @@ Supplies will be provide for you to complete this activity.
         Object:
         Properties:
         Methods:
-
-Visually demonstrate the properties of inheritance by creating a subclass(es) of your Superclass.  Include the Characteristics and actions of the subclass(es).```
+    Visually demonstrate the properties of inheritance by creating a subclass(es) of your Superclass.  
+    Include the Characteristics and actions of the subclass(es).```
 
  -------------------------------------------------------------------------------------------
 
