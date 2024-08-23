@@ -5,11 +5,11 @@
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Unit 3" href="Unit3.html" /><link rel="prev" title="Unit 1 - Primitive Types" href="Unit1.html" />
 
-    <!-- Generated with Sphinx 7.3.7 and Furo 2024.05.06 -->
+    <!-- Generated with Sphinx 8.0.2 and Furo 2024.08.06 -->
         <title>Unit 2 - Using Objects - CSA JAVA Course</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=387cc868" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=36a5483c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=302659d7" />
     
     
 
@@ -88,19 +88,6 @@
       <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
     </svg>
   </symbol>
-  <symbol id="svg-sun-half" viewBox="0 0 24 24">
-    <title>Auto light/dark mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-      <circle cx="12" cy="12" r="9" />
-      <path d="M13 12h5" />
-      <path d="M13 15h4" />
-      <path d="M13 18h1" />
-      <path d="M13 9h4" />
-      <path d="M13 6h1" />
-    </svg>
-  </symbol>
   <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
     <title>Auto light/dark, in light mode</title>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -141,7 +128,7 @@
       <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
       <path d="M13.5 6.5l4 4" />
       <path d="M20 21l2 -2l-2 -2" />
-      <path d="M17 17l-2 2l2 2" /
+      <path d="M17 17l-2 2l2 2" />
     </svg>
   </symbol>
   <symbol id="svg-eye" viewBox="0 0 24 24">
@@ -281,61 +268,6 @@
         <article role="main" id="furo-main-content">
           <section id="unit-2-using-objects">
 <h1>Unit 2 - Using Objects<a class="headerlink" href="#unit-2-using-objects" title="Link to this heading">¶</a></h1>
-<section id="instances-of-classes">
-<h2>2.1 Instances of Classes<a class="headerlink" href="#instances-of-classes" title="Link to this heading">¶</a></h2>
-<ul class="contains-task-list simple">
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Explain the relationship between a class and an object</p></li>
-</ul>
-<p>As stated earlier, a <em>class</em> is a blueprint of an object.  So we can also say that an <em>object</em> is an instance of a class.  What we define as a class determines what objects that will be associated with the class and how things will operate within it.  For example, we can define <code class="docutils literal notranslate"><span class="pre">human</span></code> as a class.  We can assign attributes to that class like a nose, ears, eyes, hands, feet, etc.  <strong>NOTE:</strong> Attribute and state are interchangable terms.</p>
-<p>We can also create a <em>method</em> that will call the attributes within a class.  For example, we can create a method called running or sleeping.  Now each of these methods will use an attribute or attributes of its class to perform something within the <code class="docutils literal notranslate"><span class="pre">human</span></code> class.  If we create an instance of the <code class="docutils literal notranslate"><span class="pre">human</span></code> class, let say Object John , then John will have all the attributes (nose , ears, eyes, hands, legs) unique to it and will also have access to these methods to carry out basic functions. <strong>NOTE:</strong> Method and behavior are interchangable terms.</p>
-<p>The value of the attributes define the state of the object. What makes this efficient is that the class does not hold any space in the memory because we just create a definition.  The moment we <em>instantiate</em> the class the object will require a dedicated space in memory.  Thus we can say that a Class defines how the object should look and object is the actual representation of the same.</p>
-<hr class="docutils" />
-<p><strong>Mr Potato Head Activity:</strong></p>
-<p>Supplies will be provide for you to complete this activity.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Split into pairs.
-Each pair will create:
-    a potato head character.
-    a list describing what it is, what characteristics it has, and what it can do(actions).
-		write PROPERTIES/ characteristics 
-		write METHODS/ actions
-What are the object oriented concepts to your Mr. Potato Head?
-    Class:
-    Object:
-    Properties:
-    Methods: 
-</pre></div>
-</div>
-<hr class="docutils" />
-<p><strong>Example:</strong></p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Bicycle</span><span class="w"> </span><span class="p">{</span>
-
-<span class="w">    </span><span class="c1">// attribute or state</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">gear</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">white</span><span class="p">;</span>
-<span class="w">    </span>
-<span class="w">    </span><span class="c1">// behavior or method</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">pedaling</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Pedaling to accelerate!&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span><span class="w"> </span>
-</pre></div>
-</div>
-<p><strong>Sample Output</strong></p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">My</span><span class="w"> </span><span class="n">bicycle</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">gear</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">painted</span><span class="w"> </span><span class="n">white</span><span class="o">!</span>
-<span class="n">Pedaling</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">accelerate</span><span class="o">!</span>
-</pre></div>
-</div>
-<p><strong>Things to Remember</strong>
-Object-oriented Programming Facts:</p>
-<ul class="contains-task-list simple">
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Properties are the characteristics of your objects</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Object-Oriented programming focuses on the data represented in the problem</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Object-Oriented programs remove details from many programs, making the code rewrite less frequent.</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Methods are the actions that your object can take.</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> A class is like a blueprint or a recipe.</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> A class is used to create an instance of a class, called an object</p></li>
-</ul>
-</section>
 <section id="creating-and-storing-objects">
 <h2>2.2 Creating and Storing Objects<a class="headerlink" href="#creating-and-storing-objects" title="Link to this heading">¶</a></h2>
 <ul class="contains-task-list simple">
@@ -2271,7 +2203,6 @@ Your program should allow a user to enter values that change the output of a sto
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Unit 2 - Using Objects</a><ul>
-<li><a class="reference internal" href="#instances-of-classes">2.1 Instances of Classes</a></li>
 <li><a class="reference internal" href="#creating-and-storing-objects">2.2 Creating and Storing Objects</a></li>
 <li><a class="reference internal" href="#unit-5-2-constructors">Unit 5.2 - Constructors</a><ul>
 <li><a class="reference internal" href="#activity-2-1-1">Activity 2.1.1</a></li>
@@ -2319,6 +2250,6 @@ Your program should allow a user to enter values that change the output of a sto
 </div><script src="../_static/documentation_options.js?v=2709fde1"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/scripts/furo.js?v=4e2eecee"></script>
+    <script src="../_static/scripts/furo.js?v=5fa4622c"></script>
     </body>
 </html>
