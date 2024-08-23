@@ -77,7 +77,7 @@ The value of the attributes define the state of the object. What makes this effi
 Supplies will be provide for you to complete this activity.
 
     Split into pairs.
-    Each pair will create:
+    ```Each pair will create:
         a potato head character.
         a list describing what it is, what characteristics it has, and what it can do(actions).
 			write PROPERTIES/ characteristics 
@@ -86,9 +86,9 @@ Supplies will be provide for you to complete this activity.
         Class:
         Object:
         Properties:
-        Methods: 
+        Methods:
 
-Visually demonstrate the properties of inheritance by creating a subclass(es) of your Superclass.  Include the Characteristics and actions of the subclass(es).
+Visually demonstrate the properties of inheritance by creating a subclass(es) of your Superclass.  Include the Characteristics and actions of the subclass(es).```
 
  -------------------------------------------------------------------------------------------
 
