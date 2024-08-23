@@ -60,6 +60,69 @@ A powerful tool that you can use in OOP is the concept of `inheritance`.  `Inher
 
 <p align="center">---------------------------------------------------------------------------- </p>
 
+## 2.1 Instances of Classes
+
+- [ ] Explain the relationship between a class and an object
+
+
+As stated earlier, a *class* is a blueprint of an object.  So we can also say that an *object* is an instance of a class.  What we define as a class determines what objects that will be associated with the class and how things will operate within it.  For example, we can define `human` as a class.  We can assign attributes to that class like a nose, ears, eyes, hands, feet, etc.  **NOTE:** Attribute and state are interchangable terms.
+
+We can also create a *method* that will call the attributes within a class.  For example, we can create a method called running or sleeping.  Now each of these methods will use an attribute or attributes of its class to perform something within the `human` class.  If we create an instance of the `human` class, let say Object John , then John will have all the attributes (nose , ears, eyes, hands, legs) unique to it and will also have access to these methods to carry out basic functions. **NOTE:** Method and behavior are interchangable terms.
+
+The value of the attributes define the state of the object. What makes this efficient is that the class does not hold any space in the memory because we just create a definition.  The moment we *instantiate* the class the object will require a dedicated space in memory.  Thus we can say that a Class defines how the object should look and object is the actual representation of the same.
+
+ -------------------------------------------------------------------------------------------
+**Mr Potato Head Activity:**
+
+Supplies will be provide for you to complete this activity.
+
+    Split into pairs.
+    Each pair will create:
+        a potato head character.
+        a list describing what it is, what characteristics it has, and what it can do(actions).
+			write PROPERTIES/ characteristics 
+			write METHODS/ actions
+    What are the object oriented concepts to your Mr. Potato Head?
+        Class:
+        Object:
+        Properties:
+        Methods: 
+
+
+ -------------------------------------------------------------------------------------------
+
+
+
+**Example:**
+```java
+class Bicycle {
+
+    // attribute or state
+    int gear = 1;
+    String color = white;
+    
+    // behavior or method
+    public void pedaling() {
+        System.out.println("Pedaling to accelerate!");
+    }
+} 
+```
+**Sample Output**
+```java
+My bicycle has 1 gear and is painted white!
+Pedaling to accelerate!
+```
+
+**Things to Remember**
+Object-oriented Programming Facts:
+- [ ] Properties are the characteristics of your objects
+- [ ] Object-Oriented programming focuses on the data represented in the problem
+- [ ] Object-Oriented programs remove details from many programs, making the code rewrite less frequent.
+- [ ] Methods are the actions that your object can take.
+- [ ] A class is like a blueprint or a recipe.
+- [ ] A class is used to create an instance of a class, called an object
+
+<p align="center">---------------------------------------------------------------------------- </p>
 
 ### 5.3 Documentation with Comments
 

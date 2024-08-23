@@ -328,6 +328,62 @@
 <p>What observations can you make about the diagram?</p>
 <p>A powerful tool that you can use in OOP is the concept of <code class="docutils literal notranslate"><span class="pre">inheritance</span></code>.  <code class="docutils literal notranslate"><span class="pre">Inheritance</span></code> is the concept where a Java Class can inherit properties from another class.  You can think of this as a child inheritiing characteristics of a parent.  Java refers to this as <strong>extending</strong> a class.  The Class that is being extended or “inherited” is called a <strong>superclass</strong>.  The class that extends or “inherits” is referred to as a <strong>subclass</strong>.  We will explore this in more detail in Chapter 4.</p>
 <p align="center">---------------------------------------------------------------------------- </p>
+</section>
+<section id="instances-of-classes">
+<h2>2.1 Instances of Classes<a class="headerlink" href="#instances-of-classes" title="Link to this heading">¶</a></h2>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Explain the relationship between a class and an object</p></li>
+</ul>
+<p>As stated earlier, a <em>class</em> is a blueprint of an object.  So we can also say that an <em>object</em> is an instance of a class.  What we define as a class determines what objects that will be associated with the class and how things will operate within it.  For example, we can define <code class="docutils literal notranslate"><span class="pre">human</span></code> as a class.  We can assign attributes to that class like a nose, ears, eyes, hands, feet, etc.  <strong>NOTE:</strong> Attribute and state are interchangable terms.</p>
+<p>We can also create a <em>method</em> that will call the attributes within a class.  For example, we can create a method called running or sleeping.  Now each of these methods will use an attribute or attributes of its class to perform something within the <code class="docutils literal notranslate"><span class="pre">human</span></code> class.  If we create an instance of the <code class="docutils literal notranslate"><span class="pre">human</span></code> class, let say Object John , then John will have all the attributes (nose , ears, eyes, hands, legs) unique to it and will also have access to these methods to carry out basic functions. <strong>NOTE:</strong> Method and behavior are interchangable terms.</p>
+<p>The value of the attributes define the state of the object. What makes this efficient is that the class does not hold any space in the memory because we just create a definition.  The moment we <em>instantiate</em> the class the object will require a dedicated space in memory.  Thus we can say that a Class defines how the object should look and object is the actual representation of the same.</p>
+<hr class="docutils" />
+<p><strong>Mr Potato Head Activity:</strong></p>
+<p>Supplies will be provide for you to complete this activity.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Split into pairs.
+Each pair will create:
+    a potato head character.
+    a list describing what it is, what characteristics it has, and what it can do(actions).
+		write PROPERTIES/ characteristics 
+		write METHODS/ actions
+What are the object oriented concepts to your Mr. Potato Head?
+    Class:
+    Object:
+    Properties:
+    Methods: 
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>Example:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Bicycle</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="c1">// attribute or state</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">gear</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">white</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// behavior or method</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">pedaling</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Pedaling to accelerate!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span><span class="w"> </span>
+</pre></div>
+</div>
+<p><strong>Sample Output</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">My</span><span class="w"> </span><span class="n">bicycle</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">gear</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">painted</span><span class="w"> </span><span class="n">white</span><span class="o">!</span>
+<span class="n">Pedaling</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">accelerate</span><span class="o">!</span>
+</pre></div>
+</div>
+<p><strong>Things to Remember</strong>
+Object-oriented Programming Facts:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Properties are the characteristics of your objects</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Object-Oriented programming focuses on the data represented in the problem</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Object-Oriented programs remove details from many programs, making the code rewrite less frequent.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Methods are the actions that your object can take.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> A class is like a blueprint or a recipe.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> A class is used to create an instance of a class, called an object</p></li>
+</ul>
+<p align="center">---------------------------------------------------------------------------- </p>
 <section id="documentation-with-comments">
 <h3>5.3 Documentation with Comments<a class="headerlink" href="#documentation-with-comments" title="Link to this heading">¶</a></h3>
 <p>Typing comments within your program is considered a professional practice, and I expect you to comment your code as appropriate throughtout the year.  When other people read your program, they may not understand the purpose of the variables and/ or methods in
@@ -1025,7 +1081,8 @@ Create variables and choose numbers that match the following six number types to
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Unit 1 - Primitive Types</a><ul>
-<li><a class="reference internal" href="#why-programming-why-java">1.1 Why Programming Why Java</a><ul>
+<li><a class="reference internal" href="#why-programming-why-java">1.1 Why Programming Why Java</a></li>
+<li><a class="reference internal" href="#instances-of-classes">2.1 Instances of Classes</a><ul>
 <li><a class="reference internal" href="#documentation-with-comments">5.3 Documentation with Comments</a></li>
 <li><a class="reference internal" href="#assignment-1-1-1">Assignment 1.1.1</a></li>
 <li><a class="reference internal" href="#assignment-1-1-2">Assignment 1.1.2</a></li>
