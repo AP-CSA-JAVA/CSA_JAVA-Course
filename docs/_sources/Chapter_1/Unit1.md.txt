@@ -172,7 +172,24 @@ Create the happy face image above using the following criteria:
 - [ ] Use System.out.print at least two lines
 - [ ] Use System.out.println at least three times
 
+<details><summary> Sample Solution </summary>
 
+```java
+public class Main
+{
+  public static void main(String[] args)
+  {
+  	System.out.println("----------");
+  	System.out.print("--0----0--\n");
+  	System.out.println("----__----");
+  	System.out.print("-(______)-\n");
+  	System.out.println("----------");
+
+  }
+}
+```
+
+</details>
 
 ### Assignment 1.1.2
 
@@ -194,6 +211,25 @@ Year                 Age                    Description
 2021             50 years old               First year at CAMS
 ```
 
+
+<details><summary> Sample Solution </summary>
+
+```java
+class Main {
+  public static void main(String[] args) {
+    System.out.println("Year \t\t Age \t\t\t Description");
+    System.out.println("1971 \t  0 years old \t\t Born in Long Beach");
+    System.out.println("1976 \t  5 years old \t\t Started Kindergarten");
+    System.out.println("1989 \t 17 years old \t\t Graduated high school");
+    System.out.println("1995 \t 24 years old \t\t Graduated college Long Beach State");
+    System.out.println("1998 \t 27 years old \t\t Got Married");
+    System.out.println("1998 \t 27 years old \t\t Began teaching career");
+    System.out.println("2021 \t 50 years old \t\t First year at CAMS");
+
+  }
+}
+```
+</details>
 
 ## 1.2 Variables and Data Types
 There are eight primitive types in Java. In no particular order, they are int, double, boolean, float, char, byte, long and short.  For this course we will be using only int, double, and boolean.
