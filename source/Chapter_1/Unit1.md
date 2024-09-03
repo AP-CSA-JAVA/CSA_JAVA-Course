@@ -202,8 +202,8 @@ Make it look professional. HINT: use \t</br>
 More examples of Escape Sequences can be found [here](https://ap-csa-java.github.io/CSA_JAVA-Course/Chapter_1/Unit2.html#string-objects-concatenation-literals-and-other-things).
 ```
 Year                 Age                    Description
-1971             0 years old                Born in Long Beach
-1976             5 years old                Started kindergarten
+1971              0 years old               Born in Long Beach
+1976              5 years old               Started kindergarten
 1989             17 years old               Graduated high school
 1995             24 years old               Graduated college Long Beach State
 1998             27 years old               Got Married
