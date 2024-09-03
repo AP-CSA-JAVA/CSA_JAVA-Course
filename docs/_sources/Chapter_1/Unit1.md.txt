@@ -267,6 +267,9 @@ Use a Scanner object to create an input feature in your program.  Click on [Scan
 
 
 
+--------------------------------------------------------------------------------------------------
+
+
 ## 1.3 Expressions and Assignment Statements
 Math Operators are a very important part of computing. Below are the most common operators that we will be using in this course.
 | Symbol | Name  | Usage |
@@ -312,6 +315,8 @@ In Java, the order of operation works pretty much the same with the exception of
 
 </details>
 
+-----------------------------------------------------------------------------------
+
 
 ### Assignment 1.3.1
 **Calculate your weight on Jupiter**
@@ -355,6 +360,8 @@ this assignment.**
 | Saturn | 11.08 |
 | Uranus | 10.67 |
 | Neptune | 11.15 |
+
+
 
 
 <details><summary>Sample Solution</summary>
@@ -405,6 +412,8 @@ Your average weight for the Inner Planets is 99.31574923547399lbs.
 ```
 
 </details>
+
+
 
 
 
