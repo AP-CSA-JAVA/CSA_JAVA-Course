@@ -358,8 +358,9 @@ In Java, the order of operation works pretty much the same with the exception of
 **Calculate your weight on Jupiter**
 
 ```
-The expression F=ma allows you to calculate your weight (in newtons) based on your mass (in kilograms)
-the acceleration due to gravity on Earth (9.81 m/sec2). A typical mass of a human might be 58.9 kg.
+The expression F=ma allows you to calculate your weight (in newtons) based on your mass
+(in kilograms) the acceleration due to gravity on Earth (9.81 m/sec2). A typical mass of a
+human might be 58.9 kg.
 
 F = ma
 F = (58.9 kg)(9.81 m/s^2)
@@ -368,11 +369,12 @@ One newton is equal to 0.225 lbs. So on Earth, this human weighs 130 lbs.
 
 F = (578 N)(0.225 lbs/ 1 N) = 130 lbs
 
-But Jupiter is more massive than the Earth. The force of gravity is stronger, making the acceleration 
-due to gravity much larger (24.79 m/sec^2). Below is a list of variables that will be used in the program.
+But Jupiter is more massive than the Earth. The force of gravity is stronger, making the
+acceleration due to gravity much larger (24.79 m/sec^2). Below is a list of variables that
+will be used in the program.
 
-Using the equation below, you can determine what your weight on Jupiter would be in pounds and not have 
-to worry about converting units.
+Using the equation below, you can determine what your weight on Jupiter would be in pounds
+and not have to worry about converting units.
 
 (weightOnJupiter) = (weightOnEarth)/1 x (jupiterGravity)/(earthGravity)
 
@@ -430,7 +432,7 @@ class Main
       System.out.print("Your weight on Venus is ");
       System.out.println(weightOnVenus + " lbs.");
       System.out.print("Your weight on Mars is ");
-      System.out.println(weightOnMars + " lbs.");
+      System.out.println(weightOnMars + " lbs. \n");
       System.out.println("Your average weight for the Inner Planets is " + weightOnInnerPlanets + "lbs.");
 
   }
@@ -443,6 +445,7 @@ Enter your weight in pounds:
 Your weight on Mercury is 54.89296636085626 lbs.
 Your weight on Venus is 135.62691131498468 lbs.
 Your weight on Mars is 56.74311926605504 lbs.
+
 Your average weight for the Inner Planets is 99.31574923547399lbs.
 
 ```
