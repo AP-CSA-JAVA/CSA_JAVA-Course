@@ -360,6 +360,48 @@ this assignment.**
 | Uranus | 10.67 |
 | Neptune | 11.15 |
 
+
+<details><summary>Solution</summary>
+
+```java
+import java.util.Scanner;
+
+class Main 
+{
+  public static void main(String[] args) 
+  {
+    int weightOnEarth;
+
+    double earthGravity = 9.81;
+    double mercuryGravity = 3.59;
+    double venusGravity = 8.87;
+    double marsGravity = 3.711;
+
+    System.out.println("Enter your weight:");
+    Scanner sc = new Scanner(System.in);
+    weightOnEarth = Integer.parseInt(sc.nextLine());
+
+      double weightOnMercury = weightOnEarth * mercuryGravity / earthGravity;
+      double weightOnVenus = weightOnEarth * venusGravity / earthGravity;
+      double weightOnMars = weightOnEarth * marsGravity / earthGravity;
+      double weightOnInnerPlanets = (weightOnEarth + weightOnVenus + weightOnMars + weightOnMercury) / 4;
+
+      System.out.print("Your weight on Mercury is ");
+      System.out.println(weightOnMercury + " lbs.");
+      System.out.print("Your weight on Venus is ");
+      System.out.println(weightOnVenus + " lbs.");
+      System.out.print("Your weight on Mars is ");
+      System.out.println(weightOnMars + " lbs.");
+      System.out.println("Your average weight for the Inner Planets is " + weightOnInnerPlanets + "lbs.");
+
+  }
+}
+```
+
+</details>
+
+
+
 ### Assignment 1.3.2
 **Simple Math**
 - [ ] Create a program that will ask the user for two distinct numbers (integers)
