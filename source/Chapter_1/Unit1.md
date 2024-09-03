@@ -345,8 +345,8 @@ jupiterGravity = 24.79
 **weightOnJupiter = weightOnJupiter / earthGravity * jupiterGravity**
 
 ```
-**Using the chart below, create a program called GalaxyWeight that outputs information of the users weight
-on three different planets and takes the average of those weights.  You will use the <i>scanner class</i> for 
+**Using the chart below, create a program called GalaxyWeight that outputs information of the user's weight
+on four different planets and takes the average of those weights.  You will use the <i>scanner class</i> for 
 this assignment.**
 
 | Planet | Acceleration Due to Gravity (m/sec^2) |
