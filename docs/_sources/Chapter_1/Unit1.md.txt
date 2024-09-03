@@ -195,10 +195,6 @@ Year                 Age                    Description
 ```
 
 
-
-
-
-
 ## 1.2 Variables and Data Types
 There are eight primitive types in Java. In no particular order, they are int, double, boolean, float, char, byte, long and short.  For this course we will be using only int, double, and boolean.
 - [ ] **int** is short for integer deals with whole numbers and uses 32 bits of memory
@@ -361,7 +357,7 @@ this assignment.**
 | Neptune | 11.15 |
 
 
-<details><summary>Solution</summary>
+<details><summary>Sample Solution</summary>
 
 ```java
 import java.util.Scanner;
@@ -377,7 +373,7 @@ class Main
     double venusGravity = 8.87;
     double marsGravity = 3.711;
 
-    System.out.println("Enter your weight:");
+    System.out.println("Enter your weight in pounds:");
     Scanner sc = new Scanner(System.in);
     weightOnEarth = Integer.parseInt(sc.nextLine());
 
@@ -396,6 +392,16 @@ class Main
 
   }
 }
+
+**Sample Output:**
+
+Enter your weight in pounds:
+150
+Your weight on Mercury is 54.89296636085626 lbs.
+Your weight on Venus is 135.62691131498468 lbs.
+Your weight on Mars is 56.74311926605504 lbs.
+Your average weight for the Inner Planets is 99.31574923547399lbs.
+
 ```
 
 </details>
