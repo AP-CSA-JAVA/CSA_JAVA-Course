@@ -114,6 +114,43 @@ My bicycle has 1 gear and is painted white!
 Pedaling to accelerate!
 ```
 
+<details><summary>Sample Solution</summary>
+
+```java
+
+class Main {
+  public static void main(String[] args) {
+    Bicycle myBicycle = new Bicycle();  // Creation of a constructor
+					// We will learn more about this later
+    
+    myBicycle.pedaling(); //Calling Method
+  }
+}
+
+public class Bicycle { //Instaniation of the constructor created in the Main Class
+    private int gear;
+    private String color;
+
+    // Constructor to initialize gear and color
+    public Bicycle() {
+        gear = 1;
+        color = "white";
+    }
+
+    // Method to pedal the bicycle
+    public void pedaling() {
+        System.out.println("My bicycle has " + gear + " gear and is painted " + color + "!");
+        System.out.println("Pedaling to accelerate!");
+    }
+}
+
+```
+</details>
+
+
+
+------------------------------------------------------------------------------------------------------------
+
 **Things to Remember**
 Object-oriented Programming Facts:
 - [ ] Properties are the characteristics of your objects

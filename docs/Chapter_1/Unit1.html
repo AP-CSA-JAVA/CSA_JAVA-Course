@@ -375,6 +375,36 @@ Include the Characteristics and actions of the subclass(es).
 <span class="n">Pedaling</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">accelerate</span><span class="o">!</span>
 </pre></div>
 </div>
+<details><summary>Sample Solution</summary>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Bicycle</span><span class="w"> </span><span class="n">myBicycle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Bicycle</span><span class="p">();</span><span class="w">  </span><span class="c1">// Creation of a constructor</span>
+<span class="w">					</span><span class="c1">// We will learn more about this later</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">myBicycle</span><span class="p">.</span><span class="na">pedaling</span><span class="p">();</span><span class="w"> </span><span class="c1">//Calling Method</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Bicycle</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//Instaniation of the constructor created in the Main Class</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">gear</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">color</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Constructor to initialize gear and color</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Bicycle</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">gear</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;white&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Method to pedal the bicycle</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">pedaling</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;My bicycle has &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">gear</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; gear and is painted &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;!&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Pedaling to accelerate!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</details>
+<hr class="docutils" />
 <p><strong>Things to Remember</strong>
 Object-oriented Programming Facts:</p>
 <ul class="contains-task-list simple">
