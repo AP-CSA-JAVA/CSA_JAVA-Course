@@ -478,7 +478,39 @@ Dividing: 4 with remainder 0
 
 ```
 
+<details><summary>Sample Solution</summary>
 
+```java
+
+import java.util.Scanner; 
+
+class Main 
+{
+ public static void main(String[] args) 
+ {
+  // declare two integers a and b
+  int a;
+  int b;
+
+  // asks the user for the integers and stores it in a and b
+  System.out.println("Enter the first integer:");
+  Scanner sc = new Scanner(System.in);
+   a = sc.nextInt();
+   System.out.println("Enter the second integer:");
+   b = sc.nextInt();
+
+   System.out.println("When you add the two numbers, the sum is " + (a + b));
+   System.out.println("When you subtract the two numbers, the difference is  " + (a - b));
+   System.out.println("When you multiply the two numbers, the product is " + (a * b));
+   System.out.print("When you divide the two numbers, the answer is  " + (a / b));
+   System.out.println(" with a remainder " + (a%b));
+ }
+}
+
+```
+</details>
+
+----------------------------------------------------------------------------------------------
 
 ## 1.4 Compound Assignment Operators
 
