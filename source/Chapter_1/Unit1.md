@@ -801,7 +801,80 @@ Total travel time:19.59838263477574
 
 You will write a widening algorithm with new variables to show the travel time to and from all planets.  You will write a casting version without new variables to show the travel times. The one rule is that you must use the provided code and not change any provided data types.
 
+<details><summary> Sample Output</summary>
 
+```java
+public class FivePlanetTravel
+{
+  public static void main(String[] args)
+  {
+    // theplanets.org average distance from earth to the planets
+    int mercury = 56974146;
+    int venus = 25724767;
+    int mars = 48678219;
+    int jupiter = 390674710;
+    int saturn = 792248270;
+
+    // speed of light and our speed
+    int lightSpeed =  670616629;
+    lightSpeed /= 10;
+
+    // total travel time
+    double total = 0;
+
+    // number of planets to visit
+    int numPlanets = 5;
+    
+    // Auto-widen version
+    System.out.println("Travel time to ...");
+    double time =  mercury;
+    time /= lightSpeed; 
+    total += time;
+    System.out.println(" Mercury " + time + " hours");
+   
+    time =  venus;
+    time /= lightSpeed; 
+    total += time;
+    System.out.println(" Venus: " + time + " hours");
+
+    time =  mars;
+    time /= lightSpeed; 
+    total += time;
+    System.out.println(" Mars: " + time + " hours");
+    time =  jupiter;
+    time /= lightSpeed; 
+    total += time;
+    System.out.println(" Jupiter: " + time + " hours");
+    
+    time =  saturn;
+    time /= lightSpeed; 
+    total += time;
+    System.out.println(" Saturn:" + time + " hours");
+    
+    System.out.println("Total travel time:" + total);
+    System.out.println();
+
+    // Manually cast version
+    total = 0; 
+    System.out.println("Travel time to ...");
+    System.out.println(" Mercury: " + mercury / (double) lightSpeed + " hours");
+    total += mercury / (double) lightSpeed; 
+    System.out.println(" Venus: " + venus / (double) lightSpeed + " hours");
+    total += venus / (double) lightSpeed; 
+    System.out.println(" Mars: " + mars / (double) lightSpeed + " hours");
+    total +=  mars / (double) lightSpeed;
+    System.out.println(" Jupiter: " + jupiter / (double) lightSpeed + " hours");
+    total += jupiter / (double) lightSpeed;
+    System.out.println(" Saturn: " + saturn / (double) lightSpeed + " hours");
+    total += saturn / (double) lightSpeed; 
+    
+    System.out.println("Total travel time:" + total);
+
+  }
+}
+```
+
+</details>
 
 ### Numbers Riddle Project 
 
