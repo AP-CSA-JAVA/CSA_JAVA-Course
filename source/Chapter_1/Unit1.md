@@ -866,7 +866,7 @@ Create variables and choose numbers that match the following six number types to
 
 ```java
 /*=============================================================================
- |   Assignment:  Program 1.6 Numbers Riddle:  [Assignment Title]
+ |   Assignment:  Project 1.6 Numbers Riddle
  |       Author:  [Your First and Last Name (Your E-mail Address)]
  |      
  |  Course Name:  AP Computer Science A
