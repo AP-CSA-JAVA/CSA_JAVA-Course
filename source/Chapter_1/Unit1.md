@@ -810,7 +810,7 @@ In this project, you will write a program that incorporates the Java™ concepts
 Your program will include:
 
 - [ ] Use of the [camelCase](https://betterprogramming.pub/string-case-styles-camel-pascal-snake-and-kebab-case-981407998841) naming convention
-- [ ] Both multiline and inline comments
+- [ ] Both multiline and inline comments -- **see below**
 - [ ] The print and printtln methods
 - [ ] Variables (appropriately named)
 - [ ] Arithmetic expressions
@@ -862,4 +862,24 @@ Create variables and choose numbers that match the following six number types to
 
 **Document and Present**
 
-**TBD**
+<details><summary>Comments Requirement</summary>
+
+```java
+/*=============================================================================
+ |   Assignment:  Program 1.6 Numbers Riddle:  [Assignment Title]
+ |       Author:  [Your First and Last Name (Your E-mail Address)]
+ |      
+ |  Course Name:  AP Computer Science A
+ |   Instructor:  Mr. Jonathan Virak
+ |     Due Date:  [Due Date and Time]
+ |
+ |  Description:  [Describe the program's goal, IN DETAIL.]
+ |
+ |     Language:  [java]           
+ |                
+ | Deficiencies:  [If you know of any problems with the code, provide
+ |                details here, otherwise clearly state that you know
+ |                of no unsatisfied requirements and no logic errors.]
+ *===========================================================================*/
+```
+</details>
