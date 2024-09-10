@@ -9,7 +9,7 @@
 
 The next two concepts will be used in most of your programs moving forward.  Read through **constructor** and **toString()** below.
 
-## Unit 5.2 - Constructors 
+## 5.2 - Constructors 
 
 A **constructor** in Java is a special method that is used to initialize objects. The constructor is called when an object of a class is created. It can be used to set the initial values for object attributes/variable names<sup>1</sup>.  It is possible to write two or more constructors within a program.  The difference between the constructors are the *parameters* that are defined within the constructor itself.  This is known as constructor **overloading**. 
 
