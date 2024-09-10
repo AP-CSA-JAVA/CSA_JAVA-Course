@@ -705,8 +705,11 @@ Total Sales: $64.3
 
 
 ## 1.5 Casting and Range of Variables
-There are some unique features to Java that help programmers create programs that are flexible in how they display data.  We learned earlier 
-that we need to declare a variable by it's type.  It can be an int or a double.  As you may remember, an int is any whole negative or positive number.
+
+There are some unique features to Java that help programmers create programs that are flexible in how they display data.  
+We learned earlier that we need to declare a variable by it's type.  It can be an int or a double.  As you may remember, 
+an int is any whole negative or positive number.
+
 A double is any number with a decimal.  1.0 is a whole number, but it has a decimal. So, Java considers 1.0 as a double.  
 We can convert the double by declaring a new variable that changes the double to an int.
 
