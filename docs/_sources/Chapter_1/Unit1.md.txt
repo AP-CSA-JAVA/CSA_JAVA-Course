@@ -347,6 +347,7 @@ Use a Scanner object to create an input feature in your program.  Click on [Scan
 Math Operators are a very important part of computing. Below are the most common operators that we will be using in this course.
 | Symbol | Name  | Usage |
 | :---:  | :---: | :---: |
+| ( ) | Parentheses | You will evaluate based on what is within the parentheses |
 | * | Multiplication | multiply two values together |
 | / | Division | divide two values |
 | % | Modulo | the remainder after dividing two values |
