@@ -623,18 +623,35 @@ Java supports 11 compound-assignment operators, but for this course we will use 
 In Java programming, the increment operator (*++*) increases the value of a variable by 1. Similarly, the decrement operator (*--*) decreases the value of a variable by 1.  These may also be referred to as prefix and postfix operators.
 
 ```java
-a = 5
-++a;          // a becomes 6
-a++;          // a becomes 7
---a;          // a becomes 6
-a--;          // a becomes 5
+public class MyClass {
+  public static void main(String args[]) {
+    int a = 5;
+    int b = 5;
+    int c = 5;
+    int d = 5;
+
+    System.out.println("a = " + ++a);
+    System.out.println("b = " + b++);
+    System.out.println("c = " + --c);
+    System.out.println("d = " + d--);
+  }
+}
 ```
 
-There is an important difference when these two operators are used as a prefix and a postfix.
 
-    - If you use the ++ operator as a prefix like: ++a, the value of a is incremented by 1; then it 
+**Sample Output**
+```java
+a = 6
+b = 5
+c = 4
+d = 5
+```
+
+
+There is an important difference when these two operators are used as a prefix and a postfix.
+  - If you use the ++ operator as a prefix like: ++a, the value of a is incremented by 1; then it 
     returns the value.
-    - If you use the ++ operator as a postfix like: b++, the original value of var is returned first; 
+  - If you use the ++ operator as a postfix like: b++, the original value of var is returned first; 
     then b is incremented by 1.
 
 
