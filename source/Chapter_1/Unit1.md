@@ -632,8 +632,10 @@ a--;          // a becomes 5
 
 There is an important difference when these two operators are used as a prefix and a postfix.
 
-    - If you use the ++ operator as a prefix like: ++a, the value of a is incremented by 1; then it returns the value.
-    - If you use the ++ operator as a postfix like: b++, the original value of var is returned first; then b is incremented by 1.
+    - If you use the ++ operator as a prefix like: ++a, the value of a is incremented by 1; then it 
+    returns the value.
+    - If you use the ++ operator as a postfix like: b++, the original value of var is returned first; 
+    then b is incremented by 1.
 
 
 ### Assignment 1.4.1
