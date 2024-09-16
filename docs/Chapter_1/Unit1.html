@@ -931,20 +931,35 @@ This is referred to as a <strong>concatenation operator</strong> where you can a
 </div>
 <p><strong>Increment and Decrement Operator</strong></p>
 <p>In Java programming, the increment operator (<em>++</em>) increases the value of a variable by 1. Similarly, the decrement operator (<em>–</em>) decreases the value of a variable by 1.  These may also be referred to as prefix and postfix operators.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
-<span class="o">++</span><span class="n">a</span><span class="p">;</span><span class="w">          </span><span class="c1">// a becomes 6</span>
-<span class="n">a</span><span class="o">++</span><span class="p">;</span><span class="w">          </span><span class="c1">// a becomes 7</span>
-<span class="o">--</span><span class="n">a</span><span class="p">;</span><span class="w">          </span><span class="c1">// a becomes 6</span>
-<span class="n">a</span><span class="o">--</span><span class="p">;</span><span class="w">          </span><span class="c1">// a becomes 5</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MyClass</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">args</span><span class="o">[]</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;a = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">++</span><span class="n">a</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;b = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="o">++</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;c = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">--</span><span class="n">c</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;d = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">d</span><span class="o">--</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Sample Output</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span>
+<span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
+<span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
+<span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
 </pre></div>
 </div>
 <p>There is an important difference when these two operators are used as a prefix and a postfix.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- If you use the ++ operator as a prefix like: ++a, the value of a is incremented by 1; then it 
-returns the value.
-- If you use the ++ operator as a postfix like: b++, the original value of var is returned first; 
-then b is incremented by 1.
-</pre></div>
-</div>
+<ul class="simple">
+<li><p>If you use the ++ operator as a prefix like: ++a, the value of a is incremented by 1; then it
+returns the value.</p></li>
+<li><p>If you use the ++ operator as a postfix like: b++, the original value of var is returned first;
+then b is incremented by 1.</p></li>
+</ul>
 <section id="assignment-1-4-1">
 <h3>Assignment 1.4.1<a class="headerlink" href="#assignment-1-4-1" title="Link to this heading">¶</a></h3>
 <p><strong>Compound Operators</strong></p>
