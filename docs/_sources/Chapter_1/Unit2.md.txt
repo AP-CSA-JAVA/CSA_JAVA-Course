@@ -1700,7 +1700,7 @@ class Main {
 <details><summary>Click Here</summary>
 <p>
 
-** ++ and -- used as a prefix or as a postfix **
+***++ and - - used as a prefix or as a postfix***
 
 Assume for what is being discussed that what works for increment operators(`++`) will also work with decrement operators(`--`).  I will only use increment operators for the sake of brevity.
 	
