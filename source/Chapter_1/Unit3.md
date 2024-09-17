@@ -329,10 +329,10 @@ public class Main {
 1.  Take a look at the code below:
 
 ```java
-if(age >= 18);
-{
-	System.out.println( "You are a high school student." );
-}
+1	if(age >= 18);
+2	{
+3	 System.out.println( "You are a high school student." );
+4	}
 ```
 
 What error(s), if any, do you see?
@@ -347,10 +347,10 @@ What error(s), if any, do you see?
 
 ```java
 
-if( age = 18 )
-{
-	System.out.println( "You are a high school student." );
-}
+1	if( age = 18 )
+2	{
+3 	 System.out.println( "You are a high school student." );
+4	}
 ```
 
 
@@ -367,18 +367,18 @@ What error(s), if any, do you see?
 3. Take a look at the code below:
 
 ```java
-if( age < 18 );
-{
-	System.out.println( "You are a minor." );
-}
-if( age < 120 );
-{
-	System.out.println( "You are an adult." );
-}
-else
-{
-	System.out.println( "You are not human!" );
-}
+1	if( age < 18 );
+2	{
+3	 System.out.println( "You are a minor." );
+4	}
+5	if( age < 120 );
+6	{
+7	 System.out.println( "You are an adult." );
+8	}
+9	else
+10	{
+11	 System.out.println( "You are not human!" );
+12	}
 ```
 
 
@@ -394,9 +394,9 @@ What error(s), if any, do you see?
 4.  Take a look at the code below:
 
 ```java
-if( age < 18 )
-	System.out.print( "You are a minor, " );
-	System.out.println( "but you will grow up!" );
+1	if( age < 18 )
+2		System.out.print( "You are a minor, " );
+3		System.out.println( "but you will grow up!" );
 ```
 
 What error(s), if any, do you see?
@@ -411,18 +411,18 @@ What error(s), if any, do you see?
 5.  Take a look at the code below:
 
 ```java
-if( age < 18 )
-{
-	System.out.println( "You are a minor." );
-}
-else
-{
-	System.out.println( 'You are an adult.' );
-}
-else
-{
-	System.out.println( "You are not human!" );
-}
+1	if( age < 18 )
+2	{
+3	 System.out.println( "You are a minor." );
+4	}
+5	else
+6	{
+7	 System.out.println( 'You are an adult.' );
+8	}
+9	else
+10	{
+11	 System.out.println( "You are not human!" );
+12	}
 ```
 
 What error(s), if any, do you see?
