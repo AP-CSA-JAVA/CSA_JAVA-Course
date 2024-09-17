@@ -323,6 +323,106 @@ public class Main {
 }
 ```
 
+**Check your understanding**
+<details><summary>Program 1</summary>
+
+1.  Take a look at the code below:
+
+```java
+if(age >= 18);
+{
+	System.out.println( "You are a high school student." );
+}
+```
+
+What errors, if any, do you see?
+
+</details>
+
+---------------------------------------------------------------------------
+
+<details><summary>Program 2</summary>
+
+2. Take a look at the code below:
+
+if( age = 18 )
+{
+	System.out.println( "You are a high school student." );
+}
+```
+
+
+What errors, if any, do you see?
+
+</details>
+
+---------------------------------------------------------------------------
+
+<details><summary>Program 3</summary>
+
+3. Take a look at the code below:
+
+```java
+if( age < 18 );
+{
+	System.out.println( "You are a minor." );
+}
+if( age < 120 );
+{
+	System.out.println( "You are an adult." );
+}
+else
+{
+	System.out.println( "You are not human!" );
+}
+```
+
+
+What errors, if any, do you see?
+
+</details>
+
+---------------------------------------------------------------------------
+
+<details><summary>Program 4</summary>
+
+4.  Take a look at the code below:
+
+```java
+if( age < 18 )
+	System.out.print( "You are a minor, " );
+	System.out.println( "but you will grow up!" );
+```
+
+What errors, if any, do you see?
+
+</details>
+
+---------------------------------------------------------------------------
+
+
+<details><summary>Program 5</summary>
+
+5.  Take a look at the code below:
+
+```java
+if( age < 18 )
+{
+	System.out.println( "You are a minor." );
+}
+else
+{
+	System.out.println( "You are an adult." );
+}
+else
+{
+	System.out.println( "You are not human!" );
+}
+```
+
+What errors, if any, do you see?
+
+</details>
 
 **Note** *The body of an if statement in Java is not dependent on indentation. Indenting in Java is a strong convention 
 that makes code segments readable. Java is often flexible about spacing. The three constructs below are equivalent and 
