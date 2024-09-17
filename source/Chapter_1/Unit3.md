@@ -436,17 +436,17 @@ What error(s), if any, do you see?
 > **NOTE:** *<mark>The body of an if statement in Java is not dependent on indentation.</mark> Indenting in Java is a strong convention that makes code segments readable. Java is often flexible about spacing. The three constructs below are equivalent and like indentation, spacing is used to improve readability.*
 
 ```java
-// Example 1
-if(b!=0){System.out.println("...");}
+1	// Example 1
+2	if(b!=0){System.out.println("...");}
 
-// Example 2
-if (b!=0)
-      {System.out.println("...");}
+1	// Example 2
+2	if (b!=0)
+3	    {System.out.println("...");}
 
-//Example 3
-if (b!=0){
-System.out.println("...");
-}
+1	//Example 3
+2	if (b!=0){
+3	System.out.println("...");
+4	}
 ```
   The `parseint` method is used to get the primitive data type of a certain String.
 
