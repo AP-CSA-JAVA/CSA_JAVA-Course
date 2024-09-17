@@ -367,11 +367,11 @@ What error(s), if any, do you see?
 3. Take a look at the code below:
 
 ```java
-1	if( age < 18 );
+1	if( age < 18 )
 2	{
 3	 System.out.println( "You are a minor." );
 4	}
-5	if( age < 120 );
+5	if( age < 120 )
 6	{
 7	 System.out.println( "You are an adult." );
 8	}
