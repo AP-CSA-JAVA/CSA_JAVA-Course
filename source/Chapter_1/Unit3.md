@@ -433,7 +433,7 @@ What error(s), if any, do you see?
 
 
 
-> [!TIP] *The body of an if statement in Java is not dependent on indentation. Indenting in Java is a strong convention that makes code segments readable. Java is often flexible about spacing. The three constructs below are equivalent and like indentation, spacing is used to improve readability.*
+> **NOTE:** *==The body of an if statement in Java is not dependent on indentation.== Indenting in Java is a strong convention that makes code segments readable. Java is often flexible about spacing. The three constructs below are equivalent and like indentation, spacing is used to improve readability.*
 
 ```java
 // Example 1
