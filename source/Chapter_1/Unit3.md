@@ -358,6 +358,7 @@ What errors, if any, do you see?
 
 ---------------------------------------------------------------------------
 
+
 <details><summary>Program 3</summary>
 
 3. Take a look at the code below:
@@ -381,6 +382,7 @@ else
 What errors, if any, do you see?
 
 </details>
+
 
 ---------------------------------------------------------------------------
 
@@ -423,6 +425,10 @@ else
 What errors, if any, do you see?
 
 </details>
+
+---------------------------------------------------------------------------
+
+
 
 **Note** *The body of an if statement in Java is not dependent on indentation. Indenting in Java is a strong convention 
 that makes code segments readable. Java is often flexible about spacing. The three constructs below are equivalent and 
