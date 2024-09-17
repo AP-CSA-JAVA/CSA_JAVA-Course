@@ -335,7 +335,7 @@ if(age >= 18);
 }
 ```
 
-What errors, if any, do you see?
+What error(s), if any, do you see?
 
 </details>
 
@@ -354,7 +354,7 @@ if( age = 18 )
 ```
 
 
-What errors, if any, do you see?
+What error(s), if any, do you see?
 
 
 </details>
@@ -382,7 +382,7 @@ else
 ```
 
 
-What errors, if any, do you see?
+What error(s), if any, do you see?
 
 </details>
 
@@ -399,7 +399,7 @@ if( age < 18 )
 	System.out.println( "but you will grow up!" );
 ```
 
-What errors, if any, do you see?
+What error(s), if any, do you see?
 
 </details>
 
@@ -417,7 +417,7 @@ if( age < 18 )
 }
 else
 {
-	System.out.println( "You are an adult." );
+	System.out.println( 'You are an adult.' );
 }
 else
 {
@@ -425,7 +425,7 @@ else
 }
 ```
 
-What errors, if any, do you see?
+What error(s), if any, do you see?
 
 </details>
 
