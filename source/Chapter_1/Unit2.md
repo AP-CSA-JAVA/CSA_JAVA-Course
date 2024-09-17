@@ -1726,7 +1726,7 @@ class Main {
 ```
 
 
-> As a wrap-up, consider the ++ operator as: 
+As a wrap-up, consider the ++ operator as: 
  - x = x++; //Post-increment
  - x = ++x; //Pre-increment
 
@@ -1736,6 +1736,7 @@ class Main {
 </details>
 
 
+-------------------------------------------------------------------------------
 
 
 ### Activity 1.2.9 - Race Car
