@@ -345,6 +345,8 @@ What errors, if any, do you see?
 
 2. Take a look at the code below:
 
+```java
+
 if( age = 18 )
 {
 	System.out.println( "You are a high school student." );
