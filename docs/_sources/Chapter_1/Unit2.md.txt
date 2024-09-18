@@ -11,7 +11,7 @@ The next two concepts will be used in most of your programs moving forward.  Rea
 
 ## 5.2 - Constructors 
 
-A **constructor** in Java is a special method that is used to initialize objects. The constructor is called when an object of a class is created. It can be used to set the initial values for object attributes/variable names<sup>1</sup>.  It is possible to write two or more constructors within a program.  The difference between the constructors are the *parameters* that are defined within the constructor itself.  This is known as constructor **overloading**. 
+A **constructor** in <mark>Java is a special method that is used to initialize objects</mark>. The constructor is called when an object of a class is created. It can be used to set the initial values for object attributes/variable names<sup>1</sup>.  It is possible to write two or more constructors within a program.  The difference between the constructors are the *parameters* that are defined within the constructor itself.  This is known as constructor **overloading**. 
 
 Java is a *pass-by-value* language.  If we pass a primitive value, we are passing a copy of that value. So, if we change the value inside a constructor, the value outside the constructor doesn't change.  However, if we are passing a reference type, we are passing a reference to the data location.  If we modify the parameter values inside a constructor, then the object changes outside the constructor too!
 
