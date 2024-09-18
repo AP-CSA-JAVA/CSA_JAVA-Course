@@ -146,9 +146,8 @@ public void checkNumbers(int a, int b, int c) {
      - if a person is old enough but does not have enough money, tell them to come back with more money
   - if a person is not old enough, let them know and tell them when they can come back
 - take care to match the sample outputs exactly
-- must pass all 3 tests to submit the assignment
-- click submit here on repl after passing the tests, and type done on Canvas and submit on Canvas
-- submit your replit code
+- your program must pass all 3 tests
+
 
 ```java
 //starter code
