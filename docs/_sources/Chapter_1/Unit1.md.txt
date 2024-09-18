@@ -369,23 +369,26 @@ In Java, the order of operation works pretty much the same with the exception of
 
 <details><summary>JAVA Order of Operations</summary>
 
-| Operator Type |
-| ------------- |
-| **P**arentheses |  
-| **A**rray access |  
-| **M**ember access | 
-| **U**nary | 
-| **C**ast | 
-| **O**bject creation ||
-| **M**ultiplication |
-| **D**ivision |
-| **R**emainder |
-| **A**ddition |
-| **C**oncatentation |
-| **S**ubtraction |
-| **S**hift |
-| **R**elational |
-| **E**quality |
+| Level	| Operator | Description | Associativity |
+| :---: | :------: | :---------: | :-----------: |
+|  16	| (), [], new, . , :: | parentheses, array access, object creation, member access, method reference | left-to-right |
+|  15	| ++, -- | unary post-increment, unary post-decrement |	left-to-right |
+|  14	| +, -, !, ~, ++, -- | unary plus, unary minus, unary logical NOT, unary bitwise NOT, unary pre-increment, unary pre-decrement 	| right-to-left |
+| 13 | () | cast	| right-to-left |
+| 12 | * / %  | multiplicative | left-to-right |
+| 11 | + - , + | additive, string concatenation | left-to-right |
+| 10 | <<, >>, >>> | shift | left-to-right |
+| 9 | <, <=, >, >=, instanceof | relational | left-to-right |
+| 8 | ==, != | equality | left-to-right |
+| 7 | &	| bitwise AND | left-to-right |
+| 6 | ^	| bitwise XOR | left-to-right |
+| 5 | \| | bitwise OR | left-to-right |
+| 4 | && | logical AND |left-to-right |
+| 3 | \|\| | logical OR | left-to-right |
+| 2 | ?: | ternary | right-to-left |
+| 1 | =, +=, -=, *=, /=, %=, &=, ^=, \|=, <<=, >>=, >>>= | assignment | right-to-left |
+| 0 | -> | lambda expression, switch expression | right-to-left |
+
 
 </details>
 

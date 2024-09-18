@@ -664,39 +664,97 @@ In Java, the order of operation works pretty much the same with the exception of
 <div class="table-wrapper colwidths-auto docutils container">
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>Operator Type</p></th>
+<tr class="row-odd"><th class="head text-center"><p>Level</p></th>
+<th class="head text-center"><p>Operator</p></th>
+<th class="head text-center"><p>Description</p></th>
+<th class="head text-center"><p>Associativity</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><strong>P</strong>arentheses</p></td>
+<tr class="row-even"><td class="text-center"><p>16</p></td>
+<td class="text-center"><p>(), [], new, . , ::</p></td>
+<td class="text-center"><p>parentheses, array access, object creation, member access, method reference</p></td>
+<td class="text-center"><p>left-to-right</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>A</strong>rray access</p></td>
+<tr class="row-odd"><td class="text-center"><p>15</p></td>
+<td class="text-center"><p>++, –</p></td>
+<td class="text-center"><p>unary post-increment, unary post-decrement</p></td>
+<td class="text-center"><p>left-to-right</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>M</strong>ember access</p></td>
+<tr class="row-even"><td class="text-center"><p>14</p></td>
+<td class="text-center"><p>+, -, !, ~, ++, –</p></td>
+<td class="text-center"><p>unary plus, unary minus, unary logical NOT, unary bitwise NOT, unary pre-increment, unary pre-decrement</p></td>
+<td class="text-center"><p>right-to-left</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>U</strong>nary</p></td>
+<tr class="row-odd"><td class="text-center"><p>13</p></td>
+<td class="text-center"><p>()</p></td>
+<td class="text-center"><p>cast</p></td>
+<td class="text-center"><p>right-to-left</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>C</strong>ast</p></td>
+<tr class="row-even"><td class="text-center"><p>12</p></td>
+<td class="text-center"><p>* / %</p></td>
+<td class="text-center"><p>multiplicative</p></td>
+<td class="text-center"><p>left-to-right</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>O</strong>bject creation</p></td>
+<tr class="row-odd"><td class="text-center"><p>11</p></td>
+<td class="text-center"><p>+ - , +</p></td>
+<td class="text-center"><p>additive, string concatenation</p></td>
+<td class="text-center"><p>left-to-right</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>M</strong>ultiplication</p></td>
+<tr class="row-even"><td class="text-center"><p>10</p></td>
+<td class="text-center"><p>&lt;&lt;, &gt;&gt;, &gt;&gt;&gt;</p></td>
+<td class="text-center"><p>shift</p></td>
+<td class="text-center"><p>left-to-right</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>D</strong>ivision</p></td>
+<tr class="row-odd"><td class="text-center"><p>9</p></td>
+<td class="text-center"><p>&lt;, &lt;=, &gt;, &gt;=, instanceof</p></td>
+<td class="text-center"><p>relational</p></td>
+<td class="text-center"><p>left-to-right</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>R</strong>emainder</p></td>
+<tr class="row-even"><td class="text-center"><p>8</p></td>
+<td class="text-center"><p>==, !=</p></td>
+<td class="text-center"><p>equality</p></td>
+<td class="text-center"><p>left-to-right</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>A</strong>ddition</p></td>
+<tr class="row-odd"><td class="text-center"><p>7</p></td>
+<td class="text-center"><p>&amp;</p></td>
+<td class="text-center"><p>bitwise AND</p></td>
+<td class="text-center"><p>left-to-right</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>C</strong>oncatentation</p></td>
+<tr class="row-even"><td class="text-center"><p>6</p></td>
+<td class="text-center"><p>^</p></td>
+<td class="text-center"><p>bitwise XOR</p></td>
+<td class="text-center"><p>left-to-right</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>S</strong>ubtraction</p></td>
+<tr class="row-odd"><td class="text-center"><p>5</p></td>
+<td class="text-center"><p>|</p></td>
+<td class="text-center"><p>bitwise OR</p></td>
+<td class="text-center"><p>left-to-right</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>S</strong>hift</p></td>
+<tr class="row-even"><td class="text-center"><p>4</p></td>
+<td class="text-center"><p>&amp;&amp;</p></td>
+<td class="text-center"><p>logical AND</p></td>
+<td class="text-center"><p>left-to-right</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>R</strong>elational</p></td>
+<tr class="row-odd"><td class="text-center"><p>3</p></td>
+<td class="text-center"><p>||</p></td>
+<td class="text-center"><p>logical OR</p></td>
+<td class="text-center"><p>left-to-right</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>E</strong>quality</p></td>
+<tr class="row-even"><td class="text-center"><p>2</p></td>
+<td class="text-center"><p>?:</p></td>
+<td class="text-center"><p>ternary</p></td>
+<td class="text-center"><p>right-to-left</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>1</p></td>
+<td class="text-center"><p>=, +=, -=, *=, /=, %=, &amp;=, ^=, |=, &lt;&lt;=, &gt;&gt;=, &gt;&gt;&gt;=</p></td>
+<td class="text-center"><p>assignment</p></td>
+<td class="text-center"><p>right-to-left</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>0</p></td>
+<td class="text-center"><p>-&gt;</p></td>
+<td class="text-center"><p>lambda expression, switch expression</p></td>
+<td class="text-center"><p>right-to-left</p></td>
 </tr>
 </tbody>
 </table>
