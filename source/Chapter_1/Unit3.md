@@ -102,12 +102,6 @@ An \|\| statement short circuits when the left operand is `true`.  `happy` is `t
 
 ### Activity 3.1.1  
 
-[Boolean_Exercises_Revised.docx](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/13270729/Boolean_Exercises_Revised.docx)
-
-
-
-### Activity 3.1.2
-
 **Write the body of the method given the following requirements.**
 
 You have three numbers to work with: `ints a`, `b` and `c`.  
@@ -122,9 +116,7 @@ public void suchFun(int a, int b, int c) {
 }
 ```
 
-[FRQ_FreeResponse_Template.pdf](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/13352571/FRQ_FreeResponse_Template_vrs2.pdf)
-
-### Activity 3.1.3
+### Activity 3.1.2
 
 **Rent-a-Car:**
 - ask the user to enter their name, age, and how much money they have
@@ -183,7 +175,7 @@ How much money do you have?
 Erika you are too young to rent a car, please visit us again when you are 25 years old.
 ```
 
-### Activity 3.1.4
+### Activity 3.1.2
 
 **Instructions**
 Write a program that will take 2 doubles from the user.  Use Boolean Expression to compare the two values using: <, <=, =, !=, >, and >=. Evaluate if the expression is true or false.
