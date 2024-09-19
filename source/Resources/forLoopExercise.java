@@ -1,5 +1,5 @@
 /*
-Write a java program that generates the second, third, and fourth powers of a list 
+Prompt: Write a java program that generates the second, third, and fourth powers of a list 
 of whole numbers from 1 to n where n is input by the user. First, ask the user for 
 the largest of the whole numbers to use (n). Second, output column headers based on 
 the number from the user input. Then, use a for loop to iterate from 1 to n (the 
@@ -8,6 +8,8 @@ third power and fourth power, et cetera. Assuming your loop variable is called i
 can do this either as i*i or Math.pow(i,2). To output the values in nice columns, 
 separate each output with a tab (“\t”). This is similar to using \n for a new line.
 */
+
+//Solution
 import java.util.Scanner;
 
 public class Main {
