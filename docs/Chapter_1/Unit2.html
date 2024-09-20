@@ -608,6 +608,36 @@ Null is a reserved keyword in Java for literal values. It is a value that shows 
 <span class="n">emptyCake</span><span class="o">=</span><span class="kc">null</span>
 </pre></div>
 </div>
+<details><summary>**Sample Solution**</summary>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.0</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// Create a variable that can store the object reference created with new Cake(t)</span>
+<span class="w">   </span><span class="n">Cake</span><span class="w"> </span><span class="n">myCake</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Cake</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
+<span class="w">        </span>
+<span class="w">    </span><span class="c1">// Creation of two Cake constructors</span>
+<span class="w">    </span><span class="n">Cake</span><span class="w"> </span><span class="n">yourCake</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Cake</span><span class="p">();</span>
+<span class="w">    </span><span class="n">Cake</span><span class="w"> </span><span class="n">ourCake</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Cake</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Three Cake objects with their respective reference variables</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;myCake=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">myCake</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;yourCake=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">yourCake</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;ourCake=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ourCake</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// EmptyCake variable equal to null</span>
+<span class="w">    </span><span class="n">Cake</span><span class="w"> </span><span class="n">emptyCake</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;emptyCake=&quot;</span><span class="w"> </span><span class="o">+</span><span class="n">emptyCake</span><span class="p">);</span>
+
+<span class="w">  </span><span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+</details>
+<hr class="docutils" />
 <p><strong>Bicycle Revisited</strong></p>
 <p><strong>Instructions:</strong></p>
 <ol class="arabic simple">
