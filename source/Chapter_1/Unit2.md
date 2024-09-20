@@ -366,6 +366,41 @@ ourCake=Cake@7852e922
 emptyCake=null
 ```
 
+
+<details><summary>**Sample Solution**</summary>
+
+```java
+public class Main
+{
+  public static void main(String[] args)
+  {
+    double t = 3.0;
+    
+    // Create a variable that can store the object reference created with new Cake(t)
+   Cake myCake = new Cake(t);
+        
+    // Creation of two Cake constructors
+    Cake yourCake = new Cake();
+    Cake ourCake = new Cake(2);
+
+    // Three Cake objects with their respective reference variables
+    System.out.println("myCake=" + myCake);
+    System.out.println("yourCake=" + yourCake);
+    System.out.println("ourCake=" + ourCake);
+
+    // EmptyCake variable equal to null
+    Cake emptyCake = null;
+    System.out.println("emptyCake=" +emptyCake);
+
+  }
+
+}
+```
+</details>
+
+-------------------------------------------------------------------------
+
+
 **Bicycle Revisited**
 
 **Instructions:**
