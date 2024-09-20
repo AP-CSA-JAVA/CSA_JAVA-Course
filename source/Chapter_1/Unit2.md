@@ -328,7 +328,10 @@ public class Main
 }
 
 ```
+
+
 **Sample Output**
+
 ```java
         ,,,
         |||
@@ -367,7 +370,7 @@ emptyCake=null
 ```
 
 
-<details><summary>**Sample Solution**</summary>
+<details><summary> **Sample Solution** </summary>
 
 ```java
 public class Main
