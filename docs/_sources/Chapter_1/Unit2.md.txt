@@ -939,8 +939,6 @@ public class Main
  Your woods\ fields\ and hills\"
  
  
-**Extra Credit**
-
 1. Create a new java file.
      - Research a College Fight Song to use for this assignment.
 
