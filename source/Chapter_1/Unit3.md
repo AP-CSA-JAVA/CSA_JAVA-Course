@@ -217,6 +217,7 @@ Input a second number: 5
 **Goals**
 -   Gain an understanding of how to control program flow with `if` statements.
 -   Start to implement control flow in more complex programs.
+	-   I will be able to write a program that uses if statements to control how a program will operate
 
 In Java, decision driven statements are used in conjunction with mathematical logical operators to navigate complex programs.  We use these logical operators below to differentiate solutions based on specific information.
 
@@ -619,7 +620,7 @@ Write a program that includes the following:
 
 **Goals**
 -   Learn the if/else statement.
--   Simplify a complex program with if/else statements.
+	-   I will be able to simplify a complex program with if/else statements.
 
 
 ```java
@@ -793,7 +794,8 @@ public class Main
 
 **Goals**
 -   Learn multiple selections with the if/else-if conditional.
--   Continue to improve the code of a complex program.
+	-   I will be able to use else if statements to improve the complexity of a program.
+  
 
 A *multi-way selection* is written when there are a series of conditions with different statements for each condition. Multi-way selection is performed using if/else-if statements such that exactly one section of code is executed based on the first condition that evaluates to true.
 
@@ -993,7 +995,7 @@ public class Main {
 **Goals**
 -   Understand how to evaluate a Boolean expression with multiple parts.
 -   Use truth tables to simplify expressions.
--   Continue to improve the GuessChecker program.
+	-   I will be able to modify and improve the GuessChecker program.
 
 
 ### Activity 3.5.1
@@ -1064,8 +1066,7 @@ You have 0 guesses remaining.
  **Goals**
 
 -   Understand De Morgan’s Laws.
--   Students will work independently, but are encouraged to ask each other for help as needed.
--   Convert complex Boolean statements to conditional statements in code.
+	-   I will be able to convert complex Boolean statements to conditional statements in code.
 
 
 
@@ -1228,6 +1229,7 @@ You are considered overweight.
 - Learn how to compare instances of classes to one another
 - Create your own `equals` method for a class
 - Practice `if` statements and coding skills
+	- I will be able to write a program that compares String values and not String location	 
 
 <mark >You may recall that the String class is included in the Java language package</mark> [(See java.lang)](https://docs.oracle.com/javase/8/docs/api/java/lang/package-summary.html).  When you create a String object from its class, the object is a reference variable. For example, the following declarations create two String reference variables.
 
@@ -1401,7 +1403,6 @@ switch (day) {
 
 **Choose Your Own Adventure**
 
-**Goals**
 -  Apply all you’ve learned about conditionals to create a “Choose Your Own Adventure” game.
 -  Apply the development process to create a project.
 -  Each student will create their own project
