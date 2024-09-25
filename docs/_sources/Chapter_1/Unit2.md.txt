@@ -6,10 +6,17 @@
 - [ ] Explain the relationship between a class and an object
 - [ ] Identify different constructor signatures and create objects using them
 - [ ] Use variables to represent object references
+	- [ ] I will be able to write more complex programs using classes and objects
 
 The next two concepts will be used in most of your programs moving forward.  Read through **constructor** and **toString()** below.
 
 ## 5.2 - Constructors 
+
+
+- [ ] Understand the concept of class constructors.
+- [ ] Write your own class constructors for a PhraseSolverGame program.
+- [ ] Examine call by value and reference with regard to class constructors.
+	- [ ] I will be able to write a program that utilizes constructors
 
 A **constructor** in <mark>Java is a special method that is used to initialize objects</mark>. The constructor is called when an object of a class is created. It can be used to set the initial values for object attributes/variable names<sup>1</sup>.  It is possible to write two or more constructors within a program.  The difference between the constructors are the *parameters* that are defined within the constructor itself.  This is known as constructor **overloading**. 
 
@@ -551,6 +558,7 @@ public class Dog
 ## 2.3 Calling a Void Method
 
 - [ ] Call non-static void methods without parameters
+	- [ ] I will be able to write and identify a non-static void method program
 
 Class methods represent an object's behavior, defining what an object can do within a program.
 
@@ -623,6 +631,7 @@ The `void` keyword will not return *anything* from the method declaration.  Whil
 
 - [ ] Call non-static void methods with parameters
 - [ ] Use overloaded methods
+	- [ ] I will be able to write a program using overloaded methods
 
 Using parameters allows us the freedom to write a program that is more flexible and specific.  It is similar to providing specific instructions for the program.  When you pass multiple parameters, it is important to make sure that the order is correct.  Incorrect order will return incorrect results.  As we did with constructors, we can overload a method.  Recall that the method name has also an ordered list of parameters.  You can also overload a method by giving the method the same name as another method, and provide a different set of parameters.
 
@@ -687,6 +696,7 @@ Happy: 45
 
 ## 2.5 Non-Void Methods
 
+
 If you've programmed in Python, you may remember that we used functions to execute a small chunk of code in other areas of the program.  Non-Void methods are very similar to functions in that they return a value of some type.  You have used non-void methods already, you just may not have recognized it. For example, the Scanner Class has non-void methods like nextInt(), nextDouble(), nextLine(), and next().  There are a number of methods that can be found in the Java standard library methods that are non-void methods.  Take a look at the example below.
 
 ```java
@@ -699,8 +709,10 @@ public int sum(){
  
  ## 2.5 Calling a non-void method
  
- - [ ]  Call a non-void method
- - [ ]  Use a return value from a non-void method in a variable or as part of an expression
+
+- [ ] Call a non-void method.
+- [ ] Use a return value from a non-void method in a variable or as part of an expression.
+	- [ ] I will be able to write a program that utilizes a program using a non-void method
  
 The way that a non-void method is called differs from the way that a void method is called in that the call is made from within other Java statements. Since a non-void method always returns a value, this value has to be stored in a variable, printed, or returned to a Java control structure or another method. Here are some examples.
 
@@ -804,6 +816,8 @@ ________________________________________________________________________________
 
 - [ ] Create String objects
 - [ ] Reference String objects
+- [ ] Understand that in java, String objects are immutable and can only be called by reference
+	- [ ] I will be able to write a program using String objects
 
 String objects can be instantiated in **two different** ways, either by assigning a **String literal** directly to a String variable or by calling the **String class constructor**. In the example below, the code on the left uses a String literal assignment, and the code on the right uses the String class constructor.
 
@@ -910,7 +924,7 @@ public class Main
 
 **NOTE** Certain characters need special treatment to be included in strings in Java. Either they are “non-printable,” such as the character that indicates a new line of output (called the newline character), or they already have other meanings in the Java language.
 
-Escape sequences begin with the \ character (back slash as opposed to a forward slash) and allow a programmer to type these characters in String literals. Take a look at the three examples below.
+Escape sequences begin with the \ character (back slash as opposed to a forward slash) and allow a programmer to type these characters in String literals. Take a look at the examples below.
 
 **Escape Sequence**
 
@@ -956,8 +970,12 @@ Comment your code showing that you completed each of the bullet points above.
 _____________________________________________________________________________________________________
 ## 2.7 String Methods
 
+
 - [ ] Compare `String` Objects
 - [ ] Use `String` Methods
+- [ ] Using Java API Specification
+- [ ] Using ASCII table within Java
+	- [ ] I will be able to write a program that utitlizes String methods
 
 Navigate to and review the information that can be found at [Java API Specification](https://docs.oracle.com/en/java/javase/14/docs/api/index.html).
 
@@ -1258,11 +1276,13 @@ ________________________________________________________________________________
 	- [ ] I will be able to identify a wrapper class
 	- [ ] I will be able to convert primitives to an object of a wrapper class
 	- [ ] I will be able to identify autoboxing/ unboxing of primitive and reference types
-- [ ] I will be able to write programs my understanding of wrapper classes
+- [ ] I will be able to write programs using wrapper classes
 
 **NOTE:**  Wrapper classes have been deprecated as of Java 9.  If you use this in replit, it will notify you that it has been depracated.  For more information [click here.](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/class-use/Deprecated.html)
 
-___________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________
+
 
 Recall that primitive data types are int, double, boolean & String.  A wrapper class is a class that allows you to extend a primitive type into an object.  A wrapper class contains a single attribute that is its primitive type.  For example, `Integer` is a wrapper class for primitive type `int`.  For every Wrapper Class there is a corresponding primitive type <see below>.  Integer belongs to the Java.lang package that can be found in the [API documentation](https://docs.oracle.com/en/java/javase/14/docs/api/index.html) that we reviewed in a prior lesson.
 
@@ -1364,6 +1384,7 @@ In the program below the JVM did some extra work at lines 5 and 6. Java automati
 10  }
 11 }
 ```
+
 **Note:** Autoboxing is the automatic conversion that the Java compiler makes between primitive types and their corresponding object wrapper classes, including int to Integer, double to Double, and boolean to Boolean.
 
 The program below demonstrates the opposite of autoboxing called **unboxing**. Java automatically converted the Integer reference types to its corresponding int primitive types.
