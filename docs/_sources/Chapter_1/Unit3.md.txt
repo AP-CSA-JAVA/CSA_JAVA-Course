@@ -14,6 +14,7 @@ Logical operators are used to performing logical “AND”, “OR” and “NOT�
 **Goals**
 -   Understand Boolean expressions.
 -   Use relational operators to compute the value of a Boolean expression.
+	-  I will be able to write a program that utilizes a Boolean expression 
 
 
 George Boole formulated the basic rules of Boolean algebra back in 1847. His endeavor created the mathematical logic that we use today.  Below are the relational operators that you will need to know for the AP exam.
