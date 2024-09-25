@@ -71,6 +71,7 @@ A powerful tool that you can use in OOP is the concept of `inheritance`.  `Inher
 ## 2.1 Instances of Classes
 
 - [ ] Explain the relationship between a class and an object
+	- [ ] I will be able to create a poster demonstrating classes and objects
 
 
 As stated earlier, a *class* is a blueprint of an object.  So we can also say that an *object* is an instance of a class.  What we define as a class determines what objects that will be associated with the class and how things will operate within it.  For example, we can define `human` as a class.  We can assign attributes to that class like a nose, ears, eyes, hands, feet, etc.  **NOTE:** Attribute and state are interchangable terms.
@@ -171,6 +172,12 @@ Object-oriented Programming Facts:
 <p align="center">---------------------------------------------------------------------------- </p>
 
 ### 5.3 Documentation with Comments
+
+
+- [ ] Understand how to properly comment code.
+- [ ] Implement precondition and postcondition commenting to summarize methods.
+- [ ] Use single-line comments to make code more readable and understand what tasks it performs.
+	- [ ] I will practice industry standard commenting standards in my programs.
 
 Typing comments within your program is considered a professional practice, and I expect you to comment your code as appropriate throughtout the year.  When other people read your program, they may not understand the purpose of the variables and/ or methods in
 your program.  That's why it's important to document your code with comments. A comment is a piece of text that the
@@ -574,6 +581,12 @@ class Main
 
 ## 1.4 Compound Assignment Operators
 
+- [ ] Use the compound assignment and increment/decrement operators in a program.
+	- [ ] I will be able to increment a variable based on java protocol
+- [ ] Describe the behavior of a given segment of program code, including the result it produces.
+	- [ ] I will be able to implement appropriate order of operation as it relates to java
+
+
 In Java, you can modify a variable by referencing it, performing an operation on it, and assigning the result back to the variable. Thus, you can reference a variable to change its own value. For example, if x equals 0 , the following statement modifies x.</br>
 
 ```java
@@ -766,6 +779,11 @@ Total Sales: $64.3
 
 ## 1.5 Casting and Range of Variables
 
+
+- [ ] Evaluate arithmetic expressions that use manual and automatic casting.
+- [ ] Perform mathematical rounding.
+	- [ ] I will be able to explain why a code segment will not compile or work as intended.
+
 There are some unique features to Java that help programmers create programs that are flexible in how they display data.  
 We learned earlier that we need to declare a variable by it's type.  It can be an int or a double.  As you may remember, 
 an int is any whole negative or positive number.
@@ -940,6 +958,13 @@ public class FivePlanetTravel
 </details>
 
 ### Numbers Riddle Project 
+
+
+- [ ] Apply coding concepts you have learned up to this point.
+- [ ] Apply a programming development process to create your first project.
+- [ ] Capture your project and communicate how each part of your program works.
+	- [ ] I will demonstrate my understanding of a Unit 1 by writing a program
+
 
 In this project, you will write a program that incorporates the Java™ concepts you have learned throughout this unit.
 
