@@ -2,13 +2,12 @@
  
 ## 1.1 Why Programming Why Java
 
-[ ] Learn about the Java™ programming language and create your first Java program.
-
-Learn some basic rules of Java programming by identifying and correcting errors in code.
-
-    Generate outputs to a console by calling System class methods.
-
-    Understand the difference between the print() method and the println() method.
+- [ ] Learn about the Java™ programming language and create your first Java program.
+	- [ ] 	I will be able to write a basic java program
+- [ ] Learn some basic rules of Java programming by identifying and correcting errors in code.
+	- [ ]   I will be able to indentify basic syntax of a java program
+- [ ] Generate outputs to a console by calling System class methods.
+- [ ] Understand the difference between the `print()` method and the `println()` method.
 
 
 Java is an Object Oriented Program.  Within every Java program begins with the creation of a class.  Consider a class as a blueprint for your program.  In this instance, we created a class called *MyFirstClass*.  Within the class there is a main method that is required to execute the program.  Below is a simple program that will print "Hello, World".
@@ -278,6 +277,11 @@ class Main {
 </details>
 
 ## 1.2 Variables and Data Types
+
+- [ ] Learn to use variables so that the same algorithm runs using different input values.
+- [ ] Determine the appropriate use for specific variables and data types.
+	- [ ] I will be able to write a program using primitive and non-primitive types.
+
 There are eight primitive types in Java. In no particular order, they are int, double, boolean, float, char, byte, long and short.  For this course we will be using only int, double, and boolean.
 - [ ] **int** is short for integer deals with whole numbers and uses 32 bits of memory
 - [ ] **double** is a 64 bit data type that stores decimal numbers
@@ -353,6 +357,12 @@ Use a Scanner object to create an input feature in your program.  Click on [Scan
 
 
 ## 1.3 Expressions and Assignment Statements
+
+- [ ] Describe the functionality of a program using a single-line comment.
+- [ ] Use operators to construct compound expressions.
+- [ ] Evaluate the results of an expression with an assignment statement.
+	- [ ] I will understand and practice proper commenting in programming
+
 Math Operators are a very important part of computing. Below are the most common operators that we will be using in this course.
 | Symbol | Name  | Usage |
 | :---:  | :---: | :---: |
