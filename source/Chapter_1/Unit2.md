@@ -1473,11 +1473,30 @@ Create a program that contains an example of each of the following. Add in-line 
 ## 2.9 Using the Math Class
 
 - [ ]  Use methods from the Math package
-	- [ ] I will be able to write a program using math methods	
+	- [ ] I will be able to write programs using math methods
+ 	- [ ] I will write a segment of code that will convert an annuity into java
 - [ ]  Incorporate randomness into a program
 	- [ ] I will be able to write a program using random method
 	
 The Math class can be found in the java.lang package.  The Math class contains only static methods.  Some of the more commonly use Math methods are listed below.
+
+<details><summary>Oracle Java Methods & Classes</summary>
+
+
+Navigate to and review the information that can be found at [Java API Specification](https://docs.oracle.com/en/java/javase/14/docs/api/index.html).
+
+| Navigation |
+| ---------- |
+| Select java.base > java.lang |
+| Scroll through Class Summary until you find `String` |
+| Review String class description |
+| Click on `String` class link to explore the class |
+|  |
+| Click on 'Constructor Summary' to explore how you can call the String Constructor |
+| Click on 'Method' to view the Method Summary |
+
+
+</details>
 
 | Math Class Methods | Explanations |
 | ----------- | --------- |
