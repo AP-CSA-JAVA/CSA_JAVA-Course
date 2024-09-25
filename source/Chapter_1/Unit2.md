@@ -1892,4 +1892,3 @@ Your program should allow a user to enter values that change the output of a sto
 - [ ] Appropriate sentence structure & syntax
 - [ ] Code that causes errors
 	
-Share your link for your project.  No Screenshots needed for this project.
