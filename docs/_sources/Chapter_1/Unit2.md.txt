@@ -1488,12 +1488,12 @@ Navigate to and review the information that can be found at [Java API Specificat
 | Navigation |
 | ---------- |
 | Select java.base > java.lang |
-| Scroll through `*Class Summary*` until you find `Math` |
+| Scroll through `Class Summary` until you find `Math` |
 | Review Math class description |
-| Click on `*Math*` class link to explore the class |
+| Click on `Math` class link to explore the class |
 |  |
-| Click on '*Method Summary*' for **All Methods** to explore how you can call the implement a method |
-| Click on a '*Method*' to view the Method Summary |
+| Click on 'Method Summary' for **All Methods** to explore how you can call the implement a method |
+| Click on a 'Method' to view the Method Summary |
 
 
 </details>
