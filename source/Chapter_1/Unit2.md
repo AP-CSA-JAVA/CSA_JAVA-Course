@@ -1124,8 +1124,6 @@ public class Main
 ```
 How would you modify the calls to substring so that the program below will print true. 
 
-String Objects Practice: 
-[Activity 126 String Objects_Vers1.docx](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9735560/Activity.126.String.Objects_Vers1.docx)
 
 | compareTo | |
 | --------- | --------- |
@@ -1202,7 +1200,14 @@ Experiment with the program above by changing the values of the two Strings unti
 3. Which is greater, a String beginning with a number, or one that begins with a letter? 
 4. When two Strings begin with the same substring and one is longer, which is greater? 
 
-String Object Practice Part II: [Activity 126 String Objects_Vers2.docx](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9737627/Activity.126.String.Objects_Vers2.docx)
+
+**String Objects Practice:** 
+[Activity 126 String Objects_Vers1.docx](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9735560/Activity.126.String.Objects_Vers1.docx)
+
+
+**String Object Practice Part II:** [Activity 126 String Objects_Vers2.docx](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9737627/Activity.126.String.Objects_Vers2.docx)
+
+
 
 ### Activity 2.7.1 - Wordplay
 
