@@ -1480,12 +1480,16 @@ In the program below, which line of code contains an example of *unboxing*?
 
 
 
-```java
- Unboxing occurs on line 7 when Integer parameters are automatically converted to ints in the 
- constructor.
+ **Unboxing** occurs on *line 7* when Integer parameters are automatically converted to ints 
+in the constructor.
    
- Autoboxing occurs on line 8 when int parameters are automatically converted to Integers 
+ **Autoboxing** occurs on *line 8* when int parameters are automatically converted to Integers 
  in the method.
+
+
+**Sample Output**
+```java
+Ending box dimensions: 2 x 3
 ```
 
 </p>
