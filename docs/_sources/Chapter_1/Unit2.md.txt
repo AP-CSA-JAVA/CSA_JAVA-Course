@@ -1383,7 +1383,7 @@ In the program below the JVM did some extra work at lines 5 and 6. Java automati
 4   {
 5     Integer integerInstance = 5;
 6     Double doubleInstance = 2.0;
-7     // recall newlines are allowed around operators
+7     // Newlines are allowed around operators
 8     System.out.println("integerInstance: " + integerInstance.intValue() +
 9                        " doubleInstance: " + doubleInstance.doubleValue());
 10  }
