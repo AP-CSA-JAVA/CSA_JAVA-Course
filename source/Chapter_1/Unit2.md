@@ -1420,6 +1420,15 @@ public class Main
   }
 }
 ```
+
+**Sample Output**
+```java
+42
+3.14159
+true
+```
+
+
 **Note:** Unboxing is the automatic conversion that the Java compiler makes from the wrapper class to the primitive type. 
 This includes converting an Integer to an int and a Double to a double.
 
