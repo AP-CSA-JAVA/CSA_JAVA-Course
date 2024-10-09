@@ -974,7 +974,7 @@ public class Main {
 }
 ```
 
-### Activity 3.4.1.1
+### Activity 3.4.1a
 **Directions:**  Write a switch that determines if some number num is odd or even. Test with positive and negative values.
 
 ```java
@@ -1165,21 +1165,20 @@ Enter a number for X
  -5
 Enter a number for Y
  19
-Checking that both x and are not negative ... 
+Checking that both x and y input as a negative ... 
 at least one number is negative
-at least one number is negative
+
 
 //program with positive inputs
 Enter a number for X
  5
 Enter a number for Y
  15
-Checking that both x and are not negative ... 
+Checking that both x and y are not negative ... 
 Both x and y are not negative
 Both x and y are not negative
 ```
 
-Submit your assignment as a replit on Canvas.
 
 ### Activity 3.6.2 
 
