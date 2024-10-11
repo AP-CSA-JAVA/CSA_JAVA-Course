@@ -511,13 +511,13 @@ In the case of ||, the expression is evaluated until we get one true result beca
 <li><p>Which of the following expressions will short circuit when <code class="docutils literal notranslate"><span class="pre">happy</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">pink</span></code> is <code class="docutils literal notranslate"><span class="pre">false</span></code>?  Why?</p></li>
 </ol>
 <ul class="contains-task-list simple">
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> ! happy &amp;&amp; pink</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> !happy &amp;&amp; pink</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> happy | | pink</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> pink | | happy</p></li>
 </ul>
 <details><summary>Solution</summary>
 <p>An <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code> statement short circuits when the left operand is <code class="docutils literal notranslate"><span class="pre">false</span></code>. <code class="docutils literal notranslate"><span class="pre">!happy</span></code> is <code class="docutils literal notranslate"><span class="pre">false</span></code>, so <code class="docutils literal notranslate"><span class="pre">!happy</span> <span class="pre">&amp;&amp;</span> <span class="pre">pink</span></code> will short circuit to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
-<p>An || statement short circuits when the left operand is <code class="docutils literal notranslate"><span class="pre">true</span></code>.  <code class="docutils literal notranslate"><span class="pre">happy</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>, so <code class="docutils literal notranslate"><span class="pre">!happy</span> <span class="pre">||</span> <span class="pre">pink</span></code> will short circuit to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+<p>An || statement short circuits when the left operand is <code class="docutils literal notranslate"><span class="pre">true</span></code>.  <code class="docutils literal notranslate"><span class="pre">happy</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>, so <code class="docutils literal notranslate"><span class="pre">happy</span> <span class="pre">||</span> <span class="pre">pink</span></code> will short circuit to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </details>
 <section id="activity-3-1-1">
 <h3>Activity 3.1.1<a class="headerlink" href="#activity-3-1-1" title="Link to this heading">¶</a></h3>

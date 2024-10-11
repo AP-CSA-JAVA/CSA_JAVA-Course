@@ -87,7 +87,7 @@ In the case of ||, the expression is evaluated until we get one true result beca
 
 2.  Which of the following expressions will short circuit when `happy` is `true` and `pink` is `false`?  Why?
 
-- [ ] ! happy && pink
+- [ ] !happy && pink
 - [ ] happy | | pink
 - [ ] pink | | happy
 
@@ -96,7 +96,7 @@ In the case of ||, the expression is evaluated until we get one true result beca
 
 An `&&` statement short circuits when the left operand is `false`. `!happy` is `false`, so `!happy && pink` will short circuit to `false`.
     
-An \|\| statement short circuits when the left operand is `true`.  `happy` is `true`, so `!happy || pink` will short circuit to `true`.
+An \|\| statement short circuits when the left operand is `true`.  `happy` is `true`, so `happy || pink` will short circuit to `true`.
 
 </details>
 
