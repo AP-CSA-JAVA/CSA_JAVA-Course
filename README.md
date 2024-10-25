@@ -720,13 +720,15 @@ Please review the Java Style Guidelines
 
 [Source Link](https://www2.cs.arizona.edu/~mccann/styletemplates.html#EXAMPLES)
 
-At the top of the file containing your program's main() method, place an `external' block comment containing the following content. 
+#### Main() Block method
+
+At the top of the file containing your program's **main() block method**, place an `external' block comment containing the following content. 
 
 ```java
 /*=============================================================================
  |   Assignment:  Program #[n]:  [Assignment Title]
- |       Author:  [Your Name (Your E-mail Address)]
- |      Partner:  [Partner's Name (E-mail Address)]
+ |       Author:  [Your Name ]
+ |      Partner:  [Partner's Name ]
  |
  |  Course Name:  [Course Name]
  |   Instructor:  John Smith
@@ -734,7 +736,7 @@ At the top of the file containing your program's main() method, place an `extern
  |
  |  Description:  [Describe the program's goal, IN DETAIL.]
  |
- |     Language:  [Programming language and version used.]
+ |     Language:  [ Java version 8]
  | Ex. Packages:  [List names and sources of all external packages
  |                required by this program.]
  |                
@@ -745,7 +747,10 @@ At the top of the file containing your program's main() method, place an `extern
 
 ```
 
+
 An internal block comment belongs immediately ahead of each method of your program, with two exceptions. First, main() is assumed to be covered by the external block comment. Second, if your class has a group of getters and setters, you may cover the entire group with one block comment.
+
+#### Method Block
 
 ```java
 /*---------------------------------------------------------------------
