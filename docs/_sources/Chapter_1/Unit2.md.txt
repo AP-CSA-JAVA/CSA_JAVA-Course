@@ -1545,8 +1545,8 @@ Navigate to and review the information that can be found at [Java API Specificat
 | double sqrt(double x) | Returns the positive square root of a double value |
 | double random() | Returns a double value greater than or equal to 0.0 and less than 1.0 |
 | round() | Returns the round of the decimal number to the nearest value |
-| ceil() | Returns an integer greater than or equal to the original number |
-| floor() | Returns an integer less than or equal to the orignal number |
+| ceil() | Returns a double greater than or equal to the original number |
+| floor() | Returns a double less than or equal to the orignal number |
 
 --------------------------------------------------------------------------------------------------------------------------------------------
 
