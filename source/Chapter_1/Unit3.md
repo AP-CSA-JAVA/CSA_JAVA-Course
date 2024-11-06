@@ -998,6 +998,69 @@ public class Main {
 	-   I will be able to modify and improve the GuessChecker program.
 
 
+1. Using **AND** (`&&`)
+   ```java
+   int age = 25;
+   boolean hasLicense = true;
+   boolean isEligible = age >= 18 && hasLicense;
+   ```
+   **Explanation**: Here, `isEligible` will be `true` only if both `age >= 18` and `hasLicense` are `true`. In Java, `&&` is the **AND** operator, which requires both conditions to be true for the entire expression to evaluate as `true`. If either condition is false, `isEligible` will be `false`.
+
+2. Using **OR** (`||`)
+   ```java
+   int temperature = 35;
+   boolean isRaining = false;
+   boolean goForWalk = temperature >= 20 || isRaining;
+   ```
+   **Explanation**: The variable `goForWalk` will be `true` if either `temperature >= 20` or `isRaining` is `true`. In Java, `||` is the **OR** operator, meaning that only one of these conditions needs to be true for `goForWalk` to be true. If both are false, then `goForWalk` will be `false`.
+
+3. Combining **AND** and **OR** with Parentheses
+   ```java
+   boolean isWeekend = true;
+   boolean hasFreeTime = false;
+   boolean isTired = false;
+   boolean canGoHiking = isWeekend && (hasFreeTime || !isTired);
+   ```
+   **Explanation**: In this case, `canGoHiking` will be `true` if it is the weekend (`isWeekend` is `true`) **and** either there is free time (`hasFreeTime` is `true`) **or** the person is not tired (`!isTired`). The parentheses ensure that `hasFreeTime || !isTired` is evaluated together before applying the `&&` with `isWeekend`.
+
+4. Using **NOT** (`!`)
+   ```java
+   boolean isStudent = false;
+   boolean hasDiscount = !isStudent;
+   ```
+   **Explanation**: The expression `!isStudent` reverses the Boolean value of `isStudent`. If `isStudent` is `false`, then `hasDiscount` will be `true`. In Java, the **NOT** operator (`!`) is used to negate a condition.
+
+5. Complex Condition with **Multiple AND/OR/NOT**
+   ```java
+   int age = 30;
+   boolean isMember = true;
+   boolean hasDiscountCoupon = false;
+   boolean getsDiscount = (age > 25 || isMember) && !hasDiscountCoupon;
+   ```
+   **Explanation**: Here, `getsDiscount` will be `true` if either `age > 25` **or** `isMember` is `true`, but **only** if `hasDiscountCoupon` is `false`. The expression `(age > 25 || isMember)` will evaluate first, and then `!hasDiscountCoupon` is checked.
+
+6. Nested Compound Boolean Expression
+   ```java
+   int score = 80;
+   int attendance = 90;
+   boolean hasPassed = (score >= 70 && attendance >= 80) || (score >= 60 && attendance >= 90);
+   ```
+   **Explanation**: Here, `hasPassed` will be `true` if:
+   - The score is at least 70 and attendance is at least 80, **or**
+   - The score is at least 60 and attendance is at least 90.
+
+   This compound expression allows multiple pathways for a person to "pass." In Java, parentheses help control the evaluation order, ensuring that the `&&` comparisons are evaluated before the `||`.
+
+7. Example of **Short-circuiting** with `&&` and `||`
+   ```java
+   int x = 5;
+   boolean isValid = x > 0 && (x < 10 || x % 2 == 0);
+   ```
+   **Explanation**: Here, Java will evaluate `x > 0` first. If `x > 0` is `false`, then the expression short-circuits and `isValid` becomes `false` immediately. If `x > 0` is `true`, then Java evaluates the next part: `(x < 10 || x % 2 == 0)`. This condition uses `||`, so it will short-circuit if `x < 10` is `true`, without needing to evaluate `x % 2 == 0`.
+
+
+
+
 ### Activity 3.5.1
 
 **Directions:** Using logical and relational operators, write a program that will take 3 numbers and return the if the number is greater than, less than or equal to the other two numbers.  Print out the results of your program.  Submit your replit link on Canvas.
