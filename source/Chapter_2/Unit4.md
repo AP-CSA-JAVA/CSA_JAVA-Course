@@ -714,7 +714,7 @@ Enter the number of mulltiples:
 ```
 
 ### Activity 4.2.3
-Given the array below, loop through the array and print out all odd numbers on a separate line.  Order is not important!  **Do not print** any numbers that come after 894 in the sequence.  **Hint:** One wayyou will need to use .length
+Given the array below, loop through the array and print out all odd numbers on a separate line.  Order is not important!  **Do not print** any numbers that come after 894 in the sequence.  **Hint:** One way you will need to use `.length`
 
 ```java
 public class Main {
