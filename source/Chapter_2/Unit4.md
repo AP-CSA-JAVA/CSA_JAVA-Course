@@ -631,7 +631,74 @@ for (int i = 0; i < 11; i++)
 ```
 The scope of the intialization variable, i, is within the `for` loop; any attempt to access it outside of the `for` loop results in an error.
 	
-**Expected Error**: When you remove the last space in str, the value Blue will fail to print. This is an example of an `off-by-one error`. Without the space at the end, the last call to indexOf cannot find the last word in str.  `Off-by-one errors` occur when the iteration loops one time too many or one time too few.
+**IMPORTANT**  <details><summary> off-by-one error </summary>  
+
+An **off-by-one error** occurs when a loop iterates one time too many or one time too few due to incorrect initialization, termination, or increment/decrement logic. This is a common logical error in programming.
+
+**Example of an Off-by-One Error**
+Consider a scenario where you want to iterate through an array of integers and print each element.
+
+**Incorrect Code (with an Off-by-One Error)**
+```java
+public class Main {
+    public static void main(String[] args) {
+        int[] numbers = {10, 20, 30, 40, 50};
+        
+        // Off-by-one error in loop condition
+        for (int i = 0; i <= numbers.length; i++) { 
+            System.out.println(numbers[i]);
+        }
+    }
+}
+```
+
+**Rationale:**
+1. **Initialization (`int i = 0`)**: Correct, starts at the first index of the array.
+2. **Condition (`i <= numbers.length`)**: Incorrect, as `numbers.length` is **5**, but the last valid index of the array is **4** (0-based indexing).
+3. **Result**: The loop runs one extra iteration (when `i == 5`), causing an **ArrayIndexOutOfBoundsException**.
+
+----------------------------------------------------------------
+
+**Correct Code (Fixing the Error)**
+```java
+public class Main {
+    public static void main(String[] args) {
+        int[] numbers = {10, 20, 30, 40, 50};
+        
+        // Correct loop condition
+        for (int i = 0; i < numbers.length; i++) { 
+            System.out.println(numbers[i]);
+        }
+    }
+}
+```
+
+**Fix:**
+- The loop condition is updated to `i < numbers.length` to ensure that the loop stops before `i` reaches `numbers.length`.
+
+----------------------------------------------------------------
+
+**Common Scenarios of Off-by-One Errors**
+
+1. **Iterating through arrays**:
+   - Mistaking `<=` for `<` in the loop condition.
+2. **Using ranges in loops**:
+   ```java
+   for (int i = 1; i <= 10; i++) // Correct (includes 1 through 10)
+   for (int i = 1; i < 10; i++)  // Correct (includes 1 through 9)
+   ```
+   Accidentally swapping the two could lead to unintended behavior.
+3. **String indexing**:
+   When processing a string character by character, forgetting that string indices start at `0` can cause off-by-one errors.
+
+
+
+</details>
+
+
+----------------------------------------------------------------
+
+
 	
 ### Activity 4.2.1
 Task 1: Using a `for` loop, write a program where you ask the user for a `number` and print out the `number` of perfect squares up until that `number`.
@@ -654,25 +721,25 @@ Enter the number of squares:
 Task 2: Repeatly ask the for a `number`. When the user is *done*, report back the `number` of odd `numbers`. Decide whether to use a `while` loop or a `for` loop.
 
 ```java
-Enter a number (type 'done' when complete): 
+Enter a number (type "done" when complete): 
  4 
 
-Enter a number (type 'done' when complete): 
+Enter a number (type "done" when complete): 
  9 
 
-Enter a number (type 'done' when complete): 
+Enter a number (type "done" when complete): 
  12 
 
-Enter a number (type 'done' when complete): 
+Enter a number (type "done" when complete): 
  11 
 
-Enter a number (type 'done' when complete): 
+Enter a number (type "done" when complete): 
  15 
 
-Enter a number (type 'done' when complete): 
+Enter a number (type "done" when complete): 
  3 
 
-Enter a number (type 'done' when complete): 
+Enter a number (type "done" when complete): 
  done 
 
 You had 4 odd numbers.
