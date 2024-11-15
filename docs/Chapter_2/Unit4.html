@@ -854,7 +854,67 @@ Both <code class="docutils literal notranslate"><span class="pre">Break</span></
 </pre></div>
 </div>
 <p>The scope of the intialization variable, i, is within the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop; any attempt to access it outside of the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop results in an error.</p>
-<p><strong>Expected Error</strong>: When you remove the last space in str, the value Blue will fail to print. This is an example of an <code class="docutils literal notranslate"><span class="pre">off-by-one</span> <span class="pre">error</span></code>. Without the space at the end, the last call to indexOf cannot find the last word in str.  <code class="docutils literal notranslate"><span class="pre">Off-by-one</span> <span class="pre">errors</span></code> occur when the iteration loops one time too many or one time too few.</p>
+<p><strong>IMPORTANT</strong>  <details><summary> off-by-one error </summary></p>
+<p>An <strong>off-by-one error</strong> occurs when a loop iterates one time too many or one time too few due to incorrect initialization, termination, or increment/decrement logic. This is a common logical error in programming.</p>
+<p><strong>Example of an Off-by-One Error</strong>
+Consider a scenario where you want to iterate through an array of integers and print each element.</p>
+<p><strong>Incorrect Code (with an Off-by-One Error)</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">};</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c1">// Off-by-one error in loop condition</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">numbers</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">numbers</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Rationale:</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Initialization (<code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">i</span> <span class="pre">=</span> <span class="pre">0</span></code>)</strong>: Correct, starts at the first index of the array.</p></li>
+<li><p><strong>Condition (<code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">&lt;=</span> <span class="pre">numbers.length</span></code>)</strong>: Incorrect, as <code class="docutils literal notranslate"><span class="pre">numbers.length</span></code> is <strong>5</strong>, but the last valid index of the array is <strong>4</strong> (0-based indexing).</p></li>
+<li><p><strong>Result</strong>: The loop runs one extra iteration (when <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">==</span> <span class="pre">5</span></code>), causing an <strong>ArrayIndexOutOfBoundsException</strong>.</p></li>
+</ol>
+<hr class="docutils" />
+<p><strong>Correct Code (Fixing the Error)</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">};</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c1">// Correct loop condition</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">numbers</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">numbers</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Fix:</strong></p>
+<ul class="simple">
+<li><p>The loop condition is updated to <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">&lt;</span> <span class="pre">numbers.length</span></code> to ensure that the loop stops before <code class="docutils literal notranslate"><span class="pre">i</span></code> reaches <code class="docutils literal notranslate"><span class="pre">numbers.length</span></code>.</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>Common Scenarios of Off-by-One Errors</strong></p>
+<ol class="arabic">
+<li><p><strong>Iterating through arrays</strong>:</p>
+<ul class="simple">
+<li><p>Mistaking <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> for <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> in the loop condition.</p></li>
+</ul>
+</li>
+<li><p><strong>Using ranges in loops</strong>:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="c1">// Correct (includes 1 through 10)</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w">  </span><span class="c1">// Correct (includes 1 through 9)</span>
+</pre></div>
+</div>
+<p>Accidentally swapping the two could lead to unintended behavior.</p>
+</li>
+<li><p><strong>String indexing</strong>:
+When processing a string character by character, forgetting that string indices start at <code class="docutils literal notranslate"><span class="pre">0</span></code> can cause off-by-one errors.</p></li>
+</ol>
+</details>
+<hr class="docutils" />
 <section id="activity-4-2-1">
 <h3>Activity 4.2.1<a class="headerlink" href="#activity-4-2-1" title="Link to this heading">¶</a></h3>
 <p>Task 1: Using a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop, write a program where you ask the user for a <code class="docutils literal notranslate"><span class="pre">number</span></code> and print out the <code class="docutils literal notranslate"><span class="pre">number</span></code> of perfect squares up until that <code class="docutils literal notranslate"><span class="pre">number</span></code>.</p>
@@ -873,25 +933,25 @@ Both <code class="docutils literal notranslate"><span class="pre">Break</span></
 </pre></div>
 </div>
 <p>Task 2: Repeatly ask the for a <code class="docutils literal notranslate"><span class="pre">number</span></code>. When the user is <em>done</em>, report back the <code class="docutils literal notranslate"><span class="pre">number</span></code> of odd <code class="docutils literal notranslate"><span class="pre">numbers</span></code>. Decide whether to use a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop or a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="nf">number</span><span class="w"> </span><span class="p">(</span><span class="n">type</span><span class="w"> </span><span class="err">&#39;</span><span class="n">done</span><span class="err">&#39;</span><span class="w"> </span><span class="n">when</span><span class="w"> </span><span class="n">complete</span><span class="p">):</span><span class="w"> </span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="nf">number</span><span class="w"> </span><span class="p">(</span><span class="n">type</span><span class="w"> </span><span class="s">&quot;done&quot;</span><span class="w"> </span><span class="n">when</span><span class="w"> </span><span class="n">complete</span><span class="p">):</span><span class="w"> </span>
 <span class="w"> </span><span class="mi">4</span><span class="w"> </span>
 
-<span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="nf">number</span><span class="w"> </span><span class="p">(</span><span class="n">type</span><span class="w"> </span><span class="err">&#39;</span><span class="n">done</span><span class="err">&#39;</span><span class="w"> </span><span class="n">when</span><span class="w"> </span><span class="n">complete</span><span class="p">):</span><span class="w"> </span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="nf">number</span><span class="w"> </span><span class="p">(</span><span class="n">type</span><span class="w"> </span><span class="s">&quot;done&quot;</span><span class="w"> </span><span class="n">when</span><span class="w"> </span><span class="n">complete</span><span class="p">):</span><span class="w"> </span>
 <span class="w"> </span><span class="mi">9</span><span class="w"> </span>
 
-<span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="nf">number</span><span class="w"> </span><span class="p">(</span><span class="n">type</span><span class="w"> </span><span class="err">&#39;</span><span class="n">done</span><span class="err">&#39;</span><span class="w"> </span><span class="n">when</span><span class="w"> </span><span class="n">complete</span><span class="p">):</span><span class="w"> </span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="nf">number</span><span class="w"> </span><span class="p">(</span><span class="n">type</span><span class="w"> </span><span class="s">&quot;done&quot;</span><span class="w"> </span><span class="n">when</span><span class="w"> </span><span class="n">complete</span><span class="p">):</span><span class="w"> </span>
 <span class="w"> </span><span class="mi">12</span><span class="w"> </span>
 
-<span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="nf">number</span><span class="w"> </span><span class="p">(</span><span class="n">type</span><span class="w"> </span><span class="err">&#39;</span><span class="n">done</span><span class="err">&#39;</span><span class="w"> </span><span class="n">when</span><span class="w"> </span><span class="n">complete</span><span class="p">):</span><span class="w"> </span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="nf">number</span><span class="w"> </span><span class="p">(</span><span class="n">type</span><span class="w"> </span><span class="s">&quot;done&quot;</span><span class="w"> </span><span class="n">when</span><span class="w"> </span><span class="n">complete</span><span class="p">):</span><span class="w"> </span>
 <span class="w"> </span><span class="mi">11</span><span class="w"> </span>
 
-<span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="nf">number</span><span class="w"> </span><span class="p">(</span><span class="n">type</span><span class="w"> </span><span class="err">&#39;</span><span class="n">done</span><span class="err">&#39;</span><span class="w"> </span><span class="n">when</span><span class="w"> </span><span class="n">complete</span><span class="p">):</span><span class="w"> </span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="nf">number</span><span class="w"> </span><span class="p">(</span><span class="n">type</span><span class="w"> </span><span class="s">&quot;done&quot;</span><span class="w"> </span><span class="n">when</span><span class="w"> </span><span class="n">complete</span><span class="p">):</span><span class="w"> </span>
 <span class="w"> </span><span class="mi">15</span><span class="w"> </span>
 
-<span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="nf">number</span><span class="w"> </span><span class="p">(</span><span class="n">type</span><span class="w"> </span><span class="err">&#39;</span><span class="n">done</span><span class="err">&#39;</span><span class="w"> </span><span class="n">when</span><span class="w"> </span><span class="n">complete</span><span class="p">):</span><span class="w"> </span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="nf">number</span><span class="w"> </span><span class="p">(</span><span class="n">type</span><span class="w"> </span><span class="s">&quot;done&quot;</span><span class="w"> </span><span class="n">when</span><span class="w"> </span><span class="n">complete</span><span class="p">):</span><span class="w"> </span>
 <span class="w"> </span><span class="mi">3</span><span class="w"> </span>
 
-<span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="nf">number</span><span class="w"> </span><span class="p">(</span><span class="n">type</span><span class="w"> </span><span class="err">&#39;</span><span class="n">done</span><span class="err">&#39;</span><span class="w"> </span><span class="n">when</span><span class="w"> </span><span class="n">complete</span><span class="p">):</span><span class="w"> </span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="nf">number</span><span class="w"> </span><span class="p">(</span><span class="n">type</span><span class="w"> </span><span class="s">&quot;done&quot;</span><span class="w"> </span><span class="n">when</span><span class="w"> </span><span class="n">complete</span><span class="p">):</span><span class="w"> </span>
 <span class="w"> </span><span class="n">done</span><span class="w"> </span>
 
 <span class="n">You</span><span class="w"> </span><span class="n">had</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="n">odd</span><span class="w"> </span><span class="n">numbers</span><span class="p">.</span>
