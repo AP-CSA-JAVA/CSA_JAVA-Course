@@ -618,20 +618,15 @@ while (i < 11)
 }
 ``` 
 
------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
 
-Now, observe an equivalent for loop.
-	      
-	      
-```java
-for (int i = 0; i < 11; i++)
-{
-  System.out.println(i);
-}
-```
-The scope of the intialization variable, i, is within the `for` loop; any attempt to access it outside of the `for` loop results in an error.
+
+[!NOTE] The scope of the intialization variable, i, is within the `for` loop; any attempt to access it outside of the `for` loop results in an error.
 	
-**<mark>IMPORTANT off-by-one error -- Must Read</mark>**  <details><summary>--> Click Here </summary>  
+### <mark>IMPORTANT off-by-one error -- Must Read</mark>  
+
+
+<details><summary>--> Click Here </summary>  
 
 An **off-by-one error** occurs when a loop iterates one time too many or one time too few due to incorrect initialization, termination, or increment/decrement logic. This is a common logical error in programming.
 
