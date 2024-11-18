@@ -621,9 +621,11 @@ while (i < 11)
 ----------------------------------------------------------------------------------------------
 
 
-	<mark>NOTE:</mark> The scope of the intialization variable, i, is within the 
- 	`for` loop; any attempt to access it outside of the `for` loop results 
-  	in an error.
+	NOTE: The scope of the intialization variable, i, is within the `for` 
+ 	loop; any attempt to access it outside of the `for` loop results in 
+  	an error.
+
+
 	
 ### <mark>IMPORTANT: off-by-one error</mark>  
 
