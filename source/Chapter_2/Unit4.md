@@ -1082,13 +1082,119 @@ Pay careful attention to the Break in Nested Loops example and the Continue in N
 	
 **What is Informal Code Analysis?**
 	
-Informal code analysis is a process where you will manually check your program line by line. You may also know this as code tracing. Successful code tracing requires you to go through the code line by line, notating of how many times the code is executed, all variable values, and what is output produced to the console. *This is a very important skill to learn!*
+Informal code analysis involves reviewing and reasoning about code without necessarily executing it. This skill is essential skill for understanding program behavior, debugging, and identifying issues.  It is a process where you will manually check a program line by line. You may have done this before, and/ or you may know this as **code tracing**. Successful code tracing requires you to pay attention to the logic, notating how many times the code is executed, all variable values, and what is output produced to the console. 
 	
-**Debugging**
-	
-Another part of code tracing is debugging. Debugging are syntax or logic errors that prevents your code from executing as intended.  With debugging, you have a panel (located in Tools in replit and Debug Console in VSCode) that displays the program values running in real-time as the program is being executed. When we use the debugging panel, you can even sometimes change the variable values to see what may happen to the code as well. We can also have breakpoints in debugging as well. These breakpoints are points allow you to stop at given sections of  the program. This is useful when you want to see the values at a certain points in the code. After, you go line-by-line through the code you will see how the variables change or see how the variables change after every iteration of a loop.
 
-**Hand-Tracing Tool**
+
+**Key Concepts in Informal Code Analysis**
+
+1. **Tracing Code**: Understand how code executes by following the flow of logic and values of variables.  <See Example 1>
+2. **Identifying Errors**: Spot compile-time errors (like syntax issues) and runtime errors (like `NullPointerException` or array bounds violations).  <See Example 2>
+3. **Understanding Behavior**: Predict what a program or method will output or how it will behave for given inputs.  <See Example 3>
+4. **Checking Code for Logic Errors**: Find and reason about issues in the logic that may not cause exceptions but produce incorrect results.  <See Example 4>
+5. **Optimization Opportunities**: Suggest improvements in efficiency or readability.  <See Example 5>
+
+
+
+**Example 1: Predicting Output**
+```java
+public class Main {
+    public static void main(String[] args) {
+        int x = 5;
+        int y = 10;
+        if (x * 2 > y) {
+            System.out.println("Hello");
+        } else {
+            System.out.println("World");
+        }
+    }
+}
+```
+*Rationale*:
+- The condition `x * 2 > y` evaluates as `10 > 10`, which is `false`.
+- The `else` block executes.
+- Output: `World`.
+
+---
+
+**Example 2: Identifying Errors**
+```java
+public class ArrayExample {
+    public static void main(String[] args) {
+        int[] numbers = {1, 2, 3, 4};
+        System.out.println(numbers[4]);
+    }
+}
+```
+*Rationale*:
+- The array `numbers` has indices 0, 1, 2, 3.
+- Trying to access `numbers[4]` causes an **ArrayIndexOutOfBoundsException** because index 4 does not exist.
+
+---
+
+**Example 3: Logic Error**
+```java
+public class SumCalculator {
+    public static void main(String[] args) {
+        int sum = 0;
+        for (int i = 1; i <= 5; i++) {
+            sum += i;
+        }
+        System.out.println("Sum: " + sum);
+    }
+}
+```
+*Rationale*:
+- The loop iterates from 1 to 5, adding `i` to `sum`.
+- The code is correct and prints: `Sum: 15`.
+- No logic error exists here, but an informal analysis can confirm the correctness of the logic.
+
+---
+
+**Example 4: Runtime Error**
+```java
+public class StringExample {
+    public static void main(String[] args) {
+        String str = null;
+        System.out.println(str.length());
+    }
+}
+```
+*Rationale*:
+- The variable `str` is `null`.
+- Calling `str.length()` causes a **NullPointerException**.
+- This is a runtime error that occurs when trying to access a method or property of a `null` object.
+
+---
+
+**Example 5: Efficiency Consideration**
+```java
+public class ArraySum {
+    public static int calculateSum(int[] arr) {
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+}
+```
+
+*Rationale*:
+- The loop iterates through all elements of the array and correctly calculates the sum.
+- No apparent error exists, but an alternative such as using Java's `Arrays.stream(arr).sum()` can be more concise and utilize built-in functionality.
+
+---
+
+**Tips for Informal Code Analysis**
+1. **Simulate Execution**: Write down or imagine the state of variables at each step.
+2. **Consider Edge Cases**: Test boundary values, empty inputs, or null references.
+3. **Focus on Clarity**: Ensure the logic is easy to follow and does what the problem specifies.
+4. **Apply Debugging Techniques**: Even without running the code, you can reason about its behavior logically to find flaws.
+
+
+
+**Hand-Tracing Tools**
 	
 [https://pythontutor.com/render.html#mode=display](https://pythontutor.com/render.html#mode=display)
 	
