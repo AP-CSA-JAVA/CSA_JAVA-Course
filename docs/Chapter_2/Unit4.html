@@ -1266,10 +1266,112 @@ Pay careful attention to the Break in Nested Loops example and the Continue in N
 <li><p>Determine the number of times a code segment will execute.</p></li>
 </ul>
 <p><strong>What is Informal Code Analysis?</strong></p>
-<p>Informal code analysis is a process where you will manually check your program line by line. You may also know this as code tracing. Successful code tracing requires you to go through the code line by line, notating of how many times the code is executed, all variable values, and what is output produced to the console. <em>This is a very important skill to learn!</em></p>
-<p><strong>Debugging</strong></p>
-<p>Another part of code tracing is debugging. Debugging are syntax or logic errors that prevents your code from executing as intended.  With debugging, you have a panel (located in Tools in replit and Debug Console in VSCode) that displays the program values running in real-time as the program is being executed. When we use the debugging panel, you can even sometimes change the variable values to see what may happen to the code as well. We can also have breakpoints in debugging as well. These breakpoints are points allow you to stop at given sections of  the program. This is useful when you want to see the values at a certain points in the code. After, you go line-by-line through the code you will see how the variables change or see how the variables change after every iteration of a loop.</p>
-<p><strong>Hand-Tracing Tool</strong></p>
+<p>Informal code analysis involves reviewing and reasoning about code without necessarily executing it. This skill is essential skill for understanding program behavior, debugging, and identifying issues.  It is a process where you will manually check a program line by line. You may have done this before, and/ or you may know this as <strong>code tracing</strong>. Successful code tracing requires you to pay attention to the logic, notating how many times the code is executed, all variable values, and what is output produced to the console.</p>
+<p><strong>Key Concepts in Informal Code Analysis</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Tracing Code</strong>: Understand how code executes by following the flow of logic and values of variables.  &lt;See Example 1&gt;</p></li>
+<li><p><strong>Identifying Errors</strong>: Spot compile-time errors (like syntax issues) and runtime errors (like <code class="docutils literal notranslate"><span class="pre">NullPointerException</span></code> or array bounds violations).  &lt;See Example 2&gt;</p></li>
+<li><p><strong>Understanding Behavior</strong>: Predict what a program or method will output or how it will behave for given inputs.  &lt;See Example 3&gt;</p></li>
+<li><p><strong>Checking Code for Logic Errors</strong>: Find and reason about issues in the logic that may not cause exceptions but produce incorrect results.  &lt;See Example 4&gt;</p></li>
+<li><p><strong>Optimization Opportunities</strong>: Suggest improvements in efficiency or readability.  &lt;See Example 5&gt;</p></li>
+</ol>
+<p><strong>Example 1: Predicting Output</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hello&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;World&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><em>Rationale</em>:</p>
+<ul class="simple">
+<li><p>The condition <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">&gt;</span> <span class="pre">y</span></code> evaluates as <code class="docutils literal notranslate"><span class="pre">10</span> <span class="pre">&gt;</span> <span class="pre">10</span></code>, which is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">else</span></code> block executes.</p></li>
+<li><p>Output: <code class="docutils literal notranslate"><span class="pre">World</span></code>.</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>Example 2: Identifying Errors</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ArrayExample</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">};</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">numbers</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><em>Rationale</em>:</p>
+<ul class="simple">
+<li><p>The array <code class="docutils literal notranslate"><span class="pre">numbers</span></code> has indices 0, 1, 2, 3.</p></li>
+<li><p>Trying to access <code class="docutils literal notranslate"><span class="pre">numbers[4]</span></code> causes an <strong>ArrayIndexOutOfBoundsException</strong> because index 4 does not exist.</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>Example 3: Logic Error</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SumCalculator</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Sum: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sum</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><em>Rationale</em>:</p>
+<ul class="simple">
+<li><p>The loop iterates from 1 to 5, adding <code class="docutils literal notranslate"><span class="pre">i</span></code> to <code class="docutils literal notranslate"><span class="pre">sum</span></code>.</p></li>
+<li><p>The code is correct and prints: <code class="docutils literal notranslate"><span class="pre">Sum:</span> <span class="pre">15</span></code>.</p></li>
+<li><p>No logic error exists here, but an informal analysis can confirm the correctness of the logic.</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>Example 4: Runtime Error</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">StringExample</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">str</span><span class="p">.</span><span class="na">length</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><em>Rationale</em>:</p>
+<ul class="simple">
+<li><p>The variable <code class="docutils literal notranslate"><span class="pre">str</span></code> is <code class="docutils literal notranslate"><span class="pre">null</span></code>.</p></li>
+<li><p>Calling <code class="docutils literal notranslate"><span class="pre">str.length()</span></code> causes a <strong>NullPointerException</strong>.</p></li>
+<li><p>This is a runtime error that occurs when trying to access a method or property of a <code class="docutils literal notranslate"><span class="pre">null</span></code> object.</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>Example 5: Efficiency Consideration</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ArraySum</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">calculateSum</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">sum</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><em>Rationale</em>:</p>
+<ul class="simple">
+<li><p>The loop iterates through all elements of the array and correctly calculates the sum.</p></li>
+<li><p>No apparent error exists, but an alternative such as using Java’s <code class="docutils literal notranslate"><span class="pre">Arrays.stream(arr).sum()</span></code> can be more concise and utilize built-in functionality.</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>Tips for Informal Code Analysis</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Simulate Execution</strong>: Write down or imagine the state of variables at each step.</p></li>
+<li><p><strong>Consider Edge Cases</strong>: Test boundary values, empty inputs, or null references.</p></li>
+<li><p><strong>Focus on Clarity</strong>: Ensure the logic is easy to follow and does what the problem specifies.</p></li>
+<li><p><strong>Apply Debugging Techniques</strong>: Even without running the code, you can reason about its behavior logically to find flaws.</p></li>
+</ol>
+<p><strong>Hand-Tracing Tools</strong></p>
 <p><a class="reference external" href="https://pythontutor.com/render.html#mode=display">https://pythontutor.com/render.html#mode=display</a></p>
 <p><a class="reference external" href="https://cscircles.cemc.uwaterloo.ca/java_visualize/">https://cscircles.cemc.uwaterloo.ca/java_visualize/</a></p>
 </section>
