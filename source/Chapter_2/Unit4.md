@@ -1193,7 +1193,7 @@ public class ArraySum {
 4. **Apply Debugging Techniques**: Even without running the code, you can reason about its behavior logically to find flaws.
 
 
-There are some IDEs that provide you with a panel (located in Tools in replit and Debug Console in VSCode) that displays the program values running in real-time as the program is being executed. When we use the debugging panel, you can even sometimes change the variable values to see what may happen to the code as well. We can also have breakpoints in debugging as well. These breakpoints are points that allow you to *stop* at given sections of the program. This is useful when you want to see the values at a certain points in the code. After, you go line-by-line through the code you will see how the variables change or see how the variables change after every iteration of a loop.  Below are some resources that you may find useful in code tracing.
+There are some IDEs that provide you with a *debugging* panel (located in Tools in replit and Debug Console in VSCode) that displays the program values running in real-time as the program is being executed. When we use the debugging panel, you can even sometimes change the variable values to see what may happen to the code as well. We can also have breakpoints in debugging as well. These breakpoints are points that allow you to *stop* at given sections of the program. This is useful when you want to see the values at a certain points in the code. After, you go line-by-line through the code you will see how the variables change or see how the variables change after every iteration of a loop.  Below are some resources that you may find useful in code tracing.
 
 **Hand-Tracing Tools**
 	
