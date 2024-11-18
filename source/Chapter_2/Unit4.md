@@ -1200,3 +1200,15 @@ There are some IDEs that provide you with a panel (located in Tools in replit an
 [https://pythontutor.com/render.html#mode=display](https://pythontutor.com/render.html#mode=display)
 	
 [https://cscircles.cemc.uwaterloo.ca/java_visualize/](https://cscircles.cemc.uwaterloo.ca/java_visualize/)
+
+
+**Summary of Informal Analysis Process**
+
+1. **Understand the Problem**: Read the prompt carefully.
+2. **Simulate Execution**: Walk through the code logically.
+3. **Check for Errors**:
+   - **Syntax errors**: Incorrect Java syntax or rules.
+   - **Runtime errors**: Issues arising during execution.
+   - **Logic errors**: Faults in the intended logic or approach.
+4. **Test Edge Cases**: Try unexpected inputs (e.g., `null`, empty arrays, extreme values).
+5. **Suggest Improvements**: Optimize for readability and efficiency.
