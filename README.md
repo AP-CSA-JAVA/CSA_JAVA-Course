@@ -722,7 +722,7 @@ Please review the Java Style Guidelines
 
 #### Main() Block method
 
-At the top of the file containing your program's **main() block method**, place an `external' block comment containing the following content. 
+At the top of the file containing your program's **main() block method**, place an **`external' block comment** containing the following content. 
 
 ```java
 /*=============================================================================
@@ -748,7 +748,7 @@ At the top of the file containing your program's **main() block method**, place 
 ```
 
 
-An internal block comment belongs immediately ahead of each **user-created** method in your program, with two exceptions. **First, main() is assumed to be covered by the external block comment.** Second, if your class has a group of getters and setters, you may cover the entire group with one block comment.
+An internal block comment belongs immediately ahead of each **user-created** method in your program, with two exceptions. **First, main() is assumed to be covered by the Main() Block method/ external block comment.** Second, if your class has a group of getters and setters, you may cover the entire group with one block comment.
 
 #### Method Block
 
