@@ -748,7 +748,7 @@ At the top of the file containing your program's **main() block method**, place 
 ```
 
 
-An internal block comment belongs immediately ahead of each method of your program, with two exceptions. First, main() is assumed to be covered by the external block comment. Second, if your class has a group of getters and setters, you may cover the entire group with one block comment.
+An internal block comment belongs immediately ahead of each **user-created** method in your program, with two exceptions. **First, main() is assumed to be covered by the external block comment.** Second, if your class has a group of getters and setters, you may cover the entire group with one block comment.
 
 #### Method Block
 
