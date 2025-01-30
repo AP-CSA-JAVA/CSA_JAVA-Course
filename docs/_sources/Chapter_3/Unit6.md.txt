@@ -33,6 +33,47 @@ The last index is 10.
 
 An array can contain primitives (int, double, boolean) and object (String) references of a class depending on the definition of the array. In the case of primitive data types, the actual values are stored in contiguous memory locations. In the case of class objects, the actual objects are stored in a heap segment.
 
+**Note**: 
+- *Square brackets* -> /[ /] are used to house elements of an array.
+- *Index Value* -> begins with zero. Valid index values for an array are 0 through one less than the number of elements in the array.  Using an index value outside of thei range will result in an **ArayIndexOutOfBoundException** error.
+- Array Types -> arrays can be primitive types (intergers, double, and boolean) and can store objects (Strings).
+- Strings -> They are not primitive data types.  They are object references.  Therefore, an array of `Strings` cannot store `0` or `false` in an array. Instead, the null value is placed into each array element.
+- Initializer lists can only be used when you create the array at declaration time.
+- After you declare an array, you cannot change the length of the array.
+	- You can create a larger array by copying the elements from initial array by using: `java.util.Arrays.copyOf`
+ - Java does not provide a mechanism for removing elements of an array, but you can assign a `null` value.
+
+
+To create an array, you will need to use the keyword **new**, the data type and followed by the size of the array.  You can also use the `scanner` class to instantiate the size of the array.
+
+For example, 
+- *type*[ ] names = new *type*[*value*]
+- int[] intArray = {10, 20, 30, 40, 50};
+- boolean[] boolArray = {true, false, true, false, true};
+- double[] doubleArray = {3.14, 2.71, 1.618, 9.81};
+- String[] stringArray = {"Apple", "Banana", "Cherry", "Date"};
+ 	
+
+Which statements below are correct code segments.
+
+    a)	`String[] names;`
+    b)	`String[] names = {new Dog("Bingo"), new Dog("Fido")};`
+    c)	`String[] names = {"Fido", "Bingo"};`
+    d)	`String[] names = {"Fido", "Bingo"};`
+    	`names[1] = "Lady";`
+    e)	`String[] names = ("Fido", "Bingo"};`
+    	`names[2] = "Lady";`
+    f)	`int[] age = new int;`
+    g)	`int[] age = new int[2];`
+
+
+**Explanation**:
+
+The invalid statements are:
+b: You cannot assign a Dog object to a String array.
+e: An array of size 2 is indexed 0 to 1 (2 is out of bounds).
+f: You must designate a size of at least 1 when creating an arrray.
+
 
 ## 6.2 Traversing Arrays
 

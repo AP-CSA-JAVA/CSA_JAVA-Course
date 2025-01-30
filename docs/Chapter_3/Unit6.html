@@ -7,7 +7,7 @@
 
     <!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
         <title>Unit 6 - CSA JAVA Course</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=302659d7" />
     
@@ -338,6 +338,46 @@
 The first index is 0.
 The last index is 10.</p>
 <p>An array can contain primitives (int, double, boolean) and object (String) references of a class depending on the definition of the array. In the case of primitive data types, the actual values are stored in contiguous memory locations. In the case of class objects, the actual objects are stored in a heap segment.</p>
+<p><strong>Note</strong>:</p>
+<ul class="simple">
+<li><p><em>Square brackets</em> -&gt; /[ /] are used to house elements of an array.</p></li>
+<li><p><em>Index Value</em> -&gt; begins with zero. Valid index values for an array are 0 through one less than the number of elements in the array.  Using an index value outside of thei range will result in an <strong>ArayIndexOutOfBoundException</strong> error.</p></li>
+<li><p>Array Types -&gt; arrays can be primitive types (intergers, double, and boolean) and can store objects (Strings).</p></li>
+<li><p>Strings -&gt; They are not primitive data types.  They are object references.  Therefore, an array of <code class="docutils literal notranslate"><span class="pre">Strings</span></code> cannot store <code class="docutils literal notranslate"><span class="pre">0</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code> in an array. Instead, the null value is placed into each array element.</p></li>
+<li><p>Initializer lists can only be used when you create the array at declaration time.</p></li>
+<li><p>After you declare an array, you cannot change the length of the array.</p>
+<ul>
+<li><p>You can create a larger array by copying the elements from initial array by using: <code class="docutils literal notranslate"><span class="pre">java.util.Arrays.copyOf</span></code></p></li>
+</ul>
+</li>
+<li><p>Java does not provide a mechanism for removing elements of an array, but you can assign a <code class="docutils literal notranslate"><span class="pre">null</span></code> value.</p></li>
+</ul>
+<p>To create an array, you will need to use the keyword <strong>new</strong>, the data type and followed by the size of the array.  You can also use the <code class="docutils literal notranslate"><span class="pre">scanner</span></code> class to instantiate the size of the array.</p>
+<p>For example,</p>
+<ul class="simple">
+<li><p><em>type</em>[ ] names = new <em>type</em>[<em>value</em>]</p></li>
+<li><p>int[] intArray = {10, 20, 30, 40, 50};</p></li>
+<li><p>boolean[] boolArray = {true, false, true, false, true};</p></li>
+<li><p>double[] doubleArray = {3.14, 2.71, 1.618, 9.81};</p></li>
+<li><p>String[] stringArray = {“Apple”, “Banana”, “Cherry”, “Date”};</p></li>
+</ul>
+<p>Which statements below are correct code segments.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>a)	`String[] names;`
+b)	`String[] names = {new Dog(&quot;Bingo&quot;), new Dog(&quot;Fido&quot;)};`
+c)	`String[] names = {&quot;Fido&quot;, &quot;Bingo&quot;};`
+d)	`String[] names = {&quot;Fido&quot;, &quot;Bingo&quot;};`
+	`names[1] = &quot;Lady&quot;;`
+e)	`String[] names = (&quot;Fido&quot;, &quot;Bingo&quot;};`
+	`names[2] = &quot;Lady&quot;;`
+f)	`int[] age = new int;`
+g)	`int[] age = new int[2];`
+</pre></div>
+</div>
+<p><strong>Explanation</strong>:</p>
+<p>The invalid statements are:
+b: You cannot assign a Dog object to a String array.
+e: An array of size 2 is indexed 0 to 1 (2 is out of bounds).
+f: You must designate a size of at least 1 when creating an arrray.</p>
 </section>
 <section id="traversing-arrays">
 <h2>6.2 Traversing Arrays<a class="headerlink" href="#traversing-arrays" title="Link to this heading">¶</a></h2>
