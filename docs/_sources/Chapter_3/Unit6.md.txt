@@ -112,7 +112,7 @@ String myFruit = fruit[1]; // returns Banana
 If we want to access more items within the fruit array, we can use a `for` loop to *traverse* the array.  This program prints the *i*<sup>th</sup> element.
 
 ```java
-/* Recall the three compnonents necessary for a for loop:
+/* Recall the three components necessary for a for loop:
 	for (initialization; condition; increment/decrement) {
     		// Loop body (code to execute repeatedly)
 	}
