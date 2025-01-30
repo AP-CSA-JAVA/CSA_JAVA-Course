@@ -44,25 +44,24 @@ An array can contain primitives (int, double, boolean) and object (String) refer
 - Java does not provide a mechanism for removing elements of an array, but you can assign a `null` value.
 
 
-To create an array, you will need to use the keyword **new**, the data type and followed by the size of the array.  You can also use the `scanner` class to instantiate the size of the array.
+To create an array, you will need to use the keyword **new**, the data type and followed by the size of the array.  You can also use the `scanner` class to instantiate the size of the array ( **type**[ ] `arrayName` = *new* **type**[*value*] ).
 
-For example, 
-- *type*[ ] arrayName = new *type*[*value*]
-- int[] intArray = {10, 20, 30, 40, 50};
-- boolean[] boolArray = {true, false, true, false, true};
-- double[] doubleArray = {3.14, 2.71, 1.618, 9.81};
-- String[] stringArray = {"Apple", "Banana", "Cherry", "Date"};
+Example of array types:  
+- int[ ] intArray = {10, 20, 30, 40, 50};
+- boolean[ ] boolArray = {true, false, true, false, true};
+- double[ ] doubleArray = {3.14, 2.71, 1.618, 9.81};
+- String[ ] stringArray = {"Apple", "Banana", "Cherry", "Date"};
  	
 
 Which statements below are correct code segments.
 
     a)	`String[] names;`
-    b)	`String[] names = {new Dog("Bingo"), new Dog("Fido")};`
-    c)	`String[] names = {"Fido", "Bingo"};`
-    d)	`String[] names = {"Fido", "Bingo"};`
-    	`names[1] = "Lady";`
-    e)	`String[] names = ("Fido", "Bingo"};`
-    	`names[2] = "Lady";`
+    b)	`String[] names = {new Dog("Harold"), new Dog("Hoover")};`
+    c)	`String[] names = {"Harold", "Hoover"};`
+    d)	`String[] names = {"Harold", "Hoover"};`
+    	`names[1] = "Tango";`
+    e)	`String[] names = ("Harold", "Hoover"};`
+    	`names[2] = "Tango";`
     f)	`int[] age = new int;`
     g)	`int[] age = new int[2];`
 
