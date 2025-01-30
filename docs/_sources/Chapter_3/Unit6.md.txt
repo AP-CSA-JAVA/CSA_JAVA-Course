@@ -65,13 +65,22 @@ Which statements below are correct code segments.
     f)	`int[] age = new int;`
     g)	`int[] age = new int[2];`
 
+<details> <summary> Click Here </summary>
 
+ 
 **Explanation**:
 
 The invalid statements are:
-b: You cannot assign a Dog object to a String array.
-e: An array of size 2 is indexed 0 to 1 (2 is out of bounds).
-f: You must designate a size of at least 1 when creating an arrray.
+
+**b**: You cannot assign a Dog object to a String array.
+
+**e**: An array of size 2 is indexed 0 to 1 (2 is out of bounds).
+
+**f**: You must designate a size of at least 1 when creating an arrray.
+
+
+</details>
+
 
 
 ## 6.2 Traversing Arrays
