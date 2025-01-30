@@ -34,14 +34,14 @@ The last index is 10.
 An array can contain primitives (int, double, boolean) and object (String) references of a class depending on the definition of the array. In the case of primitive data types, the actual values are stored in contiguous memory locations. In the case of class objects, the actual objects are stored in a heap segment.
 
 **Note**: 
-- *Square brackets* -> [ ] are used to house elements of an array.
-- *Index Value* -> begins with zero. Valid index values for an array are 0 through one less than the number of elements in the array.  Using an index value outside of thei range will result in an **ArayIndexOutOfBoundException** error.
-- Array Types -> arrays can be primitive types (intergers, double, and boolean) and can store objects (Strings).
-- Strings -> They are not primitive data types.  They are object references.  Therefore, an array of `Strings` cannot store `0` or `false` in an array. Instead, the null value is placed into each array element.
+- *Square brackets* [ ] are used to house elements of an array.
+- *Index Value* begins with zero. Valid index values for an array are 0 through one less than the number of elements in the array.  Using an index value outside of thei range will result in an **ArayIndexOutOfBoundException** error.
+- Array Types can be primitive types (intergers, double, and boolean) and can store objects (Strings).
+- Strings are not primitive data types. They are object references.  Therefore, an array of `Strings` cannot store `0` or `false` in an array. Instead, JVM assigns the null value for each element in the array.
 - Initializer lists can only be used when you create the array at declaration time.
 - After you declare an array, you cannot change the length of the array.
 	- You can create a larger array by copying the elements from initial array by using: `java.util.Arrays.copyOf`
- - Java does not provide a mechanism for removing elements of an array, but you can assign a `null` value.
+- Java does not provide a mechanism for removing elements of an array, but you can assign a `null` value.
 
 
 To create an array, you will need to use the keyword **new**, the data type and followed by the size of the array.  You can also use the `scanner` class to instantiate the size of the array.
