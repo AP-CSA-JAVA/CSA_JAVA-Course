@@ -44,7 +44,9 @@ An array can contain primitives (int, double, boolean) and object (String) refer
 - Java does not provide a mechanism for removing elements of an array, but you can assign a `null` value.
 
 
-To create an array, you will need to use the keyword **new**, the data type and followed by the size of the array.  You can also use the `scanner` class to instantiate the size of the array ( **type**[ ] `arrayName` = *new* **type**[*value*] ).
+To create an array, you will need to use the keyword **new**, the data type and followed by the size of the array.  
+You can also use the `scanner` class to instantiate the size of the array 
+( **type**[ ] `arrayName` = *new* **type**[*value*] ).
 
 Example of array types:  
 - int[ ] intArray = {10, 20, 30, 40, 50};
@@ -56,14 +58,21 @@ Example of array types:
 Which statements below are correct code segments.
 
     a)	`String[] names;`
+    
     b)	`String[] names = {new Dog("Harold"), new Dog("Hoover")};`
+    
     c)	`String[] names = {"Harold", "Hoover"};`
+    
     d)	`String[] names = {"Harold", "Hoover"};`
     	`names[1] = "Tango";`
+     
     e)	`String[] names = ("Harold", "Hoover"};`
     	`names[2] = "Tango";`
+     
     f)	`int[] age = new int;`
+    
     g)	`int[] age = new int[2];`
+    
 
 <details> <summary> Click Here </summary>
 
