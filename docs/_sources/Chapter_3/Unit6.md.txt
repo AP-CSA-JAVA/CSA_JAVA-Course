@@ -44,8 +44,9 @@ The last index is 10.
 
 
 To create an array, you will need to use the keyword **new**, the data type and followed by the size of the array.
-<p align="center"> **type** [ ] `arrayName` = *new* **type** [*value*] </p>
+<p align="center"> primType [ ] arrayName = *new* primTypee [value] </p>
 
+**primType**
 You can also use the `scanner` class to instantiate the size of the array:
 
 ```java
@@ -58,7 +59,8 @@ System.out.print("Enter the length of the array: ");
 ```
 
 
-Example of array types:  
+Example of array types:
+- int[ ] intuhRay = new int[5]; //no elements added
 - int[ ] intArray = {10, 20, 30, 40, 50};
 - boolean[ ] boolArray = {true, false, true, false, true};
 - double[ ] doubleArray = {3.14, 2.71, 1.618, 9.81};
