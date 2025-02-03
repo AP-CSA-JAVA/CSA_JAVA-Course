@@ -10,8 +10,9 @@
 Arrays are a group of variables referred to by a common name. Below are some important points to know about Java arrays:
 
 - In Java, all arrays are dynamically allocated.
-- Arrays are stored in contiguous memory (consecutive memory locations).
-- Java arrays are objects, so we can find the length of a given array using the object property length. 
+- Primitives are stored in contiguous memory (consecutive memory locations).
+- Class objects are stored in a heap segment.
+- Java arrays are objects, so we can find the length of a given array using the object property `length`. 
 - A Java array variable can also be declared like other variables with [] after the data type.
 - The variables in the array are ordered, and each has an index beginning with 0.
 - Java array can also be used as a static field, a local variable, or a method parameter.
@@ -30,9 +31,6 @@ The array length has 11 indices.
 The first index is 0.
 The last index is 10.
 
-
-An array can contain primitives (int, double, boolean) and object (String) references of a class depending on the definition of the array. In the case of primitive data types, the actual values are stored in contiguous memory locations. In the case of class objects, the actual objects are stored in a heap segment.
-
 **Note**: 
 - *Square brackets* [ ] are used to identify the number of elements in an array.
 - *Curly brackets* { } are used to store the elements within an array.
@@ -45,9 +43,20 @@ An array can contain primitives (int, double, boolean) and object (String) refer
 - Java does not provide a mechanism for removing elements of an array, but you can assign a `null` value.
 
 
-To create an array, you will need to use the keyword **new**, the data type and followed by the size of the array.  
-You can also use the `scanner` class to instantiate the size of the array 
-( **type**[ ] `arrayName` = *new* **type**[*value*] ).
+To create an array, you will need to use the keyword **new**, the data type and followed by the size of the array.
+<center>( **type**[ ] `arrayName` = *new* **type**[*value*] )</center>
+
+You can also use the `scanner` class to instantiate the size of the array:
+
+```java
+System.out.print("Enter the length of the array: ");
+	// Read the length input by the user
+        int length = scanner.nextInt();  
+        
+        // Create an array of the specified length
+        int[] numbers = new int[length];
+```
+
 
 Example of array types:  
 - int[ ] intArray = {10, 20, 30, 40, 50};
