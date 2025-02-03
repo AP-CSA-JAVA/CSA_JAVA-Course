@@ -44,7 +44,7 @@ The last index is 10.
 
 
 To create an array, you will need to use the keyword **new**, the data type and followed by the size of the array.
-<center>( **type**[ ] `arrayName` = *new* **type**[*value*] )</center>
+<p align="center">( **type**[ ] `arrayName` = *new* **type**[*value*] )</p>
 
 You can also use the `scanner` class to instantiate the size of the array:
 
