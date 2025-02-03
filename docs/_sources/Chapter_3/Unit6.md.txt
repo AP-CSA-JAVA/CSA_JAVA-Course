@@ -32,7 +32,7 @@ The first index is 0.
 The last index is 10.
 
 **Note**: 
-- *Square brackets* [ ] are used to identify the number of elements in an array.
+- *Square brackets* [ ] are used to instantiate the creation of an array and identify the number of elements within the newly created array.
 - *Curly brackets* { } are used to store the elements within an array.
 - *Index Value* begins with zero. Valid index values for an array are 0 through one less than the number of elements in the array.  Using an index value outside of thei range will result in an **ArayIndexOutOfBoundException** error.
 - Array Types can be primitive types (intergers, double, and boolean) and can store objects (Strings).
