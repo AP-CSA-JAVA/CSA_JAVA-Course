@@ -41,6 +41,7 @@ The last index is 10.
 - After you declare an array, you cannot change the length of the array.
 	- You can create a larger array by copying the elements from initial array by using: `java.util.Arrays.copyOf`
 - Java does not provide a mechanism for removing elements of an array, but you can assign a `null` value.
+- `java.util.Arrays` - you do not need to import the `Arrays` Class if if you are writing simple Array programs.  You will need it if you are using any of the **util**ity methods (example: Arrays.sort. Arrays.toString, Array.equals).
 
 
 To create an array, you will need to use the keyword **new**, the data type and followed by the size of the array.
