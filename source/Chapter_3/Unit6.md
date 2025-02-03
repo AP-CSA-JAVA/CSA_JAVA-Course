@@ -34,7 +34,8 @@ The last index is 10.
 An array can contain primitives (int, double, boolean) and object (String) references of a class depending on the definition of the array. In the case of primitive data types, the actual values are stored in contiguous memory locations. In the case of class objects, the actual objects are stored in a heap segment.
 
 **Note**: 
-- *Square brackets* [ ] are used to house elements of an array.
+- *Square brackets* [ ] are used to identify the number of elements in an array.
+- *Curly brackets* { } are used to store the elements in an array.
 - *Index Value* begins with zero. Valid index values for an array are 0 through one less than the number of elements in the array.  Using an index value outside of thei range will result in an **ArayIndexOutOfBoundException** error.
 - Array Types can be primitive types (intergers, double, and boolean) and can store objects (Strings).
 - Strings are not primitive data types. They are object references.  Therefore, an array of `Strings` cannot store `0` or `false` in an array. Instead, JVM assigns the null value for each element in the array.
@@ -66,7 +67,7 @@ Which statements below are correct code segments.
     d)	`String[] names = {"Harold", "Hoover"};`
     	`names[1] = "Tango";`
      
-    e)	`String[] names = ("Harold", "Hoover"};`
+    e)	`String[] names = {"Harold", "Hoover"};`
     	`names[2] = "Tango";`
      
     f)	`int[] age = new int;`
