@@ -414,6 +414,18 @@ Arrays can also be traversed without the use of a counter by using an enhanced f
 Enhanced for loops are an alternate method of traversing an array:
 
 ```java
+for (datatype variable : Collection of Array) {
+	Body of Loop
+}
+```
+**Notes**
+- The enhanced for loop simplifies iteration, especially for arrays and collections, by eliminating the need to manually manage an index.
+- The variable inside the loop holds a copy of the current element, and you cannot modify the collection directly through the variable (i.e., it's read-only).
+- It's useful when you don't need to know the index of the current element.
+
+Enhanced for loop example:
+
+```java
 int[] numList = {5,6,7,4,2};
 for(int number: numList)
 {
