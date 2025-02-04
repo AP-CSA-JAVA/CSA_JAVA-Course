@@ -639,6 +639,18 @@ write a program that will use a while loop to traverse a list in reverse order.<
 <p>Arrays can also be traversed without the use of a counter by using an enhanced for loop.</p>
 <p><strong>Enhanced for Loops</strong></p>
 <p>Enhanced for loops are an alternate method of traversing an array:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">datatype</span><span class="w"> </span><span class="n">variable</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Collection</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Array</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="n">Body</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Loop</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Notes</strong></p>
+<ul class="simple">
+<li><p>The enhanced for loop simplifies iteration, especially for arrays and collections, by eliminating the need to manually manage an index.</p></li>
+<li><p>The variable inside the loop holds a copy of the current element, and you cannot modify the collection directly through the variable (i.e., it’s read-only).</p></li>
+<li><p>It’s useful when you don’t need to know the index of the current element.</p></li>
+</ul>
+<p>Enhanced for loop example:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">numList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">};</span>
 <span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="p">:</span><span class="w"> </span><span class="n">numList</span><span class="p">)</span>
 <span class="p">{</span>
