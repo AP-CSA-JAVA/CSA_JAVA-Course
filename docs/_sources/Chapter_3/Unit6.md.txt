@@ -11,7 +11,7 @@ Arrays are a group of variables referred to by a common name. Below are some imp
 
 - In Java, all arrays are dynamically allocated.
 - Primitives are stored in contiguous memory (consecutive memory locations).
-- Class objects are stored in a heap segment.
+- Objects are stored in a heap segment.
 - Java arrays are objects, so we can find the length of a given array using the object property `length`. 
 - A Java array variable can also be declared like other variables with [] after the data type.
 - The variables in the array are ordered, and each has an index beginning with 0.
@@ -46,7 +46,7 @@ The last index is 10.
 
 To create an array, you will need to use the keyword **new**, the data type and followed by the size of the array.
 <p align="center"> 
-	primStrType [ ] arrayName = new primStrType [#] </p>
+	primStrType [ ] arrayName = new primStrType [##] </p>
 
 
 
