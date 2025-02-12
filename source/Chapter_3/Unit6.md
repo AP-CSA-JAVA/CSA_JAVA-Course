@@ -463,7 +463,7 @@ for(int i = 0; i < classroom.length; i ++)
 Both standard and enhanced `for` loops are useful in different contexts. For example, since *enhanced* `for` loops make a copy of each element value, they are incapable of changing the value of the elements in an array. If elements need to be altered, *standard* `for` loops are more appropriate. In contrast, if elements just need to be accessed, *enhanced* `for` loops provide a more streamlined way to access elements without the need for a counter, or a potential `ArrayIndexOutOfBounds error`. 
 
 ---
-<details><summary> **Click Here** </summary>
+<details><summary> Click Here </summary>
 
 **For Loop**
 
