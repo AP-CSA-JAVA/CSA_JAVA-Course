@@ -605,7 +605,7 @@ public class BubbleSortExample {
 Explanation:
 
 - We define a class BubbleSortExample with a main method.
-- Inside the main method, we create an array arr with some unsorted elements.
+- Inside the main method, we create an array `arr` with some unsorted elements.
 - We print the original array using the printArray method.
 - We call the bubbleSort method to sort the array using the bubble sort algorithm.
 - The bubbleSort method performs the bubble sort on the array. It uses two nested loops to compare and swap adjacent elements as necessary.
@@ -624,7 +624,9 @@ Sorted array:
 
 ### Insertion Sort ###
 
-Insertion sort is another simple sorting algorithm that builds the final sorted array one item at a time. It takes each element from the input and inserts it into its correct position in the sorted part of the array. Here's a Java program that demonstrates the insertion sort algorithm:
+Insertion sort is another simple sorting algorithm that builds the final sorted array one item at a time. It takes each element from the input and inserts it into its correct position in the sorted part of the array. [Insertion Sort Example](https://www.hackerearth.com/practice/algorithms/sorting/insertion-sort/visualize/)
+
+Here's a Java program that demonstrates the insertion sort algorithm:
 
 ```java
 public class InsertionSortExample {
