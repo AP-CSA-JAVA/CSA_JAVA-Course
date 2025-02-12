@@ -680,6 +680,86 @@ Within the loop, the enhanced <code class="docutils literal notranslate"><span c
 </div>
 <p><strong>Enhanced <code class="docutils literal notranslate"><span class="pre">for</span></code> Loop Applications</strong></p>
 <p>Both standard and enhanced <code class="docutils literal notranslate"><span class="pre">for</span></code> loops are useful in different contexts. For example, since <em>enhanced</em> <code class="docutils literal notranslate"><span class="pre">for</span></code> loops make a copy of each element value, they are incapable of changing the value of the elements in an array. If elements need to be altered, <em>standard</em> <code class="docutils literal notranslate"><span class="pre">for</span></code> loops are more appropriate. In contrast, if elements just need to be accessed, <em>enhanced</em> <code class="docutils literal notranslate"><span class="pre">for</span></code> loops provide a more streamlined way to access elements without the need for a counter, or a potential <code class="docutils literal notranslate"><span class="pre">ArrayIndexOutOfBounds</span> <span class="pre">error</span></code>.</p>
+<hr class="docutils" />
+<details><summary> **Click Here** </summary>
+<p><strong>For Loop</strong></p>
+<p><strong>Advantages:</strong></p>
+<ul class="simple">
+<li><p>Ideal for definite iterations: It works best when you know the number of iterations ahead of time (e.g., looping through an array or list with a known size).</p></li>
+<li><p>Compact syntax: Initialization, condition check, and increment/decrement are all in one place, making the loop easy to read and maintain.</p></li>
+<li><p>Control over loop variables: You can manually manage the loop variable, its increment/decrement, and conditions within the loop.</p></li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul class="simple">
+<li><p>Not ideal for indefinite loops: It’s cumbersome when you don’t know how many times you need to loop.</p></li>
+<li><p>Less readable for complex conditions: If the loop condition becomes complicated, it can reduce readability.</p></li>
+</ul>
+<p><strong>When to use:</strong></p>
+<ul class="simple">
+<li><p>When you know the exact number of iterations in advance.</p></li>
+<li><p>Iterating over arrays, lists, or ranges with a specific index.</p></li>
+<li><p>Looping with a counter (e.g., for repeating an operation a set number of times).</p></li>
+</ul>
+<p>Example:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Loop through an array by index</span>
+<span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">};</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">numbers</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">numbers</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>While Loop</strong></p>
+<p><strong>Advantages:</strong></p>
+<ul class="simple">
+<li><p>Best for indefinite iterations: It’s ideal when you don’t know the number of iterations in advance, but the loop continues based on a condition (e.g., reading input until a certain condition is met).</p></li>
+<li><p>Simple condition-based looping: The loop continues as long as a condition is <code class="docutils literal notranslate"><span class="pre">true</span></code>, which is easy to understand for certain use cases.</p></li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul class="simple">
+<li><p>Risk of infinite loop: If the condition is never met, the loop can run indefinitely, leading to errors.</p></li>
+<li><p>Less structured: The initialization and increment/decrement steps are separate from the condition check, which might make the loop harder to maintain.</p></li>
+</ul>
+<p><strong>When to use:</strong></p>
+<ul class="simple">
+<li><p>When the number of iterations is not known ahead of time.</p></li>
+<li><p>When the loop needs to run until a specific condition becomes true (e.g., user input validation or network communication).</p></li>
+</ul>
+<p>Example:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Loop while a condition is true (e.g., user input)</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">number</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter a number greater than or equal to 5: &quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Enhanced For Loop</strong></p>
+<p><strong>Advantages:</strong></p>
+<ul class="simple">
+<li><p>Simplifies iteration over collections and arrays: It’s great for iterating through collections (like arrays, lists, and other collections) without dealing with indices or manual counting.</p></li>
+<li><p>Cleaner and more concise: It reduces boilerplate code and makes the loop easier to read.</p></li>
+<li><p>No risk of index errors: Since it doesn’t require an index variable, there’s no risk of going out of bounds or off-by-one errors.</p></li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul class="simple">
+<li><p>Limited to collections and arrays: It cannot be used in situations where you need to modify the loop variable or if you need the index.</p></li>
+<li><p>Lacks flexibility: You can’t break early from the loop or increment the index manually. The loop just iterates over each element.</p></li>
+</ul>
+<p><strong>When to use:</strong></p>
+<ul class="simple">
+<li><p>When you need to iterate over every element in a collection or array without needing the index.</p></li>
+<li><p>When you want to avoid manually handling array indices or iterating based on a counter.</p></li>
+</ul>
+<p>Example:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Loop through an array using an enhanced for loop</span>
+<span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">};</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">numbers</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</details>
+<hr class="docutils" />
 <section id="bubble-sort">
 <h3>Bubble Sort<a class="headerlink" href="#bubble-sort" title="Link to this heading">¶</a></h3>
 <p>Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. The process is repeated until the list is sorted. Here’s a Java program that demonstrates the bubble sort algorithm:</p>

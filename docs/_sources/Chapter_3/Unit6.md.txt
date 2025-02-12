@@ -462,6 +462,90 @@ for(int i = 0; i < classroom.length; i ++)
 
 Both standard and enhanced `for` loops are useful in different contexts. For example, since *enhanced* `for` loops make a copy of each element value, they are incapable of changing the value of the elements in an array. If elements need to be altered, *standard* `for` loops are more appropriate. In contrast, if elements just need to be accessed, *enhanced* `for` loops provide a more streamlined way to access elements without the need for a counter, or a potential `ArrayIndexOutOfBounds error`. 
 
+---
+<details><summary> **Click Here** </summary>
+
+**For Loop**
+
+ **Advantages:**
+- Ideal for definite iterations: It works best when you know the number of iterations ahead of time (e.g., looping through an array or list with a known size).
+- Compact syntax: Initialization, condition check, and increment/decrement are all in one place, making the loop easy to read and maintain.
+- Control over loop variables: You can manually manage the loop variable, its increment/decrement, and conditions within the loop.
+
+ **Disadvantages:**
+- Not ideal for indefinite loops: It’s cumbersome when you don’t know how many times you need to loop.
+- Less readable for complex conditions: If the loop condition becomes complicated, it can reduce readability.
+
+ **When to use:**
+- When you know the exact number of iterations in advance.
+- Iterating over arrays, lists, or ranges with a specific index.
+- Looping with a counter (e.g., for repeating an operation a set number of times).
+
+ Example:
+```java
+// Loop through an array by index
+int[] numbers = {1, 2, 3, 4, 5};
+for (int i = 0; i < numbers.length; i++) {
+    System.out.println(numbers[i]);
+}
+```
+
+**While Loop**
+
+ **Advantages:**
+- Best for indefinite iterations: It’s ideal when you don’t know the number of iterations in advance, but the loop continues based on a condition (e.g., reading input until a certain condition is met).
+- Simple condition-based looping: The loop continues as long as a condition is `true`, which is easy to understand for certain use cases.
+
+ **Disadvantages:**
+- Risk of infinite loop: If the condition is never met, the loop can run indefinitely, leading to errors.
+- Less structured: The initialization and increment/decrement steps are separate from the condition check, which might make the loop harder to maintain.
+
+ **When to use:**
+- When the number of iterations is not known ahead of time.
+- When the loop needs to run until a specific condition becomes true (e.g., user input validation or network communication).
+
+
+ Example:
+```java
+// Loop while a condition is true (e.g., user input)
+int number = 0;
+while (number < 5) {
+    System.out.println("Enter a number greater than or equal to 5: ");
+    number = scanner.nextInt();
+}
+```
+
+
+**Enhanced For Loop**
+
+ **Advantages:**
+- Simplifies iteration over collections and arrays: It's great for iterating through collections (like arrays, lists, and other collections) without dealing with indices or manual counting.
+- Cleaner and more concise: It reduces boilerplate code and makes the loop easier to read.
+- No risk of index errors: Since it doesn't require an index variable, there's no risk of going out of bounds or off-by-one errors.
+
+ **Disadvantages:**
+- Limited to collections and arrays: It cannot be used in situations where you need to modify the loop variable or if you need the index.
+- Lacks flexibility: You can’t break early from the loop or increment the index manually. The loop just iterates over each element.
+
+ **When to use:**
+- When you need to iterate over every element in a collection or array without needing the index.
+- When you want to avoid manually handling array indices or iterating based on a counter.
+
+ Example:
+```java
+// Loop through an array using an enhanced for loop
+int[] numbers = {1, 2, 3, 4, 5};
+for (int num : numbers) {
+    System.out.println(num);
+}
+```
+
+</details>
+
+
+---
+
+
 ### Bubble Sort ###
 
 Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. The process is repeated until the list is sorted. Here's a Java program that demonstrates the bubble sort algorithm:
