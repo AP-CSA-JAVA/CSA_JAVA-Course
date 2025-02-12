@@ -548,7 +548,10 @@ for (int num : numbers) {
 
 ### Bubble Sort ###
 
-Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. The process is repeated until the list is sorted. Here's a Java program that demonstrates the bubble sort algorithm:
+Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. [Bubble Sort Example](https://www.hackerearth.com/practice/algorithms/sorting/bubble-sort/visualize/)
+
+
+The process is repeated until the list is sorted. Here's a Java program that demonstrates the bubble sort algorithm:
 
 ```java
 public class BubbleSortExample {
