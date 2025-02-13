@@ -546,7 +546,7 @@ for (int num : numbers) {
 ---
 
 
-### Bubble Sort ###
+### Bubble Sort
 
 Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. [Bubble Sort Example](https://www.hackerearth.com/practice/algorithms/sorting/bubble-sort/visualize/)
 
@@ -622,7 +622,7 @@ Sorted array:
 11 12 22 25 34 64 90 
 ```
 
-### Insertion Sort ###
+### Insertion Sort
 
 Insertion sort is another simple sorting algorithm that builds the final sorted array one item at a time. It takes each element from the input and inserts it into its correct position in the sorted part of the array. [Insertion Sort Example](https://www.hackerearth.com/practice/algorithms/sorting/insertion-sort/visualize/)
 
@@ -682,6 +682,203 @@ Explanation:
 When you run this program, it will output:
 
 ```java
+Original array:
+64 34 25 12 22 11 90 
+
+Sorted array:
+11 12 22 25 34 64 90 
+```
+
+### Selection Sort
+
+Selection Sort is an in-place comparison-based sorting algorithm. It works by repeatedly finding the minimum element from the unsorted portion of the array and swapping it with the first unsorted element. The process is repeated for the remaining unsorted portion until the entire array is sorted. [Selection Sort Example](https://www.hackerearth.com/practice/algorithms/sorting/selection-sort/visualize/)
+
+**Example:**
+
+
+```java
+public class SelectionSortExample {
+    public static void main(String[] args) {
+        int[] arr = {64, 34, 25, 12, 22, 11, 90};
+
+        System.out.println("Original array:");
+        printArray(arr);
+
+        selectionSort(arr);
+
+        System.out.println("\nSorted array:");
+        printArray(arr);
+    }
+
+    public static void selectionSort(int[] arr) {
+        int n = arr.length;
+        
+        // Traverse through all elements of the array
+        for (int i = 0; i < n - 1; i++) {
+            int minIndex = i;
+            
+            // Find the minimum element in the unsorted portion
+            for (int j = i + 1; j < n; j++) {
+                if (arr[j] < arr[minIndex]) {
+                    minIndex = j;
+                }
+            }
+            
+            // Swap the found minimum element with the first unsorted element
+            if (minIndex != i) {
+                int temp = arr[i];
+                arr[i] = arr[minIndex];
+                arr[minIndex] = temp;
+            }
+        }
+    }
+
+    public static void printArray(int[] arr) {
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+    }
+}
+```
+
+**Explanation:**
+
+- **Class Definition**: The `SelectionSortExample` class contains a main method, a `selectionSort` method to perform the sorting, and a `printArray` method to display the array elements.
+  
+- **Main Method**: 
+  - We create an array `arr` with unsorted values.
+  - We print the original array using the `printArray` method.
+  - We call the `selectionSort` method to sort the array using the selection sort algorithm.
+
+- **SelectionSort Method**: 
+  - The `selectionSort` method iterates over the entire array. For each element, it finds the smallest element in the remaining unsorted portion of the array and swaps it with the first unsorted element.
+  - This continues until all elements are sorted.
+
+- **printArray Method**: The `printArray` method is used to display the elements of the array both before and after sorting.
+
+**Output:**
+
+```java
+Original array:
+64 34 25 12 22 11 90 
+
+Sorted array:
+11 12 22 25 34 64 90 
+```
+
+This program prints the original unsorted array and then prints the sorted array after running the "selection sort" algorithm.
+
+
+
+### Merge Sort
+
+Merge Sort is a divide-and-conquer sorting algorithm that splits the array into smaller sub-arrays, sorts each of them, and then merges them back together to form a sorted array. This process continues recursively until the entire array is sorted. [Merge Sort Example:](https://www.hackerearth.com/practice/algorithms/sorting/merge-sort/visualize/)
+
+**Merge Sort Example**
+
+```java
+public class MergeSortExample {
+    public static void main(String[] args) {
+        int[] arr = {64, 34, 25, 12, 22, 11, 90};
+
+        System.out.println("Original array:");
+        printArray(arr);
+
+        mergeSort(arr, 0, arr.length - 1);
+
+        System.out.println("\nSorted array:");
+        printArray(arr);
+    }
+
+    public static void mergeSort(int[] arr, int left, int right) {
+        if (left < right) {
+            // Find the middle point of the array
+            int middle = (left + right) / 2;
+
+            // Recursively split the array into two halves
+            mergeSort(arr, left, middle);
+            mergeSort(arr, middle + 1, right);
+
+            // Merge the two halves
+            merge(arr, left, middle, right);
+        }
+    }
+
+    public static void merge(int[] arr, int left, int middle, int right) {
+        // Find sizes of two sub-arrays to be merged
+        int n1 = middle - left + 1;
+        int n2 = right - middle;
+
+        // Create temporary arrays
+        int[] leftArr = new int[n1];
+        int[] rightArr = new int[n2];
+
+        // Copy data to temporary arrays leftArr[] and rightArr[]
+        System.arraycopy(arr, left, leftArr, 0, n1);
+        System.arraycopy(arr, middle + 1, rightArr, 0, n2);
+
+        // Merge the temporary arrays back into arr[left..right]
+        int i = 0, j = 0;
+        int k = left;
+
+        while (i < n1 && j < n2) {
+            if (leftArr[i] <= rightArr[j]) {
+                arr[k] = leftArr[i];
+                i++;
+            } else {
+                arr[k] = rightArr[j];
+                j++;
+            }
+            k++;
+        }
+
+        // Copy any remaining elements of leftArr[], if any
+        while (i < n1) {
+            arr[k] = leftArr[i];
+            i++;
+            k++;
+        }
+
+        // Copy any remaining elements of rightArr[], if any
+        while (j < n2) {
+            arr[k] = rightArr[j];
+            j++;
+            k++;
+        }
+    }
+
+    public static void printArray(int[] arr) {
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+    }
+}
+```
+
+**Explanation:**
+
+- **Class Definition**: The `MergeSortExample` class contains a `main` method to execute the program, a `mergeSort` method to perform the recursive divide and conquer, a `merge` method to combine sorted subarrays, and a `printArray` method to display the array elements.
+
+- **Main Method**:
+  - We create an unsorted array `arr`.
+  - We print the original array using the `printArray` method.
+  - We call the `mergeSort` method to sort the array using the merge sort algorithm.
+
+- **mergeSort Method**:
+  - The `mergeSort` method recursively divides the array into two halves, continues splitting them until each sub-array contains only one element, and then starts the merging process.
+  - The base case of the recursion is when the `left` index is greater than or equal to the `right` index, meaning the array is already a single element.
+
+- **merge Method**:
+  - The `merge` method combines two sorted subarrays into a single sorted array. It compares elements from each subarray and places the smaller element into the original array.
+  - After comparing all elements, any leftover elements from either subarray are copied into the original array.
+
+- **printArray Method**: This method prints the elements of the array both before and after sorting.
+
+**Output:**
+
+```
 Original array:
 64 34 25 12 22 11 90 
 

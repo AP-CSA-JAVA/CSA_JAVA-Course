@@ -894,6 +894,199 @@ Within the loop, the enhanced <code class="docutils literal notranslate"><span c
 </pre></div>
 </div>
 </section>
+<section id="selection-sort">
+<h3>Selection Sort<a class="headerlink" href="#selection-sort" title="Link to this heading">¶</a></h3>
+<p>Selection Sort is an in-place comparison-based sorting algorithm. It works by repeatedly finding the minimum element from the unsorted portion of the array and swapping it with the first unsorted element. The process is repeated for the remaining unsorted portion until the entire array is sorted. <a class="reference external" href="https://www.hackerearth.com/practice/algorithms/sorting/selection-sort/visualize/">Selection Sort Example</a></p>
+<p><strong>Example:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SelectionSortExample</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">64</span><span class="p">,</span><span class="w"> </span><span class="mi">34</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">};</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Original array:&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">printArray</span><span class="p">(</span><span class="n">arr</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">selectionSort</span><span class="p">(</span><span class="n">arr</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\nSorted array:&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">printArray</span><span class="p">(</span><span class="n">arr</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">selectionSort</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c1">// Traverse through all elements of the array</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">minIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="w">            </span>
+<span class="w">            </span><span class="c1">// Find the minimum element in the unsorted portion</span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="n">minIndex</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">minIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">j</span><span class="p">;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span>
+<span class="w">            </span><span class="c1">// Swap the found minimum element with the first unsorted element</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">minIndex</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="kt">int</span><span class="w"> </span><span class="n">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+<span class="w">                </span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="o">[</span><span class="n">minIndex</span><span class="o">]</span><span class="p">;</span>
+<span class="w">                </span><span class="n">arr</span><span class="o">[</span><span class="n">minIndex</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">temp</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printArray</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">arr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Explanation:</strong></p>
+<ul class="simple">
+<li><p><strong>Class Definition</strong>: The <code class="docutils literal notranslate"><span class="pre">SelectionSortExample</span></code> class contains a main method, a <code class="docutils literal notranslate"><span class="pre">selectionSort</span></code> method to perform the sorting, and a <code class="docutils literal notranslate"><span class="pre">printArray</span></code> method to display the array elements.</p></li>
+<li><p><strong>Main Method</strong>:</p>
+<ul>
+<li><p>We create an array <code class="docutils literal notranslate"><span class="pre">arr</span></code> with unsorted values.</p></li>
+<li><p>We print the original array using the <code class="docutils literal notranslate"><span class="pre">printArray</span></code> method.</p></li>
+<li><p>We call the <code class="docutils literal notranslate"><span class="pre">selectionSort</span></code> method to sort the array using the selection sort algorithm.</p></li>
+</ul>
+</li>
+<li><p><strong>SelectionSort Method</strong>:</p>
+<ul>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">selectionSort</span></code> method iterates over the entire array. For each element, it finds the smallest element in the remaining unsorted portion of the array and swaps it with the first unsorted element.</p></li>
+<li><p>This continues until all elements are sorted.</p></li>
+</ul>
+</li>
+<li><p><strong>printArray Method</strong>: The <code class="docutils literal notranslate"><span class="pre">printArray</span></code> method is used to display the elements of the array both before and after sorting.</p></li>
+</ul>
+<p><strong>Output:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Original</span><span class="w"> </span><span class="n">array</span><span class="p">:</span>
+<span class="mi">64</span><span class="w"> </span><span class="mi">34</span><span class="w"> </span><span class="mi">25</span><span class="w"> </span><span class="mi">12</span><span class="w"> </span><span class="mi">22</span><span class="w"> </span><span class="mi">11</span><span class="w"> </span><span class="mi">90</span><span class="w"> </span>
+
+<span class="n">Sorted</span><span class="w"> </span><span class="n">array</span><span class="p">:</span>
+<span class="mi">11</span><span class="w"> </span><span class="mi">12</span><span class="w"> </span><span class="mi">22</span><span class="w"> </span><span class="mi">25</span><span class="w"> </span><span class="mi">34</span><span class="w"> </span><span class="mi">64</span><span class="w"> </span><span class="mi">90</span><span class="w"> </span>
+</pre></div>
+</div>
+<p>This program prints the original unsorted array and then prints the sorted array after running the “selection sort” algorithm.</p>
+</section>
+<section id="merge-sort">
+<h3>Merge Sort<a class="headerlink" href="#merge-sort" title="Link to this heading">¶</a></h3>
+<p>Merge Sort is a divide-and-conquer sorting algorithm that splits the array into smaller sub-arrays, sorts each of them, and then merges them back together to form a sorted array. This process continues recursively until the entire array is sorted. <a class="reference external" href="https://www.hackerearth.com/practice/algorithms/sorting/merge-sort/visualize/">Merge Sort Example:</a></p>
+<p><strong>Merge Sort Example</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MergeSortExample</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">64</span><span class="p">,</span><span class="w"> </span><span class="mi">34</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">};</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Original array:&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">printArray</span><span class="p">(</span><span class="n">arr</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">mergeSort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\nSorted array:&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">printArray</span><span class="p">(</span><span class="n">arr</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">mergeSort</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">left</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">right</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">left</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">right</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// Find the middle point of the array</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">middle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">left</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">right</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+
+<span class="w">            </span><span class="c1">// Recursively split the array into two halves</span>
+<span class="w">            </span><span class="n">mergeSort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="n">left</span><span class="p">,</span><span class="w"> </span><span class="n">middle</span><span class="p">);</span>
+<span class="w">            </span><span class="n">mergeSort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="n">middle</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">right</span><span class="p">);</span>
+
+<span class="w">            </span><span class="c1">// Merge the two halves</span>
+<span class="w">            </span><span class="n">merge</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="n">left</span><span class="p">,</span><span class="w"> </span><span class="n">middle</span><span class="p">,</span><span class="w"> </span><span class="n">right</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">merge</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">left</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">middle</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">right</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Find sizes of two sub-arrays to be merged</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">n1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">middle</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">n2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">middle</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// Create temporary arrays</span>
+<span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">leftArr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="n">n1</span><span class="o">]</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">rightArr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="n">n2</span><span class="o">]</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// Copy data to temporary arrays leftArr[] and rightArr[]</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">arraycopy</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="n">left</span><span class="p">,</span><span class="w"> </span><span class="n">leftArr</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">n1</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">arraycopy</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="n">middle</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">rightArr</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">n2</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Merge the temporary arrays back into arr[left..right]</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">left</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">leftArr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">rightArr</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">leftArr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+<span class="w">                </span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rightArr</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
+<span class="w">                </span><span class="n">j</span><span class="o">++</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="n">k</span><span class="o">++</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// Copy any remaining elements of leftArr[], if any</span>
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">leftArr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+<span class="w">            </span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
+<span class="w">            </span><span class="n">k</span><span class="o">++</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// Copy any remaining elements of rightArr[], if any</span>
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rightArr</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
+<span class="w">            </span><span class="n">j</span><span class="o">++</span><span class="p">;</span>
+<span class="w">            </span><span class="n">k</span><span class="o">++</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printArray</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">arr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Explanation:</strong></p>
+<ul class="simple">
+<li><p><strong>Class Definition</strong>: The <code class="docutils literal notranslate"><span class="pre">MergeSortExample</span></code> class contains a <code class="docutils literal notranslate"><span class="pre">main</span></code> method to execute the program, a <code class="docutils literal notranslate"><span class="pre">mergeSort</span></code> method to perform the recursive divide and conquer, a <code class="docutils literal notranslate"><span class="pre">merge</span></code> method to combine sorted subarrays, and a <code class="docutils literal notranslate"><span class="pre">printArray</span></code> method to display the array elements.</p></li>
+<li><p><strong>Main Method</strong>:</p>
+<ul>
+<li><p>We create an unsorted array <code class="docutils literal notranslate"><span class="pre">arr</span></code>.</p></li>
+<li><p>We print the original array using the <code class="docutils literal notranslate"><span class="pre">printArray</span></code> method.</p></li>
+<li><p>We call the <code class="docutils literal notranslate"><span class="pre">mergeSort</span></code> method to sort the array using the merge sort algorithm.</p></li>
+</ul>
+</li>
+<li><p><strong>mergeSort Method</strong>:</p>
+<ul>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">mergeSort</span></code> method recursively divides the array into two halves, continues splitting them until each sub-array contains only one element, and then starts the merging process.</p></li>
+<li><p>The base case of the recursion is when the <code class="docutils literal notranslate"><span class="pre">left</span></code> index is greater than or equal to the <code class="docutils literal notranslate"><span class="pre">right</span></code> index, meaning the array is already a single element.</p></li>
+</ul>
+</li>
+<li><p><strong>merge Method</strong>:</p>
+<ul>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">merge</span></code> method combines two sorted subarrays into a single sorted array. It compares elements from each subarray and places the smaller element into the original array.</p></li>
+<li><p>After comparing all elements, any leftover elements from either subarray are copied into the original array.</p></li>
+</ul>
+</li>
+<li><p><strong>printArray Method</strong>: This method prints the elements of the array both before and after sorting.</p></li>
+</ul>
+<p><strong>Output:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Original</span> <span class="n">array</span><span class="p">:</span>
+<span class="mi">64</span> <span class="mi">34</span> <span class="mi">25</span> <span class="mi">12</span> <span class="mi">22</span> <span class="mi">11</span> <span class="mi">90</span> 
+
+<span class="n">Sorted</span> <span class="n">array</span><span class="p">:</span>
+<span class="mi">11</span> <span class="mi">12</span> <span class="mi">22</span> <span class="mi">25</span> <span class="mi">34</span> <span class="mi">64</span> <span class="mi">90</span> 
+</pre></div>
+</div>
+</section>
 </section>
 <section id="developing-algorithms-using-arrays">
 <h2>6.4 Developing Algorithms Using Arrays<a class="headerlink" href="#developing-algorithms-using-arrays" title="Link to this heading">¶</a></h2>
@@ -1062,6 +1255,8 @@ player recreates the sequence from memory.</p>
 <li><a class="reference internal" href="#enhanced-for-loop-for-arrays">6.3 Enhanced for Loop for Arrays</a><ul>
 <li><a class="reference internal" href="#bubble-sort">Bubble Sort</a></li>
 <li><a class="reference internal" href="#insertion-sort">Insertion Sort</a></li>
+<li><a class="reference internal" href="#selection-sort">Selection Sort</a></li>
+<li><a class="reference internal" href="#merge-sort">Merge Sort</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#developing-algorithms-using-arrays">6.4 Developing Algorithms Using Arrays</a></li>
