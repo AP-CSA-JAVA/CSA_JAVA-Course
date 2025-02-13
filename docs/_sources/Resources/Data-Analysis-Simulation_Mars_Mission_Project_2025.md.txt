@@ -1,3 +1,7 @@
+[How to do a Data Analytics Project](https://medium.com/@data-storyteller/how-to-do-a-data-analytics-project-da710e317e3a)
+
+[Key Elements of a Successful Data Project](https://medium.com/@melisaltinoluk/key-elements-of-a-successful-data-analytics-project-70132d4b2970)
+
 For a Computer Science/Data Analysis and Simulation project based on the "Mission to Mars" scenario, students can focus on using data to create interactive simulations that address various aspects of sustainability, transportation, and systems management for a Martian colony. Here are a few ideas they can develop:
 
 ### 1. **Sustainability Simulation: Life Support System**
