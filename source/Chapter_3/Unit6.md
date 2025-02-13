@@ -548,6 +548,8 @@ for (int num : numbers) {
 
 ### Bubble Sort
 
+<details><Summary> Click Here </Summary>
+
 Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. [Bubble Sort Example](https://www.hackerearth.com/practice/algorithms/sorting/bubble-sort/visualize/)
 
 
@@ -622,6 +624,12 @@ Sorted array:
 11 12 22 25 34 64 90 
 ```
 
+</details>
+
+---
+
+<details><summary> Click Here </summary>
+
 ### Insertion Sort
 
 Insertion sort is another simple sorting algorithm that builds the final sorted array one item at a time. It takes each element from the input and inserts it into its correct position in the sorted part of the array. [Insertion Sort Example](https://www.hackerearth.com/practice/algorithms/sorting/insertion-sort/visualize/)
@@ -689,8 +697,13 @@ Sorted array:
 11 12 22 25 34 64 90 
 ```
 
+</details>
+
+---
+
 ### Selection Sort
 
+<details><summary> Click Here </summary>
 Selection Sort is an in-place comparison-based sorting algorithm. It works by repeatedly finding the minimum element from the unsorted portion of the array and swapping it with the first unsorted element. The process is repeated for the remaining unsorted portion until the entire array is sorted. [Selection Sort Example](https://www.hackerearth.com/practice/algorithms/sorting/selection-sort/visualize/)
 
 **Example:**
@@ -767,11 +780,14 @@ Sorted array:
 11 12 22 25 34 64 90 
 ```
 
-This program prints the original unsorted array and then prints the sorted array after running the "selection sort" algorithm.
+</details>
 
+---
 
 
 ### Merge Sort
+
+<details><summary> Click Here </summary>
 
 Merge Sort is a divide-and-conquer sorting algorithm that splits the array into smaller sub-arrays, sorts each of them, and then merges them back together to form a sorted array. This process continues recursively until the entire array is sorted. [Merge Sort Example:](https://www.hackerearth.com/practice/algorithms/sorting/merge-sort/visualize/)
 
@@ -885,7 +901,10 @@ Original array:
 Sorted array:
 11 12 22 25 34 64 90 
 ```
+</details>
 
+
+---
 
 
 ## 6.4 Developing Algorithms Using Arrays
