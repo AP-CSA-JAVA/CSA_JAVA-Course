@@ -628,9 +628,12 @@ Sorted array:
 
 ---
 
-<details><summary> Click Here </summary>
 
 ### Insertion Sort
+
+
+<details><summary> Click Here </summary>
+
 
 Insertion sort is another simple sorting algorithm that builds the final sorted array one item at a time. It takes each element from the input and inserts it into its correct position in the sorted part of the array. [Insertion Sort Example](https://www.hackerearth.com/practice/algorithms/sorting/insertion-sort/visualize/)
 
