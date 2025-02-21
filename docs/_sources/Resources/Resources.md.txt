@@ -181,7 +181,7 @@ public class DateTimeExample {
 
 SCRUM is an Agile framework used to manage complex product development. It emphasizes iterative progress, collaboration, and adaptability. Here's a breakdown of the SCRUM phases, along with documentation that should be created or maintained during each phase:
 
-### 1. **Backlog (Product Backlog)**
+### 1. **Backlog**
    **What happens**: 
    - The **Product Owner** creates and manages the **Product Backlog**, which is a prioritized list of features, enhancements, bug fixes, or technical improvements that need to be done for the project. These items are usually called **Product Backlog Items (PBIs)**.
    - The team collaboratively refines the backlog, breaking larger tasks into smaller, actionable pieces.
@@ -190,7 +190,7 @@ SCRUM is an Agile framework used to manage complex product development. It empha
    - **Product Backlog**: A list of all desired work items.
    - **Backlog Refinement Notes**: Any changes or additional information added during backlog grooming meetings.
 
-### 2. **Sprint Planning**
+### 2. **Sprint**
    **What happens**: 
    - A **Sprint** is a time-boxed period, typically 1–4 weeks, where a specific set of work items from the backlog are worked on.
    - During **Sprint Planning**, the team selects high-priority backlog items to work on during the sprint. They break down these tasks into actionable steps.
@@ -201,7 +201,7 @@ SCRUM is an Agile framework used to manage complex product development. It empha
    - **Sprint Goal**: The objective the team aims to achieve during the sprint.
    - **Task Breakdown**: A detailed breakdown of the selected work items into smaller tasks.
 
-### 3. **To-Do (Sprint Backlog)**
+### 3. **To-Do**
    **What happens**: 
    - The **To-Do** list is typically a section of the **Sprint Backlog** that contains tasks the team has planned to start but hasn't yet worked on. It provides visibility into upcoming tasks for the sprint.
    - These tasks are often broken down into smaller actionable items that are easy to track.
@@ -210,7 +210,7 @@ SCRUM is an Agile framework used to manage complex product development. It empha
    - **Sprint Backlog**: This document should list all tasks that have yet to be started during the sprint.
    - **Task Descriptions**: Clear descriptions of each individual task to avoid confusion.
   
-### 4. **Doing (In Progress)**
+### 4. **Doing**
    **What happens**: 
    - The team works on the tasks they selected during **Sprint Planning**. This is the "doing" phase, where active development occurs. Each task is moved from **To-Do** to **Doing** as work begins.
    - The team often has daily **Stand-up (Daily Scrum)** meetings to sync up on progress, address blockers, and adjust plans.
@@ -229,7 +229,7 @@ SCRUM is an Agile framework used to manage complex product development. It empha
    - **Completed Product Backlog Items**: Items that were completed during the sprint and can potentially be shipped or deployed.
    - **Release Notes** (optional): If the product is being released after the sprint, this includes updates and changes made during the sprint.
 
-### 6. **Done (Sprint Retrospective)**
+### 6. **Done**
    **What happens**: 
    - The **Sprint Retrospective** is a meeting held after the Sprint Review, where the team reflects on the sprint itself. The focus is on **process improvement**—what worked well, what didn’t, and how things can be improved in future sprints.
    - The team agrees on actions to take in the next sprint to improve their processes and work together more effectively.
