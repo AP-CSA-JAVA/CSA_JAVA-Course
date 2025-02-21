@@ -18,6 +18,7 @@ Arrays are a group of variables referred to by a common name. Below are some imp
 - Java array can also be used as a static field, a local variable, or a method parameter.
 - The size of an array must be specified by int or short value.
 - The direct superclass of an array type is Object.
+- Arrays in Java are *mutable*, which means the values of the elements can be modified after the array has been created.
 - The size of the array cannot be altered(once initialized).   
  
  
