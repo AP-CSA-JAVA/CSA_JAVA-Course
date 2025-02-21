@@ -25,87 +25,6 @@ At the top of the file containing your program's main() method, place an `extern
 
 ```
 
-
-|  | CSA Topics | MCQ | FRQ | Project |
-| :---: | :---- | :---: | :---: | :----: |
-|  Week 1  | **Orientation & Structure** |  |   |
-|  Week 1  | 1.1 Why Programming?  Why Java? | MCQ |   |
-|  Week 1  | 1.2 Variables and Data Types? | MCQ  |   |
-|  Week 2  | 1.3 Expressions and Assignment Statements | MCQ  |   |
-|  Week 2  | 1.4 Compound Assignment Operators | MCQ  |   |
-|  Week 2  | 1.5 Casting and Ranges of Variables | MCQ  |   |
-|  **TBD** | Unit Exam | MCQ |    |   Yes  |
-|  Week 3  | 3.2 if Statements and Control Flow | MCQ  |   |
-|  Week 3  | 3.3 if-else Statements |  MCQ  |   |
-|  Week 3  | 3.4 else if Statements |  MCQ  |   |
-|  Week 4  | 3.1 Boolean Expressions |  MCQ |   |
-|  Week 4  | 3.5 Compound Boolean Expressions |  MCQ  | FRQ  |
-|  Week 4  | 3.6 Equivalent Boolean Expressions |  MCQ  |   |
-|  Week 5  | 3.7 Comparing Objects |  MCQ  | FRQ  |
-|  **TBD** | Unit Exam | MCQ | FRQ  |   Yes  |
-|  Week 5  | 2.1 Objects: Instances of Classes |  MCQ  |   |
-|  Week 5  | 2.2 Creating and Storing Objects (Instantiation) |  MCQ  |   |
-|  Week 6  | 2.3 Calling a Void Method |  MCQ  |   |
-|  Week 6  | 2.4 Calling a Void Method with Parameters |  MCQ  |   |
-|  Week 6  | 2.5 Calling a Non-Void Method |  MCQ  |   |
-|  Week 7  | 2.6 String Objects: Concatenation, Literals, and More |  MCQ  |   |
-|  Week 7  | 2.7 String Methods |  MCQ  |   |
-|  Week 7  | 2.8 Wrapper: Classes Integer and Double | MCQ  |   |
-|  Week 8  | 2.9 Using the Math Class |  MCQ |  FRQ |
-|  **TBD**  | Unit Exam | MCQ | FRQ  |   Yes  |
-|  Week 8  | 4.1 while Loops | MCQ  |   |
-|  Week 8  | 4.2 for Loops |  MCQ  |   |
-|  Week 8  | 4.3 Developing Algorithms Using Strings | MCQ   | FRQ  |
-|  Week 9  | 4.4 Nested Iteration |  MCQ  | FRQ  |
-|  Week 9  | 4.5 Informal Code Analysis | MCQ  |   |
-|  **TBD** | Unit Exam | MCQ | FRQ  |   Yes  |
-|  Week 10  | 5.1 Anatomy of a Class |  MCQ  |   |
-|  Week 10  | 5.2 Constructors |  MCQ  |   |
-|  Week 10  | 5.3 Documentation with Comments |  MCQ  |   |
-|  Week 11  | 5.4 Accessor Methods |  MCQ  |   |
-|  Week 11  | 5.5 Mutator Methods |  MCQ  | FRQ  |
-|  Week 11  | 5.6 Writing Methods |  MCQ  |   |
-|  Week 12  | 5.7 Static Variables and Methods | MCQ  |   |
-|  Week 12  | 5.8 Scope and Access |  MCQ  | FCQ  |
-|  Week 12  | 5.9 this Keyword |  MCQ  |   |
-|  Week 12  | 5.10 Ethical and Social Implications of Computing Systems |    |   |
-|  **TBD**  | Unit Exam | MCQ | FRQ  |   Yes  |
-|  Week 13  | 9.1 Creating Superclasses and Subclasses |    |   |
-|  Week 13  | 9.2 Writing Constructors for Subclasses |  MCQ  |   |
-|  Week 14  | 9.3 Overriding Methods | MCQ |   |
-|  Week 14  | 9.4 super Keyword | MCQ  |   |
-|  Week 15  | 9.5 Creating References Using Inheritance Hierarchies | MCQ |   |
-|  Week 15  | 9.6 Polymorphism | MCQ  |  FRQ |
-|  Week 16  | 9.7 Object Superclass | MCQ  |  FRQ |
-|   **TBD** | Unit Exam | MCQ | FRQ  |   Yes  |
-|  Week 17  | 6.1 Array Creation and Access | MCQ  |   |
-|  Week 17  | 6.2 Traversing Arrays |  MCQ  |   |
-|  Week 18  | 6.3 Enhanced for Loop for Arrays | MCQ  | FRQ  |
-|  Week 18  | 6.4 Developing Algorithms Using Arrays |  MCQ  | FRQ |
-|   **TBD** | Unit Exam | MCQ | FRQ  |     |
-|    | ----------------------- **Semester 1 Ends** ----------------------- |   |   |
-|  Week 19  | 7.1 Introduction to ArrayList | MCQ   |   |
-|  Week 19  | 7.2 ArrayList Methods |  MCQ  |   |
-|  Week 20  | 7.3 Traversing ArrayLists | MCQ  |   |
-|  Week 20  | 7.4 Developing Algorithms Using ArrayLists |  MCQ  |   |
-|  Week 21  | 7.5 Searching |  MCQ  | FRQ  |
-|  Week 21  | 7.6 Sorting |  MCQ  |   |
-|  Week 21  | 7.7 Ethical Issues Around Data Collection  |    |   |
-|   **TBD**  | Unit Exam | MCQ | FRQ  |   Yes  |
-|  Week 22  | 8.1 2D Arrays |  MCQ  |   |
-|  Week 22  | 8.2 Traversing 2D Arrays |  MCQ  | FRQ  |
-|  **TBD**  | Unit Exam | MCQ | FRQ  |   Yes  |
-|  Week 23  | 10.1 Recursion |  MCQ  | FRQ  |
-|  Week 23  | 10.2 Recursive Searching and Sorting |  MCQ |   |
-|   **TBD** | Unit Exam | MCQ | FRQ  |     |
-|  Week 24  | White Tower Final Project |   |   |  Yes |
-|     | Practice Exam 2014 | MCQ | FRQ |
-|     | Practice Exam 2015 | MCQ | FRQ |
-|     | Practice Exam 2020 | MCQ | FRQ |
-
-
-
-
 ### Replit.com
 By default, Replit uses Main as the main class.  To change the Main class name to a class name of your choosing, create a new file within replit and call it <i>.repl</i>.  Within the file type the following:
 
@@ -255,3 +174,132 @@ public class DateTimeExample {
 | WEEKOFYEAR() | 	Return the calendar week of the date (1-53) |
 | YEAR()  |	Return the year |
 | YEARWEEK()  |	Return the year and week  |
+
+
+
+## SCRUM
+
+SCRUM is an Agile framework used to manage complex product development. It emphasizes iterative progress, collaboration, and adaptability. Here's a breakdown of the SCRUM phases, along with documentation that should be created or maintained during each phase:
+
+### 1. **Backlog (Product Backlog)**
+   **What happens**: 
+   - The **Product Owner** creates and manages the **Product Backlog**, which is a prioritized list of features, enhancements, bug fixes, or technical improvements that need to be done for the project. These items are usually called **Product Backlog Items (PBIs)**.
+   - The team collaboratively refines the backlog, breaking larger tasks into smaller, actionable pieces.
+   
+   **Documentation**: 
+   - **Product Backlog**: A list of all desired work items.
+   - **Backlog Refinement Notes**: Any changes or additional information added during backlog grooming meetings.
+
+### 2. **Sprint Planning**
+   **What happens**: 
+   - A **Sprint** is a time-boxed period, typically 1–4 weeks, where a specific set of work items from the backlog are worked on.
+   - During **Sprint Planning**, the team selects high-priority backlog items to work on during the sprint. They break down these tasks into actionable steps.
+   - The **Scrum Master** facilitates the session, ensuring the team has everything they need to succeed.
+
+   **Documentation**: 
+   - **Sprint Backlog**: The set of items from the product backlog that will be worked on during the sprint.
+   - **Sprint Goal**: The objective the team aims to achieve during the sprint.
+   - **Task Breakdown**: A detailed breakdown of the selected work items into smaller tasks.
+
+### 3. **To-Do (Sprint Backlog)**
+   **What happens**: 
+   - The **To-Do** list is typically a section of the **Sprint Backlog** that contains tasks the team has planned to start but hasn't yet worked on. It provides visibility into upcoming tasks for the sprint.
+   - These tasks are often broken down into smaller actionable items that are easy to track.
+
+   **Documentation**:
+   - **Sprint Backlog**: This document should list all tasks that have yet to be started during the sprint.
+   - **Task Descriptions**: Clear descriptions of each individual task to avoid confusion.
+  
+### 4. **Doing (In Progress)**
+   **What happens**: 
+   - The team works on the tasks they selected during **Sprint Planning**. This is the "doing" phase, where active development occurs. Each task is moved from **To-Do** to **Doing** as work begins.
+   - The team often has daily **Stand-up (Daily Scrum)** meetings to sync up on progress, address blockers, and adjust plans.
+
+   **Documentation**: 
+   - **Task Updates**: As work progresses, team members update task status, adding notes on progress, challenges, and next steps.
+   - **Burndown Chart**: A visual representation of remaining work in the sprint, showing the team's progress.
+
+### 5. **Review**
+   **What happens**: 
+   - At the end of the sprint, a **Sprint Review** meeting occurs where the team demonstrates the work completed during the sprint. This is done for the stakeholders, including the Product Owner.
+   - The team discusses what went well, challenges faced, and what wasn’t completed.
+   
+   **Documentation**: 
+   - **Sprint Review Notes**: A document or presentation summarizing the work completed, feedback from stakeholders, and any items that need to be adjusted.
+   - **Completed Product Backlog Items**: Items that were completed during the sprint and can potentially be shipped or deployed.
+   - **Release Notes** (optional): If the product is being released after the sprint, this includes updates and changes made during the sprint.
+
+### 6. **Done (Sprint Retrospective)**
+   **What happens**: 
+   - The **Sprint Retrospective** is a meeting held after the Sprint Review, where the team reflects on the sprint itself. The focus is on **process improvement**—what worked well, what didn’t, and how things can be improved in future sprints.
+   - The team agrees on actions to take in the next sprint to improve their processes and work together more effectively.
+   
+   **Documentation**: 
+   - **Sprint Retrospective Notes**: Actionable items from the retrospective that are intended to improve the team's workflow.
+   - **Action Items**: Specific improvements or adjustments the team will make in the next sprint.
+
+### Overall SCRUM Documentation Considerations:
+- **Product Backlog**: The entire product roadmap, which evolves throughout the project.
+- **Sprint Backlog**: More focused on a particular sprint's work.
+- **Burndown Chart**: Tracks work completion over time.
+- **Sprint Review and Retrospective Notes**: Helps the team stay aligned and continuously improve their processes.
+- **Definition of Done (DoD)**: The criteria that must be met for work to be considered "done," typically agreed upon by the team during the retrospective.
+
+SCRUM emphasizes continuous inspection and adaptation, so while documentation exists, it is generally minimal and lightweight compared to traditional project management approaches. The focus is on delivering working software and having efficient communication rather than producing heavy documentation.
+
+
+## SCRUM Master
+
+The **Scrum Master** is a key role in the Scrum framework, responsible for ensuring that the Scrum process is being followed and facilitating the smooth functioning of the Scrum team. While the Scrum Master does not have authority over the team members, their primary focus is on enabling the team to be as effective as possible in delivering the product increment.
+
+### Roles and Responsibilities of a Scrum Master:
+
+#### 1. **Facilitator of Scrum Events:**
+   - The Scrum Master is responsible for ensuring that Scrum ceremonies (also called events) are effectively planned, organized, and conducted. These include:
+     - **Sprint Planning**: Helping the team define the goals and scope for the sprint.
+     - **Daily Standups (Daily Scrum)**: Ensuring these daily meetings are brief, focused, and effective.
+     - **Sprint Review**: Ensuring the team demonstrates the work done during the sprint to stakeholders and gathers feedback.
+     - **Sprint Retrospective**: Facilitating discussions on what went well, what could be improved, and how the team can improve in the next sprint.
+
+#### 2. **Removing Impediments:**
+   - One of the key responsibilities of the Scrum Master is to identify and remove any obstacles (also called impediments) that are preventing the team from achieving their goals. These can be external (e.g., organizational barriers, technical issues) or internal (e.g., team dynamics or communication problems).
+
+#### 3. **Shielding the Team:**
+   - The Scrum Master protects the team from external disruptions, distractions, and interferences. For example, they might shield the team from unnecessary meetings or requests from stakeholders that can disrupt the team's focus.
+
+#### 4. **Coach and Mentor:**
+   - The Scrum Master helps the team understand and apply Scrum principles, practices, and values. They are responsible for fostering a culture of continuous improvement, helping team members improve their skills, and guiding them in becoming more self-organizing.
+   - The Scrum Master might also help the Product Owner understand the Scrum process and how to work effectively with the team.
+
+#### 5. **Promoting Collaboration and Communication:**
+   - Scrum Masters encourage open communication and collaboration among team members and between the team and stakeholders. This includes fostering a positive, transparent, and respectful environment for both technical and non-technical discussions.
+   - They also help facilitate better relationships between the Development Team, Product Owner, and other stakeholders.
+
+#### 6. **Ensuring Adherence to Scrum Practices:**
+   - The Scrum Master helps ensure that Scrum practices are being followed properly. While they don’t directly manage the team, they provide guidance to the team on how to implement Scrum principles and how to maintain focus on the team’s goals.
+
+#### 7. **Continuous Improvement (Kaizen):**
+   - Scrum Masters facilitate continuous improvement by encouraging team members to reflect and learn from each sprint. This is primarily done in Sprint Retrospectives but should also be part of the team's daily mindset. They encourage experimentation and help the team adopt practices that improve performance and delivery.
+
+#### 8. **Helping the Product Owner:**
+   - The Scrum Master assists the Product Owner in managing the product backlog by ensuring that it is well-formed, prioritized, and understood by the team. They help the Product Owner understand how to manage stakeholders' expectations and assist with refining the backlog when necessary.
+
+#### 9. **Building Self-Organizing Teams:**
+   - The Scrum Master works to build a self-organizing and high-performing team. This means fostering a culture where team members collaborate, solve problems together, and take responsibility for their work without micromanagement.
+
+#### 10. **Promoting Transparency:**
+   - Transparency is one of the pillars of Scrum. The Scrum Master helps ensure that the team’s progress, work, and obstacles are visible to everyone involved. They use tools like Scrum boards, burn-down charts, and sprint reviews to facilitate this transparency.
+
+#### 11. **Facilitating Cross-Functional Team Collaboration:**
+   - A Scrum team is cross-functional, meaning the team members possess various skills that allow them to complete work without relying heavily on other teams or departments. The Scrum Master encourages collaboration and coordination within the team and ensures that team members have the resources and support they need to perform their tasks.
+
+---
+
+### Key Skills and Traits of a Scrum Master:
+- **Strong Communication Skills**: To facilitate discussions, manage conflicts, and encourage collaboration.
+- **Problem-Solving Abilities**: To identify and remove obstacles and provide solutions.
+- **Servant Leadership**: They act as a servant leader, helping the team succeed without directly controlling or managing them.
+- **Knowledge of Scrum and Agile**: A deep understanding of Scrum principles and the ability to coach others.
+- **Patience and Empathy**: Scrum Masters should be patient and empathetic, understanding team members’ concerns and working to resolve issues.
+
+In summary, the Scrum Master’s role is to serve the team and the organization by facilitating the Scrum process, removing impediments, and helping the team improve and be more productive. They do not manage or control the team, but rather act as a coach and facilitator, ensuring that the Scrum framework is being used effectively.
