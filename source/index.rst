@@ -13,7 +13,7 @@ Welcome to CSA JAVA!
    Home <../home.md>
    Resources <./Resources/Resources.md>
    AP Resources <./Resources/AP_Resources.md>
-   
+   SCRUM <./Resources/SCRUM.md>
 
 .. toctree:: 
    :maxdepth: 2
