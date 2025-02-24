@@ -28,15 +28,6 @@ String number = list.get(1);  // Accesses the element at index 1 (i.e., "one")
 System.out.println(number);   // Output: one
 ```
 
-**Important Methods of ArrayList**:
-- `add(E element)`: Adds an element to the list.
-- `get(int index)`: Retrieves an element at a specified index.
-- `set(int index, E element)`: Replaces the element at the specified index.
-- `remove(int index)`: Removes the element at the specified index.
-- `size()`: Returns the number of elements in the list.
-- `contains(Object o)`: Checks if the list contains a specific element.
-- `clear()`: Removes all elements from the list.
-
 **Example of Accessing, Modifying, and Removing**:
 
 ```java
