@@ -271,17 +271,149 @@
 <h1>Unit 7 ArrayList<a class="headerlink" href="#unit-7-arraylist" title="Link to this heading">¶</a></h1>
 <section id="introduction-to-arraylist">
 <h2>7.1 Introduction to ArrayList<a class="headerlink" href="#introduction-to-arraylist" title="Link to this heading">¶</a></h2>
-<p>In Java, an ArrayList is a class that provides an implementation of a dynamic array-like data structure. It is part of the java.util package and is based on the concept of an array, but with additional functionality and flexibility.</p>
-<p>Here are some key differences between ArrayLists and arrays:</p>
+<p>An <code class="docutils literal notranslate"><span class="pre">ArrayList</span></code> in Java is a dynamic array-like structure that can store elements of any generic type. Unlike arrays, which have a fixed size, ArrayList can grow or shrink in size as elements are added or removed. It is commonly used when you need a list that allows for dynamic resizing.  It is part of the java.util package and is based on the concept of an array, but with additional functionality and flexibility.</p>
+<p><strong>Syntax to Create an ArrayList</strong>:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="c1">// `Type` is the type of objects the list will hold.</span>
+<span class="c1">// Example, `Int`, `String`, `boolean`, &#39;double&#39;</span>
+</pre></div>
+</div>
+<p><strong>Example</strong>:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;one&quot;</span><span class="p">);</span>
+<span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;two&quot;</span><span class="p">);</span>
+<span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;three&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Accessing Elements in an ArrayList</strong>:
+You can access elements of an <code class="docutils literal notranslate"><span class="pre">ArrayList</span></code> using the <code class="docutils literal notranslate"><span class="pre">get()</span></code> method, which takes the index of the element you want to retrieve.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">list</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w">  </span><span class="c1">// Accesses the element at index 1 (i.e., &quot;one&quot;)</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">number</span><span class="p">);</span><span class="w">   </span><span class="c1">// Output: one</span>
+</pre></div>
+</div>
+<p><strong>Important Methods of ArrayList</strong>:</p>
 <ul class="simple">
-<li><p><strong>Dynamic Size</strong>: Arrays have a fixed size, which means you need to specify the size during initialization and cannot change it later. In contrast, ArrayLists can grow or shrink dynamically as elements are added or removed. The size of an ArrayList is automatically adjusted to accommodate the number of elements it contains.</p></li>
-<li><p><strong>Automatic Resizing</strong>: When an ArrayList reaches its capacity, it automatically increases its size by allocating a new underlying array and copying the existing elements into it. This resizing is handled internally by the ArrayList class. In contrast, arrays require manual resizing and element shifting if you want to change their size.</p></li>
-<li><p><strong>Flexibility in Element Types</strong>: Arrays can hold elements of any type, including primitive types and objects. ArrayLists, on the other hand, are limited to holding objects. To store primitive types in an ArrayList, you must use their corresponding wrapper classes (e.g., <code class="docutils literal notranslate"><span class="pre">Integer</span></code> for <code class="docutils literal notranslate"><span class="pre">int</span></code>).</p></li>
-<li><p><strong>Convenience Methods</strong>: ArrayLists provide a set of convenient methods that simplify common operations on arrays, such as adding elements (<code class="docutils literal notranslate"><span class="pre">add</span></code>), accessing elements by index (<code class="docutils literal notranslate"><span class="pre">get</span></code>), modifying elements (<code class="docutils literal notranslate"><span class="pre">set</span></code>), and removing elements (<code class="docutils literal notranslate"><span class="pre">remove</span></code>). Arrays require manual element manipulation using index-based access.</p></li>
-<li><p><strong>Iterable Interface</strong>: ArrayLists implement the Iterable interface, which enables them to be easily traversed using <em>enhanced</em> <code class="docutils literal notranslate"><span class="pre">for</span></code> loops or iterators. Arrays do not implement this interface, so iterating over them requires manual index handling.</p></li>
-<li><p><strong>Additional Functionality</strong>: ArrayLists offer many additional methods for searching, sorting, and manipulating the elements. For example, ArrayLists provide methods like <code class="docutils literal notranslate"><span class="pre">contains</span></code>, <code class="docutils literal notranslate"><span class="pre">indexOf</span></code>, <code class="docutils literal notranslate"><span class="pre">sort</span></code>, <code class="docutils literal notranslate"><span class="pre">subList</span></code>, and more, which are not available directly for arrays.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">add(E</span> <span class="pre">element)</span></code>: Adds an element to the list.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">get(int</span> <span class="pre">index)</span></code>: Retrieves an element at a specified index.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">set(int</span> <span class="pre">index,</span> <span class="pre">E</span> <span class="pre">element)</span></code>: Replaces the element at the specified index.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">remove(int</span> <span class="pre">index)</span></code>: Removes the element at the specified index.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size()</span></code>: Returns the number of elements in the list.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">contains(Object</span> <span class="pre">o)</span></code>: Checks if the list contains a specific element.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clear()</span></code>: Removes all elements from the list.</p></li>
 </ul>
-<p>Overall, ArrayLists provide a more flexible and convenient alternative to arrays when you need a dynamic-sized collection of objects in Java. They handle resizing and provide numerous utility methods, making it easier to work with collections of elements.</p>
+<p><strong>Example of Accessing, Modifying, and Removing</strong>:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;one&quot;</span><span class="p">);</span>
+<span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;two&quot;</span><span class="p">);</span>
+<span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;three&quot;</span><span class="p">);</span>
+
+<span class="c1">// Access an element</span>
+<span class="n">String</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">list</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w">  </span><span class="c1">// one</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">number</span><span class="p">);</span>
+
+<span class="c1">// Modify an element</span>
+<span class="n">list</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;four&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// Replaces &quot;one&quot; with &quot;four&quot;</span>
+
+<span class="c1">// Remove an element</span>
+<span class="n">list</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span><span class="w">  </span><span class="c1">// Removes &quot;three&quot;</span>
+</pre></div>
+</div>
+<p>Key Features of an ArrayList:</p>
+<ul class="simple">
+<li><p><strong>Dynamic Sizing</strong>: The size of an ArrayList can change during runtime.</p></li>
+<li><p><strong>Indexed Access</strong>: Elements can be accessed by their index.</p></li>
+<li><p><strong>Allows Duplicates</strong>: An ArrayList can store duplicate elements unlike sets.</p></li>
+<li><p><strong>Ordering</strong>: Elements in an ArrayList are ordered, meaning they maintain the order in which they were added.</p></li>
+<li><p><strong>Null Elements</strong>: An ArrayList can store <code class="docutils literal notranslate"><span class="pre">null</span></code> values.</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>NOTE:</strong> Both <code class="docutils literal notranslate"><span class="pre">arrays</span></code> and <code class="docutils literal notranslate"><span class="pre">ArrayList</span></code> are used to store multiple values. However, they differ in their structure, flexibility, and usage. Below is a comparison highlighting their similarities and differences.</p>
+<p><em><strong>Similarities</strong></em></p>
+<ul class="simple">
+<li><p><strong>Store Multiple Elements:</strong> Both arrays and <code class="docutils literal notranslate"><span class="pre">ArrayList</span></code> can hold multiple values of the same type.</p></li>
+<li><p><strong>Indexed Access:</strong> Both allow access to elements via indices, starting from 0.</p></li>
+<li><p><strong>Ordered Collections:</strong> Both maintain the order of insertion for the elements.</p></li>
+</ul>
+<p><em><strong>Differences</strong></em></p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Feature</p></th>
+<th class="head"><p>Array</p></th>
+<th class="head"><p>ArrayList</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Size</strong></p></td>
+<td><p>Fixed size after initialization.</p></td>
+<td><p>Dynamic size; can grow/shrink.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Type</strong></p></td>
+<td><p>Can store elements of any type (primitive or object).</p></td>
+<td><p>Can only store objects (not primitives). Requires autoboxing for primitive types.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Memory Allocation</strong></p></td>
+<td><p>Memory is allocated at the time of initialization and cannot be resized.</p></td>
+<td><p>Memory is dynamically allocated as elements are added.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Performance</strong></p></td>
+<td><p>Faster due to fixed size and direct memory access.</p></td>
+<td><p>Slower due to resizing and additional overhead.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Resizing</strong></p></td>
+<td><p>Cannot be resized. If the array is full, a new one must be created.</p></td>
+<td><p>Automatically resizes when elements are added beyond its capacity.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Methods</strong></p></td>
+<td><p>Does not have built-in methods for manipulation, only basic operations like length.</p></td>
+<td><p>Provides methods like <code class="docutils literal notranslate"><span class="pre">add()</span></code>, <code class="docutils literal notranslate"><span class="pre">remove()</span></code>, <code class="docutils literal notranslate"><span class="pre">contains()</span></code>, <code class="docutils literal notranslate"><span class="pre">size()</span></code>, etc.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Type Safety</strong></p></td>
+<td><p>Strong type checking, especially with primitive types.</p></td>
+<td><p>Type safety is provided through generics.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Null Elements</strong></p></td>
+<td><p>Can hold <code class="docutils literal notranslate"><span class="pre">null</span></code> (only for object arrays).</p></td>
+<td><p>Can hold <code class="docutils literal notranslate"><span class="pre">null</span></code> elements.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Memory Efficiency</strong></p></td>
+<td><p>More memory efficient for large datasets (due to no overhead of resizing).</p></td>
+<td><p>Has additional overhead for resizing and managing the collection.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Performance in Insertions/Removals</strong></p></td>
+<td><p>Slow insertions/removals as elements need to be shifted.</p></td>
+<td><p>Efficient insertions/removals, especially at the end of the list.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Thread Safety</strong></p></td>
+<td><p>Arrays are not thread-safe by default.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ArrayList</span></code> is not thread-safe, but <code class="docutils literal notranslate"><span class="pre">Collections.synchronizedList</span></code> can make it so.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Key Points</strong></p>
+<ul class="simple">
+<li><p><strong>Array:</strong> Ideal for a fixed number of elements, especially when performance and memory efficiency are crucial.</p></li>
+<li><p><strong>ArrayList:</strong> Useful when the number of elements may change over time or when you need to frequently perform operations like adding, removing, or checking for the presence of an element.</p></li>
+</ul>
+<p><em><strong>When to Use Each</strong></em></p>
+<ul class="simple">
+<li><p><strong>Use an Array:</strong></p>
+<ul>
+<li><p>When the size of the collection is known and does not change.</p></li>
+<li><p>When performance and memory usage are critical.</p></li>
+<li><p>When working with primitive data types (int, float, etc.).</p></li>
+</ul>
+</li>
+<li><p><strong>Use an ArrayList:</strong></p>
+<ul>
+<li><p>When the collection size may vary.</p></li>
+<li><p>When you need dynamic resizing or additional methods for list manipulation.</p></li>
+<li><p>When you need a more flexible and easy-to-use collection.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
 <p>In this example, we import the ArrayList class from the java.util package.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
 
@@ -333,16 +465,6 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Here are some key differences between ArrayList and arrays:</p>
-<ul class="simple">
-<li><p><strong>Dynamic Size</strong>: Unlike arrays, ArrayLists can grow or shrink dynamically as elements are added or removed. You don’t need to specify the size in advance.</p></li>
-<li><p><strong>Automatic Resizing</strong>: When an ArrayList reaches its capacity, it automatically increases its size to accommodate additional elements. This resizing is handled internally by the ArrayList class.</p></li>
-<li><p><strong>Flexible Data Types</strong>: ArrayLists can store objects of any type. In the example, we use an ArrayList of Integer objects, but you can use any valid Java class or even create your own custom objects.</p></li>
-<li><p><strong>Convenience Methods</strong>: ArrayLists provide a set of convenient methods, such as <code class="docutils literal notranslate"><span class="pre">add</span></code>, <code class="docutils literal notranslate"><span class="pre">get</span></code>, <code class="docutils literal notranslate"><span class="pre">set</span></code>, and <code class="docutils literal notranslate"><span class="pre">remove</span></code>, to manipulate elements without having to manually shift elements as you would in an array.</p></li>
-<li><p><strong>Iterable Interface</strong>: ArrayLists implement the Iterable interface, allowing you to easily iterate over the elements using a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop, as shown in the example.</p></li>
-<li><p><strong>Additional Functionality</strong>: ArrayLists offer many other methods for searching, sorting, and manipulating the elements, such as <code class="docutils literal notranslate"><span class="pre">contains</span></code>, <code class="docutils literal notranslate"><span class="pre">sort</span></code>, <code class="docutils literal notranslate"><span class="pre">indexOf</span></code>, <code class="docutils literal notranslate"><span class="pre">subList</span></code>, and more.</p></li>
-</ul>
-<p>These features make ArrayLists a versatile data structure that simplifies working with collections of objects in Java.</p>
 </section>
 <section id="arraylist-methods">
 <h2>7.2 ArrayList Methods<a class="headerlink" href="#arraylist-methods" title="Link to this heading">¶</a></h2>
