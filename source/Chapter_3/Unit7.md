@@ -314,6 +314,8 @@ These are just a few examples of the methods available in the ArrayList class. T
 
 ### Activity 3.7.1 - List Algorithms
 
+<details><summary> Click Here </summary>
+
 **This assignment was intentionally placed in 3.7.2**
 
 
@@ -374,6 +376,11 @@ System.out.println("MoveRight: " + words);
 //Output of Method Call:
 MoveRight: [like, why, isn't, like, a, koala, like, considered, a, like, bear, ?]
 ```
+
+</details>
+
+---
+
 
 ### Activity 3.7.2 - Auto List
 
