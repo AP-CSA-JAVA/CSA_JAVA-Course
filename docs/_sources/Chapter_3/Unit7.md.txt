@@ -158,37 +158,86 @@ public class Main {
 
 The definition of an ArrayList method refers to the signature, parameters, and behavior of a specific method provided by the ArrayList class in Java. It describes how the method can be used, what arguments it accepts (if any), and what it returns (if anything).
 
-The general format of a method definition in Java is as follows:
+Below is an example of how the components of an ArrayList method could be structured in Java. We will use an ArrayList of `Student` objects for this example.
+
+
 
 ```java
-accessModifier returnType methodName(parameterList) {
-    // Method body
+import java.util.ArrayList;
+
+// Defining the Student class
+class Student {
+    String name;
+    int studentID;
+    double grade;
+
+    // Creating the constructor 
+    public Student(String name, int studentID, double grade) {
+        this.name = name;
+        this.studentID = studentID;
+        this.grade = grade;
+    }
+
+    // Method to display student info
+    public viod displayInfo() {
+        System.out.println("ID: " + studentID + ", Name: " + name + ", Grade: " + grade);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Creating an ArrayList to store Student info
+        ArrayList<Student> students = new ArrayList<>();
+
+        // Adding new students to the ArrayList
+        students.add(new Student("John Doe", 101, 85.5));
+        students.add(new Student("Jane Smith", 102, 92.3));
+
+        // Accessing the first student in the ArrayList and display their info
+        students.get(0).displayInfo();
+    }
 }
 ```
 
-Here's an example of an ArrayList method definition:
+**Explanation of ArrayList Components**:
+
+1. **accessModifier**: `public`
+   - The `accessModifier` defines the visibility of the class or method. In this example:
+     - The `Student` class is declared as `public`, meaning it can be accessed by any other class.
+     - The `displayInfo()` method inside the `Student` class is also `public`, meaning it can be accessed by other classes (such as `Main`).
+
+2. **returnType**: `void` (for the `displayInfo()` method)
+   - The `returnType` specifies what type of value the method will return.
+   - In this example, the `displayInfo()` method has a `returnType` of `void`, meaning it does not return anything. It simply prints information to the console.
+
+3. **methodName**: `displayInfo`
+   - The `methodName` is the name of the method that performs some task.
+   - In this example, the method `displayInfo` prints the student’s ID, name, and grade.
+
+4. **parameterList**: `()` (empty for `displayInfo()`)
+   - The `parameterList` defines the parameters that the method takes as input. It is defined in the parentheses after the method name.
+   - In this example, the `displayInfo()` method does not take any parameters, so the `parameterList` is empty (`()`).
+
+**Adding Elements to an ArrayList**:
 
 ```java
-public boolean contains(Object element) {
-    // Method body
-}
+students.add(new Student("John Doe", 101, 85.5));
 ```
 
-Let's break down the components of this ArrayList method definition:
+- **accessModifier**: `public` (for the method `add()`)
+  - The `add()` method is public, which means it can be called from other classes (like `Main` in this case).
 
-- **accessModifier**: Specifies the visibility of the method. In this case, `public` indicates that the method can be accessed from any class.
+- **returnType**: `boolean` (for the `add()` method)
+  - The `add()` method in `ArrayList` returns a boolean value, indicating whether the student was successfully added to the list.
 
-- **returnType**: Specifies the type of value the method returns, if any. In this case, boolean indicates that the method returns a `boolean` value (`true` or `false`).
+- **methodName**: `add`
+  - The method name is `add`, which adds an eelment (in this case, a new `Student` object) to the ArrayList.
 
-- **methodName**: Specifies the name of the method. In this case, the method is named `contains`.
+- **parameterList**: `(Student)` (the `add()` method accepts a `Student` object as a parameter)
+  - The method takes one parameter, which is an instance of the `Student` class.
 
-- **parameterList**: Specifies the parameters the method accepts, if any. In this case, the method accepts a single parameter of type *Object* named `element`.
 
-- **Method body**: Contains the actual code that is executed when the method is called. It defines the behavior of the method.
-
-For example, the `contains` method in ArrayList returns `true` if the specified element is found in the ArrayList, and `false` otherwise.
-
-Note that different methods in the ArrayList class have different definitions, with variations in the return type, method name, parameter types, and behaviors based on the specific functionality they provide.
+**Note** Different methods in the ArrayList class have different definitions, with variations in the return type, method name, parameter types, and behaviors based on the specific functionality they provide.
 
 Here are some commonly used methods of the ArrayList class in Java:
 
@@ -328,6 +377,8 @@ MoveRight: [like, why, isn't, like, a, koala, like, considered, a, like, bear, ?
 
 ### Activity 3.7.2 - Auto List
 
+<details><summary>Click Here </summary>
+	
 **Coding Exercise: Classric Car Showroom List**
 A dealer wants to create a list of classic cars in the showroom. Using the existing `Car` class in this exercise. 
 - Create a __*static*__ ArrayList called `showroom` that adds a `Car` to the showroom whenever a new Car is created.
@@ -426,6 +477,161 @@ public class Car
     }
 }
 ```
+</details>
+
+### Project 3.7.2 Student Management System
+
+<details><summary> Click Here </summary>
+
+**Project**: Student Management System
+
+**Objective**:
+Create a console-based program to manage student data, such as names, grades, and student IDs. The program will store this data in an ArrayList of custom `Student` objects.  
+Appropriately comment throughout your program and provide test cases to verify that your program works as intended.
+
+**Tasks**:
+1. **Create a Student class** with attributes:
+   - `String name`
+   - `int studentID`
+   - `double grade`
+
+   Include methods to:
+   - Get and set values for each attribute.
+   - Display the student's details.
+
+2. **Create a StudentManager class** with an ArrayList to store the `Student` objects.
+   - Allow the user to:
+     - Add a new student to the ArrayList.
+     - View all students in the list.
+     - Find a student by their ID.
+     - Remove a student by their ID.
+     - Update a student’s grade.
+
+3. **Additional features**:
+   - Sort students by grade or name.
+   - Search for students based on different criteria (e.g., by grade, name, or ID).
+   - Implement input validation and handle exceptions for edge cases (e.g., entering invalid data).
+
+**Example Features**:
+- **Add Student**: Input name, ID, and grade, and add the student to the list.
+- **Display All Students**: Print out all students’ information.
+- **Update Grade**: Update the grade of an existing student by their ID.
+- **Remove Student**: Remove a student based on their ID.
+
+
+**Example**:
+```
+Student Management System
+Choose one of the following: 
+The user can choose 1. **Add a Student**.
+The user can choose 2. **Display All Students**.
+The user can choose 3. **Find a Student by ID**.
+The user can choose 4. **Remove a Student by ID**.
+The user can choose 5. **Update Student Grade**.
+The user can choose 6. **Exit**.
+```
+
+
+**Example User Input & Output**:
+```java
+// 1. Add Student
+
+Student Management System
+Choose one of the following: 
+1. Add Student
+2. Display All Students
+3. Find Student by ID
+4. Remove Student by ID
+5. Update Student Grade
+6. Exit
+
+Choose an option: 1
+Enter student name: John Doe
+Enter student ID: 101
+Enter student grade: 85.5
+
+
+//2. Display All Students/
+
+Student Management System
+Choose one of the following: 
+1. Add Student
+2. Display All Students
+3. Find Student by ID
+4. Remove Student by ID
+5. Update Student Grade
+6. Exit
+
+Choose an option: 2
+ID: 101, Name: John Doe, Grade: 85.5
+
+
+//3. Find Student by ID
+
+Student Management System
+Choose one of the following: 
+1. Add Student
+2. Display All Students
+3. Find Student by ID
+4. Remove Student by ID
+5. Update Student Grade
+6. Exit
+
+Choose an option: 3
+Enter student ID to find: 101
+ID: 101, Name: John Doe, Grade: 85.5
+
+
+//4. Remove Student by ID
+
+Student Management System
+Choose one of the following: 
+1. Add Student
+2. Display All Students
+3. Find Student by ID
+4. Remove Student by ID
+5. Update Student Grade
+6. Exit
+
+Choose an option: 4
+Enter student ID to remove: 101
+
+
+//5. Update Student Grade
+
+Student Management System
+Choose one of the following: 
+1. Add Student
+2. Display All Students
+3. Find Student by ID
+4. Remove Student by ID
+5. Update Student Grade
+6. Exit
+
+Choose an option: 5
+Enter student ID to update grade: 101
+Student not found.
+
+
+//6. Exit
+
+Student Management System
+Choose one of the following: 
+1. Add Student
+2. Display All Students
+3. Find Student by ID
+4. Remove Student by ID
+5. Update Student Grade
+6. Exit
+
+Choose an option: 6
+```
+
+</details>
+
+---
+
+
 ## 7.3 Traversing ArrayLists
 
 In this example, we create an ArrayList called myList and add three elements to it. We then traverse the ArrayList using both a enhanced for loop and a for loop.

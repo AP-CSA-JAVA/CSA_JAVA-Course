@@ -459,28 +459,101 @@ You can access elements of an <code class="docutils literal notranslate"><span c
 <section id="arraylist-methods">
 <h2>7.2 ArrayList Methods<a class="headerlink" href="#arraylist-methods" title="Link to this heading">¶</a></h2>
 <p>The definition of an ArrayList method refers to the signature, parameters, and behavior of a specific method provided by the ArrayList class in Java. It describes how the method can be used, what arguments it accepts (if any), and what it returns (if anything).</p>
-<p>The general format of a method definition in Java is as follows:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">accessModifier</span><span class="w"> </span><span class="n">returnType</span><span class="w"> </span><span class="nf">methodName</span><span class="p">(</span><span class="n">parameterList</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Method body</span>
+<p>Below is an example of how the components of an ArrayList method could be structured in Java. We will use an ArrayList of <code class="docutils literal notranslate"><span class="pre">Student</span></code> objects for this example.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+
+<span class="c1">// Defining the Student class</span>
+<span class="kd">class</span> <span class="nc">Student</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">studentID</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">grade</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Creating the constructor </span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Student</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">studentID</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">grade</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">studentID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">studentID</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">grade</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Method to display student info</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">viod</span><span class="w"> </span><span class="nf">displayInfo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;ID: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">studentID</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, Name: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, Grade: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">grade</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Creating an ArrayList to store Student info</span>
+<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Student</span><span class="o">&gt;</span><span class="w"> </span><span class="n">students</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// Adding new students to the ArrayList</span>
+<span class="w">        </span><span class="n">students</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Student</span><span class="p">(</span><span class="s">&quot;John Doe&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mf">85.5</span><span class="p">));</span>
+<span class="w">        </span><span class="n">students</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Student</span><span class="p">(</span><span class="s">&quot;Jane Smith&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">102</span><span class="p">,</span><span class="w"> </span><span class="mf">92.3</span><span class="p">));</span>
+
+<span class="w">        </span><span class="c1">// Accessing the first student in the ArrayList and display their info</span>
+<span class="w">        </span><span class="n">students</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="na">displayInfo</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Here’s an example of an ArrayList method definition:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">contains</span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">element</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Method body</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p>Let’s break down the components of this ArrayList method definition:</p>
+<p><strong>Explanation of ArrayList Components</strong>:</p>
+<ol class="arabic simple">
+<li><p><strong>accessModifier</strong>: <code class="docutils literal notranslate"><span class="pre">public</span></code></p>
 <ul class="simple">
-<li><p><strong>accessModifier</strong>: Specifies the visibility of the method. In this case, <code class="docutils literal notranslate"><span class="pre">public</span></code> indicates that the method can be accessed from any class.</p></li>
-<li><p><strong>returnType</strong>: Specifies the type of value the method returns, if any. In this case, boolean indicates that the method returns a <code class="docutils literal notranslate"><span class="pre">boolean</span></code> value (<code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>).</p></li>
-<li><p><strong>methodName</strong>: Specifies the name of the method. In this case, the method is named <code class="docutils literal notranslate"><span class="pre">contains</span></code>.</p></li>
-<li><p><strong>parameterList</strong>: Specifies the parameters the method accepts, if any. In this case, the method accepts a single parameter of type <em>Object</em> named <code class="docutils literal notranslate"><span class="pre">element</span></code>.</p></li>
-<li><p><strong>Method body</strong>: Contains the actual code that is executed when the method is called. It defines the behavior of the method.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">accessModifier</span></code> defines the visibility of the class or method. In this example:</p>
+<ul>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">Student</span></code> class is declared as <code class="docutils literal notranslate"><span class="pre">public</span></code>, meaning it can be accessed by any other class.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">displayInfo()</span></code> method inside the <code class="docutils literal notranslate"><span class="pre">Student</span></code> class is also <code class="docutils literal notranslate"><span class="pre">public</span></code>, meaning it can be accessed by other classes (such as <code class="docutils literal notranslate"><span class="pre">Main</span></code>).</p></li>
 </ul>
-<p>For example, the <code class="docutils literal notranslate"><span class="pre">contains</span></code> method in ArrayList returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the specified element is found in the ArrayList, and <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise.</p>
-<p>Note that different methods in the ArrayList class have different definitions, with variations in the return type, method name, parameter types, and behaviors based on the specific functionality they provide.</p>
+</li>
+</ul>
+</li>
+<li><p><strong>returnType</strong>: <code class="docutils literal notranslate"><span class="pre">void</span></code> (for the <code class="docutils literal notranslate"><span class="pre">displayInfo()</span></code> method)</p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">returnType</span></code> specifies what type of value the method will return.</p></li>
+<li><p>In this example, the <code class="docutils literal notranslate"><span class="pre">displayInfo()</span></code> method has a <code class="docutils literal notranslate"><span class="pre">returnType</span></code> of <code class="docutils literal notranslate"><span class="pre">void</span></code>, meaning it does not return anything. It simply prints information to the console.</p></li>
+</ul>
+</li>
+<li><p><strong>methodName</strong>: <code class="docutils literal notranslate"><span class="pre">displayInfo</span></code></p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">methodName</span></code> is the name of the method that performs some task.</p></li>
+<li><p>In this example, the method <code class="docutils literal notranslate"><span class="pre">displayInfo</span></code> prints the student’s ID, name, and grade.</p></li>
+</ul>
+</li>
+<li><p><strong>parameterList</strong>: <code class="docutils literal notranslate"><span class="pre">()</span></code> (empty for <code class="docutils literal notranslate"><span class="pre">displayInfo()</span></code>)</p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">parameterList</span></code> defines the parameters that the method takes as input. It is defined in the parentheses after the method name.</p></li>
+<li><p>In this example, the <code class="docutils literal notranslate"><span class="pre">displayInfo()</span></code> method does not take any parameters, so the <code class="docutils literal notranslate"><span class="pre">parameterList</span></code> is empty (<code class="docutils literal notranslate"><span class="pre">()</span></code>).</p></li>
+</ul>
+</li>
+</ol>
+<p><strong>Adding Elements to an ArrayList</strong>:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">students</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Student</span><span class="p">(</span><span class="s">&quot;John Doe&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mf">85.5</span><span class="p">));</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>accessModifier</strong>: <code class="docutils literal notranslate"><span class="pre">public</span></code> (for the method <code class="docutils literal notranslate"><span class="pre">add()</span></code>)</p>
+<ul>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">add()</span></code> method is public, which means it can be called from other classes (like <code class="docutils literal notranslate"><span class="pre">Main</span></code> in this case).</p></li>
+</ul>
+</li>
+<li><p><strong>returnType</strong>: <code class="docutils literal notranslate"><span class="pre">boolean</span></code> (for the <code class="docutils literal notranslate"><span class="pre">add()</span></code> method)</p>
+<ul>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">add()</span></code> method in <code class="docutils literal notranslate"><span class="pre">ArrayList</span></code> returns a boolean value, indicating whether the student was successfully added to the list.</p></li>
+</ul>
+</li>
+<li><p><strong>methodName</strong>: <code class="docutils literal notranslate"><span class="pre">add</span></code></p>
+<ul>
+<li><p>The method name is <code class="docutils literal notranslate"><span class="pre">add</span></code>, which adds an eelment (in this case, a new <code class="docutils literal notranslate"><span class="pre">Student</span></code> object) to the ArrayList.</p></li>
+</ul>
+</li>
+<li><p><strong>parameterList</strong>: <code class="docutils literal notranslate"><span class="pre">(Student)</span></code> (the <code class="docutils literal notranslate"><span class="pre">add()</span></code> method accepts a <code class="docutils literal notranslate"><span class="pre">Student</span></code> object as a parameter)</p>
+<ul>
+<li><p>The method takes one parameter, which is an instance of the <code class="docutils literal notranslate"><span class="pre">Student</span></code> class.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Note</strong> Different methods in the ArrayList class have different definitions, with variations in the return type, method name, parameter types, and behaviors based on the specific functionality they provide.</p>
 <p>Here are some commonly used methods of the ArrayList class in Java:</p>
 <ol class="arabic simple">
 <li><p><strong>add(element)</strong>: Adds the specified element to the end of the ArrayList.</p></li>
@@ -618,6 +691,7 @@ You can access elements of an <code class="docutils literal notranslate"><span c
 </section>
 <section id="activity-3-7-2-auto-list">
 <h3>Activity 3.7.2 - Auto List<a class="headerlink" href="#activity-3-7-2-auto-list" title="Link to this heading">¶</a></h3>
+<details><summary>Click Here </summary>
 <p><strong>Coding Exercise: Classric Car Showroom List</strong>
 A dealer wants to create a list of classic cars in the showroom. Using the existing <code class="docutils literal notranslate"><span class="pre">Car</span></code> class in this exercise.</p>
 <ul class="simple">
@@ -717,8 +791,166 @@ Create the following static methods for the Student class:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
+</details>
+</section>
+<section id="project-3-7-2-student-management-system">
+<h3>Project 3.7.2 Student Management System<a class="headerlink" href="#project-3-7-2-student-management-system" title="Link to this heading">¶</a></h3>
+<details><summary> Click Here </summary>
+<p><strong>Project</strong>: Student Management System</p>
+<p><strong>Objective</strong>:
+Create a console-based program to manage student data, such as names, grades, and student IDs. The program will store this data in an ArrayList of custom <code class="docutils literal notranslate"><span class="pre">Student</span></code> objects.<br />
+Appropriately comment throughout your program and provide test cases to verify that your program works as intended.</p>
+<p><strong>Tasks</strong>:</p>
+<ol class="arabic">
+<li><p><strong>Create a Student class</strong> with attributes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">String</span> <span class="pre">name</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">studentID</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">double</span> <span class="pre">grade</span></code></p></li>
+</ul>
+<p>Include methods to:</p>
+<ul class="simple">
+<li><p>Get and set values for each attribute.</p></li>
+<li><p>Display the student’s details.</p></li>
+</ul>
+</li>
+<li><p><strong>Create a StudentManager class</strong> with an ArrayList to store the <code class="docutils literal notranslate"><span class="pre">Student</span></code> objects.</p>
+<ul class="simple">
+<li><p>Allow the user to:</p>
+<ul>
+<li><p>Add a new student to the ArrayList.</p></li>
+<li><p>View all students in the list.</p></li>
+<li><p>Find a student by their ID.</p></li>
+<li><p>Remove a student by their ID.</p></li>
+<li><p>Update a student’s grade.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Additional features</strong>:</p>
+<ul class="simple">
+<li><p>Sort students by grade or name.</p></li>
+<li><p>Search for students based on different criteria (e.g., by grade, name, or ID).</p></li>
+<li><p>Implement input validation and handle exceptions for edge cases (e.g., entering invalid data).</p></li>
+</ul>
+</li>
+</ol>
+<p><strong>Example Features</strong>:</p>
+<ul class="simple">
+<li><p><strong>Add Student</strong>: Input name, ID, and grade, and add the student to the list.</p></li>
+<li><p><strong>Display All Students</strong>: Print out all students’ information.</p></li>
+<li><p><strong>Update Grade</strong>: Update the grade of an existing student by their ID.</p></li>
+<li><p><strong>Remove Student</strong>: Remove a student based on their ID.</p></li>
+</ul>
+<p><strong>Example</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Student</span> <span class="n">Management</span> <span class="n">System</span>
+<span class="n">Choose</span> <span class="n">one</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span><span class="p">:</span> 
+<span class="n">The</span> <span class="n">user</span> <span class="n">can</span> <span class="n">choose</span> <span class="mf">1.</span> <span class="o">**</span><span class="n">Add</span> <span class="n">a</span> <span class="n">Student</span><span class="o">**.</span>
+<span class="n">The</span> <span class="n">user</span> <span class="n">can</span> <span class="n">choose</span> <span class="mf">2.</span> <span class="o">**</span><span class="n">Display</span> <span class="n">All</span> <span class="n">Students</span><span class="o">**.</span>
+<span class="n">The</span> <span class="n">user</span> <span class="n">can</span> <span class="n">choose</span> <span class="mf">3.</span> <span class="o">**</span><span class="n">Find</span> <span class="n">a</span> <span class="n">Student</span> <span class="n">by</span> <span class="n">ID</span><span class="o">**.</span>
+<span class="n">The</span> <span class="n">user</span> <span class="n">can</span> <span class="n">choose</span> <span class="mf">4.</span> <span class="o">**</span><span class="n">Remove</span> <span class="n">a</span> <span class="n">Student</span> <span class="n">by</span> <span class="n">ID</span><span class="o">**.</span>
+<span class="n">The</span> <span class="n">user</span> <span class="n">can</span> <span class="n">choose</span> <span class="mf">5.</span> <span class="o">**</span><span class="n">Update</span> <span class="n">Student</span> <span class="n">Grade</span><span class="o">**.</span>
+<span class="n">The</span> <span class="n">user</span> <span class="n">can</span> <span class="n">choose</span> <span class="mf">6.</span> <span class="o">**</span><span class="n">Exit</span><span class="o">**.</span>
+</pre></div>
+</div>
+<p><strong>Example User Input &amp; Output</strong>:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// 1. Add Student</span>
+
+<span class="n">Student</span><span class="w"> </span><span class="n">Management</span><span class="w"> </span><span class="n">System</span>
+<span class="n">Choose</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">following</span><span class="p">:</span><span class="w"> </span>
+<span class="mf">1.</span><span class="w"> </span><span class="n">Add</span><span class="w"> </span><span class="n">Student</span>
+<span class="mf">2.</span><span class="w"> </span><span class="n">Display</span><span class="w"> </span><span class="n">All</span><span class="w"> </span><span class="n">Students</span>
+<span class="mf">3.</span><span class="w"> </span><span class="n">Find</span><span class="w"> </span><span class="n">Student</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">ID</span>
+<span class="mf">4.</span><span class="w"> </span><span class="n">Remove</span><span class="w"> </span><span class="n">Student</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">ID</span>
+<span class="mf">5.</span><span class="w"> </span><span class="n">Update</span><span class="w"> </span><span class="n">Student</span><span class="w"> </span><span class="n">Grade</span>
+<span class="mf">6.</span><span class="w"> </span><span class="n">Exit</span>
+
+<span class="n">Choose</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">option</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">student</span><span class="w"> </span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="n">John</span><span class="w"> </span><span class="n">Doe</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">student</span><span class="w"> </span><span class="n">ID</span><span class="p">:</span><span class="w"> </span><span class="mi">101</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">student</span><span class="w"> </span><span class="n">grade</span><span class="p">:</span><span class="w"> </span><span class="mf">85.5</span>
+
+
+<span class="c1">//2. Display All Students/</span>
+
+<span class="n">Student</span><span class="w"> </span><span class="n">Management</span><span class="w"> </span><span class="n">System</span>
+<span class="n">Choose</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">following</span><span class="p">:</span><span class="w"> </span>
+<span class="mf">1.</span><span class="w"> </span><span class="n">Add</span><span class="w"> </span><span class="n">Student</span>
+<span class="mf">2.</span><span class="w"> </span><span class="n">Display</span><span class="w"> </span><span class="n">All</span><span class="w"> </span><span class="n">Students</span>
+<span class="mf">3.</span><span class="w"> </span><span class="n">Find</span><span class="w"> </span><span class="n">Student</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">ID</span>
+<span class="mf">4.</span><span class="w"> </span><span class="n">Remove</span><span class="w"> </span><span class="n">Student</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">ID</span>
+<span class="mf">5.</span><span class="w"> </span><span class="n">Update</span><span class="w"> </span><span class="n">Student</span><span class="w"> </span><span class="n">Grade</span>
+<span class="mf">6.</span><span class="w"> </span><span class="n">Exit</span>
+
+<span class="n">Choose</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">option</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span>
+<span class="nl">ID</span><span class="p">:</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="n">Name</span><span class="p">:</span><span class="w"> </span><span class="n">John</span><span class="w"> </span><span class="n">Doe</span><span class="p">,</span><span class="w"> </span><span class="n">Grade</span><span class="p">:</span><span class="w"> </span><span class="mf">85.5</span>
+
+
+<span class="c1">//3. Find Student by ID</span>
+
+<span class="n">Student</span><span class="w"> </span><span class="n">Management</span><span class="w"> </span><span class="n">System</span>
+<span class="n">Choose</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">following</span><span class="p">:</span><span class="w"> </span>
+<span class="mf">1.</span><span class="w"> </span><span class="n">Add</span><span class="w"> </span><span class="n">Student</span>
+<span class="mf">2.</span><span class="w"> </span><span class="n">Display</span><span class="w"> </span><span class="n">All</span><span class="w"> </span><span class="n">Students</span>
+<span class="mf">3.</span><span class="w"> </span><span class="n">Find</span><span class="w"> </span><span class="n">Student</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">ID</span>
+<span class="mf">4.</span><span class="w"> </span><span class="n">Remove</span><span class="w"> </span><span class="n">Student</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">ID</span>
+<span class="mf">5.</span><span class="w"> </span><span class="n">Update</span><span class="w"> </span><span class="n">Student</span><span class="w"> </span><span class="n">Grade</span>
+<span class="mf">6.</span><span class="w"> </span><span class="n">Exit</span>
+
+<span class="n">Choose</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">option</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">student</span><span class="w"> </span><span class="n">ID</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">find</span><span class="p">:</span><span class="w"> </span><span class="mi">101</span>
+<span class="nl">ID</span><span class="p">:</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="n">Name</span><span class="p">:</span><span class="w"> </span><span class="n">John</span><span class="w"> </span><span class="n">Doe</span><span class="p">,</span><span class="w"> </span><span class="n">Grade</span><span class="p">:</span><span class="w"> </span><span class="mf">85.5</span>
+
+
+<span class="c1">//4. Remove Student by ID</span>
+
+<span class="n">Student</span><span class="w"> </span><span class="n">Management</span><span class="w"> </span><span class="n">System</span>
+<span class="n">Choose</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">following</span><span class="p">:</span><span class="w"> </span>
+<span class="mf">1.</span><span class="w"> </span><span class="n">Add</span><span class="w"> </span><span class="n">Student</span>
+<span class="mf">2.</span><span class="w"> </span><span class="n">Display</span><span class="w"> </span><span class="n">All</span><span class="w"> </span><span class="n">Students</span>
+<span class="mf">3.</span><span class="w"> </span><span class="n">Find</span><span class="w"> </span><span class="n">Student</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">ID</span>
+<span class="mf">4.</span><span class="w"> </span><span class="n">Remove</span><span class="w"> </span><span class="n">Student</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">ID</span>
+<span class="mf">5.</span><span class="w"> </span><span class="n">Update</span><span class="w"> </span><span class="n">Student</span><span class="w"> </span><span class="n">Grade</span>
+<span class="mf">6.</span><span class="w"> </span><span class="n">Exit</span>
+
+<span class="n">Choose</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">option</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">student</span><span class="w"> </span><span class="n">ID</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">remove</span><span class="p">:</span><span class="w"> </span><span class="mi">101</span>
+
+
+<span class="c1">//5. Update Student Grade</span>
+
+<span class="n">Student</span><span class="w"> </span><span class="n">Management</span><span class="w"> </span><span class="n">System</span>
+<span class="n">Choose</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">following</span><span class="p">:</span><span class="w"> </span>
+<span class="mf">1.</span><span class="w"> </span><span class="n">Add</span><span class="w"> </span><span class="n">Student</span>
+<span class="mf">2.</span><span class="w"> </span><span class="n">Display</span><span class="w"> </span><span class="n">All</span><span class="w"> </span><span class="n">Students</span>
+<span class="mf">3.</span><span class="w"> </span><span class="n">Find</span><span class="w"> </span><span class="n">Student</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">ID</span>
+<span class="mf">4.</span><span class="w"> </span><span class="n">Remove</span><span class="w"> </span><span class="n">Student</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">ID</span>
+<span class="mf">5.</span><span class="w"> </span><span class="n">Update</span><span class="w"> </span><span class="n">Student</span><span class="w"> </span><span class="n">Grade</span>
+<span class="mf">6.</span><span class="w"> </span><span class="n">Exit</span>
+
+<span class="n">Choose</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">option</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">student</span><span class="w"> </span><span class="n">ID</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">update</span><span class="w"> </span><span class="n">grade</span><span class="p">:</span><span class="w"> </span><span class="mi">101</span>
+<span class="n">Student</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">found</span><span class="p">.</span>
+
+
+<span class="c1">//6. Exit</span>
+
+<span class="n">Student</span><span class="w"> </span><span class="n">Management</span><span class="w"> </span><span class="n">System</span>
+<span class="n">Choose</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">following</span><span class="p">:</span><span class="w"> </span>
+<span class="mf">1.</span><span class="w"> </span><span class="n">Add</span><span class="w"> </span><span class="n">Student</span>
+<span class="mf">2.</span><span class="w"> </span><span class="n">Display</span><span class="w"> </span><span class="n">All</span><span class="w"> </span><span class="n">Students</span>
+<span class="mf">3.</span><span class="w"> </span><span class="n">Find</span><span class="w"> </span><span class="n">Student</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">ID</span>
+<span class="mf">4.</span><span class="w"> </span><span class="n">Remove</span><span class="w"> </span><span class="n">Student</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">ID</span>
+<span class="mf">5.</span><span class="w"> </span><span class="n">Update</span><span class="w"> </span><span class="n">Student</span><span class="w"> </span><span class="n">Grade</span>
+<span class="mf">6.</span><span class="w"> </span><span class="n">Exit</span>
+
+<span class="n">Choose</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">option</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span>
+</pre></div>
+</div>
+</details>
 </section>
 </section>
+<hr class="docutils" />
 <section id="traversing-arraylists">
 <h2>7.3 Traversing ArrayLists<a class="headerlink" href="#traversing-arraylists" title="Link to this heading">¶</a></h2>
 <p>In this example, we create an ArrayList called myList and add three elements to it. We then traverse the ArrayList using both a enhanced for loop and a for loop.</p>
@@ -1209,6 +1441,7 @@ Hoboken, New Jersey: Wiley, 2003.</p>
 <li><a class="reference internal" href="#arraylist-methods">7.2 ArrayList Methods</a><ul>
 <li><a class="reference internal" href="#activity-3-7-1-list-algorithms">Activity 3.7.1 - List Algorithms</a></li>
 <li><a class="reference internal" href="#activity-3-7-2-auto-list">Activity 3.7.2 - Auto List</a></li>
+<li><a class="reference internal" href="#project-3-7-2-student-management-system">Project 3.7.2 Student Management System</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#traversing-arraylists">7.3 Traversing ArrayLists</a></li>
