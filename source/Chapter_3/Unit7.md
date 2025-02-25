@@ -486,6 +486,9 @@ public class Car
 ```
 </details>
 
+---
+
+
 ### Project 3.7.2 Student Management System
 
 <details><summary> Click Here </summary>
