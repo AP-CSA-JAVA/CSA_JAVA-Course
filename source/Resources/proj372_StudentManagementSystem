@@ -1,1 +1,291 @@
+**Project**: Student Management System
+
+**Objective**:
+Students will create a **Student Management System** using ArrayLists. Create a console-based program to manage student data, such as names, grades, and student IDs. The program will store this data in an ArrayList of custom `Student` objects.  
+Appropriately comment throughout your program and provide test cases to verify that your program works as intended.
+
+**Tasks**:
+1. **Create a Student class** with attributes:
+   - `String name`
+   - `int studentID`
+   - `double grade`
+
+   Include methods to:
+   - Get and set values for each attribute.
+   - Display the student's details.
+
+2. **Create a StudentManager class** with an ArrayList to store the `Student` objects.
+   - Allow the user to:
+     - Add a new student to the ArrayList.
+     - View all students in the list.
+     - Find a student by their ID.
+     - Remove a student by their ID.
+     - Update a student’s grade.
+
+3. **Additional features**:
+   - Sort students by grade or name.
+   - Search for students based on different criteria (e.g., by grade, name, or ID).
+   - Implement input validation and handle exceptions for edge cases (e.g., entering invalid data).
+
+**Example Features**:
+- **Add Student**: Input name, ID, and grade, and add the student to the list.
+- **Display All Students**: Print out all students’ information.
+- **Update Grade**: Update the grade of an existing student by their ID.
+- **Remove Student**: Remove a student based on their ID.
+
+
+**Example**:
+```
+Student Management System
+Choose one of the following: 
+The user can choose 1. **Add a Student**.
+The user can choose 2. **Display All Students**.
+The user can choose 3. **Find a Student by ID**.
+The user can choose 4. **Remove a Student by ID**.
+The user can choose 5. **Update Student Grade**.
+The user can choose 6. **Exit**.
+```
+
+
+**Example User Input & Output**:
+
+// 1. Add Student
+```java
+Student Management System
+Choose one of the following: 
+1. Add Student
+2. Display All Students
+3. Find Student by ID
+4. Remove Student by ID
+5. Update Student Grade
+6. Exit
+
+Choose an option: 1
+Enter student name: John Doe
+Enter student ID: 101
+Enter student grade: 85.5
+
+
+//2. Display All Students/
+
+Student Management System
+Choose one of the following: 
+1. Add Student
+2. Display All Students
+3. Find Student by ID
+4. Remove Student by ID
+5. Update Student Grade
+6. Exit
+
+Choose an option: 2
+ID: 101, Name: John Doe, Grade: 85.5
+
+
+//3. Find Student by ID
+
+Student Management System
+Choose one of the following: 
+1. Add Student
+2. Display All Students
+3. Find Student by ID
+4. Remove Student by ID
+5. Update Student Grade
+6. Exit
+
+Choose an option: 3
+Enter student ID to find: 101
+ID: 101, Name: John Doe, Grade: 85.5
+
+
+//4. Remove Student by ID
+
+Student Management System
+Choose one of the following: 
+1. Add Student
+2. Display All Students
+3. Find Student by ID
+4. Remove Student by ID
+5. Update Student Grade
+6. Exit
+
+Choose an option: 4
+Enter student ID to remove: 101
+
+
+//5. Update Student Grade
+
+Student Management System
+Choose one of the following: 
+1. Add Student
+2. Display All Students
+3. Find Student by ID
+4. Remove Student by ID
+5. Update Student Grade
+6. Exit
+
+Choose an option: 5
+Enter student ID to update grade: 101
+Student not found.
+
+
+//6. Exit
+
+Student Management System
+Choose one of the following: 
+1. Add Student
+2. Display All Students
+3. Find Student by ID
+4. Remove Student by ID
+5. Update Student Grade
+6. Exit
+
+Choose an option: 6
+```
+
+Explanation of Output:
+1. **Add Student**: When the user chooses to add a student, the program prompts for the name, ID, and grade of the student. In this case, the student "John Doe" with ID 101 and grade 85.5 is added to the system.
+2. **Display All Students**: The program lists all students stored in the `ArrayList`. Since only one student ("John Doe") has been added, the program displays his details.
+3. **Find Student by ID**: The program finds the student with ID 101 and displays their details.
+4. **Remove Student by ID**: The student with ID 101 is removed from the list, and no output is given when the operation is successful.
+5. **Update Student Grade**: The program tries to update the grade of the student with ID 101, but since the student was removed earlier, it prints "Student not found."
+6. **Exit**: The program exits when the user chooses option 6.
+
+
+
+Example Code Outline:
+
+```java
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class Student {
+    String name;
+    int studentID;
+    double grade;
+
+    // Constructor
+    public Student(String name, int studentID, double grade) {
+        this.name = name;
+        this.studentID = studentID;
+        this.grade = grade;
+    }
+
+    // Display student info
+    public void displayInfo() {
+        System.out.println("ID: " + studentID + ", Name: " + name + ", Grade: " + grade);
+    }
+
+    // Getter and Setter methods
+    public void setGrade(double grade) {
+        this.grade = grade;
+    }
+
+    public int getStudentID() {
+        return studentID;
+    }
+}
+
+class StudentManager {
+    ArrayList<Student> students = new ArrayList<>();
+
+    // Add a new student
+    public void addStudent(String name, int id, double grade) {
+        students.add(new Student(name, id, grade));
+    }
+
+    // Display all students
+    public void displayAllStudents() {
+        for (Student student : students) {
+            student.displayInfo();
+        }
+    }
+
+    // Find student by ID
+    public Student findStudentByID(int id) {
+        for (Student student : students) {
+            if (student.getStudentID() == id) {
+                return student;
+            }
+        }
+        return null;
+    }
+
+    // Remove student by ID
+    public void removeStudentByID(int id) {
+        students.removeIf(student -> student.getStudentID() == id);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        StudentManager manager = new StudentManager();
+
+        while (true) {
+            System.out.println("Student Management System:");
+            System.out.println("1. Add Student");
+            System.out.println("2. Display All Students");
+            System.out.println("3. Find Student by ID");
+            System.out.println("4. Remove Student by ID");
+            System.out.println("5. Update Student Grade");
+            System.out.println("6. Exit");
+            System.out.print("Choose an option: ");
+            int option = scanner.nextInt();
+            scanner.nextLine();  // Consume newline
+
+            if (option == 1) {
+                System.out.print("Enter student name: ");
+                String name = scanner.nextLine();
+                System.out.print("Enter student ID: ");
+                int id = scanner.nextInt();
+                System.out.print("Enter student grade: ");
+                double grade = scanner.nextDouble();
+                manager.addStudent(name, id, grade);
+            } else if (option == 2) {
+                manager.displayAllStudents();
+            } else if (option == 3) {
+                System.out.print("Enter student ID to find: ");
+                int id = scanner.nextInt();
+                Student student = manager.findStudentByID(id);
+                if (student != null) {
+                    student.displayInfo();
+                } else {
+                    System.out.println("Student not found.");
+                }
+            } else if (option == 4) {
+                System.out.print("Enter student ID to remove: ");
+                int id = scanner.nextInt();
+                manager.removeStudentByID(id);
+            } else if (option == 5) {
+                System.out.print("Enter student ID to update grade: ");
+                int id = scanner.nextInt();
+                Student student = manager.findStudentByID(id);
+                if (student != null) {
+                    System.out.print("Enter new grade: ");
+                    double newGrade = scanner.nextDouble();
+                    student.setGrade(newGrade);
+                } else {
+                    System.out.println("Student not found.");
+                }
+            } else if (option == 6) {
+                break;
+            } else {
+                System.out.println("Invalid option.");
+            }
+        }
+
+        scanner.close();
+    }
+}
+```
+
+Why it's a good exercise:
+- **ArrayList operations**: Adding, removing, updating, and searching elements in an ArrayList.
+- **Basic Java skills**: Working with classes, constructors, methods, and conditionals.
+- **User input/output**: Accepting user input and displaying results in the console.
+- **Real-world analogy**: Managing student data is a relatable and realistic example for students.
+
+This exercise also gives them a chance to expand the project over time, adding more complex features as their understanding of Java deepens.
+
+The output of the program depends on the user's interaction with the **Student Management System** during its execution. The program continuously prompts the user with a menu of options, and the output will change based on what the user chooses. Here's an example of what the output might look like with specific user inputs:
 
