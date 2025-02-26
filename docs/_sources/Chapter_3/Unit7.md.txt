@@ -24,8 +24,8 @@ list.add("three");
 You can access elements of an `ArrayList` using the `get()` method, which takes the index of the element you want to retrieve.
 
 ```java
-String number = list.get(1);  // Accesses the element at index 1 (i.e., "one")
-System.out.println(number);   // Output: one
+String number = list.get(1);  // Accesses the element at index 1 (i.e., "two")
+System.out.println(number);   // Output: two
 ```
 
 **Example of Accessing, Modifying, and Removing**:
@@ -41,7 +41,7 @@ String number = list.get(0);  // one
 System.out.println(number);
 
 // Modify an element
-list.set(1, "four");  // Replaces "one" with "four"
+list.set(1, "four");  // Replaces "two" with "four"
 
 // Remove an element
 list.remove(2);  // Removes "three"
@@ -75,7 +75,7 @@ Key Features of an ArrayList:
 | **Performance**      | Faster due to fixed size and direct memory access. | Slower due to resizing and additional overhead. |
 | **Resizing**         | Cannot be resized. If the array is full, a new one must be created. | Automatically resizes when elements are added beyond its capacity. |
 | **Methods**          | Does not have built-in methods for manipulation, only basic operations like length. | Provides methods like `add()`, `remove()`, `contains()`, `size()`, etc. |
-| **Type Safety**      | Strong type checking, especially with primitive types. | Type safety is provided through generics. |
+| **Type Safety**      | Strong type checking, especially with primitive types. | Type safety is provided through <ins>generics</ins>. |
 | **Null Elements**    | Can hold `null` (only for object arrays). | Can hold `null` elements. |
 | **Memory Efficiency**| More memory efficient for large datasets (due to no overhead of resizing). | Has additional overhead for resizing and managing the collection. |
 | **Performance in Insertions/Removals** | Slow insertions/removals as elements need to be shifted. | Efficient insertions/removals, especially at the end of the list. |
@@ -109,7 +109,7 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         // Create an ArrayList to store integers
-        ArrayList<Integer> numbers = new ArrayList<>();
+        ArrayList<Integer> numbers = new ArrayList<>(); 
 
         // Add elements to the ArrayList
         numbers.add(10);
@@ -179,7 +179,7 @@ class Student {
     }
 
     // Method to display student info
-    public viod displayInfo() {
+    public void displayInfo() {
         System.out.println("ID: " + studentID + ", Name: " + name + ", Grade: " + grade);
     }
 }
@@ -187,7 +187,7 @@ class Student {
 public class Main {
     public static void main(String[] args) {
         // Creating an ArrayList to store Student info
-        ArrayList<Student> students = new ArrayList<>();
+        ArrayList<Student> students = new ArrayList<>(); //
 
         // Adding new students to the ArrayList
         students.add(new Student("John Doe", 101, 85.5));
@@ -249,11 +249,13 @@ fruits.add("Apple");
 fruits.add("Banana");
 
 //You can also add an element to a specific location in an ArrayList
-fruit.add(1, "blueberry");
+fruit.add(2, "blueberry");
 fruit.add(3, "strawberry");
+fruit.add(4, null); // you can assign null to an arrayList 
+fruit.add(5,null);
 ```
 
-2.	**get(index)**: Retrieves the element at the specified index in the ArrayList.
+2.	**get(index)**: Retrieves the element at the specified index in the ArrayList.  The **get(index)** method does not return `false` if an index is not found; instead it throws an `IndexOutOfBoundsException` because the index is out of range.
 
 ```java
 String fruit = fruits.get(0);  

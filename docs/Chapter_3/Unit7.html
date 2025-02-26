@@ -287,8 +287,8 @@
 </div>
 <p><strong>Accessing Elements in an ArrayList</strong>:
 You can access elements of an <code class="docutils literal notranslate"><span class="pre">ArrayList</span></code> using the <code class="docutils literal notranslate"><span class="pre">get()</span></code> method, which takes the index of the element you want to retrieve.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">list</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w">  </span><span class="c1">// Accesses the element at index 1 (i.e., &quot;one&quot;)</span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">number</span><span class="p">);</span><span class="w">   </span><span class="c1">// Output: one</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">list</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w">  </span><span class="c1">// Accesses the element at index 1 (i.e., &quot;two&quot;)</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">number</span><span class="p">);</span><span class="w">   </span><span class="c1">// Output: two</span>
 </pre></div>
 </div>
 <p><strong>Example of Accessing, Modifying, and Removing</strong>:</p>
@@ -302,7 +302,7 @@ You can access elements of an <code class="docutils literal notranslate"><span c
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">number</span><span class="p">);</span>
 
 <span class="c1">// Modify an element</span>
-<span class="n">list</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;four&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// Replaces &quot;one&quot; with &quot;four&quot;</span>
+<span class="n">list</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;four&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// Replaces &quot;two&quot; with &quot;four&quot;</span>
 
 <span class="c1">// Remove an element</span>
 <span class="n">list</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span><span class="w">  </span><span class="c1">// Removes &quot;three&quot;</span>
@@ -360,7 +360,7 @@ You can access elements of an <code class="docutils literal notranslate"><span c
 </tr>
 <tr class="row-even"><td><p><strong>Type Safety</strong></p></td>
 <td><p>Strong type checking, especially with primitive types.</p></td>
-<td><p>Type safety is provided through generics.</p></td>
+<td><p>Type safety is provided through <ins>generics</ins>.</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Null Elements</strong></p></td>
 <td><p>Can hold <code class="docutils literal notranslate"><span class="pre">null</span></code> (only for object arrays).</p></td>
@@ -410,7 +410,7 @@ You can access elements of an <code class="docutils literal notranslate"><span c
 <span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="c1">// Create an ArrayList to store integers</span>
-<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span><span class="w"> </span>
 
 <span class="w">        </span><span class="c1">// Add elements to the ArrayList</span>
 <span class="w">        </span><span class="n">numbers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
@@ -476,7 +476,7 @@ You can access elements of an <code class="docutils literal notranslate"><span c
 <span class="w">    </span><span class="p">}</span>
 
 <span class="w">    </span><span class="c1">// Method to display student info</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">viod</span><span class="w"> </span><span class="nf">displayInfo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">displayInfo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;ID: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">studentID</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, Name: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, Grade: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">grade</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
@@ -484,7 +484,7 @@ You can access elements of an <code class="docutils literal notranslate"><span c
 <span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="c1">// Creating an ArrayList to store Student info</span>
-<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Student</span><span class="o">&gt;</span><span class="w"> </span><span class="n">students</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Student</span><span class="o">&gt;</span><span class="w"> </span><span class="n">students</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span><span class="w"> </span><span class="c1">//</span>
 
 <span class="w">        </span><span class="c1">// Adding new students to the ArrayList</span>
 <span class="w">        </span><span class="n">students</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Student</span><span class="p">(</span><span class="s">&quot;John Doe&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mf">85.5</span><span class="p">));</span>
@@ -563,12 +563,14 @@ You can access elements of an <code class="docutils literal notranslate"><span c
 <span class="n">fruits</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Banana&quot;</span><span class="p">);</span>
 
 <span class="c1">//You can also add an element to a specific location in an ArrayList</span>
-<span class="n">fruit</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;blueberry&quot;</span><span class="p">);</span>
+<span class="n">fruit</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;blueberry&quot;</span><span class="p">);</span>
 <span class="n">fruit</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;strawberry&quot;</span><span class="p">);</span>
+<span class="n">fruit</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">);</span><span class="w"> </span><span class="c1">// you can assign null to an arrayList </span>
+<span class="n">fruit</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
-<li><p><strong>get(index)</strong>: Retrieves the element at the specified index in the ArrayList.</p></li>
+<li><p><strong>get(index)</strong>: Retrieves the element at the specified index in the ArrayList.  The <strong>get(index)</strong> method does not return <code class="docutils literal notranslate"><span class="pre">false</span></code> if an index is not found; instead it throws an <code class="docutils literal notranslate"><span class="pre">IndexOutOfBoundsException</span></code> because the index is out of range.</p></li>
 </ol>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">fruit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fruits</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w">  </span>
 <span class="c1">// Retrieves the element at index 0 (Apple)</span>
