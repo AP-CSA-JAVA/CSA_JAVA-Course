@@ -758,7 +758,9 @@ In this Java program, we'll identify, modify, and develop standard array travers
 
 ```java
 import java.util.ArrayList;
-import java.util.Iterator; // the Iterator is an interface that provides a way to iterate over elements in a collection without needing to know what the underlying structure of the collection
+import java.util.Iterator;
+// the Iterator is an interface that provides a way to iterate over elements in a 
+// collection without needing to know what the underlying structure of the collection
 
 public class Main {
     public static void main(String[] args) {
@@ -782,7 +784,9 @@ public class Main {
         // Delete elements from the ArrayList using remove() method
         numbersList.remove(2); // Removes the element at index 2 (30)
         numbersList.remove(Integer.valueOf(40)); // Removes the value 40 from the list
-	// valueOf() method converts Primitive Types to Wrapper Objects as well as a String to an Object
+
+	// valueOf() method converts Primitive Types to Wrapper Objects as well as a
+	// String to an Object
 
         // Display the modified ArrayList using standard traversal (using iterator)
         System.out.println("Modified ArrayList using iterator:");
@@ -793,7 +797,8 @@ public class Main {
         System.out.println();
 
 	// next() method retrieves the element and advances the iterator
-	// hasNext() method ensures that you are not attempting to access an element that doesn’t exist, thus preventing a `NoSuchElementException`
+	// hasNext() method ensures that you are not attempting to access an element
+	// that doesn’t exist, thus preventing a `NoSuchElementException`
 
         // Create another ArrayList to accomplish a traversing algorithm
         ArrayList<String> fruitsList = new ArrayList<>();
@@ -964,7 +969,7 @@ Using contains(): Banana found? true
 Using iteration: Banana found? true
 ```
 
-### Activity 3.7.6 Seearching
+### Activity 3.7.6 Searching
 
 <details><summary> Click Here </summary>
 
@@ -986,7 +991,12 @@ Using iteration: Banana found? true
 
 ```
 Generated ArrayList of 100 numbers:
-[376, 712, 944, 45, 673, 355, 32, 105, 907, 809, 228, 66, 175, 296, 54, 75, 531, 635, 853, 11, 952, 409, 609, 978, 822, 510, 83, 696, 414, 971, 777, 719, 574, 27, 95, 332, 840, 305, 868, 566, 711, 284, 392, 602, 576, 142, 220, 50, 640, 156, 110, 787, 988, 991, 74, 82, 226, 473, 436, 559, 447, 478, 267, 408, 428, 586, 830, 139, 507, 161, 23, 42, 221, 136, 446, 161, 191, 94, 735, 369, 198, 415, 342, 622, 380, 839, 758, 602, 998, 108, 347, 351, 673, 208, 602, 92, 589, 198, 900, 945]
+[376, 712, 944, 45, 673, 355, 32, 105, 907, 809, 228, 66, 175, 296, 54, 75, 531, 635, 853, 11,
+952, 409, 609, 978, 822, 510, 83, 696, 414, 971, 777, 719, 574, 27, 95, 332, 840, 305, 868,
+566, 711, 284, 392, 602, 576, 142, 220, 50, 640, 156, 110, 787, 988, 991, 74, 82, 226, 473, 
+436, 559, 447, 478, 267, 408, 428, 586, 830, 139, 507, 161, 23, 42, 221, 136, 446, 161, 191, 
+94, 735, 369, 198, 415, 342, 622, 380, 839, 758, 602, 998, 108, 347, 351, 673, 208, 602, 92,
+589, 198, 900, 945]
 
 Enter a number to search for: 96
 The number 96 was not found in the ArrayList.
@@ -1059,13 +1069,11 @@ public class Student implements Comparable<Student> {
         return name;
     }
 
-    @Override
     public int compareTo(Student other) {
         // Compare students based on their IDs
         return Integer.compare(this.id, other.id);
     }
 
-    @Override
     public String toString() {
         return "Student [id=" + id + ", name=" + name + "]";
     }
