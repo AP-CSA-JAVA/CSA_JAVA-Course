@@ -1080,7 +1080,7 @@ Appropriately comment throughout your program and provide test cases to verify t
 <span class="w">        </span><span class="n">numbersList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">40</span><span class="p">);</span>
 <span class="w">        </span><span class="n">numbersList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
 
-<span class="w">        </span><span class="c1">// Display the ArrayList using standard traversal (using for-each loop)</span>
+<span class="w">        </span><span class="c1">// Display the ArrayList using enhanced for loop</span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;ArrayList using for-each loop:&quot;</span><span class="p">);</span>
 <span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">numbersList</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">number</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">);</span>
@@ -1123,15 +1123,15 @@ Appropriately comment throughout your program and provide test cases to verify t
 </div>
 <p>Explanation:</p>
 <ul class="simple">
-<li><p>We create an ArrayList named numbersList and insert integers into it using the add() method.</p></li>
-<li><p>We demonstrate standard array traversal using a for-each loop to display the elements of numbersList.</p></li>
-<li><p>We then remove elements from the numbersList using the remove() method (by index and by value).</p></li>
-<li><p>We display the modified numbersList using an iterator to traverse the list.</p></li>
-<li><p>We create another ArrayList named fruitsList and insert strings (fruits) into it.</p></li>
-<li><p>We use the addAll() method to combine the numbersList and fruitsList into a new ArrayList named combinedList.</p></li>
-<li><p>We traverse the combinedList using a for-each loop and display its elements.</p></li>
+<li><p>We create an ArrayList named <code class="docutils literal notranslate"><span class="pre">numbersList</span></code> and insert integers into it using the <code class="docutils literal notranslate"><span class="pre">add()</span></code> method.</p></li>
+<li><p>We demonstrate standard array traversal using an enhanced for loop to display the elements of <code class="docutils literal notranslate"><span class="pre">numbersList</span></code>.</p></li>
+<li><p>We then remove elements from the <code class="docutils literal notranslate"><span class="pre">numbersList</span></code> using the <code class="docutils literal notranslate"><span class="pre">remove()</span></code> method.</p></li>
+<li><p>We display the modified <code class="docutils literal notranslate"><span class="pre">numbersList</span></code> using an iterator to traverse the list.</p></li>
+<li><p>We create another ArrayList named <code class="docutils literal notranslate"><span class="pre">fruitsList</span></code> and insert strings (fruits) into it.</p></li>
+<li><p>We use the <code class="docutils literal notranslate"><span class="pre">addAll()</span></code> method to combine the <code class="docutils literal notranslate"><span class="pre">numbersList</span></code> and <code class="docutils literal notranslate"><span class="pre">fruitsList</span></code> into a new ArrayList named <code class="docutils literal notranslate"><span class="pre">combinedList</span></code>.</p></li>
+<li><p>We traverse the <code class="docutils literal notranslate"><span class="pre">combinedList</span></code> using an enhanced for loop and display the elements.</p></li>
 </ul>
-<p>When you run this program, it will output:</p>
+<p><strong>Example output</strong>:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">ArrayList</span><span class="w"> </span><span class="n">using</span><span class="w"> </span><span class="k">for</span><span class="o">-</span><span class="n">each</span><span class="w"> </span><span class="n">loop</span><span class="p">:</span>
 <span class="mi">10</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="mi">40</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span>
 <span class="n">Modified</span><span class="w"> </span><span class="n">ArrayList</span><span class="w"> </span><span class="n">using</span><span class="w"> </span><span class="n">iterator</span><span class="p">:</span>
@@ -1140,7 +1140,95 @@ Appropriately comment throughout your program and provide test cases to verify t
 <span class="mi">10</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="mi">40</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="n">Apple</span><span class="w"> </span><span class="n">Banana</span><span class="w"> </span><span class="n">Orange</span><span class="w"> </span><span class="n">Mango</span><span class="w"> </span><span class="n">Grapes</span>
 </pre></div>
 </div>
-<p>This program demonstrates various array traversal algorithms using ArrayLists, including standard traversal using for-each loops and iterators. It also shows how to insert and delete elements from ArrayLists and how to use multiple ArrayLists to accomplish a traversing algorithm.</p>
+<section id="traversing-arraylist">
+<h3>3.7.4 Traversing ArrayList<a class="headerlink" href="#traversing-arraylist" title="Link to this heading">¶</a></h3>
+<details><summary> Click Here </summary>
+<p><strong>Instructions</strong>:</p>
+<ol class="arabic simple">
+<li><p><strong>Create a <code class="docutils literal notranslate"><span class="pre">Person</span></code> Class:</strong></p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">Person</span></code> class has two attributes: <code class="docutils literal notranslate"><span class="pre">name</span></code> (String) and <code class="docutils literal notranslate"><span class="pre">age</span></code> (int).</p></li>
+<li><p>It has a constructor to initialize these attributes, <em>getter methods</em> to access the values, and an overridden <code class="docutils literal notranslate"><span class="pre">toString()</span></code> method to print the object in a user-friendly format.</p></li>
+</ul>
+</li>
+<li><p><strong>Using the <code class="docutils literal notranslate"><span class="pre">ArrayList</span></code>:</strong></p>
+<ul class="simple">
+<li><p>The program creates an <code class="docutils literal notranslate"><span class="pre">ArrayList</span></code> named <code class="docutils literal notranslate"><span class="pre">people</span></code>, which contains instances of the <code class="docutils literal notranslate"><span class="pre">Person</span></code> class.</p></li>
+<li><p>Each <code class="docutils literal notranslate"><span class="pre">Person</span></code> is added to the list using <code class="docutils literal notranslate"><span class="pre">people.add(new</span> <span class="pre">Person(...))</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong>Standard <code class="docutils literal notranslate"><span class="pre">for</span></code> Loop:</strong></p>
+<ul class="simple">
+<li><p>The first loop uses a standard <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to traverse the <code class="docutils literal notranslate"><span class="pre">ArrayList</span></code>. It accesses each <code class="docutils literal notranslate"><span class="pre">Person</span></code> object by index (<code class="docutils literal notranslate"><span class="pre">people.get(i)</span></code>).</p></li>
+<li><p>For each <code class="docutils literal notranslate"><span class="pre">Person</span></code>, it prints their details and adds their age to <code class="docutils literal notranslate"><span class="pre">sumAge</span></code> to calculate the total age.</p></li>
+</ul>
+</li>
+<li><p><strong>Enhanced <code class="docutils literal notranslate"><span class="pre">for</span></code> Loop:</strong></p>
+<ul class="simple">
+<li><p>The second loop uses an enhanced <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to iterate over each <code class="docutils literal notranslate"><span class="pre">Person</span></code> object in the <code class="docutils literal notranslate"><span class="pre">ArrayList</span></code>.</p></li>
+<li><p>It performs the same task as the standard <code class="docutils literal notranslate"><span class="pre">for</span></code> loop (calculating the sum of ages) but also finds the oldest and youngest <code class="docutils literal notranslate"><span class="pre">Person</span></code> objects by comparing their ages.</p></li>
+<li><p>It also prints each person’s details during the traversal.</p></li>
+</ul>
+</li>
+<li><p><strong>Calculating the Average Age:</strong></p>
+<ul class="simple">
+<li><p>After traversing the list, the program calculates the average age by dividing the sum of ages by the total number of people in the list (<code class="docutils literal notranslate"><span class="pre">people.size()</span></code>).</p></li>
+</ul>
+</li>
+<li><p><strong>Finding the Oldest and Youngest:</strong></p>
+<ul class="simple">
+<li><p>The program finds the <code class="docutils literal notranslate"><span class="pre">oldestPerson</span></code> and <code class="docutils literal notranslate"><span class="pre">youngestPerson</span></code> by comparing the <code class="docutils literal notranslate"><span class="pre">age</span></code> of each person during the traversal.</p></li>
+</ul>
+</li>
+</ol>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Starter File</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Create an ArrayList of Person objects</span>
+<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Person</span><span class="o">&gt;</span><span class="w"> </span><span class="n">people</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">people</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Person</span><span class="p">(</span><span class="s">&quot;Avri&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">));</span>
+<span class="w">        </span><span class="n">people</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Person</span><span class="p">(</span><span class="s">&quot;Alan&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">));</span>
+<span class="w">        </span><span class="n">people</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Person</span><span class="p">(</span><span class="s">&quot;Bob&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">22</span><span class="p">));</span>
+<span class="w">        </span><span class="n">people</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Person</span><span class="p">(</span><span class="s">&quot;Evan&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">));</span>
+<span class="w">        </span><span class="n">people</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Person</span><span class="p">(</span><span class="s">&quot;Charlie&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">35</span><span class="p">));</span>
+
+<span class="w">        </span><span class="c1">// Traverse using a standard for loop and print details</span>
+
+<span class="w">        </span><span class="c1">// Traverse using an enhanced for loop and calculate the average age</span>
+<span class="w">	</span><span class="c1">// Traverse and calculate the sum of ages and find the oldest/youngest</span>
+<span class="w">        </span><span class="c1">// Calculate the average age</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c1">// Display the oldest and youngest person</span>
+
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Sample Output</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Using</span> <span class="n">standard</span> <span class="k">for</span> <span class="n">loop</span><span class="p">:</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">Avri</span><span class="p">,</span> <span class="n">Age</span><span class="p">:</span> <span class="mi">25</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">Alan</span><span class="p">,</span> <span class="n">Age</span><span class="p">:</span> <span class="mi">30</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">Bob</span><span class="p">,</span> <span class="n">Age</span><span class="p">:</span> <span class="mi">22</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">Evan</span><span class="p">,</span> <span class="n">Age</span><span class="p">:</span> <span class="mi">40</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">Charlie</span><span class="p">,</span> <span class="n">Age</span><span class="p">:</span> <span class="mi">35</span>
+
+<span class="n">Using</span> <span class="n">enhanced</span> <span class="k">for</span> <span class="n">loop</span><span class="p">:</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">Avri</span><span class="p">,</span> <span class="n">Age</span><span class="p">:</span> <span class="mi">25</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">Alan</span><span class="p">,</span> <span class="n">Age</span><span class="p">:</span> <span class="mi">30</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">Bob</span><span class="p">,</span> <span class="n">Age</span><span class="p">:</span> <span class="mi">22</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">Evan</span><span class="p">,</span> <span class="n">Age</span><span class="p">:</span> <span class="mi">40</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">Charlie</span><span class="p">,</span> <span class="n">Age</span><span class="p">:</span> <span class="mi">35</span>
+
+<span class="n">Average</span> <span class="n">Age</span><span class="p">:</span> <span class="mf">30.4</span>
+
+<span class="n">Oldest</span> <span class="n">Person</span><span class="p">:</span> <span class="n">Evan</span> <span class="p">(</span><span class="mi">40</span> <span class="n">years</span> <span class="n">old</span><span class="p">)</span>
+<span class="n">Youngest</span> <span class="n">Person</span><span class="p">:</span> <span class="n">Bob</span> <span class="p">(</span><span class="mi">22</span> <span class="n">years</span> <span class="n">old</span><span class="p">)</span>
+</pre></div>
+</div>
+</details>
+</section>
 </section>
 <section id="searching">
 <h2>7.5 Searching<a class="headerlink" href="#searching" title="Link to this heading">¶</a></h2>
@@ -1507,7 +1595,10 @@ Hoboken, New Jersey: Wiley, 2003.</p>
 <li><a class="reference internal" href="#activity-3-7-3-traversing-arrays">Activity 3.7.3 Traversing Arrays</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#developing-algorithms-using-arraylists">7.4 Developing Algorithms Using ArrayLists</a></li>
+<li><a class="reference internal" href="#developing-algorithms-using-arraylists">7.4 Developing Algorithms Using ArrayLists</a><ul>
+<li><a class="reference internal" href="#traversing-arraylist">3.7.4 Traversing ArrayList</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#searching">7.5 Searching</a></li>
 <li><a class="reference internal" href="#sorting">7.6 Sorting</a></li>
 <li><a class="reference internal" href="#ethical-issues-around-data-collection">7.7 Ethical Issues Around Data Collection</a></li>
