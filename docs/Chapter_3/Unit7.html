@@ -638,10 +638,10 @@ You can access elements of an <code class="docutils literal notranslate"><span c
 <span class="n">printPairs</span><span class="p">(</span><span class="n">words</span><span class="p">);</span>
 
 <span class="c1">//Output of Method Call</span>
-<span class="n">Why</span><span class="w"> </span><span class="o">--</span><span class="w"> </span><span class="n">isn</span><span class="err">&#39;</span><span class="n">t</span>
-<span class="n">a</span><span class="w"> </span><span class="o">--</span><span class="w"> </span><span class="n">koala</span>
-<span class="n">considered</span><span class="w"> </span><span class="o">--</span><span class="w"> </span><span class="n">a</span>
-<span class="n">bear</span><span class="w"> </span><span class="o">--</span><span class="w"> </span><span class="o">?</span>
+<span class="n">Why</span><span class="w"> </span><span class="n">isn</span><span class="err">&#39;</span><span class="n">t</span>
+<span class="n">a</span><span class="w"> </span><span class="n">koala</span>
+<span class="n">considered</span><span class="w"> </span><span class="n">a</span>
+<span class="n">bear</span><span class="w"> </span><span class="o">?</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -1042,7 +1042,7 @@ Appropriately comment throughout your program and provide test cases to verify t
 </ul>
 <p>In this Java program, we’ll identify, modify, and develop standard array traversal algorithms using <code class="docutils literal notranslate"><span class="pre">ArrayLists</span></code>. We’ll use standard traversal algorithms to insert and delete elements in <code class="docutils literal notranslate"><span class="pre">ArrayLists</span></code>, and we’ll also demonstrate how to use multiple <code class="docutils literal notranslate"><span class="pre">ArrayLists</span></code> to accomplish a traversing algorithm.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Iterator</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Iterator</span><span class="p">;</span><span class="w"> </span><span class="c1">// the Iterator is an interface that provides a way to iterate over elements in a collection without needing to know what the underlying structure of the collection</span>
 
 <span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -1066,6 +1066,7 @@ Appropriately comment throughout your program and provide test cases to verify t
 <span class="w">        </span><span class="c1">// Delete elements from the ArrayList using remove() method</span>
 <span class="w">        </span><span class="n">numbersList</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span><span class="w"> </span><span class="c1">// Removes the element at index 2 (30)</span>
 <span class="w">        </span><span class="n">numbersList</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="n">Integer</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="mi">40</span><span class="p">));</span><span class="w"> </span><span class="c1">// Removes the value 40 from the list</span>
+<span class="w">	</span><span class="c1">// valueOf() method converts Primitive Types to Wrapper Objects as well as a String to an Object</span>
 
 <span class="w">        </span><span class="c1">// Display the modified ArrayList using standard traversal (using iterator)</span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Modified ArrayList using iterator:&quot;</span><span class="p">);</span>
@@ -1074,6 +1075,9 @@ Appropriately comment throughout your program and provide test cases to verify t
 <span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">iterator</span><span class="p">.</span><span class="na">next</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+
+<span class="w">	</span><span class="c1">// next() method retrieves the element and advances the iterator</span>
+<span class="w">	</span><span class="c1">// hasNext() method ensures that you are not attempting to access an element that doesn’t exist, thus preventing a `NoSuchElementException`</span>
 
 <span class="w">        </span><span class="c1">// Create another ArrayList to accomplish a traversing algorithm</span>
 <span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">fruitsList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>

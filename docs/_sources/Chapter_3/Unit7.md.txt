@@ -343,10 +343,10 @@ Code the following static Methods
 printPairs(words);
 
 //Output of Method Call
-Why -- isn't
-a -- koala
-considered -- a
-bear -- ?
+Why isn't
+a koala
+considered a
+bear ?
 ```
 - `socal(ArrayList<String> arrayList)` - insert "like" after every two items in the ArrayList
 ```java
@@ -758,7 +758,7 @@ In this Java program, we'll identify, modify, and develop standard array travers
 
 ```java
 import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.Iterator; // the Iterator is an interface that provides a way to iterate over elements in a collection without needing to know what the underlying structure of the collection
 
 public class Main {
     public static void main(String[] args) {
@@ -782,6 +782,7 @@ public class Main {
         // Delete elements from the ArrayList using remove() method
         numbersList.remove(2); // Removes the element at index 2 (30)
         numbersList.remove(Integer.valueOf(40)); // Removes the value 40 from the list
+	// valueOf() method converts Primitive Types to Wrapper Objects as well as a String to an Object
 
         // Display the modified ArrayList using standard traversal (using iterator)
         System.out.println("Modified ArrayList using iterator:");
@@ -790,6 +791,9 @@ public class Main {
             System.out.print(iterator.next() + " ");
         }
         System.out.println();
+
+	// next() method retrieves the element and advances the iterator
+	// hasNext() method ensures that you are not attempting to access an element that doesn’t exist, thus preventing a `NoSuchElementException`
 
         // Create another ArrayList to accomplish a traversing algorithm
         ArrayList<String> fruitsList = new ArrayList<>();
