@@ -779,7 +779,7 @@ public class ArrayListTraversalExample {
         numbersList.add(40);
         numbersList.add(50);
 
-        // Display the ArrayList using standard traversal (using for-each loop)
+        // Display the ArrayList using enhanced for loop
         System.out.println("ArrayList using for-each loop:");
         for (int number : numbersList) {
             System.out.print(number + " ");
@@ -822,15 +822,15 @@ public class ArrayListTraversalExample {
 
 Explanation:
 
-- We create an ArrayList named numbersList and insert integers into it using the add() method.
-- We demonstrate standard array traversal using a for-each loop to display the elements of numbersList.
-- We then remove elements from the numbersList using the remove() method (by index and by value).
-- We display the modified numbersList using an iterator to traverse the list.
-- We create another ArrayList named fruitsList and insert strings (fruits) into it.
-- We use the addAll() method to combine the numbersList and fruitsList into a new ArrayList named combinedList.
-- We traverse the combinedList using a for-each loop and display its elements.
+- We create an ArrayList named `numbersList` and insert integers into it using the `add()` method.
+- We demonstrate standard array traversal using an enhanced for loop to display the elements of `numbersList`.
+- We then remove elements from the `numbersList` using the `remove()` method.
+- We display the modified `numbersList` using an iterator to traverse the list.
+- We create another ArrayList named `fruitsList` and insert strings (fruits) into it.
+- We use the `addAll()` method to combine the `numbersList` and `fruitsList` into a new ArrayList named `combinedList`.
+- We traverse the `combinedList` using an enhanced for loop and display the elements.
 
-When you run this program, it will output:
+**Example output**:
 
 ```java
 ArrayList using for-each loop:
@@ -841,7 +841,85 @@ Combined ArrayList:
 10 20 40 50 Apple Banana Orange Mango Grapes
 ```
 
-This program demonstrates various array traversal algorithms using ArrayLists, including standard traversal using for-each loops and iterators. It also shows how to insert and delete elements from ArrayLists and how to use multiple ArrayLists to accomplish a traversing algorithm.
+### 3.7.4 Traversing ArrayList
+
+<details><summary> Click Here </summary>
+
+**Instructions**:
+1. **Create a `Person` Class:**
+   - The `Person` class has two attributes: `name` (String) and `age` (int).
+   - It has a constructor to initialize these attributes, *getter methods* to access the values, and an overridden `toString()` method to print the object in a user-friendly format.
+
+2. **Using the `ArrayList`:**
+   - The program creates an `ArrayList` named `people`, which contains instances of the `Person` class.
+   - Each `Person` is added to the list using `people.add(new Person(...))`.
+
+3. **Standard `for` Loop:**
+   - The first loop uses a standard `for` loop to traverse the `ArrayList`. It accesses each `Person` object by index (`people.get(i)`).
+   - For each `Person`, it prints their details and adds their age to `sumAge` to calculate the total age.
+
+4. **Enhanced `for` Loop:**
+   - The second loop uses an enhanced `for` loop to iterate over each `Person` object in the `ArrayList`.
+   - It performs the same task as the standard `for` loop (calculating the sum of ages) but also finds the oldest and youngest `Person` objects by comparing their ages.
+   - It also prints each person's details during the traversal.
+
+5. **Calculating the Average Age:**
+   - After traversing the list, the program calculates the average age by dividing the sum of ages by the total number of people in the list (`people.size()`).
+
+6. **Finding the Oldest and Youngest:**
+   - The program finds the `oldestPerson` and `youngestPerson` by comparing the `age` of each person during the traversal.
+
+```java
+// Starter File
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        // Create an ArrayList of Person objects
+        ArrayList<Person> people = new ArrayList<>();
+        people.add(new Person("Avri", 25));
+        people.add(new Person("Alan", 30));
+        people.add(new Person("Bob", 22));
+        people.add(new Person("Evan", 40));
+        people.add(new Person("Charlie", 35));
+
+        // Traverse using a standard for loop and print details
+
+        // Traverse using an enhanced for loop and calculate the average age
+	// Traverse and calculate the sum of ages and find the oldest/youngest
+        // Calculate the average age
+        
+        // Display the oldest and youngest person
+
+    }
+}
+```
+
+
+**Sample Output**
+
+```
+Using standard for loop:
+Name: Avri, Age: 25
+Name: Alan, Age: 30
+Name: Bob, Age: 22
+Name: Evan, Age: 40
+Name: Charlie, Age: 35
+
+Using enhanced for loop:
+Name: Avri, Age: 25
+Name: Alan, Age: 30
+Name: Bob, Age: 22
+Name: Evan, Age: 40
+Name: Charlie, Age: 35
+
+Average Age: 30.4
+
+Oldest Person: Evan (40 years old)
+Youngest Person: Bob (22 years old)
+```
+
+</details>
 
 
 ## 7.5 Searching
