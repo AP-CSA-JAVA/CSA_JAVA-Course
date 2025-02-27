@@ -199,42 +199,30 @@ public class Main {
 }
 ```
 
+
 **Explanation of ArrayList Components**:
 
-1. **accessModifier**: `public`
-   - The `accessModifier` defines the visibility of the class or method. In this example:
-     - The `Student` class is declared as `public`, meaning it can be accessed by any other class.
-     - The `displayInfo()` method inside the `Student` class is also `public`, meaning it can be accessed by other classes (such as `Main`).
-
-2. **returnType**: `void` (for the `displayInfo()` method)
-   - The `returnType` specifies what type of value the method will return.
-   - In this example, the `displayInfo()` method has a `returnType` of `void`, meaning it does not return anything. It simply prints information to the console.
-
-3. **methodName**: `displayInfo`
-   - The `methodName` is the name of the method that performs some task.
-   - In this example, the method `displayInfo` prints the student’s ID, name, and grade.
-
-4. **parameterList**: `()` (empty for `displayInfo()`)
-   - The `parameterList` defines the parameters that the method takes as input. It is defined in the parentheses after the method name.
-   - In this example, the `displayInfo()` method does not take any parameters, so the `parameterList` is empty (`()`).
-
-**Adding Elements to an ArrayList**:
-
-```java
-students.add(new Student("John Doe", 101, 85.5));
-```
 
 - **accessModifier**: `public` (for the method `add()`)
   - The `add()` method is public, which means it can be called from other classes (like `Main` in this case).
+  - The `accessModifier` defines the visibility of the class or method. 
+  - The `Student` class is declared as `public`, meaning it can be accessed by any other class.
+  - The `displayInfo()` method inside the `Student` class is also `public`, meaning it can be accessed by other classes (such as `Main`).
 
 - **returnType**: `boolean` (for the `add()` method)
+   - The `returnType` specifies what type of value the method will return.
+   - In this example, the `displayInfo()` method has a `returnType` of `void`, meaning it does not return anything. It simply prints information to the console.
   - The `add()` method in `ArrayList` returns a boolean value, indicating whether the student was successfully added to the list.
 
-- **methodName**: `add`
-  - The method name is `add`, which adds an eelment (in this case, a new `Student` object) to the ArrayList.
+- **methodName**: `add` `displayInfo`
+   - The `methodName` is the name of the method that performs some task.
+   - In this example, the method `displayInfo` prints the student’s ID, name, and grade.
+   - The method name is `add`, which adds an eelment (in this case, a new `Student` object) to the ArrayList.
 
-- **parameterList**: `(Student)` (the `add()` method accepts a `Student` object as a parameter)
-  - The method takes one parameter, which is an instance of the `Student` class.
+- **parameterList**: `(Student)` (the `add()` method accepts a `Student` object as a parameter):  `()` (empty for `displayInfo()`)
+   - The `parameterList` defines the parameters that the method takes as input. It is defined in the parentheses after the method name.
+   - In this example, the `displayInfo()` method does not take any parameters, so the `parameterList` is empty (`()`).
+   - The method takes one parameter, which is an instance of the `Student` class.
 
 
 **Note** Different methods in the ArrayList class have different definitions, with variations in the return type, method name, parameter types, and behaviors based on the specific functionality they provide.
@@ -657,7 +645,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        // Create an ArrayList
+        
         ArrayList<String> myList = new ArrayList<>();
 
         // Add elements to the ArrayList
@@ -665,14 +653,14 @@ public class Main {
         myList.add("Banana");
         myList.add("Orange");
 
-        // Traverse the ArrayList using a for-each loop
-        System.out.println("Traversing the ArrayList using a for-each loop:");
+        // Traverse the ArrayList using a enhanced for loop
+        System.out.println("Traversing the ArrayList using a enhanced for loop:");
         for (String element : myList) {
             System.out.println(element);
         }
 
         // Traverse the ArrayList using a for loop
-        System.out.println("\nTraversing the ArrayList using a for loop:");
+        System.out.println("\nTraversing the ArrayList using a standard for loop:");
         for (int i = 0; i < myList.size(); i++) {
             String element = myList.get(i);
             System.out.println(element);
@@ -689,7 +677,7 @@ Apple
 Banana
 Orange
 
-Traversing the ArrayList using a for loop:
+Traversing the ArrayList using a standard for loop:
 Apple
 Banana
 Orange
@@ -706,7 +694,7 @@ Orange
 ```java
 import java.util.ArrayList;
 
-public class TraversingArrayList {
+public class Main {
     public static void main(String[] args) {
         // Creating an ArrayList of Integers
         ArrayList<Integer> numbers = new ArrayList<>();
@@ -725,6 +713,10 @@ public class TraversingArrayList {
     }
 }
 ```
+
+---
+
+
 **Program 2**
 
 ```java
@@ -756,6 +748,7 @@ public class Main {
 
 
 ## 7.4 Developing Algorithms Using ArrayLists
+
 **Goals**
 - Identify, modify, and develop standard array traversal algorithms using ArrayLists.
 - Use standard traversal algorithms to insert and delete ArrayList elements.
@@ -767,9 +760,9 @@ In this Java program, we'll identify, modify, and develop standard array travers
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class ArrayListTraversalExample {
+public class Main {
     public static void main(String[] args) {
-        // Create an ArrayList of integers
+        
         ArrayList<Integer> numbersList = new ArrayList<>();
 
         // Insert elements into the ArrayList using add() method
@@ -875,8 +868,9 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        // Create an ArrayList of Person objects
+        
         ArrayList<Person> people = new ArrayList<>();
+
         people.add(new Person("Avri", 25));
         people.add(new Person("Alan", 30));
         people.add(new Person("Bob", 22));
@@ -884,11 +878,9 @@ public class Main {
         people.add(new Person("Charlie", 35));
 
         // Traverse using a standard for loop and print details
-
         // Traverse using an enhanced for loop and calculate the average age
 	// Traverse and calculate the sum of ages and find the oldest/youngest
         // Calculate the average age
-        
         // Display the oldest and youngest person
 
     }
@@ -924,12 +916,7 @@ Youngest Person: Bob (22 years old)
 
 ## 7.5 Searching
 
-To search for an element in an ArrayList in Java, you can use the `contains()` method or iterate through the ArrayList and compare each element with the target value. 
-
-In this example, we create an ArrayList called `myList` and add three elements to it. We then search for an element, "Banana", in the ArrayList using two different approaches.
-
-First, we use the `contains()` method to check if the ArrayList contains the target element. The `contains()` method returns a boolean value indicating whether the element is present in the ArrayList.
-
+To search for an element in an ArrayList in Java, you can use the `contains()` method or iterate through the ArrayList and compare each element with the target value. In this example, we create an ArrayList called `myList` and add three elements to it. We then search for an element, "Banana", in the ArrayList using two different approaches.  First, we use the `contains()` method to check if the ArrayList contains the target element. The `contains()` method returns a boolean value indicating whether the element is present in the ArrayList.
 Next, we perform a manual search by iterating through each element of the ArrayList using a enhanced for loop. We compare each element with the target element using the `equals()` method. If a match is found, we set the found variable to `true` and `break` out of the loop.
 
 Finally, we print the search results to the console.
@@ -972,6 +959,40 @@ When you run the program, it will output:
 Using contains(): Banana found? true
 Using iteration: Banana found? true
 ```
+
+### Activity 3.7.6 Seearching
+
+<details><summary> Click Here </summary>
+
+
+**Instructions**
+
+1. Create an Integer arrayList and call it `numbers`.
+2. Write a program that will *randomly* generate and store 100 integers in `numbers`.
+3. Create a Scanner class that will prompt the user to input a number (`target`) they want to search for in the arrayList.
+4. Create a `linearSearch` method that takes the `arrayList` and the `target` value as arguments.
+5. Use a standard for loop to search the elements of the `arrayList`.
+   - If the target value is found, it returns the index of that element.
+   - If the target value is not found after checking all elements, it returns `-1`.
+6. The program prints the result: the index of the found number or a message indicating that the number was not found.
+7. Comment throughout your program as appropriate.
+8. Include test samples to show that your program works as intended.
+
+**Sample Output:**
+
+```
+Generated ArrayList of 100 numbers:
+[376, 712, 944, 45, 673, 355, 32, 105, 907, 809, 228, 66, 175, 296, 54, 75, 531, 635, 853, 11, 952, 409, 609, 978, 822, 510, 83, 696, 414, 971, 777, 719, 574, 27, 95, 332, 840, 305, 868, 566, 711, 284, 392, 602, 576, 142, 220, 50, 640, 156, 110, 787, 988, 991, 74, 82, 226, 473, 436, 559, 447, 478, 267, 408, 428, 586, 830, 139, 507, 161, 23, 42, 221, 136, 446, 161, 191, 94, 735, 369, 198, 415, 342, 622, 380, 839, 758, 602, 998, 108, 347, 351, 673, 208, 602, 92, 589, 198, 900, 945]
+
+Enter a number to search for: 96
+The number 96 was not found in the ArrayList.
+```
+
+
+</details>  
+
+
+---
 
 
 ## 7.6 Sorting
