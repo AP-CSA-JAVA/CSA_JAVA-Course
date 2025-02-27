@@ -252,7 +252,7 @@ fruits.add("Banana");
 fruit.add(2, "blueberry");
 fruit.add(3, "strawberry");
 fruit.add(4, null); // you can assign null to an arrayList 
-fruit.add(5,null);
+fruit.add(5, null);
 ```
 
 2.	**get(index)**: Retrieves the element at the specified index in the ArrayList.  The **get(index)** method does not return `false` if an index is not found; instead it throws an `IndexOutOfBoundsException` because the index is out of range.
