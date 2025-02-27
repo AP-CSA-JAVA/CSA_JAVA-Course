@@ -275,7 +275,7 @@
 <p><strong>Syntax to Create an ArrayList</strong>:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
 <span class="c1">// `Type` is the type of objects the list will hold.</span>
-<span class="c1">// Example, `Int`, `String`, `boolean`, &#39;double&#39;</span>
+<span class="c1">// Example, `Integer`, `String`, `Boolean`, `Double`, `Float`</span>
 </pre></div>
 </div>
 <p><strong>Example</strong>:</p>
@@ -1002,7 +1002,60 @@ Appropriately comment throughout your program and provide test cases to verify t
 <span class="n">Orange</span>
 </pre></div>
 </div>
+<section id="activity-3-7-3-traversing-arrays">
+<h3>Activity 3.7.3 Traversing Arrays<a class="headerlink" href="#activity-3-7-3-traversing-arrays" title="Link to this heading">¶</a></h3>
+<details><summary> Click Here </summary>
+<p><strong>Instructions</strong>:  Complete the following programs by using a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop and an <code class="docutils literal notranslate"><span class="pre">Enhanced</span> <span class="pre">for</span></code> loop.</p>
+<p><strong>Program 1</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">TraversingArrayList</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Creating an ArrayList of Integers</span>
+<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">numbers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<span class="w">        </span><span class="n">numbers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+<span class="w">        </span><span class="n">numbers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">30</span><span class="p">);</span>
+<span class="w">        </span><span class="n">numbers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">40</span><span class="p">);</span>
+<span class="w">        </span><span class="n">numbers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Standard for loop to print each number</span>
+
+
+<span class="w">        </span><span class="c1">// Enhanced for loop to print each number</span>
+
+
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Program 2</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Creating an ArrayList of Integers</span>
+<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">numbers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<span class="w">        </span><span class="n">numbers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+<span class="w">        </span><span class="n">numbers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">30</span><span class="p">);</span>
+<span class="w">        </span><span class="n">numbers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">40</span><span class="p">);</span>
+<span class="w">        </span><span class="n">numbers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Calculating the sum using the standard for loop</span>
+<span class="w">        </span>
+
+<span class="w">        </span><span class="c1">// Calculating the sum using the enhanced for loop</span>
+
+
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</details>
 </section>
+</section>
+<hr class="docutils" />
 <section id="developing-algorithms-using-arraylists">
 <h2>7.4 Developing Algorithms Using ArrayLists<a class="headerlink" href="#developing-algorithms-using-arraylists" title="Link to this heading">¶</a></h2>
 <p><strong>Goals</strong></p>
@@ -1450,7 +1503,10 @@ Hoboken, New Jersey: Wiley, 2003.</p>
 <li><a class="reference internal" href="#project-3-7-2-student-management-system">Project 3.7.2 Student Management System</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#traversing-arraylists">7.3 Traversing ArrayLists</a></li>
+<li><a class="reference internal" href="#traversing-arraylists">7.3 Traversing ArrayLists</a><ul>
+<li><a class="reference internal" href="#activity-3-7-3-traversing-arrays">Activity 3.7.3 Traversing Arrays</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#developing-algorithms-using-arraylists">7.4 Developing Algorithms Using ArrayLists</a></li>
 <li><a class="reference internal" href="#searching">7.5 Searching</a></li>
 <li><a class="reference internal" href="#sorting">7.6 Sorting</a></li>

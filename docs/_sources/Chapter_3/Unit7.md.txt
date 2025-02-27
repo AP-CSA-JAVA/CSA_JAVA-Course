@@ -8,7 +8,7 @@ An `ArrayList` in Java is a dynamic array-like structure that can store elements
 ```java
 ArrayList<Type> list = new ArrayList<>();
 // `Type` is the type of objects the list will hold.
-// Example, `Int`, `String`, `boolean`, 'double'
+// Example, `Integer`, `String`, `Boolean`, `Double`, `Float`
 ```
 
 
@@ -694,6 +694,66 @@ Apple
 Banana
 Orange
 ```
+
+### Activity 3.7.3 Traversing Arrays
+
+<details><summary> Click Here </summary>
+
+**Instructions**:  Complete the following programs by using a `for` loop and an `Enhanced for` loop.
+
+**Program 1**
+
+```java
+import java.util.ArrayList;
+
+public class TraversingArrayList {
+    public static void main(String[] args) {
+        // Creating an ArrayList of Integers
+        ArrayList<Integer> numbers = new ArrayList<>();
+        numbers.add(10);
+        numbers.add(20);
+        numbers.add(30);
+        numbers.add(40);
+        numbers.add(50);
+
+        // Standard for loop to print each number
+
+
+        // Enhanced for loop to print each number
+
+
+    }
+}
+```
+**Program 2**
+
+```java
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        // Creating an ArrayList of Integers
+        ArrayList<Integer> numbers = new ArrayList<>();
+        numbers.add(10);
+        numbers.add(20);
+        numbers.add(30);
+        numbers.add(40);
+        numbers.add(50);
+
+        // Calculating the sum using the standard for loop
+        
+
+        // Calculating the sum using the enhanced for loop
+
+
+    }
+}
+```
+
+</details>
+
+---
+
 
 ## 7.4 Developing Algorithms Using ArrayLists
 **Goals**
