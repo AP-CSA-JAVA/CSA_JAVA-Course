@@ -969,7 +969,7 @@ Using contains(): Banana found? true
 Using iteration: Banana found? true
 ```
 
-### Activity 3.7.6 Searching
+### Activity 3.7.5 Searching
 
 <details><summary> Click Here </summary>
 
