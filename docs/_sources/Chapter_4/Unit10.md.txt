@@ -7,7 +7,7 @@
 - Trace the results of a recursive call to determine the results.
 - Rewrite a recursive algorithm as an interactive method.
 
-In Java, multiple inheritance can be achieved through interfaces, and we can use an ArrayList along with recursion to demonstrate the concept. Let's create a program that models a hierarchy of employees in a company using multiple inheritance through interfaces. We'll also use recursion to calculate the total salary of all employees in the hierarchy.
+In Java, multiple inheritance can be achieved through interfaces, and we can use an ArrayList along with recursion to demonstrate the concept. Below is a program that models the hierarchy of employees in a company using multiple inheritance through interfaces. We'll also use recursion to calculate the total salary of all employees in the hierarchy.
 
 ```java
 import java.util.ArrayList;
@@ -29,7 +29,6 @@ class Manager implements Employee {
         subordinates.add(employee);
     }
 
-    @Override
     public double getSalary() {
         double totalSalary = baseSalary;
         for (Employee subordinate : subordinates) {
@@ -46,7 +45,6 @@ class RegularEmployee implements Employee {
         this.salary = salary;
     }
 
-    @Override
     public double getSalary() {
         return salary;
     }
@@ -76,10 +74,20 @@ In this program, we have three classes: Employee, Manager, and RegularEmployee. 
 
 The main method creates instances of employees and managers, arranges them in a hierarchy, and then calculates the total salary using recursion through the getSalary() method of the Manager class. The program outputs the total salaries for the managers and their subordinates.
 
--------------------------------------------------------------------------------------------------------------------------
+---
 
 
-Recursion is the technique of making a function call itself. This technique provides a way to break complicated problems down into simple problems which are easier to solve.
+**Recursion** is a concept in programming where a method calls itself in order to solve a problem. It breaks down a problem into smaller, simpler versions of the same problem. Recursion is particularly useful in problems that have a repetitive structure, such as tree traversals, 
+factorial calculations, and Fibonacci sequences.
+
+**Key Concepts of Recursion**
+1. **Base Case**: Every recursive function needs a base case that stops the recursion. If there is no base case, the recursion will continue indefinitely, leading to a stack overflow.
+2. **Recursive Case**: This is the part of the function that breaks the problem into smaller subproblems and calls the function itself with those smaller inputs.
+
+**Steps to Writing Recursive Functions**
+- **Identify the base case**: This is the simplest scenario where the function doesn’t need to call itself again.
+- **Define the recursive case**: The function should call itself with a smaller or simpler version of the problem.
+- **Ensure progress towards the base case**: Each recursive call should make progress towards reaching the base case.
 
 Recursion can be challenging, but the best way to understand the nuances of it, is to experiment with it.  The basics of a recursive method is the recursive call and the base case.  The recursive call, calls itself.  It can start over with the same parameter or a different one.  After x calls, we reach the base case where the recusion is stopped.
 
@@ -98,6 +106,17 @@ public static void Main()
   }
 }
 ```
+
+
+Let’s take the example of calculating the factorial of a number (n!). The factorial of a number is defined as:
+- `n! = n * (n-1) * (n-2) * ... * 1`
+- Special case: `0! = 1`
+
+
+The recursive approach to calculating factorial can be described as:
+- Base case: `factorial(0)` or `factorial(1)` is `1`.
+- Recursive case: `factorial(n) = n * factorial(n - 1)`.
+
 
 ```java
 //Recursion Example

@@ -277,7 +277,7 @@
 <li><p>Trace the results of a recursive call to determine the results.</p></li>
 <li><p>Rewrite a recursive algorithm as an interactive method.</p></li>
 </ul>
-<p>In Java, multiple inheritance can be achieved through interfaces, and we can use an ArrayList along with recursion to demonstrate the concept. Let’s create a program that models a hierarchy of employees in a company using multiple inheritance through interfaces. We’ll also use recursion to calculate the total salary of all employees in the hierarchy.</p>
+<p>In Java, multiple inheritance can be achieved through interfaces, and we can use an ArrayList along with recursion to demonstrate the concept. Below is a program that models the hierarchy of employees in a company using multiple inheritance through interfaces. We’ll also use recursion to calculate the total salary of all employees in the hierarchy.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
 
 <span class="kd">interface</span> <span class="nc">Employee</span><span class="w"> </span><span class="p">{</span>
@@ -297,7 +297,6 @@
 <span class="w">        </span><span class="n">subordinates</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">employee</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 
-<span class="w">    </span><span class="nd">@Override</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getSalary</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">totalSalary</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">baseSalary</span><span class="p">;</span>
 <span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Employee</span><span class="w"> </span><span class="n">subordinate</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">subordinates</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -314,7 +313,6 @@
 <span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">salary</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">salary</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 
-<span class="w">    </span><span class="nd">@Override</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getSalary</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">salary</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
@@ -343,7 +341,19 @@
 <p>In this program, we have three classes: Employee, Manager, and RegularEmployee. The Employee interface ensures that both Manager and RegularEmployee classes have a getSalary() method. The Manager class contains an ArrayList of subordinates, and the addSubordinate() method is used to add employees to the manager’s team.</p>
 <p>The main method creates instances of employees and managers, arranges them in a hierarchy, and then calculates the total salary using recursion through the getSalary() method of the Manager class. The program outputs the total salaries for the managers and their subordinates.</p>
 <hr class="docutils" />
-<p>Recursion is the technique of making a function call itself. This technique provides a way to break complicated problems down into simple problems which are easier to solve.</p>
+<p><strong>Recursion</strong> is a concept in programming where a method calls itself in order to solve a problem. It breaks down a problem into smaller, simpler versions of the same problem. Recursion is particularly useful in problems that have a repetitive structure, such as tree traversals,
+factorial calculations, and Fibonacci sequences.</p>
+<p><strong>Key Concepts of Recursion</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Base Case</strong>: Every recursive function needs a base case that stops the recursion. If there is no base case, the recursion will continue indefinitely, leading to a stack overflow.</p></li>
+<li><p><strong>Recursive Case</strong>: This is the part of the function that breaks the problem into smaller subproblems and calls the function itself with those smaller inputs.</p></li>
+</ol>
+<p><strong>Steps to Writing Recursive Functions</strong></p>
+<ul class="simple">
+<li><p><strong>Identify the base case</strong>: This is the simplest scenario where the function doesn’t need to call itself again.</p></li>
+<li><p><strong>Define the recursive case</strong>: The function should call itself with a smaller or simpler version of the problem.</p></li>
+<li><p><strong>Ensure progress towards the base case</strong>: Each recursive call should make progress towards reaching the base case.</p></li>
+</ul>
 <p>Recursion can be challenging, but the best way to understand the nuances of it, is to experiment with it.  The basics of a recursive method is the recursive call and the base case.  The recursive call, calls itself.  It can start over with the same parameter or a different one.  After x calls, we reach the base case where the recusion is stopped.</p>
 <p>The basic structure will look something like this:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">()</span>
@@ -359,6 +369,16 @@
 <span class="p">}</span>
 </pre></div>
 </div>
+<p>Let’s take the example of calculating the factorial of a number (n!). The factorial of a number is defined as:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">n!</span> <span class="pre">=</span> <span class="pre">n</span> <span class="pre">*</span> <span class="pre">(n-1)</span> <span class="pre">*</span> <span class="pre">(n-2)</span> <span class="pre">*</span> <span class="pre">...</span> <span class="pre">*</span> <span class="pre">1</span></code></p></li>
+<li><p>Special case: <code class="docutils literal notranslate"><span class="pre">0!</span> <span class="pre">=</span> <span class="pre">1</span></code></p></li>
+</ul>
+<p>The recursive approach to calculating factorial can be described as:</p>
+<ul class="simple">
+<li><p>Base case: <code class="docutils literal notranslate"><span class="pre">factorial(0)</span></code> or <code class="docutils literal notranslate"><span class="pre">factorial(1)</span></code> is <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
+<li><p>Recursive case: <code class="docutils literal notranslate"><span class="pre">factorial(n)</span> <span class="pre">=</span> <span class="pre">n</span> <span class="pre">*</span> <span class="pre">factorial(n</span> <span class="pre">-</span> <span class="pre">1)</span></code>.</p></li>
+</ul>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">//Recursion Example</span>
 <span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">RecursionExample</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
