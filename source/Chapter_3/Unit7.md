@@ -838,7 +838,7 @@ Explanation:
 ArrayList using for-each loop:
 10 20 30 40 50 
 Modified ArrayList using iterator:
-10 20 40 50 
+10 20 50 
 Combined ArrayList:
 10 20 40 50 Apple Banana Orange Mango Grapes
 ```
