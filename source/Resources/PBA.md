@@ -1,0 +1,17 @@
+### 4-Point Rubric for Java Program Performance-Based Assessment
+
+| **Criteria**               | **4 - Exemplary**                                                        | **3 - Proficient**                                                       | **2 - Basic**                                                             | **1 - Needs Improvement**                                                   |
+|----------------------------|-------------------------------------------------------------------------|-------------------------------------------------------------------------|---------------------------------------------------------------------------|-----------------------------------------------------------------------------|
+| **Functionality & Task Completion** | The program fully meets all requirements and functions flawlessly, with no errors or bugs. | The program meets most requirements and functions well with minimal errors or bugs. | The program meets some of the requirements but has multiple errors or does not work as intended in some cases. | The program does not meet the requirements and fails to function as intended. |
+| **Code Structure & Organization** | Code is well-organized, with clear separation of functions and well-chosen variable/method names; easy to follow. | Code is organized, with most functions clearly defined; variable/method names are mostly clear. | Code is somewhat disorganized or difficult to follow; variable/method names lack clarity in some areas. | Code is poorly organized and difficult to follow; variable/method names are unclear or inconsistent. |
+| **Efficiency & Optimization** | Code is highly efficient and optimized, using best practices (e.g., time complexity is minimized, avoids redundant operations). | Code is mostly efficient and optimized, with few areas that could be improved in terms of performance. | Code is somewhat inefficient, with redundancies or suboptimal solutions in some areas. | Code is inefficient, with major issues in performance or unnecessary redundancies. |
+| **Documentation & Comments** | Code is thoroughly documented with clear, concise comments explaining the logic, steps, and purpose of code blocks. | Code is well-documented, with most important sections commented and explanations of the logic. | Code has minimal documentation or comments, and explanations are incomplete or unclear. | Code has little to no documentation or comments, making it difficult to understand the logic. |
+
+### Rubric Breakdown:
+1. **Functionality & Task Completion**: Assesses whether the program runs as expected and meets all functional requirements. A "4" is awarded for flawless functionality, while lower scores reflect missing or faulty features.
+   
+2. **Code Structure & Organization**: Focuses on the readability and maintainability of the code. A "4" is given for well-organized, modular code that is easy to understand. Lower scores are given if the code is disorganized or poorly structured.
+   
+3. **Efficiency & Optimization**: Evaluates how well the code performs in terms of time and space complexity, especially for larger datasets or more complex operations. A "4" indicates optimized and well-thought-out code. Lower scores indicate inefficiency or redundant code.
+
+4. **Documentation & Comments**: Examines the quality and completeness of inline comments and code documentation, which is critical for understanding the purpose and functionality of the code. Higher scores are awarded for clear, thorough documentation.
