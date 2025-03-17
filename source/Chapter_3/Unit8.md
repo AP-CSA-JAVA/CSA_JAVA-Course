@@ -45,6 +45,13 @@ Creating a 2D array is easy.  First you must declare the type of an array that y
 // my preferred initialization method of a 2D array
 int[][] newArray = new int[3][5];
 
+// minimum requirement is for you to define the rows.
+// you will need to dynamically intialize the columns for each row after the array is created.
+int[][] newArray = new int[3][];
+newArray[0] = new int[]{1, 2, 3, 4, 5};
+newArray[1] = new int[]{6, 7, 8, 9, 10};
+newArray[2] = new int[]{11, 12, 13, 14, 15};
+
 // The minimum required is declaring the data type, 
 // 2 open/close brackets, and the array name.
 int newArray [][];
