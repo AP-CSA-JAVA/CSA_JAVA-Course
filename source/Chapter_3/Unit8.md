@@ -6,7 +6,7 @@ Below is a comparison of arrays and 2D arrays showing the similarities and diffe
 |-------------------------|-----------------------------------------------------|-----------------------------------------------------|
 | **Definition**           | A single-dimensional collection of elements.        | A collection of elements arranged in rows and columns, forming a matrix-like structure. |
 | **Syntax**               | `type[] arrayName = new type[size];`                 | `type[][] arrayName = new type[rows][columns];`     |
-| **Initialization**       | Can be initialized with a single set of values: `int[] arr = {1, 2, 3};` | Initialized with a two-dimensional array: /n `int[][] arr = {{1, 2}, {3, 4}};` |
+| **Initialization**       | Can be initialized with a single set of values: `int[] arr = {1, 2, 3};` | Initialized with a two-dimensional array: "/n" `int[][] arr = {{1, 2}, {3, 4}};` |
 | **Example Code**         | `int[] arr = new int[5];`                           | `int[][] arr = new int[3][3];`                     |
 | **Storage**              | Stores elements in a linear memory structure.       | Stores elements in a matrix (row × column) structure. |
 | **Accessing Elements**   | Accessed via a single index: `arrayName[index]`.    | Accessed via two indices: `arrayName[row][column]`. |
