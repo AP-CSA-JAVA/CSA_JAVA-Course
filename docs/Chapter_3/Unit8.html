@@ -287,6 +287,14 @@
 <td><p><code class="docutils literal notranslate"><span class="pre">type[]</span> <span class="pre">arrayName</span> <span class="pre">=</span> <span class="pre">new</span> <span class="pre">type[size];</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">type[][]</span> <span class="pre">arrayName</span> <span class="pre">=</span> <span class="pre">new</span> <span class="pre">type[rows][columns];</span></code></p></td>
 </tr>
+<tr class="row-even"><td><p><strong>Initialization</strong></p></td>
+<td><p>Can be initialized with a single set of values: <code class="docutils literal notranslate"><span class="pre">int[]</span> <span class="pre">arr</span> <span class="pre">=</span> <span class="pre">{1,</span> <span class="pre">2,</span> <span class="pre">3};</span></code></p></td>
+<td><p>Initialized with a two-dimensional array: <code class="docutils literal notranslate"><span class="pre">int[][]</span> <span class="pre">arr</span> <span class="pre">=</span> <span class="pre">{{1,</span> <span class="pre">2},</span> <span class="pre">{3,</span> <span class="pre">4}};</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Example Code</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">int[]</span> <span class="pre">arr</span> <span class="pre">=</span> <span class="pre">new</span> <span class="pre">int[5];</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">int[][]</span> <span class="pre">arr</span> <span class="pre">=</span> <span class="pre">new</span> <span class="pre">int[3][3];</span></code></p></td>
+</tr>
 <tr class="row-even"><td><p><strong>Storage</strong></p></td>
 <td><p>Stores elements in a linear memory structure.</p></td>
 <td><p>Stores elements in a matrix (row × column) structure.</p></td>
@@ -298,14 +306,6 @@
 <tr class="row-even"><td><p><strong>Indexing</strong></p></td>
 <td><p>Starts at 0 and goes up to <code class="docutils literal notranslate"><span class="pre">size-1</span></code>.</p></td>
 <td><p>Starts at 0 for both rows and columns.</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>Initialization</strong></p></td>
-<td><p>Can be initialized with a single set of values: <code class="docutils literal notranslate"><span class="pre">int[]</span> <span class="pre">arr</span> <span class="pre">=</span> <span class="pre">{1,</span> <span class="pre">2,</span> <span class="pre">3};</span></code></p></td>
-<td><p>Initialized with a two-dimensional array: <code class="docutils literal notranslate"><span class="pre">int[][]</span> <span class="pre">arr</span> <span class="pre">=</span> <span class="pre">{{1,</span> <span class="pre">2},</span> <span class="pre">{3,</span> <span class="pre">4}};</span></code></p></td>
-</tr>
-<tr class="row-even"><td><p><strong>Example Code</strong></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">int[]</span> <span class="pre">arr</span> <span class="pre">=</span> <span class="pre">new</span> <span class="pre">int[5];</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">int[][]</span> <span class="pre">arr</span> <span class="pre">=</span> <span class="pre">new</span> <span class="pre">int[3][3];</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Memory Representation</strong></p></td>
 <td><p>Stored in a single contiguous memory block.</p></td>
