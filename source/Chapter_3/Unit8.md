@@ -10,18 +10,18 @@ Below is a comparison of arrays and 2D arrays showing the similarities and diffe
 | **Accessing Elements**   | Accessed via a single index: `arrayName[index]`.    | Accessed via two indices: `arrayName[row][column]`. |
 | **Indexing**             | Starts at 0 and goes up to `size-1`.                | Starts at 0 for both rows and columns.             |
 | **Initialization**       | Can be initialized with a single set of values: `int[] arr = {1, 2, 3};` | Initialized with a two-dimensional array: `int[][] arr = {{1, 2}, {3, 4}};` |
+| **Example Code**         | `int[] arr = new int[5];`                           | `int[][] arr = new int[3][3];`                     |
 | **Memory Representation**| Stored in a single contiguous memory block.         | Internally, it is an array of arrays (an array of references to other arrays). |
 | **Dimensionality**       | 1D (single dimension).                             | 2D (two dimensions).                               |
-| **Example Code**         | `int[] arr = new int[5];`                           | `int[][] arr = new int[3][3];`                     |
 | **Use Case**             | Suitable for lists of items that are one-dimensional. | Suitable for matrices, grids, tables, etc.         |
 
-### Key Similarities:
+**Key Similarities**:
 - Both Java arrays and 2D arrays are fixed in size once they are initialized.
 - Both use 0-based indexing.
 - Both can be populated with a set of elements, either at initialization or afterward.
 - Both are objects in Java (with 2D arrays being objects of arrays).
 
-### Key Differences:
+**Key Differences**:
 - A Java array is a one-dimensional collection, while a 2D array represents a collection in two dimensions (rows and columns).
 - 2D arrays involve an extra level of indexing (row and column) compared to single-indexed arrays.
 
@@ -46,16 +46,18 @@ Creating a 2D array is easy.  First you must declare the type of an array that y
 int[][] newArray = new int[3][5];
 
 // minimum requirement is for you to define the rows.
-// you will need to dynamically intialize the columns for each row after the array is created.
 int[][] newArray = new int[3][];
 newArray[0] = new int[]{1, 2, 3, 4, 5};
 newArray[1] = new int[]{6, 7, 8, 9, 10};
-newArray[2] = new int[]{11, 12, 13, 14, 15};
+newArray[2] = new int[]{11, 12, 13, 14, 15, 16};
 
 // The minimum required is declaring the data type, 
 // 2 open/close brackets, and the array name.
 int newArray [][];
 ```
+
+**Note**: ***Dynamically initializing** columns for each row: Instead of specifying a fixed number of columns when you create the array, you create each row and then determine the number of columns for that particular row at runtime.*
+
 
 Much like one-dimensional arrays:
 - the size of the array cannot be changed after being initialized
