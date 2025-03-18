@@ -6,11 +6,11 @@ Below is a comparison of arrays and 2D arrays showing the similarities and diffe
 |-------------------------|-----------------------------------------------------|-----------------------------------------------------|
 | **Definition**           | A single-dimensional collection of elements.        | A collection of elements arranged in rows and columns, forming a matrix-like structure. |
 | **Syntax**               | `type[] arrayName = new type[size];`                 | `type[][] arrayName = new type[rows][columns];`     |
+| **Initialization**       | Can be initialized with a single set of values: `int[] arr = {1, 2, 3};` | Initialized with a two-dimensional array: `int[][] arr = {{1, 2}, {3, 4}};` |
+| **Example Code**         | `int[] arr = new int[5];`                           | `int[][] arr = new int[3][3];`                     |
 | **Storage**              | Stores elements in a linear memory structure.       | Stores elements in a matrix (row × column) structure. |
 | **Accessing Elements**   | Accessed via a single index: `arrayName[index]`.    | Accessed via two indices: `arrayName[row][column]`. |
 | **Indexing**             | Starts at 0 and goes up to `size-1`.                | Starts at 0 for both rows and columns.             |
-| **Initialization**       | Can be initialized with a single set of values: `int[] arr = {1, 2, 3};` | Initialized with a two-dimensional array: `int[][] arr = {{1, 2}, {3, 4}};` |
-| **Example Code**         | `int[] arr = new int[5];`                           | `int[][] arr = new int[3][3];`                     |
 | **Memory Representation**| Stored in a single contiguous memory block.         | Internally, it is an array of arrays (an array of references to other arrays). |
 | **Dimensionality**       | 1D (single dimension).                             | 2D (two dimensions).                               |
 | **Use Case**             | Suitable for lists of items that are one-dimensional. | Suitable for matrices, grids, tables, etc.         |
