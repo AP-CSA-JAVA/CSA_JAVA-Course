@@ -18,28 +18,27 @@ Key concepts and keywords for **Java Inheritance**:
 2. **Superclass (Parent Class)**: The class being inherited from.
 3. **Subclass (Child Class)**: The class that inherits from the superclass.
 4. **`extends` keyword**: Used to indicate that a class is inheriting from another class.
-5. **Overriding**: Redefining a method in the subclass to provide a specific implementation.
-6. **`@Override` annotation**: Used to indicate that a method is overriding a method in the superclass.
-7. **`super` keyword**: Used to refer to the superclass’s fields and methods, including calling the superclass constructor.  **`super()`**: Calls the superclass's constructor.
-9. **Method Overloading**: Having multiple methods in the same class with the same name but different parameter types.
-10. **Method Overriding**: A subclass provides its own implementation of a method already defined in its superclass.
-12. **Access Modifiers**: Controls access to inherited methods and fields (e.g., `public`, `protected`, `private`).
-13. **Polymorphism**: The ability to treat an object of a subclass as if it were an object of the superclass. It is usually used in conjunction with method overriding.
-14. **Upcasting**: Assigning an object of a subclass to a variable of the superclass type.
-15. **Downcasting**: Casting a superclass reference back to a subclass type (can lead to `ClassCastException`).
-16. **Abstract Classes**: Classes that cannot be instantiated and may contain abstract methods (methods without a body) that must be implemented by subclasses.  It may contain abstract methods (methods without a body) as well as non-abstract methods (methods with implementations). The purpose of an abstract class is to provide a base for other classes to inherit from. It is often used to define a common interface or shared functionality for subclasses while enforcing a certain structure.
+5. **Overriding**: Redefining a method in the subclass to provide a specific implementation.  `@Override` **annotation**: Used to indicate that a method is overriding a method in the superclass.
+6. **`super` keyword**: Used to refer to the superclass’s fields and methods, including calling the superclass constructor.  **`super()`**: Calls the superclass's constructor.
+7. **Method Overloading**: Having multiple methods in the same class with the same name but different parameter types.
+8. **Method Overriding**: A subclass provides its own implementation of a method already defined in its superclass.
+9. **Access Modifiers**: Controls access to inherited methods and fields (e.g., `public`, `protected`, `private`).
+10. **Polymorphism**: The ability to treat an object of a subclass as if it were an object of the superclass. It is usually used in conjunction with method overriding.
+11. **Upcasting**: Assigning an object of a subclass to a variable of the superclass type.
+12. **Downcasting**: Casting a superclass reference back to a subclass type (can lead to `ClassCastException`).
+13. **Abstract Classes**: Classes that cannot be instantiated and may contain abstract methods (methods without a body) that must be implemented by subclasses.  It may contain abstract methods (methods without a body) as well as non-abstract methods (methods with implementations). The purpose of an abstract class is to provide a base for other classes to inherit from. It is often used to define a common interface or shared functionality for subclasses while enforcing a certain structure.
     - Key points about abstract classes:
         - It can have both abstract (without implementation) and non-abstract methods (with implementation).
         - It can have instance variables (fields) and constructors.
         - It is declared using the `abstract` keyword.
-17. **Abstract Methods**: Methods in an abstract class that do not have a body and must be implemented in concrete subclasses. An `abstract method` is a method that is declared without a body in an abstract class (or an interface). Abstract methods define a signature (name, parameters, and return type) but do not provide the actual implementation. Any subclass of an abstract class is required to implement all of its abstract methods unless the subclass is also abstract.
+14. **Abstract Methods**: Methods in an abstract class that do not have a body and must be implemented in concrete subclasses. An `abstract method` is a method that is declared without a body in an abstract class (or an interface). Abstract methods define a signature (name, parameters, and return type) but do not provide the actual implementation. Any subclass of an abstract class is required to implement all of its abstract methods unless the subclass is also abstract.
     - Key points about abstract methods:
         - It cannot have a body (no implementation).
         - It must be implemented by a concrete (non-abstract) subclass.
         - It is declared using the `abstract` keyword.
-18. **`instanceof` Operator**: Checks whether an object is an instance of a particular class or subclass.
-19. **Constructors in Inheritance**: Subclasses may call the constructor of the superclass using `super()`, and can also have their own constructors.
-20. **`this` keyword**: Refers to the current object in the subclass.
+15. **`instanceof` Operator**: Checks whether an object is an instance of a particular class or subclass.
+16. **Constructors in Inheritance**: Subclasses may call the constructor of the superclass using `super()`, and can also have their own constructors.
+17. **`this` keyword**: Refers to the current object in the subclass.
 
 **Key Terms**:
 1. **Single Inheritance**: A subclass inherits from only one superclass.
