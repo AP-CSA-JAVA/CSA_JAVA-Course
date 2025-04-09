@@ -287,17 +287,36 @@
 <li><p><strong>Subclass (Child Class)</strong>: The class that inherits from the superclass.</p></li>
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">extends</span></code> keyword</strong>: Used to indicate that a class is inheriting from another class.</p></li>
 <li><p><strong>Overriding</strong>: Redefining a method in the subclass to provide a specific implementation.</p></li>
-<li><p><strong><code class="docutils literal notranslate"><span class="pre">super</span></code> keyword</strong>: Used to refer to the superclass’s fields and methods, including calling the superclass constructor.</p></li>
-<li><p><strong><code class="docutils literal notranslate"><span class="pre">super()</span></code></strong>: Calls the superclass’s constructor.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">&#64;Override</span></code> annotation</strong>: Used to indicate that a method is overriding a method in the superclass.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">super</span></code> keyword</strong>: Used to refer to the superclass’s fields and methods, including calling the superclass constructor.  <strong><code class="docutils literal notranslate"><span class="pre">super()</span></code></strong>: Calls the superclass’s constructor.</p></li>
 <li><p><strong>Method Overloading</strong>: Having multiple methods in the same class with the same name but different parameter types.</p></li>
 <li><p><strong>Method Overriding</strong>: A subclass provides its own implementation of a method already defined in its superclass.</p></li>
-<li><p><strong><code class="docutils literal notranslate"><span class="pre">&#64;Override</span></code> annotation</strong>: Used to indicate that a method is overriding a method in the superclass.</p></li>
 <li><p><strong>Access Modifiers</strong>: Controls access to inherited methods and fields (e.g., <code class="docutils literal notranslate"><span class="pre">public</span></code>, <code class="docutils literal notranslate"><span class="pre">protected</span></code>, <code class="docutils literal notranslate"><span class="pre">private</span></code>).</p></li>
 <li><p><strong>Polymorphism</strong>: The ability to treat an object of a subclass as if it were an object of the superclass. It is usually used in conjunction with method overriding.</p></li>
 <li><p><strong>Upcasting</strong>: Assigning an object of a subclass to a variable of the superclass type.</p></li>
 <li><p><strong>Downcasting</strong>: Casting a superclass reference back to a subclass type (can lead to <code class="docutils literal notranslate"><span class="pre">ClassCastException</span></code>).</p></li>
-<li><p><strong>Abstract Classes</strong>: Classes that cannot be instantiated and may contain abstract methods (methods without a body) that must be implemented by subclasses.</p></li>
-<li><p><strong>Abstract Methods</strong>: Methods in an abstract class that do not have a body and must be implemented in concrete subclasses.</p></li>
+<li><p><strong>Abstract Classes</strong>: Classes that cannot be instantiated and may contain abstract methods (methods without a body) that must be implemented by subclasses.  It may contain abstract methods (methods without a body) as well as non-abstract methods (methods with implementations). The purpose of an abstract class is to provide a base for other classes to inherit from. It is often used to define a common interface or shared functionality for subclasses while enforcing a certain structure.</p>
+<ul class="simple">
+<li><p>Key points about abstract classes:</p>
+<ul>
+<li><p>It can have both abstract (without implementation) and non-abstract methods (with implementation).</p></li>
+<li><p>It can have instance variables (fields) and constructors.</p></li>
+<li><p>It is declared using the <code class="docutils literal notranslate"><span class="pre">abstract</span></code> keyword.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Abstract Methods</strong>: Methods in an abstract class that do not have a body and must be implemented in concrete subclasses. An <code class="docutils literal notranslate"><span class="pre">abstract</span> <span class="pre">method</span></code> is a method that is declared without a body in an abstract class (or an interface). Abstract methods define a signature (name, parameters, and return type) but do not provide the actual implementation. Any subclass of an abstract class is required to implement all of its abstract methods unless the subclass is also abstract.</p>
+<ul class="simple">
+<li><p>Key points about abstract methods:</p>
+<ul>
+<li><p>It cannot have a body (no implementation).</p></li>
+<li><p>It must be implemented by a concrete (non-abstract) subclass.</p></li>
+<li><p>It is declared using the <code class="docutils literal notranslate"><span class="pre">abstract</span></code> keyword.</p></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">instanceof</span></code> Operator</strong>: Checks whether an object is an instance of a particular class or subclass.</p></li>
 <li><p><strong>Constructors in Inheritance</strong>: Subclasses may call the constructor of the superclass using <code class="docutils literal notranslate"><span class="pre">super()</span></code>, and can also have their own constructors.</p></li>
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">this</span></code> keyword</strong>: Refers to the current object in the subclass.</p></li>
