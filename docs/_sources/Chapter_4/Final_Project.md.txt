@@ -4,10 +4,10 @@ Your White Tower Project is to design and develop a Java computer program of you
 
 ### RULES FOR THE PROJECT:
 1) You can work on the project by yourself or have a **team**<sup>1</sup>.
-2) Written **Executive Summary**<sup>2</sup> why you decided to do this particular project.  
+2) Written **Executive Summary**<sup>2</sup> why you decided to do this particular project (4 points).  
 3) The project must be in **java**.
 4) The project must be approved prior to you/ your team developing your program.
-5) Your program must be created by you and/or your peers.  Plagiarizing code will not be accepted.
+5) Your program must be created by you and/or your peers.  Plagiarizing code will not be accepted (existing programs/ program segments, AI).
 6) You must **comment** out your code where appropriate.
 7) You must have an [**explanation**](https://ap-csa-java.github.io/CSA_JAVA-Course/home.html#java-style-guidelines) of the purpose of your program at the beginning of your program.
 8) Your program should include, but not limited to: *variables, arrays/ arrayList, nested iterations, loops, Boolean logic, constructors, toString*, inheritance
@@ -35,9 +35,9 @@ Your White Tower Project is to design and develop a Java computer program of you
 |  | ***toString Method*** | 5 |
 |  | ***inheritance*** | 5 |
 |    |
-| 5/31 | **Deliverables for your White Tower Project:** |  |
+| 5/23 | **Deliverables for your White Tower Project:** |  |
 |  | Submission of your written proposal (revised if needed) and/or supporting documentation | 10 |
-|  | Program Code appropriately commented (Block Code) as a .txt/.java file using the [Java Style Guide](https://ap-csa-java.github.io/CSA_JAVA-Course/home.html#java-style-guidelines)  | 20 |
+|  | Program Code appropriately commented (Block Code) as a .java file using the [Java Style Guide](https://ap-csa-java.github.io/CSA_JAVA-Course/home.html#java-style-guidelines)  | 20 |
 |  | Include at least four test cases that demonstrates your program working as intended while also looking for conditions that break your program.<sup>**</sup> | 12 |
 |  | Video of your program running with narration (length no more than 2 minutes) | 8 | 
 |  | **TOTAL POINTS** | 100 |
