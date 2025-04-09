@@ -77,6 +77,7 @@ class Animal {
 }
 
 class Dog extends Animal {
+    @Override
     void sound() {
         System.out.println("Dog barks.");
     }
@@ -104,6 +105,7 @@ interface Fly {
 }
 
 class Bird implements Swim, Fly {
+    @Override
     public void swim() {
         System.out.println("Bird can swim.");
     }
@@ -134,12 +136,14 @@ class Vehicle {
 }
 
 class Car extends Vehicle {
+    @Override
     void honk() {
         System.out.println("Car honks.");
     }
 }
 
 class Sedan extends Car {
+    @Override
     void fuelType() {
         System.out.println("Sedan uses petrol for fuel.");
     }
@@ -167,12 +171,14 @@ class Shape {
 }
 
 class Circle extends Shape {
+    @Override
     void draw() {
         System.out.println("Circle can be drawn.");
     }
 }
 
 class Square extends Shape {
+    @Override
     void draw() {
         System.out.println("Square can be drawn.");
     }
