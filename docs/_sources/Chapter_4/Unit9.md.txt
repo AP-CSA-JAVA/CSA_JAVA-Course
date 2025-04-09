@@ -41,23 +41,10 @@ Key concepts and keywords for **Java Inheritance**:
 4. **Interface**: Not strictly inheritance, but allows a class to inherit behavior (methods) without implementing it.
 5. **Concrete Class**: A class that can be instantiated and does not contain abstract methods.
 
-**Example**:
-```java
-class Animal {
-    void sound() {
-        System.out.println("Some sound");
-    }
-}
-
-class Dog extends Animal {
-    @Override
-    void sound() {
-        System.out.println("Bark");
-    }
-}
-```
 
 The keywords and concepts form the foundation of *inheritance* in Java. In Object-Oriented Programming (OOP), understanding how objects and classes interact is vital to successful programming.
+
+---
 
 
 </details>
@@ -65,7 +52,7 @@ The keywords and concepts form the foundation of *inheritance* in Java. In Objec
 In Java, there are four different types of inheritance variations that you can demonstrate:
 
 - single inheritance
-- multiple inheritance (through interfaces)
+- multiple inheritance (through **interfaces**)
 - multilevel inheritance
 - hierarchical inheritance. 
 
