@@ -6,6 +6,62 @@
 - Write program code to define a new type by creating superclasses and subclasses.
 
 
+**Keywords**
+<details><summary>Click Here</summary>
+
+---
+
+Key concepts and keywords for **Java Inheritance**:
+
+**Core Concepts**:
+1. **Inheritance**: The mechanism in Java where one class can inherit fields and methods from another class.
+2. **Superclass (Parent Class)**: The class being inherited from.
+3. **Subclass (Child Class)**: The class that inherits from the superclass.
+4. **`extends` keyword**: Used to indicate that a class is inheriting from another class.
+5. **Overriding**: Redefining a method in the subclass to provide a specific implementation.
+6. **`super` keyword**: Used to refer to the superclass’s fields and methods, including calling the superclass constructor.
+7. **`super()`**: Calls the superclass's constructor.
+8. **Method Overloading**: Having multiple methods in the same class with the same name but different parameter types.
+9. **Method Overriding**: A subclass provides its own implementation of a method already defined in its superclass.
+10. **`@Override` annotation**: Used to indicate that a method is overriding a method in the superclass.
+11. **Access Modifiers**: Controls access to inherited methods and fields (e.g., `public`, `protected`, `private`).
+12. **Polymorphism**: The ability to treat an object of a subclass as if it were an object of the superclass. It is usually used in conjunction with method overriding.
+13. **Upcasting**: Assigning an object of a subclass to a variable of the superclass type.
+14. **Downcasting**: Casting a superclass reference back to a subclass type (can lead to `ClassCastException`).
+15. **Abstract Classes**: Classes that cannot be instantiated and may contain abstract methods (methods without a body) that must be implemented by subclasses.
+16. **Abstract Methods**: Methods in an abstract class that do not have a body and must be implemented in concrete subclasses.
+17. **`instanceof` Operator**: Checks whether an object is an instance of a particular class or subclass.
+18. **Constructors in Inheritance**: Subclasses may call the constructor of the superclass using `super()`, and can also have their own constructors.
+19. **`this` keyword**: Refers to the current object in the subclass.
+
+**Key Terms**:
+1. **Single Inheritance**: A subclass inherits from only one superclass.
+2. **Multilevel Inheritance**: A class can inherit from a subclass, which itself inherits from another superclass.
+3. **Hierarchical Inheritance**: Multiple subclasses inherit from a single superclass.
+4. **Interface**: Not strictly inheritance, but allows a class to inherit behavior (methods) without implementing it.
+5. **Concrete Class**: A class that can be instantiated and does not contain abstract methods.
+
+**Example**:
+```java
+class Animal {
+    void sound() {
+        System.out.println("Some sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Bark");
+    }
+}
+```
+
+The keywords and concepts form the foundation of *inheritance* in Java. In Object-Oriented Programming (OOP), understanding how objects and classes interact is vital to successful programming.
+
+
+</details>
+
 In Java, there are four different types of inheritance variations that you can demonstrate:
 
 - single inheritance
