@@ -276,6 +276,57 @@
 <li><p>Create an inheritance relationship from a subclass to the superclass.</p></li>
 <li><p>Write program code to define a new type by creating superclasses and subclasses.</p></li>
 </ul>
+<p><strong>Keywords</strong></p>
+<details><summary>Click Here</summary>
+<hr class="docutils" />
+<p>Key concepts and keywords for <strong>Java Inheritance</strong>:</p>
+<p><strong>Core Concepts</strong>:</p>
+<ol class="arabic simple">
+<li><p><strong>Inheritance</strong>: The mechanism in Java where one class can inherit fields and methods from another class.</p></li>
+<li><p><strong>Superclass (Parent Class)</strong>: The class being inherited from.</p></li>
+<li><p><strong>Subclass (Child Class)</strong>: The class that inherits from the superclass.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">extends</span></code> keyword</strong>: Used to indicate that a class is inheriting from another class.</p></li>
+<li><p><strong>Overriding</strong>: Redefining a method in the subclass to provide a specific implementation.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">super</span></code> keyword</strong>: Used to refer to the superclass’s fields and methods, including calling the superclass constructor.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">super()</span></code></strong>: Calls the superclass’s constructor.</p></li>
+<li><p><strong>Method Overloading</strong>: Having multiple methods in the same class with the same name but different parameter types.</p></li>
+<li><p><strong>Method Overriding</strong>: A subclass provides its own implementation of a method already defined in its superclass.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">&#64;Override</span></code> annotation</strong>: Used to indicate that a method is overriding a method in the superclass.</p></li>
+<li><p><strong>Access Modifiers</strong>: Controls access to inherited methods and fields (e.g., <code class="docutils literal notranslate"><span class="pre">public</span></code>, <code class="docutils literal notranslate"><span class="pre">protected</span></code>, <code class="docutils literal notranslate"><span class="pre">private</span></code>).</p></li>
+<li><p><strong>Polymorphism</strong>: The ability to treat an object of a subclass as if it were an object of the superclass. It is usually used in conjunction with method overriding.</p></li>
+<li><p><strong>Upcasting</strong>: Assigning an object of a subclass to a variable of the superclass type.</p></li>
+<li><p><strong>Downcasting</strong>: Casting a superclass reference back to a subclass type (can lead to <code class="docutils literal notranslate"><span class="pre">ClassCastException</span></code>).</p></li>
+<li><p><strong>Abstract Classes</strong>: Classes that cannot be instantiated and may contain abstract methods (methods without a body) that must be implemented by subclasses.</p></li>
+<li><p><strong>Abstract Methods</strong>: Methods in an abstract class that do not have a body and must be implemented in concrete subclasses.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">instanceof</span></code> Operator</strong>: Checks whether an object is an instance of a particular class or subclass.</p></li>
+<li><p><strong>Constructors in Inheritance</strong>: Subclasses may call the constructor of the superclass using <code class="docutils literal notranslate"><span class="pre">super()</span></code>, and can also have their own constructors.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">this</span></code> keyword</strong>: Refers to the current object in the subclass.</p></li>
+</ol>
+<p><strong>Key Terms</strong>:</p>
+<ol class="arabic simple">
+<li><p><strong>Single Inheritance</strong>: A subclass inherits from only one superclass.</p></li>
+<li><p><strong>Multilevel Inheritance</strong>: A class can inherit from a subclass, which itself inherits from another superclass.</p></li>
+<li><p><strong>Hierarchical Inheritance</strong>: Multiple subclasses inherit from a single superclass.</p></li>
+<li><p><strong>Interface</strong>: Not strictly inheritance, but allows a class to inherit behavior (methods) without implementing it.</p></li>
+<li><p><strong>Concrete Class</strong>: A class that can be instantiated and does not contain abstract methods.</p></li>
+</ol>
+<p><strong>Example</strong>:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Animal</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">sound</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Some sound&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Dog</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Animal</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">sound</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Bark&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The keywords and concepts form the foundation of <em>inheritance</em> in Java. In Object-Oriented Programming (OOP), understanding how objects and classes interact is vital to successful programming.</p>
+</details>
 <p>In Java, there are four different types of inheritance variations that you can demonstrate:</p>
 <ul class="simple">
 <li><p>single inheritance</p></li>
