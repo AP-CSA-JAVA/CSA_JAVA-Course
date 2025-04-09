@@ -350,6 +350,7 @@ Single inheritance is a type of inheritance where a class extends only one super
 <span class="p">}</span>
 
 <span class="kd">class</span> <span class="nc">Dog</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Animal</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@Override</span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">sound</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Dog barks.&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
@@ -375,6 +376,7 @@ Java does not support multiple inheritance of classes due to the “diamond prob
 <span class="p">}</span>
 
 <span class="kd">class</span> <span class="nc">Bird</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Swim</span><span class="p">,</span><span class="w"> </span><span class="n">Fly</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@Override</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">swim</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Bird can swim.&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
@@ -403,12 +405,14 @@ In multilevel inheritance, a class extends another class, and that class further
 <span class="p">}</span>
 
 <span class="kd">class</span> <span class="nc">Car</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Vehicle</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@Override</span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">honk</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Car honks.&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 
 <span class="kd">class</span> <span class="nc">Sedan</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Car</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@Override</span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">fuelType</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Sedan uses petrol for fuel.&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
@@ -434,12 +438,14 @@ Hierarchical inheritance is a type of inheritance where multiple classes inherit
 <span class="p">}</span>
 
 <span class="kd">class</span> <span class="nc">Circle</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Shape</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@Override</span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Circle can be drawn.&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 
 <span class="kd">class</span> <span class="nc">Square</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Shape</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@Override</span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Square can be drawn.&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
