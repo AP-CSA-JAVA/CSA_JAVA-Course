@@ -456,13 +456,13 @@ This demonstrates how to write constructors for a subclass in Java, ensuring pro
 ## 9.3 Overriding Methods
 
 **Goals**
-    - Create an inheritance relationship from a subclass to the superclass.
-    - Incorporate method overriding in a subclass.
+- Create an inheritance relationship from a subclass to the superclass.
+- Incorporate method overriding in a subclass.
 
 **Concepts you need to understand**:
-    - When can you override?
-    - How do you override?
-    - What happens when you override?
+- When can you override?
+- How do you override?
+- What happens when you override?
 
 Recall, a **void method** does not return a value.  It performs an action (like printing something or modifying an instance variable), but does not give anything back to the 'call'.  When a class (subclass) extends another class (superclass), it inherits its methods and instance variables.  A subclass can **override** a void method of the superclass which means the subclass provides its **own version** of the method.
 

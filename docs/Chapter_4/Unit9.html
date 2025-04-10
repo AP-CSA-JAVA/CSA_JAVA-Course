@@ -721,13 +721,17 @@ Use <code class="docutils literal notranslate"><span class="pre">protected</span
 </section>
 <section id="overriding-methods">
 <h2>9.3 Overriding Methods<a class="headerlink" href="#overriding-methods" title="Link to this heading">¶</a></h2>
-<p><strong>Goals</strong>
-- Create an inheritance relationship from a subclass to the superclass.
-- Incorporate method overriding in a subclass.</p>
-<p><strong>Concepts you need to understand</strong>:
-- When can you override?
-- How do you override?
-- What happens when you override?</p>
+<p><strong>Goals</strong></p>
+<ul class="simple">
+<li><p>Create an inheritance relationship from a subclass to the superclass.</p></li>
+<li><p>Incorporate method overriding in a subclass.</p></li>
+</ul>
+<p><strong>Concepts you need to understand</strong>:</p>
+<ul class="simple">
+<li><p>When can you override?</p></li>
+<li><p>How do you override?</p></li>
+<li><p>What happens when you override?</p></li>
+</ul>
 <p>Recall, a <strong>void method</strong> does not return a value.  It performs an action (like printing something or modifying an instance variable), but does not give anything back to the ‘call’.  When a class (subclass) extends another class (superclass), it inherits its methods and instance variables.  A subclass can <strong>override</strong> a void method of the superclass which means the subclass provides its <strong>own version</strong> of the method.</p>
 <p><strong>Example</strong>:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Animal</span><span class="w"> </span><span class="p">{</span>
