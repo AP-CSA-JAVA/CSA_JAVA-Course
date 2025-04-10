@@ -497,158 +497,7 @@ Understanding how **void methods behave with inheritance** is key to:
 
 ---
 
-
-```java
-class Parent {
-    void run() {
-        System.out.println("Parent is running");
-    }
-
-    void sleep() {
-        System.out.println("Parent is sleeping");
-    }
-
-    void sing() {
-        System.out.println("Parent is singing");
-    }
-}
-
-class Child1 extends Parent {
-    void run() {
-        System.out.println("Child1 is running");
-    }
-
-    void sleep() {
-        System.out.println("Child1 is sleeping");
-    }
-
-    void sing() {
-        System.out.println("Child1 is singing");
-    }
-}
-
-class Child2 extends Parent {
-    private String name;
-    private int age;
-
-    Child2(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
-
-    void run() {
-        System.out.println(name + " (age " + age + ") is running");
-    }
-
-    void sleep() {
-        System.out.println(name + " (age " + age + ") is sleeping");
-    }
-
-    void sing() {
-        System.out.println(name + " (age " + age + ") is singing");
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Child1 child1 = new Child1();
-        child1.run();
-        child1.sleep();
-        child1.sing();
-
-        Child2 child2 = new Child2("Francis", 10);
-        child2.run();
-        child2.sleep();
-        child2.sing();
-    }
-}
-```
-
----------- Program 2 ----------
-
-```java
-class Child1 {
-    void run() {
-        System.out.println("Child1 is running");
-    }
-
-    void sleep() {
-        System.out.println("Child1 is sleeping");
-    }
-
-    void sing() {
-        System.out.println("Child1 is singing");
-    }
-}
-
-class Child2 {
-    private String name;
-    private int age;
-
-    Child2(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
-
-    void run() {
-        System.out.println(name + " (age " + age + ") is running");
-    }
-
-    void sleep() {
-        System.out.println(name + " (age " + age + ") is sleeping");
-    }
-
-    void sing() {
-        System.out.println(name + " (age " + age + ") is singing");
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Child1 child1 = new Child1();
-        child1.run();
-        child1.sleep();
-        child1.sing();
-
-        Child2 child2 = new Child2("Francis", 10);
-        child2.run();
-        child2.sleep();
-        child2.sing();
-    }
-}
-```
-
-📌 Sample Question
-
-```java
-public class Shape {
-    public void printType() {
-        System.out.println("Shape");
-    }
-}
-
-public class Circle extends Shape {
-    public void printType() {
-        System.out.println("Circle");
-    }
-}
-
-Shape s = new Circle();
-s.printType();
-```
-
-What does `s` print?
-<details><Summary>Check Here</Summary>
-
-✅ **`Circle`**
-
-Even though `s` is declared as a `Shape`, it refers to a `Circle` object, so the `Circle`’s version of `printType()` runs.
-
-</details>
-
-## 9.3 Overriding Methods
-
-In Java, method overriding allows a subclass to provide a different implementation for a method that is already defined in its superclass. This allows the subclass to modify or extend the behavior of the inherited method. To override a method, you need to define a method in the subclass with the same name, return type, and parameter list as the method in the superclass. Here's an example that demonstrates method overriding in Java:
+Here's an example that demonstrates method overriding in Java:
 
 ```java
 public class Animal {
@@ -701,7 +550,35 @@ Cat meows
 Dog barks
 ```
 
-This demonstrates how to override methods in Java, allowing subclasses to provide their own implementation and modify the behavior of inherited methods.
+
+📌 Sample Question
+
+```java
+public class Shape {
+    public void printType() {
+        System.out.println("Shape");
+    }
+}
+
+public class Circle extends Shape {
+    public void printType() {
+        System.out.println("Circle");
+    }
+}
+
+Shape s = new Circle();
+s.printType();
+```
+
+What does `s` print?
+<details><Summary>Check Here</Summary>
+
+✅ **`Circle`**
+
+Even though `s` is declared as a `Shape`, it refers to a `Circle` object, so the `Circle`’s version of `printType()` runs.
+
+</details>
+
 
 ## 9.4 super Keyword
 
