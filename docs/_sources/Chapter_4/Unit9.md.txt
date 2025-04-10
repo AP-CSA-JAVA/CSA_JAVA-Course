@@ -384,7 +384,7 @@ public class Example {
 | `private`  | ✅         | ❌           | ❌                       | ❌             |
 | `protected`| ✅         | ✅           | ✅                       | ❌             |
 
-Let me know if you want examples with inheritance to really see this in action!
+
 
 ---
 
