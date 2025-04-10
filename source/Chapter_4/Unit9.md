@@ -319,7 +319,80 @@ public class Main {
 
 ## 9.2 Writing Constructors for Subclasses
 
-When creating subclasses in Java, constructors are used to initialize the subclass's specific attributes and also to ensure that the superclass's state is properly initialized. To write constructors for subclasses, you can use the super() keyword to invoke the superclass's constructor and provide any additional initialization specific to the subclass. Here's an example that demonstrates how to write constructors for a subclass:
+When creating subclasses in Java, constructors are used to initialize the subclass's specific attributes and also to ensure that the superclass's state is properly initialized. To write constructors for subclasses, you can use the super() keyword to invoke the superclass's constructor and provide any additional initialization specific to the subclass. 
+
+**Protected vs Private Keywords**
+
+<details><summary>Click Here</summary>
+
+In Java, the `protected` and `private` keywords are **access modifiers** that control the visibility (or accessibility) of classes, methods, and variables. Below is a comparison between the two:
+
+---
+
+**🔒 `private`**:
+- **Access Level:** Most restrictive.
+- **Accessible From:**
+  - Only within the **same class**.
+- **Not Accessible From:**
+  - Subclasses (even if they are in the same package).
+  - Other classes in the same package.
+  - Any external class.
+
+**✅ Use Case**:
+Use `private` when you want to **encapsulate** your data or methods so that they cannot be accessed or modified from outside the class.
+
+```java
+public class Example {
+    private int data;
+
+    private void display() {
+        System.out.println("This is private.");
+    }
+}
+```
+
+---
+
+**🛡️ `protected`**:
+- **Access Level:** Less restrictive than `private`, more restrictive than `public`.
+- **Accessible From:**
+  - The same class.
+  - **Subclasses** (even in different packages).
+  - Other classes in the **same package**.
+- **Not Accessible From:**
+  - Non-subclass classes in **different packages**.
+
+**✅ Use Case**:
+Use `protected` when you want to **allow subclasses to access** or override certain methods or fields, but still keep access restricted from unrelated classes.
+
+```java
+public class Example {
+    protected int data;
+
+    protected void display() {
+        System.out.println("This is protected.");
+    }
+}
+```
+
+---
+
+🧠 Summary Table:
+
+| Modifier   | Same Class | Same Package | Subclass (diff package) | Other Classes |
+|------------|------------|--------------|--------------------------|----------------|
+| `private`  | ✅         | ❌           | ❌                       | ❌             |
+| `protected`| ✅         | ✅           | ✅                       | ❌             |
+
+Let me know if you want examples with inheritance to really see this in action!
+
+---
+
+</details>
+
+
+
+Here's an example that demonstrates how to write constructors for a subclass:
 
 ```java
 public class Animal {
