@@ -453,7 +453,50 @@ Dog barks
 
 This demonstrates how to write constructors for a subclass in Java, ensuring proper initialization of both superclass and subclass attributes.
 
-## 9.3A Void Method with inheritance
+## 9.3 Overriding Methods
+
+**Goals**
+    - Create an inheritance relationship from a subclass to the superclass.
+    - Incorporate method overriding in a subclass.
+
+**Concepts you need to understand**:
+    - When can you override?
+    - How do you override?
+    - What happens when you override?
+
+Recall, a **void method** does not return a value.  It performs an action (like printing something or modifying an instance variable), but does not give anything back to the 'call'.  When a class (subclass) extends another class (superclass), it inherits its methods and instance variables.  A subclass can **override** a void method of the superclass which means the subclass provides its **own version** of the method.
+
+**Example**:
+
+
+```java
+public class Animal {
+    public void speak() {
+        System.out.println("Animal speaks");
+    }
+}
+
+public class Dog extends Animal {
+    public void speak() {
+        System.out.println("Bark");
+    }
+}
+
+Animal a = new Dog();
+a.speak(); // Output: Bark
+```
+
+Even though `a` is declared as an `Animal`, the actual object is a `Dog`, so the `Dog`’s `speak()` method is used.  This is called **dynamic method dispatch** or **polymorphism**.
+
+🧠 Why It Matters
+
+Understanding how **void methods behave with inheritance** is key to:
+- Using polymorphism correctly
+- Designing flexible, reusable code
+- Knowing which version of a method is called at runtime
+
+---
+
 
 ```java
 class Parent {
@@ -520,7 +563,9 @@ public class Main {
     }
 }
 ```
+
 ---------- Program 2 ----------
+
 ```java
 class Child1 {
     void run() {
@@ -573,6 +618,33 @@ public class Main {
 }
 ```
 
+📌 Sample Question
+
+```java
+public class Shape {
+    public void printType() {
+        System.out.println("Shape");
+    }
+}
+
+public class Circle extends Shape {
+    public void printType() {
+        System.out.println("Circle");
+    }
+}
+
+Shape s = new Circle();
+s.printType();
+```
+
+What does `s` print?
+<details><Summary>Check Here</Summary>
+
+✅ **`Circle`**
+
+Even though `s` is declared as a `Shape`, it refers to a `Circle` object, so the `Circle`’s version of `printType()` runs.
+
+</details>
 
 ## 9.3 Overriding Methods
 
