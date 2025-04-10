@@ -534,13 +534,13 @@ public class Main {
 }
 ```
 
-In this example, we have a superclass Animal with a method makeSound(). The Cat and Dog classes are subclasses of Animal and they override the makeSound() method.
+In this example, we have a superclass `Animal` with a method `makeSound()`. The Cat and Dog classes are subclasses of Animal and they override the `makeSound()` method.
 
-The Cat class overrides the makeSound() method and provides its own implementation to print "Cat meows".
+The Cat class overrides the `makeSound()` method and provides its own implementation to print "Cat meows".
 
-The Dog class also overrides the makeSound() method and provides its own implementation to print "Dog barks".
+The Dog class also overrides the `makeSound()` method and provides its own implementation to print "Dog barks".
 
-In the Main class, we create instances of Animal, Cat, and Dog. We assign the Cat and Dog objects to Animal references. When we call the makeSound() method on each object, the overridden version of the method in the respective subclass is invoked.
+In the Main class, we create instances of Animal, Cat, and Dog. We assign the Cat and Dog objects to Animal references. When we call the `makeSound()` method on each object, the overridden version of the method in the respective subclass is invoked.
 
 When you run the program, it will output:
 
@@ -644,7 +644,6 @@ Name: Buddy
 Breed: Labrador
 ```
 
-This demonstrates how the super keyword can be used in Java to refer to the superclass, invoke its constructor or methods, and access its members from within a subclass.
 
 ## 9.5 Creating References Using Inheritance Hierarchies
 
@@ -719,19 +718,19 @@ public class Main {
 }
 ```
 
-In this example, we have a superclass Animal with a constructor that takes a name parameter and initializes the name attribute. It also has a makeSound() method.
+In this example, we have a superclass Animal with a constructor that takes a name parameter and initializes the name attribute. It also has a `makeSound()` method.
 
-The Dog class extends the Animal class and adds a new attribute breed. It has a constructor that takes both name and breed parameters. It overrides the makeSound() method and adds a new method fetch().
+The Dog class extends the Animal class and adds a new attribute breed. It has a constructor that takes both name and breed parameters. It overrides the `makeSound()` method and adds a new method `fetch()`.
 
-The Cat class also extends the Animal class and adds a new attribute color. It has a constructor that takes both name and color parameters. It overrides the makeSound() method and adds a new method scratch().
+The Cat class also extends the Animal class and adds a new attribute color. It has a constructor that takes both name and color parameters. It overrides the `makeSound()` method and adds a new method `scratch()`.
 
 In the Main class, we create references of type Animal and assign them objects of Animal, Dog, and Cat. This demonstrates polymorphism, where objects of different types in the inheritance hierarchy can be referred to by a common superclass reference.
 
-We call the makeSound() method on each reference, which invokes the overridden method based on the actual type of the object.
+We call the `makeSound()` method on each reference, which invokes the overridden method based on the actual type of the object.
 
-We cannot directly call the fetch() method on the Animal references because it is not defined in the Animal class. To access the fetch() method, we can cast the Animal reference to Dog type, as demonstrated with Dog dog = (Dog) animal2, and then we can call dog.fetch().
+We cannot directly call the `fetch()` method on the Animal references because it is not defined in the Animal class. To access the fetch() method, we can cast the Animal reference to Dog type, as demonstrated with `Dog dog = (Dog) animal2`, and then we can call `dog.fetch()`.
 
-Similarly, we can cast the Animal reference to Cat type, as demonstrated with Cat cat = (Cat) animal3, and then we can call cat.scratch().
+Similarly, we can cast the Animal reference to Cat type, as demonstrated with `Cat cat = (Cat) animal3`, and then we can call `cat.scratch()`.
 
 When you run the program, it will output:
 
@@ -742,8 +741,6 @@ Cat meows
 Dog fetches
 Cat scratches
 ```
-
-This demonstrates how references using inheritance hierarchies in Java allow objects of different classes to be treated interchangeably, with the ability to access overridden methods and specific methods of the subclasses through type casting.
 
 
 ## 9.6 Polymorphism
