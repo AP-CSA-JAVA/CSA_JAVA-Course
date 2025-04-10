@@ -575,7 +575,98 @@ In hierarchical inheritance, a single superclass is extended by multiple subclas
 </section>
 <section id="writing-constructors-for-subclasses">
 <h2>9.2 Writing Constructors for Subclasses<a class="headerlink" href="#writing-constructors-for-subclasses" title="Link to this heading">¶</a></h2>
-<p>When creating subclasses in Java, constructors are used to initialize the subclass’s specific attributes and also to ensure that the superclass’s state is properly initialized. To write constructors for subclasses, you can use the super() keyword to invoke the superclass’s constructor and provide any additional initialization specific to the subclass. Here’s an example that demonstrates how to write constructors for a subclass:</p>
+<p>When creating subclasses in Java, constructors are used to initialize the subclass’s specific attributes and also to ensure that the superclass’s state is properly initialized. To write constructors for subclasses, you can use the super() keyword to invoke the superclass’s constructor and provide any additional initialization specific to the subclass.</p>
+<p><strong>Protected vs Private Keywords</strong></p>
+<details><summary>Click Here</summary>
+<p>In Java, the <code class="docutils literal notranslate"><span class="pre">protected</span></code> and <code class="docutils literal notranslate"><span class="pre">private</span></code> keywords are <strong>access modifiers</strong> that control the visibility (or accessibility) of classes, methods, and variables. Below is a comparison between the two:</p>
+<hr class="docutils" />
+<p><strong>🔒 <code class="docutils literal notranslate"><span class="pre">private</span></code></strong>:</p>
+<ul class="simple">
+<li><p><strong>Access Level:</strong> Most restrictive.</p></li>
+<li><p><strong>Accessible From:</strong></p>
+<ul>
+<li><p>Only within the <strong>same class</strong>.</p></li>
+</ul>
+</li>
+<li><p><strong>Not Accessible From:</strong></p>
+<ul>
+<li><p>Subclasses (even if they are in the same package).</p></li>
+<li><p>Other classes in the same package.</p></li>
+<li><p>Any external class.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>✅ Use Case</strong>:
+Use <code class="docutils literal notranslate"><span class="pre">private</span></code> when you want to <strong>encapsulate</strong> your data or methods so that they cannot be accessed or modified from outside the class.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Example</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;This is private.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>🛡️ <code class="docutils literal notranslate"><span class="pre">protected</span></code></strong>:</p>
+<ul class="simple">
+<li><p><strong>Access Level:</strong> Less restrictive than <code class="docutils literal notranslate"><span class="pre">private</span></code>, more restrictive than <code class="docutils literal notranslate"><span class="pre">public</span></code>.</p></li>
+<li><p><strong>Accessible From:</strong></p>
+<ul>
+<li><p>The same class.</p></li>
+<li><p><strong>Subclasses</strong> (even in different packages).</p></li>
+<li><p>Other classes in the <strong>same package</strong>.</p></li>
+</ul>
+</li>
+<li><p><strong>Not Accessible From:</strong></p>
+<ul>
+<li><p>Non-subclass classes in <strong>different packages</strong>.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>✅ Use Case</strong>:
+Use <code class="docutils literal notranslate"><span class="pre">protected</span></code> when you want to <strong>allow subclasses to access</strong> or override certain methods or fields, but still keep access restricted from unrelated classes.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Example</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;This is protected.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p>🧠 Summary Table:</p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Modifier</p></th>
+<th class="head"><p>Same Class</p></th>
+<th class="head"><p>Same Package</p></th>
+<th class="head"><p>Subclass (diff package)</p></th>
+<th class="head"><p>Other Classes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">private</span></code></p></td>
+<td><p>✅</p></td>
+<td><p>❌</p></td>
+<td><p>❌</p></td>
+<td><p>❌</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">protected</span></code></p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>❌</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Let me know if you want examples with inheritance to really see this in action!</p>
+<hr class="docutils" />
+</details>
+<p>Here’s an example that demonstrates how to write constructors for a subclass:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Animal</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
 
