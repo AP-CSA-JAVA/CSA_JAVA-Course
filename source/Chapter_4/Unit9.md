@@ -582,7 +582,35 @@ Even though `s` is declared as a `Shape`, it refers to a `Circle` object, so the
 
 ## 9.4 super Keyword
 
-In Java, the super keyword is used to refer to the superclass, allowing you to access its members (fields and methods) from within a subclass. It is particularly useful when you want to distinguish between the superclass's members and the subclass's members that have the same name. The super keyword can be used to invoke the superclass's constructor, access its instance variables or methods, and invoke its overridden methods. Here's an example that demonstrates the usage of the super keyword in Java:
+In Java, the super keyword is used to refer to the superclass, allowing you to access its members (fields and methods) from within a subclass. It is particularly useful when you want to distinguish between the superclass's members and the subclass's members that have the same name. The super keyword can be used to invoke the superclass's constructor, access its instance variables or methods, and invoke its overridden methods. 
+
+🔑 **Vocabulary**
+
+1. **`super` keyword** – A reference to the **parent (superclass)** of the current object.
+2. **Superclass** – The class being **extended** or inherited from.
+3. **Subclass** – The class that **extends** the superclass.
+4. **Constructor** – A special method used to create objects.
+5. **Method overriding** – When a subclass provides a specific implementation of a method that is already defined in its superclass.
+
+---
+
+📘 **Main Concepts of `super`**
+
+1. `super` is used in **two main ways**:
+   - **To call a superclass constructor**
+   - **To call a superclass method**
+
+---
+
+
+💡 Notes & Tips:
+- If a superclass has a **no-argument constructor**, the compiler automatically inserts `super()` in the subclass constructor.
+- If the superclass only has **constructors with parameters**, then the subclass must explicitly call `super(parameters)`.
+
+---
+
+
+Here's an example that demonstrates the usage of the super keyword in Java:
 
 ```java
 public class Animal {
