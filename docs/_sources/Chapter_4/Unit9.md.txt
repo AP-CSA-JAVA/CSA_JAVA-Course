@@ -675,7 +675,61 @@ Breed: Labrador
 
 ## 9.5 Creating References Using Inheritance Hierarchies
 
-In Java, you can create references using inheritance hierarchies to refer to objects of both the superclass and its subclasses. This allows you to treat objects of different classes in the hierarchy as interchangeable, providing flexibility and polymorphic behavior. Here's an example that demonstrates creating references using inheritance hierarchies in Java:
+🧠 What Does "Creating References Using Inheritance Hierarchies" Mean?
+
+In Java, you can create references using inheritance hierarchies to refer to objects of both the superclass and its subclasses. This allows you to treat objects of different classes in the hierarchy as interchangeable, providing flexibility and polymorphic behavior. 
+
+✅ **Key Concept**:
+You **can use a superclass reference variable to refer to an object of a subclass**. This is legal because the subclass **inherits** from the superclass and is guaranteed to have at least the same structure and behavior.
+
+```java
+Animal a = new Dog();  // Legal! Dog is an Animal
+```
+
+This allows for *flexibility*, *abstraction*, and *polymorphism* in code.
+
+---
+
+🧩 **Let’s look at this hierarchy Example called `Animals`**:
+
+🐾 Superclass:
+```java
+public class Animal {
+    public void speak() {
+        System.out.println("Some generic animal sound");
+    }
+}
+```
+
+🐶 Subclass:
+```java
+public class Dog extends Animal {
+    public void speak() {
+        System.out.println("Woof!");
+    }
+}
+```
+
+🐱 Another Subclass:
+```java
+public class Cat extends Animal {
+    public void speak() {
+        System.out.println("Meow!");
+    }
+}
+```
+
+✨ Now try this:
+```java
+Animal myPet = new Dog();
+myPet.speak();  // Output: Woof!
+```
+
+**Note**:  Even though `myPet` is declared as type `Animal`, because it was created as a `Dog`, the **Dog's version** of `speak()` is called. This is **dynamic method**—a key concept in polymorphism.
+
+---
+
+Here is another example creating references using inheritance hierarchies:
 
 ```java
 public class Animal {
@@ -746,7 +800,7 @@ public class Main {
 }
 ```
 
-In this example, we have a superclass Animal with a constructor that takes a name parameter and initializes the name attribute. It also has a `makeSound()` method.
+In the above example, we have a superclass Animal with a constructor that takes a name parameter and initializes the name attribute. It also has a `makeSound()` method.
 
 The Dog class extends the Animal class and adds a new attribute breed. It has a constructor that takes both name and breed parameters. It overrides the `makeSound()` method and adds a new method `fetch()`.
 

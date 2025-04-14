@@ -911,7 +911,48 @@ Use <code class="docutils literal notranslate"><span class="pre">protected</span
 </section>
 <section id="creating-references-using-inheritance-hierarchies">
 <h2>9.5 Creating References Using Inheritance Hierarchies<a class="headerlink" href="#creating-references-using-inheritance-hierarchies" title="Link to this heading">¶</a></h2>
-<p>In Java, you can create references using inheritance hierarchies to refer to objects of both the superclass and its subclasses. This allows you to treat objects of different classes in the hierarchy as interchangeable, providing flexibility and polymorphic behavior. Here’s an example that demonstrates creating references using inheritance hierarchies in Java:</p>
+<p>🧠 What Does “Creating References Using Inheritance Hierarchies” Mean?</p>
+<p>In Java, you can create references using inheritance hierarchies to refer to objects of both the superclass and its subclasses. This allows you to treat objects of different classes in the hierarchy as interchangeable, providing flexibility and polymorphic behavior.</p>
+<p>✅ <strong>Key Concept</strong>:
+You <strong>can use a superclass reference variable to refer to an object of a subclass</strong>. This is legal because the subclass <strong>inherits</strong> from the superclass and is guaranteed to have at least the same structure and behavior.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Animal</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">();</span><span class="w">  </span><span class="c1">// Legal! Dog is an Animal</span>
+</pre></div>
+</div>
+<p>This allows for <em>flexibility</em>, <em>abstraction</em>, and <em>polymorphism</em> in code.</p>
+<hr class="docutils" />
+<p>🧩 <strong>Let’s look at this hierarchy Example called <code class="docutils literal notranslate"><span class="pre">Animals</span></code></strong>:</p>
+<p>🐾 Superclass:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Animal</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">speak</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Some generic animal sound&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>🐶 Subclass:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Dog</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Animal</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">speak</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Woof!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>🐱 Another Subclass:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Cat</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Animal</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">speak</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Meow!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>✨ Now try this:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Animal</span><span class="w"> </span><span class="n">myPet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">();</span>
+<span class="n">myPet</span><span class="p">.</span><span class="na">speak</span><span class="p">();</span><span class="w">  </span><span class="c1">// Output: Woof!</span>
+</pre></div>
+</div>
+<p><strong>Note</strong>:  Even though <code class="docutils literal notranslate"><span class="pre">myPet</span></code> is declared as type <code class="docutils literal notranslate"><span class="pre">Animal</span></code>, because it was created as a <code class="docutils literal notranslate"><span class="pre">Dog</span></code>, the <strong>Dog’s version</strong> of <code class="docutils literal notranslate"><span class="pre">speak()</span></code> is called. This is <strong>dynamic method</strong>—a key concept in polymorphism.</p>
+<hr class="docutils" />
+<p>Here is another example creating references using inheritance hierarchies:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Animal</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
 
@@ -980,7 +1021,7 @@ Use <code class="docutils literal notranslate"><span class="pre">protected</span
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>In this example, we have a superclass Animal with a constructor that takes a name parameter and initializes the name attribute. It also has a <code class="docutils literal notranslate"><span class="pre">makeSound()</span></code> method.</p>
+<p>In the above example, we have a superclass Animal with a constructor that takes a name parameter and initializes the name attribute. It also has a <code class="docutils literal notranslate"><span class="pre">makeSound()</span></code> method.</p>
 <p>The Dog class extends the Animal class and adds a new attribute breed. It has a constructor that takes both name and breed parameters. It overrides the <code class="docutils literal notranslate"><span class="pre">makeSound()</span></code> method and adds a new method <code class="docutils literal notranslate"><span class="pre">fetch()</span></code>.</p>
 <p>The Cat class also extends the Animal class and adds a new attribute color. It has a constructor that takes both name and color parameters. It overrides the <code class="docutils literal notranslate"><span class="pre">makeSound()</span></code> method and adds a new method <code class="docutils literal notranslate"><span class="pre">scratch()</span></code>.</p>
 <p>In the Main class, we create references of type Animal and assign them objects of Animal, Dog, and Cat. This demonstrates polymorphism, where objects of different types in the inheritance hierarchy can be referred to by a common superclass reference.</p>
