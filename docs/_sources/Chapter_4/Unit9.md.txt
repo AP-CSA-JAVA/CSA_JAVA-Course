@@ -486,9 +486,9 @@ Animal a = new Dog();
 a.speak(); // Output: Bark
 ```
 
-Even though `a` is declared as an `Animal`, the actual object is a `Dog`, so the `Dog`’s `speak()` method is used.  This is called **dynamic method dispatch** or **polymorphism**.
+Even though `a` is declared as an `Animal`, the actual object is a `Dog`, so the `Dog`’s `speak()` method is used.  This is called **dynamic method** or **polymorphism**.
 
-🧠 Why It Matters
+🧠 **Note**:
 
 Understanding how **void methods behave with inheritance** is key to:
 - Using polymorphism correctly
