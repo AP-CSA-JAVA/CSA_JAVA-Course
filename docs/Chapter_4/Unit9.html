@@ -829,7 +829,33 @@ Use <code class="docutils literal notranslate"><span class="pre">protected</span
 </section>
 <section id="super-keyword">
 <h2>9.4 super Keyword<a class="headerlink" href="#super-keyword" title="Link to this heading">¶</a></h2>
-<p>In Java, the super keyword is used to refer to the superclass, allowing you to access its members (fields and methods) from within a subclass. It is particularly useful when you want to distinguish between the superclass’s members and the subclass’s members that have the same name. The super keyword can be used to invoke the superclass’s constructor, access its instance variables or methods, and invoke its overridden methods. Here’s an example that demonstrates the usage of the super keyword in Java:</p>
+<p>In Java, the super keyword is used to refer to the superclass, allowing you to access its members (fields and methods) from within a subclass. It is particularly useful when you want to distinguish between the superclass’s members and the subclass’s members that have the same name. The super keyword can be used to invoke the superclass’s constructor, access its instance variables or methods, and invoke its overridden methods.</p>
+<p>🔑 <strong>Vocabulary</strong></p>
+<ol class="arabic simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">super</span></code> keyword</strong> – A reference to the <strong>parent (superclass)</strong> of the current object.</p></li>
+<li><p><strong>Superclass</strong> – The class being <strong>extended</strong> or inherited from.</p></li>
+<li><p><strong>Subclass</strong> – The class that <strong>extends</strong> the superclass.</p></li>
+<li><p><strong>Constructor</strong> – A special method used to create objects.</p></li>
+<li><p><strong>Method overriding</strong> – When a subclass provides a specific implementation of a method that is already defined in its superclass.</p></li>
+</ol>
+<hr class="docutils" />
+<p>📘 <strong>Main Concepts of <code class="docutils literal notranslate"><span class="pre">super</span></code></strong></p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">super</span></code> is used in <strong>two main ways</strong>:</p>
+<ul class="simple">
+<li><p><strong>To call a superclass constructor</strong></p></li>
+<li><p><strong>To call a superclass method</strong></p></li>
+</ul>
+</li>
+</ol>
+<hr class="docutils" />
+<p>💡 Notes &amp; Tips:</p>
+<ul class="simple">
+<li><p>If a superclass has a <strong>no-argument constructor</strong>, the compiler automatically inserts <code class="docutils literal notranslate"><span class="pre">super()</span></code> in the subclass constructor.</p></li>
+<li><p>If the superclass only has <strong>constructors with parameters</strong>, then the subclass must explicitly call <code class="docutils literal notranslate"><span class="pre">super(parameters)</span></code>.</p></li>
+</ul>
+<hr class="docutils" />
+<p>Here’s an example that demonstrates the usage of the super keyword in Java:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Animal</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
 
