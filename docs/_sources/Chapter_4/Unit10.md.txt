@@ -7,6 +7,62 @@
 - Trace the results of a recursive call to determine the results.
 - Rewrite a recursive algorithm as an interactive method.
 
+
+🌀 **What is Recursion?**
+
+**Recursion** is when a function calls **itself** to solve a problem.
+
+That might sound weird at first, but it’s actually a clever way of breaking down big problems into smaller ones.
+
+
+
+*🎯 **Real-Life Example: Russian Nesting Dolls**
+
+Imagine you have a set of **Russian nesting dolls**. You open the biggest one, and inside is another doll. Then you open that one, and there’s another one… and so on.
+
+Eventually, you reach the tiniest doll that doesn’t open.
+
+Recursion works like that — each step opens a smaller version of the same problem, until it reaches the **base case** (the smallest, simplest version that doesn't need any more steps).
+
+
+💻 **Programming Example: Factorial**
+
+Let’s say you want to find the **factorial** of a number — written like this:
+
+`5! = 5 × 4 × 3 × 2 × 1 = 120`
+
+Using recursion:
+
+```java
+def factorial(n):
+    if n == 1:
+        return 1      # Base case
+    else:
+        return n * factorial(n - 1)  # Recursive step
+```
+
+🧠 So if you call `factorial(5)`:
+- It calls `factorial(4)`
+- Which calls `factorial(3)`
+- And so on until `factorial(1)`, which returns 1
+- Then it multiplies all the way back up: `2×1`, then `3×2`, etc.
+
+
+🔁 **Key Parts of Recursion**
+
+1. **Base Case** – The stopping point. Without this, the function would go forever.
+2. **Recursive Case** – The part where the function calls itself with a smaller input.
+
+
+🧩 **Why Use Recursion?**
+
+It’s great for:
+- Breaking problems into smaller chunks
+- Working with trees or graphs
+- Solving puzzles like mazes
+- Anything that has a repeating, self-similar structure
+
+
 In Java, multiple inheritance can be achieved through interfaces, and we can use an ArrayList along with recursion to demonstrate the concept. Below is a program that models the hierarchy of employees in a company using multiple inheritance through interfaces. We'll also use recursion to calculate the total salary of all employees in the hierarchy.
 
 ```java

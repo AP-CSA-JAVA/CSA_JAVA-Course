@@ -277,6 +277,44 @@
 <li><p>Trace the results of a recursive call to determine the results.</p></li>
 <li><p>Rewrite a recursive algorithm as an interactive method.</p></li>
 </ul>
+<p>🌀 <strong>What is Recursion?</strong></p>
+<p><strong>Recursion</strong> is when a function calls <strong>itself</strong> to solve a problem.</p>
+<p>That might sound weird at first, but it’s actually a clever way of breaking down big problems into smaller ones.</p>
+<p>*🎯 <strong>Real-Life Example: Russian Nesting Dolls</strong></p>
+<p>Imagine you have a set of <strong>Russian nesting dolls</strong>. You open the biggest one, and inside is another doll. Then you open that one, and there’s another one… and so on.</p>
+<p>Eventually, you reach the tiniest doll that doesn’t open.</p>
+<p>Recursion works like that — each step opens a smaller version of the same problem, until it reaches the <strong>base case</strong> (the smallest, simplest version that doesn’t need any more steps).</p>
+<p>💻 <strong>Programming Example: Factorial</strong></p>
+<p>Let’s say you want to find the <strong>factorial</strong> of a number — written like this:</p>
+<p><code class="docutils literal notranslate"><span class="pre">5!</span> <span class="pre">=</span> <span class="pre">5</span> <span class="pre">×</span> <span class="pre">4</span> <span class="pre">×</span> <span class="pre">3</span> <span class="pre">×</span> <span class="pre">2</span> <span class="pre">×</span> <span class="pre">1</span> <span class="pre">=</span> <span class="pre">120</span></code></p>
+<p>Using recursion:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">def</span><span class="w"> </span><span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="w">      </span><span class="err">#</span><span class="w"> </span><span class="n">Base</span><span class="w"> </span><span class="k">case</span>
+<span class="w">    </span><span class="k">else</span><span class="p">:</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="n">Recursive</span><span class="w"> </span><span class="n">step</span>
+</pre></div>
+</div>
+<p>🧠 So if you call <code class="docutils literal notranslate"><span class="pre">factorial(5)</span></code>:</p>
+<ul class="simple">
+<li><p>It calls <code class="docutils literal notranslate"><span class="pre">factorial(4)</span></code></p></li>
+<li><p>Which calls <code class="docutils literal notranslate"><span class="pre">factorial(3)</span></code></p></li>
+<li><p>And so on until <code class="docutils literal notranslate"><span class="pre">factorial(1)</span></code>, which returns 1</p></li>
+<li><p>Then it multiplies all the way back up: <code class="docutils literal notranslate"><span class="pre">2×1</span></code>, then <code class="docutils literal notranslate"><span class="pre">3×2</span></code>, etc.</p></li>
+</ul>
+<p>🔁 <strong>Key Parts of Recursion</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Base Case</strong> – The stopping point. Without this, the function would go forever.</p></li>
+<li><p><strong>Recursive Case</strong> – The part where the function calls itself with a smaller input.</p></li>
+</ol>
+<p>🧩 <strong>Why Use Recursion?</strong></p>
+<p>It’s great for:</p>
+<ul class="simple">
+<li><p>Breaking problems into smaller chunks</p></li>
+<li><p>Working with trees or graphs</p></li>
+<li><p>Solving puzzles like mazes</p></li>
+<li><p>Anything that has a repeating, self-similar structure</p></li>
+</ul>
 <p>In Java, multiple inheritance can be achieved through interfaces, and we can use an ArrayList along with recursion to demonstrate the concept. Below is a program that models the hierarchy of employees in a company using multiple inheritance through interfaces. We’ll also use recursion to calculate the total salary of all employees in the hierarchy.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
 
