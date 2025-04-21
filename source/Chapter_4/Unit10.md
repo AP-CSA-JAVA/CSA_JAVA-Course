@@ -12,17 +12,7 @@
 
 **Recursion** is when a function calls **itself** to solve a problem.
 
-That might sound weird at first, but it’s actually a clever way of breaking down big problems into smaller ones.
-
-
-
-*🎯 **Real-Life Example: Russian Nesting Dolls**
-
-Imagine you have a set of **Russian nesting dolls**. You open the biggest one, and inside is another doll. Then you open that one, and there’s another one… and so on.
-
-Eventually, you reach the tiniest doll that doesn’t open.
-
-Recursion works like that — each step opens a smaller version of the same problem, until it reaches the **base case** (the smallest, simplest version that doesn't need any more steps).
+It is a clever way of breaking down big problems into smaller ones. Imagine you have a set of **Russian nesting dolls**. You open the biggest one, and inside is another doll. Then you open that one, and there’s another one… and so on.  Eventually, you reach the tiniest doll that doesn’t open.  Recursion works like that — each step opens a smaller version of the same problem, until it reaches the **base case** (the smallest, simplest version that doesn't need any more steps).
 
 
 💻 **Programming Example: Factorial**
