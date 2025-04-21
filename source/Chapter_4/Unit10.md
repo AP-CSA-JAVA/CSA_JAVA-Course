@@ -23,7 +23,7 @@ Let’s say you want to find the **factorial** of a number — written like this
 
 Using recursion:
 
-```java
+```python
 def factorial(n):
     if n == 1:
         return 1      # Base case
