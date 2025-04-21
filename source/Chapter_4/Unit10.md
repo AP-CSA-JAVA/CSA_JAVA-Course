@@ -238,7 +238,11 @@ The program uses recursion to calculate the factorial. When `factorial(n)` is ca
 Recursive searching and sorting are techniques in Java where the searching or sorting algorithm calls itself repeatedly on smaller portions of the data until the desired result is found or the data is sorted. Here are explanations and examples of recursive searching and sorting in Java:
 
     Recursive Searching (Binary Search):
-    Binary search is a commonly used searching algorithm that works efficiently on sorted arrays. It divides the array into two halves and compares the target element with the middle element. Based on the comparison, it either continues searching in the left half or the right half of the array. Here's an example of recursive binary search in Java:
+    Binary search is a commonly used searching algorithm that works efficiently on 
+    sorted arrays. It divides the array into two halves and compares the target 
+    element with the middle element. Based on the comparison, it either continues 
+    searching in the left half or the right half of the array. Here's an example of 
+    recursive binary search in Java:
     
 ```java
 public class BinarySearch {
