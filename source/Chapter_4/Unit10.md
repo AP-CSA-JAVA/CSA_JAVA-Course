@@ -23,12 +23,23 @@ Let’s say you want to find the **factorial** of a number — written like this
 
 Using recursion:
 
-```python
-def factorial(n):
-    if n == 1:
-        return 1      # Base case
-    else:
-        return n * factorial(n - 1)  # Recursive step
+```java
+public class Factorial {
+
+    public static int factorial(int n) {
+        if (n == 1) {
+            return 1; // Base case
+        } else {
+            return n * factorial(n - 1); // Recursive step
+        }
+    }
+
+    public static void main(String[] args) {
+        int number = 5;
+        int result = factorial(number);
+        System.out.println("Factorial of " + number + " is: " + result);
+    }
+}
 ```
 
 🧠 So if you call `factorial(5)`:
