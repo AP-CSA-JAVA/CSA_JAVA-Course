@@ -127,6 +127,75 @@ public class MultipleInheritanceWithArrayListAndRecursion {
 }
 ```
 
+**Sample Output**:
+Total salary for manager1 and his subordinates: $10500.0
+Total salary for manager2 and his subordinates: $17000.0
+
+---
+
+
+<details><summary>Click here</summary>
+
+
+Manager:
+   - Has a base salary.
+   - Has a list of subordinates (other Employee objects — either RegularEmployee`s or other Manager`s).
+   - When `getSalary()` is called, it returns:
+     - Its own base salary
+     - Plus, the sum of all subordinates' salaries (recursively).
+
+manager1: 5000 (own) + 3000 (employee1) + 2500 (employee2) = 10500
+manager2: 4500 (own) + 10500 (manager1 + his subs) + 2000 (employee3) = 17000
+
+```java
+public double getSalary() {
+    double totalSalary = baseSalary;
+    for (Employee subordinate : subordinates) {
+        totalSalary += subordinate.getSalary();  // Recursive call happens here
+    }
+    return totalSalary;
+}
+```
+
+---
+
+
+Another way to look at this:
+
+```java
+RegularEmployee e1 = new RegularEmployee(3000);
+RegularEmployee e2 = new RegularEmployee(2500);
+RegularEmployee e3 = new RegularEmployee(2000);
+
+Manager m1 = new Manager(5000);
+m1.addSubordinate(e1);
+m1.addSubordinate(e2);
+
+Manager m2 = new Manager(4500);
+m2.addSubordinate(m1);
+m2.addSubordinate(e3);
+
+```
+
+Now, calling `m2.getSalary()` triggers this:
+- `m2.getSalary()`
+  - totalSalary = 4500
+  - Loop through subordinates:
+    - First subordinate is m1 → `m1.getSalary()`
+      - totalSalary = 5000
+      - Loop through subordinates:
+        - `e1.getSalary()` = 3000
+        - `e2.getSalary()` = 2500
+      - `m1.getSalary()` returns 10500
+  - Add 10500 to m2's & e3’s salary → 4500 + 10500 + 2000 = 17000
+
+
+</details>
+
+
+---
+
+
 In this program, we have three classes: Employee, Manager, and RegularEmployee. The Employee interface ensures that both Manager and RegularEmployee classes have a getSalary() method. The Manager class contains an ArrayList of subordinates, and the addSubordinate() method is used to add employees to the manager's team.
 
 The main method creates instances of employees and managers, arranges them in a hierarchy, and then calculates the total salary using recursion through the getSalary() method of the Manager class. The program outputs the total salaries for the managers and their subordinates.

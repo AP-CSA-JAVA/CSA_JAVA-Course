@@ -383,6 +383,75 @@
 <span class="p">}</span>
 </pre></div>
 </div>
+<p><strong>Sample Output</strong>:
+Total salary for manager1 and his subordinates: $10500.0
+Total salary for manager2 and his subordinates: $17000.0</p>
+<hr class="docutils" />
+<details><summary>Click here</summary>
+<p>Manager:</p>
+<ul class="simple">
+<li><p>Has a base salary.</p></li>
+<li><p>Has a list of subordinates (other Employee objects — either RegularEmployee<code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">or</span> <span class="pre">other</span> <span class="pre">Manager</span></code>s).</p></li>
+<li><p>When <code class="docutils literal notranslate"><span class="pre">getSalary()</span></code> is called, it returns:</p>
+<ul>
+<li><p>Its own base salary</p></li>
+<li><p>Plus, the sum of all subordinates’ salaries (recursively).</p></li>
+</ul>
+</li>
+</ul>
+<p>manager1: 5000 (own) + 3000 (employee1) + 2500 (employee2) = 10500
+manager2: 4500 (own) + 10500 (manager1 + his subs) + 2000 (employee3) = 17000</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getSalary</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">totalSalary</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">baseSalary</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Employee</span><span class="w"> </span><span class="n">subordinate</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">subordinates</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">totalSalary</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">subordinate</span><span class="p">.</span><span class="na">getSalary</span><span class="p">();</span><span class="w">  </span><span class="c1">// Recursive call happens here</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">totalSalary</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p>Another way to look at this:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">RegularEmployee</span><span class="w"> </span><span class="n">e1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RegularEmployee</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span>
+<span class="n">RegularEmployee</span><span class="w"> </span><span class="n">e2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RegularEmployee</span><span class="p">(</span><span class="mi">2500</span><span class="p">);</span>
+<span class="n">RegularEmployee</span><span class="w"> </span><span class="n">e3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RegularEmployee</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span>
+
+<span class="n">Manager</span><span class="w"> </span><span class="n">m1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Manager</span><span class="p">(</span><span class="mi">5000</span><span class="p">);</span>
+<span class="n">m1</span><span class="p">.</span><span class="na">addSubordinate</span><span class="p">(</span><span class="n">e1</span><span class="p">);</span>
+<span class="n">m1</span><span class="p">.</span><span class="na">addSubordinate</span><span class="p">(</span><span class="n">e2</span><span class="p">);</span>
+
+<span class="n">Manager</span><span class="w"> </span><span class="n">m2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Manager</span><span class="p">(</span><span class="mi">4500</span><span class="p">);</span>
+<span class="n">m2</span><span class="p">.</span><span class="na">addSubordinate</span><span class="p">(</span><span class="n">m1</span><span class="p">);</span>
+<span class="n">m2</span><span class="p">.</span><span class="na">addSubordinate</span><span class="p">(</span><span class="n">e3</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Now, calling <code class="docutils literal notranslate"><span class="pre">m2.getSalary()</span></code> triggers this:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">m2.getSalary()</span></code></p>
+<ul>
+<li><p>totalSalary = 4500</p></li>
+<li><p>Loop through subordinates:</p>
+<ul>
+<li><p>First subordinate is m1 → <code class="docutils literal notranslate"><span class="pre">m1.getSalary()</span></code></p>
+<ul>
+<li><p>totalSalary = 5000</p></li>
+<li><p>Loop through subordinates:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">e1.getSalary()</span></code> = 3000</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">e2.getSalary()</span></code> = 2500</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">m1.getSalary()</span></code> returns 10500</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Add 10500 to m2’s &amp; e3’s salary → 4500 + 10500 + 2000 = 17000</p></li>
+</ul>
+</li>
+</ul>
+</details>
+<hr class="docutils" />
 <p>In this program, we have three classes: Employee, Manager, and RegularEmployee. The Employee interface ensures that both Manager and RegularEmployee classes have a getSalary() method. The Manager class contains an ArrayList of subordinates, and the addSubordinate() method is used to add employees to the manager’s team.</p>
 <p>The main method creates instances of employees and managers, arranges them in a hierarchy, and then calculates the total salary using recursion through the getSalary() method of the Manager class. The program outputs the total salaries for the managers and their subordinates.</p>
 <hr class="docutils" />
