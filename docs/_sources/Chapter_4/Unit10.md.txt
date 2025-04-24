@@ -132,11 +132,16 @@ public class MultipleInheritanceWithArrayListAndRecursion {
 Total salary for manager1 and his subordinates: $10500.0
 Total salary for manager2 and his subordinates: $17000.0
 ```
+---
+
+In this program, we have three classes: Employee, Manager, and RegularEmployee. The Employee interface ensures that both Manager and RegularEmployee classes have a getSalary() method. The Manager class contains an ArrayList of subordinates, and the addSubordinate() method is used to add employees to the manager's team.
+
+The main method creates instances of employees and managers, arranges them in a hierarchy, and then calculates the total salary using recursion through the getSalary() method of the Manager class. The program outputs the total salaries for the managers and their subordinates.
 
 ---
 
 
-<details><summary>Click here</summary>
+<details><summary>Let's look at this from another way!</summary>
 
 
 Manager:
@@ -194,13 +199,6 @@ Now, calling `m2.getSalary()` triggers this:
 
 </details>
 
-
----
-
-
-In this program, we have three classes: Employee, Manager, and RegularEmployee. The Employee interface ensures that both Manager and RegularEmployee classes have a getSalary() method. The Manager class contains an ArrayList of subordinates, and the addSubordinate() method is used to add employees to the manager's team.
-
-The main method creates instances of employees and managers, arranges them in a hierarchy, and then calculates the total salary using recursion through the getSalary() method of the Manager class. The program outputs the total salaries for the managers and their subordinates.
 
 ---
 
