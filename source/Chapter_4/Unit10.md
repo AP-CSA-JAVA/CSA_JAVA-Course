@@ -128,8 +128,10 @@ public class MultipleInheritanceWithArrayListAndRecursion {
 ```
 
 **Sample Output**:
+```java
 Total salary for manager1 and his subordinates: $10500.0
 Total salary for manager2 and his subordinates: $17000.0
+```
 
 ---
 
