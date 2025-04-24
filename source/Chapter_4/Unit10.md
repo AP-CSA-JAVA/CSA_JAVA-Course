@@ -141,7 +141,7 @@ The main method creates instances of employees and managers, arranges them in a 
 ---
 
 
-<details><summary>Let's look at this from another way!</summary>
+<details><summary>Let's look at this in another way!</summary>
 
 
 
@@ -152,9 +152,9 @@ Manager:
      - Its own base salary
      - Plus, the sum of all subordinates' salaries (recursively).
 
-manager1: 5000 (own) + 3000 (employee1) + 2500 (employee2) = 10500
+**manager1**: 5000 (own) + 3000 (employee1) + 2500 (employee2) = 10500
 
-manager2: 4500 (own) + 10500 (manager1 + his subs) + 2000 (employee3) = 17000
+**manager2**: 4500 (own) + 10500 (manager1 + his subs) + 2000 (employee3) = 17000
 
 ```java
 public double getSalary() {
