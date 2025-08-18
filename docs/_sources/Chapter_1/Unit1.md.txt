@@ -171,7 +171,7 @@ Object-oriented Programming Facts:
 
 <p align="center">---------------------------------------------------------------------------- </p>
 
-### 5.3 Documentation with Comments
+## 5.3 Documentation with Comments
 
 
 - [ ] Understand how to properly comment code.
