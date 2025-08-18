@@ -206,13 +206,30 @@ With **every** program that you submit, I want you to list the following:
  
 Please follow the convention shown below.</br>
 
+**Main() Block method**
+
+At the top of the file containing your program's main() block method, place an `external' block comment containing the following content.
+
 ```
-/*
-* Programmer(s):
-* Date:
-* Section: Period #
-* Assignment:
-*/
+/*=============================================================================
+ |   Assignment:  Program #[n]:  [Assignment Title]
+ |       Author:  [Your Name ]
+ |      Partner:  [Partner's Name ]
+ |
+ |  Course Name:  [Course Name]
+ |   Instructor:  John Smith
+ |     Due Date:  [Due Date and Time]
+ |
+ |  Description:  [Describe the program's goal, IN DETAIL.]
+ |
+ |     Language:  [ Java version 8]
+ | Ex. Packages:  [List names and sources of all external packages
+ |                required by this program.]
+ |                
+ | Deficiencies:  [If you know of any problems with the code, provide
+ |                details here, otherwise clearly state that you know
+ |                of no unsatisfied requirements and no logic errors.]
+ *===========================================================================*/
 ```
 
 ### Practice 1.1.1
