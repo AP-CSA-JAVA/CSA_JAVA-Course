@@ -214,7 +214,7 @@ Please follow the convention shown below.</br>
 */
 ```
 
-### Assignment 1.1.1
+### Practice 1.1.1
 
  ![76b4e00f998549e6a8717c6e5d5f0f1a](https://user-images.githubusercontent.com/12989939/162492248-21683f86-fc3f-4756-b78f-ddfe9373ab60.png)</br>
 Create the happy face image above using the following criteria:
