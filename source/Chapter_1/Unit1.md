@@ -485,60 +485,7 @@ this assignment.**
 | Neptune | 11.15 |
 
 
-
-
-<details><summary>Sample Solution</summary>
-
-```java
-import java.util.Scanner;
-
-class Main 
-{
-  public static void main(String[] args) 
-  {
-    int weightOnEarth;
-
-    double earthGravity = 9.81;
-    double mercuryGravity = 3.59;
-    double venusGravity = 8.87;
-    double marsGravity = 3.711;
-
-    System.out.println("Enter your weight in pounds:");
-    Scanner sc = new Scanner(System.in);
-    weightOnEarth = Integer.parseInt(sc.nextLine());
-
-      double weightOnMercury = weightOnEarth * mercuryGravity / earthGravity;
-      double weightOnVenus = weightOnEarth * venusGravity / earthGravity;
-      double weightOnMars = weightOnEarth * marsGravity / earthGravity;
-      double weightOnInnerPlanets = (weightOnEarth + weightOnVenus + weightOnMars + weightOnMercury) / 4;
-
-      System.out.print("Your weight on Mercury is ");
-      System.out.println(weightOnMercury + " lbs.");
-      System.out.print("Your weight on Venus is ");
-      System.out.println(weightOnVenus + " lbs.");
-      System.out.print("Your weight on Mars is ");
-      System.out.println(weightOnMars + " lbs. \n");
-      System.out.println("Your average weight for the Inner Planets is " + weightOnInnerPlanets + "lbs.");
-
-  }
-}
-
-**Sample Output:**
-
-Enter your weight in pounds:
-150
-Your weight on Mercury is 54.89296636085626 lbs.
-Your weight on Venus is 135.62691131498468 lbs.
-Your weight on Mars is 56.74311926605504 lbs.
-
-Your average weight for the Inner Planets is 99.31574923547399lbs.
-
-```
-
-</details>
-
-
-
+---
 
 
 ### Assignment 1.3.2
