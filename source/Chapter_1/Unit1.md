@@ -484,6 +484,30 @@ this assignment.**
 | Uranus | 10.67 |
 | Neptune | 11.15 |
 
+```java
+
+// Starter Code.  Add 3 more planets that you will travel to.
+
+public class GalaxyWeight
+{
+	public static void main(String[] args) 
+	{
+    // declare and initialize weightOnEarth, earthGravity, and jupiterGravity 
+    int weightOnEarth = 177;
+    double earthGravity = 9.81;
+    double jupiterGravity = 24.79;
+    
+    // calculate weight
+    double weightOnJupiter = weightOnEarth * jupiterGravity / earthGravity;
+    
+    // show results
+    System.out.print("Your weight on Jupiter is ");
+    System.out.print(weightOnJupiter);
+    System.out.println(" lbs.");
+  }
+}
+```
+
 
 ---
 
