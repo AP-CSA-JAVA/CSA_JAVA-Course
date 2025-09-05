@@ -624,12 +624,10 @@ public static void main(String args[])
 1
 ```
 
-In algebra, this is an impossible statement, but in programming, the assignment operator makes this a simple and logical statement. 
-To interpret assignment statements such as this, begin with the first instruction to the right of the assignment operator.
+In algebra, this is an impossible statement, but in programming, the assignment operator makes this a simple and logical statement. To interpret assignment statements such as this, begin with the first instruction to the right of the assignment operator.
 
 In Java, a strong convention is to declare variables close to where they are first used, at the beginning of a code block. 
-A code block is denoted by curly braces, { }.  Notice that the print statement uses quotes around 'x = ' followed by plus(+) sign.
-This is referred to as a **concatenation operator** where you can add a string literal to a variable.
+A code block is denoted by curly braces, { }.  Notice that the print statement uses quotes around 'x = ' followed by plus(+) sign. This is referred to as a **concatenation operator** where you can add a string literal to a variable.
 
 Java like other programs has simplified the compound operators.  **Compound Assignment Operators** performs two tasks in one step.  It performs a mathematical calculation by and assignment.  It is written as:  
 
@@ -773,12 +771,9 @@ Total Sales: $64.3
 - [ ] Perform mathematical rounding.
 	- [ ] I will be able to explain why a code segment will not compile or work as intended.
 
-There are some unique features to Java that help programmers create programs that are flexible in how they display data.  
-We learned earlier that we need to declare a variable by it's type.  It can be an int or a double.  As you may remember, 
-an int is any whole negative or positive number.
+There are some unique features to Java that help programmers create programs that are flexible in how they display data.  We learned earlier that we need to declare a variable by it's type.  It can be an int or a double.  As you may remember, an int is any whole negative or positive number.
 
-A double is any number with a decimal.  1.0 is a whole number, but it has a decimal. So, Java considers 1.0 as a double.  
-We can convert the double by declaring a new variable that changes the double to an int.
+A double is any number with a decimal.  1.0 is a whole number, but it has a decimal. So, Java considers 1.0 as a double.  We can convert the double by declaring a new variable that changes the double to an int.
 
 ```java 
 double temp = 98.6;
@@ -793,7 +788,7 @@ You will need to be familiar with some terms:
 - [ ] **narrowing** - converting a larger data type (double) to a smaller data type (int).
 	- [ ] `double` -> `float` -> `long` -> `int` -> `char` -> `short` -> `byte`
  	     
-In this instance, we 'narrowed' the value of temp.  There is another term that you need to be familiar with and it is called **casting**.  Casting is converting from one data type to another, such as from a *double* to an *int*, potentially losing information. 
+In this instance, we 'narrowed' the value of temp.  There is another term that you need to be familiar with and it is called **casting**.  Casting is converting from one data type to another, such as from a *double* to an *int*, potentially losing data. 
 
 Take a look at this program:
 ```java
@@ -867,84 +862,10 @@ Travel time to ...
 Total travel time:19.59838263477574
 ```
 
-*Your ouput should look like the example above.  I am not asking you to find the **average** for this assignment.*
+*Your output should look similar to the example above.  I am not asking you to find the **average** for this assignment.*
 
-You will write a widening algorithm with new variables to show the travel time to and from all planets.  You will write a casting version without new variables to show the travel times. The one rule is that you must use the provided code and not change any provided data types.
+You will write a widening algorithm that will show the travel time to and from all planets.  You will write a casting version without new variables to show the travel times. The one rule is that you must use the provided code and not change any provided data types.
 
-<details><summary> Sample Output</summary>
-
-```java
-public class FivePlanetTravel
-{
-  public static void main(String[] args)
-  {
-    // theplanets.org average distance from earth to the planets
-    int mercury = 56974146;
-    int venus = 25724767;
-    int mars = 48678219;
-    int jupiter = 390674710;
-    int saturn = 792248270;
-
-    // speed of light and our speed
-    int lightSpeed =  670616629;
-    lightSpeed /= 10;
-
-    // total travel time
-    double total = 0;
-
-    // number of planets to visit
-    int numPlanets = 5;
-    
-    // Auto-widen version
-    System.out.println("Travel time to ...");
-    double time =  mercury;
-    time /= lightSpeed; 
-    total += time;
-    System.out.println(" Mercury " + time + " hours");
-   
-    time =  venus;
-    time /= lightSpeed; 
-    total += time;
-    System.out.println(" Venus: " + time + " hours");
-
-    time =  mars;
-    time /= lightSpeed; 
-    total += time;
-    System.out.println(" Mars: " + time + " hours");
-    time =  jupiter;
-    time /= lightSpeed; 
-    total += time;
-    System.out.println(" Jupiter: " + time + " hours");
-    
-    time =  saturn;
-    time /= lightSpeed; 
-    total += time;
-    System.out.println(" Saturn:" + time + " hours");
-    
-    System.out.println("Total travel time:" + total);
-    System.out.println();
-
-    // Manually cast version
-    total = 0; 
-    System.out.println("Travel time to ...");
-    System.out.println(" Mercury: " + mercury / (double) lightSpeed + " hours");
-    total += mercury / (double) lightSpeed; 
-    System.out.println(" Venus: " + venus / (double) lightSpeed + " hours");
-    total += venus / (double) lightSpeed; 
-    System.out.println(" Mars: " + mars / (double) lightSpeed + " hours");
-    total +=  mars / (double) lightSpeed;
-    System.out.println(" Jupiter: " + jupiter / (double) lightSpeed + " hours");
-    total += jupiter / (double) lightSpeed;
-    System.out.println(" Saturn: " + saturn / (double) lightSpeed + " hours");
-    total += saturn / (double) lightSpeed; 
-    
-    System.out.println("Total travel time:" + total);
-
-  }
-}
-```
-
-</details>
 
 ### Numbers Riddle Project 
 
@@ -994,7 +915,6 @@ Looking back at previous programs and the requirements stated above, you know yo
 - [ ] the main method of the program
 - [ ] a variable defined as the “starting number you choose”
 	- [ ] You may use a `scanner` class
-- [ ] six variables representing integer and double data types and positive, negative, and zero values
 - [ ] an algorithm(s) that processes the chosen number
 - [ ] a print statement displaying the number you chose
 - [ ] a print statement displaying each calculation and the final result
@@ -1002,15 +922,14 @@ Looking back at previous programs and the requirements stated above, you know yo
 - [ ] use of camelCase when appropriate
 
 **Test Cases**
-Create variables and choose numbers that match the following six number types to verify your program works for each.  
+Create variables and choose numbers that match the following number types to verify your program works for each.  
 - [ ] Positive Integer
 - [ ] Negative Integer
 - [ ] Zero
-- [ ] One
 - [ ] Positive Double
 - [ ] Negative Double
 
-**Document and Present**
+**Document the output and submit your program as a java file.**
 
 <details><summary>Comments Requirement</summary>
 
