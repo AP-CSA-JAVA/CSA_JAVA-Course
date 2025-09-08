@@ -805,11 +805,13 @@ In both cases, the decimal part is just chopped off:
 >	`double a = 3.9;`
 >
 >	`int b = (int) a + .5;`
->   'System.out.println(b); // b is 4`
+>
+>   `System.out.println(b); // b is 4`
 >
 >	`double c = -4.8;`
 >
 >	`int d = (int) c + .5;'
+>
 >   `System.out.println(d); // d is -5`
 >
 
