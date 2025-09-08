@@ -810,7 +810,7 @@ In both cases, the decimal part is just chopped off:
 >
 >	`double c = -4.8;`
 >
->	`int d = (int) c + .5;'
+>	`int d = (int) c + .5;`
 >
 >   `System.out.println(d); // d is -5`
 >
