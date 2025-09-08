@@ -1177,12 +1177,7 @@ Total Sales: $64.3
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">d</span><span class="p">);</span><span class="w"> </span><span class="c1">// d is -4</span>
 </pre></div>
 </div>
-<p>In both cases, the decimal part is just chopped off:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="mf">3.9</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="mi">3</span>
-
-<span class="w">    </span><span class="o">-</span><span class="mf">4.8</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="o">-</span><span class="mi">4</span>
-</pre></div>
-</div>
+<p>In both cases, the digits to the right of the decimal are is just chopped off:</p>
 <blockquote>
 <div><p>To fix this, you can use <code class="docutils literal notranslate"><span class="pre">Math.round(x)</span></code> <em><strong>(we will get to this later, as a class)</strong></em>
 or you can add .5 to correct the problem.</p>
@@ -1208,28 +1203,22 @@ or you can add .5 to correct the problem.</p>
 </ul>
 <p>In this instance, we ‘narrowed’ the value of temp.  There is another term that you need to be familiar with and it is called <strong>casting</strong>.  Casting is converting from one data type to another, such as from a <em>double</em> to an <em>int</em>, potentially losing data.</p>
 <p>Take a look at this program:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">eggs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">dozen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span><span class="c1">// the variable dozen will not change</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CastingEggs</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">args</span><span class="o">[]</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">eggs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">dozen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span><span class="c1">// the variable dozen will not change</span>
 
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Total eggs = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">eggs</span><span class="o">/</span><span class="w"> </span><span class="n">dozen</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Total eggs = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">eggs</span><span class="o">/</span><span class="n">dozen</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Total eggs = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">eggs</span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="n">dozen</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Total eggs = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="n">eggs</span><span class="o">/</span><span class="w"> </span><span class="n">dozen</span><span class="p">);</span>
 
-<span class="n">Example</span><span class="w"> </span><span class="n">output</span><span class="p">:</span>
-<span class="n">Total</span><span class="w"> </span><span class="n">eggs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="c1">// Example output:</span>
+<span class="c1">// Total eggs = 0</span>
+<span class="c1">// Total eggs = 0.75</span>
+<span class="c1">// Total eggs = 0.75</span>
 </pre></div>
 </div>
 <p>We know that we don’t have 0 eggs.  We can rewrite our program to show how many eggs we have in decimal form.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">eggs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">dozen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span><span class="c1">// the variable dozen will not change</span>
-
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Total eggs = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">eggs</span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="w"> </span><span class="n">dozen</span><span class="p">);</span>
-
-<span class="n">Sample</span><span class="w"> </span><span class="n">output</span><span class="p">:</span>
-<span class="n">Total</span><span class="w"> </span><span class="n">eggs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.75</span>
-</pre></div>
-</div>
-<p>If you were to print the variables <code class="docutils literal notranslate"><span class="pre">eggs</span></code> and <code class="docutils literal notranslate"><span class="pre">dozen</span></code>, you would see that the values are 9 &amp; 12 respectively.</p>
-</p>
-</details>
 <section id="assignment-1-5-1">
 <h3>Assignment 1.5.1<a class="headerlink" href="#assignment-1-5-1" title="Link to this heading">¶</a></h3>
 <p>You will explore the PlanetTravel program called FivePlanetTravel. The program is set up to plan a five-planet tour!:</p>
