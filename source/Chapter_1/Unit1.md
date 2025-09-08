@@ -790,13 +790,9 @@ double c = -4.8;
 int d = (int) c;
 System.out.println(d); // d is -4
 ```
-In both cases, the decimal part is just chopped off:
+In both cases, the digits to the right of the decimal are is just chopped off:
 
-```java
-    3.9 → 3
 
-    -4.8 → -4
-```
 >
 >	To fix this, you can use `Math.round(x)` ***(we will get to this later, as a class)***
 >	or you can add .5 to correct the problem.
@@ -825,28 +821,24 @@ You will need to be familiar with some terms:
 In this instance, we 'narrowed' the value of temp.  There is another term that you need to be familiar with and it is called **casting**.  Casting is converting from one data type to another, such as from a *double* to an *int*, potentially losing data. 
 
 Take a look at this program:
+
 ```java
-int eggs = 9;
-int dozen = 12;// the variable dozen will not change
+public class CastingEggs {
+  public static void main(String args[]) {
+    int eggs = 9;
+    int dozen = 12;// the variable dozen will not change
 
-System.out.println("Total eggs = " + eggs/ dozen);
+    System.out.println("Total eggs = " + eggs/dozen);
+    System.out.println("Total eggs = " + eggs/ (double)dozen);
+    System.out.println("Total eggs = " + (double)eggs/ dozen);
 
-Example output:
-Total eggs = 0
+// Example output:
+// Total eggs = 0
+// Total eggs = 0.75
+// Total eggs = 0.75
+
 ```
 We know that we don't have 0 eggs.  We can rewrite our program to show how many eggs we have in decimal form.
-```java
-int eggs = 9;
-int dozen = 12;// the variable dozen will not change
-
-System.out.println("Total eggs = " + eggs/ (double) dozen);
-
-Sample output:
-Total eggs = 0.75
-```
-If you were to print the variables `eggs` and `dozen`, you would see that the values are 9 & 12 respectively.
-</p>
-</details>
     
 
 ### Assignment 1.5.1
