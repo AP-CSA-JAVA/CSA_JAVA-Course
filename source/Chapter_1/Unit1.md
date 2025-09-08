@@ -783,10 +783,12 @@ What is the value of newTemp?  Did you guess 99?  The actual value of newTemp is
 
 ```java
 double a = 3.9;
-int b = (int) a; // b is 3
+int b = (int) a;
+System.out.println(b); // b is 3
 
 double c = -4.8;
-int d = (int) c; // d is -4
+int d = (int) c;
+System.out.println(d); // d is -4
 ```
 In both cases, the decimal part is just chopped off:
 
@@ -796,22 +798,19 @@ In both cases, the decimal part is just chopped off:
     -4.8 → -4
 ```
 >
->**Note** that it doesn’t round up to the next integer.
->
->    3.9 does not become 4
->
->   -4.8 does not become -5
->
 >	To fix this, you can use `Math.round(x)` ***(we will get to this later, as a class)***
 >	or you can add .5 to correct the problem.
 >
+>
 >	`double a = 3.9;`
 >
->	`int b = (int) a + .5; // b is 4`
+>	`int b = (int) a + .5;`
+>   'System.out.println(b); // b is 4`
 >
 >	`double c = -4.8;`
 >
->	`int d = (int) c + .5; // d is -5`
+>	`int d = (int) c + .5;'
+>   `System.out.println(d); // d is -5`
 >
 
 You will need to be familiar with some terms:
