@@ -802,12 +802,15 @@ In both cases, the decimal part is just chopped off:
 >
 >   -4.8 does not become -5
 >
->	To fix this, you can use `Math.round(x)` (we will get to this later as a class)
+>	To fix this, you can use `Math.round(x)` ***(we will get to this later, as a class)***
 >	or you can add .5 to correct the problem.
 >
 >	`double a = 3.9;`
+>
 >	`int b = (int) a + .5; // b is 4`
+>
 >	`double c = -4.8;`
+>
 >	`int d = (int) c + .5; // d is -5`
 >
 
