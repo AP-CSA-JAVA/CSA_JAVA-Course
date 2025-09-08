@@ -771,15 +771,45 @@ Total Sales: $64.3
 - [ ] Perform mathematical rounding.
 	- [ ] I will be able to explain why a code segment will not compile or work as intended.
 
-There are some unique features to Java that help programmers create programs that are flexible in how they display data.  We learned earlier that we need to declare a variable by it's type.  It can be an int or a double.  As you may remember, an int is any whole negative or positive number.
+There are some unique features to Java that help programmers create programs that are flexible in how they display data.  We learned earlier that we need to declare a variable by it's type.  It can be an `int` or a `double`.  As you may remember, an `int` is any whole negative or positive number.
 
-A double is any number with a decimal.  1.0 is a whole number, but it has a decimal. So, Java considers 1.0 as a double.  We can convert the double by declaring a new variable that changes the double to an int.
+A `double` is any number with a decimal.  1.0 is a whole number, but it has a decimal. So, Java considers 1.0 as a `double`.  We can convert the `double` by declaring a new variable that changes the `double` to an `int`.
 
 ```java 
 double temp = 98.6;
 int newTemp = (int)temp;
 ```
 What is the value of newTemp?  Did you guess 99?  The actual value of newTemp is 98.  The variable is not **rounded** it is *truncated*.  Java does not round unless you tell it to round.
+
+```java
+double a = 3.9;
+int b = (int) a; // b is 3
+
+double c = -4.8;
+int d = (int) c; // d is -4
+```
+In both cases, the decimal part is just chopped off:
+
+```java
+    3.9 → 3
+
+    -4.8 → -4
+```
+>
+>**Note** that it doesn’t round up to the next integer.
+>
+>    3.9 does not become 4
+>
+>   -4.8 does not become -5
+>
+>	To fix this, you can use `Math.round(x)` (we will get to this later as a class)
+>	or you can add .5 to correct the problem.
+>
+>	`double a = 3.9;`
+>	`int b = (int) a + .5; // b is 4`
+>	`double c = -4.8;`
+>	`int d = (int) c + .5; // d is -5`
+>
 
 You will need to be familiar with some terms:
 
@@ -840,9 +870,19 @@ public class FivePlanetTravel
     double total = 0;
 
     /* your code here */
+
+    System.out.println("Travel time to ...");
+    System.out.println("Mars: " + mars / (double) lightSpeed + " hours");
+    total +=  mars / (double) lightSpeed;
+
+
+	int average = (int)(total / numPlanets);
+    System.out.println("Total travel time:" + total);
+	System.out.println("Average travel time: " + average);
   }
 }
 ```
+
 **Example Output:**
 ```java
 Travel time to ...
@@ -860,9 +900,11 @@ Travel time to ...
  Jupiter: 5.825604352006665 hours
  Saturn: 11.813728535388819 hours
 Total travel time:19.59838263477574
+
+Average travel time: approximatley 4 hours.
 ```
 
-*Your output should look similar to the example above.  I am not asking you to find the **average** for this assignment.*
+*Your output should look similar to the example above.*
 
 You will write a widening algorithm that will show the travel time to and from all planets.  You will write a casting version without new variables to show the travel times. The one rule is that you must use the provided code and not change any provided data types.
 

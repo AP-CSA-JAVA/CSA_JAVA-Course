@@ -1161,13 +1161,37 @@ Total Sales: $64.3
 </ul>
 </li>
 </ul>
-<p>There are some unique features to Java that help programmers create programs that are flexible in how they display data.  We learned earlier that we need to declare a variable by it’s type.  It can be an int or a double.  As you may remember, an int is any whole negative or positive number.</p>
-<p>A double is any number with a decimal.  1.0 is a whole number, but it has a decimal. So, Java considers 1.0 as a double.  We can convert the double by declaring a new variable that changes the double to an int.</p>
+<p>There are some unique features to Java that help programmers create programs that are flexible in how they display data.  We learned earlier that we need to declare a variable by it’s type.  It can be an <code class="docutils literal notranslate"><span class="pre">int</span></code> or a <code class="docutils literal notranslate"><span class="pre">double</span></code>.  As you may remember, an <code class="docutils literal notranslate"><span class="pre">int</span></code> is any whole negative or positive number.</p>
+<p>A <code class="docutils literal notranslate"><span class="pre">double</span></code> is any number with a decimal.  1.0 is a whole number, but it has a decimal. So, Java considers 1.0 as a <code class="docutils literal notranslate"><span class="pre">double</span></code>.  We can convert the <code class="docutils literal notranslate"><span class="pre">double</span></code> by declaring a new variable that changes the <code class="docutils literal notranslate"><span class="pre">double</span></code> to an <code class="docutils literal notranslate"><span class="pre">int</span></code>.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">98.6</span><span class="p">;</span>
 <span class="kt">int</span><span class="w"> </span><span class="n">newTemp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">temp</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>What is the value of newTemp?  Did you guess 99?  The actual value of newTemp is 98.  The variable is not <strong>rounded</strong> it is <em>truncated</em>.  Java does not round unless you tell it to round.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.9</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="c1">// b is 3</span>
+
+<span class="kt">double</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mf">4.8</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w"> </span><span class="c1">// d is -4</span>
+</pre></div>
+</div>
+<p>In both cases, the decimal part is just chopped off:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="mf">3.9</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="mi">3</span>
+
+<span class="w">    </span><span class="o">-</span><span class="mf">4.8</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="o">-</span><span class="mi">4</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p><strong>Note</strong> that it doesn’t round up to the next integer.</p>
+<p>3.9 does not become 4</p>
+<p>-4.8 does not become -5</p>
+<p>To fix this, you can use <code class="docutils literal notranslate"><span class="pre">Math.round(x)</span></code> (we will get to this later as a class)
+or you can add .5 to correct the problem.</p>
+<p><code class="docutils literal notranslate"><span class="pre">double</span> <span class="pre">a</span> <span class="pre">=</span> <span class="pre">3.9;</span></code>
+<code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">b</span> <span class="pre">=</span> <span class="pre">(int)</span> <span class="pre">a</span> <span class="pre">+</span> <span class="pre">.5;</span> <span class="pre">//</span> <span class="pre">b</span> <span class="pre">is</span> <span class="pre">4</span></code>
+<code class="docutils literal notranslate"><span class="pre">double</span> <span class="pre">c</span> <span class="pre">=</span> <span class="pre">-4.8;</span></code>
+<code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">d</span> <span class="pre">=</span> <span class="pre">(int)</span> <span class="pre">c</span> <span class="pre">+</span> <span class="pre">.5;</span> <span class="pre">//</span> <span class="pre">d</span> <span class="pre">is</span> <span class="pre">-5</span></code></p>
+</div></blockquote>
 <p>You will need to be familiar with some terms:</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>widening</strong> - converting from a smaller data type (int) to a larger data type (double).</p>
@@ -1230,6 +1254,15 @@ Total Sales: $64.3
     <span class="n">double</span> <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
     <span class="o">/*</span> <span class="n">your</span> <span class="n">code</span> <span class="n">here</span> <span class="o">*/</span>
+
+    <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;Travel time to ...&quot;</span><span class="p">);</span>
+    <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;Mars: &quot;</span> <span class="o">+</span> <span class="n">mars</span> <span class="o">/</span> <span class="p">(</span><span class="n">double</span><span class="p">)</span> <span class="n">lightSpeed</span> <span class="o">+</span> <span class="s2">&quot; hours&quot;</span><span class="p">);</span>
+    <span class="n">total</span> <span class="o">+=</span>  <span class="n">mars</span> <span class="o">/</span> <span class="p">(</span><span class="n">double</span><span class="p">)</span> <span class="n">lightSpeed</span><span class="p">;</span>
+
+
+	<span class="nb">int</span> <span class="n">average</span> <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">)(</span><span class="n">total</span> <span class="o">/</span> <span class="n">numPlanets</span><span class="p">);</span>
+    <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;Total travel time:&quot;</span> <span class="o">+</span> <span class="n">total</span><span class="p">);</span>
+	<span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;Average travel time: &quot;</span> <span class="o">+</span> <span class="n">average</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -1250,9 +1283,11 @@ Total Sales: $64.3
 <span class="w"> </span><span class="n">Jupiter</span><span class="p">:</span><span class="w"> </span><span class="mf">5.825604352006665</span><span class="w"> </span><span class="n">hours</span>
 <span class="w"> </span><span class="n">Saturn</span><span class="p">:</span><span class="w"> </span><span class="mf">11.813728535388819</span><span class="w"> </span><span class="n">hours</span>
 <span class="n">Total</span><span class="w"> </span><span class="n">travel</span><span class="w"> </span><span class="n">time</span><span class="p">:</span><span class="mf">19.59838263477574</span>
+
+<span class="n">Average</span><span class="w"> </span><span class="n">travel</span><span class="w"> </span><span class="n">time</span><span class="p">:</span><span class="w"> </span><span class="n">approximatley</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="n">hours</span><span class="p">.</span>
 </pre></div>
 </div>
-<p><em>Your output should look similar to the example above.  I am not asking you to find the <strong>average</strong> for this assignment.</em></p>
+<p><em>Your output should look similar to the example above.</em></p>
 <p>You will write a widening algorithm that will show the travel time to and from all planets.  You will write a casting version without new variables to show the travel times. The one rule is that you must use the provided code and not change any provided data types.</p>
 </section>
 <section id="numbers-riddle-project">
