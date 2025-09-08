@@ -828,14 +828,14 @@ public class CastingEggs {
     int eggs = 9;
     int dozen = 12;// the variable dozen will not change
 
-    System.out.println("Total eggs = " + eggs/dozen);
-    System.out.println("Total eggs = " + eggs/ (double)dozen);
-    System.out.println("Total eggs = " + (double)eggs/ dozen);
+    System.out.println("Total eggs = " + eggs/dozen + " dozen");
+    System.out.println("Total eggs = " + eggs/ (double)dozen + " dozen");
+    System.out.println("Total eggs = " + (double)eggs/ dozen + " dozen");
 
 // Example output:
-// Total eggs = 0
-// Total eggs = 0.75
-// Total eggs = 0.75
+// Total eggs = 0 dozen
+// Total eggs = 0.75 dozen
+// Total eggs = 0.75 dozen
 
 ```
 We know that we don't have 0 eggs.  We can rewrite our program to show how many eggs we have in decimal form.
