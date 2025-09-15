@@ -97,7 +97,7 @@ class Box
 // Main Class 
 public class Main
 {
- public static void main(String args[])
+ public static void main(String[] args)
  {
   // create boxes using various constructors
   Box mybox1 = new Box(10, 20, 15);
@@ -278,9 +278,22 @@ Goals: 0
 Starting: True
 ```
 
-### Activity 2.1.2
-- [ ] Using the comments, complete the Main Class.
-- [ ] Submit your program code
+### Activity 2.1.2 Not another Cake
+
+**Directions:*  Look at the Cake.java program.  Create a 1 tier care, 2 tier cake, and a 3 tier cake.  Print out the reference location of the constructor.  I provided the solution for you if you get stuck.
+
+**Submission:**
+
+- [ ] Create a unique program of your choice.
+- [ ] Create three constructors
+   - [ ] default constructor
+   - [ ] constructor with 1 parameter
+   - [ ] constructor with 2 parameters
+   - [ ] constructor with 3 parameters
+- [ ] Use appropriate comments throughout your program.
+- [ ] Use toString() method to display all objects.
+- [ ] Submit all of your your program files as a .java file. (Main.java, x.java, etc.)
+
 
 ```java
 
@@ -408,8 +421,62 @@ public class Main
 ```
 </details>
 
--------------------------------------------------------------------------
 
+
+**Activity 2.1.3 Dog Pizza java**
+- [ ] Complete Dog.java by: filling in the attributes & creating the constructor
+- [ ] Instantiate 3 pizzas and print them out by:
+	- [ ] creating a Pizza class
+ 	- [ ] filling out the attributes
+  	- [ ] creating the constructor
+  	- [ ] create the 3 pizzas and print them out
+  	- [ ] use the `toString()` method to print out the pizza size, type of pizza, and toppings
+  		- 12 inch Veggie pizza with Tomatoes, onions, olives
+  	 	- 15 inch Cheese pizza with Cheese
+  	  	- 20 inch Meat pizza with Pepperoni, sausage, bacon
+
+**Main Class**
+```java
+class Main 
+{
+	public static void main(String[] args) 
+	{
+    	Dog golden = new Dog("Golden Retriever", "Sammy");
+        System.out.println(golden);
+    	
+    	//instantiate 3 pizzas below and print them out below
+
+
+	}
+}
+```
+
+**Dog.java** file
+```java
+public class Dog 
+{
+    //attributes
+
+    //constructor
+
+    // This method should work after you add the
+    // new instance variable and update the constructor.
+    // DO NOT modify this method.
+    public String toString()
+    {
+        return name + " is a " + breed;
+    }
+}
+```
+**Pizza.java**
+```java
+
+//Your code here
+
+```
+
+
+---
 
 **Bicycle Revisited**
 
