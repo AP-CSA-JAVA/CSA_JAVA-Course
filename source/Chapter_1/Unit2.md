@@ -704,8 +704,62 @@ Using parameters allows us the freedom to write a program that is more flexible 
 
 For example:
 ```java
-public void school(int grade, double gpa) {}
-public void school(int grade, double gpa, String name) {}
+public class Restaurant {
+    public static void main(String[] args) {
+        // Using overloaded constructors
+        BurgerOrder order1 = new BurgerOrder("Cheese");
+        BurgerOrder order2 = new BurgerOrder("Bacon", true);
+        BurgerOrder order3 = new BurgerOrder("Veggie", true, "Soda");
+
+        // Using overloaded methods
+        order1.makeBurger("Cheese");
+        order2.makeBurger("Bacon", true);
+        order3.makeBurger("Veggie", true, "Soda");
+    }
+}
+
+class BurgerOrder {
+    private String topping;
+    private boolean withFries;
+    private String drink;
+
+    // Constructor 1: Just topping
+    public BurgerOrder(String topping) {
+        this.topping = topping;
+        this.withFries = false; // default
+        this.drink = "None";   // default
+    }
+
+    // Constructor 2: Topping + Fries
+    public BurgerOrder(String topping, boolean withFries) {
+        this.topping = topping;
+        this.withFries = withFries;
+        this.drink = "None"; // default
+    }
+
+    // Constructor 3: Topping + Fries + Drink
+    public BurgerOrder(String topping, boolean withFries, String drink) {
+        this.topping = topping;
+        this.withFries = withFries;
+        this.drink = drink;
+    }
+
+    // Overloaded Methods
+    public void makeBurger(String topping) {
+        System.out.println("One " + topping + " burger. No fries. No drink.");
+    }
+
+    public void makeBurger(String topping, boolean withFries) {
+        String friesText = withFries ? "with fries" : "no fries";
+        System.out.println("One " + topping + " burger, " + friesText + ". No drink.");
+    }
+
+    public void makeBurger(String topping, boolean withFries, String drink) {
+        String friesText = withFries ? "with fries" : "no fries";
+        System.out.println("One " + topping + " burger, " + friesText + ", and a " + drink + ".");
+    }
+}
+
 ```
 
 
