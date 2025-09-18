@@ -561,65 +561,47 @@ Age: 50
 Mobile Number: 1236549898
 GPA: 3.0
 ```
+
 **Constructor Practice**
-```java
-/*
-Complete Dog.java by:
--filling in the attributes
--creating the constructor
 
-Instantiate 3 pizzas and print them out by:
--creating a Pizza class
--filling out the attributes
--creating the constructor
--use this code for the toString() method: 
 
-    public String toString()
+1. **Create a class called `Student`.**
 
-    {
+   * The class should have the following **instance variables**:
 
-        return size + " inch " + type + " pizza with " + toppings;
+     * `name` (String)
+     * `age` (int)
+     * `gpa` (double)
 
-    }
+2. **Write at least four constructors:**
 
--create the 3 pizzas and print them out
+   * A **no-argument constructor** that sets all values to defaults (e.g., `"Unknown"`, `0`, `0.0`).
+   * A constructor that takes only a **name**.
+   * A constructor that takes a **name and age**.
+   * A constructor that takes all three values (**name, age, gpa**).
 
--your output should look like this:
-12 inch Veggie pizza with Tomatoes, onions, olives
-15 inch Cheese pizza with Cheese
-20 inch Meat pizza with Pepperoni, sausage, bacon*/
-class Main 
-{
-	public static void main(String[] args) 
-	{
-    	Dog golden = new Dog("Golden Retriever", "Sammy");
-        System.out.println(golden);
-    	
-    	//instantiate 3 pizzas below and print them out below
-	}
-}
+3. **Write a `toString` method** that returns the student information as a single string. Example:
+
+   ```java
+   Student{name='Alice', age=16, gpa=3.5}
+   ```
+
+4. **Create a `Main` class** with a `main` method. In `main`:
+
+   * Create at least **one `Student` object using each constructor**.
+   * Print each object.
+
+
+**Example Output**:
+
+```
+Student{name='Unknown', age=0, gpa=0.0}
+Student{name='Alice', age=0, gpa=0.0}
+Student{name='Bob', age=17, gpa=0.0}
+Student{name='Charlie', age=18, gpa=3.7}
 ```
 
-```java
-public class Dog 
-{
-    //attributes
-
-
-    
-    //constructor
-
-
-    
-    // This method should work after you add the
-    // new instance variable and update the constructor.
-    // DO NOT modify this method.
-    public String toString()
-    {
-        return name + " is a " + breed;
-    }
-}
-```
+---
 
 
 ## 2.3 Calling a Void Method

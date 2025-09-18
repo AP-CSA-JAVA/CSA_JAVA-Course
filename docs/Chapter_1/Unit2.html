@@ -801,65 +801,48 @@ As you recall, the scanner class is a package that provides primitive input with
 </pre></div>
 </div>
 <p><strong>Constructor Practice</strong></p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
-<span class="cm">Complete Dog.java by:</span>
-<span class="cm">-filling in the attributes</span>
-<span class="cm">-creating the constructor</span>
-
-<span class="cm">Instantiate 3 pizzas and print them out by:</span>
-<span class="cm">-creating a Pizza class</span>
-<span class="cm">-filling out the attributes</span>
-<span class="cm">-creating the constructor</span>
-<span class="cm">-use this code for the toString() method: </span>
-
-<span class="cm">    public String toString()</span>
-
-<span class="cm">    {</span>
-
-<span class="cm">        return size + &quot; inch &quot; + type + &quot; pizza with &quot; + toppings;</span>
-
-<span class="cm">    }</span>
-
-<span class="cm">-create the 3 pizzas and print them out</span>
-
-<span class="cm">-your output should look like this:</span>
-<span class="cm">12 inch Veggie pizza with Tomatoes, onions, olives</span>
-<span class="cm">15 inch Cheese pizza with Cheese</span>
-<span class="cm">20 inch Meat pizza with Pepperoni, sausage, bacon*/</span>
-<span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span>
-<span class="p">{</span>
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span>
-<span class="w">	</span><span class="p">{</span>
-<span class="w">    	</span><span class="n">Dog</span><span class="w"> </span><span class="n">golden</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">(</span><span class="s">&quot;Golden Retriever&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Sammy&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">golden</span><span class="p">);</span>
-<span class="w">    	</span>
-<span class="w">    	</span><span class="c1">//instantiate 3 pizzas below and print them out below</span>
-<span class="w">	</span><span class="p">}</span>
-<span class="p">}</span>
+<ol class="arabic">
+<li><p><strong>Create a class called <code class="docutils literal notranslate"><span class="pre">Student</span></code>.</strong></p>
+<ul class="simple">
+<li><p>The class should have the following <strong>instance variables</strong>:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (String)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">age</span></code> (int)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gpa</span></code> (double)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Write at least four constructors:</strong></p>
+<ul class="simple">
+<li><p>A <strong>no-argument constructor</strong> that sets all values to defaults (e.g., <code class="docutils literal notranslate"><span class="pre">&quot;Unknown&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">0.0</span></code>).</p></li>
+<li><p>A constructor that takes only a <strong>name</strong>.</p></li>
+<li><p>A constructor that takes a <strong>name and age</strong>.</p></li>
+<li><p>A constructor that takes all three values (<strong>name, age, gpa</strong>).</p></li>
+</ul>
+</li>
+<li><p><strong>Write a <code class="docutils literal notranslate"><span class="pre">toString</span></code> method</strong> that returns the student information as a single string. Example:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Student</span><span class="p">{</span><span class="n">name</span><span class="o">=</span><span class="err">&#39;</span><span class="n">Alice</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="n">gpa</span><span class="o">=</span><span class="mf">3.5</span><span class="p">}</span>
 </pre></div>
 </div>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Dog</span><span class="w"> </span>
-<span class="p">{</span>
-<span class="w">    </span><span class="c1">//attributes</span>
-
-
-<span class="w">    </span>
-<span class="w">    </span><span class="c1">//constructor</span>
-
-
-<span class="w">    </span>
-<span class="w">    </span><span class="c1">// This method should work after you add the</span>
-<span class="w">    </span><span class="c1">// new instance variable and update the constructor.</span>
-<span class="w">    </span><span class="c1">// DO NOT modify this method.</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; is a &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">breed</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
+</li>
+<li><p><strong>Create a <code class="docutils literal notranslate"><span class="pre">Main</span></code> class</strong> with a <code class="docutils literal notranslate"><span class="pre">main</span></code> method. In <code class="docutils literal notranslate"><span class="pre">main</span></code>:</p>
+<ul class="simple">
+<li><p>Create at least <strong>one <code class="docutils literal notranslate"><span class="pre">Student</span></code> object using each constructor</strong>.</p></li>
+<li><p>Print each object.</p></li>
+</ul>
+</li>
+</ol>
+<p><strong>Example Output</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Student</span><span class="p">{</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Unknown&#39;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">gpa</span><span class="o">=</span><span class="mf">0.0</span><span class="p">}</span>
+<span class="n">Student</span><span class="p">{</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">gpa</span><span class="o">=</span><span class="mf">0.0</span><span class="p">}</span>
+<span class="n">Student</span><span class="p">{</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">17</span><span class="p">,</span> <span class="n">gpa</span><span class="o">=</span><span class="mf">0.0</span><span class="p">}</span>
+<span class="n">Student</span><span class="p">{</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Charlie&#39;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span> <span class="n">gpa</span><span class="o">=</span><span class="mf">3.7</span><span class="p">}</span>
 </pre></div>
 </div>
 </section>
 </section>
+<hr class="docutils" />
 <section id="calling-a-void-method">
 <h2>2.3 Calling a Void Method<a class="headerlink" href="#calling-a-void-method" title="Link to this heading">¶</a></h2>
 <ul class="contains-task-list simple">
