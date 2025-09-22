@@ -478,6 +478,88 @@ public class Dog
 
 ---
 
+
+<details><summary> Click Here to view the code</summary>
+
+
+```java
+// -------- File 1 --------
+
+public class Main {
+    public static void main(String[] args) {
+
+        Fruit apple = new Fruit("Apple", "Red", 0.2);
+        Fruit banana = new Fruit("Banana", "Yellow");
+        
+        Vegetable carrot = new Vegetable("Carrot", "Orange");
+        Vegetable potato = new Vegetable("Potato", "Brown", 0.5);
+
+
+        System.out.println(apple.toString());
+        System.out.println(banana.toString());
+        System.out.println(carrot.toString());
+        System.out.println(potato.toString());
+    }
+
+// -------- File 2 --------
+
+class Fruit {
+    String name;
+    String color;
+    double weight;
+
+    // Constructor with three parameters: name, color, and weight
+    public Fruit(String name, String color, double weight) {
+        this.name = name;
+        this.color = color;
+        this.weight = weight;
+    }
+
+    // Constructor with two parameters: name and color
+    public Fruit(String name, String color) {
+        this.name = name;
+        this.color = color;
+        // Missing initialization of weight, should be 0 by default or given a value.
+    }
+
+
+    public String toString() {
+        return "Fruit: " + name + ", Color: " + color + ", Weight: " + weight + "lbs.";
+    }
+}
+
+// -------- File 3 --------
+
+class Vegetable {
+    String name;
+    String color;
+    double weight;
+
+    public Vegetable(String name, String color) {
+        this.name = name;
+        this.color = color;
+        // Missing initialization for weight
+    }
+
+
+    public Vegetable(String name, String color, double weight) {
+        this.name = name;
+        this.color = color;
+        this.weight = weight;
+    }
+
+
+    public String toString() {
+        return "Vegetable: " + name + ", Color: " + color + ", Weight: " + weight + "lbs.";
+    }
+}
+
+```
+
+</details>
+
+
+
 **Bicycle Revisited**
 
 **Instructions:**
@@ -492,8 +574,8 @@ public class Dog
 4. Create a constructor that takes all the parameters
 5. Create two more objects that will match the sample output.
 
+**Sample Output:**
 ```java
-Sample Output
 
 My bicycle has 1 gear and is painted white!
 Pedaling to accelerate!
