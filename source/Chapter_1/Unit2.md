@@ -475,6 +475,7 @@ public class Dog
 
 ```
 
+---
 
 ---
 
@@ -566,7 +567,9 @@ class Vegetable {
 
 </details>
 
+---
 
+---
 
 **Bicycle Revisited**
 
