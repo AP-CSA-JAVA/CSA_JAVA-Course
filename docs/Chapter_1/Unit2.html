@@ -718,6 +718,80 @@ Null is a reserved keyword in Java for literal values. It is a value that shows 
 </pre></div>
 </div>
 <hr class="docutils" />
+<details><summary> Click Here to view the code</summary>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// -------- File 1 --------</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="n">Fruit</span><span class="w"> </span><span class="n">apple</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Fruit</span><span class="p">(</span><span class="s">&quot;Apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Red&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Fruit</span><span class="w"> </span><span class="n">banana</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Fruit</span><span class="p">(</span><span class="s">&quot;Banana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Yellow&quot;</span><span class="p">);</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="n">Vegetable</span><span class="w"> </span><span class="n">carrot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Vegetable</span><span class="p">(</span><span class="s">&quot;Carrot&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Orange&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Vegetable</span><span class="w"> </span><span class="n">potato</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Vegetable</span><span class="p">(</span><span class="s">&quot;Potato&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Brown&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">);</span>
+
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">apple</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">banana</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">carrot</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">potato</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="c1">// -------- File 2 --------</span>
+
+<span class="kd">class</span> <span class="nc">Fruit</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">color</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">weight</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Constructor with three parameters: name, color, and weight</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Fruit</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">color</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">weight</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">color</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">weight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">weight</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Constructor with two parameters: name and color</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Fruit</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">color</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">color</span><span class="p">;</span>
+<span class="w">        </span><span class="c1">// Missing initialization of weight, should be 0 by default or given a value.</span>
+<span class="w">    </span><span class="p">}</span>
+
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Fruit: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, Color: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, Weight: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">weight</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;lbs.&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// -------- File 3 --------</span>
+
+<span class="kd">class</span> <span class="nc">Vegetable</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">color</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">weight</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Vegetable</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">color</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">color</span><span class="p">;</span>
+<span class="w">        </span><span class="c1">// Missing initialization for weight</span>
+<span class="w">    </span><span class="p">}</span>
+
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Vegetable</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">color</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">weight</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">color</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">weight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">weight</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Vegetable: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, Color: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, Weight: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">weight</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;lbs.&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</details>
 <p><strong>Bicycle Revisited</strong></p>
 <p><strong>Instructions:</strong></p>
 <ol class="arabic simple">
@@ -734,9 +808,8 @@ Null is a reserved keyword in Java for literal values. It is a value that shows 
 <li><p>Create a constructor that takes all the parameters</p></li>
 <li><p>Create two more objects that will match the sample output.</p></li>
 </ol>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Sample</span><span class="w"> </span><span class="n">Output</span>
-
-<span class="n">My</span><span class="w"> </span><span class="n">bicycle</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">gear</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">painted</span><span class="w"> </span><span class="n">white</span><span class="o">!</span>
+<p><strong>Sample Output:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">My</span><span class="w"> </span><span class="n">bicycle</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">gear</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">painted</span><span class="w"> </span><span class="n">white</span><span class="o">!</span>
 <span class="n">Pedaling</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">accelerate</span><span class="o">!</span>
 <span class="n">My</span><span class="w"> </span><span class="n">cruiser</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="n">gears</span><span class="w"> </span><span class="n">costs</span><span class="w"> </span><span class="n">$150</span><span class="p">.</span>
 <span class="n">Pedaling</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">accelerate</span><span class="p">.</span>
