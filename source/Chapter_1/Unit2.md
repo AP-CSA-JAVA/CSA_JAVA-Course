@@ -481,6 +481,14 @@ public class Dog
 
 <details><summary> Click Here to view the code</summary>
 
+When you run the program, the output will be:
+
+```java
+Fruit: Apple, Color: Red, Weight: 0.2 lbs.
+Fruit: Banana, Color: Yellow, Weight: 0.0 lbs.
+Vegetable: Carrot, Color: Orange, Weight: 0.0 lbs.
+Vegetable: Potato, Color: Brown, Weight: 0.5 lbs.
+```
 
 ```java
 // -------- File 1 --------
