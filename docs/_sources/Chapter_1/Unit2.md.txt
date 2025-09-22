@@ -482,7 +482,7 @@ public class Dog
 
 <details><summary> Click Here to view the code</summary>
 
-When you run the program, the output will be:
+When you run the program, this is the intended output:
 
 ```java
 Fruit: Apple, Color: Red, Weight: 0.2 lbs.
