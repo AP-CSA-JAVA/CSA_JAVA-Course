@@ -839,7 +839,12 @@ class BurgerOrder {
 
 
 
-### Activity 2.4.1
+### Activity 2.4.1(a)
+<details><summary>Click Here</summary>
+
+--- 
+
+
 **Instructions DigiPet**
 You will create a class DigiPet
 
@@ -889,6 +894,90 @@ Hunger: 20
 Energy: 60
 Happy: 45
 ```
+
+---
+
+</details>
+
+---
+
+### Activity 2.4.1(b)
+
+<details><summary> Click Here </summary>
+
+---
+
+
+**Virtual Arcade Machine**
+
+**Instructions:**
+
+You will create a class called `ArcadeGame`.
+
+1. **Attributes**
+
+   * `title` (String)
+   * `credits` (int)
+
+2. **Constructor**
+
+   * Takes in a `title`.
+   * `credits` starts at `0`.
+
+3. **Void Methods (no parameters):**
+
+   * `insertCoin()` → increases credits by 1 and prints `"Coin inserted! Current credits: X"`.
+   * `startGame()` → if credits ≥ 1, print `"Starting [title]!"` and reduce credits by 1. Otherwise print `"Not enough credits!"`.
+
+4. **Void Methods (with parameters):**
+
+   * `insertCoins(int amount)` → increases credits by `amount` and prints how many coins were added.
+   * `playMultiplayer(int players)` → if credits ≥ players, subtract that many credits and print `"Starting [title] with [players] players!"`. Otherwise print `"Not enough credits for multiplayer."`.
+
+5. **Main Class**
+
+   * Create two different arcade games (Pac-Man and Street Fighter).
+   * Demonstrate both **parameterless methods** and **parameterized methods** in action.
+
+---
+
+**Sample Output**
+
+```
+Coin inserted! Current credits: 1
+Starting Pac-Man!
+Not enough credits!
+Added 5 coins! Current credits: 5
+Starting Street Fighter with 2 players!
+Not enough credits for multiplayer.
+```
+
+**Extenstions (Optional)**
+
+**1. High Score Tracking**
+	* Add an attribute `highScore` to the `ArcadeGame` class.
+	* Create a **void method with parameters** `updateScore(int score)` that updates the high score if the new score is higher.
+	* Print a message if the high score is beaten: `"New high score: X!"`.
+
+**2. Bonus Credits**
+	* Add a **void method with parameters** `bonusCredits(int multiplier)` that multiplies the current credits by a number and prints the new total.
+	* Example: `bonusCredits(2)` doubles the credits.
+
+**3. Multiple Rounds / Levels**
+	* Add a **void method** `playLevel()` without parameters that decreases 1 credit per level and prints `"Level X completed!"`.
+	* Add another **void method with parameters** `playLevels(int levels)` to let the player attempt multiple levels at once.
+
+**4. Player Names**
+	* Add a `playerName` attribute and create a **void method with parameters** `setPlayerName(String name)` to assign it.
+	* Modify other methods to personalize output, e.g., `"Starting Street Fighter for player Alex!"`.
+
+
+---
+
+</details>
+
+---
+
 
 ## 2.5 Non-Void Methods
 
@@ -975,37 +1064,192 @@ ________________________________________________________________________________
 
 ### Activity 2.5.2
 
-**Instructions RoadTrip using Non-Void Methods**
-
-Starter file: [125-RoadTrip.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9717372/125-RoadTrip.zip)
-
-1. In the Car class, the attributes and constructor are complete. Look them over.
-2. In the Main class, create car object that has 20 mpg and a 15 gallon tank
-3. In the Car class, create the following methods:	
-- `odometer()` - prints out how many miles driven like this: `Miles Driven: 300.0`
-- `milesAvailable()` - prints out how many miles the car can drive on that much gas. For example: `Miles Available: 240.0`
-- `addGas()` - This should add amount to the tank. If the amount is greater than the capacity, set the gas to the tank capacity. The method should print `Adding gas ...`
-- `drive()` - checks if car can drive that number of miles, and then adds miles to totalMilesDriven and subtracts the amount of gas needed to go those miles. The method should print Driving [distance] or, if the distance is too far, it should print Can't drive [distance]. That's too far!
-
-4. In the Main class, follow the comments and call the appropriate methods.
+**Instructions RoadTrip Simulator (With Car, EV, and Motorcycle) using Non-Void Methods**
 
 
-**Sample Output:**
-```java
-Miles Driven: 0.0
-Miles Available: 0.0
-Adding gas ...
-Miles Available: 300.0
-Driving 100.0
-Miles Available: 200.0
-Adding gas ...
-Miles Available: 240.0
-Can't drive 365.0. That's too far!
-Driving 200.0
-Miles Driven: 300.0
+
+**Objective:**
+
+In this project, you will build a Java program to simulate a road trip using three types of vehicles:
+
+* A gas-powered **Car**
+* An **Electric Vehicle (EV)**
+* A gas-powered **Motorcycle**
+
+Each vehicle will keep track of:
+
+* How far it has driven
+* How far it can go based on remaining fuel or charge
+* Whether it can drive a given distance
+* How much fuel or charge it has
+
+You will create **three separate classes** and write a `Main` class that tests them.
+
+---
+
+**Build the Vehicle Classes**
+
+You will create three Java files:
+
+* `Car.java`
+* `EV.java`
+* `Motorcycle.java`
+
+Each class should include:
+
+**Attributes:**
+
+| Car & Motorcycle             | EV                                      |
+| ---------------------------- | --------------------------------------- |
+| `mpg` (miles per gallon)     | `milesPerKWh` (miles per kilowatt-hour) |
+| `tankSize` (maximum gallons) | `batteryCapacity` (maximum kWh)         |
+| `gasInTank`                  | `batteryLevel`                          |
+| `milesDriven`                | `milesDriven`                           |
+
+---
+
+**Methods for Each Class:**
+
+`Constructor`
+
+Set the efficiency and tank/battery size when the object is created. Initialize fuel/charge to 0.
+
+`void showOdometer()`
+
+Prints how many miles the vehicle has driven.
+Example:
+
+```
+Miles Driven (Car): 300.0
 ```
 
-Submit your link to the finished program
+`void checkRange()`
+
+Prints how many miles the vehicle can still drive based on its current fuel or charge.
+Example:
+
+```
+Miles Available (EV): 240.0
+```
+
+`void fillUp(double amount)`
+
+Adds gas (for Car or Motorcycle) or charge (for EV).
+
+* If the new total goes over the max tank or battery, cap it.
+* Print a message like:
+
+```
+Adding gas to car...
+```
+
+or
+
+```
+Charging EV...
+```
+
+`void goDrive(double distance)`
+
+Try to drive a certain number of miles.
+
+* If there’s enough fuel/charge:
+
+  * Print `Driving [distance]`
+  * Subtract fuel/charge used
+  * Add miles to total
+* If there’s **not** enough:
+
+  * Print `Can't drive [distance]. That's too far!` or similar
+
+---
+
+**Test Your Program in `Main.java`**
+
+In the `Main` class, you will:
+
+1. Create **one object of each vehicle**:
+
+   * Car: 20 mpg, 15-gallon tank
+   * EV: 4 mi/kWh, 85 kWh battery
+   * Motorcycle: 60 mpg, 4-gallon tank
+
+2. Call methods to simulate a trip:
+
+**Sample Method Calls:**
+
+```java
+car.showOdometer();
+car.checkRange();
+car.fillUp(15);
+car.checkRange();
+car.goDrive(100);
+car.checkRange();
+car.fillUp(2);
+car.goDrive(200);
+car.showOdometer();
+```
+
+Repeat similar steps for the EV and Motorcycle.
+
+---
+
+**Sample Output:**
+
+```
+--- Car ---
+Miles Driven (Car): 0.0
+Miles Available (Car): 0.0
+Adding gas to car...
+Miles Available (Car): 300.0
+Driving car 100.0
+Miles Available (Car): 200.0
+Driving car 200.0
+Miles Driven (Car): 300.0
+
+--- Electric Vehicle ---
+Miles Driven (EV): 0.0
+Miles Available (EV): 0.0
+Charging EV...
+Miles Available (EV): 320.0
+Driving EV 250.0
+Miles Available (EV): 70.0
+Can't drive EV 120.0. Not enough charge!
+Miles Driven (EV): 250.0
+
+--- Motorcycle ---
+Miles Driven (Motorcycle): 0.0
+Miles Available (Motorcycle): 0.0
+Filling motorcycle...
+Miles Available (Motorcycle): 180.0
+Driving motorcycle 100.0
+Miles Available (Motorcycle): 80.0
+Can't drive motorcycle 200.0. Not enough fuel!
+Miles Driven (Motorcycle): 100.0
+```
+
+---
+
+**Requirements Checklist:**
+
+| Task                                           | Completed? |
+| ---------------------------------------------- | ---------- |
+| Created `Car`, `EV`, and `Motorcycle` classes  |          |
+| Each class has attributes and constructor      |          |
+| Each class includes the 4 methods              |          |
+| Created and tested each vehicle in `Main.java` |          |
+| Output matches the example structure           |         |
+
+---
+
+**Extra Credit (Optional):**
+
+* Add a method that returns how much fuel/charge is left.
+* Allow user input using `Scanner` to choose drive distances.
+* Make a trip log that records each successful drive.
+
+---
+
 _____________________________________________________________________________________________________
 
 ## 2.6 String Objects: Concatenation, Literals, and Other Things

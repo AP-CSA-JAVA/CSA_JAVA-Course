@@ -1066,8 +1066,10 @@ As you recall, the scanner class is a package that provides primitive input with
 <span class="p">}</span>
 </pre></div>
 </div>
-<section id="activity-2-4-1">
-<h3>Activity 2.4.1<a class="headerlink" href="#activity-2-4-1" title="Link to this heading">¶</a></h3>
+<section id="activity-2-4-1-a">
+<h3>Activity 2.4.1(a)<a class="headerlink" href="#activity-2-4-1-a" title="Link to this heading">¶</a></h3>
+<details><summary>Click Here</summary>
+<hr class="docutils" />
 <p><strong>Instructions DigiPet</strong>
 You will create a class DigiPet</p>
 <ol class="arabic simple">
@@ -1124,8 +1126,78 @@ You will create a class DigiPet</p>
 <span class="nl">Happy</span><span class="p">:</span><span class="w"> </span><span class="mi">45</span>
 </pre></div>
 </div>
+<hr class="docutils" />
+</details>
+</section>
+<hr class="docutils" />
+<section id="activity-2-4-1-b">
+<h3>Activity 2.4.1(b)<a class="headerlink" href="#activity-2-4-1-b" title="Link to this heading">¶</a></h3>
+<details><summary> Click Here </summary>
+<hr class="docutils" />
+<p><strong>Virtual Arcade Machine</strong></p>
+<p><strong>Instructions:</strong></p>
+<p>You will create a class called <code class="docutils literal notranslate"><span class="pre">ArcadeGame</span></code>.</p>
+<ol class="arabic simple">
+<li><p><strong>Attributes</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (String)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">credits</span></code> (int)</p></li>
+</ul>
+</li>
+<li><p><strong>Constructor</strong></p>
+<ul class="simple">
+<li><p>Takes in a <code class="docutils literal notranslate"><span class="pre">title</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">credits</span></code> starts at <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong>Void Methods (no parameters):</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">insertCoin()</span></code> → increases credits by 1 and prints <code class="docutils literal notranslate"><span class="pre">&quot;Coin</span> <span class="pre">inserted!</span> <span class="pre">Current</span> <span class="pre">credits:</span> <span class="pre">X&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">startGame()</span></code> → if credits ≥ 1, print <code class="docutils literal notranslate"><span class="pre">&quot;Starting</span> <span class="pre">[title]!&quot;</span></code> and reduce credits by 1. Otherwise print <code class="docutils literal notranslate"><span class="pre">&quot;Not</span> <span class="pre">enough</span> <span class="pre">credits!&quot;</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong>Void Methods (with parameters):</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">insertCoins(int</span> <span class="pre">amount)</span></code> → increases credits by <code class="docutils literal notranslate"><span class="pre">amount</span></code> and prints how many coins were added.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">playMultiplayer(int</span> <span class="pre">players)</span></code> → if credits ≥ players, subtract that many credits and print <code class="docutils literal notranslate"><span class="pre">&quot;Starting</span> <span class="pre">[title]</span> <span class="pre">with</span> <span class="pre">[players]</span> <span class="pre">players!&quot;</span></code>. Otherwise print <code class="docutils literal notranslate"><span class="pre">&quot;Not</span> <span class="pre">enough</span> <span class="pre">credits</span> <span class="pre">for</span> <span class="pre">multiplayer.&quot;</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong>Main Class</strong></p>
+<ul class="simple">
+<li><p>Create two different arcade games (Pac-Man and Street Fighter).</p></li>
+<li><p>Demonstrate both <strong>parameterless methods</strong> and <strong>parameterized methods</strong> in action.</p></li>
+</ul>
+</li>
+</ol>
+<hr class="docutils" />
+<p><strong>Sample Output</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Coin inserted! Current credits: 1
+Starting Pac-Man!
+Not enough credits!
+Added 5 coins! Current credits: 5
+Starting Street Fighter with 2 players!
+Not enough credits for multiplayer.
+</pre></div>
+</div>
+<p><strong>Extenstions (Optional)</strong></p>
+<p><strong>1. High Score Tracking</strong>
+* Add an attribute <code class="docutils literal notranslate"><span class="pre">highScore</span></code> to the <code class="docutils literal notranslate"><span class="pre">ArcadeGame</span></code> class.
+* Create a <strong>void method with parameters</strong> <code class="docutils literal notranslate"><span class="pre">updateScore(int</span> <span class="pre">score)</span></code> that updates the high score if the new score is higher.
+* Print a message if the high score is beaten: <code class="docutils literal notranslate"><span class="pre">&quot;New</span> <span class="pre">high</span> <span class="pre">score:</span> <span class="pre">X!&quot;</span></code>.</p>
+<p><strong>2. Bonus Credits</strong>
+* Add a <strong>void method with parameters</strong> <code class="docutils literal notranslate"><span class="pre">bonusCredits(int</span> <span class="pre">multiplier)</span></code> that multiplies the current credits by a number and prints the new total.
+* Example: <code class="docutils literal notranslate"><span class="pre">bonusCredits(2)</span></code> doubles the credits.</p>
+<p><strong>3. Multiple Rounds / Levels</strong>
+* Add a <strong>void method</strong> <code class="docutils literal notranslate"><span class="pre">playLevel()</span></code> without parameters that decreases 1 credit per level and prints <code class="docutils literal notranslate"><span class="pre">&quot;Level</span> <span class="pre">X</span> <span class="pre">completed!&quot;</span></code>.
+* Add another <strong>void method with parameters</strong> <code class="docutils literal notranslate"><span class="pre">playLevels(int</span> <span class="pre">levels)</span></code> to let the player attempt multiple levels at once.</p>
+<p><strong>4. Player Names</strong>
+* Add a <code class="docutils literal notranslate"><span class="pre">playerName</span></code> attribute and create a <strong>void method with parameters</strong> <code class="docutils literal notranslate"><span class="pre">setPlayerName(String</span> <span class="pre">name)</span></code> to assign it.
+* Modify other methods to personalize output, e.g., <code class="docutils literal notranslate"><span class="pre">&quot;Starting</span> <span class="pre">Street</span> <span class="pre">Fighter</span> <span class="pre">for</span> <span class="pre">player</span> <span class="pre">Alex!&quot;</span></code>.</p>
+<hr class="docutils" />
+</details>
 </section>
 </section>
+<hr class="docutils" />
 <section id="non-void-methods">
 <h2>2.5 Non-Void Methods<a class="headerlink" href="#non-void-methods" title="Link to this heading">¶</a></h2>
 <p>If you’ve programmed in Python, you may remember that we used functions to execute a small chunk of code in other areas of the program.  Non-Void methods are very similar to functions in that they return a value of some type.  You have used non-void methods already, you just may not have recognized it. For example, the Scanner Class has non-void methods like nextInt(), nextDouble(), nextLine(), and next().  There are a number of methods that can be found in the Java standard library methods that are non-void methods.  Take a look at the example below.</p>
@@ -1203,37 +1275,195 @@ The area of a circle is <code class="docutils literal notranslate"><span class="
 <hr class="docutils" />
 <section id="activity-2-5-2">
 <h3>Activity 2.5.2<a class="headerlink" href="#activity-2-5-2" title="Link to this heading">¶</a></h3>
-<p><strong>Instructions RoadTrip using Non-Void Methods</strong></p>
-<p>Starter file: <a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9717372/125-RoadTrip.zip">125-RoadTrip.zip</a></p>
-<ol class="arabic simple">
-<li><p>In the Car class, the attributes and constructor are complete. Look them over.</p></li>
-<li><p>In the Main class, create car object that has 20 mpg and a 15 gallon tank</p></li>
-<li><p>In the Car class, create the following methods:</p></li>
-</ol>
+<p><strong>Instructions RoadTrip Simulator (With Car, EV, and Motorcycle) using Non-Void Methods</strong></p>
+<p><strong>Objective:</strong></p>
+<p>In this project, you will build a Java program to simulate a road trip using three types of vehicles:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">odometer()</span></code> - prints out how many miles driven like this: <code class="docutils literal notranslate"><span class="pre">Miles</span> <span class="pre">Driven:</span> <span class="pre">300.0</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">milesAvailable()</span></code> - prints out how many miles the car can drive on that much gas. For example: <code class="docutils literal notranslate"><span class="pre">Miles</span> <span class="pre">Available:</span> <span class="pre">240.0</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">addGas()</span></code> - This should add amount to the tank. If the amount is greater than the capacity, set the gas to the tank capacity. The method should print <code class="docutils literal notranslate"><span class="pre">Adding</span> <span class="pre">gas</span> <span class="pre">...</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">drive()</span></code> - checks if car can drive that number of miles, and then adds miles to totalMilesDriven and subtracts the amount of gas needed to go those miles. The method should print Driving [distance] or, if the distance is too far, it should print Can’t drive [distance]. That’s too far!</p></li>
+<li><p>A gas-powered <strong>Car</strong></p></li>
+<li><p>An <strong>Electric Vehicle (EV)</strong></p></li>
+<li><p>A gas-powered <strong>Motorcycle</strong></p></li>
 </ul>
-<ol class="arabic simple" start="4">
-<li><p>In the Main class, follow the comments and call the appropriate methods.</p></li>
-</ol>
-<p><strong>Sample Output:</strong></p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Miles</span><span class="w"> </span><span class="n">Driven</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span>
-<span class="n">Miles</span><span class="w"> </span><span class="n">Available</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span>
-<span class="n">Adding</span><span class="w"> </span><span class="n">gas</span><span class="w"> </span><span class="p">...</span>
-<span class="n">Miles</span><span class="w"> </span><span class="n">Available</span><span class="p">:</span><span class="w"> </span><span class="mf">300.0</span>
-<span class="n">Driving</span><span class="w"> </span><span class="mf">100.0</span>
-<span class="n">Miles</span><span class="w"> </span><span class="n">Available</span><span class="p">:</span><span class="w"> </span><span class="mf">200.0</span>
-<span class="n">Adding</span><span class="w"> </span><span class="n">gas</span><span class="w"> </span><span class="p">...</span>
-<span class="n">Miles</span><span class="w"> </span><span class="n">Available</span><span class="p">:</span><span class="w"> </span><span class="mf">240.0</span>
-<span class="n">Can</span><span class="err">&#39;</span><span class="n">t</span><span class="w"> </span><span class="n">drive</span><span class="w"> </span><span class="mf">365.0</span><span class="p">.</span><span class="w"> </span><span class="n">That</span><span class="err">&#39;</span><span class="n">s</span><span class="w"> </span><span class="n">too</span><span class="w"> </span><span class="n">far</span><span class="o">!</span>
-<span class="n">Driving</span><span class="w"> </span><span class="mf">200.0</span>
-<span class="n">Miles</span><span class="w"> </span><span class="n">Driven</span><span class="p">:</span><span class="w"> </span><span class="mf">300.0</span>
+<p>Each vehicle will keep track of:</p>
+<ul class="simple">
+<li><p>How far it has driven</p></li>
+<li><p>How far it can go based on remaining fuel or charge</p></li>
+<li><p>Whether it can drive a given distance</p></li>
+<li><p>How much fuel or charge it has</p></li>
+</ul>
+<p>You will create <strong>three separate classes</strong> and write a <code class="docutils literal notranslate"><span class="pre">Main</span></code> class that tests them.</p>
+<hr class="docutils" />
+<p><strong>Build the Vehicle Classes</strong></p>
+<p>You will create three Java files:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Car.java</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">EV.java</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Motorcycle.java</span></code></p></li>
+</ul>
+<p>Each class should include:</p>
+<p><strong>Attributes:</strong></p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Car &amp; Motorcycle</p></th>
+<th class="head"><p>EV</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">mpg</span></code> (miles per gallon)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">milesPerKWh</span></code> (miles per kilowatt-hour)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">tankSize</span></code> (maximum gallons)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">batteryCapacity</span></code> (maximum kWh)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">gasInTank</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">batteryLevel</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">milesDriven</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">milesDriven</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<p><strong>Methods for Each Class:</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">Constructor</span></code></p>
+<p>Set the efficiency and tank/battery size when the object is created. Initialize fuel/charge to 0.</p>
+<p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">showOdometer()</span></code></p>
+<p>Prints how many miles the vehicle has driven.
+Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Miles</span> <span class="n">Driven</span> <span class="p">(</span><span class="n">Car</span><span class="p">):</span> <span class="mf">300.0</span>
 </pre></div>
 </div>
-<p>Submit your link to the finished program</p>
+<p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">checkRange()</span></code></p>
+<p>Prints how many miles the vehicle can still drive based on its current fuel or charge.
+Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Miles</span> <span class="n">Available</span> <span class="p">(</span><span class="n">EV</span><span class="p">):</span> <span class="mf">240.0</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">fillUp(double</span> <span class="pre">amount)</span></code></p>
+<p>Adds gas (for Car or Motorcycle) or charge (for EV).</p>
+<ul class="simple">
+<li><p>If the new total goes over the max tank or battery, cap it.</p></li>
+<li><p>Print a message like:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Adding</span> <span class="n">gas</span> <span class="n">to</span> <span class="n">car</span><span class="o">...</span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Charging</span> <span class="n">EV</span><span class="o">...</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">goDrive(double</span> <span class="pre">distance)</span></code></p>
+<p>Try to drive a certain number of miles.</p>
+<ul class="simple">
+<li><p>If there’s enough fuel/charge:</p>
+<ul>
+<li><p>Print <code class="docutils literal notranslate"><span class="pre">Driving</span> <span class="pre">[distance]</span></code></p></li>
+<li><p>Subtract fuel/charge used</p></li>
+<li><p>Add miles to total</p></li>
+</ul>
+</li>
+<li><p>If there’s <strong>not</strong> enough:</p>
+<ul>
+<li><p>Print <code class="docutils literal notranslate"><span class="pre">Can't</span> <span class="pre">drive</span> <span class="pre">[distance].</span> <span class="pre">That's</span> <span class="pre">too</span> <span class="pre">far!</span></code> or similar</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<p><strong>Test Your Program in <code class="docutils literal notranslate"><span class="pre">Main.java</span></code></strong></p>
+<p>In the <code class="docutils literal notranslate"><span class="pre">Main</span></code> class, you will:</p>
+<ol class="arabic simple">
+<li><p>Create <strong>one object of each vehicle</strong>:</p>
+<ul class="simple">
+<li><p>Car: 20 mpg, 15-gallon tank</p></li>
+<li><p>EV: 4 mi/kWh, 85 kWh battery</p></li>
+<li><p>Motorcycle: 60 mpg, 4-gallon tank</p></li>
+</ul>
+</li>
+<li><p>Call methods to simulate a trip:</p></li>
+</ol>
+<p><strong>Sample Method Calls:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">car</span><span class="p">.</span><span class="na">showOdometer</span><span class="p">();</span>
+<span class="n">car</span><span class="p">.</span><span class="na">checkRange</span><span class="p">();</span>
+<span class="n">car</span><span class="p">.</span><span class="na">fillUp</span><span class="p">(</span><span class="mi">15</span><span class="p">);</span>
+<span class="n">car</span><span class="p">.</span><span class="na">checkRange</span><span class="p">();</span>
+<span class="n">car</span><span class="p">.</span><span class="na">goDrive</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+<span class="n">car</span><span class="p">.</span><span class="na">checkRange</span><span class="p">();</span>
+<span class="n">car</span><span class="p">.</span><span class="na">fillUp</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="n">car</span><span class="p">.</span><span class="na">goDrive</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+<span class="n">car</span><span class="p">.</span><span class="na">showOdometer</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>Repeat similar steps for the EV and Motorcycle.</p>
+<hr class="docutils" />
+<p><strong>Sample Output:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---</span> <span class="n">Car</span> <span class="o">---</span>
+<span class="n">Miles</span> <span class="n">Driven</span> <span class="p">(</span><span class="n">Car</span><span class="p">):</span> <span class="mf">0.0</span>
+<span class="n">Miles</span> <span class="n">Available</span> <span class="p">(</span><span class="n">Car</span><span class="p">):</span> <span class="mf">0.0</span>
+<span class="n">Adding</span> <span class="n">gas</span> <span class="n">to</span> <span class="n">car</span><span class="o">...</span>
+<span class="n">Miles</span> <span class="n">Available</span> <span class="p">(</span><span class="n">Car</span><span class="p">):</span> <span class="mf">300.0</span>
+<span class="n">Driving</span> <span class="n">car</span> <span class="mf">100.0</span>
+<span class="n">Miles</span> <span class="n">Available</span> <span class="p">(</span><span class="n">Car</span><span class="p">):</span> <span class="mf">200.0</span>
+<span class="n">Driving</span> <span class="n">car</span> <span class="mf">200.0</span>
+<span class="n">Miles</span> <span class="n">Driven</span> <span class="p">(</span><span class="n">Car</span><span class="p">):</span> <span class="mf">300.0</span>
+
+<span class="o">---</span> <span class="n">Electric</span> <span class="n">Vehicle</span> <span class="o">---</span>
+<span class="n">Miles</span> <span class="n">Driven</span> <span class="p">(</span><span class="n">EV</span><span class="p">):</span> <span class="mf">0.0</span>
+<span class="n">Miles</span> <span class="n">Available</span> <span class="p">(</span><span class="n">EV</span><span class="p">):</span> <span class="mf">0.0</span>
+<span class="n">Charging</span> <span class="n">EV</span><span class="o">...</span>
+<span class="n">Miles</span> <span class="n">Available</span> <span class="p">(</span><span class="n">EV</span><span class="p">):</span> <span class="mf">320.0</span>
+<span class="n">Driving</span> <span class="n">EV</span> <span class="mf">250.0</span>
+<span class="n">Miles</span> <span class="n">Available</span> <span class="p">(</span><span class="n">EV</span><span class="p">):</span> <span class="mf">70.0</span>
+<span class="n">Can</span><span class="s1">&#39;t drive EV 120.0. Not enough charge!</span>
+<span class="n">Miles</span> <span class="n">Driven</span> <span class="p">(</span><span class="n">EV</span><span class="p">):</span> <span class="mf">250.0</span>
+
+<span class="o">---</span> <span class="n">Motorcycle</span> <span class="o">---</span>
+<span class="n">Miles</span> <span class="n">Driven</span> <span class="p">(</span><span class="n">Motorcycle</span><span class="p">):</span> <span class="mf">0.0</span>
+<span class="n">Miles</span> <span class="n">Available</span> <span class="p">(</span><span class="n">Motorcycle</span><span class="p">):</span> <span class="mf">0.0</span>
+<span class="n">Filling</span> <span class="n">motorcycle</span><span class="o">...</span>
+<span class="n">Miles</span> <span class="n">Available</span> <span class="p">(</span><span class="n">Motorcycle</span><span class="p">):</span> <span class="mf">180.0</span>
+<span class="n">Driving</span> <span class="n">motorcycle</span> <span class="mf">100.0</span>
+<span class="n">Miles</span> <span class="n">Available</span> <span class="p">(</span><span class="n">Motorcycle</span><span class="p">):</span> <span class="mf">80.0</span>
+<span class="n">Can</span><span class="s1">&#39;t drive motorcycle 200.0. Not enough fuel!</span>
+<span class="n">Miles</span> <span class="n">Driven</span> <span class="p">(</span><span class="n">Motorcycle</span><span class="p">):</span> <span class="mf">100.0</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>Requirements Checklist:</strong></p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Task</p></th>
+<th class="head"><p>Completed?</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Created <code class="docutils literal notranslate"><span class="pre">Car</span></code>, <code class="docutils literal notranslate"><span class="pre">EV</span></code>, and <code class="docutils literal notranslate"><span class="pre">Motorcycle</span></code> classes</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Each class has attributes and constructor</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>Each class includes the 4 methods</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Created and tested each vehicle in <code class="docutils literal notranslate"><span class="pre">Main.java</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>Output matches the example structure</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<p><strong>Extra Credit (Optional):</strong></p>
+<ul class="simple">
+<li><p>Add a method that returns how much fuel/charge is left.</p></li>
+<li><p>Allow user input using <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> to choose drive distances.</p></li>
+<li><p>Make a trip log that records each successful drive.</p></li>
+</ul>
+<hr class="docutils" />
 </section>
 </section>
 <hr class="docutils" />
@@ -2499,7 +2729,8 @@ Your program should allow a user to enter values that change the output of a sto
 </li>
 <li><a class="reference internal" href="#calling-a-void-method">2.3 Calling a Void Method</a></li>
 <li><a class="reference internal" href="#calling-a-void-method-with-parameters">2.4 Calling a Void Method with Parameters</a><ul>
-<li><a class="reference internal" href="#activity-2-4-1">Activity 2.4.1</a></li>
+<li><a class="reference internal" href="#activity-2-4-1-a">Activity 2.4.1(a)</a></li>
+<li><a class="reference internal" href="#activity-2-4-1-b">Activity 2.4.1(b)</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#non-void-methods">2.5 Non-Void Methods</a></li>
