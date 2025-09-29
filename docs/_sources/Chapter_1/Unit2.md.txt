@@ -1337,7 +1337,7 @@ Our mascot is the Coyotes
 ```
 
 
-Using Notepad: Copy and complete the code below using each of the concatenation operators where noted in the comments. When the program runs, it should display Whoopie Pie and Wild Blueberry.
+Complete the code below using each of the concatenation operators where noted in the comments. When the program runs, it should display Whoopie Pie and Wild Blueberry.
 
 ```java
 public class Main
@@ -1397,16 +1397,17 @@ public class Main
      - Research a College Fight Song to use for this assignment.
 
 2. Implement the following features (in any order) and comment where they occur.
-- [ ] A `String` created using a literal
-- [ ] A `String` created using the `String` class constructor
-- [ ] An immutable `String`
-- [ ] An implicit conversion via concatenation
-- [ ] The += operator for concatenation
-- [ ] The + operator for concatenation
-- [ ] Three escape sequences
+	1. A `String` created using a literal
+	2. A `String` created using the `String` class constructor
+	3. An immutable `String`
+	4. An implicit conversion via concatenation
+	5. The += operator for concatenation
+	6. The + operator for concatenation
+	7. Three escape sequences
 
-Submit your program link.  Do not send me a screen shot of your program.  
-Comment your code showing that you completed each of the bullet points above.
+Submit your java program file(s).  Comment your code showing that you completed each of the bullet points above.
+Provide a screen shot of your executed program.  
+
 _____________________________________________________________________________________________________
 ## 2.7 String Methods
 
