@@ -2278,7 +2278,7 @@ As a wrap-up, consider the ++ operator as:
 
 Starter Files: [Activity129RaceCar.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9757289/Activity129RaceCar.zip)
 
-Complete the computeTime method and the comments in main.java
+Complete the `computeTime` method and the comments in Main.java
 
 ```java
 	//Length of the track in meters
@@ -2294,7 +2294,14 @@ Complete the computeTime method and the comments in main.java
 ```
 
 You will need to complete the methods and toString within Racecar.java
-	
+
+Include one of the options below:
+- Allow user input for driver names and/or track length
+- Add more cars using an array or list
+- Add attributes like car color or top speed
+
+Submit your .java files and a screenshot of your executed program
+
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 	
 <details><summary>Free Response Question (FRQ)</summary>
