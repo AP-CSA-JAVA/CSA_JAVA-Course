@@ -1874,10 +1874,11 @@ true
 This includes converting an Integer to an int and a Double to a double.
 
 The Java compiler applies unboxing when a wrapper class object is:
-i. Passed as a parameter to a method that expects a value of the corresponding primitive type.
-ii. Assigned to a variable of the corresponding primitive type.
+- Passed as a parameter to a method that expects a value of the corresponding primitive type.
+- Assigned to a variable of the corresponding primitive type.
 
 In the program below, which line of code contains an example of *autoboxing*?
+
 In the program below, which line of code contains an example of *unboxing*?
 
 ```java
