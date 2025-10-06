@@ -1802,16 +1802,16 @@ public class Main
 {
   public static void main(String[] args)
   {
-    Double d = new Double(1.5); // instantiates a Double
+    Double dub = new Double(1.5); // instantiates a Double
     // Uses the doubleValue method in a print statement
-    System.out.println("d value is: " + d.doubleValue()); 
+    System.out.println("dub value is: " + dub.doubleValue()); 
     
   } 
 }
 ```
 
 **Sample Output**
-`d value is: 1.5`
+`dub value is: 1.5`
 
 
 **Autoboxing/ Unboxing**

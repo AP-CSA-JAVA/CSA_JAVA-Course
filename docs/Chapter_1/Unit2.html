@@ -2149,16 +2149,16 @@ Modify the program so that it stores the value of int1 in int2.</p>
 <span class="p">{</span>
 <span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
 <span class="w">  </span><span class="p">{</span>
-<span class="w">    </span><span class="n">Double</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Double</span><span class="p">(</span><span class="mf">1.5</span><span class="p">);</span><span class="w"> </span><span class="c1">// instantiates a Double</span>
+<span class="w">    </span><span class="n">Double</span><span class="w"> </span><span class="n">dub</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Double</span><span class="p">(</span><span class="mf">1.5</span><span class="p">);</span><span class="w"> </span><span class="c1">// instantiates a Double</span>
 <span class="w">    </span><span class="c1">// Uses the doubleValue method in a print statement</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;d value is: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="na">doubleValue</span><span class="p">());</span><span class="w"> </span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;dub value is: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dub</span><span class="p">.</span><span class="na">doubleValue</span><span class="p">());</span><span class="w"> </span>
 <span class="w">    </span>
 <span class="w">  </span><span class="p">}</span><span class="w"> </span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p><strong>Sample Output</strong>
-<code class="docutils literal notranslate"><span class="pre">d</span> <span class="pre">value</span> <span class="pre">is:</span> <span class="pre">1.5</span></code></p>
+<code class="docutils literal notranslate"><span class="pre">dub</span> <span class="pre">value</span> <span class="pre">is:</span> <span class="pre">1.5</span></code></p>
 <p><strong>Autoboxing/ Unboxing</strong>
 In the program below the JVM did some extra work at lines 5 and 6. Java automatically converted from the int and double primitive types to their corresponding object reference types. This is called <strong>autoboxing</strong>, an automatic conversion that the Java compiler makes between primitive types and their corresponding object wrapper classes.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span>
