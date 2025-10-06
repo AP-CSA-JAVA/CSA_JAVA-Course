@@ -1939,15 +1939,30 @@ Ending box dimensions: 2 x 3
 
 ### Activity 2.8.1 Wrapper Classes
 
-Create a program that contains an example of each of the following. Add in-line comments to describe each example.
-- [ ] An Integer constructor
-- [ ] The intValue method
-- [ ] A Double constructor
-- [ ] The doubleValue method
-- [ ] The maximum double value
-- [ ] The minimum double value
-- [ ] Autoboxing
-- [ ] Unboxing
+
+**Directions:** Create a class called `WrapperExamples` that will demonstrate each of the following:
+
+- Integer Constructor: Create an Integer object from a primitive int.
+- intValue() Method: Retrieve the primitive int value from the Integer object.
+- Double Constructor: Create a Double object from a primitive double.
+- doubleValue() Method: Retrieve the primitive double value from the Double object.
+- Maximum Double Value: Display the maximum value for a double.
+- Minimum Double Value: Display the minimum value for a double.
+- Autoboxing: Automatically converting a primitive int to an Integer object.
+- Unboxing: Automatically converting an Integer object back to a primitive int.
+
+**Answer the following questions as a `.txt` file.**
+
+1. What happens if you try to unbox a `null` `Integer`? Why?
+2. How can you handle situations where a wrapper class might be `null` before performing unboxing?
+3. Can you think of a situation where autoboxing might cause performance issues? Explain.
+4. What happens when you try to change the value of `MAX_VALUE` and `MIN_VALUE`?
+
+Submit your java & txt files.  Add in-line comments to describe each example.
+Provide a screenshot of your executed program.
+
+
+---
 
 
 ## 2.9 Using the Math Class
