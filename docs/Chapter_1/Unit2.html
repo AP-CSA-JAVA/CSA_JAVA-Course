@@ -2484,19 +2484,10 @@ how you could use the <code class="docutils literal notranslate"><span class="pr
 <span class="n">m</span><span class="o">.</span><span class="n">random</span><span class="p">();</span>
 </pre></div>
 </div>
-<p>Take a look at the program below.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span>
-<span class="p">{</span>
-<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
-<span class="w">  </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">path1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// The car drives West 1 block</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">path2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// The car drives West 1 block</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">path3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// The car drives West 1 block</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">path4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// The car drives East 3 blocks</span>
-<span class="w">    </span><span class="c1">// Added calls to Math.abs in the print statement below.</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">abs</span><span class="p">(</span><span class="n">path1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">abs</span><span class="p">(</span><span class="n">path2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">abs</span><span class="p">(</span><span class="n">path3</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">abs</span><span class="p">(</span><span class="n">path4</span><span class="p">));</span><span class="w"> </span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
+<p>The correct use of the math class should be done like this:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">();</span><span class="w">               </span>
+<span class="kt">double</span><span class="w"> </span><span class="n">squareRoot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">sqrt</span><span class="p">(</span><span class="mi">25</span><span class="p">);</span><span class="w">     </span>
+<span class="kt">int</span><span class="w"> </span><span class="n">absolute</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">abs</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">);</span><span class="w">          </span>
 </pre></div>
 </div>
 <p>Review the Math Class Methods in the table above and determine the correct syntax to execute each print statement.</p>
@@ -2545,13 +2536,7 @@ how you could use the <code class="docutils literal notranslate"><span class="pr
 </div>
 </p>
 </details>
-<section id="activity-2-9-1-math-class-worksheet-1-2">
-<h3>Activity 2.9.1 - Math Class Worksheet 1 &amp; 2<a class="headerlink" href="#activity-2-9-1-math-class-worksheet-1-2" title="Link to this heading">¶</a></h3>
-<p>In pairs, work on worksheet 1 in class.  We will review your work in class.</p>
-<p><strong>Download:</strong> <a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9778281/mathclassworksheet1.docx">mathclassworksheet1.docx</a></p>
-<p><strong>ascii Table:</strong> <a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9737398/ascii-table-characters.pdf">ascii-table-characters.pdf</a></p>
-<p>Complete worksheet 2 for homework.  We will review your work next class.</p>
-<p><strong>Download:</strong> <a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9778287/mathClassWorksheet2.docx">mathClassWorksheet2.docx</a></p>
+<hr class="docutils" />
 <p><strong>An example of single vs double quotes</strong></p>
 <details><summary>Click Here</summary>
 <p>
@@ -2600,6 +2585,139 @@ If you use the <code class="docutils literal notranslate"><span class="pre">++</
 </ul>
 </p>
 </details>
+<section id="activity-2-9-1-math-class-worksheet-1-2">
+<h3>Activity 2.9.1 - Math Class Worksheet 1 &amp; 2<a class="headerlink" href="#activity-2-9-1-math-class-worksheet-1-2" title="Link to this heading">¶</a></h3>
+<p>In pairs, work on both worksheets in class.  We will review your work in class.</p>
+<p><strong>ascii Table:</strong> <a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9737398/ascii-table-characters.pdf">ascii-table-characters.pdf</a></p>
+<p><strong>Download:</strong> <a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9778281/mathclassworksheet1.docx">mathclassworksheet1.docx</a></p>
+<p><strong>Download:</strong> <a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9778287/mathClassWorksheet2.docx">mathClassWorksheet2.docx</a></p>
+</section>
+<hr class="docutils" />
+<section id="activity-2-9-2-roller-coaster-simulator">
+<h3>Activity 2.9.2 - Roller Coaster Simulator<a class="headerlink" href="#activity-2-9-2-roller-coaster-simulator" title="Link to this heading">¶</a></h3>
+<p><strong>Concepts Covered:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Math</span></code> class: <code class="docutils literal notranslate"><span class="pre">Math.pow</span></code>, <code class="docutils literal notranslate"><span class="pre">Math.sqrt</span></code>, <code class="docutils literal notranslate"><span class="pre">Math.abs</span></code>, <code class="docutils literal notranslate"><span class="pre">Math.max</span></code>, <code class="docutils literal notranslate"><span class="pre">Math.min</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Scanner</span></code> for input</p></li>
+<li><p>Decision-making and problem-solving</p></li>
+<li><p>Realistic application of physics/math concepts</p></li>
+</ul>
+<p><strong>Project Overview:</strong></p>
+<p>Students will write a program that helps a theme park design safe roller coasters based on physics-related math. The user (acting as an engineer) inputs the parameters of a coaster hill, and the program will:</p>
+<ul class="simple">
+<li><p>Calculate speed at the bottom of the hill</p></li>
+<li><p>Estimate time to fall using height</p></li>
+<li><p>Warn if g-forces exceed safety limits</p></li>
+<li><p>Round values for display</p></li>
+</ul>
+<p><strong>Key Functionalities:</strong></p>
+<ol class="arabic simple">
+<li><p><strong>User Inputs</strong>:</p>
+<ul class="simple">
+<li><p>Hill height (meters)</p></li>
+<li><p>Slope angle (degrees)</p></li>
+<li><p>Track length (meters)</p></li>
+</ul>
+</li>
+<li><p><strong>Calculations</strong>:</p>
+<ul class="simple">
+<li><p><strong>Speed at bottom</strong>:
+Using conservation of energy:
+[
+v = \sqrt{2 \cdot g \cdot h}
+]
+where <code class="docutils literal notranslate"><span class="pre">g</span> <span class="pre">=</span> <span class="pre">9.8</span> <span class="pre">m/s²</span></code></p></li>
+<li><p><strong>Time to fall</strong> (approximate straight drop):
+[
+t = \sqrt{\frac{2h}{g}}
+]</p></li>
+<li><p><strong>G-force estimation</strong>:
+Simulate g-force during curve:
+[
+G = \frac{v^2}{r \cdot g}
+]
+Assume <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">=</span> <span class="pre">10</span></code> (constant curve radius). Warn if <code class="docutils literal notranslate"><span class="pre">G</span> <span class="pre">&gt;</span> <span class="pre">5</span></code>.</p></li>
+<li><p>Round values with <code class="docutils literal notranslate"><span class="pre">Math.round</span></code>, <code class="docutils literal notranslate"><span class="pre">Math.ceil</span></code>, or <code class="docutils literal notranslate"><span class="pre">Math.floor</span></code></p></li>
+</ul>
+</li>
+</ol>
+<hr class="docutils" />
+<p><strong>Example Output</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Welcome</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Roller</span><span class="w"> </span><span class="n">Coaster</span><span class="w"> </span><span class="n">Simulator</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">hill</span><span class="w"> </span><span class="nf">height</span><span class="w"> </span><span class="p">(</span><span class="n">in</span><span class="w"> </span><span class="n">meters</span><span class="p">):</span><span class="w"> </span><span class="mi">50</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">slope</span><span class="w"> </span><span class="nf">angle</span><span class="w"> </span><span class="p">(</span><span class="n">in</span><span class="w"> </span><span class="n">degrees</span><span class="p">):</span><span class="w"> </span><span class="mi">40</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">track</span><span class="w"> </span><span class="nf">length</span><span class="w"> </span><span class="p">(</span><span class="n">in</span><span class="w"> </span><span class="n">meters</span><span class="p">):</span><span class="w"> </span><span class="mi">100</span>
+
+<span class="o">---</span><span class="w"> </span><span class="n">Results</span><span class="w"> </span><span class="o">---</span>
+<span class="n">Estimated</span><span class="w"> </span><span class="n">Speed</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">Bottom</span><span class="p">:</span><span class="w"> </span><span class="mf">31.30</span><span class="w"> </span><span class="n">m</span><span class="o">/</span><span class="n">s</span>
+<span class="n">Time</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">Fall</span><span class="p">:</span><span class="w"> </span><span class="mf">3.19</span><span class="w"> </span><span class="n">seconds</span>
+<span class="n">Estimated</span><span class="w"> </span><span class="n">G</span><span class="o">-</span><span class="n">force</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">curve</span><span class="p">:</span><span class="w"> </span><span class="mf">10.0</span><span class="w"> </span><span class="n">Gs</span><span class="w"> </span><span class="n">TOO</span><span class="w"> </span><span class="n">DANGEROUS</span><span class="o">!</span>
+
+<span class="nl">Recommendation</span><span class="p">:</span><span class="w"> </span><span class="n">Reduce</span><span class="w"> </span><span class="n">hill</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">increase</span><span class="w"> </span><span class="n">curve</span><span class="w"> </span><span class="n">radius</span><span class="p">.</span>
+
+<span class="o">---</span><span class="w"> </span><span class="n">Rounded</span><span class="w"> </span><span class="n">Data</span><span class="w"> </span><span class="o">---</span>
+<span class="n">Speed</span><span class="w"> </span><span class="n">Rounded</span><span class="w"> </span><span class="n">Up</span><span class="p">:</span><span class="w"> </span><span class="mf">32.0</span><span class="w"> </span><span class="n">m</span><span class="o">/</span><span class="n">s</span>
+<span class="n">Time</span><span class="w"> </span><span class="n">Rounded</span><span class="w"> </span><span class="n">Down</span><span class="p">:</span><span class="w"> </span><span class="mf">3.0</span><span class="w"> </span><span class="n">sec</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">RollerCoasterSimulator</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">GRAVITY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">9.8</span><span class="p">;</span><span class="w"> </span><span class="c1">// m/s^2 // DO NOT CHANGE</span>
+
+<span class="w">	</span><span class="c1">// Attributes (height, speen, time, gForce, angle, trackLength)</span>
+
+
+<span class="w">    </span><span class="c1">// Constructor</span>
+
+
+<span class="w">    </span><span class="c1">// Perform all calculations</span>
+
+
+<span class="w">    </span><span class="c1">// Return calculated results to main</span>
+
+
+<span class="w">    </span><span class="c1">// Helper method for safety</span>
+
+<span class="p">}</span>
+
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+
+<span class="w">		</span><span class="c1">// Use Scanner to get inputs for Speed, time and GForce</span>
+
+
+<span class="w">        </span><span class="c1">// Get user inputs</span>
+
+
+<span class="w">        </span><span class="c1">// Create an instance of RollerCoasterSimulator</span>
+<span class="w">        </span>
+
+<span class="w">        </span><span class="c1">// Get and display results</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">speed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sim</span><span class="p">.</span><span class="na">getSpeed</span><span class="p">();</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sim</span><span class="p">.</span><span class="na">getTime</span><span class="p">();</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">gForce</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sim</span><span class="p">.</span><span class="na">getGForce</span><span class="p">();</span>
+
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">sim</span><span class="p">.</span><span class="na">isSafe</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;TOO DANGEROUS!&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Recommendation: Reduce hill height or increase curve radius.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Safe for riders!&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\n--- Rounded Data ---&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Speed Rounded Up: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; m/s&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Time Rounded Down: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; sec&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </section>
 <hr class="docutils" />
 <section id="activity-1-2-9-race-car">
@@ -2762,6 +2880,7 @@ Your program should allow a user to enter values that change the output of a sto
 </li>
 <li><a class="reference internal" href="#using-the-math-class">2.9 Using the Math Class</a><ul>
 <li><a class="reference internal" href="#activity-2-9-1-math-class-worksheet-1-2">Activity 2.9.1 - Math Class Worksheet 1 &amp; 2</a></li>
+<li><a class="reference internal" href="#activity-2-9-2-roller-coaster-simulator">Activity 2.9.2 - Roller Coaster Simulator</a></li>
 <li><a class="reference internal" href="#activity-1-2-9-race-car">Activity 1.2.9 - Race Car</a></li>
 </ul>
 </li>

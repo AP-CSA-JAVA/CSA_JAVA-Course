@@ -2136,22 +2136,15 @@ Math m = new Math();
 m.random();
 ```
 
-Take a look at the program below.
+The correct use of the math class should be done like this:
 
 ```java
-public class Main
-{
-  public static void main(String[] args)
-  {
-    int path1 = -1; // The car drives West 1 block
-    int path2 = -1; // The car drives West 1 block
-    int path3 = -1; // The car drives West 1 block
-    int path4 = 3; // The car drives East 3 blocks
-    // Added calls to Math.abs in the print statement below.
-    System.out.println(Math.abs(path1) + Math.abs(path2) + Math.abs(path3) + Math.abs(path4)); 
-  }
-}
+double r = Math.random();               
+double squareRoot = Math.sqrt(25);     
+int absolute = Math.abs(-10);          
 ```
+
+
 
 Review the Math Class Methods in the table above and determine the correct syntax to execute each print statement.
 
@@ -2212,17 +2205,7 @@ System.out.println(Math.sqrt(Math.abs(Math.pow(12, 2) - Math.pow(5, 2))));
 </p>
 </details>
 
-### Activity 2.9.1 - Math Class Worksheet 1 & 2	
-
-In pairs, work on worksheet 1 in class.  We will review your work in class.
-
-**Download:** [mathclassworksheet1.docx](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9778281/mathclassworksheet1.docx)
-	
-**ascii Table:** [ascii-table-characters.pdf](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9737398/ascii-table-characters.pdf)
-
-Complete worksheet 2 for homework.  We will review your work next class.
-
-**Download:** [mathClassWorksheet2.docx](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9778287/mathClassWorksheet2.docx)
+---
 
 **An example of single vs double quotes**
 
@@ -2285,6 +2268,158 @@ As a wrap-up, consider the ++ operator as:
 	
 </p>
 </details>
+
+
+### Activity 2.9.1 - Math Class Worksheet 1 & 2	
+
+In pairs, work on both worksheets in class.  We will review your work in class.
+
+**ascii Table:** [ascii-table-characters.pdf](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9737398/ascii-table-characters.pdf)
+
+**Download:** [mathclassworksheet1.docx](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9778281/mathclassworksheet1.docx)
+	
+**Download:** [mathClassWorksheet2.docx](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9778287/mathClassWorksheet2.docx)
+
+---
+
+
+### Activity 2.9.2 - Roller Coaster Simulator
+
+
+
+**Concepts Covered:**
+
+* `Math` class: `Math.pow`, `Math.sqrt`, `Math.abs`, `Math.max`, `Math.min`
+* `Scanner` for input
+* Decision-making and problem-solving
+* Realistic application of physics/math concepts
+
+**Project Overview:**
+
+Students will write a program that helps a theme park design safe roller coasters based on physics-related math. The user (acting as an engineer) inputs the parameters of a coaster hill, and the program will:
+
+* Calculate speed at the bottom of the hill
+* Estimate time to fall using height
+* Warn if g-forces exceed safety limits
+* Round values for display
+
+**Key Functionalities:**
+
+1. **User Inputs**:
+
+   * Hill height (meters)
+   * Slope angle (degrees)
+   * Track length (meters)
+
+2. **Calculations**:
+
+   * **Speed at bottom**:
+     Using conservation of energy:
+     [
+     v = \sqrt{2 \cdot g \cdot h}
+     ]
+     where `g = 9.8 m/s²`
+
+   * **Time to fall** (approximate straight drop):
+     [
+     t = \sqrt{\frac{2h}{g}}
+     ]
+
+   * **G-force estimation**:
+     Simulate g-force during curve:
+     [
+     G = \frac{v^2}{r \cdot g}
+     ]
+     Assume `r = 10` (constant curve radius). Warn if `G > 5`.
+
+   * Round values with `Math.round`, `Math.ceil`, or `Math.floor`
+
+
+---
+
+**Example Output**
+
+```java
+Welcome to the Roller Coaster Simulator
+Enter hill height (in meters): 50
+Enter slope angle (in degrees): 40
+Enter track length (in meters): 100
+
+--- Results ---
+Estimated Speed at Bottom: 31.30 m/s
+Time to Fall: 3.19 seconds
+Estimated G-force in curve: 10.0 Gs TOO DANGEROUS!
+
+Recommendation: Reduce hill height or increase curve radius.
+
+--- Rounded Data ---
+Speed Rounded Up: 32.0 m/s
+Time Rounded Down: 3.0 sec
+```
+
+---
+
+
+```java
+public class RollerCoasterSimulator {
+    private static final double GRAVITY = 9.8; // m/s^2 // DO NOT CHANGE
+
+	// Attributes (height, speen, time, gForce, angle, trackLength)
+
+
+    // Constructor
+
+
+    // Perform all calculations
+
+
+    // Return calculated results to main
+
+
+    // Helper method for safety
+
+}
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+
+		// Use Scanner to get inputs for Speed, time and GForce
+
+
+        // Get user inputs
+
+
+        // Create an instance of RollerCoasterSimulator
+        
+
+        // Get and display results
+        double speed = sim.getSpeed();
+        double time = sim.getTime();
+        double gForce = sim.getGForce();
+
+
+        if (!sim.isSafe()) {
+            System.out.println("TOO DANGEROUS!");
+            System.out.println("Recommendation: Reduce hill height or increase curve radius.");
+        } else {
+            System.out.println("Safe for riders!");
+        }
+
+        System.out.println("\n--- Rounded Data ---");
+        System.out.println("Speed Rounded Up: " +  + " m/s");
+        System.out.println("Time Rounded Down: " +  + " sec");
+
+        input.close();
+    }
+}
+```
+
+
+
 
 
 -------------------------------------------------------------------------------
