@@ -2287,14 +2287,6 @@ In pairs, work on both worksheets in class.  We will review your work in class.
 ### Activity 2.9.2 - Roller Coaster Simulator
 
 
-
-**Concepts Covered:**
-
-* `Math` class: `Math.pow`, `Math.sqrt`, `Math.abs`, `Math.max`, `Math.min`
-* `Scanner` for input
-* Decision-making and problem-solving
-* Realistic application of physics/math concepts
-
 **Project Overview:**
 
 Students will write a program that helps a theme park design safe roller coasters based on physics-related math. The user (acting as an engineer) inputs the parameters of a coaster hill, and the program will:
@@ -2304,9 +2296,18 @@ Students will write a program that helps a theme park design safe roller coaster
 * Warn if g-forces exceed safety limits
 * Round values for display
 
+
+**Concepts Covered:**
+
+* `Math` class: `Math.pow`, `Math.sqrt`, `Math.abs`, `Math.max`, `Math.min`
+* `Scanner` for input
+* Decision-making and problem-solving
+* Realistic application of physics/math concepts
+
+
 **Key Functionalities:**
 
-<img width="402" height="467" alt="Image" src="https://github.com/user-attachments/assets/5e02c085-c41f-4ab5-a17b-63a53ce3ce0f" />
+<img width="422" height="490" alt="Image" src="https://github.com/user-attachments/assets/5e02c085-c41f-4ab5-a17b-63a53ce3ce0f" />
 
 
 ---
