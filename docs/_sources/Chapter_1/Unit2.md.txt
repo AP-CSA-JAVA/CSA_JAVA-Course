@@ -2400,7 +2400,7 @@ public class Main {
 -------------------------------------------------------------------------------
 
 
-### Activity 1.2.9 - Race Car
+### Activity 2.9.3 - Race Car
 
 Starter Files: [Activity129RaceCar.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9757289/Activity129RaceCar.zip)
 
