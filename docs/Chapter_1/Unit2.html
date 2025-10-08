@@ -2674,15 +2674,15 @@ If you use the <code class="docutils literal notranslate"><span class="pre">++</
 
 
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">sim</span><span class="p">.</span><span class="na">isSafe</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;TOO DANGEROUS!&quot;</span><span class="p">);</span>
-<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Recommendation: Reduce hill height or increase curve radius.&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Safe for riders!&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="p">}</span>
+<span class="w">            </span><span class="c1">// if speed Gforce is too excessive print &quot;TOO DANGEROUS!&quot;</span>
+<span class="w">			</span><span class="c1">// Recommend that the user make changes to height or curve</span>
+<span class="w">			</span><span class="c1">// else print &quot;Safe for riders!&quot;</span>
 
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\n--- Rounded Data ---&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Speed Rounded Up: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; m/s&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Time Rounded Down: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; sec&quot;</span><span class="p">);</span>
+
+
+<span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\n--- Rounded Data ---&quot;</span><span class="p">);</span>
+<span class="w">		</span><span class="c1">// Round speed up</span>
+<span class="w">		</span><span class="c1">// Round time down </span>
 
 <span class="w">        </span><span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
 <span class="w">    </span><span class="p">}</span>

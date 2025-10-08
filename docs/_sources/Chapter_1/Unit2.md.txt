@@ -2378,15 +2378,15 @@ public class Main {
 
 
         if (!sim.isSafe()) {
-            System.out.println("TOO DANGEROUS!");
-            System.out.println("Recommendation: Reduce hill height or increase curve radius.");
-        } else {
-            System.out.println("Safe for riders!");
-        }
+            // if speed Gforce is too excessive print "TOO DANGEROUS!"
+			// Recommend that the user make changes to height or curve
+			// else print "Safe for riders!"
 
-        System.out.println("\n--- Rounded Data ---");
-        System.out.println("Speed Rounded Up: " +  + " m/s");
-        System.out.println("Time Rounded Down: " +  + " sec");
+
+
+		System.out.println("\n--- Rounded Data ---");
+		// Round speed up
+		// Round time down 
 
         input.close();
     }
