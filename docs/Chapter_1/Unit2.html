@@ -2611,36 +2611,7 @@ If you use the <code class="docutils literal notranslate"><span class="pre">++</
 <li><p>Round values for display</p></li>
 </ul>
 <p><strong>Key Functionalities:</strong></p>
-<ol class="arabic simple">
-<li><p><strong>User Inputs</strong>:</p>
-<ul class="simple">
-<li><p>Hill height (meters)</p></li>
-<li><p>Slope angle (degrees)</p></li>
-<li><p>Track length (meters)</p></li>
-</ul>
-</li>
-<li><p><strong>Calculations</strong>:</p>
-<ul class="simple">
-<li><p><strong>Speed at bottom</strong>:
-Using conservation of energy:
-[
-v = \sqrt{2 \cdot g \cdot h}
-]
-where <code class="docutils literal notranslate"><span class="pre">g</span> <span class="pre">=</span> <span class="pre">9.8</span> <span class="pre">m/s²</span></code></p></li>
-<li><p><strong>Time to fall</strong> (approximate straight drop):
-[
-t = \sqrt{\frac{2h}{g}}
-]</p></li>
-<li><p><strong>G-force estimation</strong>:
-Simulate g-force during curve:
-[
-G = \frac{v^2}{r \cdot g}
-]
-Assume <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">=</span> <span class="pre">10</span></code> (constant curve radius). Warn if <code class="docutils literal notranslate"><span class="pre">G</span> <span class="pre">&gt;</span> <span class="pre">5</span></code>.</p></li>
-<li><p>Round values with <code class="docutils literal notranslate"><span class="pre">Math.round</span></code>, <code class="docutils literal notranslate"><span class="pre">Math.ceil</span></code>, or <code class="docutils literal notranslate"><span class="pre">Math.floor</span></code></p></li>
-</ul>
-</li>
-</ol>
+<img width="402" height="467" alt="Image" src="https://github.com/user-attachments/assets/5e02c085-c41f-4ab5-a17b-63a53ce3ce0f" />
 <hr class="docutils" />
 <p><strong>Example Output</strong></p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Welcome</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Roller</span><span class="w"> </span><span class="n">Coaster</span><span class="w"> </span><span class="n">Simulator</span>

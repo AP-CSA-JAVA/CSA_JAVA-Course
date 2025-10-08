@@ -2270,6 +2270,7 @@ As a wrap-up, consider the ++ operator as:
 </details>
 
 
+
 ### Activity 2.9.1 - Math Class Worksheet 1 & 2	
 
 In pairs, work on both worksheets in class.  We will review your work in class.
@@ -2305,34 +2306,7 @@ Students will write a program that helps a theme park design safe roller coaster
 
 **Key Functionalities:**
 
-1. **User Inputs**:
-
-   * Hill height (meters)
-   * Slope angle (degrees)
-   * Track length (meters)
-
-2. **Calculations**:
-
-   * **Speed at bottom**:
-     Using conservation of energy:
-     [
-     v = \sqrt{2 \cdot g \cdot h}
-     ]
-     where `g = 9.8 m/s²`
-
-   * **Time to fall** (approximate straight drop):
-     [
-     t = \sqrt{\frac{2h}{g}}
-     ]
-
-   * **G-force estimation**:
-     Simulate g-force during curve:
-     [
-     G = \frac{v^2}{r \cdot g}
-     ]
-     Assume `r = 10` (constant curve radius). Warn if `G > 5`.
-
-   * Round values with `Math.round`, `Math.ceil`, or `Math.floor`
+<img width="402" height="467" alt="Image" src="https://github.com/user-attachments/assets/5e02c085-c41f-4ab5-a17b-63a53ce3ce0f" />
 
 
 ---
