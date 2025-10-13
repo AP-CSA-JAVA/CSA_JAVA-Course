@@ -2466,7 +2466,7 @@ ________________________________________________________________________________
 
 **Requirements of this project**
 
-Give a Mad Lib with three user inputs, create a user-generated story with the correct parts of speech. 
+Give a Mad Lib with five user inputs, create a user-generated story with the correct parts of speech. 
 Your program should allow a user to enter values that change the output of a story. Specifically, it should include:
 - [ ] a class definition header that matches the file name
 - [ ] a main method for the program
