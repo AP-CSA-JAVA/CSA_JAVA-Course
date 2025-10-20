@@ -117,22 +117,6 @@ public void suchFun(int a, int b, int c) {
 }
 ```
 
-<details><summary>**Solution**</summary>
-
-
-```java
-public void checkNumbers(int a, int b, int c) {
-    if (a == b && b == c) {
-        System.out.println("boring");
-    } else if (a == b || a == c || b == c) {
-        System.out.println("twins!");
-    } else {
-        System.out.println("unique");
-    }
-}
-```
-	
-</details>
 
 -------------------------------------------------------------------
 
