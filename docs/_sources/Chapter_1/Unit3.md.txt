@@ -197,6 +197,9 @@ Input a second number: 5
 ```
 
 
+---
+
+
 ## 3.2 If Statements and Control Flow
 
 **Goals**
