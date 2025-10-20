@@ -179,7 +179,7 @@ How much money do you have?
 Erika you are too young to rent a car, please visit us again when you are 25 years old.
 ```
 
-### Activity 3.1.2
+### Activity 3.1.3 - Boolean Expression
 
 **Instructions**
 Write a program that will take 2 doubles from the user.  Use Boolean Expression to compare the two values using: <, <=, =, !=, >, and >=. Evaluate if the expression is true or false.
@@ -187,12 +187,13 @@ Write a program that will take 2 doubles from the user.  Use Boolean Expression 
 ```java
 Input a number: 4
 Input a second number: 5
-4.0 is LESS THAN 5.0: true
-4.0 is LESS THAN/ EQUAL to 5.0: true
-4.0 is EQUAL to 5.0: false
-4.0 is NOT EQUAL to 5.0: true
-4.0 is GREATER THAN 5.0: false
-4.0 is GREATER THAN / EQUAL to 5.0: false
+
+4.0 is LESS THAN 5.0 evaluates to true
+4.0 is LESS THAN/ EQUAL to 5.0 evaluates to true
+4.0 is EQUAL to 5.0 evaluates to false
+4.0 is NOT EQUAL to 5.0 evaluates to true
+4.0 is GREATER THAN 5.0 evaluates to false
+4.0 is GREATER THAN / EQUAL to 5.0 evaluates to false
 ```
 
 
