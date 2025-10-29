@@ -575,7 +575,7 @@ Number of hits:2
 **NOTE** You will be building this program and making changes to it as we navigate the unit.  You will submit 1 program at the end of **Unit 3.5 Compound Boolean Expressions**
 
 
-### Activity 3.2.2
+### Activity 3.2.2 - Sevens Game
 
 **Sevens**
 
@@ -652,7 +652,7 @@ class Main {
   }
 }
 ```
-### Activity 3.3.1
+### Activity 3.3.1 - Shipping
 
 **Starter Code:**  [starterFile_Shipping.txt](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9913050/starterFile_Shipping.txt)
 
@@ -707,7 +707,7 @@ Total Shipping Cost: $20.25
 Days to Deliver: 1
 ```
 
-### Activity 3.3.2
+### Activity 3.3.2 - Tip Calculator
 
 The Bill class can help you calculate a tip depending on the number of people who have dinner with you.
 
@@ -825,7 +825,7 @@ else // if condition 3 is false
 
 Comment where you made the changes include the date. No submission.
 
-### Activity 3.4.2
+### Activity 3.4.2 - Activity Director
 
 **Instructions activityDirector:**
 Write a program that will do the following:
