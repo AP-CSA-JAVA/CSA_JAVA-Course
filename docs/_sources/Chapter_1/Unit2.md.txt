@@ -597,7 +597,7 @@ Pedaling to accelerate.
 ```
  
 
-**Scanner Class Revisited**
+### Scanner Revisited
 As you recall, the scanner class is a package that provides primitive input within Java programs.  It can be found in the [java.util Package](https://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html) website.
 
 - [ ] First you need to import the class from the online Oracle repository by typing `import java.util.Scanner;`
