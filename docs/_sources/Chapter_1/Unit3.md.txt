@@ -662,10 +662,10 @@ class Main {
 *Shipping*
 - [ ] ask user for the weight of package, method of shipping, and coupon code
 - **Weight**
-- - [ ] if weight is between 0 and 1, shippingCost is $1.
-- - [ ] if weight is between 1 and 5,
+- - [ ] if weight is between 0 and 1.00, shippingCost is $1.
+- - [ ] if weight is between 1.01 and 5.00,
 shippingCost is $7.50 and add 1 day to shippingDays.
-- - [ ] if weight is over 5, shippingCost is $10.25 and add 3 days to shippingDays.
+- - [ ] if weight is over 5.01, shippingCost is $10.25 and add 3 days to shippingDays.
 - **Method of Shipping**
 - - [ ] "Standard" adds 3 days to shippingDays 
 - - [ ] "Express" subtracts 3 days from shippingDays and add $10 to shippingCosts
@@ -915,7 +915,7 @@ public class SwitchDemo {
 
 ```
 
-Inside the main method, we prompt the user to enter a fruit name.  We convert the input to lowercase using `toLowerCase()` to make the comparison case-insensitive. This ensures that "apple" and "Apple" are treated the same.  We use a `switch` statement to evaluate the fruit variable, which is a string.  Each case represents a different fruit name. If the fruit matches one of the cases, the corresponding code block is executed.  Again, the `break` statement is used to exit the `switch` statement after a `case` is matched.  If the fruit doesn't match any of the case values, the default case is executed, setting the category to "Unknown."  We display the result, indicating the category of the entered fruit.  When you run this program and enter a fruit name, it will display the category of the fruit based on your input. If the entered fruit is not recognized, it will show "Unknown."
+Inside the main method, we prompt the user to enter a fruit name.  We convert the input to lowercase using **`toLowerCase()`** to make the comparison case-insensitive. This ensures that "apple" and "Apple" are treated the same.  We use a **`switch`** statement to evaluate the fruit variable, which is a string.  Each case represents a different fruit name. If the fruit matches one of the cases, the corresponding code block is executed.  Again, the **`break`** statement is used to exit the **`switch`** statement after a **`case`** is matched.  If the fruit doesn't match any of the case values, the *default case* is executed, setting the category to "Unknown."  We display the result, indicating the category of the entered fruit.  When you run this program and enter a fruit name, it will display the category of the fruit based on your input. If the entered fruit is not recognized, it will show "Unknown."
 
 ```java
 import java.util.Scanner;
@@ -1034,7 +1034,7 @@ d. Centimeters to Inches
 
 Print:
 
-```
+```java
 Goodbye! Thanks for using SmartCalculator.
 ```
 
@@ -1071,7 +1071,7 @@ Enter your choice: c
 Result: 12.5 * 3.5 = 43.75
 ```
 
-Submit your .java files and your test cases
+Submit your .java files and provide multiple test cases
 
 
 ---
