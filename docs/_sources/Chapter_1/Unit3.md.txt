@@ -656,6 +656,8 @@ class Main {
 
 **Starter Code:**  [starterFile_Shipping.txt](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9913050/starterFile_Shipping.txt)
 
+[.equals() Method object equality](https://ap-csa-java.github.io/CSA_JAVA-Course/Chapter_1/Unit3.html#equals-method)
+
 **Directions:**
 *Shipping*
 - [ ] ask user for the weight of package, method of shipping, and coupon code
