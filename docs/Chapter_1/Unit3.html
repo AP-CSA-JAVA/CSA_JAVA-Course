@@ -1347,23 +1347,100 @@ Write a program that will do the following:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<section id="activity-3-4-1a">
-<h3>Activity 3.4.1a<a class="headerlink" href="#activity-3-4-1a" title="Link to this heading">¶</a></h3>
-<p><strong>Directions:</strong>  Write a switch that determines if some number num is odd or even. Test with positive and negative values.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
-<span class="w"> 	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w"> 	  </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
-<span class="w"> 	  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Number:&quot;</span><span class="p">);</span>
-<span class="w"> 	  </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
-<span class="w"> 	  </span>
-<span class="w"> 	</span><span class="p">}</span>
-<span class="p">}</span>
+<section id="activity-3-4-1-1-text-based-calculator-with-mode-selection">
+<h3>Activity 3.4.1.1 - Text-Based Calculator with Mode Selection<a class="headerlink" href="#activity-3-4-1-1-text-based-calculator-with-mode-selection" title="Link to this heading">¶</a></h3>
+<p><strong>Directions:</strong>  Write a program that is called <code class="docutils literal notranslate"><span class="pre">SmartCalculator.java</span></code> that allows the user to choose different modes (Basic Math, Geometry, and Conversions) using a <strong><code class="docutils literal notranslate"><span class="pre">switch</span></code> statement</strong>. Each mode presents a different set of operations, and the user can perform calculations based on input choices.</p>
+<p><strong>Program Specification</strong></p>
+<ol class="arabic">
+<li><p>Displays a main menu with three modes:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Welcome</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">SmartCalculator</span><span class="o">!</span>
+<span class="n">Select</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">mode</span><span class="p">:</span>
+<span class="mf">1.</span><span class="w"> </span><span class="n">Basic</span><span class="w"> </span><span class="n">Math</span>
+<span class="mf">2.</span><span class="w"> </span><span class="n">Geometry</span>
+<span class="mf">3.</span><span class="w"> </span><span class="n">Conversions</span>
+<span class="mf">4.</span><span class="w"> </span><span class="n">Quit</span>
 </pre></div>
 </div>
+</li>
+<li><p>Based on the user’s choice, use a <strong><code class="docutils literal notranslate"><span class="pre">switch</span></code></strong> statement to branch into the appropriate section.</p></li>
+</ol>
+<p><strong>Mode 1: Basic Math</strong></p>
+<ul>
+<li><p>Ask the user for two numbers.</p></li>
+<li><p>Then show a second menu:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Choose</span><span class="w"> </span><span class="n">operation</span><span class="p">:</span>
+<span class="n">a</span><span class="p">.</span><span class="w"> </span><span class="n">Addition</span>
+<span class="n">b</span><span class="p">.</span><span class="w"> </span><span class="n">Subtraction</span>
+<span class="n">c</span><span class="p">.</span><span class="w"> </span><span class="n">Multiplication</span>
+<span class="n">d</span><span class="p">.</span><span class="w"> </span><span class="n">Division</span>
+</pre></div>
+</div>
+</li>
+<li><p>Use another <strong><code class="docutils literal notranslate"><span class="pre">switch</span></code></strong> to perform the selected operation.</p></li>
+<li><p>Print the result with clear formatting.</p></li>
+</ul>
+<p><strong>Mode 2: Geometry</strong></p>
+<p>Ask for the shape type:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Choose</span><span class="w"> </span><span class="n">shape</span><span class="p">:</span>
+<span class="n">a</span><span class="p">.</span><span class="w"> </span><span class="nf">Circle</span><span class="w"> </span><span class="p">(</span><span class="n">Area</span><span class="p">)</span>
+<span class="n">b</span><span class="p">.</span><span class="w"> </span><span class="nf">Rectangle</span><span class="w"> </span><span class="p">(</span><span class="n">Area</span><span class="p">)</span>
+<span class="n">c</span><span class="p">.</span><span class="w"> </span><span class="nf">Triangle</span><span class="w"> </span><span class="p">(</span><span class="n">Area</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Then:</p>
+<ul class="simple">
+<li><p>Circle: ask for radius → compute area = πr²</p></li>
+<li><p>Rectangle: ask for width and height → compute area = w×h</p></li>
+<li><p>Triangle: ask for base and height → compute area = ½×b×h</p></li>
+</ul>
+<p>Use <code class="docutils literal notranslate"><span class="pre">Math.PI</span></code> and <code class="docutils literal notranslate"><span class="pre">Math.pow</span></code> where needed.</p>
+<p><strong>Mode 3: Conversions</strong></p>
+<p>Ask the user to choose:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Choose</span><span class="w"> </span><span class="n">conversion</span><span class="p">:</span>
+<span class="n">a</span><span class="p">.</span><span class="w"> </span><span class="n">Celsius</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">Fahrenheit</span>
+<span class="n">b</span><span class="p">.</span><span class="w"> </span><span class="n">Fahrenheit</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">Celsius</span>
+<span class="n">c</span><span class="p">.</span><span class="w"> </span><span class="n">Inches</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">Centimeters</span>
+<span class="n">d</span><span class="p">.</span><span class="w"> </span><span class="n">Centimeters</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">Inches</span>
+</pre></div>
+</div>
+<p><strong>Selection 4: Quit</strong></p>
+<p>Print:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Goodbye! Thanks for using SmartCalculator.
+</pre></div>
+</div>
+<p><strong>Challenge Options</strong></p>
+<ul class="simple">
+<li><p>Wrapping the main menu in a loop so users can perform multiple operations until they choose Quit.</p></li>
+<li><p>Handling invalid inputs using <code class="docutils literal notranslate"><span class="pre">default</span></code> cases.</p></li>
+<li><p>Formatting results to 2 decimal places.</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>Example Output</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Welcome</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">SmartCalculator</span><span class="o">!</span>
+<span class="n">Select</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">mode</span><span class="p">:</span>
+<span class="mf">1.</span><span class="w"> </span><span class="n">Basic</span><span class="w"> </span><span class="n">Math</span>
+<span class="mf">2.</span><span class="w"> </span><span class="n">Geometry</span>
+<span class="mf">3.</span><span class="w"> </span><span class="n">Conversions</span>
+<span class="mf">4.</span><span class="w"> </span><span class="n">Quit</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">choice</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+
+<span class="n">You</span><span class="w"> </span><span class="n">selected</span><span class="w"> </span><span class="n">Basic</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="n">number</span><span class="p">:</span><span class="w"> </span><span class="mf">12.5</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">second</span><span class="w"> </span><span class="n">number</span><span class="p">:</span><span class="w"> </span><span class="mf">3.5</span>
+<span class="n">Choose</span><span class="w"> </span><span class="n">operation</span><span class="p">:</span>
+<span class="n">a</span><span class="p">.</span><span class="w"> </span><span class="n">Addition</span>
+<span class="n">b</span><span class="p">.</span><span class="w"> </span><span class="n">Subtraction</span>
+<span class="n">c</span><span class="p">.</span><span class="w"> </span><span class="n">Multiplication</span>
+<span class="n">d</span><span class="p">.</span><span class="w"> </span><span class="n">Division</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">choice</span><span class="p">:</span><span class="w"> </span><span class="n">c</span>
+
+<span class="nl">Result</span><span class="p">:</span><span class="w"> </span><span class="mf">12.5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">3.5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">43.75</span>
+</pre></div>
+</div>
+<p>Submit your .java files and your test cases</p>
 </section>
 </section>
+<hr class="docutils" />
 <section id="compound-boolean-expressions">
 <h2>3.5 Compound Boolean Expressions<a class="headerlink" href="#compound-boolean-expressions" title="Link to this heading">¶</a></h2>
 <p><strong>Goals</strong></p>
@@ -2015,7 +2092,7 @@ Document and collect the following items:</p>
 </ul>
 </li>
 <li><a class="reference internal" href="#switch-statements-oracle">3.4.1 Switch Statements - Oracle</a><ul>
-<li><a class="reference internal" href="#activity-3-4-1a">Activity 3.4.1a</a></li>
+<li><a class="reference internal" href="#activity-3-4-1-1-text-based-calculator-with-mode-selection">Activity 3.4.1.1 - Text-Based Calculator with Mode Selection</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#compound-boolean-expressions">3.5 Compound Boolean Expressions</a><ul>

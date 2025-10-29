@@ -964,21 +964,118 @@ public class Main {
 }
 ```
 
-### Activity 3.4.1a
-**Directions:**  Write a switch that determines if some number num is odd or even. Test with positive and negative values.
+### Activity 3.4.1.1 - Text-Based Calculator with Mode Selection
+**Directions:**  Write a program that is called `SmartCalculator.java` that allows the user to choose different modes (Basic Math, Geometry, and Conversions) using a **`switch` statement**. Each mode presents a different set of operations, and the user can perform calculations based on input choices.
+
+
+**Program Specification**
+
+1. Displays a main menu with three modes:
+
+   ```java
+   Welcome to SmartCalculator!
+   Select a mode:
+   1. Basic Math
+   2. Geometry
+   3. Conversions
+   4. Quit
+   ```
+2. Based on the user’s choice, use a **`switch`** statement to branch into the appropriate section.
+
+**Mode 1: Basic Math**
+
+* Ask the user for two numbers.
+* Then show a second menu:
+
+  ```java
+  Choose operation:
+  a. Addition
+  b. Subtraction
+  c. Multiplication
+  d. Division
+  ```
+* Use another **`switch`** to perform the selected operation.
+* Print the result with clear formatting.
+
+
+**Mode 2: Geometry**
+
+Ask for the shape type:
 
 ```java
-import java.util.Scanner;
-
-public class Main {
- 	public static void main(String[] args) {
- 	  Scanner sc = new Scanner(System.in);
- 	  System.out.print("Number:");
- 	  int num = sc.nextInt();
- 	  
- 	}
-}
+Choose shape:
+a. Circle (Area)
+b. Rectangle (Area)
+c. Triangle (Area)
 ```
+
+Then:
+
+* Circle: ask for radius → compute area = πr²
+* Rectangle: ask for width and height → compute area = w×h
+* Triangle: ask for base and height → compute area = ½×b×h
+
+Use `Math.PI` and `Math.pow` where needed.
+
+
+**Mode 3: Conversions**
+
+Ask the user to choose:
+
+```java
+Choose conversion:
+a. Celsius to Fahrenheit
+b. Fahrenheit to Celsius
+c. Inches to Centimeters
+d. Centimeters to Inches
+```
+
+**Selection 4: Quit**
+
+Print:
+
+```
+Goodbye! Thanks for using SmartCalculator.
+```
+
+
+**Challenge Options**
+
+* Wrapping the main menu in a loop so users can perform multiple operations until they choose Quit.
+* Handling invalid inputs using `default` cases.
+* Formatting results to 2 decimal places.
+
+---
+
+**Example Output**
+
+```java
+Welcome to SmartCalculator!
+Select a mode:
+1. Basic Math
+2. Geometry
+3. Conversions
+4. Quit
+Enter your choice: 1
+
+You selected Basic Math.
+Enter first number: 12.5
+Enter second number: 3.5
+Choose operation:
+a. Addition
+b. Subtraction
+c. Multiplication
+d. Division
+Enter your choice: c
+
+Result: 12.5 * 3.5 = 43.75
+```
+
+Submit your .java files and your test cases
+
+
+---
+
 
 ## 3.5 Compound Boolean Expressions
 
