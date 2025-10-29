@@ -1277,7 +1277,7 @@ You are considered overweight.
 
 **Goals**
 - Learn how to compare instances of classes to one another
-- Create your own `equals` method for a class
+- Create your own `equals` method (.equals()) for a class
 - Practice `if` statements and coding skills
 	- I will be able to write a program that compares String values and not String location	 
 
@@ -1289,6 +1289,9 @@ You are considered overweight.
 Note that the value of the first reference variable s1 is null. It was not assigned an actual String object like s2 was. This reference variable, and in fact any reference variable, can be compared with null, using == or != to determine if the variable actually references an object.
 
 **Note:** You do not need to use the `new string` constructor to create a string.  Instead you can use `String s = "HELLO"`.  The `String` constructor is used to demonstrate object equality.
+
+### .equals() Method
+
 
 **IMPORTANT: Object Equality**
 
@@ -1334,7 +1337,7 @@ Take a look at the program above.  Looking at the program, you may have thought 
 
 **Note:** Two object references are considered aliases when they both reference the same object. Object references can be compared using == and != to identify aliases. 
 
-### Activity 3.7.1
+### Activity 3.7.1 - Clue
 
 [137Clue.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/10015355/137Clue.zip)
 
