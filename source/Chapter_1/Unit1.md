@@ -368,17 +368,79 @@ Eligible for allowance? False<br>
 Michael's weekly allowance is $0.00<br>
 
 ### Assignment 1.2.2 - Scanner Class
-Use a Scanner object to create an input feature in your program.  Click on [Scanner_Input](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/8455326/Scanner_Input.pptx) to learn more.  An example of a Scanner Input can be found [here](https://replit.com/@jonvirak/JavaScannerBasics#Main.java).  Create four questions that will ask the user for a string, int, double, and a boolean.  From the user's response, you will return (print statement) a sentence that includes the data types listed above.  
-- [ ] string
-- [ ] int
-- [ ] double
-- [ ] boolean
-- [ ] print statement that includes all for data types
+
+The scanner class is a package that provides primitive input within Java programs.  It can be found in the [java.util Package](https://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html) website.
+
+- [ ] Click on [Scanner_Input](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/8455326/Scanner_Input.pptx) to learn more.
+- [ ] An example of a Scanner Input can be found [here](https://replit.com/@jonvirak/JavaScannerBasics#Main.java).
+- [ ] To create an object of the Scanner class, we must pass a defined object in `System.in` which is the standard input.
+- [ ] To read the data type we need to use the function next**data type**().  For example, to read an `int` we would type `nextint()`.
+- [ ] To read strings, we would use `nextLine()`.
+- [ ] To read a single character we would use `next()` or `charAt()`.
+- [ ] The `next()` function returns the next word in the input as a string.
+- [ ] Whereas, `charAt()` function returns the first character in that string.
+- [ ] Scanner problem using `nextline()` **(see below)**
+
+In Java, `Scanner.nextLine()` doesn't always work as expected when it's used after methods like `nextInt()`, `nextDouble()`, or `next()`. This happens because of how the `Scanner` class handles input in terms of whitespace and line breaks.
+
+Here's the Problem:
+
+* `nextInt()`, `nextDouble()`, and `next()` do not consume the newline character (`\n`) that is left when the user presses Enter. They only read the actual data (like the number or the word), but the newline character remains in the input buffer.
+
+* `nextLine()`, on the other hand, reads everything up to and including the newline character, consuming it in the process. If it's called right after one of these methods, `nextLine()` immediately reads the leftover newline from the previous input, effectively "skipping" the actual user input you expect.
+
+**Example:**
+
+```java
+Scanner scanner = new Scanner(System.in);
+System.out.println("Enter a number: ");
+int num = scanner.nextInt();  // Reads the integer but leaves the newline behind
+System.out.println("Enter a string: ");
+String str = scanner.nextLine();  // This reads the leftover newline instead of the input
+System.out.println("You entered: " + str);
+```
+
+**Unexpected Output:**
+
+```
+Enter a number: 
+42
+Enter a string: 
+You entered: 
+```
+
+**Solution:**
+
+To fix this, you can add an extra `scanner.nextLine()` after reading the number or other data types to consume the leftover newline character.
+
+**Corrected Example:**
+
+```java
+Scanner scanner = new Scanner(System.in);
+System.out.println("Enter a number: ");
+int num = scanner.nextInt();  				// Reads the integer
+scanner.nextLine();  						// Consumes the leftover newline character
+System.out.println("Enter a string: ");
+String str = scanner.nextLine();  			// Now it reads the actual input
+System.out.println("You entered: " + str);
+```
+
+**Output (corrected):**
+
+```
+Enter a number: 
+42
+Enter a string: 
+Hello, World!
+You entered: Hello, World!
+```
+By calling `nextLine()` after reading an integer or another token, you clear the input buffer of the unwanted newline character, ensuring that the next call to `nextLine()` behaves as expected and reads a full line of input.
 
 
+**Assignment:** Create four questions that will ask the user for a string, int, double, and a boolean. 
 
 
---------------------------------------------------------------------------------------------------
+---
 
 
 ## 1.3 Expressions and Assignment Statements
