@@ -616,14 +616,62 @@ Michael’s weekly allowance is $0.00<br></p>
 </section>
 <section id="assignment-1-2-2-scanner-class">
 <h3>Assignment 1.2.2 - Scanner Class<a class="headerlink" href="#assignment-1-2-2-scanner-class" title="Link to this heading">¶</a></h3>
-<p>Use a Scanner object to create an input feature in your program.  Click on <a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/8455326/Scanner_Input.pptx">Scanner_Input</a> to learn more.  An example of a Scanner Input can be found <a class="reference external" href="https://replit.com/&#64;jonvirak/JavaScannerBasics#Main.java">here</a>.  Create four questions that will ask the user for a string, int, double, and a boolean.  From the user’s response, you will return (print statement) a sentence that includes the data types listed above.</p>
+<p>The scanner class is a package that provides primitive input within Java programs.  It can be found in the <a class="reference external" href="https://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html">java.util Package</a> website.</p>
 <ul class="contains-task-list simple">
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> string</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> int</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> double</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> boolean</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> print statement that includes all for data types</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Click on <a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/8455326/Scanner_Input.pptx">Scanner_Input</a> to learn more.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> An example of a Scanner Input can be found <a class="reference external" href="https://replit.com/&#64;jonvirak/JavaScannerBasics#Main.java">here</a>.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> To create an object of the Scanner class, we must pass a defined object in <code class="docutils literal notranslate"><span class="pre">System.in</span></code> which is the standard input.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> To read the data type we need to use the function next<strong>data type</strong>().  For example, to read an <code class="docutils literal notranslate"><span class="pre">int</span></code> we would type <code class="docutils literal notranslate"><span class="pre">nextint()</span></code>.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> To read strings, we would use <code class="docutils literal notranslate"><span class="pre">nextLine()</span></code>.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> To read a single character we would use <code class="docutils literal notranslate"><span class="pre">next()</span></code> or <code class="docutils literal notranslate"><span class="pre">charAt()</span></code>.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> The <code class="docutils literal notranslate"><span class="pre">next()</span></code> function returns the next word in the input as a string.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Whereas, <code class="docutils literal notranslate"><span class="pre">charAt()</span></code> function returns the first character in that string.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Scanner problem using <code class="docutils literal notranslate"><span class="pre">nextline()</span></code> <strong>(see below)</strong></p></li>
 </ul>
+<p>In Java, <code class="docutils literal notranslate"><span class="pre">Scanner.nextLine()</span></code> doesn’t always work as expected when it’s used after methods like <code class="docutils literal notranslate"><span class="pre">nextInt()</span></code>, <code class="docutils literal notranslate"><span class="pre">nextDouble()</span></code>, or <code class="docutils literal notranslate"><span class="pre">next()</span></code>. This happens because of how the <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> class handles input in terms of whitespace and line breaks.</p>
+<p>Here’s the Problem:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">nextInt()</span></code>, <code class="docutils literal notranslate"><span class="pre">nextDouble()</span></code>, and <code class="docutils literal notranslate"><span class="pre">next()</span></code> do not consume the newline character (<code class="docutils literal notranslate"><span class="pre">\n</span></code>) that is left when the user presses Enter. They only read the actual data (like the number or the word), but the newline character remains in the input buffer.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nextLine()</span></code>, on the other hand, reads everything up to and including the newline character, consuming it in the process. If it’s called right after one of these methods, <code class="docutils literal notranslate"><span class="pre">nextLine()</span></code> immediately reads the leftover newline from the previous input, effectively “skipping” the actual user input you expect.</p></li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter a number: &quot;</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span><span class="w">  </span><span class="c1">// Reads the integer but leaves the newline behind</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter a string: &quot;</span><span class="p">);</span>
+<span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span><span class="w">  </span><span class="c1">// This reads the leftover newline instead of the input</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You entered: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">str</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Unexpected Output:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span> <span class="n">a</span> <span class="n">number</span><span class="p">:</span> 
+<span class="mi">42</span>
+<span class="n">Enter</span> <span class="n">a</span> <span class="n">string</span><span class="p">:</span> 
+<span class="n">You</span> <span class="n">entered</span><span class="p">:</span> 
+</pre></div>
+</div>
+<p><strong>Solution:</strong></p>
+<p>To fix this, you can add an extra <code class="docutils literal notranslate"><span class="pre">scanner.nextLine()</span></code> after reading the number or other data types to consume the leftover newline character.</p>
+<p><strong>Corrected Example:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter a number: &quot;</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span><span class="w">  				</span><span class="c1">// Reads the integer</span>
+<span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span><span class="w">  						</span><span class="c1">// Consumes the leftover newline character</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter a string: &quot;</span><span class="p">);</span>
+<span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span><span class="w">  			</span><span class="c1">// Now it reads the actual input</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You entered: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">str</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Output (corrected):</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Enter a number: 
+42
+Enter a string: 
+Hello, World!
+You entered: Hello, World!
+</pre></div>
+</div>
+<p>By calling <code class="docutils literal notranslate"><span class="pre">nextLine()</span></code> after reading an integer or another token, you clear the input buffer of the unwanted newline character, ensuring that the next call to <code class="docutils literal notranslate"><span class="pre">nextLine()</span></code> behaves as expected and reads a full line of input.</p>
+<p><strong>Assignment:</strong> Create four questions that will ask the user for a string, int, double, and a boolean.</p>
 </section>
 </section>
 <hr class="docutils" />
