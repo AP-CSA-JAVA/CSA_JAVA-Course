@@ -423,8 +423,9 @@ public class Main
 
 
 
-**Activity 2.1.3 Dog Pizza java**
-- [ ] Complete Dog.java by: filling in the attributes & creating the constructor
+### Activity 2.1.3 Dog Pizza java
+
+- [ ] Complete Dog.java by: filling in the attributes & creating the constructor found in **Canvas**
 - [ ] Instantiate 3 pizzas and print them out by:
 	- [ ] creating a Pizza class
  	- [ ] filling out the attributes
@@ -571,11 +572,11 @@ class Vegetable {
 
 ---
 
-**Bicycle Revisited**
+### Activity 2.1.4 - Bicycle Revisited
 
 **Instructions:**
 
-1. Edit the Bike class to have the following attributes:
+1. Create a Bike class to have the following attributes:
    - `kind`  (Cruiser, road bike, tricycle, hybrid)
    - `gear`  (single, three-speed, 10 speed, 30 speed)
    - `size`  (20, 22, 26, 28)
@@ -596,66 +597,10 @@ My tricycle has 3 gears costs $300.
 Pedaling to accelerate.
 ```
  
+---
 
-### Scanner Revisited
-As you recall, the scanner class is a package that provides primitive input within Java programs.  It can be found in the [java.util Package](https://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html) website.
 
-- [ ] First you need to import the class from the online Oracle repository by typing `import java.util.Scanner;`
-- [ ] To create an object of the Scanner class, we must pass a defined object in `System.in` which is the standard input.
-- [ ] To read the data type we need to use the function next**data type**().  For example, to read an `int` we would type `nextint()`.
-- [ ] To read strings, we would use `nextLine()`.
-- [ ] To read a single character we would use `next()` or `charAt()`.  The `next()` function returns the next word in the input as a string.  Whereas, `charAt()` function returns the first character in that string.
-- [ ] [Scanner problems using next()](https://www.geeksforgeeks.org/why-is-scanner-skipping-nextline-after-use-of-other-next-functions/)
-
-```java
-import java.util.Scanner; // import scanner class
-public class Main
-{
-	public static void main(String[] args)
-	{
-		// Declare the object and initialize with
-		// predefined standard input object
-		Scanner test = new Scanner(System.in);
-
-		// String input
-		String name = test.nextLine();
-
-		// Character input
-		char gender = test.next().charAt(0);
-
-		// Numerical data input
-		int age = test.nextInt();
-		long mobileNum = test.nextLong();
-		double gpa = test.nextDouble();
-
-		// Print the values to check if the input was correctly obtained.
-		System.out.println("Name: "+name);
-		System.out.println("Gender: "+gender);
-		System.out.println("Age: "+age);
-		System.out.println("Mobile Number: "+mobileNum);
-		System.out.println("GPA: "+gpa);
-	}
-}
-```
-**Sample input**
-
-```java
-Jon
-Male
-50
-1236549898
-3.0
-```
-**Sample Output**
-```java
-Name: Jon
-Gender: M
-Age: 50
-Mobile Number: 1236549898
-GPA: 3.0
-```
-
-**Constructor Practice**
+### Activity 2.1.5 Constructor Practice
 
 
 1. **Create a class called `Student`.**
