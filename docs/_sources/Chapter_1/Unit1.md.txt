@@ -301,6 +301,10 @@ class Main {
 ```
 </details>
 
+
+---
+
+
 ## 1.2 Variables and Data Types
 
 - [ ] Learn to use variables so that the same algorithm runs using different input values.
@@ -366,6 +370,10 @@ Ed's weekly allowance is $0.00<br>
 Michael's age is 20<br>
 Eligible for allowance? False<br>
 Michael's weekly allowance is $0.00<br>
+
+
+---
+
 
 ### Assignment 1.2.2 - Scanner Class
 
