@@ -269,7 +269,7 @@
 <li><p>Measure execution time using <code class="docutils literal notranslate"><span class="pre">LocalTime</span></code>.</p></li>
 <li><p>Understand the modern <code class="docutils literal notranslate"><span class="pre">java.time</span></code> API (which replaced <code class="docutils literal notranslate"><span class="pre">Calendar</span></code> and <code class="docutils literal notranslate"><span class="pre">Date</span></code>).</p></li>
 </ul>
-<p>Java 8 introduced the <strong><code class="docutils literal notranslate"><span class="pre">java.time</span></code></strong> package (JSR-310), designed to fix the confusion of older classes like <code class="docutils literal notranslate"><span class="pre">Date</span></code> and <code class="docutils literal notranslate"><span class="pre">Calendar</span></code>.</p>
+<p>Java 8 introduced the <strong><code class="docutils literal notranslate"><span class="pre">java.time</span></code></strong> package which was designed to fix issues with the older classes: <code class="docutils literal notranslate"><span class="pre">Date</span></code> and <code class="docutils literal notranslate"><span class="pre">Calendar</span></code>.</p>
 <div class="table-wrapper colwidths-auto docutils container">
 <table class="docutils align-default">
 <thead>
@@ -505,40 +505,6 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">Duration.between()</span></code> — measures <strong>time-based</strong> differences (seconds, minutes).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ChronoUnit.DAYS.between(date1,</span> <span class="pre">date2)</span></code> — a concise way to find total days.</p></li>
 </ul>
-<hr class="docutils" />
-<p><strong>Summary Chart</strong></p>
-<div class="table-wrapper colwidths-auto docutils container">
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Class</p></th>
-<th class="head"><p>Purpose</p></th>
-<th class="head"><p>Example</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">LocalDate</span></code></p></td>
-<td><p>Represents a date (no time)</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">LocalDate.of(2024,</span> <span class="pre">8,</span> <span class="pre">26)</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">LocalTime</span></code></p></td>
-<td><p>Represents a time (no date)</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">LocalTime.now()</span></code></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">LocalDateTime</span></code></p></td>
-<td><p>Date and time together</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">LocalDateTime.now()</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Period</span></code></p></td>
-<td><p>Difference between two dates</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">Period.between(date1,</span> <span class="pre">date2)</span></code></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">DateTimeFormatter</span></code></p></td>
-<td><p>Format date/time</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">dt.format(DateTimeFormatter.ofPattern(&quot;MMM</span> <span class="pre">dd</span> <span class="pre">yyyy&quot;))</span></code></p></td>
-</tr>
-</tbody>
-</table>
-</div>
 </section>
 </section>
 <hr class="docutils" />

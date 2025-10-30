@@ -11,7 +11,7 @@
 * Understand the modern `java.time` API (which replaced `Calendar` and `Date`).
 
 
-Java 8 introduced the **`java.time`** package (JSR-310), designed to fix the confusion of older classes like `Date` and `Calendar`.
+Java 8 introduced the **`java.time`** package which was designed to fix issues with the older classes: `Date` and `Calendar`.
 
 
 | Topic                                  | Covered by My Calendar Lesson? | Covered by Given `java.time` Code? |
@@ -211,18 +211,6 @@ They should print both start and end times.
 
 * `Duration.between()` — measures **time-based** differences (seconds, minutes).
 * `ChronoUnit.DAYS.between(date1, date2)` — a concise way to find total days.
-
----
-
-**Summary Chart**
-
-| Class               | Purpose                      | Example                                                 |
-| ------------------- | ---------------------------- | ------------------------------------------------------- |
-| `LocalDate`         | Represents a date (no time)  | `LocalDate.of(2024, 8, 26)`                             |
-| `LocalTime`         | Represents a time (no date)  | `LocalTime.now()`                                       |
-| `LocalDateTime`     | Date and time together       | `LocalDateTime.now()`                                   |
-| `Period`            | Difference between two dates | `Period.between(date1, date2)`                          |
-| `DateTimeFormatter` | Format date/time             | `dt.format(DateTimeFormatter.ofPattern("MMM dd yyyy"))` |
 
 
 ---
