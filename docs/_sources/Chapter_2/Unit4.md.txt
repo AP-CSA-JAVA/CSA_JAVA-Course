@@ -1,5 +1,278 @@
 # Unit 4
 
+## 4.0 Java Time
+
+
+`java.util.Calendar` vs. `java.time`
+
+
+
+| API                  | Package     | Introduced | Recommended by Oracle      |
+| -------------------- | ----------- | ---------- | -------------------------- |
+| `java.util.Calendar` | `java.util` | Java 1.1   | **Legacy (older)**         |
+| `java.time`          | `java.time` | Java 8     | **Current, preferred API** |
+
+---
+
+
+
+**`java.time`**
+
+| Concept                         | Class               | Example From Your Snippet                            | Description                                                       |
+| ------------------------------- | ------------------- | ---------------------------------------------------- | ----------------------------------------------------------------- |
+| Representing a date             | `LocalDate`         | `LocalDate.of(2024, 8, 26)`                          | Represents a date (no time zone)                                  |
+| Representing a time             | `LocalTime`         | `LocalTime.now()`                                    | Represents a time (no date)                                       |
+| Representing both date and time | `LocalDateTime`     | `LocalDateTime.now()`                                | Combines both date and time                                       |
+| Formatting date/time            | `DateTimeFormatter` | `DateTimeFormatter.ofPattern("MM-dd-yyyy HH:mm:ss")` | Formats a date/time object into a readable string                 |
+| Calculating differences         | `Period`            | `Period.between(dSchool, LocalDate.now())`           | Finds the difference in years, months, and days between two dates |
+
+---
+
+**Summary of Assessment Coverage**
+
+| Topic                                  | Covered by My Calendar Lesson? | Covered by Given `java.time` Code? |
+| -------------------------------------- | ------------------------------ | ---------------------------------- |
+| Creating and reading current date/time | ✅ (Calendar)                   | ✅ (`LocalDateTime.now()`)          |
+| Adding/subtracting time                | ✅ (Calendar.add)               | ✅ (`plusDays`, `plusMonths`, etc.) |
+| Formatting date/time                   | ⚠️ Legacy `SimpleDateFormat`   | ✅ `DateTimeFormatter`              |
+| Time differences                       | ✅ (millisecond math)           | ✅ `Period`                         |
+| Local vs zoned time                    | ⚠️ briefly                     | ✅ via `java.time`                  |
+| API familiarity for exam               | ⚠️ partially                   | ✅ exactly matches the content      |
+
+---
+
+**Recommendation for You**
+
+Since your students are preparing for the **Oracle Java Fundamentals test**, which uses **`java.time` (not Calendar)**, you should **teach and assess** the following:
+
+1. `LocalDate` — creating specific dates, using `.now()` and `.of()`.
+2. `LocalTime` — timing operations, getting nanoseconds.
+3. `LocalDateTime` — combining both date and time.
+4. `Period` — finding date differences (years, months, days).
+5. `DateTimeFormatter` — formatting and custom patterns.
+6. (Optionally) `Duration` and `ChronoUnit` — for time differences in hours/minutes/seconds.
+
+---
+
+### Java’s `java.time` API
+
+
+
+**Learning Objectives**
+
+* Use `LocalDate`, `LocalTime`, and `LocalDateTime` to represent date and time.
+* Use `DateTimeFormatter` to display dates/times in different formats.
+* Use `Period` to find the difference between two dates.
+* Measure execution time using `LocalTime`.
+* Understand the modern `java.time` API (which replaced `Calendar` and `Date`).
+
+---
+
+**Background**
+
+Java 8 introduced the **`java.time`** package (JSR-310), designed to fix the confusion of older classes like `Date` and `Calendar`.
+
+| Concept                  | Old API            | New API (`java.time`) |
+| ------------------------ | ------------------ | --------------------- |
+| Date only                | `Date`, `Calendar` | `LocalDate`           |
+| Time only                | `Date`, `Calendar` | `LocalTime`           |
+| Date + Time              | `Date`, `Calendar` | `LocalDateTime`       |
+| Format dates             | `SimpleDateFormat` | `DateTimeFormatter`   |
+| Difference between dates | manual math        | `Period` / `Duration` |
+
+
+---
+
+
+**Example 1: `LocalDate`**
+
+```java
+import java.time.LocalDate;
+
+public class LocalDateExample {
+    public static void main(String[] args) {
+        LocalDate today = LocalDate.now();
+        System.out.println("Today's date: " + today);
+
+        // Creating a specific date
+        LocalDate firstDay = LocalDate.of(2024, 8, 26);
+        System.out.println("First day of school: " + firstDay);
+
+        // Access individual fields
+        System.out.println("Year: " + today.getYear());
+        System.out.println("Month: " + today.getMonth());
+        System.out.println("Day: " + today.getDayOfMonth());
+    }
+}
+```
+
+***Notes**
+
+* `LocalDate.now()` → current date.
+* `LocalDate.of(year, month, day)` → specific date.
+* `getYear()`, `getMonth()`, `getDayOfMonth()` → components.
+
+---
+
+**Example 2: `LocalTime` (measuring elapsed time)**
+
+```java
+import java.time.LocalTime;
+
+public class LocalTimeExample {
+    public static void main(String[] args) {
+        LocalTime t1 = LocalTime.now();
+
+        int j = 0;
+        for (int i = 0; i < 400000; i++) {
+            j += 1;
+        }
+
+        LocalTime t2 = LocalTime.now();
+        System.out.println("Start time: " + t1);
+        System.out.println("End time: " + t2);
+        System.out.println("Start (nanos): " + t1.getNano());
+        System.out.println("End (nanos): " + t2.getNano());
+    }
+}
+```
+
+**Notes**
+
+* `.now()` gives current time (hour, minute, second, nanosecond).
+* `.getNano()` returns nanoseconds — useful for performance tests.
+* Students can time their code using `LocalTime` or `Instant`.
+
+---
+
+**Example 3: `Period` (finding date differences)**
+
+```java
+import java.time.LocalDate;
+import java.time.Period;
+
+public class PeriodExample {
+    public static void main(String[] args) {
+        LocalDate firstDayOfSchool = LocalDate.of(2024, 8, 26);
+        LocalDate today = LocalDate.now();
+
+        Period p = Period.between(firstDayOfSchool, today);
+        System.out.println("Months since school started: " + p.getMonths());
+        System.out.println("Days since last full month: " + p.getDays());
+    }
+}
+```
+
+**Notes**
+
+* `Period` measures date differences in **years, months, and days**.
+* Use `.getYears()`, `.getMonths()`, `.getDays()` individually.
+* For time differences (seconds, minutes), use `Duration` instead.
+
+---
+
+**Example 4: `LocalDateTime` and Formatting**
+
+```java
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class FormattingExample {
+    public static void main(String[] args) {
+        LocalDateTime dt = LocalDateTime.now();
+        System.out.println("Current date and time: " + dt);
+
+        DateTimeFormatter fmt1 = DateTimeFormatter.ofPattern("MM-dd-yyyy HH:mm:ss");
+        System.out.println("Format 1: " + dt.format(fmt1));
+
+        DateTimeFormatter fmt2 = DateTimeFormatter.ofPattern("MMM dd yyyy, HH:mm:ss");
+        System.out.println("Format 2: " + dt.format(fmt2));
+    }
+}
+```
+
+**Notes**
+
+* `DateTimeFormatter` allows pattern-based formatting.
+* Common symbols:
+
+  * `yyyy` → year
+  * `MM` → month number
+  * `MMM` → month name (short)
+  * `dd` → day
+  * `HH` → hour (24-hour)
+  * `mm` → minute
+  * `ss` → second
+
+---
+
+### Activity 4.0.1: Birthday Countdown
+
+**Directions:**
+
+1. Create a `LocalDate` for their next birthday.
+2. Use `Period.between()` to calculate how many months/days away it is.
+3. Print:
+
+   ```
+   Your birthday is in X months and Y days!
+   ```
+
+---
+
+### Activity 4.0.2: Date Formatting Challenge
+
+**Directions:**
+
+1. Create a `LocalDateTime.now()`.
+2. Format it in **three different ways**:
+
+   * ISO format
+   * Short format (`MM/dd/yy`)
+   * Long format (`EEEE, MMMM dd, yyyy HH:mm`)
+
+[Need Help?? Check out Oracle’s DateTimeFormatter patterns](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html).
+
+---
+
+### Activity 4.0.3: Event Timer
+
+**Directions:**
+
+Simulate timing by how long it takes to complete a loop:
+
+```java
+LocalTime start = LocalTime.now();
+// do something that takes time
+LocalTime end = LocalTime.now();
+// calculate difference in nanoseconds or seconds
+```
+
+They should print both start and end times.
+
+---
+
+**Optional**
+
+* `Duration.between()` — measures **time-based** differences (seconds, minutes).
+* `ChronoUnit.DAYS.between(date1, date2)` — a concise way to find total days.
+
+---
+
+**Summary Chart**
+
+| Class               | Purpose                      | Example                                                 |
+| ------------------- | ---------------------------- | ------------------------------------------------------- |
+| `LocalDate`         | Represents a date (no time)  | `LocalDate.of(2024, 8, 26)`                             |
+| `LocalTime`         | Represents a time (no date)  | `LocalTime.now()`                                       |
+| `LocalDateTime`     | Date and time together       | `LocalDateTime.now()`                                   |
+| `Period`            | Difference between two dates | `Period.between(date1, date2)`                          |
+| `DateTimeFormatter` | Format date/time             | `dt.format(DateTimeFormatter.ofPattern("MMM dd yyyy"))` |
+
+
+---
+
+
 ## 4.1 While Loops
 
  **Goals**
