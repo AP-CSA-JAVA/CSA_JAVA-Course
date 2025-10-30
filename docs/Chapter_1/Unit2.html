@@ -653,9 +653,11 @@ Null is a reserved keyword in Java for literal values. It is a value that shows 
 </pre></div>
 </div>
 </details>
-<p><strong>Activity 2.1.3 Dog Pizza java</strong></p>
+</section>
+<section id="activity-2-1-3-dog-pizza-java">
+<h3>Activity 2.1.3 Dog Pizza java<a class="headerlink" href="#activity-2-1-3-dog-pizza-java" title="Link to this heading">¶</a></h3>
 <ul class="contains-task-list simple">
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Complete Dog.java by: filling in the attributes &amp; creating the constructor</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Complete Dog.java by: filling in the attributes &amp; creating the constructor found in <strong>Canvas</strong></p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Instantiate 3 pizzas and print them out by:</p>
 <ul class="contains-task-list">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> creating a Pizza class</p></li>
@@ -792,11 +794,13 @@ Null is a reserved keyword in Java for literal values. It is a value that shows 
 </div>
 </details>
 <hr class="docutils" />
+</section>
 <hr class="docutils" />
-<p><strong>Bicycle Revisited</strong></p>
+<section id="activity-2-1-4-bicycle-revisited">
+<h3>Activity 2.1.4 - Bicycle Revisited<a class="headerlink" href="#activity-2-1-4-bicycle-revisited" title="Link to this heading">¶</a></h3>
 <p><strong>Instructions:</strong></p>
 <ol class="arabic simple">
-<li><p>Edit the Bike class to have the following attributes:</p>
+<li><p>Create a Bike class to have the following attributes:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">kind</span></code>  (Cruiser, road bike, tricycle, hybrid)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">gear</span></code>  (single, three-speed, 10 speed, 30 speed)</p></li>
@@ -819,64 +823,9 @@ Null is a reserved keyword in Java for literal values. It is a value that shows 
 </pre></div>
 </div>
 </section>
-<section id="scanner-revisited">
-<h3>Scanner Revisited<a class="headerlink" href="#scanner-revisited" title="Link to this heading">¶</a></h3>
-<p>As you recall, the scanner class is a package that provides primitive input within Java programs.  It can be found in the <a class="reference external" href="https://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html">java.util Package</a> website.</p>
-<ul class="contains-task-list simple">
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> First you need to import the class from the online Oracle repository by typing <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">java.util.Scanner;</span></code></p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> To create an object of the Scanner class, we must pass a defined object in <code class="docutils literal notranslate"><span class="pre">System.in</span></code> which is the standard input.</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> To read the data type we need to use the function next<strong>data type</strong>().  For example, to read an <code class="docutils literal notranslate"><span class="pre">int</span></code> we would type <code class="docutils literal notranslate"><span class="pre">nextint()</span></code>.</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> To read strings, we would use <code class="docutils literal notranslate"><span class="pre">nextLine()</span></code>.</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> To read a single character we would use <code class="docutils literal notranslate"><span class="pre">next()</span></code> or <code class="docutils literal notranslate"><span class="pre">charAt()</span></code>.  The <code class="docutils literal notranslate"><span class="pre">next()</span></code> function returns the next word in the input as a string.  Whereas, <code class="docutils literal notranslate"><span class="pre">charAt()</span></code> function returns the first character in that string.</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <a class="reference external" href="https://www.geeksforgeeks.org/why-is-scanner-skipping-nextline-after-use-of-other-next-functions/">Scanner problems using next()</a></p></li>
-</ul>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span><span class="w"> </span><span class="c1">// import scanner class</span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span>
-<span class="p">{</span>
-<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
-<span class="w">	</span><span class="p">{</span>
-<span class="w">		</span><span class="c1">// Declare the object and initialize with</span>
-<span class="w">		</span><span class="c1">// predefined standard input object</span>
-<span class="w">		</span><span class="n">Scanner</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
-
-<span class="w">		</span><span class="c1">// String input</span>
-<span class="w">		</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">test</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
-
-<span class="w">		</span><span class="c1">// Character input</span>
-<span class="w">		</span><span class="kt">char</span><span class="w"> </span><span class="n">gender</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">test</span><span class="p">.</span><span class="na">next</span><span class="p">().</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-
-<span class="w">		</span><span class="c1">// Numerical data input</span>
-<span class="w">		</span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">test</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
-<span class="w">		</span><span class="kt">long</span><span class="w"> </span><span class="n">mobileNum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">test</span><span class="p">.</span><span class="na">nextLong</span><span class="p">();</span>
-<span class="w">		</span><span class="kt">double</span><span class="w"> </span><span class="n">gpa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">test</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
-
-<span class="w">		</span><span class="c1">// Print the values to check if the input was correctly obtained.</span>
-<span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Name: &quot;</span><span class="o">+</span><span class="n">name</span><span class="p">);</span>
-<span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Gender: &quot;</span><span class="o">+</span><span class="n">gender</span><span class="p">);</span>
-<span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Age: &quot;</span><span class="o">+</span><span class="n">age</span><span class="p">);</span>
-<span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Mobile Number: &quot;</span><span class="o">+</span><span class="n">mobileNum</span><span class="p">);</span>
-<span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;GPA: &quot;</span><span class="o">+</span><span class="n">gpa</span><span class="p">);</span>
-<span class="w">	</span><span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p><strong>Sample input</strong></p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Jon</span>
-<span class="n">Male</span>
-<span class="mi">50</span>
-<span class="mi">1236549898</span>
-<span class="mf">3.0</span>
-</pre></div>
-</div>
-<p><strong>Sample Output</strong></p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="nl">Name</span><span class="p">:</span><span class="w"> </span><span class="n">Jon</span>
-<span class="nl">Gender</span><span class="p">:</span><span class="w"> </span><span class="n">M</span>
-<span class="nl">Age</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span>
-<span class="n">Mobile</span><span class="w"> </span><span class="n">Number</span><span class="p">:</span><span class="w"> </span><span class="mi">1236549898</span>
-<span class="nl">GPA</span><span class="p">:</span><span class="w"> </span><span class="mf">3.0</span>
-</pre></div>
-</div>
-<p><strong>Constructor Practice</strong></p>
+<hr class="docutils" />
+<section id="activity-2-1-5-constructor-practice">
+<h3>Activity 2.1.5 Constructor Practice<a class="headerlink" href="#activity-2-1-5-constructor-practice" title="Link to this heading">¶</a></h3>
 <ol class="arabic">
 <li><p><strong>Create a class called <code class="docutils literal notranslate"><span class="pre">Student</span></code>.</strong></p>
 <ul class="simple">
@@ -2827,7 +2776,9 @@ Your program should allow a user to enter values that change the output of a sto
 <li><a class="reference internal" href="#constructors">5.2 - Constructors</a><ul>
 <li><a class="reference internal" href="#activity-2-1-1">Activity 2.1.1</a></li>
 <li><a class="reference internal" href="#activity-2-1-2-not-another-cake">Activity 2.1.2 Not another Cake</a></li>
-<li><a class="reference internal" href="#scanner-revisited">Scanner Revisited</a></li>
+<li><a class="reference internal" href="#activity-2-1-3-dog-pizza-java">Activity 2.1.3 Dog Pizza java</a></li>
+<li><a class="reference internal" href="#activity-2-1-4-bicycle-revisited">Activity 2.1.4 - Bicycle Revisited</a></li>
+<li><a class="reference internal" href="#activity-2-1-5-constructor-practice">Activity 2.1.5 Constructor Practice</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#calling-a-void-method">2.3 Calling a Void Method</a></li>
