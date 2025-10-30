@@ -259,74 +259,17 @@
         <article role="main" id="furo-main-content">
           <section id="unit-4">
 <h1>Unit 4<a class="headerlink" href="#unit-4" title="Link to this heading">¶</a></h1>
-<section id="java-time">
-<h2>4.0 Java Time<a class="headerlink" href="#java-time" title="Link to this heading">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">java.util.Calendar</span></code> vs. <code class="docutils literal notranslate"><span class="pre">java.time</span></code></p>
-<div class="table-wrapper colwidths-auto docutils container">
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>API</p></th>
-<th class="head"><p>Package</p></th>
-<th class="head"><p>Introduced</p></th>
-<th class="head"><p>Recommended by Oracle</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">java.util.Calendar</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">java.util</span></code></p></td>
-<td><p>Java 1.1</p></td>
-<td><p><strong>Legacy (older)</strong></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">java.time</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">java.time</span></code></p></td>
-<td><p>Java 8</p></td>
-<td><p><strong>Current, preferred API</strong></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<hr class="docutils" />
-<p><strong><code class="docutils literal notranslate"><span class="pre">java.time</span></code></strong></p>
-<div class="table-wrapper colwidths-auto docutils container">
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Concept</p></th>
-<th class="head"><p>Class</p></th>
-<th class="head"><p>Example From Your Snippet</p></th>
-<th class="head"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Representing a date</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">LocalDate</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">LocalDate.of(2024,</span> <span class="pre">8,</span> <span class="pre">26)</span></code></p></td>
-<td><p>Represents a date (no time zone)</p></td>
-</tr>
-<tr class="row-odd"><td><p>Representing a time</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">LocalTime</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">LocalTime.now()</span></code></p></td>
-<td><p>Represents a time (no date)</p></td>
-</tr>
-<tr class="row-even"><td><p>Representing both date and time</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">LocalDateTime</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">LocalDateTime.now()</span></code></p></td>
-<td><p>Combines both date and time</p></td>
-</tr>
-<tr class="row-odd"><td><p>Formatting date/time</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">DateTimeFormatter</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">DateTimeFormatter.ofPattern(&quot;MM-dd-yyyy</span> <span class="pre">HH:mm:ss&quot;)</span></code></p></td>
-<td><p>Formats a date/time object into a readable string</p></td>
-</tr>
-<tr class="row-even"><td><p>Calculating differences</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">Period</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">Period.between(dSchool,</span> <span class="pre">LocalDate.now())</span></code></p></td>
-<td><p>Finds the difference in years, months, and days between two dates</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<hr class="docutils" />
-<p><strong>Summary of Assessment Coverage</strong></p>
+<section id="java-time-api">
+<h2>4.0 Java Time API<a class="headerlink" href="#java-time-api" title="Link to this heading">¶</a></h2>
+<p><strong>Learning Objectives</strong></p>
+<ul class="simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">LocalDate</span></code>, <code class="docutils literal notranslate"><span class="pre">LocalTime</span></code>, and <code class="docutils literal notranslate"><span class="pre">LocalDateTime</span></code> to represent date and time.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">DateTimeFormatter</span></code> to display dates/times in different formats.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">Period</span></code> to find the difference between two dates.</p></li>
+<li><p>Measure execution time using <code class="docutils literal notranslate"><span class="pre">LocalTime</span></code>.</p></li>
+<li><p>Understand the modern <code class="docutils literal notranslate"><span class="pre">java.time</span></code> API (which replaced <code class="docutils literal notranslate"><span class="pre">Calendar</span></code> and <code class="docutils literal notranslate"><span class="pre">Date</span></code>).</p></li>
+</ul>
+<p>Java 8 introduced the <strong><code class="docutils literal notranslate"><span class="pre">java.time</span></code></strong> package (JSR-310), designed to fix the confusion of older classes like <code class="docutils literal notranslate"><span class="pre">Date</span></code> and <code class="docutils literal notranslate"><span class="pre">Calendar</span></code>.</p>
 <div class="table-wrapper colwidths-auto docutils container">
 <table class="docutils align-default">
 <thead>
@@ -363,59 +306,41 @@
 </tbody>
 </table>
 </div>
-<hr class="docutils" />
-<p><strong>Recommendation for You</strong></p>
-<p>Since your students are preparing for the <strong>Oracle Java Fundamentals test</strong>, which uses <strong><code class="docutils literal notranslate"><span class="pre">java.time</span></code> (not Calendar)</strong>, you should <strong>teach and assess</strong> the following:</p>
-<ol class="arabic simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">LocalDate</span></code> — creating specific dates, using <code class="docutils literal notranslate"><span class="pre">.now()</span></code> and <code class="docutils literal notranslate"><span class="pre">.of()</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">LocalTime</span></code> — timing operations, getting nanoseconds.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">LocalDateTime</span></code> — combining both date and time.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Period</span></code> — finding date differences (years, months, days).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">DateTimeFormatter</span></code> — formatting and custom patterns.</p></li>
-<li><p>(Optionally) <code class="docutils literal notranslate"><span class="pre">Duration</span></code> and <code class="docutils literal notranslate"><span class="pre">ChronoUnit</span></code> — for time differences in hours/minutes/seconds.</p></li>
-</ol>
-<hr class="docutils" />
-<section id="javas-java-time-api">
-<h3>Java’s <code class="docutils literal notranslate"><span class="pre">java.time</span></code> API<a class="headerlink" href="#javas-java-time-api" title="Link to this heading">¶</a></h3>
-<p><strong>Learning Objectives</strong></p>
-<ul class="simple">
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">LocalDate</span></code>, <code class="docutils literal notranslate"><span class="pre">LocalTime</span></code>, and <code class="docutils literal notranslate"><span class="pre">LocalDateTime</span></code> to represent date and time.</p></li>
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">DateTimeFormatter</span></code> to display dates/times in different formats.</p></li>
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">Period</span></code> to find the difference between two dates.</p></li>
-<li><p>Measure execution time using <code class="docutils literal notranslate"><span class="pre">LocalTime</span></code>.</p></li>
-<li><p>Understand the modern <code class="docutils literal notranslate"><span class="pre">java.time</span></code> API (which replaced <code class="docutils literal notranslate"><span class="pre">Calendar</span></code> and <code class="docutils literal notranslate"><span class="pre">Date</span></code>).</p></li>
-</ul>
-<hr class="docutils" />
-<p><strong>Background</strong></p>
-<p>Java 8 introduced the <strong><code class="docutils literal notranslate"><span class="pre">java.time</span></code></strong> package (JSR-310), designed to fix the confusion of older classes like <code class="docutils literal notranslate"><span class="pre">Date</span></code> and <code class="docutils literal notranslate"><span class="pre">Calendar</span></code>.</p>
+<p>&lt;&lt; TEXT HERE &gt;&gt;</p>
 <div class="table-wrapper colwidths-auto docutils container">
 <table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Concept</p></th>
-<th class="head"><p>Old API</p></th>
-<th class="head"><p>New API (<code class="docutils literal notranslate"><span class="pre">java.time</span></code>)</p></th>
+<th class="head"><p>Class</p></th>
+<th class="head"><p>Example From Your Snippet</p></th>
+<th class="head"><p>Description</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>Date only</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">Date</span></code>, <code class="docutils literal notranslate"><span class="pre">Calendar</span></code></p></td>
+<tr class="row-even"><td><p>Representing a date</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">LocalDate</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">LocalDate.of(2024,</span> <span class="pre">8,</span> <span class="pre">26)</span></code></p></td>
+<td><p>Represents a date (no time zone)</p></td>
 </tr>
-<tr class="row-odd"><td><p>Time only</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">Date</span></code>, <code class="docutils literal notranslate"><span class="pre">Calendar</span></code></p></td>
+<tr class="row-odd"><td><p>Representing a time</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">LocalTime</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">LocalTime.now()</span></code></p></td>
+<td><p>Represents a time (no date)</p></td>
 </tr>
-<tr class="row-even"><td><p>Date + Time</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">Date</span></code>, <code class="docutils literal notranslate"><span class="pre">Calendar</span></code></p></td>
+<tr class="row-even"><td><p>Representing both date and time</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">LocalDateTime</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">LocalDateTime.now()</span></code></p></td>
+<td><p>Combines both date and time</p></td>
 </tr>
-<tr class="row-odd"><td><p>Format dates</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">SimpleDateFormat</span></code></p></td>
+<tr class="row-odd"><td><p>Formatting date/time</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">DateTimeFormatter</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">DateTimeFormatter.ofPattern(&quot;MM-dd-yyyy</span> <span class="pre">HH:mm:ss&quot;)</span></code></p></td>
+<td><p>Formats a date/time object into a readable string</p></td>
 </tr>
-<tr class="row-even"><td><p>Difference between dates</p></td>
-<td><p>manual math</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">Period</span></code> / <code class="docutils literal notranslate"><span class="pre">Duration</span></code></p></td>
+<tr class="row-even"><td><p>Calculating differences</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Period</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Period.between(dSchool,</span> <span class="pre">LocalDate.now())</span></code></p></td>
+<td><p>Finds the difference in years, months, and days between two dates</p></td>
 </tr>
 </tbody>
 </table>
@@ -532,7 +457,6 @@
 </ul>
 </li>
 </ul>
-</section>
 <hr class="docutils" />
 <section id="activity-4-0-1-birthday-countdown">
 <h3>Activity 4.0.1: Birthday Countdown<a class="headerlink" href="#activity-4-0-1-birthday-countdown" title="Link to this heading">¶</a></h3>
@@ -1798,8 +1722,7 @@ Pay careful attention to the Break in Nested Loops example and the Continue in N
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Unit 4</a><ul>
-<li><a class="reference internal" href="#java-time">4.0 Java Time</a><ul>
-<li><a class="reference internal" href="#javas-java-time-api">Java’s <code class="docutils literal notranslate"><span class="pre">java.time</span></code> API</a></li>
+<li><a class="reference internal" href="#java-time-api">4.0 Java Time API</a><ul>
 <li><a class="reference internal" href="#activity-4-0-1-birthday-countdown">Activity 4.0.1: Birthday Countdown</a></li>
 <li><a class="reference internal" href="#activity-4-0-2-date-formatting-challenge">Activity 4.0.2: Date Formatting Challenge</a></li>
 <li><a class="reference internal" href="#activity-4-0-3-event-timer">Activity 4.0.3: Event Timer</a></li>

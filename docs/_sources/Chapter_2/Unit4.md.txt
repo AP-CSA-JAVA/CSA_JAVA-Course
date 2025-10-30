@@ -1,34 +1,18 @@
 # Unit 4
 
-## 4.0 Java Time
+## 4.0 Java Time API
+
+**Learning Objectives**
+
+* Use `LocalDate`, `LocalTime`, and `LocalDateTime` to represent date and time.
+* Use `DateTimeFormatter` to display dates/times in different formats.
+* Use `Period` to find the difference between two dates.
+* Measure execution time using `LocalTime`.
+* Understand the modern `java.time` API (which replaced `Calendar` and `Date`).
 
 
-`java.util.Calendar` vs. `java.time`
+Java 8 introduced the **`java.time`** package (JSR-310), designed to fix the confusion of older classes like `Date` and `Calendar`.
 
-
-
-| API                  | Package     | Introduced | Recommended by Oracle      |
-| -------------------- | ----------- | ---------- | -------------------------- |
-| `java.util.Calendar` | `java.util` | Java 1.1   | **Legacy (older)**         |
-| `java.time`          | `java.time` | Java 8     | **Current, preferred API** |
-
----
-
-
-
-**`java.time`**
-
-| Concept                         | Class               | Example From Your Snippet                            | Description                                                       |
-| ------------------------------- | ------------------- | ---------------------------------------------------- | ----------------------------------------------------------------- |
-| Representing a date             | `LocalDate`         | `LocalDate.of(2024, 8, 26)`                          | Represents a date (no time zone)                                  |
-| Representing a time             | `LocalTime`         | `LocalTime.now()`                                    | Represents a time (no date)                                       |
-| Representing both date and time | `LocalDateTime`     | `LocalDateTime.now()`                                | Combines both date and time                                       |
-| Formatting date/time            | `DateTimeFormatter` | `DateTimeFormatter.ofPattern("MM-dd-yyyy HH:mm:ss")` | Formats a date/time object into a readable string                 |
-| Calculating differences         | `Period`            | `Period.between(dSchool, LocalDate.now())`           | Finds the difference in years, months, and days between two dates |
-
----
-
-**Summary of Assessment Coverage**
 
 | Topic                                  | Covered by My Calendar Lesson? | Covered by Given `java.time` Code? |
 | -------------------------------------- | ------------------------------ | ---------------------------------- |
@@ -39,46 +23,17 @@
 | Local vs zoned time                    | ⚠️ briefly                     | ✅ via `java.time`                  |
 | API familiarity for exam               | ⚠️ partially                   | ✅ exactly matches the content      |
 
----
 
-**Recommendation for You**
-
-Since your students are preparing for the **Oracle Java Fundamentals test**, which uses **`java.time` (not Calendar)**, you should **teach and assess** the following:
-
-1. `LocalDate` — creating specific dates, using `.now()` and `.of()`.
-2. `LocalTime` — timing operations, getting nanoseconds.
-3. `LocalDateTime` — combining both date and time.
-4. `Period` — finding date differences (years, months, days).
-5. `DateTimeFormatter` — formatting and custom patterns.
-6. (Optionally) `Duration` and `ChronoUnit` — for time differences in hours/minutes/seconds.
-
----
-
-### Java’s `java.time` API
+<< TEXT HERE >>
 
 
-
-**Learning Objectives**
-
-* Use `LocalDate`, `LocalTime`, and `LocalDateTime` to represent date and time.
-* Use `DateTimeFormatter` to display dates/times in different formats.
-* Use `Period` to find the difference between two dates.
-* Measure execution time using `LocalTime`.
-* Understand the modern `java.time` API (which replaced `Calendar` and `Date`).
-
----
-
-**Background**
-
-Java 8 introduced the **`java.time`** package (JSR-310), designed to fix the confusion of older classes like `Date` and `Calendar`.
-
-| Concept                  | Old API            | New API (`java.time`) |
-| ------------------------ | ------------------ | --------------------- |
-| Date only                | `Date`, `Calendar` | `LocalDate`           |
-| Time only                | `Date`, `Calendar` | `LocalTime`           |
-| Date + Time              | `Date`, `Calendar` | `LocalDateTime`       |
-| Format dates             | `SimpleDateFormat` | `DateTimeFormatter`   |
-| Difference between dates | manual math        | `Period` / `Duration` |
+| Concept                         | Class               | Example From Your Snippet                            | Description                                                       |
+| ------------------------------- | ------------------- | ---------------------------------------------------- | ----------------------------------------------------------------- |
+| Representing a date             | `LocalDate`         | `LocalDate.of(2024, 8, 26)`                          | Represents a date (no time zone)                                  |
+| Representing a time             | `LocalTime`         | `LocalTime.now()`                                    | Represents a time (no date)                                       |
+| Representing both date and time | `LocalDateTime`     | `LocalDateTime.now()`                                | Combines both date and time                                       |
+| Formatting date/time            | `DateTimeFormatter` | `DateTimeFormatter.ofPattern("MM-dd-yyyy HH:mm:ss")` | Formats a date/time object into a readable string                 |
+| Calculating differences         | `Period`            | `Period.between(dSchool, LocalDate.now())`           | Finds the difference in years, months, and days between two dates |
 
 
 ---
