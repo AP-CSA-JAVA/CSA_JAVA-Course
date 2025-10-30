@@ -14,7 +14,7 @@
 Java 8 introduced the **`java.time`** package which was designed to fix issues with the older classes: `Date` and `Calendar`.
 
 
-| Topic                                  | Covered by My Calendar Lesson? | Covered by Given `java.time` Code? |
+| Topic                                  | Calendar | `java.time` |
 | -------------------------------------- | ------------------------------ | ---------------------------------- |
 | Creating and reading current date/time | ✅ (Calendar)                   | ✅ (`LocalDateTime.now()`)          |
 | Adding/subtracting time                | ✅ (Calendar.add)               | ✅ (`plusDays`, `plusMonths`, etc.) |
