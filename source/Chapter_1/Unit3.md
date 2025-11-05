@@ -835,8 +835,8 @@ Write a program that will do the following:
 
 ``` 
   temp >= 80:           Go swimming!
-  60 <= temp < 80:      Play tennis!
-  40 <  temp < 60:      Play golf!
+  60 >= temp < 80:      Play tennis!
+  40 >= temp < 60:      Play golf!
   temp <= 40:           Go skiing!
 ``` 
 
@@ -857,6 +857,19 @@ Temperature:
 35
 Go skiing!
 ```
+
+
+### Activity 3.4.3 - Smallest Divisible Number
+
+**Instructions:**
+Write a java program that will determine the smallest number that is evenly divisible by 1,2,3,4,5,6,7,8,9,10.  Use Logical Operators and conditions for this program.
+
+Submit your program code. 
+
+
+---
+
+
 ## 3.4.1 Switch Statements - Oracle 
 
 The switch statement is designed to be simple and fast and is not time-consuming.
