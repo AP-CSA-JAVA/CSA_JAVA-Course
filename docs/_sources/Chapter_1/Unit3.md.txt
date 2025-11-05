@@ -837,7 +837,7 @@ Write a program that will do the following:
   temp >= 80:           Go swimming!
   60 >= temp < 80:      Play tennis!
   40 >= temp < 60:      Play golf!
-  temp <= 40:           Go skiing!
+  temp <= 39.9:           Go skiing!
 ``` 
 
 **Sample Output:**
