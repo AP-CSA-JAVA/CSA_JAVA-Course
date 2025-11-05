@@ -831,13 +831,15 @@ Comment where you made the changes include the date. No submission.
 Write a program that will do the following:
 - choose a random number for the temperature from 10 - 101
 - if the temperature is greater than 95 or less than 20, print “Visit our shops!” 
-- As the Activities Director, it is your job to suggest appropriate activities to your guests based on the weather.  Write conditional `else if` statements that meet the following requirements: 
+- As the Activities Director, it is your job to suggest appropriate activities to your guests based on the weather.
+- Use `else if` statements only
+- Write conditional `else if` statements that meet the following requirements: 
 
 ``` 
   temp >= 80:           Go swimming!
   60 >= temp < 80:      Play tennis!
   40 >= temp < 60:      Play golf!
-  temp <= 39.9:           Go skiing!
+  temp <= 39.9:         Go skiing!
 ``` 
 
 **Sample Output:**
@@ -862,9 +864,9 @@ Go skiing!
 ### Activity 3.4.3 - Smallest Divisible Number
 
 **Instructions:**
-Write a java program that will determine the smallest number that is evenly divisible by 1,2,3,4,5,6,7,8,9, & 10.  Use Logical Operators and conditions for this program.
-
-Submit your program code. 
+- Write a java program that will determine the smallest number that is evenly divisible by 1,2,3,4,5,6,7,8,9, & 10.  Use Logical Operators and conditions for this program.
+- Use `else if` statements to determine if numbers 1,2,3,4,5,6,7,8,9,10 are evenly divisible by the smallest number.
+ - Submit your program code. 
 
 
 ---
