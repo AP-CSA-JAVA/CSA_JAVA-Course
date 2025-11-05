@@ -862,7 +862,7 @@ Go skiing!
 ### Activity 3.4.3 - Smallest Divisible Number
 
 **Instructions:**
-Write a java program that will determine the smallest number that is evenly divisible by 1,2,3,4,5,6,7,8,9,10.  Use Logical Operators and conditions for this program.
+Write a java program that will determine the smallest number that is evenly divisible by 1,2,3,4,5,6,7,8,9, & 10.  Use Logical Operators and conditions for this program.
 
 Submit your program code. 
 
