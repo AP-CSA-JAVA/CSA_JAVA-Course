@@ -2413,6 +2413,7 @@ ________________________________________________________________________________
 
 Give a Mad Lib with five user inputs, create a user-generated story with the correct parts of speech. 
 Your program should allow a user to enter values that change the output of a story. Specifically, it should include:
+- [ ] Main Block Method (See Below)
 - [ ] a class definition header that matches the file name
 - [ ] a main method for the program
 - [ ] the use of camelCase when appropriate
@@ -2424,8 +2425,30 @@ Your program should allow a user to enter values that change the output of a sto
 - [ ] algorithm(s) to parse for sections to include
 	- [ ] various prompts to keep the user on track
 	- [ ] a final print statement to display the completed story
-	
+
 **Penalty:**
 - [ ] Appropriate sentence structure & syntax
 - [ ] Code that causes errors
-	
+
+
+```java
+/*=============================================================================
+ |   Assignment:  Program #:  [Assignment Title]
+ |       Author:  [Your Name ]
+ |      Partner:  [Partner's Name (if any)]
+ |
+ |  Course Name:  [Course Name]
+ |   Instructor:  John Smith
+ |     Due Date:  [Due Date and Time]
+ |
+ |  Description:  [Describe the program's goal, IN DETAIL.]
+ |
+ |     Language:  [ Java version 8]
+ | Ex. Packages:  [List names and sources of all external packages
+ |                required by this program.]
+ |                
+ | Deficiencies:  [If you know of any problems with the code, provide
+ |                details here, otherwise clearly state that you know
+ |                of no unsatisfied requirements and no logic errors.]
+ *===========================================================================*/
+```
