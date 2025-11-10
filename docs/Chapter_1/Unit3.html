@@ -1904,65 +1904,9 @@ check() should only get called if our guess isn&#39;t 100% correct
 <span class="n">It</span><span class="w"> </span><span class="n">was</span><span class="w"> </span><span class="n">Miss</span><span class="w"> </span><span class="n">Scarlett</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Knife</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Kitchen</span>
 </pre></div>
 </div>
-<details><summary>New Java keyWord: switch</summary>
-<p>For the purposes of this program, you can use the jave keyword <code class="docutils literal notranslate"><span class="pre">switch</span></code>.  I discourage you from using it for the AP exam as it is not a part of the AP exam.<br />
-Instead of writing many <code class="docutils literal notranslate"><span class="pre">if..else</span></code> statements, you can use the switch statement.  The switch statement selects one of many code blocks to be executed.  Take a look at the pseudocode below:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">switch</span><span class="p">(</span><span class="n">expression</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="n">x</span><span class="p">:</span>
-<span class="w">    </span><span class="c1">// your code</span>
-<span class="w">    </span><span class="k">break</span><span class="p">;</span>
-<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="n">y</span><span class="p">:</span>
-<span class="w">    </span><span class="c1">// your code</span>
-<span class="w">    </span><span class="k">break</span><span class="p">;</span>
-<span class="w">  </span><span class="k">default</span><span class="p">:</span>
-<span class="w">    </span><span class="c1">// your code</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p>This is how it works:</p>
-<ul class="simple">
-<li><p>The switch expression is evaluated once.</p></li>
-<li><p>The value of the expression is compared with the values of each case.</p></li>
-<li><p>If there is a match, the associated block of code is executed.</p></li>
-<li><p>The break and default keywords are optional.</p>
-<ul>
-<li><p>When Java reaches a <code class="docutils literal notranslate"><span class="pre">break</span></code> keyword, it breaks out of the switch block.</p></li>
-<li><p>The default keyword specifies some code to run if there is no case match.</p></li>
-</ul>
-</li>
-</ul>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">day</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
-<span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">day</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Monday&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="k">break</span><span class="p">;</span>
-<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Tuesday&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="k">break</span><span class="p">;</span>
-<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="mi">3</span><span class="p">:</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Wednesday&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="k">break</span><span class="p">;</span>
-<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="mi">4</span><span class="p">:</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Thursday&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="k">break</span><span class="p">;</span>
-<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="mi">5</span><span class="p">:</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Friday&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="k">break</span><span class="p">;</span>
-<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="mi">6</span><span class="p">:</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Saturday&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="k">break</span><span class="p">;</span>
-<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="mi">7</span><span class="p">:</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Sunday&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="k">break</span><span class="p">;</span>
-<span class="w">    </span><span class="k">default</span><span class="p">:</span>
-<span class="w">    	</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;I don&#39;t even know what day it is!&quot;</span><span class="p">);</span>
-<span class="p">}</span>
-<span class="c1">// Outputs &quot;Thursday&quot; (day 4)</span>
-</pre></div>
-</div>
-</details>
 </section>
 </section>
+<hr class="docutils" />
 <section id="project">
 <h2>3.8 Project<a class="headerlink" href="#project" title="Link to this heading">¶</a></h2>
 <p><strong>Choose Your Own Adventure</strong></p>
@@ -1980,7 +1924,7 @@ This can be done by setting Boolean variables or executing different sections of
 <ul class="simple">
 <li><p>At least three Boolean expressions that change the path in the program</p></li>
 <li><p>Print statements, depending on current and previous choices.</p></li>
-<li><p>At least three nested if/else-if/else clauses</p></li>
+<li><p>At least <strong>three</strong> nested <em><strong>if/else-if/else</strong></em> clauses</p></li>
 </ul>
 <p><strong>You Must Include</strong></p>
 <ul class="simple">
@@ -1997,7 +1941,26 @@ This can be done by setting Boolean variables or executing different sections of
 </ul>
 </li>
 <li><p>If you modify the program, add new additions within your timeline</p></li>
+<li><p>Main Block Method</p></li>
 </ul>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/*=============================================================================</span>
+<span class="cm"> |   Assignment:  Project 3.8 Choose Your Own Adventure</span>
+<span class="cm"> |       Author:  [Your First and Last Name (Your E-mail Address)]</span>
+<span class="cm"> |      </span>
+<span class="cm"> |  Course Name:  AP Computer Science A</span>
+<span class="cm"> |   Instructor:  Mr. Jonathan Virak</span>
+<span class="cm"> |     Due Date:  [Due Date and Time]</span>
+<span class="cm"> |</span>
+<span class="cm"> |  Description:  [Describe the program&#39;s goal, IN DETAIL.]</span>
+<span class="cm"> |</span>
+<span class="cm"> |     Language:  [java]           </span>
+<span class="cm"> |                </span>
+<span class="cm"> | Deficiencies:  [If you know of any problems with the code, provide</span>
+<span class="cm"> |                details here, otherwise clearly state that you know</span>
+<span class="cm"> |                of no unsatisfied requirements and no logic errors.]</span>
+<span class="cm"> *===========================================================================*/</span>
+</pre></div>
+</div>
 <p><strong>Deliverables</strong>
 Document and collect the following items:</p>
 <ul class="simple">
@@ -2008,19 +1971,13 @@ Document and collect the following items:</p>
 <li><p>timeline chart</p></li>
 <li><p>Quality screenshots of your program’s output</p>
 <ul>
-<li><p>To convey your program’s functionality</p></li>
-<li><p>Use more than one screenshot and explain what each one illustrates</p></li>
-</ul>
-</li>
-<li><p>A description of two code segments related to the program requirements</p>
-<ul>
-<li><p>Be sure your description identifies the name of the variables being processed</p></li>
+<li><p>To convey your program’s functionality use more than one screenshot and explain what each one illustrates</p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>Your completed code submitted as a replit</p></li>
-<li><p>Your documentation submitted digitally as one document</p></li>
+<li><p>Your completed code submitted as a .java file(s)</p></li>
+<li><p>Your documentation submitted digitally as one pdf document</p></li>
 </ul>
 </section>
 </section>
