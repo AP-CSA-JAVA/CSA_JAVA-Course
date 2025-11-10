@@ -1204,9 +1204,8 @@ You are not allowed to date my grandchild!
 
 ### Activity 3.5.3 guessChecker Pt 3
 
-This assignment will be categorized as a **Project**.
 
-**Directions:** Update GuessChecker to use compound Boolean statements.  Give the user at minimum three opportunities to guess the correct answer and print out how many of the remaining guesses they have.  You will submit your completed program with comments via replit.  Please share your link on Canvas.
+**Directions:** Update GuessChecker to use compound Boolean statements.  Give the user at minimum three opportunities to guess the correct answer and print out how many of the remaining guesses they have.  You will submit your completed program as a java file comments on Canvas.  Include tests to validate your program.
 
 ```java
 9782
