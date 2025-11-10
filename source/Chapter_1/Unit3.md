@@ -1506,64 +1506,8 @@ Congratulations!
 It was Miss Scarlett with the Knife in the Kitchen
 ```
 
-<details><summary>New Java keyWord: switch</summary>
 
-For the purposes of this program, you can use the jave keyword `switch`.  I discourage you from using it for the AP exam as it is not a part of the AP exam.  
-Instead of writing many `if..else` statements, you can use the switch statement.  The switch statement selects one of many code blocks to be executed.  Take a look at the pseudocode below:
-
-```java
-switch(expression) {
-  case x:
-    // your code
-    break;
-  case y:
-    // your code
-    break;
-  default:
-    // your code
-}
-```
-This is how it works:
-
-- The switch expression is evaluated once.
-- The value of the expression is compared with the values of each case.
-- If there is a match, the associated block of code is executed.
-- The break and default keywords are optional.
-	- When Java reaches a `break` keyword, it breaks out of the switch block.
-	- The default keyword specifies some code to run if there is no case match.
-
-```java
-int day = 4;
-switch (day) {
-  case 1:
-    System.out.println("Monday");
-    break;
-  case 2:
-    System.out.println("Tuesday");
-    break;
-  case 3:
-    System.out.println("Wednesday");
-    break;
-  case 4:
-    System.out.println("Thursday");
-    break;
-  case 5:
-    System.out.println("Friday");
-    break;
-  case 6:
-    System.out.println("Saturday");
-    break;
-  case 7:
-    System.out.println("Sunday");
-    break;
-    default:
-    	System.out.println("I don't even know what day it is!");
-}
-// Outputs "Thursday" (day 4)
-```
-	
-</details>
-
+---
 
 
 ## 3.8 Project
@@ -1585,7 +1529,7 @@ This can be done by setting Boolean variables or executing different sections of
 Looking back at previous programs and the requirements stated above, you know you will need:
 - At least three Boolean expressions that change the path in the program 
 - Print statements, depending on current and previous choices. 
-- At least three nested if/else-if/else clauses
+- At least **three** nested ***if/else-if/else*** clauses
 
 **You Must Include**
 - Flowchart of your program
@@ -1595,6 +1539,26 @@ Looking back at previous programs and the requirements stated above, you know yo
   - Must be digital
   - Must be posted and shared
 - If you modify the program, add new additions within your timeline
+- Main Block Method
+
+```java
+/*=============================================================================
+ |   Assignment:  Project 3.8 Choose Your Own Adventure
+ |       Author:  [Your First and Last Name (Your E-mail Address)]
+ |      
+ |  Course Name:  AP Computer Science A
+ |   Instructor:  Mr. Jonathan Virak
+ |     Due Date:  [Due Date and Time]
+ |
+ |  Description:  [Describe the program's goal, IN DETAIL.]
+ |
+ |     Language:  [java]           
+ |                
+ | Deficiencies:  [If you know of any problems with the code, provide
+ |                details here, otherwise clearly state that you know
+ |                of no unsatisfied requirements and no logic errors.]
+ *===========================================================================*/
+```
 
 **Deliverables**
 Document and collect the following items:
@@ -1603,10 +1567,7 @@ Document and collect the following items:
 	- flowchart
 	- timeline chart
 	- Quality screenshots of your program’s output 
-		- To convey your program’s functionality
-		- Use more than one screenshot and explain what each one illustrates
-	- A description of two code segments related to the program requirements 
-		- Be sure your description identifies the name of the variables being processed
-- Your completed code submitted as a replit
-- Your documentation submitted digitally as one document
+		- To convey your program’s functionality use more than one screenshot and explain what each one illustrates
+- Your completed code submitted as a .java file(s)
+- Your documentation submitted digitally as one pdf document
 
