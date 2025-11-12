@@ -575,26 +575,21 @@ Number of hits:2
 **NOTE** You will be building this program and making changes to it as we navigate the unit.  You will submit 1 program at the end of **Unit 3.5 Compound Boolean Expressions**
 
 
+---
+
+
 ### Activity 3.2.2 - Sevens Game
 
-**Sevens**
-
-Got it — you don’t want the game changed, just clarified so your students can better understand **how to play** as written. Here’s your same content with clearer explanations, simpler phrasing, and no rule modifications:
+The number 7 is often considered lucky — but not in this game!  Here, 7 is the number you want to avoid. The goal is to earn the **highest total score** from dice that **don’t** add up to seven.
 
 ---
 
-## **Sevens**
-
-The number 7 is often considered lucky — but not in this game!
-Here, 7 is the number you want to avoid. The goal is to earn the **highest total score** from dice that **don’t** add up to seven.
-
----
-
-### **What You’ll Need**
+**What You’ll Need**
 
 * 2 Players
 * 6 Dice
 
+---
 
 **How to Play**
 
@@ -636,9 +631,7 @@ Here, 7 is the number you want to avoid. The goal is to earn the **highest total
 
 ---
 
-**Programming Instructions (Java Implementation)**
-
-Your program should include:
+**Your program should include:**
 
 * Variables for **Player 1** and **Player 2**
 * User input for the **number of rounds** (integer, up to 10)
