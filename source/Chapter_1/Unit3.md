@@ -1460,7 +1460,7 @@ Take a look at the program above.  Looking at the program, you may have thought 
  |       Author:  [Your First and Last Name (Your E-mail Address)]
  |      
  |  Course Name:  AP Computer Science A
- |   Instructor:  Mr. John Smith
+ |   Instructor:  John Smith
  |     Due Date:  [Due Date and Time]
  |
  |  Description:  [Describe the program's goal, IN DETAIL.]
@@ -1527,9 +1527,9 @@ It was Miss Scarlett with the Knife in the Kitchen
 ---
 
 
-## ~~3.8 Project~~
+## 3.8 Project
 
-~~**Choose Your Own Adventure**~~
+**Choose Your Own Adventure**
 
 -  Apply all you’ve learned about conditionals to create a “Choose Your Own Adventure” game.
 -  Apply the development process to create a project.
@@ -1564,7 +1564,7 @@ Looking back at previous programs and the requirements stated above, you know yo
  |       Author:  [Your First and Last Name (Your E-mail Address)]
  |      
  |  Course Name:  AP Computer Science A
- |   Instructor:  Mr. John Smith
+ |   Instructor:  John Smith
  |     Due Date:  [Due Date and Time]
  |
  |  Description:  [Describe the program's goal, IN DETAIL.]
