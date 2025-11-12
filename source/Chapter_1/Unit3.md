@@ -1450,11 +1450,28 @@ Take a look at the program above.  Looking at the program, you may have thought 
 
 **Note:** Two object references are considered aliases when they both reference the same object. Object references can be compared using == and != to identify aliases. 
 
-### Activity 3.7.1 - Clue
+### Project 3.7.1 - Clue
 
 [137Clue.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/10015355/137Clue.zip)
 
-
+```java
+/*=============================================================================
+ |   Assignment:  Project 3.7.1 - Clue
+ |       Author:  [Your First and Last Name (Your E-mail Address)]
+ |      
+ |  Course Name:  AP Computer Science A
+ |   Instructor:  Mr. John Smith
+ |     Due Date:  [Due Date and Time]
+ |
+ |  Description:  [Describe the program's goal, IN DETAIL.]
+ |
+ |     Language:  [java]           
+ |                
+ | Deficiencies:  [If you know of any problems with the code, provide
+ |                details here, otherwise clearly state that you know
+ |                of no unsatisfied requirements and no logic errors.]
+ *===========================================================================*/
+```
 **Directions**  Review the current program as it is currently written. Look at "what works" and "what needs work". Make the necessary changes to the program so it produces the intended outcome (see sample below).
 
 This program simulates Clue.
@@ -1465,7 +1482,7 @@ Here is what works:
 - asks user for final guess
 
 
-Here is what needs work:
+Here is what needs to work:
 
     we want to see if our guess is the same as the solution, but something is off with equals()
     check() should only get called if our guess isn't 100% correct
@@ -1485,16 +1502,17 @@ Extra:
 ```java
 Welcome to Clue! Choose one from each category.
 
-Suspect     	Weapon      	Room
-Miss Scarlett   Candlestick     Kitchen
-Mr. Green   	Knife       	Ballroom
-Colonel Mustard Lead Pipe   	Conservatory
-Professor Plum  Revolver    	Billiard Room
-Mrs. Peacock    Rope        	Library
-Mrs. White  	Wrench      	Study
-                		Hall
-                		Lounge
-                		Dining Room
+Suspect     		Weapon      	Room
+Miss Scarlett   	Candlestick     Kitchen
+Mr. Green   		Knife       	Ballroom
+Colonel Mustard 	Lead Pipe   	Conservatory
+Professor Plum  	Revolver    	Billiard Room
+Mrs. Peacock    	Rope        	Library
+Mrs. White  		Wrench      	Study
+                					Hall
+                					Lounge
+                					Dining Room
+
 
 Make you final accusation, separated by the enter key:
 Miss Scarlett
@@ -1509,9 +1527,9 @@ It was Miss Scarlett with the Knife in the Kitchen
 ---
 
 
-## 3.8 Project
+## ~~3.8 Project~~
 
-**Choose Your Own Adventure**
+~~**Choose Your Own Adventure**~~
 
 -  Apply all you’ve learned about conditionals to create a “Choose Your Own Adventure” game.
 -  Apply the development process to create a project.
@@ -1546,7 +1564,7 @@ Looking back at previous programs and the requirements stated above, you know yo
  |       Author:  [Your First and Last Name (Your E-mail Address)]
  |      
  |  Course Name:  AP Computer Science A
- |   Instructor:  Mr. Jonathan Virak
+ |   Instructor:  Mr. John Smith
  |     Due Date:  [Due Date and Time]
  |
  |  Description:  [Describe the program's goal, IN DETAIL.]
