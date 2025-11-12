@@ -951,28 +951,140 @@ Write a program that will take 2 doubles from the user.  Use Boolean Expression 
 <section id="activity-3-2-2-sevens-game">
 <h3>Activity 3.2.2 - Sevens Game<a class="headerlink" href="#activity-3-2-2-sevens-game" title="Link to this heading">¶</a></h3>
 <p><strong>Sevens</strong></p>
-<p>The number 7 is widely considered a lucky number, but in this game, you want to avoid it at all costs! Will you take the risk to rake in more points?</p>
-<p>What You’ll Need:</p>
+<p>Got it — you don’t want the game changed, just clarified so your students can better understand <strong>how to play</strong> as written. Here’s your same content with clearer explanations, simpler phrasing, and no rule modifications:</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="sevens">
+<h2><strong>Sevens</strong><a class="headerlink" href="#sevens" title="Link to this heading">¶</a></h2>
+<p>The number 7 is often considered lucky — but not in this game!
+Here, 7 is the number you want to avoid. The goal is to earn the <strong>highest total score</strong> from dice that <strong>don’t</strong> add up to seven.</p>
+<hr class="docutils" />
+<section id="what-youll-need">
+<h3><strong>What You’ll Need</strong><a class="headerlink" href="#what-youll-need" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>2 Players</p></li>
 <li><p>6 Dice</p></li>
 </ul>
 <p><strong>How to Play</strong></p>
-<p>Agree upon how many rounds you’ll play and who will begin the game. The first player will then roll all six dice and remove any combination of numbers that add up to seven. The goal is to score the highest possible total by adding the numbers shown on the remaining dice.</p>
-<p>The first player will have the option to roll up to three times during their turn. Once they have removed any sets of dice that add up to seven (this can include one or more sets), those dice are set aside and not used again for their turn. Add the numbers on the remaining dice to calculate the score. If the player is not happy with their score, they may roll again. However, any combination of dice that total seven must be removed. They may then choose to accept their score or take the risk of rolling again to increase points. Keep in mind that the second player may only throw as many times as the first player. For example, if the first player only rolled twice, then the second player can not roll more than two times.</p>
-<p>The game ends once all the rounds have been completed, and the player with the highest score will be the winner!</p>
-<p><strong>Instructions</strong>
-Write a program that includes the following:</p>
+<ol class="arabic simple">
+<li><p><strong>Decide how many rounds to play</strong> (no more than 10) and choose who goes first.</p></li>
+<li><p><strong>Player 1 rolls all six dice.</strong></p>
 <ul class="simple">
-<li><p>variables for player 1 and player 2</p></li>
-<li><p>input from the user to include a user defined number of <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">rounds</span></code> (not to exceed 10 rounds)</p></li>
-<li><p>roll six dice and have the user be able to remove all but 1 die</p></li>
-<li><p>add re-rolls where the first player determines the # of rolls the second player can roll (max 3 re-rolls)</p></li>
-<li><p>total remaining dice and add them to player 1 or player 2, respectively</p></li>
-<li><p>declare a winner after <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">rounds</span></code></p></li>
+<li><p>After the roll, look for <strong>any pairs of dice</strong> whose numbers add up to <strong>7</strong> (for example: 1 + 6, 2 + 5, or 3 + 4).</p></li>
+<li><p>Each pair that adds to 7 must be <strong>removed</strong> from play for that turn. Those dice are “set aside” and not rolled again.</p></li>
 </ul>
+</li>
+<li><p><strong>Scoring after the roll:</strong></p>
+<ul class="simple">
+<li><p>Add up the numbers shown on the <strong>remaining dice</strong> (the ones not removed).</p></li>
+<li><p>This total is the player’s <strong>current score</strong> for that roll.</p></li>
+</ul>
+</li>
+<li><p><strong>Rolling again (risk and reward):</strong></p>
+<ul class="simple">
+<li><p>Player 1 may roll up to <strong>three times total</strong> during their turn.</p></li>
+<li><p>After each roll, any new pairs that total 7 must also be removed and set aside.</p></li>
+<li><p>After each roll, the player may either <strong>keep</strong> their current score or <strong>risk another roll</strong> to try for a higher one.</p></li>
+<li><p>Once the player decides to stop, their final total for that round is recorded.</p></li>
+</ul>
+</li>
+<li><p><strong>Player 2’s turn:</strong></p>
+<ul class="simple">
+<li><p>Player 2 follows the same steps.</p></li>
+<li><p>However, Player 2 may only roll <strong>as many times as Player 1 did.</strong></p>
+<ul>
+<li><p>Example: if Player 1 rolled twice, Player 2 may roll up to two times (not three).</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>End of the round:</strong></p>
+<ul class="simple">
+<li><p>Both players’ scores are recorded.</p></li>
+<li><p>Continue playing until the chosen number of rounds is complete.</p></li>
+</ul>
+</li>
+<li><p><strong>Winning the game:</strong></p>
+<ul class="simple">
+<li><p>After all rounds, add up each player’s total score.</p></li>
+<li><p>The player with the <strong>highest total</strong> wins!</p></li>
+</ul>
+</li>
+</ol>
+<hr class="docutils" />
+<p><strong>Programming Instructions (Java Implementation)</strong></p>
+<p>Your program should include:</p>
+<ul class="simple">
+<li><p>Variables for <strong>Player 1</strong> and <strong>Player 2</strong></p></li>
+<li><p>User input for the <strong>number of rounds</strong> (integer, up to 10)</p></li>
+<li><p>Rolling <strong>six dice</strong>, with the option for the user to <strong>remove all but one die</strong></p></li>
+<li><p>Logic for <strong>re-rolls</strong>, where Player 1 determines how many times Player 2 may re-roll (maximum of 3 total rolls)</p></li>
+<li><p>Calculation of the total from the remaining dice each round, and adding it to each player’s cumulative score</p></li>
+<li><p>A <strong>winner announcement</strong> after all rounds have been played</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>Example Round</strong></p>
+<p><strong>Players:</strong></p>
+<ul class="simple">
+<li><p>Player 1: Alex</p></li>
+<li><p>Player 2: Jamie</p></li>
+</ul>
+<p><strong>Dice:</strong> 6 total
+<strong>Number of Rounds:</strong> 1 (for this example)
+<strong>Maximum Rolls per Turn:</strong> 3</p>
+<hr class="docutils" />
+<p><strong>Player 1’s Turn</strong></p>
+<p><strong>First Roll:</strong></p>
+<p>Alex rolls: 2, 3, 4, 5, 1, 6
+Removed dice: (1, 6), (2, 5), (3, 4)
+Remaining dice: 0</p>
+<p>Alex’s total = <strong>0</strong></p>
+<p>Alex decides to <strong>roll again</strong> because the score is 0.
+(Since all dice were removed, Alex rolls all six dice again.)</p>
+<hr class="docutils" />
+<p><strong>Second Roll:</strong></p>
+<p>Alex rolls: 2, 2, 3, 5, 4, 1
+Removed dice: (2, 5), (3, 4)
+Remaining dice: 2, 1</p>
+<p>Alex’s total = <strong>3</strong></p>
+<p>Alex <strong>stops</strong> here and scores <strong>3 points</strong> for this round.
+<strong>NOTE:</strong> Alex rolled <strong>twice</strong>, so Player 2, Jamie, can roll <strong>up to twice</strong> as well.</p>
+<hr class="docutils" />
+<p><strong>Player 2’s Turn</strong></p>
+<p><strong>First Roll:</strong></p>
+<p>Jamie rolls: 6, 6, 3, 3, 2, 5
+Removed dice: (2, 5)
+Remaining dice: 6, 6, 3, 3</p>
+<p>Jamie’s total = <strong>18</strong></p>
+<hr class="docutils" />
+<p><strong>End of Round</strong></p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Player</p></th>
+<th class="head"><p>Roll Attempts</p></th>
+<th class="head"><p>Round Score</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Alex (Player 1)</p></td>
+<td><p>2</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p>Jamie (Player 2)</p></td>
+<td><p>1</p></td>
+<td><p>18</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Jamie wins this round.</p>
+<p><em>If the game had more rounds, both players would keep adding to their total scores each round until all rounds are complete.</em></p>
+<p>Submit your <code class="docutils literal notranslate"><span class="pre">.java</span></code> file(s) and a test case (<code class="docutils literal notranslate"><span class="pre">.png</span></code>, <code class="docutils literal notranslate"><span class="pre">.txt</span></code>, or <code class="docutils literal notranslate"><span class="pre">.pdf</span></code>).</p>
 </section>
 </section>
+<hr class="docutils" />
 <section id="if-else-statements">
 <h2>3.3 If/ Else Statements<a class="headerlink" href="#if-else-statements" title="Link to this heading">¶</a></h2>
 <p><strong>Goals</strong></p>
@@ -2066,6 +2178,10 @@ Document and collect the following items:</p>
 <li><a class="reference internal" href="#if-statements-and-control-flow">3.2 If Statements and Control Flow</a><ul>
 <li><a class="reference internal" href="#activity-3-2-1-guesschecker-pt-1">Activity 3.2.1 guessChecker Pt 1</a></li>
 <li><a class="reference internal" href="#activity-3-2-2-sevens-game">Activity 3.2.2 - Sevens Game</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#sevens"><strong>Sevens</strong></a><ul>
+<li><a class="reference internal" href="#what-youll-need"><strong>What You’ll Need</strong></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#if-else-statements">3.3 If/ Else Statements</a><ul>
