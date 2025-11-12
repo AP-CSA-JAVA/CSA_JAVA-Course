@@ -1854,9 +1854,27 @@ Body Mass Index (BMI) is a person’s weight measured in kilograms or pounds div
 <p>Take a look at the program above.  Looking at the program, you may have thought that the output of “shape1” would display “Triangle”.  Look carefully at lines 11 and 12. When <code class="docutils literal notranslate"><span class="pre">shape3</span></code> is set to <code class="docutils literal notranslate"><span class="pre">shape1</span></code>, <code class="docutils literal notranslate"><span class="pre">shape3</span></code> points to the same address in memory as <code class="docutils literal notranslate"><span class="pre">shape1</span></code>. Any changes to <code class="docutils literal notranslate"><span class="pre">shape1</span></code> or <code class="docutils literal notranslate"><span class="pre">shape3</span></code> will change the contents of the memory, thereby changing the values of both variables. In Java, this is known as aliasing.</p>
 <p><strong>Note:</strong> Two object references are considered aliases when they both reference the same object. Object references can be compared using == and != to identify aliases.</p>
 </section>
-<section id="activity-3-7-1-clue">
-<h3>Activity 3.7.1 - Clue<a class="headerlink" href="#activity-3-7-1-clue" title="Link to this heading">¶</a></h3>
+<section id="project-3-7-1-clue">
+<h3>Project 3.7.1 - Clue<a class="headerlink" href="#project-3-7-1-clue" title="Link to this heading">¶</a></h3>
 <p><a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/10015355/137Clue.zip">137Clue.zip</a></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/*=============================================================================</span>
+<span class="cm"> |   Assignment:  Project 3.7.1 - Clue</span>
+<span class="cm"> |       Author:  [Your First and Last Name (Your E-mail Address)]</span>
+<span class="cm"> |      </span>
+<span class="cm"> |  Course Name:  AP Computer Science A</span>
+<span class="cm"> |   Instructor:  Mr. John Smith</span>
+<span class="cm"> |     Due Date:  [Due Date and Time]</span>
+<span class="cm"> |</span>
+<span class="cm"> |  Description:  [Describe the program&#39;s goal, IN DETAIL.]</span>
+<span class="cm"> |</span>
+<span class="cm"> |     Language:  [java]           </span>
+<span class="cm"> |                </span>
+<span class="cm"> | Deficiencies:  [If you know of any problems with the code, provide</span>
+<span class="cm"> |                details here, otherwise clearly state that you know</span>
+<span class="cm"> |                of no unsatisfied requirements and no logic errors.]</span>
+<span class="cm"> *===========================================================================*/</span>
+</pre></div>
+</div>
 <p><strong>Directions</strong>  Review the current program as it is currently written. Look at “what works” and “what needs work”. Make the necessary changes to the program so it produces the intended outcome (see sample below).</p>
 <p>This program simulates Clue.</p>
 <p>Here is what works:</p>
@@ -1865,7 +1883,7 @@ Body Mass Index (BMI) is a person’s weight measured in kilograms or pounds div
 <li><p>prints out choices for the user</p></li>
 <li><p>asks user for final guess</p></li>
 </ul>
-<p>Here is what needs work:</p>
+<p>Here is what needs to work:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>we want to see if our guess is the same as the solution, but something is off with equals()
 check() should only get called if our guess isn&#39;t 100% correct
 
@@ -1883,16 +1901,17 @@ check() should only get called if our guess isn&#39;t 100% correct
 <p><strong>Sample Output:</strong></p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Welcome</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">Clue</span><span class="o">!</span><span class="w"> </span><span class="n">Choose</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">category</span><span class="p">.</span>
 
-<span class="n">Suspect</span><span class="w">     	</span><span class="n">Weapon</span><span class="w">      	</span><span class="n">Room</span>
-<span class="n">Miss</span><span class="w"> </span><span class="n">Scarlett</span><span class="w">   </span><span class="n">Candlestick</span><span class="w">     </span><span class="n">Kitchen</span>
-<span class="n">Mr</span><span class="p">.</span><span class="w"> </span><span class="n">Green</span><span class="w">   	</span><span class="n">Knife</span><span class="w">       	</span><span class="n">Ballroom</span>
-<span class="n">Colonel</span><span class="w"> </span><span class="n">Mustard</span><span class="w"> </span><span class="n">Lead</span><span class="w"> </span><span class="n">Pipe</span><span class="w">   	</span><span class="n">Conservatory</span>
-<span class="n">Professor</span><span class="w"> </span><span class="n">Plum</span><span class="w">  </span><span class="n">Revolver</span><span class="w">    	</span><span class="n">Billiard</span><span class="w"> </span><span class="n">Room</span>
-<span class="n">Mrs</span><span class="p">.</span><span class="w"> </span><span class="n">Peacock</span><span class="w">    </span><span class="n">Rope</span><span class="w">        	</span><span class="n">Library</span>
-<span class="n">Mrs</span><span class="p">.</span><span class="w"> </span><span class="n">White</span><span class="w">  	</span><span class="n">Wrench</span><span class="w">      	</span><span class="n">Study</span>
-<span class="w">                		</span><span class="n">Hall</span>
-<span class="w">                		</span><span class="n">Lounge</span>
-<span class="w">                		</span><span class="n">Dining</span><span class="w"> </span><span class="n">Room</span>
+<span class="n">Suspect</span><span class="w">     		</span><span class="n">Weapon</span><span class="w">      	</span><span class="n">Room</span>
+<span class="n">Miss</span><span class="w"> </span><span class="n">Scarlett</span><span class="w">   	</span><span class="n">Candlestick</span><span class="w">     </span><span class="n">Kitchen</span>
+<span class="n">Mr</span><span class="p">.</span><span class="w"> </span><span class="n">Green</span><span class="w">   		</span><span class="n">Knife</span><span class="w">       	</span><span class="n">Ballroom</span>
+<span class="n">Colonel</span><span class="w"> </span><span class="n">Mustard</span><span class="w"> 	</span><span class="n">Lead</span><span class="w"> </span><span class="n">Pipe</span><span class="w">   	</span><span class="n">Conservatory</span>
+<span class="n">Professor</span><span class="w"> </span><span class="n">Plum</span><span class="w">  	</span><span class="n">Revolver</span><span class="w">    	</span><span class="n">Billiard</span><span class="w"> </span><span class="n">Room</span>
+<span class="n">Mrs</span><span class="p">.</span><span class="w"> </span><span class="n">Peacock</span><span class="w">    	</span><span class="n">Rope</span><span class="w">        	</span><span class="n">Library</span>
+<span class="n">Mrs</span><span class="p">.</span><span class="w"> </span><span class="n">White</span><span class="w">  		</span><span class="n">Wrench</span><span class="w">      	</span><span class="n">Study</span>
+<span class="w">                					</span><span class="n">Hall</span>
+<span class="w">                					</span><span class="n">Lounge</span>
+<span class="w">                					</span><span class="n">Dining</span><span class="w"> </span><span class="n">Room</span>
+
 
 <span class="n">Make</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">accusation</span><span class="p">,</span><span class="w"> </span><span class="n">separated</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">enter</span><span class="w"> </span><span class="n">key</span><span class="p">:</span>
 <span class="n">Miss</span><span class="w"> </span><span class="n">Scarlett</span>
@@ -1907,8 +1926,8 @@ check() should only get called if our guess isn&#39;t 100% correct
 </section>
 <hr class="docutils" />
 <section id="project">
-<h2>3.8 Project<a class="headerlink" href="#project" title="Link to this heading">¶</a></h2>
-<p><strong>Choose Your Own Adventure</strong></p>
+<h2>~~3.8 Project~~<a class="headerlink" href="#project" title="Link to this heading">¶</a></h2>
+<p>~~<strong>Choose Your Own Adventure</strong>~~</p>
 <ul class="simple">
 <li><p>Apply all you’ve learned about conditionals to create a “Choose Your Own Adventure” game.</p></li>
 <li><p>Apply the development process to create a project.</p></li>
@@ -1947,7 +1966,7 @@ This can be done by setting Boolean variables or executing different sections of
 <span class="cm"> |       Author:  [Your First and Last Name (Your E-mail Address)]</span>
 <span class="cm"> |      </span>
 <span class="cm"> |  Course Name:  AP Computer Science A</span>
-<span class="cm"> |   Instructor:  Mr. Jonathan Virak</span>
+<span class="cm"> |   Instructor:  Mr. John Smith</span>
 <span class="cm"> |     Due Date:  [Due Date and Time]</span>
 <span class="cm"> |</span>
 <span class="cm"> |  Description:  [Describe the program&#39;s goal, IN DETAIL.]</span>
@@ -2077,10 +2096,10 @@ Document and collect the following items:</p>
 </li>
 <li><a class="reference internal" href="#comparing-objects">3.7 Comparing Objects</a><ul>
 <li><a class="reference internal" href="#equals-method">.equals() Method</a></li>
-<li><a class="reference internal" href="#activity-3-7-1-clue">Activity 3.7.1 - Clue</a></li>
+<li><a class="reference internal" href="#project-3-7-1-clue">Project 3.7.1 - Clue</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#project">3.8 Project</a></li>
+<li><a class="reference internal" href="#project">~~3.8 Project~~</a></li>
 </ul>
 </li>
 </ul>
