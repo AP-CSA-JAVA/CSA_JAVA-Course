@@ -1509,9 +1509,9 @@ Colonel Mustard 	Lead Pipe   	Conservatory
 Professor Plum  	Revolver    	Billiard Room
 Mrs. Peacock    	Rope        	Library
 Mrs. White  		Wrench      	Study
-                					Hall
-                					Lounge
-                					Dining Room
+									Hall
+									Lounge
+									Dining Room
 
 
 Make you final accusation, separated by the enter key:
