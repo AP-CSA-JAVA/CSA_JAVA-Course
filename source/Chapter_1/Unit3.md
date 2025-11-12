@@ -579,29 +579,149 @@ Number of hits:2
 
 **Sevens**
 
-The number 7 is widely considered a lucky number, but in this game, you want to avoid it at all costs! Will you take the risk to rake in more points?
+Got it — you don’t want the game changed, just clarified so your students can better understand **how to play** as written. Here’s your same content with clearer explanations, simpler phrasing, and no rule modifications:
 
-What You’ll Need:
-- 2 Players
-- 6 Dice
+---
 
-**How to Play** 
+## **Sevens**
 
-Agree upon how many rounds you’ll play and who will begin the game. The first player will then roll all six dice and remove any combination of numbers that add up to seven. The goal is to score the highest possible total by adding the numbers shown on the remaining dice.
+The number 7 is often considered lucky — but not in this game!
+Here, 7 is the number you want to avoid. The goal is to earn the **highest total score** from dice that **don’t** add up to seven.
 
-The first player will have the option to roll up to three times during their turn. Once they have removed any sets of dice that add up to seven (this can include one or more sets), those dice are set aside and not used again for their turn. Add the numbers on the remaining dice to calculate the score. If the player is not happy with their score, they may roll again. However, any combination of dice that total seven must be removed. They may then choose to accept their score or take the risk of rolling again to increase points. Keep in mind that the second player may only throw as many times as the first player. For example, if the first player only rolled twice, then the second player can not roll more than two times.
+---
 
-The game ends once all the rounds have been completed, and the player with the highest score will be the winner!
+### **What You’ll Need**
 
-**Instructions**
-Write a program that includes the following:
-- variables for player 1 and player 2
-- input from the user to include a user defined number of `int rounds` (not to exceed 10 rounds)
-- roll six dice and have the user be able to remove all but 1 die
-- add re-rolls where the first player determines the # of rolls the second player can roll (max 3 re-rolls)
-- total remaining dice and add them to player 1 or player 2, respectively
-- declare a winner after `int rounds`
+* 2 Players
+* 6 Dice
 
+
+**How to Play**
+
+1. **Decide how many rounds to play** (no more than 10) and choose who goes first.
+
+2. **Player 1 rolls all six dice.**
+
+   * After the roll, look for **any pairs of dice** whose numbers add up to **7** (for example: 1 + 6, 2 + 5, or 3 + 4).
+   * Each pair that adds to 7 must be **removed** from play for that turn. Those dice are “set aside” and not rolled again.
+
+3. **Scoring after the roll:**
+
+   * Add up the numbers shown on the **remaining dice** (the ones not removed).
+   * This total is the player’s **current score** for that roll.
+
+4. **Rolling again (risk and reward):**
+
+   * Player 1 may roll up to **three times total** during their turn.
+   * After each roll, any new pairs that total 7 must also be removed and set aside.
+   * After each roll, the player may either **keep** their current score or **risk another roll** to try for a higher one.
+   * Once the player decides to stop, their final total for that round is recorded.
+
+5. **Player 2’s turn:**
+
+   * Player 2 follows the same steps.
+   * However, Player 2 may only roll **as many times as Player 1 did.**
+
+     * Example: if Player 1 rolled twice, Player 2 may roll up to two times (not three).
+
+6. **End of the round:**
+
+   * Both players’ scores are recorded.
+   * Continue playing until the chosen number of rounds is complete.
+
+7. **Winning the game:**
+
+   * After all rounds, add up each player’s total score.
+   * The player with the **highest total** wins!
+
+---
+
+**Programming Instructions (Java Implementation)**
+
+Your program should include:
+
+* Variables for **Player 1** and **Player 2**
+* User input for the **number of rounds** (integer, up to 10)
+* Rolling **six dice**, with the option for the user to **remove all but one die**
+* Logic for **re-rolls**, where Player 1 determines how many times Player 2 may re-roll (maximum of 3 total rolls)
+* Calculation of the total from the remaining dice each round, and adding it to each player’s cumulative score
+* A **winner announcement** after all rounds have been played
+
+
+---
+
+
+**Example Round**
+
+**Players:**
+
+* Player 1: Alex
+* Player 2: Jamie
+
+**Dice:** 6 total
+**Number of Rounds:** 1 (for this example)
+**Maximum Rolls per Turn:** 3
+
+---
+
+**Player 1’s Turn**
+
+**First Roll:**
+
+Alex rolls: 2, 3, 4, 5, 1, 6
+Removed dice: (1, 6), (2, 5), (3, 4)
+Remaining dice: 0
+
+Alex's total = **0**
+
+Alex decides to **roll again** because the score is 0.
+(Since all dice were removed, Alex rolls all six dice again.)
+
+---
+
+**Second Roll:**
+
+Alex rolls: 2, 2, 3, 5, 4, 1
+Removed dice: (2, 5), (3, 4) 
+Remaining dice: 2, 1
+
+Alex's total = **3**
+
+Alex **stops** here and scores **3 points** for this round.
+**NOTE:** Alex rolled **twice**, so Player 2, Jamie, can roll **up to twice** as well.
+
+---
+
+**Player 2’s Turn**
+
+**First Roll:**
+
+Jamie rolls: 6, 6, 3, 3, 2, 5
+Removed dice: (2, 5)
+Remaining dice: 6, 6, 3, 3
+
+Jamie’s total = **18**
+
+
+---
+
+
+**End of Round**
+
+| Player           | Roll Attempts | Round Score |
+| ---------------- | ------------- | ----------- |
+| Alex (Player 1)  | 2             | 3           |
+| Jamie (Player 2) | 1             | 18          |
+
+Jamie wins this round.
+
+*If the game had more rounds, both players would keep adding to their total scores each round until all rounds are complete.*
+
+
+Submit your `.java` file(s) and a test case (`.png`, `.txt`, or `.pdf`).
+
+
+---
 
 
 ## 3.3 If/ Else Statements
