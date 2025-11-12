@@ -1502,13 +1502,13 @@ Extra:
 ```java
 Welcome to Clue! Choose one from each category.
 
-Suspect     		Weapon      	Room
-Miss Scarlett   	Candlestick     Kitchen
-Mr. Green   		Knife       	Ballroom
-Colonel Mustard 	Lead Pipe   	Conservatory
-Professor Plum  	Revolver    	Billiard Room
-Mrs. Peacock    	Rope        	Library
-Mrs. White  		Wrench      	Study
+Suspect				Weapon			Room
+Miss Scarlett		Candlestick		Kitchen
+Mr. Green			Knife			Ballroom
+Colonel Mustard		Lead Pipe		Conservatory
+Professor Plum		Revolver		Billiard Room
+Mrs. Peacock		Rope			Library
+Mrs. White			Wrench			Study
 									Hall
 									Lounge
 									Dining Room
