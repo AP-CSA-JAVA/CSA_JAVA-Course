@@ -72,7 +72,7 @@ Each student will be responsible for taking, organizing, and maintaining Unit no
 
 - [ ] Before school – 7:30 am – 8:30 am - *please contact me prior to the date you need assistance as I may be meeting with another student or have a meeting*
 - [ ] After school – Tuesday – Thursday: 3:45 pm – 4:15 pm
-- [ ] the **DEN** Peer Tutoring (Monday - Friday/ before and after school)
+- [ ] the Peer Tutoring (Monday - Friday/ before and after school)
   
 ---------------------------------------------------------------------------------------
 
@@ -93,11 +93,11 @@ Grades are posted online using Canvas. Grades are weighted and assigned as detai
 All projects, presentations, tests, quizzes, classwork, portfolio & notes will be used to calculate your final grade. 
 
 Projects, classwork, portfolio, and notes grading will follow this scale:
-- [ ] 4 - Exceeded Expectations - The program is fully functional and the student has added functionality that exceeds the brief. (A)
-- [ ] 3 - Met Expectations - All program functionality is evident. (B)
-- [ ] 2 - Approaching Expectations - Most of the program is functional but there are still some functionality issues. (C).
-- [ ] 1 - Below Expectations - Some of the work was completed but the program is not near functional standards. (D)
-- [ ] 0 - Little to no work was Completed (F)
+- [ ] 5 - Exceeded Expectations - The program is fully functional and the student has added functionality that exceeds the brief. (A)
+- [ ] 4 - Met Expectations - All program functionality is evident. (B)
+- [ ] 3 - Approaching Expectations - Most of the program is functional but there are still some functionality issues. (C).
+- [ ] 2 - Below Expectations - Some of the work was completed but the program is not near functional standards. (D)
+- [ ] 1 - Little to no work was Completed (F)
 
 Students who score below 75% on a project, test or quiz (excluding finals) may retake the project, test, or quiz for up to a 75%.  Students will have 1 week to review any feedback and/ or answers and schedule a time to retake the project, test, or quiz.
 
@@ -172,6 +172,7 @@ It is crucial that students consistently attend class. Most classes will consist
 |  Unit 2  | 2.8 Wrapper: Classes Integer and Double | MCQ  |   |
 |  Unit 2  | 2.9 Using the Math Class |  MCQ |  FRQ |
 |  **TBD**  | Unit Exam | MCQ | FRQ  |   Yes  |
+|  Unit 4  | 4.0 Java Time API |    |   |
 |  Unit 4  | 4.1 while Loops | MCQ  |   |
 |  Unit 4  | 4.2 for Loops |  MCQ  |   |
 |  Unit 4  | 4.3 Developing Algorithms Using Strings | MCQ   | FRQ  |
