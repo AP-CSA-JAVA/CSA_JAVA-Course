@@ -1,6 +1,7 @@
 # Resources
 
 **Project** Header
+
 Place this at the top of the main Class file containing your program's main() method, place an `external' block comment containing the following content.
 
 ```java
