@@ -896,7 +896,7 @@ public class Main
 ## 3.4 Else If Statements
 
 **Goals**
--   Learn multiple selections with the if/else-if conditional.
+-   Learn multiple selections with the if/else-if/ else conditional.
 	-   I will be able to use else if statements to improve the complexity of a program.
   
 
