@@ -1,7 +1,7 @@
 # Resources
 
-Project Header 
-At the top of the file containing your program's main() method, place an `external' block comment containing the following content.
+**Project** Header
+Place this at the top of the main Class file containing your program's main() method, place an `external' block comment containing the following content.
 
 ```java
 /*=============================================================================
@@ -53,128 +53,7 @@ public class Main {
 Example of this in use can be found [here](https://replit.com/@jonvirak/Array-Creation#Main.java).  Use this format for Assignment 2 and all future programs where you are asked to create two different programs.
 
 
-```java
-
-import java.time.LocalDate;
-import java.time.LocalTime;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.time.Period;
-
-public class DateTimeExample {
-
-    public static void main(String[] args) {
-        printLocalDate();
-        printLocalTime();
-        printLocalDateTime();
-        printFormattedDateTime();
-        calculatePeriod();
-    }
-
-    // Method to demonstrate LocalDate
-    public static void printLocalDate() {
-        LocalDate date = LocalDate.now();
-        System.out.println("Current Date: " + date);
-    }
-
-    // Method to demonstrate LocalTime
-    public static void printLocalTime() {
-        LocalTime time = LocalTime.now();
-        System.out.println("Current Time: " + time);
-    }
-
-    // Method to demonstrate LocalDateTime
-    public static void printLocalDateTime() {
-        LocalDateTime dateTime = LocalDateTime.now();
-        System.out.println("Current Date and Time: " + dateTime);
-    }
-
-    // Method to demonstrate formatting LocalDateTime
-    public static void printFormattedDateTime() {
-        LocalDateTime dateTime = LocalDateTime.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        String formattedDateTime = dateTime.format(formatter);
-        System.out.println("Formatted Date and Time: " + formattedDateTime);
-    }
-
-    // Method to demonstrate Period
-    public static void calculatePeriod() {
-        LocalDate startDate = LocalDate.of(2020, 1, 1);
-        LocalDate endDate = LocalDate.now();
-        Period period = Period.between(startDate, endDate);
-        System.out.println("Period between " + startDate + " and " + endDate + ": " + period.getYears() + " years, " + period.getMonths() + " months, and " + period.getDays() + " days");
-    }
-}
-
-```
-
-
-### Date and Time Functions
-
-
-| Name | Description |
-| :---: | :----: |
-| ADDDATE() | Add time values (intervals) to a date value |
-| ADDTIME() | 	Add time |
-| CONVERT_TZ() | 	Convert from one time zone to another |
-| CURDATE() | 	Return the current date |
-| CURRENT_DATE(), <br>CURRENT_DATE | 	Synonyms for CURDATE() |
-| CURRENT_TIME(), <br>CURRENT_TIME 	| Synonyms for CURTIME() |
-| CURRENT_TIMESTAMP(), <br>CURRENT_TIMESTAMP | Synonyms for NOW() |
-| CURTIME()  |	Return the current time |
-| DATE()  |	Extract the date part of a date or datetime expression |
-| DATE_ADD() | 	Add time values (intervals) to a date value |
-| DATE_FORMAT() | 	Format date as specified |
-| DATE_SUB() | 	Subtract a time value (interval) from a date |
-| DATEDIFF() | 	Subtract two dates |
-| DAY() | 	Synonym for DAYOFMONTH() |
-| DAYNAME() | 	Return the name of the weekday |
-| DAYOFMONTH() | 	Return the day of the month (0-31) |
-| DAYOFWEEK()  |	Return the weekday index of the argument |
-| DAYOFYEAR() | 	Return the day of the year (1-366) |
-| EXTRACT()  |	Extract part of a date |
-| FROM_DAYS()  |	Convert a day number to a date |
-| FROM_UNIXTIME() |	Format Unix timestamp as a date |
-| GET_FORMAT() |	Return a date format string |
-| HOUR()  |	Extract the hour |
-| LAST_DAY  |	Return the last day of the month for the argument |
-| LOCALTIME(), <br>LOCALTIME 	| Synonym for NOW() |
-| LOCALTIMESTAMP, <br>LOCALTIMESTAMP() | Synonym for NOW() |
-| MAKEDATE() 	 | Create a date from the year and day of year |
-| MAKETIME() 	 | Create time from hour, minute, second |
-| MICROSECOND() 	 | Return the microseconds from argument |
-| MINUTE() 	 | Return the minute from the argument |
-| MONTH() 	 | Return the month from the date passed |
-| MONTHNAME() 	 | Return the name of the month |
-| NOW() 	 | Return the current date and time |
-| PERIOD_ADD() 	 | Add a period to a year-month |
-| PERIOD_DIFF() 	 | Return the number of months between periods |
-| QUARTER() 	 | Return the quarter from a date argument |
-| SEC_TO_TIME()  |	Converts seconds to 'hh:mm:ss' format |
-| SECOND()  |	Return the second (0-59) |
-| STR_TO_DATE() 	 | Convert a string to a date |
-| SUBDATE()  |	Synonym for DATE_SUB() when invoked with three arguments |
-| SUBTIME()  |	Subtract times |
-| SYSDATE()  |	Return the time at which the function executes |
-| TIME() | 	Extract the time portion of the expression passed |
-| TIME_FORMAT()  |	Format as time |
-| TIME_TO_SEC() | 	Return the argument converted to seconds |
-| TIMEDIFF()  |	Subtract time |
-| TIMESTAMP() |	With a single argument, this function returns the date or datetime expression; with two arguments, the sum of the arguments |
-| TIMESTAMPADD()  |	Add an interval to a datetime expression |
-| TIMESTAMPDIFF()  |	Return the difference of two datetime expressions, using the units specified |
-| TO_DAYS()  |	Return the date argument converted to days |
-| TO_SECONDS() | 	Return the date or datetime argument converted to seconds since Year 0 |
-| UNIX_TIMESTAMP()  |	Return a Unix timestamp |
-| UTC_DATE()  |	Return the current UTC date |
-| UTC_TIME()  |	Return the current UTC time |
-| UTC_TIMESTAMP() | 	Return the current UTC date and time |
-| WEEK()  |	Return the week number |
-| WEEKDAY() | 	Return the weekday index |
-| WEEKOFYEAR() | 	Return the calendar week of the date (1-53) |
-| YEAR()  |	Return the year |
-| YEARWEEK()  |	Return the year and week  |
-
+---
 
 
 ## SCRUM
