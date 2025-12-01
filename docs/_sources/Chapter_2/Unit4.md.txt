@@ -182,7 +182,7 @@ public class FormattingExample {
 1. Create a `LocalDateTime.now()`.
 2. Format it in **three different ways**:
 
-   * ISO format
+   * ISO format (ISO format typically refers to the ISO 8601 standard, which specifies a numeric representation for dates and times to avoid confusion across different cultures and systems.)
    * Short format (`MM/dd/yy`)
    * Long format (`EEEE, MMMM dd, yyyy HH:mm`)
 
@@ -339,10 +339,16 @@ public class Main{
   -  D = 60 - 69
   -  F = 0 - 59
 - `Return` the total number of A's, B's, C's, D's, and F's
-
+- Include Java API Time: Class LocalDateTime when your program executes in the terminal.
 
 	
 ### Activity 4.1.2
+
+- Include Java API Time: Class LocalDateTime when your program executes
+- Write a class for Factor, ExtractDigits, & SumAverage
+- Include test cases for each program
+- Use a `while` loop for each program
+
 
 ```java
 1. Is a Factor?
