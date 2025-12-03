@@ -341,7 +341,8 @@ public class Main{
 - `Return` the total number of A's, B's, C's, D's, and F's
 - Include Java API Time: Class LocalDateTime when your program executes in the terminal.
 
-	
+---
+
 ### Activity 4.1.2
 
 - Include Java API Time: Class LocalDateTime when your program executes
@@ -405,7 +406,7 @@ The sum is: 133
 The average is: 33.25
 ```
 
----------------------------------------------------------------------------------------
+----
 
 ## Activity 4.1a Do While Loops - Oracle
 
