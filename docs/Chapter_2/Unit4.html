@@ -508,8 +508,8 @@
 </section>
 </section>
 <hr class="docutils" />
-<section id="while-loops">
-<h2>4.1 While Loops<a class="headerlink" href="#while-loops" title="Link to this heading">¶</a></h2>
+<section id="activity-4-1-while-loops">
+<h2>Activity 4.1 While Loops<a class="headerlink" href="#activity-4-1-while-loops" title="Link to this heading">¶</a></h2>
 <p><strong>Goals</strong></p>
 <ul class="simple">
 <li><p>Represent iterative processes using while loops.</p></li>
@@ -690,8 +690,8 @@
 </section>
 </section>
 <hr class="docutils" />
-<section id="a-do-while-loops-oracle">
-<h2>4.1a Do While Loops - Oracle<a class="headerlink" href="#a-do-while-loops-oracle" title="Link to this heading">¶</a></h2>
+<section id="activity-4-1a-do-while-loops-oracle">
+<h2>Activity 4.1a Do While Loops - Oracle<a class="headerlink" href="#activity-4-1a-do-while-loops-oracle" title="Link to this heading">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">do-while</span></code> loop will not be assessed for the AP CSA exam, it can be a useful tool when writing programs.</p>
 <p>A <code class="docutils literal notranslate"><span class="pre">do-while</span></code> loop in Java is a type of loop where the code block is executed at least once before checking the loop condition.
 This is in contrast to a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop, which checks the condition before entering the loop. Here’s a Java program that
@@ -723,14 +723,76 @@ demonstrates and explains a <code class="docutils literal notranslate"><span cla
 </div>
 <p>Inside the “do” block, we use a <code class="docutils literal notranslate"><span class="pre">do-while</span></code> loop to repeatedly prompt the user for input until they enter a positive number. The loop will always execute at least once because the condition is checked at the end of the loop.  Within the loop,  a message asks the user to enter a positive number and read their input using the scanner class. The program then checks if the entered number is less than or equal to 0. If it is, a message asks the user to enter a positive number again.  The loop will continue to execute as long as the condition (number &lt;= 0) is true.  Once the user enters a positive number, the loop ends, and a message is printed indicating that they entered a positive number.</p>
 <p>This program demonstrates a simple “do-while” loop to ensure that the user provides valid input before proceeding with the program.</p>
-<section id="a-classwork-guessing-game">
-<h3>4.1a - Classwork Guessing Game<a class="headerlink" href="#a-classwork-guessing-game" title="Link to this heading">¶</a></h3>
+<section id="activity-4-1a-classwork-guessing-game">
+<h3>Activity 4.1a - Classwork Guessing Game<a class="headerlink" href="#activity-4-1a-classwork-guessing-game" title="Link to this heading">¶</a></h3>
 <p><strong>Directions:</strong> Write a java program that will ask the user to pick a number between 1 - 100.  Use a <code class="docutils literal notranslate"><span class="pre">do</span></code> while loop that will compare the random number generated with <code class="docutils literal notranslate"><span class="pre">Math.random()</span></code> method with the choice of the user.  If the user inputs the correct number, end the game with a congratulatory message.  If the user inputs the number wrong, tell the user how close they are to the actual number and give them another chance to pick the number.  Program ends when the number is selected.</p>
+<ul class="simple">
+<li><p>Submit your java file with test cases.</p></li>
+<li><p>Make sure that you include the dateTime class.</p></li>
+</ul>
+<p><strong>Sample Output:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Pick a number between 1 and 100!
+Enter your guess: 42
+Congratulations! You guessed the correct number: 42
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Pick a number between 1 and 100!
+Enter your guess: 60
+Incorrect! You were off by 15.
+Try again!
+
+Enter your guess: 90
+Incorrect! You were off by 15.
+Try again!
+
+Enter your guess: 75
+Congratulations! You guessed the correct number: 75
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Pick a number between 1 and 100!
+Enter your guess: 50
+Incorrect! You were off by 38.
+Try again!
+
+Enter your guess: 20
+Incorrect! You were off by 8.
+Try again!
+
+Enter your guess: 14
+Incorrect! You were off by 2.
+Try again!
+
+Enter your guess: 12
+Congratulations! You guessed the correct number: 12
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Pick a number between 1 and 100!
+Enter your guess: 200
+Incorrect! You were off by 195.
+Try again!
+
+Enter your guess: -10
+Incorrect! You were off by 15.
+Try again!
+
+Enter your guess: 7
+Incorrect! You were off by 2.
+Try again!
+
+Enter your guess: 5
+Congratulations! You guessed the correct number: 5
+</pre></div>
+</div>
 </section>
 <hr class="docutils" />
 <section id="activity-4-1b-convert-program">
 <h3>Activity 4.1b - convert program<a class="headerlink" href="#activity-4-1b-convert-program" title="Link to this heading">¶</a></h3>
-<p><strong>Directions:</strong> Convert Program A and Program B from a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to a <code class="docutils literal notranslate"><span class="pre">do-while</span></code> loop.</p>
+<p><strong>Directions:</strong></p>
+<ul class="simple">
+<li><p>Convert Program A and Program B from a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to a <code class="docutils literal notranslate"><span class="pre">do-while</span></code> loop.</p></li>
+<li><p>Submit your java files</p></li>
+<li><p>Appropriately use datetime class</p></li>
+</ul>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">//Program A</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
 
@@ -780,13 +842,16 @@ demonstrates and explains a <code class="docutils literal notranslate"><span cla
 <span class="p">}</span>
 </pre></div>
 </div>
+<p>–</p>
 </section>
-<section id="activity-4-1c">
-<h3>Activity 4.1c<a class="headerlink" href="#activity-4-1c" title="Link to this heading">¶</a></h3>
+<section id="activity-4-1c-age-name">
+<h3>Activity 4.1c - Age/ Name<a class="headerlink" href="#activity-4-1c-age-name" title="Link to this heading">¶</a></h3>
 <p><strong>Directions:</strong> Write a program using a <code class="docutils literal notranslate"><span class="pre">do-while</span></code> loop that does the following:</p>
 <ul class="simple">
 <li><p>Write a do-while loop that asks a user for their name, which must be at least four characters long.</p></li>
 <li><p>Write another do-while that asks for the user’s age, which must be between 18 and 65, inclusive. Recall the nextIntmethod Scanner class.</p></li>
+<li><p>Submit your java files and test cases</p></li>
+<li><p>Appropriately use datetime class</p></li>
 </ul>
 <p><strong>Sample Output</strong></p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">What</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="n">name</span><span class="o">?</span>
@@ -806,9 +871,15 @@ demonstrates and explains a <code class="docutils literal notranslate"><span cla
 <p>Java chars and strings are closely related. A String is a sequence of chararcters that reference an object. Using a new method, you can find individual characters in a String.  Remember, a <code class="docutils literal notranslate"><span class="pre">char</span></code> is a primitive data type, you can compare primitive data types with == in conditionals.</p>
 </section>
 <hr class="docutils" />
-<section id="assignment-char-oracle">
-<h3>Assignment <code class="docutils literal notranslate"><span class="pre">char</span></code> - Oracle<a class="headerlink" href="#assignment-char-oracle" title="Link to this heading">¶</a></h3>
-<p><strong>Directions:</strong> Using a do-while, validate the input so the user types only one character.  Write a <code class="docutils literal notranslate"><span class="pre">switch</span></code> statement to show the character “is a vowel” or “ is a consonant.”</p>
+<section id="activity-4-1d-char-oracle">
+<h3>Activity 4.1d - <code class="docutils literal notranslate"><span class="pre">char</span></code> - Oracle<a class="headerlink" href="#activity-4-1d-char-oracle" title="Link to this heading">¶</a></h3>
+<p><strong>Directions:</strong></p>
+<ul class="simple">
+<li><p>Using a do-while, validate the input so the user types only one character.</p></li>
+<li><p>Write a <code class="docutils literal notranslate"><span class="pre">switch</span></code> statement to show the character “is a vowel” or “ is a consonant.”</p></li>
+<li><p>Submit your java files</p></li>
+<li><p>Appropriately use datetime class</p></li>
+</ul>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
 
 <span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
@@ -829,6 +900,7 @@ demonstrates and explains a <code class="docutils literal notranslate"><span cla
 </pre></div>
 </div>
 </section>
+<hr class="docutils" />
 <section id="break-and-continue-keywords-in-java-oracle">
 <h3>Break and Continue Keywords in Java - Oracle<a class="headerlink" href="#break-and-continue-keywords-in-java-oracle" title="Link to this heading">¶</a></h3>
 <p>Break and Continue keywords in Java
@@ -961,13 +1033,15 @@ Both <code class="docutils literal notranslate"><span class="pre">Break</span></
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code> keywords can be a valuable tool when writing Java programs.</p>
 </section>
-<section id="activity-break-and-continue-oracle">
-<h3>Activity Break and Continue - Oracle<a class="headerlink" href="#activity-break-and-continue-oracle" title="Link to this heading">¶</a></h3>
+<section id="activity-4-1e-break-continue-oracle">
+<h3>Activity 4.1e Break &amp; Continue - Oracle<a class="headerlink" href="#activity-4-1e-break-continue-oracle" title="Link to this heading">¶</a></h3>
 <p><strong>Directions</strong> Modify the <code class="docutils literal notranslate"><span class="pre">selection</span> <span class="pre">sort</span></code> program below by using the break and continue keywords.</p>
 <ul class="simple">
 <li><p>Use a <code class="docutils literal notranslate"><span class="pre">break</span></code> statement to stop the selection sort when it encounters a negative value.</p></li>
 <li><p>Show a message that the sort was aborted.</p></li>
 <li><p>Use a <code class="docutils literal notranslate"><span class="pre">continue</span></code> statement to continue the sort when the next value is a positive value.</p></li>
+<li><p>Submit your java and test cases</p></li>
+<li><p>Appropriately use datetime class</p></li>
 </ul>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
 
@@ -1166,6 +1240,7 @@ When processing a string character by character, forgetting that string indices 
 </pre></div>
 </div>
 </section>
+<hr class="docutils" />
 <section id="activity-4-2-2">
 <h3>Activity 4.2.2<a class="headerlink" href="#activity-4-2-2" title="Link to this heading">¶</a></h3>
 <p>Factorial
@@ -1192,11 +1267,11 @@ Implement a program which will display a multiplication table. Ask the user for 
 <span class="mi">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">28</span>
 <span class="mi">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">32</span>
 <span class="mi">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">36</span>
-<span class="mi">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">40</span>
-<span class="w">	</span>
+<span class="mi">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">40</span><span class="w">	</span>
 </pre></div>
 </div>
 </section>
+<hr class="docutils" />
 <section id="activity-4-2-3">
 <h3>Activity 4.2.3<a class="headerlink" href="#activity-4-2-3" title="Link to this heading">¶</a></h3>
 <p>Given the array below, loop through the array and print out all odd numbers on a separate line.  Order is not important!  <strong>Do not print</strong> any numbers that come after 894 in the sequence.  <strong>Hint:</strong> One way you will need to use <code class="docutils literal notranslate"><span class="pre">.length</span></code></p>
@@ -1232,6 +1307,7 @@ Implement a program which will display a multiplication table. Ask the user for 
 </div>
 </section>
 </section>
+<hr class="docutils" />
 <section id="developing-algorithms-using-strings">
 <h2>4.3 Developing Algorithms Using Strings<a class="headerlink" href="#developing-algorithms-using-strings" title="Link to this heading">¶</a></h2>
 <p><strong>Goals</strong></p>
@@ -1300,6 +1376,7 @@ Implement a program which will display a multiplication table. Ask the user for 
 <li><p>Determine the number of substrings that meet specific criteria.</p></li>
 <li><p>Create a new String with the characters reversed.</p></li>
 </ul>
+<hr class="docutils" />
 <section id="activity-4-3-1">
 <h3>Activity 4.3.1<a class="headerlink" href="#activity-4-3-1" title="Link to this heading">¶</a></h3>
 <p>You will write 3 programs that will do the following:</p>
@@ -1309,6 +1386,7 @@ Implement a program which will display a multiplication table. Ask the user for 
 <li><p>Write a third program that will replace every instance of d,b,p and q with a random d,b, p or q.</p></li>
 </ul>
 </section>
+<hr class="docutils" />
 <section id="activity-4-3-2">
 <h3>Activity 4.3.2<a class="headerlink" href="#activity-4-3-2" title="Link to this heading">¶</a></h3>
 <ol class="arabic simple">
@@ -1322,6 +1400,7 @@ Write an algorithm that will ask the user for a phrase and return the number of 
 <span class="nl">Vowels</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span>
 </pre></div>
 </div>
+<hr class="docutils" />
 <ol class="arabic simple" start="2">
 <li><p>Hexidecimal
 The hexadecimal (hex) number system uses 16 symbols, 0-9 and A-F (or a-f). Write a program to verify a hex string. The program shall prompt user for a hex string; and decide if the input string is a valid hex string.</p></li>
@@ -1340,6 +1419,7 @@ The hexadecimal (hex) number system uses 16 symbols, 0-9 and A-F (or a-f). Write
 </div>
 </section>
 </section>
+<hr class="docutils" />
 <section id="nested-iteration">
 <h2>4.4 Nested Iteration<a class="headerlink" href="#nested-iteration" title="Link to this heading">¶</a></h2>
 <p><strong>Goals</strong></p>
@@ -1662,18 +1742,18 @@ Pay careful attention to the Break in Nested Loops example and the Continue in N
 <li><a class="reference internal" href="#activity-4-0-3-event-timer">Activity 4.0.3: Event Timer</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#while-loops">4.1 While Loops</a><ul>
+<li><a class="reference internal" href="#activity-4-1-while-loops">Activity 4.1 While Loops</a><ul>
 <li><a class="reference internal" href="#activity-4-1-1">Activity 4.1.1</a></li>
 <li><a class="reference internal" href="#activity-4-1-2">Activity 4.1.2</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#a-do-while-loops-oracle">4.1a Do While Loops - Oracle</a><ul>
-<li><a class="reference internal" href="#a-classwork-guessing-game">4.1a - Classwork Guessing Game</a></li>
+<li><a class="reference internal" href="#activity-4-1a-do-while-loops-oracle">Activity 4.1a Do While Loops - Oracle</a><ul>
+<li><a class="reference internal" href="#activity-4-1a-classwork-guessing-game">Activity 4.1a - Classwork Guessing Game</a></li>
 <li><a class="reference internal" href="#activity-4-1b-convert-program">Activity 4.1b - convert program</a></li>
-<li><a class="reference internal" href="#activity-4-1c">Activity 4.1c</a></li>
-<li><a class="reference internal" href="#assignment-char-oracle">Assignment <code class="docutils literal notranslate"><span class="pre">char</span></code> - Oracle</a></li>
+<li><a class="reference internal" href="#activity-4-1c-age-name">Activity 4.1c - Age/ Name</a></li>
+<li><a class="reference internal" href="#activity-4-1d-char-oracle">Activity 4.1d - <code class="docutils literal notranslate"><span class="pre">char</span></code> - Oracle</a></li>
 <li><a class="reference internal" href="#break-and-continue-keywords-in-java-oracle">Break and Continue Keywords in Java - Oracle</a></li>
-<li><a class="reference internal" href="#activity-break-and-continue-oracle">Activity Break and Continue - Oracle</a></li>
+<li><a class="reference internal" href="#activity-4-1e-break-continue-oracle">Activity 4.1e Break &amp; Continue - Oracle</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#for-loops">4.2 For Loops</a><ul>

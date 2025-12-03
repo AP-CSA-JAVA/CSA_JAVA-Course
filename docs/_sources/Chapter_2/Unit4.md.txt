@@ -216,7 +216,7 @@ They should print both start and end times.
 ---
 
 
-## 4.1 While Loops
+## Activity 4.1 While Loops
 
  **Goals**
 
@@ -407,7 +407,7 @@ The average is: 33.25
 
 ---------------------------------------------------------------------------------------
 
-## 4.1a Do While Loops - Oracle
+## Activity 4.1a Do While Loops - Oracle
 
 The `do-while` loop will not be assessed for the AP CSA exam, it can be a useful tool when writing programs.
 
@@ -445,9 +445,69 @@ Inside the "do" block, we use a `do-while` loop to repeatedly prompt the user fo
     
 This program demonstrates a simple "do-while" loop to ensure that the user provides valid input before proceeding with the program.
 
-### 4.1a - Classwork Guessing Game
+### Activity 4.1a - Classwork Guessing Game
 
 **Directions:** Write a java program that will ask the user to pick a number between 1 - 100.  Use a `do` while loop that will compare the random number generated with `Math.random()` method with the choice of the user.  If the user inputs the correct number, end the game with a congratulatory message.  If the user inputs the number wrong, tell the user how close they are to the actual number and give them another chance to pick the number.  Program ends when the number is selected.
+
+- Submit your java file with test cases.
+- Make sure that you include the dateTime class.
+
+**Sample Output:**
+```
+Pick a number between 1 and 100!
+Enter your guess: 42
+Congratulations! You guessed the correct number: 42
+```
+
+```
+Pick a number between 1 and 100!
+Enter your guess: 60
+Incorrect! You were off by 15.
+Try again!
+
+Enter your guess: 90
+Incorrect! You were off by 15.
+Try again!
+
+Enter your guess: 75
+Congratulations! You guessed the correct number: 75
+```
+
+```
+Pick a number between 1 and 100!
+Enter your guess: 50
+Incorrect! You were off by 38.
+Try again!
+
+Enter your guess: 20
+Incorrect! You were off by 8.
+Try again!
+
+Enter your guess: 14
+Incorrect! You were off by 2.
+Try again!
+
+Enter your guess: 12
+Congratulations! You guessed the correct number: 12
+```
+
+```
+Pick a number between 1 and 100!
+Enter your guess: 200
+Incorrect! You were off by 195.
+Try again!
+
+Enter your guess: -10
+Incorrect! You were off by 15.
+Try again!
+
+Enter your guess: 7
+Incorrect! You were off by 2.
+Try again!
+
+Enter your guess: 5
+Congratulations! You guessed the correct number: 5
+```
 
 
 ---
@@ -455,7 +515,10 @@ This program demonstrates a simple "do-while" loop to ensure that the user provi
 
 ### Activity 4.1b - convert program
 
-**Directions:** Convert Program A and Program B from a `for` loop to a `do-while` loop. 
+**Directions:** 
+- Convert Program A and Program B from a `for` loop to a `do-while` loop.
+- Submit your java files
+- Appropriately use datetime class 
 
 ```java
 //Program A
@@ -508,11 +571,17 @@ public class Main
 }
 ```
 
-### Activity 4.1c
+
+--
+
+
+### Activity 4.1c - Age/ Name
 
 **Directions:** Write a program using a `do-while` loop that does the following:
 - Write a do-while loop that asks a user for their name, which must be at least four characters long.
 - Write another do-while that asks for the user’s age, which must be between 18 and 65, inclusive. Recall the nextIntmethod Scanner class.
+- Submit your java files and test cases
+- Appropriately use datetime class 
 
 **Sample Output**
 ```java
@@ -534,10 +603,14 @@ You have learned about primitive data types like `int`, `double`, and `boolean`.
 
 Java chars and strings are closely related. A String is a sequence of chararcters that reference an object. Using a new method, you can find individual characters in a String.  Remember, a `char` is a primitive data type, you can compare primitive data types with == in conditionals.
 
----------------------------------------------------------------------------------------
+----
 
-### Assignment `char` - Oracle
-**Directions:** Using a do-while, validate the input so the user types only one character.  Write a `switch` statement to show the character “is a vowel” or “ is a consonant.”
+### Activity 4.1d - `char` - Oracle
+**Directions:** 
+- Using a do-while, validate the input so the user types only one character.
+- Write a `switch` statement to show the character “is a vowel” or “ is a consonant.”
+- Submit your java files
+- Appropriately use datetime class 
 
 ```java
 import java.util.Scanner;
@@ -559,6 +632,8 @@ b
 
 b is a consonant.
 ```
+
+---
 
 
 ### Break and Continue Keywords in Java - Oracle
@@ -704,12 +779,14 @@ Friday
 
 The `break` and `continue` keywords can be a valuable tool when writing Java programs.
 
-### Activity Break and Continue - Oracle
+### Activity 4.1e Break & Continue - Oracle
 
 **Directions** Modify the `selection sort` program below by using the break and continue keywords.
 - Use a `break` statement to stop the selection sort when it encounters a negative value.
 - Show a message that the sort was aborted.
 - Use a `continue` statement to continue the sort when the next value is a positive value.
+- Submit your java and test cases
+- Appropriately use datetime class 
 
 ```java
 import java.util.ArrayList;
@@ -798,7 +875,7 @@ while (i < 11)
 }
 ``` 
 
-----------------------------------------------------------------------------------------------
+---
 
 
 	NOTE: The scope of the intialization variable, i, is within the `for` 
@@ -836,7 +913,7 @@ public class Main {
 2. **Condition (`i <= numbers.length`)**: Incorrect, as `numbers.length` is **5**, but the last valid index of the array is **4** (0-based indexing).
 3. **Result**: The loop runs one extra iteration (when `i == 5`), causing an **ArrayIndexOutOfBoundsException**.
 
-----------------------------------------------------------------
+---
 
 **Correct Code (Fixing the Error)**
 ```java
@@ -855,7 +932,7 @@ public class Main {
 **Fix:**
 - The loop condition is updated to `i < numbers.length` to ensure that the loop stops before `i` reaches `numbers.length`.
 
-----------------------------------------------------------------
+---
 
 **Common Scenarios of Off-by-One Errors**
 
@@ -875,7 +952,7 @@ public class Main {
 </details>
 
 
-----------------------------------------------------------------
+---
 
 
 	
@@ -923,7 +1000,9 @@ Enter a number (type "done" when complete):
 
 You had 4 odd numbers.
 ```
-	
+
+---
+
 ### Activity 4.2.2
 
 Factorial
@@ -955,9 +1034,10 @@ Enter the number of mulltiples:
 4 * 7 = 28
 4 * 8 = 32
 4 * 9 = 36
-4 * 10 = 40
-	
+4 * 10 = 40	
 ```
+
+---
 
 ### Activity 4.2.3
 Given the array below, loop through the array and print out all odd numbers on a separate line.  Order is not important!  **Do not print** any numbers that come after 894 in the sequence.  **Hint:** One way you will need to use `.length`
@@ -994,9 +1074,9 @@ Example output for even numbers:
 984
 592
 236
-
 ```
 	
+---
 
 ## 4.3 Developing Algorithms Using Strings
 
@@ -1037,7 +1117,7 @@ public class Main
 ```
 Predict what is going to happen when you type `aaaaa`.
 
----------------------------------------------------------------------------------------------------
+---
  
 Look at the program below.  What do you think is going to happen when you type a `string`?
 
@@ -1070,6 +1150,8 @@ There are standard algorithms that utilize String traversals to:
   - Determine the number of substrings that meet specific criteria.
   - Create a new String with the characters reversed.
 
+---
+
 ### Activity 4.3.1
 
 You will write 3 programs that will do the following:
@@ -1077,6 +1159,7 @@ You will write 3 programs that will do the following:
   - Write a second program that will remove vowels from a String.
   - Write a third program that will replace every instance of d,b,p and q with a random d,b, p or q.
 
+---
 
 ### Activity 4.3.2
 
@@ -1091,6 +1174,7 @@ Words: 8
 Vowels: 12
 ```
 
+---
 
 2. Hexidecimal
 The hexadecimal (hex) number system uses 16 symbols, 0-9 and A-F (or a-f). Write a program to verify a hex string. The program shall prompt user for a hex string; and decide if the input string is a valid hex string.
@@ -1109,7 +1193,7 @@ Enter a hex string:
 "123aBcx" is NOT a hex string
 ```
 	
-
+---
 
 ## 4.4 Nested Iteration
 	
