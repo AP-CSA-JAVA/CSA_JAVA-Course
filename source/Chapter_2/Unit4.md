@@ -975,7 +975,7 @@ Enter the number of squares:
 10 squared = 100
 ```
 
-Program 2: Repeatly ask the for a `number`. When the user is *done*, report back the `number` of odd `numbers`. Decide whether to use a `while` loop or a `for` loop.
+Program 2: Repeatly ask the for a `number`. When the user is *done*, report back the `number` of odd `numbers`. Use a `for` loop for both programs.
 
 ```java
 Enter a number (type "done" when complete): 
@@ -1001,6 +1001,10 @@ Enter a number (type "done" when complete):
 
 You had 4 odd numbers.
 ```
+
+- Submit your program code and test cases.
+- Make sure that you include the dateTime class.
+
 
 ---
 
@@ -1051,6 +1055,10 @@ Enter the number of mulltiples:
 4 * 10 = 40	
 ```
 
+- Submit your program code and test cases.
+- Make sure that you include the dateTime class.
+
+
 ---
 
 
@@ -1090,7 +1098,11 @@ Example output for even numbers:
 592
 236
 ```
-	
+
+- Submit your program code and test cases.
+- Make sure that you include the dateTime class.
+
+
 ---
 
 ## 4.3 Developing Algorithms Using Strings
@@ -1173,6 +1185,8 @@ You will write 3 programs that will do the following:
   - Write a program that will remove every other letter within a string.
   - Write a second program that will remove vowels from a String.
   - Write a third program that will replace every instance of d,b,p and q with a random d,b, p or q.
+  - Submit your program code and test cases.
+  - Make sure that you include the dateTime class.
 
 ---
 
@@ -1189,7 +1203,12 @@ Words: 8
 Vowels: 12
 ```
 
+- Submit your program code and test cases.
+- Make sure that you include the dateTime class.
+
+
 ---
+
 
 2. Hexidecimal
 The hexadecimal (hex) number system uses 16 symbols, 0-9 and A-F (or a-f). Write a program to verify a hex string. The program shall prompt user for a hex string; and decide if the input string is a valid hex string.
@@ -1207,8 +1226,13 @@ Enter a hex string:
  123aBcx
 "123aBcx" is NOT a hex string
 ```
-	
+
+- Submit your program code and test cases.
+- Make sure that you include the dateTime class.
+
+
 ---
+
 
 ## 4.4 Nested Iteration
 	
@@ -1353,6 +1377,13 @@ public static void main(String [] args) {
 This time, instead of using a break, we used a continue. This means that we didn't completely break out of the second loop. We just skipped the iteration that happens when j is 3. (It doesn't print 6.) The second loop continues, iterating j to 4 and printing the 7. Then j is incremented again to be 5, but since that is not less than n (which is also 5), we exit the second loop normally.
 Once we exit the second loop, we move on to the fifth row, which is printed normally.
 Pay careful attention to the Break in Nested Loops example and the Continue in Nested Loops example, since they illustrate the important difference between break and continue. Break completely exits the loop it is called in; continue just skips the current iteration of the loop it is called in.
+
+
+**In Class Exercise**
+
+
+---
+
 
 ## 4.5 Informal Code Analysis
 	
