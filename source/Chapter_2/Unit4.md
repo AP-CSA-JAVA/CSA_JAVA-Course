@@ -958,7 +958,7 @@ public class Main {
 
 	
 ### Activity 4.2.1
-Task 1: Using a `for` loop, write a program where you ask the user for a `number` and print out the `number` of perfect squares up until that `number`.
+Program 1: Using a `for` loop, write a program where you ask the user for a `number` and print out the `number` of perfect squares up until that `number`.
 
 ```java
 Enter the number of squares:
@@ -975,7 +975,7 @@ Enter the number of squares:
 10 squared = 100
 ```
 
-Task 2: Repeatly ask the for a `number`. When the user is *done*, report back the `number` of odd `numbers`. Decide whether to use a `while` loop or a `for` loop.
+Program 2: Repeatly ask the for a `number`. When the user is *done*, report back the `number` of odd `numbers`. Decide whether to use a `while` loop or a `for` loop.
 
 ```java
 Enter a number (type "done" when complete): 
@@ -1004,20 +1004,33 @@ You had 4 odd numbers.
 
 ---
 
-### Activity 4.2.2
+### Activity 4.2.2 Factorial X
 
-Factorial
-Implement a program which calculates the factorial of a number given by the user. The factorial of a number is found by multiplying itself by all positive integers less than it (excluding 0). 
+Program 1: Factorial - Implement a program which calculates the factorial of a number given by the user. The factorial of a number is found by multiplying itself by all positive integers less than it (excluding 0). 
 
 ```java
 For example, 4 factorial, written as 4!, can be computed as follows:
 4! == 4 * 3 * 2 * 1 == 24 Additionally, it has been specified that the factorial of 0 is 1, so 0! = 1.
 ```
-	
-Multiplication Table
-Implement a program which will display a multiplication table. Ask the user for a number and how many mutiples to display. 
 
-Example Output:
+**Sample Output:**
+
+```java
+Enter a number (0–19): 5
+Factorial of 5 is: 120
+
+Enter a number (0–19): 10
+Factorial of 10 is: 3628800
+
+Enter a number (0–19): 25
+Invalid input! Please enter a number between 0 and 19.
+
+Enter a number (0–19): -3
+Invalid input! Please enter a number between 0 and 19.
+```
+Program 2: Multiplication Table - Implement a program which will display a multiplication table. Ask the user for a number and how many mutiples to display. 
+
+**Sample Output:**
 
 ```java
 Enter an integer:
@@ -1040,8 +1053,9 @@ Enter the number of mulltiples:
 
 ---
 
+
 ### Activity 4.2.3
-Given the array below, loop through the array and print out all odd numbers on a separate line.  Order is not important!  **Do not print** any numbers that come after 894 in the sequence.  **Hint:** One way you will need to use `.length`
+Given the array below, loop through the array and print out all **odd** numbers on a separate line.  Order is not important!  **Do not print** any numbers that come after 894 in the sequence.  **Hint:** One way you will need to use `.length`
 
 ```java
 public class Main {
