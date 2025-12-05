@@ -1200,7 +1200,7 @@ When processing a string character by character, forgetting that string indices 
 <hr class="docutils" />
 <section id="activity-4-2-1">
 <h3>Activity 4.2.1<a class="headerlink" href="#activity-4-2-1" title="Link to this heading">¶</a></h3>
-<p>Task 1: Using a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop, write a program where you ask the user for a <code class="docutils literal notranslate"><span class="pre">number</span></code> and print out the <code class="docutils literal notranslate"><span class="pre">number</span></code> of perfect squares up until that <code class="docutils literal notranslate"><span class="pre">number</span></code>.</p>
+<p>Program 1: Using a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop, write a program where you ask the user for a <code class="docutils literal notranslate"><span class="pre">number</span></code> and print out the <code class="docutils literal notranslate"><span class="pre">number</span></code> of perfect squares up until that <code class="docutils literal notranslate"><span class="pre">number</span></code>.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">squares</span><span class="p">:</span>
 <span class="w"> </span><span class="mi">10</span>
 <span class="mi">1</span><span class="w"> </span><span class="n">squared</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
@@ -1215,7 +1215,7 @@ When processing a string character by character, forgetting that string indices 
 <span class="mi">10</span><span class="w"> </span><span class="n">squared</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span>
 </pre></div>
 </div>
-<p>Task 2: Repeatly ask the for a <code class="docutils literal notranslate"><span class="pre">number</span></code>. When the user is <em>done</em>, report back the <code class="docutils literal notranslate"><span class="pre">number</span></code> of odd <code class="docutils literal notranslate"><span class="pre">numbers</span></code>. Decide whether to use a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop or a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop.</p>
+<p>Program 2: Repeatly ask the for a <code class="docutils literal notranslate"><span class="pre">number</span></code>. When the user is <em>done</em>, report back the <code class="docutils literal notranslate"><span class="pre">number</span></code> of odd <code class="docutils literal notranslate"><span class="pre">numbers</span></code>. Decide whether to use a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop or a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="nf">number</span><span class="w"> </span><span class="p">(</span><span class="n">type</span><span class="w"> </span><span class="s">&quot;done&quot;</span><span class="w"> </span><span class="n">when</span><span class="w"> </span><span class="n">complete</span><span class="p">):</span><span class="w"> </span>
 <span class="w"> </span><span class="mi">4</span><span class="w"> </span>
 
@@ -1242,17 +1242,29 @@ When processing a string character by character, forgetting that string indices 
 </div>
 </section>
 <hr class="docutils" />
-<section id="activity-4-2-2">
-<h3>Activity 4.2.2<a class="headerlink" href="#activity-4-2-2" title="Link to this heading">¶</a></h3>
-<p>Factorial
-Implement a program which calculates the factorial of a number given by the user. The factorial of a number is found by multiplying itself by all positive integers less than it (excluding 0).</p>
+<section id="activity-4-2-2-factorial-x">
+<h3>Activity 4.2.2 Factorial X<a class="headerlink" href="#activity-4-2-2-factorial-x" title="Link to this heading">¶</a></h3>
+<p>Program 1: Factorial - Implement a program which calculates the factorial of a number given by the user. The factorial of a number is found by multiplying itself by all positive integers less than it (excluding 0).</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">For</span><span class="w"> </span><span class="n">example</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="n">factorial</span><span class="p">,</span><span class="w"> </span><span class="n">written</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="mi">4</span><span class="o">!</span><span class="p">,</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">computed</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">follows</span><span class="p">:</span>
 <span class="mi">4</span><span class="o">!</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">24</span><span class="w"> </span><span class="n">Additionally</span><span class="p">,</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">been</span><span class="w"> </span><span class="n">specified</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">factorial</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">so</span><span class="w"> </span><span class="mi">0</span><span class="o">!</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.</span>
 </pre></div>
 </div>
-<p>Multiplication Table
-Implement a program which will display a multiplication table. Ask the user for a number and how many mutiples to display.</p>
-<p>Example Output:</p>
+<p><strong>Sample Output:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="nf">number</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="err">–</span><span class="mi">19</span><span class="p">):</span><span class="w"> </span><span class="mi">5</span>
+<span class="n">Factorial</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="n">is</span><span class="p">:</span><span class="w"> </span><span class="mi">120</span>
+
+<span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="nf">number</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="err">–</span><span class="mi">19</span><span class="p">):</span><span class="w"> </span><span class="mi">10</span>
+<span class="n">Factorial</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="n">is</span><span class="p">:</span><span class="w"> </span><span class="mi">3628800</span>
+
+<span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="nf">number</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="err">–</span><span class="mi">19</span><span class="p">):</span><span class="w"> </span><span class="mi">25</span>
+<span class="n">Invalid</span><span class="w"> </span><span class="n">input</span><span class="o">!</span><span class="w"> </span><span class="n">Please</span><span class="w"> </span><span class="n">enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">between</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="mf">19.</span>
+
+<span class="n">Enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="nf">number</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="err">–</span><span class="mi">19</span><span class="p">):</span><span class="w"> </span><span class="o">-</span><span class="mi">3</span>
+<span class="n">Invalid</span><span class="w"> </span><span class="n">input</span><span class="o">!</span><span class="w"> </span><span class="n">Please</span><span class="w"> </span><span class="n">enter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">between</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="mf">19.</span>
+</pre></div>
+</div>
+<p>Program 2: Multiplication Table - Implement a program which will display a multiplication table. Ask the user for a number and how many mutiples to display.</p>
+<p><strong>Sample Output:</strong></p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">integer</span><span class="p">:</span>
 <span class="w"> </span><span class="mi">4</span><span class="w"> </span>
 
@@ -1275,7 +1287,7 @@ Implement a program which will display a multiplication table. Ask the user for 
 <hr class="docutils" />
 <section id="activity-4-2-3">
 <h3>Activity 4.2.3<a class="headerlink" href="#activity-4-2-3" title="Link to this heading">¶</a></h3>
-<p>Given the array below, loop through the array and print out all odd numbers on a separate line.  Order is not important!  <strong>Do not print</strong> any numbers that come after 894 in the sequence.  <strong>Hint:</strong> One way you will need to use <code class="docutils literal notranslate"><span class="pre">.length</span></code></p>
+<p>Given the array below, loop through the array and print out all <strong>odd</strong> numbers on a separate line.  Order is not important!  <strong>Do not print</strong> any numbers that come after 894 in the sequence.  <strong>Hint:</strong> One way you will need to use <code class="docutils literal notranslate"><span class="pre">.length</span></code></p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
@@ -1760,7 +1772,7 @@ Pay careful attention to the Break in Nested Loops example and the Continue in N
 <li><a class="reference internal" href="#for-loops">4.2 For Loops</a><ul>
 <li><a class="reference internal" href="#important-off-by-one-error"><mark>IMPORTANT: off-by-one error</mark></a></li>
 <li><a class="reference internal" href="#activity-4-2-1">Activity 4.2.1</a></li>
-<li><a class="reference internal" href="#activity-4-2-2">Activity 4.2.2</a></li>
+<li><a class="reference internal" href="#activity-4-2-2-factorial-x">Activity 4.2.2 Factorial X</a></li>
 <li><a class="reference internal" href="#activity-4-2-3">Activity 4.2.3</a></li>
 </ul>
 </li>
