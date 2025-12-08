@@ -1339,6 +1339,107 @@ When processing a string character by character, forgetting that string indices 
 <ul class="simple">
 <li><p>Manipulate Strings using loops</p></li>
 </ul>
+<p>When working with computers, an <strong>algorithm</strong> is just a set of steps you tell the computer to follow so it can solve a problem. Many problems involve <strong>strings</strong>, which are sequences of characters—letters, numbers, symbols, or spaces.</p>
+<p>Examples of strings:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;Hello&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;123ABC&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;I</span> <span class="pre">like</span> <span class="pre">pizza!&quot;</span></code></p></li>
+</ul>
+<p>Working with strings helps develop algorithmic thinking because strings are everywhere: names, passwords, messages, data from websites, and more.</p>
+<p>Unlike numbers, strings:</p>
+<ul class="simple">
+<li><p>Contain <strong>characters</strong>, not digits.</p></li>
+<li><p>Have <strong>order</strong> (the first character is different from the last).</p></li>
+<li><p>Can be <strong>changed</strong> or <strong>inspected</strong> character by character.</p></li>
+<li><p>Often require <strong>looping</strong> or <strong>conditions</strong> to process.</p></li>
+</ul>
+<p>When creating algorithms with strings, we usually think about <strong>how to examine or transform each character</strong>.</p>
+<p><strong>Key Skills in String Algorithms</strong></p>
+<p>1  <strong>Accessing characters</strong></p>
+<p>You can think of a string like a row of lockers, each with a number:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Index</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span>
+<span class="n">String</span><span class="p">:</span> <span class="n">H</span> <span class="n">e</span> <span class="n">l</span> <span class="n">l</span> <span class="n">o</span>
+</pre></div>
+</div>
+<p>If you want the first character, check index <strong>0</strong>.
+If you want the third character, check index <strong>2</strong>.</p>
+<p>This teaches students to think about <strong>positions</strong> and <strong>indexing</strong>, a key computing concept.</p>
+<hr class="docutils" />
+<p>2  <strong>Looping through characters</strong></p>
+<p>Many string algorithms use loops to check each character one at a time.</p>
+<p>If the task is:</p>
+<ul class="simple">
+<li><p>Count vowels</p></li>
+<li><p>Remove spaces</p></li>
+<li><p>Encrypt a message</p></li>
+</ul>
+<p>…you usually repeat steps for each character.</p>
+<p>3  <strong>Using conditions</strong></p>
+<p>Conditions (if-statements) are used to make decisions.</p>
+<p>Examples:</p>
+<ul class="simple">
+<li><p>“If the character is a vowel, skip it.”</p></li>
+<li><p>“If the character is a number, add it to the total.”</p></li>
+<li><p>“If the character is uppercase, convert it.”</p></li>
+</ul>
+<p>This builds logical reasoning and decision-making.</p>
+<p>4  <strong>Building new strings</strong></p>
+<p>Most algorithms either:</p>
+<ul class="simple">
+<li><p><strong>filter</strong> characters (remove some)</p></li>
+<li><p><strong>transform</strong> characters (change them)</p></li>
+<li><p><strong>rearrange</strong> characters (scramble, reverse, encode)</p></li>
+</ul>
+<p>We often create a new string piece by piece.</p>
+<p>Below is a step-by-step way to design any string-based algorithm:</p>
+<hr class="docutils" />
+<p><strong>Step 1: Understand the Goal</strong></p>
+<p>Ask: <strong>What should the final string look like?</strong></p>
+<p><strong>Examples</strong>:</p>
+<ul class="simple">
+<li><p>Only every other letter</p></li>
+<li><p>No vowels</p></li>
+<li><p>Replace certain letters</p></li>
+<li><p>Reverse the text</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>Step 2: Identify What Must Happen to Each Character</strong></p>
+<ul class="simple">
+<li><p>“Do I keep this character?”</p></li>
+<li><p>“Do I change it?”</p></li>
+<li><p>“Do I ignore it?”</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>Step 3: Plan the Steps</strong></p>
+<p>Write them out in English first (pseudocode).</p>
+<p>Example: <em>Remove vowels</em></p>
+<ol class="arabic simple">
+<li><p>Start with an empty result string</p></li>
+<li><p>Look at each character in the word</p></li>
+<li><p>If the character is NOT a vowel, add it to the result</p></li>
+<li><p>Show the result</p></li>
+</ol>
+<hr class="docutils" />
+<p><strong>Step 4: Translate the Steps Into Code</strong></p>
+<p>This is the easy part once the logic is correct.</p>
+<hr class="docutils" />
+<p>Why Learning String Algorithms Matters</p>
+<ul class="simple">
+<li><p><strong>Improves problem-solving</strong> — Students learn to break big problems into tiny steps.</p></li>
+<li><p><strong>Builds logical thinking</strong> — Conditions, loops, and indexing are used everywhere in CS.</p></li>
+<li><p><strong>Prepares for real-world tasks</strong> — Searching text, cleaning data, processing user input.</p></li>
+<li><p><strong>Boosts creativity</strong> — Students can make ciphers, message filters, text effects, and more.</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>Examples of Classic String Problems</strong></p>
+<p><strong>Removing every other letter</strong>: Teaches indexing and stepping through a string.</p>
+<p><strong>Removing vowels</strong>: Teaches filtering and checking membership (is the character in a group?).</p>
+<p><strong>Replacing characters randomly</strong>: Teaches how algorithms can modify data and use randomness.</p>
+<p><strong>Counting characters</strong>: Teaches accumulation (counting while looping).</p>
+<p><strong>Reversing a string</strong>: Teaches building strings in a different order.</p>
+<hr class="docutils" />
+<p>Working with strings is like doing puzzles with words. You take a string apart, examine each piece, decide what to do with it, then build something new. Once you can design algorithms for strings, you can solve a huge range of computer science problems—even ones that look complicated at first.</p>
 <p>In this activity, you will observe, modify, and implement some standard String algorithms using <em>traversals</em>.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
 
