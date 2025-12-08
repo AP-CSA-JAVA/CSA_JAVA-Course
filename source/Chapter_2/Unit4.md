@@ -1109,6 +1109,158 @@ Example output for even numbers:
 
 **Goals**
   - Manipulate Strings using loops
+
+When working with computers, an **algorithm** is just a set of steps you tell the computer to follow so it can solve a problem. Many problems involve **strings**, which are sequences of characters—letters, numbers, symbols, or spaces.
+
+Examples of strings:
+
+* `"Hello"`
+* `"123ABC"`
+* `"I like pizza!"`
+
+Working with strings helps develop algorithmic thinking because strings are everywhere: names, passwords, messages, data from websites, and more.
+
+
+Unlike numbers, strings:
+
+* Contain **characters**, not digits.
+* Have **order** (the first character is different from the last).
+* Can be **changed** or **inspected** character by character.
+* Often require **looping** or **conditions** to process.
+
+When creating algorithms with strings, we usually think about **how to examine or transform each character**.
+
+
+**Key Skills in String Algorithms**
+
+1  **Accessing characters**
+
+You can think of a string like a row of lockers, each with a number:
+
+```
+Index: 0 1 2 3 4
+String: H e l l o
+```
+
+If you want the first character, check index **0**.
+If you want the third character, check index **2**.
+
+This teaches students to think about **positions** and **indexing**, a key computing concept.
+
+---
+
+2  **Looping through characters**
+
+Many string algorithms use loops to check each character one at a time.
+
+If the task is:
+
+* Count vowels
+* Remove spaces
+* Encrypt a message
+
+…you usually repeat steps for each character.
+
+
+3  **Using conditions**
+
+Conditions (if-statements) are used to make decisions.
+
+Examples:
+
+* “If the character is a vowel, skip it.”
+* “If the character is a number, add it to the total.”
+* “If the character is uppercase, convert it.”
+
+This builds logical reasoning and decision-making.
+
+
+4  **Building new strings**
+
+Most algorithms either:
+
+* **filter** characters (remove some)
+* **transform** characters (change them)
+* **rearrange** characters (scramble, reverse, encode)
+
+We often create a new string piece by piece.
+
+Below is a step-by-step way to design any string-based algorithm:
+
+---
+
+**Step 1: Understand the Goal**
+
+Ask: **What should the final string look like?**
+
+**Examples**:
+
+* Only every other letter
+* No vowels
+* Replace certain letters
+* Reverse the text
+
+---
+
+**Step 2: Identify What Must Happen to Each Character**
+
+* “Do I keep this character?”
+* “Do I change it?”
+* “Do I ignore it?”
+
+
+---
+
+
+**Step 3: Plan the Steps**
+
+Write them out in English first (pseudocode).
+
+Example: *Remove vowels*
+
+1. Start with an empty result string
+2. Look at each character in the word
+3. If the character is NOT a vowel, add it to the result
+4. Show the result
+
+
+---
+
+
+**Step 4: Translate the Steps Into Code**
+
+This is the easy part once the logic is correct.
+
+
+---
+
+
+Why Learning String Algorithms Matters
+
+* **Improves problem-solving** — Students learn to break big problems into tiny steps.
+* **Builds logical thinking** — Conditions, loops, and indexing are used everywhere in CS.
+* **Prepares for real-world tasks** — Searching text, cleaning data, processing user input.
+* **Boosts creativity** — Students can make ciphers, message filters, text effects, and more.
+
+---
+
+**Examples of Classic String Problems**
+
+**Removing every other letter**: Teaches indexing and stepping through a string.
+
+**Removing vowels**: Teaches filtering and checking membership (is the character in a group?).
+
+**Replacing characters randomly**: Teaches how algorithms can modify data and use randomness.
+
+**Counting characters**: Teaches accumulation (counting while looping).
+
+**Reversing a string**: Teaches building strings in a different order.
+
+
+---
+
+
+Working with strings is like doing puzzles with words. You take a string apart, examine each piece, decide what to do with it, then build something new. Once you can design algorithms for strings, you can solve a huge range of computer science problems—even ones that look complicated at first.
 	
 In this activity, you will observe, modify, and implement some standard String algorithms using *traversals*.
 	
