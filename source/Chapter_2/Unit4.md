@@ -1179,7 +1179,7 @@ There are standard algorithms that utilize String traversals to:
 
 ---
 
-### Activity 4.3.1
+### Activity 4.3.1 - EveryOther, vowels, dbpq
 
 You will write 3 programs that will do the following:
   - Write a program that will remove every other letter within a string.
@@ -1190,10 +1190,10 @@ You will write 3 programs that will do the following:
 
 ---
 
-### Activity 4.3.2
+### Activity 4.3.2 - wordCount/ vowelCount/ Hexidecimal
 
 1. wordCount and vowelCount
-Write an algorithm that will ask the user for a phrase and return the number of words and vowels. HINT: the number of words is the number of spaces + 1.
+Write an algorithm that will ask the user for a phrase and return the number of words and vowels. HINT: the number of words is the number of spaces + 1.  
 
 Sample Output:
 ```java
