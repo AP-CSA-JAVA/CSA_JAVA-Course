@@ -1531,7 +1531,13 @@ Once we exit the second loop, we move on to the fifth row, which is printed norm
 Pay careful attention to the Break in Nested Loops example and the Continue in Nested Loops example, since they illustrate the important difference between break and continue. Break completely exits the loop it is called in; continue just skips the current iteration of the loop it is called in.
 
 
-**In Class Exercise**
+**Directions**:  
+
+- Write 3 Java pattern programs that demonstrate Nested Iteration.
+- Use the patterns that are posted in the class to create your programs.
+- Submit your **program code** and **test cases**.
+- Make sure that you include **dateTime** class in your program.
+
 
 
 ---
