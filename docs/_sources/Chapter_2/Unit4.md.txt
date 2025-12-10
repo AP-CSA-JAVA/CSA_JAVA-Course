@@ -1391,6 +1391,7 @@ Enter a hex string:
 **Goals**
   - Represent nested iterative processes.
   - Determine code that would be used to complete code segments.
+  - [Java Visualizer](https://cscircles.cemc.uwaterloo.ca/java_visualize/)
 	
 A nested iteration occurs when we have a loop inside of another loop, similar to nested conditional statements back in Unit 3. Here is the general structure:
 ```
@@ -1399,8 +1400,8 @@ loopOne {
 	do something
   loopTwo {
 	do something
-    loopThree {
-	do something
+       loopThree {
+		   do something
 	}
   }
 }
