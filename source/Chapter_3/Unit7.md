@@ -2601,7 +2601,7 @@ output.close();
 ---
 
 
-#### Activity 7.7.1 - Test Scores
+### Activity 7.7.1 - Test Scores
 
 Program Description:
 - Below are given a data set containing student test scores. Each row represents one test attempt.
@@ -2691,7 +2691,7 @@ public class StudentScoreAnalyzer {
 ---
 
 
-Activity 7.7.2:
+### Activity 7.7.2:
 
 **Program Description:**
 Students are given two inventory data sets from different systems:
