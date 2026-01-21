@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="Unit 8 2D Array" href="Unit8.html"><link rel="prev" title="Unit 6" href="Unit6.html">
 
-    <!-- Generated with Sphinx 8.1.3 and Furo 2025.09.25 -->
+    <!-- Generated with Sphinx 8.1.3 and Furo 2025.12.19 -->
         <title>Unit 7 ArrayList - CSA JAVA Course</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d111a655" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=580074bf" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=8dab3a3b" />
     
     
@@ -2741,8 +2741,419 @@ Compare 64 and 90 → No swap → {34, 25, 12, 22, 11, 64, 90}
 </section>
 </section>
 </section>
+<section id="arraylist-using-data-sets">
+<h2>7.7 ArrayList using data sets<a class="headerlink" href="#arraylist-using-data-sets" title="Link to this heading">¶</a></h2>
+<blockquote>
+<div><p>“Files are just long strings of text.
+We read them line by line, store the data in an <code class="docutils literal notranslate"><span class="pre">ArrayList</span></code>,
+then use the same list skills you already know.”</p>
+</div></blockquote>
+<p>When working with data files in Java, typical patterns are as follows:</p>
+<ol class="arabic simple">
+<li><p><strong>Read</strong> data from a file</p></li>
+<li><p><strong>Store</strong> data in an <code class="docutils literal notranslate"><span class="pre">ArrayList</span></code></p></li>
+<li><p><strong>Process or modify</strong> the data</p></li>
+<li><p><strong>Write</strong> the updated data back to a file</p></li>
+</ol>
+<p><strong>Common File Types (AP CSA Level)</strong></p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>File Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">.txt</span></code></p></td>
+<td><p>Plain text (one value per line or sentences)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">.csv</span></code></p></td>
+<td><p>Comma-separated values (rows &amp; columns)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>⚠️ <strong>Key AP rule:</strong> Files are treated as <strong>plain text</strong>, not spreadsheets.</p>
+<hr class="docutils" />
+<p><strong>Reading a TXT File (Scanner – Most AP-Friendly)</strong></p>
+<p><strong>Example File: <code class="docutils literal notranslate"><span class="pre">scores.txt</span></code></strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">85</span>
+<span class="mi">92</span>
+<span class="mi">78</span>
+<span class="mi">90</span>
+</pre></div>
+</div>
+<p><strong>Program Code</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.File</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.IOException</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ReadTextFile</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">scores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">File</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;scores.txt&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">file</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">input</span><span class="p">.</span><span class="na">hasNextInt</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">scores</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">input</span><span class="p">.</span><span class="na">nextInt</span><span class="p">());</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">scores</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>Reading a CSV File (Scanner + <code class="docutils literal notranslate"><span class="pre">split()</span></code>)</strong></p>
+<p><strong>Example File: <code class="docutils literal notranslate"><span class="pre">students.csv</span></code></strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Alice</span><span class="p">,</span><span class="mi">90</span>
+<span class="n">Bob</span><span class="p">,</span><span class="mi">85</span>
+<span class="n">Carlos</span><span class="p">,</span><span class="mi">78</span>
+</pre></div>
+</div>
+<p><strong>Program Code</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.File</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.IOException</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ReadCSV</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">grades</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;students.csv&quot;</span><span class="p">));</span>
+
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">input</span><span class="p">.</span><span class="na">hasNextLine</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+<span class="w">            </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">parts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">line</span><span class="p">.</span><span class="na">split</span><span class="p">(</span><span class="s">&quot;,&quot;</span><span class="p">);</span>
+
+<span class="w">            </span><span class="n">names</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">parts</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>
+<span class="w">            </span><span class="n">grades</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">parts</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">));</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">names</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">grades</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>Reading a File Using <code class="docutils literal notranslate"><span class="pre">BufferedReader</span></code> (Advanced)</strong></p>
+<p>This is <strong>not required</strong> for AP CSA but useful for comparison.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">BufferedReaderExample</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lines</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">BufferedReader</span><span class="w"> </span><span class="n">reader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedReader</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FileReader</span><span class="p">(</span><span class="s">&quot;data.txt&quot;</span><span class="p">));</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">line</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">((</span><span class="n">line</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reader</span><span class="p">.</span><span class="na">readLine</span><span class="p">())</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">lines</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">line</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">reader</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">lines</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>Modifying Data in an <code class="docutils literal notranslate"><span class="pre">ArrayList</span></code></strong></p>
+<p><strong>Example: Curve all grades by +5 (max 100)</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">grades</span><span class="p">.</span><span class="na">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">updated</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">grades</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">updated</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">updated</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">grades</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">updated</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>Writing Data Back to a File (<code class="docutils literal notranslate"><span class="pre">PrintWriter</span></code>)</strong></p>
+<p><strong>Writing Updated CSV</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.PrintWriter</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.IOException</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">WriteCSV</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">grades</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">names</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Alice&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">grades</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">95</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">PrintWriter</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PrintWriter</span><span class="p">(</span><span class="s">&quot;updated_students.csv&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">names</span><span class="p">.</span><span class="na">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">output</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">names</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;,&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">grades</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">));</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">output</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>Standard Data Workflow</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Read file → store → modify → write back</span>
+<span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="c1">// read</span>
+<span class="n">Scanner</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;values.txt&quot;</span><span class="p">));</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">input</span><span class="p">.</span><span class="na">hasNextInt</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">data</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">input</span><span class="p">.</span><span class="na">nextInt</span><span class="p">());</span>
+<span class="p">}</span>
+<span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+
+<span class="c1">// modify</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="na">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">data</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// write</span>
+<span class="n">PrintWriter</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PrintWriter</span><span class="p">(</span><span class="s">&quot;new_values.txt&quot;</span><span class="p">);</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">output</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="n">output</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<section id="activity-7-7-1-test-scores">
+<h3>Activity 7.7.1 - Test Scores<a class="headerlink" href="#activity-7-7-1-test-scores" title="Link to this heading">¶</a></h3>
+<p>Program Description:</p>
+<ul class="simple">
+<li><p>Below are given a data set containing student test scores. Each row represents one test attempt.</p></li>
+<li><p><em><strong>You will:</strong></em></p>
+<ul>
+<li><p>Read the data</p></li>
+<li><p>Store each column in a separate ArrayList</p></li>
+<li><p>Compute summary statistics</p></li>
+<li><p>Apply a score curve</p></li>
+<li><p>Output a formatted report</p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">StudentID</span><span class="p">,</span><span class="n">Name</span><span class="p">,</span><span class="n">TestName</span><span class="p">,</span><span class="n">Score</span>
+<span class="mi">1001</span><span class="p">,</span><span class="n">Alice</span> <span class="n">Nguyen</span><span class="p">,</span><span class="n">Unit</span> <span class="mi">1</span> <span class="n">Test</span><span class="p">,</span><span class="mi">78</span>
+<span class="mi">1002</span><span class="p">,</span><span class="n">Brandon</span> <span class="n">Lee</span><span class="p">,</span><span class="n">Unit</span> <span class="mi">1</span> <span class="n">Test</span><span class="p">,</span><span class="mi">85</span>
+<span class="mi">1003</span><span class="p">,</span><span class="n">Carlos</span> <span class="n">Martinez</span><span class="p">,</span><span class="n">Unit</span> <span class="mi">1</span> <span class="n">Test</span><span class="p">,</span><span class="mi">92</span>
+<span class="mi">1004</span><span class="p">,</span><span class="n">Diana</span> <span class="n">Patel</span><span class="p">,</span><span class="n">Unit</span> <span class="mi">1</span> <span class="n">Test</span><span class="p">,</span><span class="mi">88</span>
+<span class="mi">1005</span><span class="p">,</span><span class="n">Ethan</span> <span class="n">Johnson</span><span class="p">,</span><span class="n">Unit</span> <span class="mi">1</span> <span class="n">Test</span><span class="p">,</span><span class="mi">69</span>
+<span class="mi">1006</span><span class="p">,</span><span class="n">Fatima</span> <span class="n">Khan</span><span class="p">,</span><span class="n">Unit</span> <span class="mi">1</span> <span class="n">Test</span><span class="p">,</span><span class="mi">94</span>
+<span class="mi">1007</span><span class="p">,</span><span class="n">Grace</span> <span class="n">Kim</span><span class="p">,</span><span class="n">Unit</span> <span class="mi">1</span> <span class="n">Test</span><span class="p">,</span><span class="mi">81</span>
+<span class="mi">1008</span><span class="p">,</span><span class="n">Hannah</span> <span class="n">Brown</span><span class="p">,</span><span class="n">Unit</span> <span class="mi">1</span> <span class="n">Test</span><span class="p">,</span><span class="mi">73</span>
+<span class="mi">1009</span><span class="p">,</span><span class="n">Isaac</span> <span class="n">Wilson</span><span class="p">,</span><span class="n">Unit</span> <span class="mi">1</span> <span class="n">Test</span><span class="p">,</span><span class="mi">90</span>
+<span class="mi">1010</span><span class="p">,</span><span class="n">Jasmine</span> <span class="n">Lopez</span><span class="p">,</span><span class="n">Unit</span> <span class="mi">1</span> <span class="n">Test</span><span class="p">,</span><span class="mi">84</span>
+<span class="mi">1011</span><span class="p">,</span><span class="n">Kevin</span> <span class="n">Chen</span><span class="p">,</span><span class="n">Unit</span> <span class="mi">1</span> <span class="n">Test</span><span class="p">,</span><span class="mi">76</span>
+<span class="mi">1012</span><span class="p">,</span><span class="n">Liam</span> <span class="n">OConnor</span><span class="p">,</span><span class="n">Unit</span> <span class="mi">1</span> <span class="n">Test</span><span class="p">,</span><span class="mi">89</span>
+<span class="mi">1013</span><span class="p">,</span><span class="n">Maya</span> <span class="n">Rodriguez</span><span class="p">,</span><span class="n">Unit</span> <span class="mi">1</span> <span class="n">Test</span><span class="p">,</span><span class="mi">95</span>
+<span class="mi">1014</span><span class="p">,</span><span class="n">Noah</span> <span class="n">Smith</span><span class="p">,</span><span class="n">Unit</span> <span class="mi">1</span> <span class="n">Test</span><span class="p">,</span><span class="mi">67</span>
+<span class="mi">1015</span><span class="p">,</span><span class="n">Olivia</span> <span class="n">Davis</span><span class="p">,</span><span class="n">Unit</span> <span class="mi">1</span> <span class="n">Test</span><span class="p">,</span><span class="mi">88</span>
+</pre></div>
+</div>
+<p><strong>Required:</strong></p>
+<ul class="simple">
+<li><p>Store student IDs, names, test names, and scores using ArrayList</p></li>
+<li><p>Calculate:</p>
+<ul>
+<li><p>Average score</p></li>
+<li><p>Highest score</p></li>
+<li><p>Lowest score</p></li>
+</ul>
+</li>
+<li><p>Curve all scores by +5 points (max score = 100)</p></li>
+<li><p>Print updated scores in a clean table</p></li>
+<li><p>Count how many students scored 90 or above after the curve</p></li>
+</ul>
+<p><strong>Starter Code</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">StudentScoreAnalyzer</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">studentIDs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">testNames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">scores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="s">&quot;1001,Alice Nguyen,Unit 1 Test,78&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;1002,Brandon Lee,Unit 1 Test,85&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;1003,Carlos Martinez,Unit 1 Test,92&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;1004,Diana Patel,Unit 1 Test,88&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;1005,Ethan Johnson,Unit 1 Test,69&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;1006,Fatima Khan,Unit 1 Test,94&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;1007,Grace Kim,Unit 1 Test,81&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;1008,Hannah Brown,Unit 1 Test,73&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;1009,Isaac Wilson,Unit 1 Test,90&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;1010,Jasmine Lopez,Unit 1 Test,84&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;1011,Kevin Chen,Unit 1 Test,76&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;1012,Liam OConnor,Unit 1 Test,89&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;1013,Maya Rodriguez,Unit 1 Test,95&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;1014,Noah Smith,Unit 1 Test,67&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;1015,Olivia Davis,Unit 1 Test,88&quot;</span><span class="p">};</span>
+
+<span class="w">        </span><span class="c1">// TODO 1: Read data into ArrayLists</span>
+
+<span class="w">        </span><span class="c1">// TODO 2: Calculate average, highest, and lowest score</span>
+
+<span class="w">        </span><span class="c1">// TODO 3: Curve scores by +5 (max 100)</span>
+
+<span class="w">        </span><span class="c1">// TODO 4: Count how many students scored 90 or above</span>
+
+<span class="w">        </span><span class="c1">// TODO 5: Print updated report</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p>Activity 7.7.2:</p>
+<p><strong>Program Description:</strong>
+Students are given two inventory data sets from different systems:
+One from the warehouse
+One from the storefront system
+Each product appears in both systems, but the quantities may not match.</p>
+<p><strong>Required:</strong></p>
+<ul class="simple">
+<li><p>Align products using the product ID</p></li>
+<li><p>Compare quantities</p></li>
+<li><p>Identify mismatches</p></li>
+<li><p>Identify Matching quantities</p></li>
+<li><p>Generate discrepancy reports</p></li>
+<li><p>Store each column in its own ArrayList</p></li>
+<li><p>Match records using ProductID</p></li>
+</ul>
+<p><strong>Output should show:</strong></p>
+<ul class="simple">
+<li><p>Total inventory in each system</p></li>
+<li><p>Number of mismatched products</p></li>
+<li><p>Print a discrepancy report showing only mismatches</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ProductID</span><span class="p">,</span><span class="n">ProductName</span><span class="p">,</span><span class="n">Category</span><span class="p">,</span><span class="n">WarehouseQty</span>
+<span class="mi">2001</span><span class="p">,</span><span class="n">USB</span><span class="o">-</span><span class="n">C</span> <span class="n">Cable</span><span class="p">,</span><span class="n">Electronics</span><span class="p">,</span><span class="mi">120</span>
+<span class="mi">2002</span><span class="p">,</span><span class="n">Wireless</span> <span class="n">Mouse</span><span class="p">,</span><span class="n">Electronics</span><span class="p">,</span><span class="mi">85</span>
+<span class="mi">2003</span><span class="p">,</span><span class="n">Laptop</span> <span class="n">Stand</span><span class="p">,</span><span class="n">Accessories</span><span class="p">,</span><span class="mi">60</span>
+<span class="mi">2004</span><span class="p">,</span><span class="n">Notebook</span><span class="p">,</span><span class="n">Stationery</span><span class="p">,</span><span class="mi">200</span>
+<span class="mi">2005</span><span class="p">,</span><span class="n">Pen</span> <span class="n">Pack</span><span class="p">,</span><span class="n">Stationery</span><span class="p">,</span><span class="mi">180</span>
+<span class="mi">2006</span><span class="p">,</span><span class="n">Backpack</span><span class="p">,</span><span class="n">Accessories</span><span class="p">,</span><span class="mi">45</span>
+<span class="mi">2007</span><span class="p">,</span><span class="n">Water</span> <span class="n">Bottle</span><span class="p">,</span><span class="n">Accessories</span><span class="p">,</span><span class="mi">75</span>
+<span class="mi">2008</span><span class="p">,</span><span class="n">Keyboard</span><span class="p">,</span><span class="n">Electronics</span><span class="p">,</span><span class="mi">90</span>
+<span class="mi">2009</span><span class="p">,</span><span class="n">HDMI</span> <span class="n">Cable</span><span class="p">,</span><span class="n">Electronics</span><span class="p">,</span><span class="mi">110</span>
+<span class="mi">2010</span><span class="p">,</span><span class="n">Phone</span> <span class="n">Charger</span><span class="p">,</span><span class="n">Electronics</span><span class="p">,</span><span class="mi">95</span>
+<span class="mi">2011</span><span class="p">,</span><span class="n">Desk</span> <span class="n">Lamp</span><span class="p">,</span><span class="n">Home</span><span class="p">,</span><span class="mi">40</span>
+<span class="mi">2012</span><span class="p">,</span><span class="n">Calculator</span><span class="p">,</span><span class="n">Electronics</span><span class="p">,</span><span class="mi">55</span>
+<span class="mi">2013</span><span class="p">,</span><span class="n">Sticky</span> <span class="n">Notes</span><span class="p">,</span><span class="n">Stationery</span><span class="p">,</span><span class="mi">300</span>
+<span class="mi">2014</span><span class="p">,</span><span class="n">Monitor</span> <span class="n">Stand</span><span class="p">,</span><span class="n">Electronics</span><span class="p">,</span><span class="mi">50</span>
+<span class="mi">2015</span><span class="p">,</span><span class="n">Webcam</span><span class="p">,</span><span class="n">Electronics</span><span class="p">,</span><span class="mi">65</span>
+<span class="mi">2016</span><span class="p">,</span><span class="n">Headphones</span><span class="p">,</span><span class="n">Electronics</span><span class="p">,</span><span class="mi">70</span>
+<span class="mi">2017</span><span class="p">,</span><span class="n">Mouse</span> <span class="n">Pad</span><span class="p">,</span><span class="n">Accessories</span><span class="p">,</span><span class="mi">140</span>
+<span class="mi">2018</span><span class="p">,</span><span class="n">Planner</span><span class="p">,</span><span class="n">Stationery</span><span class="p">,</span><span class="mi">160</span>
+<span class="mi">2019</span><span class="p">,</span><span class="n">Flash</span> <span class="n">Drive</span><span class="p">,</span><span class="n">Electronics</span><span class="p">,</span><span class="mi">130</span>
+<span class="mi">2020</span><span class="p">,</span><span class="n">Whiteboard</span> <span class="n">Marker</span><span class="p">,</span><span class="n">Stationery</span><span class="p">,</span><span class="mi">210</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ProductID</span><span class="p">,</span><span class="n">ProductName</span><span class="p">,</span><span class="n">Category</span><span class="p">,</span><span class="n">StoreQty</span>
+<span class="mi">2001</span><span class="p">,</span><span class="n">USB</span><span class="o">-</span><span class="n">C</span> <span class="n">Cable</span><span class="p">,</span><span class="n">Electronics</span><span class="p">,</span><span class="mi">118</span>
+<span class="mi">2002</span><span class="p">,</span><span class="n">Wireless</span> <span class="n">Mouse</span><span class="p">,</span><span class="n">Electronics</span><span class="p">,</span><span class="mi">85</span>
+<span class="mi">2003</span><span class="p">,</span><span class="n">Laptop</span> <span class="n">Stand</span><span class="p">,</span><span class="n">Accessories</span><span class="p">,</span><span class="mi">62</span>
+<span class="mi">2004</span><span class="p">,</span><span class="n">Notebook</span><span class="p">,</span><span class="n">Stationery</span><span class="p">,</span><span class="mi">198</span>
+<span class="mi">2005</span><span class="p">,</span><span class="n">Pen</span> <span class="n">Pack</span><span class="p">,</span><span class="n">Stationery</span><span class="p">,</span><span class="mi">180</span>
+<span class="mi">2006</span><span class="p">,</span><span class="n">Backpack</span><span class="p">,</span><span class="n">Accessories</span><span class="p">,</span><span class="mi">40</span>
+<span class="mi">2007</span><span class="p">,</span><span class="n">Water</span> <span class="n">Bottle</span><span class="p">,</span><span class="n">Accessories</span><span class="p">,</span><span class="mi">75</span>
+<span class="mi">2008</span><span class="p">,</span><span class="n">Keyboard</span><span class="p">,</span><span class="n">Electronics</span><span class="p">,</span><span class="mi">92</span>
+<span class="mi">2009</span><span class="p">,</span><span class="n">HDMI</span> <span class="n">Cable</span><span class="p">,</span><span class="n">Electronics</span><span class="p">,</span><span class="mi">110</span>
+<span class="mi">2010</span><span class="p">,</span><span class="n">Phone</span> <span class="n">Charger</span><span class="p">,</span><span class="n">Electronics</span><span class="p">,</span><span class="mi">90</span>
+<span class="mi">2011</span><span class="p">,</span><span class="n">Desk</span> <span class="n">Lamp</span><span class="p">,</span><span class="n">Home</span><span class="p">,</span><span class="mi">38</span>
+<span class="mi">2012</span><span class="p">,</span><span class="n">Calculator</span><span class="p">,</span><span class="n">Electronics</span><span class="p">,</span><span class="mi">55</span>
+<span class="mi">2013</span><span class="p">,</span><span class="n">Sticky</span> <span class="n">Notes</span><span class="p">,</span><span class="n">Stationery</span><span class="p">,</span><span class="mi">295</span>
+<span class="mi">2014</span><span class="p">,</span><span class="n">Monitor</span> <span class="n">Stand</span><span class="p">,</span><span class="n">Electronics</span><span class="p">,</span><span class="mi">48</span>
+<span class="mi">2015</span><span class="p">,</span><span class="n">Webcam</span><span class="p">,</span><span class="n">Electronics</span><span class="p">,</span><span class="mi">70</span>
+<span class="mi">2016</span><span class="p">,</span><span class="n">Headphones</span><span class="p">,</span><span class="n">Electronics</span><span class="p">,</span><span class="mi">68</span>
+<span class="mi">2017</span><span class="p">,</span><span class="n">Mouse</span> <span class="n">Pad</span><span class="p">,</span><span class="n">Accessories</span><span class="p">,</span><span class="mi">140</span>
+<span class="mi">2018</span><span class="p">,</span><span class="n">Planner</span><span class="p">,</span><span class="n">Stationery</span><span class="p">,</span><span class="mi">155</span>
+<span class="mi">2019</span><span class="p">,</span><span class="n">Flash</span> <span class="n">Drive</span><span class="p">,</span><span class="n">Electronics</span><span class="p">,</span><span class="mi">130</span>
+<span class="mi">2020</span><span class="p">,</span><span class="n">Whiteboard</span> <span class="n">Marker</span><span class="p">,</span><span class="n">Stationery</span><span class="p">,</span><span class="mi">205</span>
+</pre></div>
+</div>
+<p><strong>Complete one of the Extensions below:</strong></p>
+<ul class="simple">
+<li><p>Identify products where discrepancy &gt; 5 units</p></li>
+<li><p>Sort discrepancy report by largest difference</p></li>
+<li><p>Calculate total value using a price list</p></li>
+<li><p>Convert to a menu-driven program</p></li>
+<li><p>Add error handling for missing product IDs</p></li>
+</ul>
+<p><strong>Starter Code</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">InventoryReconciliation</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">productIDs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">productNames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">warehouseQty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">storeQty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">warehouseData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="s">&quot;2001,USB-C Cable,120&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;2002,Wireless Mouse,85&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;2003,Laptop Stand,60&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;2004,Notebook,200&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;2005,Pen Pack,180&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;2006,Backpack,45&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;2007,Water Bottle,75&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;2008,Keyboard,90&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;2009,HDMI Cable,110&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;2010,Phone Charger,95&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;2011,Desk Lamp,40&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;2012,Calculator,55&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;2013,Sticky Notes,300&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;2014,Monitor Stand,50&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;2015,Webcam,65&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;2016,Headphones,70&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;2017,Mouse Pad,140&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;2018,Planner,160&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;2019,Flash Drive,130&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;2020,Whiteboard Marker,210&quot;</span>
+<span class="w">        </span><span class="p">};</span>
+
+<span class="w">        </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">storeData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="s">&quot;2001,118&quot;</span><span class="p">,</span><span class="s">&quot;2002,85&quot;</span><span class="p">,</span><span class="s">&quot;2003,62&quot;</span><span class="p">,</span><span class="s">&quot;2004,198&quot;</span><span class="p">,</span><span class="s">&quot;2005,180&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;2006,40&quot;</span><span class="p">,</span><span class="s">&quot;2007,75&quot;</span><span class="p">,</span><span class="s">&quot;2008,92&quot;</span><span class="p">,</span><span class="s">&quot;2009,110&quot;</span><span class="p">,</span><span class="s">&quot;2010,90&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;2011,38&quot;</span><span class="p">,</span><span class="s">&quot;2012,55&quot;</span><span class="p">,</span><span class="s">&quot;2013,295&quot;</span><span class="p">,</span><span class="s">&quot;2014,48&quot;</span><span class="p">,</span><span class="s">&quot;2015,70&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;2016,68&quot;</span><span class="p">,</span><span class="s">&quot;2017,140&quot;</span><span class="p">,</span><span class="s">&quot;2018,155&quot;</span><span class="p">,</span><span class="s">&quot;2019,130&quot;</span><span class="p">,</span><span class="s">&quot;2020,205&quot;</span>
+<span class="w">        </span><span class="p">};</span>
+
+<span class="w">        </span><span class="c1">// TODO 1: Read warehouse data</span>
+
+<span class="w">        </span><span class="c1">// TODO 2: Match store quantities to products</span>
+
+<span class="w">        </span><span class="c1">// TODO 3: Identify mismatches</span>
+
+<span class="w">        </span><span class="c1">// TODO 4: Print discrepancy report</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
 <section id="ethical-issues-around-data-collection">
-<h2>7.7 Ethical Issues Around Data Collection<a class="headerlink" href="#ethical-issues-around-data-collection" title="Link to this heading">¶</a></h2>
+<h2>7.8 Ethical Issues Around Data Collection<a class="headerlink" href="#ethical-issues-around-data-collection" title="Link to this heading">¶</a></h2>
 <p><a class="reference external" href="https://apcentral.collegeboard.org/courses/ap-computer-science-a/classroom-resources/ethical-issues-internet-content-providers-and-internet-service-providers">The original content can be found here:</a></p>
 <p>Ethical Issues: Internet Content Providers and Internet Service Providers
 Background on ethical issues, and activities that illustrate these issues.
@@ -2955,7 +3366,11 @@ Hoboken, New Jersey: Wiley, 2003.</p>
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#ethical-issues-around-data-collection">7.7 Ethical Issues Around Data Collection</a></li>
+<li><a class="reference internal" href="#arraylist-using-data-sets">7.7 ArrayList using data sets</a><ul>
+<li><a class="reference internal" href="#activity-7-7-1-test-scores">Activity 7.7.1 - Test Scores</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ethical-issues-around-data-collection">7.8 Ethical Issues Around Data Collection</a></li>
 </ul>
 </li>
 </ul>

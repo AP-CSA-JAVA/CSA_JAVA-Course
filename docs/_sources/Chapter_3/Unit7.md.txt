@@ -2392,7 +2392,439 @@ Comparators can be used in a powerful way to control the sorting order in Java. 
 
 
 
-## 7.7 Ethical Issues Around Data Collection
+## 7.7 ArrayList using data sets
+
+> “Files are just long strings of text.
+> We read them line by line, store the data in an `ArrayList`,
+> then use the same list skills you already know.”
+
+When working with data files in Java, typical patterns are as follows:
+
+1. **Read** data from a file
+2. **Store** data in an `ArrayList`
+3. **Process or modify** the data
+4. **Write** the updated data back to a file
+
+**Common File Types (AP CSA Level)**
+
+| File Type | Description                                  |
+| --------- | -------------------------------------------- |
+| `.txt`    | Plain text (one value per line or sentences) |
+| `.csv`    | Comma-separated values (rows & columns)      |
+
+⚠️ **Key AP rule:** Files are treated as **plain text**, not spreadsheets.
+
+---
+
+**Reading a TXT File (Scanner – Most AP-Friendly)**
+
+**Example File: `scores.txt`**
+
+```
+85
+92
+78
+90
+```
+
+**Program Code**
+
+```java
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ReadTextFile {
+    public static void main(String[] args) throws IOException {
+        ArrayList<Integer> scores = new ArrayList<>();
+
+        File file = new File("scores.txt");
+        Scanner input = new Scanner(file);
+
+        while (input.hasNextInt()) {
+            scores.add(input.nextInt());
+        }
+
+        input.close();
+
+        System.out.println(scores);
+    }
+}
+```
+
+
+---
+
+**Reading a CSV File (Scanner + `split()`)**
+
+**Example File: `students.csv`**
+
+```
+Alice,90
+Bob,85
+Carlos,78
+```
+
+**Program Code**
+
+```java
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ReadCSV {
+    public static void main(String[] args) throws IOException {
+        ArrayList<String> names = new ArrayList<>();
+        ArrayList<Integer> grades = new ArrayList<>();
+
+        Scanner input = new Scanner(new File("students.csv"));
+
+        while (input.hasNextLine()) {
+            String line = input.nextLine();
+            String[] parts = line.split(",");
+
+            names.add(parts[0]);
+            grades.add(Integer.parseInt(parts[1]));
+        }
+
+        input.close();
+
+        System.out.println(names);
+        System.out.println(grades);
+    }
+}
+```
+
+---
+
+**Reading a File Using `BufferedReader` (Advanced)**
+
+This is **not required** for AP CSA but useful for comparison.
+
+```java
+import java.io.*;
+import java.util.ArrayList;
+
+public class BufferedReaderExample {
+    public static void main(String[] args) throws IOException {
+        ArrayList<String> lines = new ArrayList<>();
+
+        BufferedReader reader = new BufferedReader(new FileReader("data.txt"));
+        String line;
+
+        while ((line = reader.readLine()) != null) {
+            lines.add(line);
+        }
+
+        reader.close();
+
+        System.out.println(lines);
+    }
+}
+```
+
+---
+
+**Modifying Data in an `ArrayList`**
+
+**Example: Curve all grades by +5 (max 100)**
+
+```java
+for (int i = 0; i < grades.size(); i++) {
+    int updated = grades.get(i) + 5;
+    if (updated > 100) {
+        updated = 100;
+    }
+    grades.set(i, updated);
+}
+```
+
+---
+
+**Writing Data Back to a File (`PrintWriter`)**
+
+**Writing Updated CSV**
+
+```java
+import java.io.PrintWriter;
+import java.io.IOException;
+
+public class WriteCSV {
+    public static void main(String[] args) throws IOException {
+        ArrayList<String> names = new ArrayList<>();
+        ArrayList<Integer> grades = new ArrayList<>();
+
+        names.add("Alice");
+        grades.add(95);
+
+        PrintWriter output = new PrintWriter("updated_students.csv");
+
+        for (int i = 0; i < names.size(); i++) {
+            output.println(names.get(i) + "," + grades.get(i));
+        }
+
+        output.close();
+    }
+}
+```
+
+---
+
+**Standard Data Workflow**
+
+```java
+// Read file → store → modify → write back
+ArrayList<Integer> data = new ArrayList<>();
+
+// read
+Scanner input = new Scanner(new File("values.txt"));
+while (input.hasNextInt()) {
+    data.add(input.nextInt());
+}
+input.close();
+
+// modify
+for (int i = 0; i < data.size(); i++) {
+    data.set(i, data.get(i) * 2);
+}
+
+// write
+PrintWriter output = new PrintWriter("new_values.txt");
+for (int value : data) {
+    output.println(value);
+}
+output.close();
+```
+
+---
+
+
+#### Activity 7.7.1 - Test Scores
+
+Program Description:
+- Below are given a data set containing student test scores. Each row represents one test attempt.
+- ***You will:***
+	- Read the data
+	- Store each column in a separate ArrayList
+	- Compute summary statistics
+	- Apply a score curve
+	- Output a formatted report
+	
+
+```
+StudentID,Name,TestName,Score
+1001,Alice Nguyen,Unit 1 Test,78
+1002,Brandon Lee,Unit 1 Test,85
+1003,Carlos Martinez,Unit 1 Test,92
+1004,Diana Patel,Unit 1 Test,88
+1005,Ethan Johnson,Unit 1 Test,69
+1006,Fatima Khan,Unit 1 Test,94
+1007,Grace Kim,Unit 1 Test,81
+1008,Hannah Brown,Unit 1 Test,73
+1009,Isaac Wilson,Unit 1 Test,90
+1010,Jasmine Lopez,Unit 1 Test,84
+1011,Kevin Chen,Unit 1 Test,76
+1012,Liam OConnor,Unit 1 Test,89
+1013,Maya Rodriguez,Unit 1 Test,95
+1014,Noah Smith,Unit 1 Test,67
+1015,Olivia Davis,Unit 1 Test,88
+```
+
+
+**Required:**
+- Store student IDs, names, test names, and scores using ArrayList
+- Calculate:
+	- Average score
+	- Highest score
+	- Lowest score
+- Curve all scores by +5 points (max score = 100)
+- Print updated scores in a clean table
+- Count how many students scored 90 or above after the curve
+
+**Starter Code**
+
+```java
+import java.util.ArrayList;
+
+public class StudentScoreAnalyzer {
+
+    public static void main(String[] args) {
+
+        ArrayList<Integer> studentIDs = new ArrayList<>();
+        ArrayList<String> names = new ArrayList<>();
+        ArrayList<String> testNames = new ArrayList<>();
+        ArrayList<Integer> scores = new ArrayList<>();
+
+        String[] data = {
+            "1001,Alice Nguyen,Unit 1 Test,78",
+            "1002,Brandon Lee,Unit 1 Test,85",
+            "1003,Carlos Martinez,Unit 1 Test,92",
+            "1004,Diana Patel,Unit 1 Test,88",
+            "1005,Ethan Johnson,Unit 1 Test,69",
+            "1006,Fatima Khan,Unit 1 Test,94",
+            "1007,Grace Kim,Unit 1 Test,81",
+            "1008,Hannah Brown,Unit 1 Test,73",
+            "1009,Isaac Wilson,Unit 1 Test,90",
+            "1010,Jasmine Lopez,Unit 1 Test,84",
+            "1011,Kevin Chen,Unit 1 Test,76",
+            "1012,Liam OConnor,Unit 1 Test,89",
+            "1013,Maya Rodriguez,Unit 1 Test,95",
+            "1014,Noah Smith,Unit 1 Test,67",
+            "1015,Olivia Davis,Unit 1 Test,88"};
+
+        // TODO 1: Read data into ArrayLists
+
+        // TODO 2: Calculate average, highest, and lowest score
+
+        // TODO 3: Curve scores by +5 (max 100)
+
+        // TODO 4: Count how many students scored 90 or above
+
+        // TODO 5: Print updated report
+    }
+}
+```
+
+
+---
+
+
+Activity 7.7.2:
+
+**Program Description:**
+Students are given two inventory data sets from different systems:
+One from the warehouse
+One from the storefront system
+Each product appears in both systems, but the quantities may not match.
+
+**Required:**
+- Align products using the product ID
+- Compare quantities
+- Identify mismatches
+- Identify Matching quantities
+- Generate discrepancy reports
+- Store each column in its own ArrayList
+- Match records using ProductID
+
+
+**Output should show:**
+- Total inventory in each system
+- Number of mismatched products
+- Print a discrepancy report showing only mismatches
+
+```
+ProductID,ProductName,Category,WarehouseQty
+2001,USB-C Cable,Electronics,120
+2002,Wireless Mouse,Electronics,85
+2003,Laptop Stand,Accessories,60
+2004,Notebook,Stationery,200
+2005,Pen Pack,Stationery,180
+2006,Backpack,Accessories,45
+2007,Water Bottle,Accessories,75
+2008,Keyboard,Electronics,90
+2009,HDMI Cable,Electronics,110
+2010,Phone Charger,Electronics,95
+2011,Desk Lamp,Home,40
+2012,Calculator,Electronics,55
+2013,Sticky Notes,Stationery,300
+2014,Monitor Stand,Electronics,50
+2015,Webcam,Electronics,65
+2016,Headphones,Electronics,70
+2017,Mouse Pad,Accessories,140
+2018,Planner,Stationery,160
+2019,Flash Drive,Electronics,130
+2020,Whiteboard Marker,Stationery,210
+```
+
+```
+ProductID,ProductName,Category,StoreQty
+2001,USB-C Cable,Electronics,118
+2002,Wireless Mouse,Electronics,85
+2003,Laptop Stand,Accessories,62
+2004,Notebook,Stationery,198
+2005,Pen Pack,Stationery,180
+2006,Backpack,Accessories,40
+2007,Water Bottle,Accessories,75
+2008,Keyboard,Electronics,92
+2009,HDMI Cable,Electronics,110
+2010,Phone Charger,Electronics,90
+2011,Desk Lamp,Home,38
+2012,Calculator,Electronics,55
+2013,Sticky Notes,Stationery,295
+2014,Monitor Stand,Electronics,48
+2015,Webcam,Electronics,70
+2016,Headphones,Electronics,68
+2017,Mouse Pad,Accessories,140
+2018,Planner,Stationery,155
+2019,Flash Drive,Electronics,130
+2020,Whiteboard Marker,Stationery,205
+```
+
+**Complete one of the Extensions below:**
+
+- Identify products where discrepancy > 5 units
+- Sort discrepancy report by largest difference
+- Calculate total value using a price list
+- Convert to a menu-driven program
+- Add error handling for missing product IDs
+
+
+**Starter Code**
+```java
+import java.util.ArrayList;
+
+public class InventoryReconciliation {
+
+    public static void main(String[] args) {
+
+        ArrayList<Integer> productIDs = new ArrayList<>();
+        ArrayList<String> productNames = new ArrayList<>();
+        ArrayList<Integer> warehouseQty = new ArrayList<>();
+        ArrayList<Integer> storeQty = new ArrayList<>();
+
+        String[] warehouseData = {
+            "2001,USB-C Cable,120",
+            "2002,Wireless Mouse,85",
+            "2003,Laptop Stand,60",
+            "2004,Notebook,200",
+            "2005,Pen Pack,180",
+            "2006,Backpack,45",
+            "2007,Water Bottle,75",
+            "2008,Keyboard,90",
+            "2009,HDMI Cable,110",
+            "2010,Phone Charger,95",
+            "2011,Desk Lamp,40",
+            "2012,Calculator,55",
+            "2013,Sticky Notes,300",
+            "2014,Monitor Stand,50",
+            "2015,Webcam,65",
+            "2016,Headphones,70",
+            "2017,Mouse Pad,140",
+            "2018,Planner,160",
+            "2019,Flash Drive,130",
+            "2020,Whiteboard Marker,210"
+        };
+
+        String[] storeData = {
+            "2001,118","2002,85","2003,62","2004,198","2005,180",
+            "2006,40","2007,75","2008,92","2009,110","2010,90",
+            "2011,38","2012,55","2013,295","2014,48","2015,70",
+            "2016,68","2017,140","2018,155","2019,130","2020,205"
+        };
+
+        // TODO 1: Read warehouse data
+
+        // TODO 2: Match store quantities to products
+
+        // TODO 3: Identify mismatches
+
+        // TODO 4: Print discrepancy report
+    }
+}
+```
+## 7.8 Ethical Issues Around Data Collection
 
 [The original content can be found here:](https://apcentral.collegeboard.org/courses/ap-computer-science-a/classroom-resources/ethical-issues-internet-content-providers-and-internet-service-providers)
 
