@@ -2823,6 +2823,112 @@ public class InventoryReconciliation {
     }
 }
 ```
+
+
+---
+
+
+#### Project: Video Game Library (Option 1)
+
+Dataset:
+
+100 video games × 10 columns. Example columns:
+Title
+Platform
+Genre
+Developer
+Publisher
+Release Year
+ESRB Rating
+Metacritic Score
+Sales (millions)
+Language
+
+CSV Example:
+
+| Title	| Platform | Genre	| Developer	| Publisher	| Year	| ESRB	| MetaScore	| Sales | Language |
+| :---: | :---:    | :---:  | :---:     | :---:     | :---: | :---: | :---:     | :---: | :---:    |
+| The Legend of Zelda: Breath of the Wild |	Switch	| Adventure	| Nintendo	| Nintendo | 2017 |	E10+ |	97	| 25 |	English |
+| God of War |	PS4	Action	| Santa Monica Studio |	Sony Interactive |	2018 |	M	| 94 | 12 | English |
+
+Student Requirements:
+ - Read CSV into an ArrayList of objects
+ - Create a VideoGame class with 10 attributes
+ - Store each row as a VideoGame object in ArrayList<VideoGame>
+ - Add / Remove Games
+ - Add a new game via user input
+ - Remove a game by title or index
+ - Contains / Search
+ - Check if a game is in the library (by title, developer, or genre)
+ - Get / Set
+ - Retrieve a game by index
+ - Update attributes of a game (like score or sales)
+
+Optional Extras for Challenge:
+ - Sort games by sales, Metacritic score, or release year
+ - Filter games by platform, genre, or ESRB rating
+ - Calculate average sales per platform
+ - Save changes back to CSV
+ - Why This Works for AP CSA
+
+Submit your finished code as a .java file.  Provide appropriate comments within your program.  Use Java Time API to display Local Date Time.  Submit one document for your test case(s) showing that program works as intended (pdf).
+
+---
+---
+
+#### Project: Movie Ratings Database (Option 2)
+
+Dataset:
+
+100 movies × 10 columns. Example columns:
+Title
+Genre
+Director
+Year
+Runtime (minutes)
+IMDb Rating
+Rotten Tomatoes Rating
+Box Office Gross
+Language
+Country
+
+CSV Example:
+
+| Title	| Genre	 | Director	| Year	| Runtime |IMDb | RT |	BoxOffice |	Language | Country |
+| :---: | :---:  | :---:  | :---:     | :---:     | :---: | :---: | :---: | :---: | :---:  |
+| Inception |	Sci-Fi | Nolan | 2010 |	148	| 8.8 |	87	| 829895144 | English | USA |
+| Spirited Away | Fantasy |	Miyazaki |	2001 | 125	| 8.6 | 97 | 355467855 | Japanese | Japan |
+
+Student Requirements:
+
+- Read CSV into an ArrayList of objects
+- Create a Movie class with 10 attributes.
+- Store each row as a Movie object in an ArrayList<Movie>.
+- Add / Remove Movies
+- Add a new movie via user input.
+- Remove a movie by title or index.
+- Contains / Search
+- Check if a movie is in the database (e.g., by title or director).
+- Get / Set
+- Retrieve a movie by index.
+- Update attributes of a movie (e.g., change IMDb rating).
+
+
+Bonus Features (Optional)
+- Sort movies by year, rating, or box office.
+- Filter by genre or director.
+- Calculate average rating per genre.
+- Save changes back to CSV.
+- Why This Works for AP CSA
+
+
+
+Encourages data handling skills with CSV parsing.
+
+
+---
+
+
 ## 7.8 Ethical Issues Around Data Collection
 
 [The original content can be found here:](https://apcentral.collegeboard.org/courses/ap-computer-science-a/classroom-resources/ethical-issues-internet-content-providers-and-internet-service-providers)

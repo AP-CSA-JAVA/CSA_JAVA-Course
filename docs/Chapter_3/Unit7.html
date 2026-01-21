@@ -3151,8 +3151,172 @@ Each product appears in both systems, but the quantities may not match.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
+<hr class="docutils" />
+<section id="project-video-game-library-option-1">
+<h4>Project: Video Game Library (Option 1)<a class="headerlink" href="#project-video-game-library-option-1" title="Link to this heading">¶</a></h4>
+<p>Dataset:</p>
+<p>100 video games × 10 columns. Example columns:
+Title
+Platform
+Genre
+Developer
+Publisher
+Release Year
+ESRB Rating
+Metacritic Score
+Sales (millions)
+Language</p>
+<p>CSV Example:</p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>Title</p></th>
+<th class="head text-center"><p>Platform</p></th>
+<th class="head text-center"><p>Genre</p></th>
+<th class="head text-center"><p>Developer</p></th>
+<th class="head text-center"><p>Publisher</p></th>
+<th class="head text-center"><p>Year</p></th>
+<th class="head text-center"><p>ESRB</p></th>
+<th class="head text-center"><p>MetaScore</p></th>
+<th class="head text-center"><p>Sales</p></th>
+<th class="head text-center"><p>Language</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>The Legend of Zelda: Breath of the Wild</p></td>
+<td class="text-center"><p>Switch</p></td>
+<td class="text-center"><p>Adventure</p></td>
+<td class="text-center"><p>Nintendo</p></td>
+<td class="text-center"><p>Nintendo</p></td>
+<td class="text-center"><p>2017</p></td>
+<td class="text-center"><p>E10+</p></td>
+<td class="text-center"><p>97</p></td>
+<td class="text-center"><p>25</p></td>
+<td class="text-center"><p>English</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>God of War</p></td>
+<td class="text-center"><p>PS4	Action</p></td>
+<td class="text-center"><p>Santa Monica Studio</p></td>
+<td class="text-center"><p>Sony Interactive</p></td>
+<td class="text-center"><p>2018</p></td>
+<td class="text-center"><p>M</p></td>
+<td class="text-center"><p>94</p></td>
+<td class="text-center"><p>12</p></td>
+<td class="text-center"><p>English</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Student Requirements:</p>
+<ul class="simple">
+<li><p>Read CSV into an ArrayList of objects</p></li>
+<li><p>Create a VideoGame class with 10 attributes</p></li>
+<li><p>Store each row as a VideoGame object in ArrayList<VideoGame></p></li>
+<li><p>Add / Remove Games</p></li>
+<li><p>Add a new game via user input</p></li>
+<li><p>Remove a game by title or index</p></li>
+<li><p>Contains / Search</p></li>
+<li><p>Check if a game is in the library (by title, developer, or genre)</p></li>
+<li><p>Get / Set</p></li>
+<li><p>Retrieve a game by index</p></li>
+<li><p>Update attributes of a game (like score or sales)</p></li>
+</ul>
+<p>Optional Extras for Challenge:</p>
+<ul class="simple">
+<li><p>Sort games by sales, Metacritic score, or release year</p></li>
+<li><p>Filter games by platform, genre, or ESRB rating</p></li>
+<li><p>Calculate average sales per platform</p></li>
+<li><p>Save changes back to CSV</p></li>
+<li><p>Why This Works for AP CSA</p></li>
+</ul>
+<p>Submit your finished code as a .java file.  Provide appropriate comments within your program.  Use Java Time API to display Local Date Time.  Submit one document for your test case(s) showing that program works as intended (pdf).</p>
+<hr class="docutils" />
+</section>
+<hr class="docutils" />
+<section id="project-movie-ratings-database-option-2">
+<h4>Project: Movie Ratings Database (Option 2)<a class="headerlink" href="#project-movie-ratings-database-option-2" title="Link to this heading">¶</a></h4>
+<p>Dataset:</p>
+<p>100 movies × 10 columns. Example columns:
+Title
+Genre
+Director
+Year
+Runtime (minutes)
+IMDb Rating
+Rotten Tomatoes Rating
+Box Office Gross
+Language
+Country</p>
+<p>CSV Example:</p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>Title</p></th>
+<th class="head text-center"><p>Genre</p></th>
+<th class="head text-center"><p>Director</p></th>
+<th class="head text-center"><p>Year</p></th>
+<th class="head text-center"><p>Runtime</p></th>
+<th class="head text-center"><p>IMDb</p></th>
+<th class="head text-center"><p>RT</p></th>
+<th class="head text-center"><p>BoxOffice</p></th>
+<th class="head text-center"><p>Language</p></th>
+<th class="head text-center"><p>Country</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>Inception</p></td>
+<td class="text-center"><p>Sci-Fi</p></td>
+<td class="text-center"><p>Nolan</p></td>
+<td class="text-center"><p>2010</p></td>
+<td class="text-center"><p>148</p></td>
+<td class="text-center"><p>8.8</p></td>
+<td class="text-center"><p>87</p></td>
+<td class="text-center"><p>829895144</p></td>
+<td class="text-center"><p>English</p></td>
+<td class="text-center"><p>USA</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>Spirited Away</p></td>
+<td class="text-center"><p>Fantasy</p></td>
+<td class="text-center"><p>Miyazaki</p></td>
+<td class="text-center"><p>2001</p></td>
+<td class="text-center"><p>125</p></td>
+<td class="text-center"><p>8.6</p></td>
+<td class="text-center"><p>97</p></td>
+<td class="text-center"><p>355467855</p></td>
+<td class="text-center"><p>Japanese</p></td>
+<td class="text-center"><p>Japan</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Student Requirements:</p>
+<ul class="simple">
+<li><p>Read CSV into an ArrayList of objects</p></li>
+<li><p>Create a Movie class with 10 attributes.</p></li>
+<li><p>Store each row as a Movie object in an ArrayList<Movie>.</p></li>
+<li><p>Add / Remove Movies</p></li>
+<li><p>Add a new movie via user input.</p></li>
+<li><p>Remove a movie by title or index.</p></li>
+<li><p>Contains / Search</p></li>
+<li><p>Check if a movie is in the database (e.g., by title or director).</p></li>
+<li><p>Get / Set</p></li>
+<li><p>Retrieve a movie by index.</p></li>
+<li><p>Update attributes of a movie (e.g., change IMDb rating).</p></li>
+</ul>
+<p>Bonus Features (Optional)</p>
+<ul class="simple">
+<li><p>Sort movies by year, rating, or box office.</p></li>
+<li><p>Filter by genre or director.</p></li>
+<li><p>Calculate average rating per genre.</p></li>
+<li><p>Save changes back to CSV.</p></li>
+<li><p>Why This Works for AP CSA</p></li>
+</ul>
+<p>Encourages data handling skills with CSV parsing.</p>
 </section>
 </section>
+</section>
+<hr class="docutils" />
 <section id="ethical-issues-around-data-collection">
 <h2>7.8 Ethical Issues Around Data Collection<a class="headerlink" href="#ethical-issues-around-data-collection" title="Link to this heading">¶</a></h2>
 <p><a class="reference external" href="https://apcentral.collegeboard.org/courses/ap-computer-science-a/classroom-resources/ethical-issues-internet-content-providers-and-internet-service-providers">The original content can be found here:</a></p>
@@ -3369,7 +3533,11 @@ Hoboken, New Jersey: Wiley, 2003.</p>
 </li>
 <li><a class="reference internal" href="#arraylist-using-data-sets">7.7 ArrayList using data sets</a><ul>
 <li><a class="reference internal" href="#activity-7-7-1-test-scores">Activity 7.7.1 Test Scores</a></li>
-<li><a class="reference internal" href="#activity-7-7-2-inventory">Activity 7.7.2 Inventory</a></li>
+<li><a class="reference internal" href="#activity-7-7-2-inventory">Activity 7.7.2 Inventory</a><ul>
+<li><a class="reference internal" href="#project-video-game-library-option-1">Project: Video Game Library (Option 1)</a></li>
+<li><a class="reference internal" href="#project-movie-ratings-database-option-2">Project: Movie Ratings Database (Option 2)</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a class="reference internal" href="#ethical-issues-around-data-collection">7.8 Ethical Issues Around Data Collection</a></li>
