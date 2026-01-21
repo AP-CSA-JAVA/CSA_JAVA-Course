@@ -306,7 +306,6 @@ These are just a few examples of the methods available in the ArrayList class. T
 
 <details><summary> Click Here </summary>
 
-**This assignment was intentionally placed in 3.7.2**
 
 
 ```java
@@ -376,13 +375,13 @@ MoveRight: [like, why, isn't, like, a, koala, like, considered, a, like, bear, ?
 
 <details><summary>Click Here </summary>
 	
-**Coding Exercise: Classric Car Showroom List**
+**Coding Exercise: Classic Car Showroom List**
 A dealer wants to create a list of classic cars in the showroom. Using the existing `Car` class in this exercise. 
 - Create a __*static*__ ArrayList called `showroom` that adds a `Car` to the showroom whenever a new Car is created.
   - In the constructor, you will have to add that Car to the ArrayList.
 
 **Now that the `showroom` ArrayList has been implemented, we need to create methods to access the list items.**
-Create the following static methods for the Student class:
+Create the following static methods for the Car class:
 
 - `getBestInShow()` - returns the name of the car in the first position of the showroom. You always show your best car first.
 
