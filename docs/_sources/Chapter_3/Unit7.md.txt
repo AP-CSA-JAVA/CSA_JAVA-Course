@@ -768,13 +768,21 @@ public class Main {
 - Use standard traversal algorithms to insert and delete ArrayList elements.
 - Use multiple ArrayLists to accomplish a traversing algorithm.
 
-In this Java program, we'll identify, modify, and develop standard array traversal algorithms using `ArrayLists`. We'll use standard traversal algorithms to insert and delete elements in `ArrayLists`, and we'll also demonstrate how to use multiple `ArrayLists` to accomplish a traversing algorithm.
+In this Java program, we'll identify, modify, and develop standard array traversal algorithms using `ArrayLists`. We'll use standard traversal algorithms to insert and delete elements in `ArrayLists`, and we'll also demonstrate how to use multiple `ArrayLists` to accomplish a traversing algorithm.  WE will use an `Iterator` that comes from the **Java Collections Framework** and works with the `ArrayList` collection.
+
+**three core methods**:
+
+* `hasNext()` → checks if another element exists
+* `next()` → returns the next element
+* `remove()` → safely removes the current element (optional, but important)
+
+> An iterator is used to safely loop through a collection one item at a time, especially when elements may be removed during the loop.
+
+
 
 ```java
 import java.util.ArrayList;
 import java.util.Iterator;
-// the Iterator is an interface that provides a way to iterate over elements in a 
-// collection without needing to know what the underlying structure of the collection
 
 public class Main {
     public static void main(String[] args) {

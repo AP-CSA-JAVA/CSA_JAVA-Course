@@ -1047,11 +1047,18 @@ Appropriately comment throughout your program and provide test cases to verify t
 <li><p>Use standard traversal algorithms to insert and delete ArrayList elements.</p></li>
 <li><p>Use multiple ArrayLists to accomplish a traversing algorithm.</p></li>
 </ul>
-<p>In this Java program, we’ll identify, modify, and develop standard array traversal algorithms using <code class="docutils literal notranslate"><span class="pre">ArrayLists</span></code>. We’ll use standard traversal algorithms to insert and delete elements in <code class="docutils literal notranslate"><span class="pre">ArrayLists</span></code>, and we’ll also demonstrate how to use multiple <code class="docutils literal notranslate"><span class="pre">ArrayLists</span></code> to accomplish a traversing algorithm.</p>
+<p>In this Java program, we’ll identify, modify, and develop standard array traversal algorithms using <code class="docutils literal notranslate"><span class="pre">ArrayLists</span></code>. We’ll use standard traversal algorithms to insert and delete elements in <code class="docutils literal notranslate"><span class="pre">ArrayLists</span></code>, and we’ll also demonstrate how to use multiple <code class="docutils literal notranslate"><span class="pre">ArrayLists</span></code> to accomplish a traversing algorithm.  WE will use an <code class="docutils literal notranslate"><span class="pre">Iterator</span></code> that comes from the <strong>Java Collections Framework</strong> and works with the <code class="docutils literal notranslate"><span class="pre">ArrayList</span></code> collection.</p>
+<p><strong>three core methods</strong>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">hasNext()</span></code> → checks if another element exists</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">next()</span></code> → returns the next element</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">remove()</span></code> → safely removes the current element (optional, but important)</p></li>
+</ul>
+<blockquote>
+<div><p>An iterator is used to safely loop through a collection one item at a time, especially when elements may be removed during the loop.</p>
+</div></blockquote>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Iterator</span><span class="p">;</span>
-<span class="c1">// the Iterator is an interface that provides a way to iterate over elements in a </span>
-<span class="c1">// collection without needing to know what the underlying structure of the collection</span>
 
 <span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
