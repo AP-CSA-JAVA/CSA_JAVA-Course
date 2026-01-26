@@ -633,11 +633,26 @@ Choose an option: 6
 
 ## 7.3 Traversing ArrayLists
 
-In this example, we create an ArrayList called myList and add three elements to it. We then traverse the ArrayList using both a enhanced for loop and a for loop.
+In this example, we create an ArrayList called myList and add three elements to it. We then traverse the ArrayList using both a **enhanced `for` loop** and a standard `for` loop.
 
-The enhanced for loop iterates over each element in the ArrayList and assigns it to the variable element, which we can then print or perform any desired operations with.
+The **enhanced `for` loop** iterates over each element in the ArrayList and assigns it to the variable element, which we can then print or perform any desired operations with.
 
-The for loop uses an index variable i to access each element in the ArrayList using the `get()` method. We use the `size()` method to determine the size of the ArrayList, and the loop continues until `i` reaches the size of the ArrayList.
+You Should Use the **enhanced `for` loop** when:
+- You want to process every element
+- You don’t need the index
+- You are not modifying the structure of the collection
+
+It works very well for:
+- Printing values
+- Calculating totals or averages
+- Searching for a value
+
+When You Should **Not** Use It:
+- You need the index
+- You want to change elements by index
+- You want to add or remove elements while looping
+
+Below the for loop uses an index variable i to access each element in the ArrayList using the `get()` method. We use the `size()` method to determine the size of the ArrayList, and the loop continues until `i` reaches the size of the ArrayList.
 
 ```java
 import java.util.ArrayList;

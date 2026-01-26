@@ -923,9 +923,27 @@ Appropriately comment throughout your program and provide test cases to verify t
 <hr class="docutils" />
 <section id="traversing-arraylists">
 <h2>7.3 Traversing ArrayLists<a class="headerlink" href="#traversing-arraylists" title="Link to this heading">¶</a></h2>
-<p>In this example, we create an ArrayList called myList and add three elements to it. We then traverse the ArrayList using both a enhanced for loop and a for loop.</p>
-<p>The enhanced for loop iterates over each element in the ArrayList and assigns it to the variable element, which we can then print or perform any desired operations with.</p>
-<p>The for loop uses an index variable i to access each element in the ArrayList using the <code class="docutils literal notranslate"><span class="pre">get()</span></code> method. We use the <code class="docutils literal notranslate"><span class="pre">size()</span></code> method to determine the size of the ArrayList, and the loop continues until <code class="docutils literal notranslate"><span class="pre">i</span></code> reaches the size of the ArrayList.</p>
+<p>In this example, we create an ArrayList called myList and add three elements to it. We then traverse the ArrayList using both a <strong>enhanced <code class="docutils literal notranslate"><span class="pre">for</span></code> loop</strong> and a standard <code class="docutils literal notranslate"><span class="pre">for</span></code> loop.</p>
+<p>The <strong>enhanced <code class="docutils literal notranslate"><span class="pre">for</span></code> loop</strong> iterates over each element in the ArrayList and assigns it to the variable element, which we can then print or perform any desired operations with.</p>
+<p>You Should Use the <strong>enhanced <code class="docutils literal notranslate"><span class="pre">for</span></code> loop</strong> when:</p>
+<ul class="simple">
+<li><p>You want to process every element</p></li>
+<li><p>You don’t need the index</p></li>
+<li><p>You are not modifying the structure of the collection</p></li>
+</ul>
+<p>It works very well for:</p>
+<ul class="simple">
+<li><p>Printing values</p></li>
+<li><p>Calculating totals or averages</p></li>
+<li><p>Searching for a value</p></li>
+</ul>
+<p>When You Should <strong>Not</strong> Use It:</p>
+<ul class="simple">
+<li><p>You need the index</p></li>
+<li><p>You want to change elements by index</p></li>
+<li><p>You want to add or remove elements while looping</p></li>
+</ul>
+<p>Below the for loop uses an index variable i to access each element in the ArrayList using the <code class="docutils literal notranslate"><span class="pre">get()</span></code> method. We use the <code class="docutils literal notranslate"><span class="pre">size()</span></code> method to determine the size of the ArrayList, and the loop continues until <code class="docutils literal notranslate"><span class="pre">i</span></code> reaches the size of the ArrayList.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
 
 <span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
