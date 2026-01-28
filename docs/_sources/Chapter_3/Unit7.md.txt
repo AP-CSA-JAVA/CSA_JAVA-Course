@@ -999,15 +999,16 @@ Using iteration: Banana found? true
 **Instructions**
 
 1. Create an Integer arrayList and call it `numbers`.
-2. Write a program that will *randomly* generate and store 100 integers in `numbers`.
+2. Write a program that will generate 100 *random* numbers between 1 and 999 without repetition and store them in `numbers`.
 3. Create a Scanner class that will prompt the user to input a number (`target`) they want to search for in the arrayList.
-4. Create a `linearSearch` method that takes the `arrayList` and the `target` value as arguments.
+4. Create a `linearSearch` method that takes the arrayList `numbers` and the `target` value as arguments.
 5. Use a standard for loop to search the elements of the `arrayList`.
    - If the target value is found, it returns the index of that element.
    - If the target value is not found after checking all elements, it returns `-1`.
 6. The program prints the result: the index of the found number or a message indicating that the number was not found.
 7. Comment throughout your program as appropriate.
-8. Include test samples to show that your program works as intended.
+8. Include test samples (pdf) to show that your program works as intended.
+9. Include date/time in your program as it is executed
 
 **Sample Output:**
 
@@ -1021,7 +1022,8 @@ Generated ArrayList of 100 numbers:
 589, 198, 900, 945]
 
 Enter a number to search for: 96
-The number 96 was not found in the ArrayList.
+-1
+The number 96 was not found in the List.
 ```
 
 
@@ -2160,7 +2162,7 @@ In Java, the **Comparator** interface allows you to define a custom sorting orde
 
 Let's say you have a `Person` class with fields `name` and `age`, and you want to sort people by their age in ascending order. You can do this with a custom comparator.
 
-**1. **Deifne the `Person` Class**
+**1. **Define the `Person` Class**
 
 ```java
 public class Person {
@@ -2181,9 +2183,7 @@ public class Person {
     public int getAge() {
         return age;
     }
-
     // String representation for easy printing
-   
     public String toString() {
         return name + " (" + age + ")";
     }
@@ -2398,11 +2398,8 @@ Charlie (35)
 **Key Points**:
 
 - **Comparator Interface**: A custom comparator can define a specific order for sorting objects, whether it's based on one property or multiple properties.
-  
 - **Lambda Expression**: Instead of creating a separate comparator class, you can use a lambda expression to define the comparison logic directly in the sorting method.
-
 - **Multiple Criteria Sorting**: You can chain comparisons (e.g., compare first by age, and if equal, by name) to create complex sorting behaviors.
-
 - **Flexibility**: The Comparator interface provides a lot of flexibility, allowing you to easily define sorting logic for complex objects, including sorting in ascending or descending order, sorting by multiple properties, and more.
 
 **Common Usage**:

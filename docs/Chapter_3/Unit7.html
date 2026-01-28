@@ -1274,9 +1274,9 @@ Next, we perform a manual search by iterating through each element of the ArrayL
 <p><strong>Instructions</strong></p>
 <ol class="arabic simple">
 <li><p>Create an Integer arrayList and call it <code class="docutils literal notranslate"><span class="pre">numbers</span></code>.</p></li>
-<li><p>Write a program that will <em>randomly</em> generate and store 100 integers in <code class="docutils literal notranslate"><span class="pre">numbers</span></code>.</p></li>
+<li><p>Write a program that will generate 100 <em>random</em> numbers between 1 and 999 without repetition and store them in <code class="docutils literal notranslate"><span class="pre">numbers</span></code>.</p></li>
 <li><p>Create a Scanner class that will prompt the user to input a number (<code class="docutils literal notranslate"><span class="pre">target</span></code>) they want to search for in the arrayList.</p></li>
-<li><p>Create a <code class="docutils literal notranslate"><span class="pre">linearSearch</span></code> method that takes the <code class="docutils literal notranslate"><span class="pre">arrayList</span></code> and the <code class="docutils literal notranslate"><span class="pre">target</span></code> value as arguments.</p></li>
+<li><p>Create a <code class="docutils literal notranslate"><span class="pre">linearSearch</span></code> method that takes the arrayList <code class="docutils literal notranslate"><span class="pre">numbers</span></code> and the <code class="docutils literal notranslate"><span class="pre">target</span></code> value as arguments.</p></li>
 <li><p>Use a standard for loop to search the elements of the <code class="docutils literal notranslate"><span class="pre">arrayList</span></code>.</p>
 <ul class="simple">
 <li><p>If the target value is found, it returns the index of that element.</p></li>
@@ -1285,7 +1285,8 @@ Next, we perform a manual search by iterating through each element of the ArrayL
 </li>
 <li><p>The program prints the result: the index of the found number or a message indicating that the number was not found.</p></li>
 <li><p>Comment throughout your program as appropriate.</p></li>
-<li><p>Include test samples to show that your program works as intended.</p></li>
+<li><p>Include test samples (pdf) to show that your program works as intended.</p></li>
+<li><p>Include date/time in your program as it is executed</p></li>
 </ol>
 <p><strong>Sample Output:</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Generated</span> <span class="n">ArrayList</span> <span class="n">of</span> <span class="mi">100</span> <span class="n">numbers</span><span class="p">:</span>
@@ -1297,7 +1298,8 @@ Next, we perform a manual search by iterating through each element of the ArrayL
 <span class="mi">589</span><span class="p">,</span> <span class="mi">198</span><span class="p">,</span> <span class="mi">900</span><span class="p">,</span> <span class="mi">945</span><span class="p">]</span>
 
 <span class="n">Enter</span> <span class="n">a</span> <span class="n">number</span> <span class="n">to</span> <span class="n">search</span> <span class="k">for</span><span class="p">:</span> <span class="mi">96</span>
-<span class="n">The</span> <span class="n">number</span> <span class="mi">96</span> <span class="n">was</span> <span class="ow">not</span> <span class="n">found</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">ArrayList</span><span class="o">.</span>
+<span class="o">-</span><span class="mi">1</span>
+<span class="n">The</span> <span class="n">number</span> <span class="mi">96</span> <span class="n">was</span> <span class="ow">not</span> <span class="n">found</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">List</span><span class="o">.</span>
 </pre></div>
 </div>
 </details>  
@@ -2533,7 +2535,7 @@ Compare 64 and 90 → No swap → {34, 25, 12, 22, 11, 64, 90}
 </ul>
 <p><strong>Example: Sorting a List of <code class="docutils literal notranslate"><span class="pre">Person</span></code> Objects with a Custom Comparator</strong></p>
 <p>Let’s say you have a <code class="docutils literal notranslate"><span class="pre">Person</span></code> class with fields <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">age</span></code>, and you want to sort people by their age in ascending order. You can do this with a custom comparator.</p>
-<p>**1. <strong>Deifne the <code class="docutils literal notranslate"><span class="pre">Person</span></code> Class</strong></p>
+<p>**1. <strong>Define the <code class="docutils literal notranslate"><span class="pre">Person</span></code> Class</strong></p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Person</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
 <span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
@@ -2552,9 +2554,7 @@ Compare 64 and 90 → No swap → {34, 25, 12, 22, 11, 64, 90}
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getAge</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
-
 <span class="w">    </span><span class="c1">// String representation for easy printing</span>
-<span class="w">   </span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; (&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;)&quot;</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
