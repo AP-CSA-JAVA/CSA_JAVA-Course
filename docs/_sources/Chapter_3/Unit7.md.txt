@@ -1036,16 +1036,18 @@ N
 ```
 
 Optional:
+
 Create method(s) that will do the following:
 
-- Ask the user if they would like to search for a range of numbers?
-	- **Examples**:
-	- a range of numbers (ex. all numbers from 1 to 100.)
-	- all odd or even numbers
-	- all prime numbers
-	- all numbers divisible by 3
-	- all numbers in the list in order from lowest to highest
-	- all numbers in the list in reverse order from highest to lowest
+Ask the user if they would like to search for a range of numbers?
+
+**Examples**:
+- a range of numbers (ex. all numbers from 1 to 100.) (+.5)
+- all odd or even numbers (+.5)
+- all prime numbers (+.5)
+- all numbers divisible by 3 (+.5)
+- all numbers in the list in order from lowest to highest (+.5)
+- all numbers in the list in reverse order from highest to lowest (+.5)
 
 
 </details>  
