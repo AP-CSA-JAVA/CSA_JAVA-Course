@@ -1006,9 +1006,10 @@ Using iteration: Banana found? true
    - If the target value is found, it returns the index of that element.
    - If the target value is not found after checking all elements, it returns `-1`.
 6. The program prints the result: the index of the found number or a message indicating that the number was not found.
-7. Comment throughout your program as appropriate.
-8. Include test samples (pdf) to show that your program works as intended.
-9. Include date/time in your program as it is executed
+7. Ask the user if they would like to continue searching for a `number`.
+8. Comment throughout your program as appropriate.
+9. Include test samples (pdf) to show that your program works as intended.
+10. Include date/time in your program as it is executed
 
 **Sample Output:**
 
@@ -1024,7 +1025,22 @@ Generated ArrayList of 100 numbers:
 Enter a number to search for: 96
 -1
 The number 96 was not found in the List.
+Do you want to search for another number?
+Y
+
+Enter a number to search for: 139
+The number 139 was found in the ArrayList at index 67.
+Do you want to search for another number?
+N
 ```
+
+Optional:
+- Ask the user if they would like to search for a range of numbers?
+- Example:
+ - numbers between 1- 100
+ - all odd/ even numbers
+ - all prime numbers
+ - all numbers divisble by 3
 
 
 </details>  
