@@ -1330,6 +1330,24 @@ N
 <section id="sorting">
 <h2>7.6 Sorting<a class="headerlink" href="#sorting" title="Link to this heading">¶</a></h2>
 <p>Here are a few programs related to sorting algorithms that you may see in Computer Science. Below are descriptions of how these sorting algorithms work: Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, and Quick Sort.</p>
+<p>Mistakes students make when identifying an algorithm:</p>
+<ul class="simple">
+<li><p>Swapping inside the inner loop (selection sort)</p></li>
+<li><p>Forgetting to reset minIndex</p></li>
+<li><p>Incorrect base case in recursion</p></li>
+<li><p>Returning the wrong array reference</p></li>
+</ul>
+<p>Scorer Comments:</p>
+<p>❌ “Student implemented <code class="docutils literal notranslate"><span class="pre">bubble</span> <span class="pre">sort</span></code> logic instead of <code class="docutils literal notranslate"><span class="pre">selection</span> <span class="pre">sort</span></code>.”</p>
+<p>❌ “Loop iterates one index too far, causing an out-of-bounds error.”</p>
+<p>❌ “Student confused index with value when finding minimum.”</p>
+<p>❌ “Merge logic assumes arrays are unsorted.”</p>
+<p>It is important to visualize what sorting method you are looking at.  Try these steps to help you identify the correct sorting algorithm.</p>
+<ul class="simple">
+<li><p>Label sorted/unsorted regions</p></li>
+<li><p>Write comments before code</p></li>
+<li><p>Explain what the loop does, not just what it loops over</p></li>
+</ul>
 <hr class="docutils" />
 <p><strong>1. Bubble Sort Implementation</strong>
 <strong>Objective</strong>: Implement the Bubble Sort algorithm, which repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order.</p>
@@ -1375,7 +1393,7 @@ N
 <li><p>Can you optimize Bubble Sort to detect when the array is already sorted?</p></li>
 </ul>
 <hr class="docutils" />
-<p><strong>2. Selection Sort Implementation</strong>
+<p><strong>2. Selection Sort Implementation - AP Exam</strong>
 <strong>Objective</strong>: Implement the Selection Sort algorithm, which divides the array into two parts: sorted and unsorted. The algorithm selects the minimum element from the unsorted part and swaps it with the leftmost unsorted element.</p>
 <p><strong>Task</strong>: Write a Java program that sorts an array using the Selection Sort algorithm.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SelectionSort</span><span class="w"> </span><span class="p">{</span>
@@ -1423,7 +1441,7 @@ N
 <li><p>What is the time complexity of the Selection Sort algorithm?</p></li>
 </ul>
 <hr class="docutils" />
-<p><strong>3. Insertion Sort Implementation</strong>
+<p><strong>3. Insertion Sort Implementation - AP Exam</strong>
 <strong>Objective</strong>: Implement the Insertion Sort algorithm, which builds the sorted array one element at a time by repeatedly taking the next element and inserting it into its correct position.</p>
 <p><strong>Task</strong>: Write a Java program that sorts an array using the Insertion Sort algorithm.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">InsertionSort</span><span class="w"> </span><span class="p">{</span>
@@ -1468,7 +1486,7 @@ N
 <li><p>What is the time complexity of Insertion Sort?</p></li>
 </ul>
 <hr class="docutils" />
-<p><strong>4. Merge Sort Implementation</strong>
+<p><strong>4. Merge Sort Implementation - AP Exam</strong>
 <strong>Objective</strong>: Implement the Merge Sort algorithm, which is a divide-and-conquer algorithm that splits the array into halves and recursively sorts them.</p>
 <p><strong>Task</strong>: Write a Java program that sorts an array using the Merge Sort algorithm.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MergeSort</span><span class="w"> </span><span class="p">{</span>

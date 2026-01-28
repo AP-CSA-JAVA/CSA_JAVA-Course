@@ -1060,6 +1060,33 @@ Ask the user if they would like to search for a range of numbers?
 
 Here are a few programs related to sorting algorithms that you may see in Computer Science. Below are descriptions of how these sorting algorithms work: Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, and Quick Sort.
 
+Mistakes students make when identifying an algorithm:
+
+- Swapping inside the inner loop (selection sort)
+- Forgetting to reset minIndex
+- Incorrect base case in recursion
+- Returning the wrong array reference
+
+
+Scorer Comments:
+
+❌ “Student implemented `bubble sort` logic instead of `selection sort`.”
+
+❌ “Loop iterates one index too far, causing an out-of-bounds error.”
+
+❌ “Student confused index with value when finding minimum.”
+
+❌ “Merge logic assumes arrays are unsorted.”
+
+
+It is important to visualize what sorting method you are looking at.  Try these steps to help you identify the correct sorting algorithm.
+
+- Label sorted/unsorted regions
+- Write comments before code
+- Explain what the loop does, not just what it loops over
+
+
+
 ---
 
 **1. Bubble Sort Implementation**
@@ -1109,7 +1136,7 @@ public class BubbleSort {
 
 ---
 
-**2. Selection Sort Implementation**
+**2. Selection Sort Implementation - AP Exam**
 **Objective**: Implement the Selection Sort algorithm, which divides the array into two parts: sorted and unsorted. The algorithm selects the minimum element from the unsorted part and swaps it with the leftmost unsorted element.
 
 **Task**: Write a Java program that sorts an array using the Selection Sort algorithm.
@@ -1160,7 +1187,7 @@ public class SelectionSort {
 
 ---
 
-**3. Insertion Sort Implementation**
+**3. Insertion Sort Implementation - AP Exam**
 **Objective**: Implement the Insertion Sort algorithm, which builds the sorted array one element at a time by repeatedly taking the next element and inserting it into its correct position.
 
 **Task**: Write a Java program that sorts an array using the Insertion Sort algorithm.
@@ -1208,7 +1235,7 @@ public class InsertionSort {
 
 ---
 
-**4. Merge Sort Implementation**
+**4. Merge Sort Implementation - AP Exam**
 **Objective**: Implement the Merge Sort algorithm, which is a divide-and-conquer algorithm that splits the array into halves and recursively sorts them.
 
 **Task**: Write a Java program that sorts an array using the Merge Sort algorithm.
