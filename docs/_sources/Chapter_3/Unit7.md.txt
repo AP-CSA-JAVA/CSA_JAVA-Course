@@ -1032,15 +1032,20 @@ Enter a number to search for: 139
 The number 139 was found in the ArrayList at index 67.
 Do you want to search for another number?
 N
+
 ```
 
 Optional:
-- Ask the user if they would like to search for a range of numbers?
+- Create method(s) that will do the following:
+
+-  Ask the user if they would like to search for a range of numbers?
 - Example:
- - numbers between 1- 100
- - all odd/ even numbers
- - all prime numbers
- - all numbers divisble by 3
+ - a range of numbers (ex. all numbers from 1 to 100.)
+ - all odd or even numbers
+ - all prime numbers
+ - all numbers divisible by 3
+ - all numbers in the list in order from lowest to highest
+ - all numbers in the list in reverse order from highest to lowest
 
 
 </details>  
