@@ -2906,6 +2906,12 @@ public class StudentScoreAnalyzer {
 
 ### Activity 7.7.2 Inventory
 
+[7_7_ArrayLists_WRHS_data1.csv](https://github.com/user-attachments/files/25078859/7_7_ArrayLists_WRHS_data1.csv)
+
+
+[7_7_ArrayLists_store_data2.txt](https://github.com/user-attachments/files/25078868/7_7_ArrayLists_store_data2.txt)
+
+
 **Program Description:**
 Below are two inventory data sets from different systems:
 - One from the warehouse
