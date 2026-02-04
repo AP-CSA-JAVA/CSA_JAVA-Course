@@ -3091,7 +3091,7 @@ CSV Example:
 | Title	| Platform | Genre	| Developer	| Publisher	| Year	| ESRB	| MetaScore	| Sales | Language |
 | :---: | :---:    | :---:  | :---:     | :---:     | :---: | :---: | :---:     | :---: | :---:    |
 | The Legend of Zelda: Breath of the Wild |	Switch	| Adventure	| Nintendo	| Nintendo | 2017 |	E10+ |	97	| 25 |	English |
-| God of War |	PS4	Action	| Santa Monica Studio |	Sony Interactive |	2018 |	M	| 94 | 12 | English |
+| God of War |	PS4	Action	| action-adventure | Santa Monica Studio |	Sony Interactive |	2018 |	M	| 94 | 12 | English |
 
 ---
 
