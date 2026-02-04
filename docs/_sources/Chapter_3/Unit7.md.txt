@@ -2188,7 +2188,7 @@ public class QuickSort {
 
 ---
 
-#### Using Comparator - NOT on AP Exam
+#### Using Comparator - NOT on AP Exam is part of Oracle Foundations Exam
 
 
 **Using a Custom Comparator for Sorting in Java**
@@ -2393,7 +2393,7 @@ public class MultiCriteriaComparator implements Comparator<Person> {
 }
 ```
 
-**2. Using the Comparator with Multi-Criteria Sorting**
+**2. Using the Comparator with Multi-Criteria Sorting - Oracle Foundations Exam**
 
 ```java
 import java.util.*;
@@ -2489,7 +2489,7 @@ When working with data files in Java, typical patterns are as follows:
 
 **Example File: `scores.txt`**
 
-```
+```data
 85
 92
 78
@@ -2522,14 +2522,21 @@ public class ReadTextFile {
 }
 ```
 
+**Sample Output:**
+
+```data
+[85, 92, 78, 90]
+```
+
 
 ---
+
 
 **Reading a CSV File (Scanner + `split()`)**
 
 **Example File: `students.csv`**
 
-```
+```data
 Alice,90
 Bob,85
 Carlos,78
@@ -2566,11 +2573,114 @@ public class ReadCSV {
 }
 ```
 
+**Sample Output:**
+
+```data
+[Alice, Bob, Carlos]
+[90, 85, 78]
+```
+
+
 ---
 
-**Reading a File Using `BufferedReader` (Advanced)**
 
-This is **not required** for AP CSA but useful for comparison.
+**Reading a File Using `BufferedReader` - Oracle Foundations Exam**
+
+> **`BufferedReader` is a Java class that reads text from a character input stream efficiently by buffering characters, improving performance and providing convenient methods like `readLine()`.**
+
+
+**What is `BufferedReader`?**
+
+`BufferedReader` can read from the following input sources:
+
+* the keyboard
+* a file
+* another stream
+
+It works by **wrapping another reader** (like `FileReader` or `InputStreamReader`) and reading data into a **buffer**, instead of reading one character at a time.
+
+**Package:** `java.io`
+**Type:** Character-based input stream
+
+Example:
+
+```java
+BufferedReader br = new BufferedReader(new FileReader("data.txt"));
+```
+
+---
+
+**Why do we use `BufferedReader`?**
+
+1. **Improves performance**
+
+Without buffering, Java would read data **one character at a time**, which is slow.
+`BufferedReader` reads a **chunk of characters at once** and stores them in memory (a buffer), making input much faster.
+
+2. **Convenient methods**
+
+It provides helpful methods like:
+
+* `readLine()` → reads an entire line of text at once
+* `read()` → reads characters efficiently
+
+Example:
+
+```java
+String line = br.readLine();
+```
+
+3. **Ideal for text data**
+
+`BufferedReader` is designed for **reading text**, not raw binary data.
+
+
+---
+
+
+**Where is `BufferedReader` commonly used?**
+
+* Reading text files
+* Reading user input from the console
+* Processing line-by-line input
+* Situations where performance matters
+
+Example with keyboard input:
+
+```java
+BufferedReader br =
+    new BufferedReader(new InputStreamReader(System.in));
+```
+
+
+---
+
+
+**`BufferedReader` vs `Scanner`**
+
+| Feature                      | BufferedReader | Scanner   |
+| ---------------------------- | -------------- | --------- |
+| Speed                        | **Faster**     | Slower    |
+| Reads full lines             | Yes            | Yes       |
+| Reads numbers directly       | No             | Yes       |
+| Best for exams & performance | **Yes**        | Not ideal |
+
+* `Scanner` is easier for beginners but **slower**
+* `BufferedReader` is **preferred in Oracle and college exams** and other real-world applications for performance
+
+
+---
+
+
+**`BufferedReader` vs `InputStream`**
+
+* `InputStream` (like `FileInputStream`) reads **bytes**
+* `BufferedReader` reads **characters**
+* For text → **BufferedReader is better**
+
+
+---
+
 
 ```java
 import java.io.*;
@@ -2594,13 +2704,36 @@ public class BufferedReaderExample {
 }
 ```
 
+**Assume data.txt has the following information:**
+
+```data
+Java
+Oracle
+Foundations
+Exam
+```
+
+**Sample Output:**
+
+```java
+[Java, Oracle, Foundations, Exam]
+```
+
+
 ---
+
 
 **Modifying Data in an `ArrayList`**
 
 **Example: Curve all grades by +5 (max 100)**
 
 ```java
+ArrayList<Integer> grades = new ArrayList<>();
+grades.add(72);
+grades.add(96);
+grades.add(88);
+grades.add(100);
+
 for (int i = 0; i < grades.size(); i++) {
     int updated = grades.get(i) + 5;
     if (updated > 100) {
@@ -2608,7 +2741,16 @@ for (int i = 0; i < grades.size(); i++) {
     }
     grades.set(i, updated);
 }
+
+System.out.println(grades);
 ```
+
+**Sample output:**
+
+```java
+[77, 100, 93, 100]
+```
+
 
 ---
 
@@ -2639,7 +2781,9 @@ public class WriteCSV {
 }
 ```
 
+
 ---
+
 
 **Standard Data Workflow**
 
@@ -2763,9 +2907,9 @@ public class StudentScoreAnalyzer {
 ### Activity 7.7.2 Inventory
 
 **Program Description:**
-Students are given two inventory data sets from different systems:
-One from the warehouse
-One from the storefront system
+Below are two inventory data sets from different systems:
+- One from the warehouse
+- One from the storefront system
 Each product appears in both systems, but the quantities may not match.
 
 **Required:**
@@ -2784,56 +2928,57 @@ Each product appears in both systems, but the quantities may not match.
 - Print a discrepancy report showing only mismatches
 
 ```
-ProductID,ProductName,Category,WarehouseQty
-2001,USB-C Cable,Electronics,120
-2002,Wireless Mouse,Electronics,85
-2003,Laptop Stand,Accessories,60
-2004,Notebook,Stationery,200
-2005,Pen Pack,Stationery,180
-2006,Backpack,Accessories,45
-2007,Water Bottle,Accessories,75
-2008,Keyboard,Electronics,90
-2009,HDMI Cable,Electronics,110
-2010,Phone Charger,Electronics,95
-2011,Desk Lamp,Home,40
-2012,Calculator,Electronics,55
-2013,Sticky Notes,Stationery,300
-2014,Monitor Stand,Electronics,50
-2015,Webcam,Electronics,65
-2016,Headphones,Electronics,70
-2017,Mouse Pad,Accessories,140
-2018,Planner,Stationery,160
-2019,Flash Drive,Electronics,130
-2020,Whiteboard Marker,Stationery,210
+ProductID,ProductName,Category,StoreQty,UnitCost
+2001,USB-C Cable,Electronics,118,6.50
+2002,Wireless Mouse,Electronics,85,14.25
+2003,Laptop Stand,Accessories,62,28.00
+2004,Notebook,Stationery,197,3.75
+2005,Pen Pack,Stationery,180,4.50
+2006,Backpack,Accessories,40,35.00
+2007,Water Bottle,Accessories,75,12.00
+2008,Keyboard,Electronics,92,24.50
+2009,HDMI Cable,Electronics,110,8.00
+2010,Phone Charger,Electronics,90,11.50
+2011,Desk Lamp,Home,38,22.00
+2012,Calculator,Electronics,55,9.50
+2013,Sticky Notes,Stationery,298,2.25
+2014,Monitor Stand,Electronics,48,32.00
+2015,Webcam,Electronics,70,45.00
+2016,Headphones,Electronics,68,55.00
+2017,Mouse Pad,Accessories,141,6.00
+2018,Planner,Stationery,155,15.50
+2019,Flash Drive,Electronics,130,7.75
+2020,12' Ruler, Stationery,15,1.15
+2020,Whiteboard Marker,Stationery,205,1.95
 ```
 
 ```
-ProductID,ProductName,Category,StoreQty
-2001,USB-C Cable,Electronics,118
-2002,Wireless Mouse,Electronics,85
-2003,Laptop Stand,Accessories,62
-2004,Notebook,Stationery,198
-2005,Pen Pack,Stationery,180
-2006,Backpack,Accessories,40
-2007,Water Bottle,Accessories,75
-2008,Keyboard,Electronics,92
-2009,HDMI Cable,Electronics,110
-2010,Phone Charger,Electronics,90
-2011,Desk Lamp,Home,38
-2012,Calculator,Electronics,55
-2013,Sticky Notes,Stationery,295
-2014,Monitor Stand,Electronics,48
-2015,Webcam,Electronics,70
-2016,Headphones,Electronics,68
-2017,Mouse Pad,Accessories,140
-2018,Planner,Stationery,155
-2019,Flash Drive,Electronics,130
-2020,Whiteboard Marker,Stationery,205
+ProductID,ProductName,Category,StoreQty,UnitCost
+2001,USB-C Cable,Electronics,118,6.50
+2002,Wireless Mouse,Electronics,85,14.25
+2003,Laptop Stand,Accessories,62,28.00
+2004,Notebook,Stationery,198,3.75
+2005,Pen Pack,Stationery,180,4.50
+2006,Backpack,Accessories,40,35.00
+2007,Water Bottle,Accessories,75,12.00
+2008,Keyboard,Electronics,92,24.50
+2009,HDMI Cable,Electronics,110,8.00
+2010,Phone Charger,Electronics,90,11.50
+2011,Desk Lamp,Home,38,22.00
+2012,Calculator,Electronics,55,9.50
+2013,Sticky Notes,Stationery,294,2.25
+2014,Monitor Stand,Electronics,48,32.00
+2015,Webcam,Electronics,70,45.00
+2016,Headphones,Electronics,68,55.00
+2017,Mouse Pad,Accessories,139,6.00
+2018,Planner,Stationery,155,15.50
+2019,Flash Drive,Electronics,130,7.75
+2020,Whiteboard Marker,Stationery,205,1.95
 ```
 
 **Complete one of the Extensions below:**
 
-- Identify products where discrepancy > 5 units
+- Identify products where discrepancies
 - Sort discrepancy report by largest difference
 - Calculate total value using a price list
 - Convert to a menu-driven program
@@ -2854,7 +2999,7 @@ public class InventoryReconciliation {
         ArrayList<Integer> storeQty = new ArrayList<>();
 
         String[] warehouseData = {
-            "2001,USB-C Cable,120",
+            "2001,USB-C Cable,123",
             "2002,Wireless Mouse,85",
             "2003,Laptop Stand,60",
             "2004,Notebook,200",
@@ -2942,6 +3087,14 @@ Optional Extras for Challenge:
  - Why This Works for AP CSA
 
 Submit your finished code as a .java file.  Provide appropriate comments within your program.  Use Java Time API to display Local Date Time.  Submit one document for your test case(s) showing that program works as intended (pdf).
+
+**Notes on the data:**
+
+- Sales: Figures are in millions and represent the last best available reports (as of early 2024). Some figures (like Minecraft) include all platforms combined.
+- Language: Marked as "Multi" for games with wide international localization.
+- Metacritic: Scores are generally taken from the primary platform release; "N/A" is used for retro games released before Metacritic existed or where aggregate data is scarce.
+
+
 
 ---
 ---
