@@ -2927,54 +2927,6 @@ Each product appears in both systems, but the quantities may not match.
 - Number of mismatched products
 - Print a discrepancy report showing only mismatches
 
-```
-ProductID,ProductName,Category,StoreQty,UnitCost
-2001,USB-C Cable,Electronics,118,6.50
-2002,Wireless Mouse,Electronics,85,14.25
-2003,Laptop Stand,Accessories,62,28.00
-2004,Notebook,Stationery,197,3.75
-2005,Pen Pack,Stationery,180,4.50
-2006,Backpack,Accessories,40,35.00
-2007,Water Bottle,Accessories,75,12.00
-2008,Keyboard,Electronics,92,24.50
-2009,HDMI Cable,Electronics,110,8.00
-2010,Phone Charger,Electronics,90,11.50
-2011,Desk Lamp,Home,38,22.00
-2012,Calculator,Electronics,55,9.50
-2013,Sticky Notes,Stationery,298,2.25
-2014,Monitor Stand,Electronics,48,32.00
-2015,Webcam,Electronics,70,45.00
-2016,Headphones,Electronics,68,55.00
-2017,Mouse Pad,Accessories,141,6.00
-2018,Planner,Stationery,155,15.50
-2019,Flash Drive,Electronics,130,7.75
-2020,12' Ruler, Stationery,15,1.15
-2020,Whiteboard Marker,Stationery,205,1.95
-```
-
-```
-ProductID,ProductName,Category,StoreQty,UnitCost
-2001,USB-C Cable,Electronics,118,6.50
-2002,Wireless Mouse,Electronics,85,14.25
-2003,Laptop Stand,Accessories,62,28.00
-2004,Notebook,Stationery,198,3.75
-2005,Pen Pack,Stationery,180,4.50
-2006,Backpack,Accessories,40,35.00
-2007,Water Bottle,Accessories,75,12.00
-2008,Keyboard,Electronics,92,24.50
-2009,HDMI Cable,Electronics,110,8.00
-2010,Phone Charger,Electronics,90,11.50
-2011,Desk Lamp,Home,38,22.00
-2012,Calculator,Electronics,55,9.50
-2013,Sticky Notes,Stationery,294,2.25
-2014,Monitor Stand,Electronics,48,32.00
-2015,Webcam,Electronics,70,45.00
-2016,Headphones,Electronics,68,55.00
-2017,Mouse Pad,Accessories,139,6.00
-2018,Planner,Stationery,155,15.50
-2019,Flash Drive,Electronics,130,7.75
-2020,Whiteboard Marker,Stationery,205,1.95
-```
 
 **Complete one of the Extensions below:**
 
@@ -3066,6 +3018,12 @@ CSV Example:
 | The Legend of Zelda: Breath of the Wild |	Switch	| Adventure	| Nintendo	| Nintendo | 2017 |	E10+ |	97	| 25 |	English |
 | God of War |	PS4	Action	| Santa Monica Studio |	Sony Interactive |	2018 |	M	| 94 | 12 | English |
 
+---
+
+[77_Games.csv](https://github.com/user-attachments/files/25078639/77_Games.csv)
+
+---
+
 Student Requirements:
  - Read CSV into an ArrayList of objects
  - Create a VideoGame class with 10 attributes
@@ -3088,16 +3046,16 @@ Optional Extras for Challenge:
 
 Submit your finished code as a .java file.  Provide appropriate comments within your program.  Use Java Time API to display Local Date Time.  Submit one document for your test case(s) showing that program works as intended (pdf).
 
-**Notes on the data:**
+**Notes on the `Games` data:**
 
-- Sales: Figures are in millions and represent the last best available reports (as of early 2024). Some figures (like Minecraft) include all platforms combined.
-- Language: Marked as "Multi" for games with wide international localization.
-- Metacritic: Scores are generally taken from the primary platform release; "N/A" is used for retro games released before Metacritic existed or where aggregate data is scarce.
-
+- **Sales**: Figures are in millions and represent the last best available reports (as of early 2024). Some figures (like Minecraft) include all platforms combined.
+- **Language**: Marked as "Multi" for games with wide international localization.
+- **Metacritic**: Scores are generally taken from the primary platform release; "N/A" is used for retro games released before Metacritic existed or where aggregate data is scarce.
 
 
 ---
 ---
+
 
 #### Project: Movie Ratings Database (Option 2)
 
@@ -3122,6 +3080,12 @@ CSV Example:
 | Inception |	Sci-Fi | Nolan | 2010 |	148	| 8.8 |	87	| 829895144 | English | USA |
 | Spirited Away | Fantasy |	Miyazaki |	2001 | 125	| 8.6 | 97 | 355467855 | Japanese | Japan |
 
+---
+
+[77_Movies.csv](https://github.com/user-attachments/files/25078712/77_Movies.csv)
+
+---
+
 Student Requirements:
 
 - Read CSV into an ArrayList of objects
@@ -3145,8 +3109,11 @@ Bonus Features (Optional)
 - Why This Works for AP CSA
 
 
+**Notes on the `Movies` data:**
 
-Encourages data handling skills with CSV parsing.
+- **Box Office Gross**: These are unadjusted worldwide gross figures. "B" stands for Billion, "M" for Million. "N/A" is used where reliable worldwide box office data is not available (common for older or arthouse films).
+- **Rotten Tomatoes**: This is the "Tomatometer" score (critic score), not the audience score.
+- **Country**: Where productions were heavily collaborative (e.g., US/UK), both are often listed, but the primary production country is usually listed first.
 
 
 ---
