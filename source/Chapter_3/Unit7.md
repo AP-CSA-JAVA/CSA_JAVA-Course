@@ -2900,6 +2900,37 @@ public class StudentScoreAnalyzer {
 }
 ```
 
+**Example  Output**
+
+```java
+STUDENT SCORE REPORT
+-----------------------------------------------
+Average Score: xx.x
+Highest Score: xx
+Lowest Score: xx
+
+UPDATED SCORES (After Curve)
+ID     Name                Test           Score
+------------------------------------------------
+1001   Alice Nguyen       Unit 1 Test    83   
+1002   Brandon Lee        Unit 1 Test    90   
+1003   Carlos Martinez    Unit 1 Test    97
+1004   Diana Patel        Unit 1 Test    93
+1005   Ethan Johnson      Unit 1 Test    74
+1006   Fatima Khan        Unit 1 Test    99
+1007   Grace Kim          Unit 1 Test    86
+1008   Hannah Brown       Unit 1 Test    78
+1009   Isaac Wilson       Unit 1 Test    95
+1010   Jasmine Lopez      Unit 1 Test    89
+1011   Kevin Chen         Unit 1 Test    81
+1012   Liam OConnor       Unit 1 Test    94
+1013   Maya Rodriguez     Unit 1 Test    100
+1014   Noah Smith         Unit 1 Test    72
+1015   Olivia Davis       Unit 1 Test    93
+
+Students scoring 90 or above after curve: x
+```
+
 
 ---
 
@@ -2995,6 +3026,33 @@ public class InventoryReconciliation {
         // TODO 4: Print discrepancy report
     }
 }
+```
+
+**Example Output**
+
+```java
+INVENTORY RECONCILIATION REPORT
+----------------------------------
+Total Warehouse Inventory: xxxx
+Total Store Inventory: xxxx
+Mismatched Products: xx
+
+DISCREPANCY REPORT (Sorted by Largest Difference)
+ID     Product              Warehouse  Store  Difference
+----------------------------------------------------------
+2001   USB-C Cable          123        118    x
+2006   Backpack             45         40     x
+2010   Phone Charger        95         90     x
+2013   Sticky Notes         300        295    x
+2015   Webcam               65         70     x
+2018   Planner              160        155    x
+2020   Whiteboard Marker    210        205    x
+2003   Laptop Stand         60         62     x
+2014   Monitor Stand        50         48     x
+2008   Keyboard             90         92     x
+2016   Headphones           70         68     x
+2004   Notebook             200        198    x
+2011   Desk Lamp            40         38     x
 ```
 
 
