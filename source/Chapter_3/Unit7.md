@@ -2932,13 +2932,18 @@ Students scoring 90 or above after curve: x
 ```
 
 
+- Submit your finished code as a .java file.
+- Provide appropriate comments within your program.
+- Use Java Time API to display Local Date Time.
+- Submit **one** document for your test case(s) showing that program works as intended (pdf).
+
+
 ---
 
 
 ### Activity 7.7.2 Inventory
 
 [7_7_ArrayLists_WRHS_data1.csv](https://github.com/user-attachments/files/25078859/7_7_ArrayLists_WRHS_data1.csv)
-
 
 [7_7_ArrayLists_store_data2.txt](https://github.com/user-attachments/files/25078868/7_7_ArrayLists_store_data2.txt)
 
@@ -3054,6 +3059,12 @@ ID     Product              Warehouse  Store  Difference
 2004   Notebook             200        198    x
 2011   Desk Lamp            40         38     x
 ```
+
+
+- Submit your finished code as a .java file.
+- Provide appropriate comments within your program.
+- Use Java Time API to display Local Date Time.
+- Submit **one** document for your test case(s) showing that program works as intended (pdf).
 
 
 ---
