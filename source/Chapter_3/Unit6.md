@@ -929,7 +929,7 @@ To help you debug, you can quickly and easily print the contents of an array wit
 `System.out.println(java.util.Arrays.toString(r));  // r is an array.  Per request of MGD `
 
 
-## Unit 6 Project
+## Unit 6 Project - Memory
 
 **Goals**
 - Organize and encapsulate a set of required features.
@@ -966,6 +966,8 @@ player recreates the sequence from memory.
 Store the *inputted* ISBN items in an arrayList. Print out the results of your query that include: Book name, Author, Date, ISBN number, Category and Status (In Stock, Not in Stock). ***Organize the books based by Category and alphabetically by book title.***
 
 <mark>Include the `main() block method` at the top of your respective programs. Submit your finished code as a .java file. Provide appropriate comments within your program. Use Java Time API to display Local Date Time. Submit one document for your test case(s) showing that program works as intended (pdf).</mark>
+
+[Library Query Output Example](https://github.com/user-attachments/files/25400130/LibraryQuery.txt)
 
 **ISBN Books for your class.**
 
