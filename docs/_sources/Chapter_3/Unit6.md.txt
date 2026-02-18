@@ -965,7 +965,7 @@ player recreates the sequence from memory.
 
 Store the *inputted* ISBN items in an arrayList. Print out the results of your query that include: Book name, Author, Date, ISBN number, Category and Status (In Stock, Not in Stock). ***Organize the books based by Category and alphabetically by book title.***
 
-<mark>Submit your finished code as a .java file. Provide appropriate comments within your program. Use Java Time API to display Local Date Time. Submit one document for your test case(s) showing that program works as intended (pdf).</mark>
+<mark>Include the `main() block method` at the top of your respective programs. Submit your finished code as a .java file. Provide appropriate comments within your program. Use Java Time API to display Local Date Time. Submit one document for your test case(s) showing that program works as intended (pdf).</mark>
 
 **ISBN Books for your class.**
 
@@ -1082,7 +1082,7 @@ Book[] books = {
     new Book("The Age of Revolution: 1789-1848", "Eric Hobsbawm", 1962, "9780674175321", "History", "Out of Stock"),
     new Book("Political Ideologies: An Introduction", "Andrew Heywood", 2017, "9780230361585", "Political Science", "In Stock"),
     new Book("Economics in One Lesson", "Henry Hazlitt", 1946, "9780517548230", "Economics", "Out of Stock"),
-    new Book("The Industrial Revolution: A Very Short Introduction", "Robert C. Allen", 2017, "9780198732661", "History", "In Stock")
+    new Book("The Industrial Revolution: A Very Short Introduction", "Robert C. Allen", 2017, "9780198732661", "History", "In Stock"),
 	new Book("The Rise of Modern Science", "H. Floris Cohen", 2010, "9780262014469", "History", "In Stock"),
 	new Book("The Political Brain", "D. O. Westen", 2007, "9780465015057", "Political Science", "In Stock"),
 	new Book("Globalizing Capital", "Barry Eichengreen", 2008, "9780691136019", "Economics", "Out of Stock"),
