@@ -961,9 +961,9 @@ player recreates the sequence from memory.
 
 ## Project - Arrays & Arraylists
 
-**Directions:** You are taking three classes at the college: Economics, Political Science and History. You are required to have textbooks for each class. Below are a list of books students are to have for their respective classes.  These 10 books that may be found in a library array (see below).  ***In the array, print all "Out of Stock" and all books that were published before 1900.***
+**Directions:** You are taking three classes at the college: Economics, Political Science and History. You are required to have textbooks for each class. Below are a list of books students are to check-out for their respective classes.  These 10 books may be found in a `Book` array (see below).  ***In the array, print all "Out of Stock" and all books that were published before 1900.***
 
-Store the *inputted* ISBN items in an arrayList. Print out the results of the query that include: Book name, Author, Date, ISBN number, Category and Status (In Stock, Not in Stock). ***Organize the books based by Category and book title by alphabetically.***
+Store the *inputted* ISBN items in an arrayList. Print out the results of your query that include: Book name, Author, Date, ISBN number, Category and Status (In Stock, Not in Stock). ***Organize the books based by Category and alphabetically by book title.***
 
 <mark>Submit your finished code as a .java file. Provide appropriate comments within your program. Use Java Time API to display Local Date Time. Submit one document for your test case(s) showing that program works as intended (pdf).</mark>
 
