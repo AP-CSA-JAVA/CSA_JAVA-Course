@@ -530,7 +530,7 @@ You should be able to:
 
 
 
-### Project 4.8.3: Climate Grid Analysis
+## Project 4.8.3: Climate Grid Analysis
 
 
 **Learning Objectives**
