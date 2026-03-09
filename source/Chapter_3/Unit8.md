@@ -751,6 +751,6 @@ public class ClimateGridProject
 | Normalization modification               | 1      |
 |						 **Total Points**  | 10 	|
 
-
+<mark>Submit your finished code as a .java file.  Provide appropriate comments within your program.  Use Java Time API to display Local Date Time.  Submit one document for your test case(s) showing that program works as intended (pdf).</mark>
 ---
 
