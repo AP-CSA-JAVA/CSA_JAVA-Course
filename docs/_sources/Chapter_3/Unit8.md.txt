@@ -336,7 +336,13 @@ Students typically confuse rows and columns.
 
 **2. Accessing Elements**
 
-Access elements using **row first, column second**.
+Access elements using **row first, column second**. Looking at grid[][] the following numbers were created:
+
+```java
+12 7 31 4
+9 22 10 18
+3 41 6 27
+```
 
 ```java
 grid[1][2]
@@ -347,14 +353,16 @@ Means:
 * row = 1
 * column = 2
 
+
+```java
+grid[1][2] = 10;
+```
+
 You should be able to:
 
 * read values
 * assign values
 
-```java
-grid[1][2] = 10;
-```
 
 ---
 
