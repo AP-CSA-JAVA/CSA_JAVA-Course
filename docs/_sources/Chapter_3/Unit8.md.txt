@@ -532,6 +532,7 @@ You should be able to:
 
 ### Project 4.8.3: Climate Grid Analysis
 
+
 **Learning Objectives**
 
 Students will demonstrate understanding of:
@@ -736,7 +737,16 @@ public class ClimateGridProject
 }
 ```
 
+
 ---
+
+
+**<mark>Submit the following:</mark>** 
+	- your .java file  
+	- Appropriate comments within your program.  
+	- Use Java Time API to display Local Date Time.  
+	- Submit one pdf document for your test case(s) showing that program works as intended
+	
 
 ***Grade Rubric***
 
@@ -751,6 +761,7 @@ public class ClimateGridProject
 | Normalization modification               | 1      |
 |						 **Total Points**  | 10 	|
 
-<mark>Submit your finished code as a .java file.  Provide appropriate comments within your program.  Use Java Time API to display Local Date Time.  Submit one document for your test case(s) showing that program works as intended (pdf).</mark>
+
+
 ---
 
