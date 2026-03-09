@@ -810,6 +810,14 @@ Ships used:
 Ships can be placed **horizontally or vertically**.
 
 
+**<mark>Submit the following:</mark>** 
+
+	- your .java file  
+	- Appropriate comments within your program.  
+	- Use Java Time API to display Local Date Time.  
+	- Submit one pdf document for your test case(s) showing that program works as intended
+
+
 **Grade Rubric**
 
 | Category                           | Points |
