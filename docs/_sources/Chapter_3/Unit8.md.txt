@@ -726,7 +726,7 @@ public class ClimateGridProject
         {
             for(int c = 0; c < grid[r].length; c++)
             {
-                grid[r][c] = -10 + rand.nextDouble() * 60;
+                grid[r][c] = -10 + rand.nextDouble() * 65;
             }
         }
 
