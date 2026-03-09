@@ -774,3 +774,51 @@ public class ClimateGridProject
 
 ---
 
+
+### Project 4.8.4 Battleship
+
+**Learning Objectives**
+
+- Students will design and manipulate a 2D array to represent a game board.
+- Students will learn how to:
+  - Store game information in rows and columns
+  - Access and modify elements using board[row][column]
+  - Traverse a 2D array using nested loops
+ 
+
+**Project Overview**
+
+In this project, you will create a simplified version of the classic game **Battleship** using **Java 2D arrays**.  The `computer` will hide ships on a **10×10 grid**, and the player will guess coordinates to try to sink them.  You will build this game by creating **methods** to organize your code.
+
+
+---
+
+**Game Rules**
+
+The game board is **10 rows × 10 columns**  The `computer` hides the ships across the 2D array.
+
+Ships used:
+
+| Ship        | Length |
+| ----------- | ------ |
+| Carrier     | 5      |
+| Battleship  | 4      |
+| Destroyer   | 3      |
+| Submarine   | 3      |
+| Patrol Boat | 2      |
+
+Ships can be placed **horizontally or vertically**.
+
+
+**Grade Rubric**
+
+| Category                           | Points |
+| ---------------------------------- | ------ |
+| 2D Array correctly implemented     | 2      |
+| Ships placed correctly             | 2      |
+| Game accepts and processes guesses | 2      |
+| Board displays correctly           | 1      |
+| Methods used appropriately         | 1      |
+| Win condition implemented          | 1      |
+| Code readability & comments        | 1      |
+| **Total Points** 					 | **10**  |
