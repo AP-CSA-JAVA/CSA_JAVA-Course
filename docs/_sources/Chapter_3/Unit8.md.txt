@@ -296,3 +296,461 @@ Student 3: Total Score = 427, Average Score = 85.4
 ```
 
 This program demonstrates how to create, traverse, and manipulate elements in a 2D array using nested for loops and enhanced for loop. It also shows the use of test cases to validate the results, ensuring that the array elements are correctly modified and the calculated total and average scores are accurate.
+
+
+## Summary of 2D Arrays
+
+
+<details><Summary>Click Here</Summary>
+
+---
+
+
+**1. Declaring and Creating 2D Arrays**
+
+You should know how to declare and initialize a 2D array.
+
+```java
+int[][] grid = new int[3][4];   // 3 rows, 4 columns
+```
+
+or
+
+```java
+int[][] grid = {
+    {1, 2, 3},
+    {4, 5, 6}
+};
+```
+
+Main ideas:
+
+* `int[][]` means **array of arrays**
+* `grid.length` → number of **rows**
+* `grid[0].length` → number of **columns**
+
+***Common AP trick question:***
+Students typically confuse rows and columns.
+
+---
+
+**2. Accessing Elements**
+
+Access elements using **row first, column second**.
+
+```java
+grid[1][2]
+```
+
+Means:
+
+* row = 1
+* column = 2
+
+You should be able to:
+
+* read values
+* assign values
+
+```java
+grid[1][2] = 10;
+```
+
+---
+
+**3. Traversing a 2D Array (Nested Loops)**
+
+This is **one of the most tested skills**.
+
+Most used pattern:
+
+```java
+for (int r = 0; r < grid.length; r++) {
+    for (int c = 0; c < grid[r].length; c++) {
+        System.out.println(grid[r][c]);
+    }
+}
+```
+
+You must recognize:
+
+* outer loop → rows
+* inner loop → columns
+
+---
+
+**4. Row-Major Order**
+
+AP CSA specifically emphasizes **row-major traversal**.
+
+Example order for:
+
+```
+1 2 3
+4 5 6
+```
+
+Traversal order:
+
+```
+1 2 3 4 5 6
+```
+
+This Means:
+
+* finish **row 0**
+* then **row 1**
+
+---
+
+**5. Common Algorithms on 2D Arrays**
+
+You should understand patterns like:
+
+**Sum of all elements**
+
+```java
+int sum = 0;
+
+for (int r = 0; r < grid.length; r++) {
+    for (int c = 0; c < grid[r].length; c++) {
+        sum += grid[r][c];
+    }
+}
+```
+
+**Sum of a specific row**
+
+```java
+for (int c = 0; c < grid[row].length; c++) {
+    sum += grid[row][c];
+}
+```
+
+**Sum of a column**
+
+```java
+for (int r = 0; r < grid.length; r++) {
+    sum += grid[r][col];
+}
+```
+
+---
+
+**6. Modifying Values**
+
+You should understand how loops **change array contents**.
+
+Example: multiply all values by 2
+
+```java
+for (int r = 0; r < grid.length; r++) {
+    for (int c = 0; c < grid[r].length; c++) {
+        grid[r][c] *= 2;
+    }
+}
+```
+
+---
+
+**7. Enhanced For-Loops (Sometimes Tested)**
+
+Java allows:
+
+```java
+for (int[] row : grid) {
+    for (int val : row) {
+        System.out.println(val);
+    }
+}
+```
+
+**Note:**
+
+* You **cannot easily access indexes** with enhanced loops.
+* Mostly used for **reading values**, not modifying structure.
+
+---
+
+**8. Jagged Arrays (Irregular Rows)**
+
+AP may show arrays where rows have different lengths.
+
+```java
+int[][] arr = {
+    {1,2},
+    {3,4,5},
+    {6}
+};
+```
+
+You must use:
+
+```java
+arr[r].length
+```
+
+Not a fixed column size:
+
+```java
+arr.length      // rows
+```
+---
+
+**9. Method Parameters with 2D Arrays**
+
+You may see methods such as:
+
+```java
+public static int total(int[][] grid)
+```
+
+You should be able to:
+
+* traverse the array
+* compute results
+* return values.
+
+---
+
+***Most Common AP Exam Question Types:***
+
+- find **sum / average**
+- count elements meeting a condition
+- find **largest or smallest value**
+- swap values
+- check patterns in rows or columns
+- modify elements
+
+
+</details>
+
+
+---
+
+
+
+### Project 4.8.3: Climate Grid Analysis
+
+**Learning Objectives**
+
+Students will demonstrate understanding of:
+
+	- 2D array indexing
+	- Nested loop traversal
+	- Row-major traversal
+	- Computing aggregates
+	- Writing methods that **return values**
+	- Modifying array contents
+
+---
+
+**Project Overview:**
+
+*Data Scientists* collect temperature data across a large region using a **300 × 300 grid of sensors**. Each cell in the grid stores the **temperature in degrees Celsius** at that location.  Your task is to write a Java program that analyzes and modifies the dataset using **2D array algorithms**.  The small dataset will contain: **90,000 values**.
+
+
+***Directions:***
+
+You must implement the following methods:
+
+**1. Average Temperature**
+
+Return the **average temperature of the entire grid**.
+
+```java
+public static double getAverage(double[][] grid)
+```
+
+---
+
+**2. Hottest Location**
+
+Return the **highest temperature in the grid**.
+
+```java
+public static double getMax(double[][] grid)
+```
+
+---
+
+**3. Coldest Location**
+
+Return the **lowest temperature in the grid**.
+
+```java
+public static double getMin(double[][] grid)
+```
+
+---
+
+**4. Row Heat**
+
+Return the **average temperature of a specific row**.
+
+```java
+public static double rowAverage(double[][] grid, int row)
+```
+
+---
+
+**5. Column Heat**
+
+Return the **average temperature of a specific column**.
+
+```java
+public static double columnAverage(double[][] grid, int col)
+```
+
+---
+
+**6. Heat Wave Detection**
+
+Count how many cells have a temperature **greater than 35°C**.
+
+```java
+public static int heatWaveCount(double[][] grid)
+```
+
+---
+
+**7. Apply Calibration Adjustment**
+
+All sensors were discovered to be **1.5°C too cold**.
+
+Write a method that **adds 1.5 to every value** in the grid.
+
+```java
+public static void calibrate(double[][] grid)
+```
+
+---
+
+**8. Extreme Weather Map**
+
+Replace all values:
+
+* below **0°C** → set to **0**
+* above **50°C** → set to **50**
+
+```java
+public static void normalize(double[][] grid)
+```
+
+
+---
+
+
+**Starter Code**
+
+```java
+public class ClimateGridProject
+{
+
+    public static void main(String[] args)
+    {
+        double[][] grid = generateData();
+
+        System.out.println("Aberage Temp: " + getAverage(grid));
+        System.out.println("Max Temp: " + getMax(grid));
+        System.out.println("Min Temp: " + getMin(grid));
+        System.out.println("Row 100 Avg: " + rowAverage(grid, 100));
+        System.out.println("Column 50 Avg: " + columnAverage(grid, 50));
+        System.out.println("Heat Wave Cells: " + heatWaveCount(grid));
+
+        calibrate(grid);
+        normalize(grid);
+    }
+
+
+    // YOU MUST IMPLEMENT THESE METHODS
+
+
+    public static double getAverage(double[][] grid)
+    {
+
+    }
+
+
+    public static double getMax(double[][] grid)
+    {
+
+    }
+
+
+    public static double getMin(double[][] grid)
+    {
+
+    }
+
+
+    public static double rowAverage(double[][] grid, int row)
+    {
+
+    }
+
+
+    public static double columnAverage(double[][] grid, int col)
+    {
+
+    }
+
+
+    public static int heatWaveCount(double[][] grid)
+    {
+
+    }
+
+
+    public static void calibrate(double[][] grid)
+    {
+
+    }
+
+
+    public static void normalize(double[][] grid)
+    {
+
+    }
+
+
+    // --> DATASET GENERATOR <--
+	// --> This will create a realistic range of temperatures from **-10°C to 50°C** <--
+
+    public static double[][] generateData()
+    {
+        java.util.Random rand = new java.util.Random(42);
+        double[][] grid = new double[300][300];
+
+        for(int r = 0; r < grid.length; r++)
+        {
+            for(int c = 0; c < grid[r].length; c++)
+            {
+                grid[r][c] = -10 + rand.nextDouble() * 60;
+            }
+        }
+
+        return grid;
+    }
+
+}
+```
+
+---
+
+***Grade Rubric***
+
+| Criteria                                         | Points |
+| ------------------------------------------------ | ------ |
+| Traversal of 2D array using nested loops | 2      |
+| Calculation of overall average           | 1      |
+| Max and Min methods                      | 2      |
+| Row and Column average methods           | 2      |
+| Heat wave count logic                    | 1      |
+| Calibration modification of array        | 1      |
+| Normalization modification               | 1      |
+|						 **Total Points**  | 10 	|
+
+
+---
+

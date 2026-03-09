@@ -600,6 +600,378 @@
 </div>
 <p>This program demonstrates how to create, traverse, and manipulate elements in a 2D array using nested for loops and enhanced for loop. It also shows the use of test cases to validate the results, ensuring that the array elements are correctly modified and the calculated total and average scores are accurate.</p>
 </section>
+<section id="summary-of-2d-arrays">
+<h2>Summary of 2D Arrays<a class="headerlink" href="#summary-of-2d-arrays" title="Link to this heading">¶</a></h2>
+<details><Summary>Click Here</Summary>
+<hr class="docutils" />
+<p><strong>1. Declaring and Creating 2D Arrays</strong></p>
+<p>You should know how to declare and initialize a 2D array.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">grid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">3</span><span class="o">][</span><span class="mi">4</span><span class="o">]</span><span class="p">;</span><span class="w">   </span><span class="c1">// 3 rows, 4 columns</span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">grid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>Main ideas:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">int[][]</span></code> means <strong>array of arrays</strong></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">grid.length</span></code> → number of <strong>rows</strong></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">grid[0].length</span></code> → number of <strong>columns</strong></p></li>
+</ul>
+<p><em><strong>Common AP trick question:</strong></em>
+Students typically confuse rows and columns.</p>
+<hr class="docutils" />
+<p><strong>2. Accessing Elements</strong></p>
+<p>Access elements using <strong>row first, column second</strong>.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">grid</span><span class="o">[</span><span class="mi">1</span><span class="o">][</span><span class="mi">2</span><span class="o">]</span>
+</pre></div>
+</div>
+<p>Means:</p>
+<ul class="simple">
+<li><p>row = 1</p></li>
+<li><p>column = 2</p></li>
+</ul>
+<p>You should be able to:</p>
+<ul class="simple">
+<li><p>read values</p></li>
+<li><p>assign values</p></li>
+</ul>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">grid</span><span class="o">[</span><span class="mi">1</span><span class="o">][</span><span class="mi">2</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>3. Traversing a 2D Array (Nested Loops)</strong></p>
+<p>This is <strong>one of the most tested skills</strong>.</p>
+<p>Most used pattern:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">grid</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">r</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">grid</span><span class="o">[</span><span class="n">r</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">c</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">grid</span><span class="o">[</span><span class="n">r</span><span class="o">][</span><span class="n">c</span><span class="o">]</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>You must recognize:</p>
+<ul class="simple">
+<li><p>outer loop → rows</p></li>
+<li><p>inner loop → columns</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>4. Row-Major Order</strong></p>
+<p>AP CSA specifically emphasizes <strong>row-major traversal</strong>.</p>
+<p>Example order for:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span>
+<span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span>
+</pre></div>
+</div>
+<p>Traversal order:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span>
+</pre></div>
+</div>
+<p>This Means:</p>
+<ul class="simple">
+<li><p>finish <strong>row 0</strong></p></li>
+<li><p>then <strong>row 1</strong></p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>5. Common Algorithms on 2D Arrays</strong></p>
+<p>You should understand patterns like:</p>
+<p><strong>Sum of all elements</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">grid</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">r</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">grid</span><span class="o">[</span><span class="n">r</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">c</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">grid</span><span class="o">[</span><span class="n">r</span><span class="o">][</span><span class="n">c</span><span class="o">]</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Sum of a specific row</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">grid</span><span class="o">[</span><span class="n">row</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">c</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">grid</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">c</span><span class="o">]</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Sum of a column</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">grid</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">r</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">grid</span><span class="o">[</span><span class="n">r</span><span class="o">][</span><span class="n">col</span><span class="o">]</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>6. Modifying Values</strong></p>
+<p>You should understand how loops <strong>change array contents</strong>.</p>
+<p>Example: multiply all values by 2</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">grid</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">r</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">grid</span><span class="o">[</span><span class="n">r</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">c</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">grid</span><span class="o">[</span><span class="n">r</span><span class="o">][</span><span class="n">c</span><span class="o">]</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>7. Enhanced For-Loops (Sometimes Tested)</strong></p>
+<p>Java allows:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">row</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">grid</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">val</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">row</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">val</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Note:</strong></p>
+<ul class="simple">
+<li><p>You <strong>cannot easily access indexes</strong> with enhanced loops.</p></li>
+<li><p>Mostly used for <strong>reading values</strong>, not modifying structure.</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>8. Jagged Arrays (Irregular Rows)</strong></p>
+<p>AP may show arrays where rows have different lengths.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="mi">6</span><span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>You must use:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span><span class="o">[</span><span class="n">r</span><span class="o">]</span><span class="p">.</span><span class="na">length</span>
+</pre></div>
+</div>
+<p>Not a fixed column size:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="w">      </span><span class="c1">// rows</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>9. Method Parameters with 2D Arrays</strong></p>
+<p>You may see methods such as:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">total</span><span class="p">(</span><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">grid</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You should be able to:</p>
+<ul class="simple">
+<li><p>traverse the array</p></li>
+<li><p>compute results</p></li>
+<li><p>return values.</p></li>
+</ul>
+<hr class="docutils" />
+<p><em><strong>Most Common AP Exam Question Types:</strong></em></p>
+<ul class="simple">
+<li><p>find <strong>sum / average</strong></p></li>
+<li><p>count elements meeting a condition</p></li>
+<li><p>find <strong>largest or smallest value</strong></p></li>
+<li><p>swap values</p></li>
+<li><p>check patterns in rows or columns</p></li>
+<li><p>modify elements</p></li>
+</ul>
+</details>
+<hr class="docutils" />
+<section id="project-4-8-3-climate-grid-analysis">
+<h3>Project 4.8.3: Climate Grid Analysis<a class="headerlink" href="#project-4-8-3-climate-grid-analysis" title="Link to this heading">¶</a></h3>
+<p><strong>Learning Objectives</strong></p>
+<p>Students will demonstrate understanding of:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- 2D array indexing
+- Nested loop traversal
+- Row-major traversal
+- Computing aggregates
+- Writing methods that **return values**
+- Modifying array contents
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>Project Overview:</strong></p>
+<p><em>Data Scientists</em> collect temperature data across a large region using a <strong>300 × 300 grid of sensors</strong>. Each cell in the grid stores the <strong>temperature in degrees Celsius</strong> at that location.  Your task is to write a Java program that analyzes and modifies the dataset using <strong>2D array algorithms</strong>.  The small dataset will contain: <strong>90,000 values</strong>.</p>
+<p><em><strong>Directions:</strong></em></p>
+<p>You must implement the following methods:</p>
+<p><strong>1. Average Temperature</strong></p>
+<p>Return the <strong>average temperature of the entire grid</strong>.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getAverage</span><span class="p">(</span><span class="kt">double</span><span class="o">[][]</span><span class="w"> </span><span class="n">grid</span><span class="p">)</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>2. Hottest Location</strong></p>
+<p>Return the <strong>highest temperature in the grid</strong>.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getMax</span><span class="p">(</span><span class="kt">double</span><span class="o">[][]</span><span class="w"> </span><span class="n">grid</span><span class="p">)</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>3. Coldest Location</strong></p>
+<p>Return the <strong>lowest temperature in the grid</strong>.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getMin</span><span class="p">(</span><span class="kt">double</span><span class="o">[][]</span><span class="w"> </span><span class="n">grid</span><span class="p">)</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>4. Row Heat</strong></p>
+<p>Return the <strong>average temperature of a specific row</strong>.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">rowAverage</span><span class="p">(</span><span class="kt">double</span><span class="o">[][]</span><span class="w"> </span><span class="n">grid</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>5. Column Heat</strong></p>
+<p>Return the <strong>average temperature of a specific column</strong>.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">columnAverage</span><span class="p">(</span><span class="kt">double</span><span class="o">[][]</span><span class="w"> </span><span class="n">grid</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">col</span><span class="p">)</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>6. Heat Wave Detection</strong></p>
+<p>Count how many cells have a temperature <strong>greater than 35°C</strong>.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">heatWaveCount</span><span class="p">(</span><span class="kt">double</span><span class="o">[][]</span><span class="w"> </span><span class="n">grid</span><span class="p">)</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>7. Apply Calibration Adjustment</strong></p>
+<p>All sensors were discovered to be <strong>1.5°C too cold</strong>.</p>
+<p>Write a method that <strong>adds 1.5 to every value</strong> in the grid.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">calibrate</span><span class="p">(</span><span class="kt">double</span><span class="o">[][]</span><span class="w"> </span><span class="n">grid</span><span class="p">)</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>8. Extreme Weather Map</strong></p>
+<p>Replace all values:</p>
+<ul class="simple">
+<li><p>below <strong>0°C</strong> → set to <strong>0</strong></p></li>
+<li><p>above <strong>50°C</strong> → set to <strong>50</strong></p></li>
+</ul>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">normalize</span><span class="p">(</span><span class="kt">double</span><span class="o">[][]</span><span class="w"> </span><span class="n">grid</span><span class="p">)</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>Starter Code</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ClimateGridProject</span>
+<span class="p">{</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">double</span><span class="o">[][]</span><span class="w"> </span><span class="n">grid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">generateData</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Aberage Temp: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">getAverage</span><span class="p">(</span><span class="n">grid</span><span class="p">));</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Max Temp: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">getMax</span><span class="p">(</span><span class="n">grid</span><span class="p">));</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Min Temp: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">getMin</span><span class="p">(</span><span class="n">grid</span><span class="p">));</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Row 100 Avg: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rowAverage</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">));</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Column 50 Avg: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">columnAverage</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">));</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Heat Wave Cells: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">heatWaveCount</span><span class="p">(</span><span class="n">grid</span><span class="p">));</span>
+
+<span class="w">        </span><span class="n">calibrate</span><span class="p">(</span><span class="n">grid</span><span class="p">);</span>
+<span class="w">        </span><span class="n">normalize</span><span class="p">(</span><span class="n">grid</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+
+<span class="w">    </span><span class="c1">// YOU MUST IMPLEMENT THESE METHODS</span>
+
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getAverage</span><span class="p">(</span><span class="kt">double</span><span class="o">[][]</span><span class="w"> </span><span class="n">grid</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+
+<span class="w">    </span><span class="p">}</span>
+
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getMax</span><span class="p">(</span><span class="kt">double</span><span class="o">[][]</span><span class="w"> </span><span class="n">grid</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+
+<span class="w">    </span><span class="p">}</span>
+
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getMin</span><span class="p">(</span><span class="kt">double</span><span class="o">[][]</span><span class="w"> </span><span class="n">grid</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+
+<span class="w">    </span><span class="p">}</span>
+
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">rowAverage</span><span class="p">(</span><span class="kt">double</span><span class="o">[][]</span><span class="w"> </span><span class="n">grid</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">row</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+
+<span class="w">    </span><span class="p">}</span>
+
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">columnAverage</span><span class="p">(</span><span class="kt">double</span><span class="o">[][]</span><span class="w"> </span><span class="n">grid</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">col</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+
+<span class="w">    </span><span class="p">}</span>
+
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">heatWaveCount</span><span class="p">(</span><span class="kt">double</span><span class="o">[][]</span><span class="w"> </span><span class="n">grid</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+
+<span class="w">    </span><span class="p">}</span>
+
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">calibrate</span><span class="p">(</span><span class="kt">double</span><span class="o">[][]</span><span class="w"> </span><span class="n">grid</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+
+<span class="w">    </span><span class="p">}</span>
+
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">normalize</span><span class="p">(</span><span class="kt">double</span><span class="o">[][]</span><span class="w"> </span><span class="n">grid</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+
+<span class="w">    </span><span class="p">}</span>
+
+
+<span class="w">    </span><span class="c1">// --&gt; DATASET GENERATOR &lt;--</span>
+<span class="w">	</span><span class="c1">// --&gt; This will create a realistic range of temperatures from **-10°C to 50°C** &lt;--</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="o">[][]</span><span class="w"> </span><span class="nf">generateData</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">java</span><span class="p">.</span><span class="na">util</span><span class="p">.</span><span class="na">Random</span><span class="w"> </span><span class="n">rand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">util</span><span class="p">.</span><span class="na">Random</span><span class="p">(</span><span class="mi">42</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="o">[][]</span><span class="w"> </span><span class="n">grid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">double</span><span class="o">[</span><span class="mi">300</span><span class="o">][</span><span class="mi">300</span><span class="o">]</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">grid</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">r</span><span class="o">++</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">grid</span><span class="o">[</span><span class="n">r</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">c</span><span class="o">++</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">grid</span><span class="o">[</span><span class="n">r</span><span class="o">][</span><span class="n">c</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">10</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rand</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">60</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">grid</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><em><strong>Grade Rubric</strong></em></p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Criteria</p></th>
+<th class="head"><p>Points</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Traversal of 2D array using nested loops</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Calculation of overall average</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>Max and Min methods</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Row and Column average methods</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>Heat wave count logic</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>Calibration modification of array</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>Normalization modification</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Total Points</strong></p></td>
+<td><p>10</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+</section>
+</section>
 </section>
 
         </article>
@@ -660,6 +1032,10 @@
 <li><a class="reference internal" href="#">Unit 8 2D Array</a><ul>
 <li><a class="reference internal" href="#d-arrays">8.1 2D Arrays</a></li>
 <li><a class="reference internal" href="#traversing-2d-arrays">8.2 Traversing 2D Arrays</a></li>
+<li><a class="reference internal" href="#summary-of-2d-arrays">Summary of 2D Arrays</a><ul>
+<li><a class="reference internal" href="#project-4-8-3-climate-grid-analysis">Project 4.8.3: Climate Grid Analysis</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
