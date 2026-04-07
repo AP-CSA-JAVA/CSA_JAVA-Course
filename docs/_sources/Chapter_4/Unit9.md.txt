@@ -55,6 +55,271 @@ The keywords and concepts form the foundation of *inheritance* in Java. In Objec
 
 </details>
 
+
+---
+---
+
+
+<details><summary>AP CSA Project: Designing with Inheritance </summary>
+
+
+---
+
+
+**Project Title:** *Build a Simulation Using Inheritance*
+
+**Project Overview:**
+
+You will design and build a Java program that models a real-world system using **inheritance and polymorphism**.
+
+Your program must include:
+
+* A **superclass** that defines shared behavior
+* At least **2–3 subclasses** with specialized behavior
+* Use of **method overriding**
+* Use of **constructors with `super()`**
+* A collection (**ArrayList**) using **polymorphism**
+* At least one use of **casting or `instanceof`**
+* Clear demonstration of **dynamic method behavior**
+
+---
+
+**Project Theme Options:**
+
+Students choose ONE:
+
+**1. Animal Ecosystem**
+
+* Superclass: `Animal`
+* Subclasses: `Dog`, `Bird`, `Fish`, etc.
+* Behaviors: `move()`, `eat()`, `makeSound()`
+
+**2. Vehicle System**
+
+* Superclass: `Vehicle`
+* Subclasses: `Car`, `Truck`, `ElectricCar`
+* Behaviors: `drive()`, `fuelType()`
+
+**3. Game Characters**
+
+* Superclass: `Character`
+* Subclasses: `Warrior`, `Mage`, `Archer`
+* Behaviors: `attack()`, `defend()`
+
+**4. School System**
+
+* Superclass: `Person`
+* Subclasses: `Admin`, `Counselor`, `Teacher`, `Student` 
+* Behaviors: `performRole()`
+
+**5. Inter-disciplinary Project**
+
+* Superclass: `?`
+* Subclasses: `?`, `?`, `?`
+* Behaviors: `?()`
+
+
+---
+
+
+**Learning Objectives:**
+
+Students will be able to:
+
+**Core Inheritance Skills (9.1)**
+
+* Create a superclass and subclass using `extends`
+* Design a class hierarchy with shared and unique behaviors
+
+**Constructors (9.2)**
+
+* Write subclass constructors that call `super()`
+* Properly initialize inherited and new instance variables
+
+**Method Overriding (9.3)**
+
+* Override superclass methods correctly using `@Override`
+* Explain how and why overridden methods behave differently
+
+**super Keyword (9.4)**
+
+* Use `super()` to call constructors
+* Use `super.method()` when extending behavior
+
+**References & Casting (9.5)**
+
+* Use superclass references for subclass objects
+* Demonstrate casting or `instanceof` safely
+
+**Polymorphism (9.6)**
+
+* Use an `ArrayList<Superclass>` to store multiple object types
+* Demonstrate dynamic method calls
+
+**Object Class (9.7)**
+
+* Override `toString()` for meaningful output
+
+---
+
+***Minimum Program Requirements***
+
+Your program MUST include:
+
+**1. Superclass**
+
+* At least **2–3 instance variables**
+* At least **2 methods**
+* A constructor
+
+**2. Subclasses (2–3 minimum)**
+
+* Add at least **1 unique variable**
+* Override at least **1 method**
+* Use `super()` in constructor
+
+**3. Polymorphism**
+
+```java
+ArrayList<Superclass> list = new ArrayList<>();
+```
+
+* Store multiple subclass objects
+* Loop through and call overridden methods
+
+**4. Casting / instanceof**
+
+* Demonstrate accessing subclass-specific behavior
+
+**5. Output**
+
+* Program must clearly show:
+
+  * Different behaviors from same method call
+  * Meaningful printed results
+
+---
+
+**Starter Structure**
+
+```java
+class Animal {
+    protected String name;
+
+    public Animal(String name) {
+        this.name = name;
+    }
+
+    public void makeSound() {
+        System.out.println("Animal sound");
+    }
+
+    public String toString() {
+        return "Animal: " + name;
+    }
+}
+
+class Dog extends Animal {
+    private String breed;
+
+    public Dog(String name, String breed) {
+        super(name);
+        this.breed = breed;
+    }
+
+    @Override
+    public void makeSound() {
+        System.out.println(name + " barks");
+    }
+}
+```
+
+---
+
+**Deliverables**
+
+Students must submit:
+
+1. **Java Code**
+2. **Class Diagram**
+3. **Written Explanation**
+
+   * What is your superclass and why?
+   * How does inheritance reduce repetition?
+   * Where is polymorphism happening?
+   * What method did you override and why?
+
+---
+
+***10-Point Rubric***
+
+**1. Class Design (2 pts)**
+
+* (2) Clear superclass + logical subclasses with shared structure
+* (1) Basic inheritance present but weak design
+* (0) No meaningful inheritance
+
+---
+
+**2. Constructors & `super()` (2 pts)**
+
+* (2) Correct use of constructors and `super()`
+* (1) Partial or incorrect use
+* (0) Missing or incorrect
+
+---
+
+**3. Method Overriding (2 pts)**
+
+* (2) Correct overriding with different behavior
+* (1) Attempted but incorrect or unclear
+* (0) No overriding
+
+---
+
+**4. Polymorphism with ArrayList (2 pts)**
+
+* (2) Uses `ArrayList<Superclass>` and demonstrates dynamic method calls
+* (1) Partial use or unclear understanding
+* (0) Not present
+
+---
+
+**5. Casting / Advanced Behavior (1 pt)**
+
+* (1) Correct use of `instanceof` or casting
+* (0) Missing or incorrect
+
+---
+
+**6. Output & Program Functionality (1 pt)**
+
+* (1) Output clearly demonstrates inheritance concepts
+* (0) Output unclear or broken
+
+---
+
+**7. Explanation of Concepts (Written) (1 pt)**
+
+* (1) Clear explanation of inheritance + polymorphism
+* (0) Weak or missing explanation
+
+---
+
+**Extension**
+
+* Abstract classes
+* More complex hierarchies (multilevel)
+
+---
+
+
+</details>
+
+
+---
+
+
 In Java, there are four different types of inheritance variations that you can demonstrate:
 
 - single inheritance
@@ -1072,260 +1337,5 @@ public class Main {
 ```
 
 In this example, the Person class overrides the hashCode() method inherited from the Object class. The overridden hashCode() method calculates the hash code of the Person object based on its name and age attributes. When we call person.hashCode(), it invokes the overridden hashCode() method to retrieve the hash code value of the object.
-
-You’re right to keep inheritance in your course. Even if the AP exam backed off it, students who *don’t* understand inheritance struggle hard in any real OOP setting later. So let’s make this project worth their time—not just “use extends,” but actually *think in hierarchies*.
-
----
-
-### AP CSA Project: Designing with Inheritance
-
-**Project Title:** *Build a Simulation Using Inheritance*
-
----
-
-### **Project Overview:**
-
-You will design and build a Java program that models a real-world system using **inheritance and polymorphism**.
-
-Your program must include:
-
-* A **superclass** that defines shared behavior
-* At least **2–3 subclasses** with specialized behavior
-* Use of **method overriding**
-* Use of **constructors with `super()`**
-* A collection (**ArrayList**) using **polymorphism**
-* At least one use of **casting or `instanceof`**
-* Clear demonstration of **dynamic method behavior**
-
----
-
-**Project Theme Options:**
-
-Students choose ONE:
-
-**1. Animal Ecosystem**
-
-* Superclass: `Animal`
-* Subclasses: `Dog`, `Bird`, `Fish`, etc.
-* Behaviors: `move()`, `eat()`, `makeSound()`
-
-**2. Vehicle System**
-
-* Superclass: `Vehicle`
-* Subclasses: `Car`, `Truck`, `ElectricCar`
-* Behaviors: `drive()`, `fuelType()`
-
-**3. Game Characters**
-
-* Superclass: `Character`
-* Subclasses: `Warrior`, `Mage`, `Archer`
-* Behaviors: `attack()`, `defend()`
-
-**4. School System**
-
-* Superclass: `Person`
-* Subclasses: `Admin`, `Counselor`, `Teacher`, `Student` 
-* Behaviors: `performRole()`
-
-**5. Inter-disciplinary Project**
-
-* Superclass: `?`
-* Subclasses: `?`, `?`, `?`
-* Behaviors: `?()`
-
-
----
-
-
-**Learning Objectives:**
-
-Students will be able to:
-
-**Core Inheritance Skills (9.1)**
-
-* Create a superclass and subclass using `extends`
-* Design a class hierarchy with shared and unique behaviors
-
-**Constructors (9.2)**
-
-* Write subclass constructors that call `super()`
-* Properly initialize inherited and new instance variables
-
-**Method Overriding (9.3)**
-
-* Override superclass methods correctly using `@Override`
-* Explain how and why overridden methods behave differently
-
-**super Keyword (9.4)**
-
-* Use `super()` to call constructors
-* Use `super.method()` when extending behavior
-
-**References & Casting (9.5)**
-
-* Use superclass references for subclass objects
-* Demonstrate casting or `instanceof` safely
-
-**Polymorphism (9.6)**
-
-* Use an `ArrayList<Superclass>` to store multiple object types
-* Demonstrate dynamic method calls
-
-**Object Class (9.7)**
-
-* Override `toString()` for meaningful output
-
----
-
-***Minimum Program Requirements***
-
-Your program MUST include:
-
-**1. Superclass**
-
-* At least **2–3 instance variables**
-* At least **2 methods**
-* A constructor
-
-**2. Subclasses (2–3 minimum)**
-
-* Add at least **1 unique variable**
-* Override at least **1 method**
-* Use `super()` in constructor
-
-**3. Polymorphism**
-
-```java
-ArrayList<Superclass> list = new ArrayList<>();
-```
-
-* Store multiple subclass objects
-* Loop through and call overridden methods
-
-**4. Casting / instanceof**
-
-* Demonstrate accessing subclass-specific behavior
-
-**5. Output**
-
-* Program must clearly show:
-
-  * Different behaviors from same method call
-  * Meaningful printed results
-
----
-
-**Starter Structure**
-
-```java
-class Animal {
-    protected String name;
-
-    public Animal(String name) {
-        this.name = name;
-    }
-
-    public void makeSound() {
-        System.out.println("Animal sound");
-    }
-
-    public String toString() {
-        return "Animal: " + name;
-    }
-}
-
-class Dog extends Animal {
-    private String breed;
-
-    public Dog(String name, String breed) {
-        super(name);
-        this.breed = breed;
-    }
-
-    @Override
-    public void makeSound() {
-        System.out.println(name + " barks");
-    }
-}
-```
-
----
-
-### Deliverables
-
-Students must submit:
-
-1. **Java Code**
-2. **Class Diagram**
-3. **Written Explanation**
-
-   * What is your superclass and why?
-   * How does inheritance reduce repetition?
-   * Where is polymorphism happening?
-   * What method did you override and why?
-
----
-
-#### **10-Point Rubric**
-
-**1. Class Design (2 pts)**
-
-* (2) Clear superclass + logical subclasses with shared structure
-* (1) Basic inheritance present but weak design
-* (0) No meaningful inheritance
-
----
-
-**2. Constructors & `super()` (2 pts)**
-
-* (2) Correct use of constructors and `super()`
-* (1) Partial or incorrect use
-* (0) Missing or incorrect
-
----
-
-**3. Method Overriding (2 pts)**
-
-* (2) Correct overriding with different behavior
-* (1) Attempted but incorrect or unclear
-* (0) No overriding
-
----
-
-**4. Polymorphism with ArrayList (2 pts)**
-
-* (2) Uses `ArrayList<Superclass>` and demonstrates dynamic method calls
-* (1) Partial use or unclear understanding
-* (0) Not present
-
----
-
-**5. Casting / Advanced Behavior (1 pt)**
-
-* (1) Correct use of `instanceof` or casting
-* (0) Missing or incorrect
-
----
-
-**6. Output & Program Functionality (1 pt)**
-
-* (1) Output clearly demonstrates inheritance concepts
-* (0) Output unclear or broken
-
----
-
-**7. Explanation of Concepts (Written) (1 pt)**
-
-* (1) Clear explanation of inheritance + polymorphism
-* (0) Weak or missing explanation
-
----
-
-**Extension**
-
-* Abstract classes
-* More complex hierarchies (multilevel)
-
----
 
 
