@@ -520,8 +520,8 @@
 <li><p>hierarchical inheritance.</p></li>
 </ul>
 <p>Here are examples that illustrates each of these variations:</p>
-<p>Single Inheritance:
-Single inheritance is a type of inheritance where a class extends only one superclass. In this example, we’ll create a base class called Animal and a derived class called Dog, which inherits from Animal.</p>
+<p><strong>Single Inheritance:</strong></p>
+<p>Single inheritance is a type of inheritance where a class extends only one superclass. In this example, we’ll create a base class called Animal and a derived class called Dog, which inherits from Animal.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Single Inheritance</span>
 <span class="kd">class</span> <span class="nc">Animal</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">sound</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -544,8 +544,8 @@ Single inheritance is a type of inheritance where a class extends only one super
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Multiple Inheritance (through interfaces):
-Java does not support multiple inheritance of classes due to the “diamond problem” where ambiguity may arise when two superclasses have the same method name. However, multiple inheritance can be achieved through interfaces. In this example, we’ll create two interfaces, Swim and Fly, and a class Bird that implements both interfaces.</p>
+<p><strong>Multiple Inheritance (through interfaces):</strong></p>
+<p>In Java, <strong>interfaces</strong> provide a way to achieve multiple inheritance of behavior without the problems caused by inheriting from multiple classes. Java does not allow a class to extend more than one superclass because of the <em>diamond problem</em>, where two parent classes might define the same method and create ambiguity. Instead, interfaces act as <strong>contracts</strong> that specify what methods a class must implement, without providing the full implementation. This allows a class to adopt multiple abilities safely. In this example, the interfaces <code class="docutils literal notranslate"><span class="pre">Swim</span></code> and <code class="docutils literal notranslate"><span class="pre">Fly</span></code> define behaviors, and the <code class="docutils literal notranslate"><span class="pre">Bird</span></code> class implements both, meaning it agrees to provide implementations for <code class="docutils literal notranslate"><span class="pre">swim()</span></code> and <code class="docutils literal notranslate"><span class="pre">fly()</span></code>. This demonstrates how a single class can take on multiple roles—something that would not be possible using class inheritance alone—while avoiding conflicts and maintaining clear, organized code.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Multiple Inheritance (through interfaces)</span>
 <span class="kd">interface</span> <span class="nc">Swim</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">swim</span><span class="p">();</span>
@@ -575,8 +575,8 @@ Java does not support multiple inheritance of classes due to the “diamond prob
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Multilevel Inheritance:
-In multilevel inheritance, a class extends another class, and that class further extends another class. In this example, we’ll create a base class Vehicle, a derived class Car that inherits from Vehicle, and another class Sedan that inherits from Car.</p>
+<p><strong>Multilevel Inheritance:</strong></p>
+<p>In multilevel inheritance, a class extends another class, and that class further extends another class. In this example, we’ll create a base class Vehicle, a derived class Car that inherits from Vehicle, and another class Sedan that inherits from Car.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Multilevel Inheritance</span>
 <span class="kd">class</span> <span class="nc">Vehicle</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">drive</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -608,8 +608,8 @@ In multilevel inheritance, a class extends another class, and that class further
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Hierarchical Inheritance:
-Hierarchical inheritance is a type of inheritance where multiple classes inherit from a single base class. In this example, we’ll create a base class Shape and two derived classes Circle and Square, which both inherit from Shape.</p>
+<p><strong>Hierarchical Inheritance:</strong></p>
+<p>Hierarchical inheritance is a type of inheritance where multiple classes inherit from a single base class. In this example, we’ll create a base class Shape and two derived classes Circle and Square, which both inherit from Shape.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Hierarchical Inheritance</span>
 <span class="kd">class</span> <span class="nc">Shape</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -643,7 +643,7 @@ Hierarchical inheritance is a type of inheritance where multiple classes inherit
 </pre></div>
 </div>
 <p>The three Java programs that demonstrate three different types of inheritance: <code class="docutils literal notranslate"><span class="pre">single</span> <span class="pre">inheritance</span></code>, <code class="docutils literal notranslate"><span class="pre">multiple</span> <span class="pre">inheritance</span> <span class="pre">(achieved</span> <span class="pre">through</span> <span class="pre">interfaces)</span></code>, and <code class="docutils literal notranslate"><span class="pre">hierarchical</span> <span class="pre">inheritance</span></code>. Each program will include an <code class="docutils literal notranslate"><span class="pre">ArrayList</span></code> to showcase different aspects of inheritance.</p>
-<p>Single Inheritance:
+<p><strong>Single Inheritance:</strong>
 In single inheritance, a class extends only one superclass.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
 
@@ -673,7 +673,7 @@ In single inheritance, a class extends only one superclass.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Multiple Inheritance (Using Interfaces):
+<p><strong>Multiple Inheritance (Using Interfaces):</strong>
 In Java, multiple inheritance can be achieved through interfaces. A class can implement multiple interfaces.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
 
@@ -716,7 +716,7 @@ In Java, multiple inheritance can be achieved through interfaces. A class can im
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Hierarchical Inheritance:
+<p><strong>Hierarchical Inheritance:</strong>
 In hierarchical inheritance, a single superclass is extended by multiple subclasses.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
 

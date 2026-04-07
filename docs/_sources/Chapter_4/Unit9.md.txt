@@ -265,7 +265,8 @@ In Java, there are four different types of inheritance variations that you can d
 
 Here are examples that illustrates each of these variations:
 
-Single Inheritance:
+**Single Inheritance:**
+
 Single inheritance is a type of inheritance where a class extends only one superclass. In this example, we'll create a base class called Animal and a derived class called Dog, which inherits from Animal.
 
 ```java
@@ -291,8 +292,10 @@ public class Main {
 }
 ```
 
-Multiple Inheritance (through interfaces):
-Java does not support multiple inheritance of classes due to the "diamond problem" where ambiguity may arise when two superclasses have the same method name. However, multiple inheritance can be achieved through interfaces. In this example, we'll create two interfaces, Swim and Fly, and a class Bird that implements both interfaces.
+**Multiple Inheritance (through interfaces):**
+
+In Java, **interfaces** provide a way to achieve multiple inheritance of behavior without the problems caused by inheriting from multiple classes. Java does not allow a class to extend more than one superclass because of the *diamond problem*, where two parent classes might define the same method and create ambiguity. Instead, interfaces act as **contracts** that specify what methods a class must implement, without providing the full implementation. This allows a class to adopt multiple abilities safely. In this example, the interfaces `Swim` and `Fly` define behaviors, and the `Bird` class implements both, meaning it agrees to provide implementations for `swim()` and `fly()`. This demonstrates how a single class can take on multiple roles—something that would not be possible using class inheritance alone—while avoiding conflicts and maintaining clear, organized code.
+
 
 ```java
 // Multiple Inheritance (through interfaces)
@@ -324,7 +327,8 @@ public class Main {
 }
 ```
 
-Multilevel Inheritance:
+**Multilevel Inheritance:**
+
 In multilevel inheritance, a class extends another class, and that class further extends another class. In this example, we'll create a base class Vehicle, a derived class Car that inherits from Vehicle, and another class Sedan that inherits from Car.
 
 ```java
@@ -359,7 +363,8 @@ public class Main {
 }
 ```
 
-Hierarchical Inheritance:
+**Hierarchical Inheritance:**
+
 Hierarchical inheritance is a type of inheritance where multiple classes inherit from a single base class. In this example, we'll create a base class Shape and two derived classes Circle and Square, which both inherit from Shape.
 
 ```java
@@ -398,7 +403,7 @@ public class Main {
 The three Java programs that demonstrate three different types of inheritance: `single inheritance`, `multiple inheritance (achieved through interfaces)`, and `hierarchical inheritance`. Each program will include an `ArrayList` to showcase different aspects of inheritance.
 
 
-Single Inheritance:
+**Single Inheritance:**
 In single inheritance, a class extends only one superclass.
 
 ```java
@@ -430,7 +435,7 @@ public class Main {
 }
 ```
 
-Multiple Inheritance (Using Interfaces):
+**Multiple Inheritance (Using Interfaces):**
 In Java, multiple inheritance can be achieved through interfaces. A class can implement multiple interfaces.
 
 
@@ -476,7 +481,7 @@ public class Main {
 }
 ```
 
-Hierarchical Inheritance:
+**Hierarchical Inheritance:**
 In hierarchical inheritance, a single superclass is extended by multiple subclasses.
 
 
