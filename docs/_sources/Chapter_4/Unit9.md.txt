@@ -57,14 +57,14 @@ The keywords and concepts form the foundation of *inheritance* in Java. In Objec
 
 
 ---
+
+
+###  AP CSA Project: Designing with Inheritance
+
+
+<details><summary>Click Here</summary>
+
 ---
-
-
-<details><summary>AP CSA Project: Designing with Inheritance </summary>
-
-
----
-
 
 **Project Title:** *Build a Simulation Using Inheritance*
 
