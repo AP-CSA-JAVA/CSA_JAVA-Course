@@ -127,37 +127,30 @@ Students choose ONE:
 Students will be able to:
 
 **Core Inheritance Skills (9.1)**
-
 * Create a superclass and subclass using `extends`
 * Design a class hierarchy with shared and unique behaviors
 
 **Constructors (9.2)**
-
 * Write subclass constructors that call `super()`
 * Properly initialize inherited and new instance variables
 
 **Method Overriding (9.3)**
-
 * Override superclass methods correctly using `@Override`
 * Explain how and why overridden methods behave differently
 
 **super Keyword (9.4)**
-
 * Use `super()` to call constructors
 * Use `super.method()` when extending behavior
 
 **References & Casting (9.5)**
-
 * Use superclass references for subclass objects
 * Demonstrate casting or `instanceof` safely
 
 **Polymorphism (9.6)**
-
 * Use an `ArrayList<Superclass>` to store multiple object types
 * Demonstrate dynamic method calls
 
 **Object Class (9.7)**
-
 * Override `toString()` for meaningful output
 
 ---
@@ -167,83 +160,38 @@ Students will be able to:
 Your program MUST include:
 
 **1. Superclass**
-
 * At least **2–3 instance variables**
 * At least **2 methods**
 * A constructor
 
 **2. Subclasses (2–3 minimum)**
-
 * Add at least **1 unique variable**
 * Override at least **1 method**
 * Use `super()` in constructor
 
 **3. Polymorphism**
-
+* Store multiple subclass objects
+* Loop through and call overridden methods
+  
 ```java
 ArrayList<Superclass> list = new ArrayList<>();
 ```
 
-* Store multiple subclass objects
-* Loop through and call overridden methods
-
 **4. Casting / instanceof**
-
 * Demonstrate accessing subclass-specific behavior
 
 **5. Output**
-
 * Program must clearly show:
-
   * Different behaviors from same method call
   * Meaningful printed results
 
 ---
 
-**Starter Structure**
-
-```java
-class Animal {
-    protected String name;
-
-    public Animal(String name) {
-        this.name = name;
-    }
-
-    public void makeSound() {
-        System.out.println("Animal sound");
-    }
-
-    public String toString() {
-        return "Animal: " + name;
-    }
-}
-
-class Dog extends Animal {
-    private String breed;
-
-    public Dog(String name, String breed) {
-        super(name);
-        this.breed = breed;
-    }
-
-    @Override
-    public void makeSound() {
-        System.out.println(name + " barks");
-    }
-}
-```
-
----
-
-**Deliverables**
-
-Students must submit:
+**Deliverables:**
 
 1. **Java Code**
 2. **Class Diagram**
 3. **Written Explanation**
-
    * What is your superclass and why?
    * How does inheritance reduce repetition?
    * Where is polymorphism happening?
@@ -254,7 +202,6 @@ Students must submit:
 ***10-Point Rubric***
 
 **1. Class Design (2 pts)**
-
 * (2) Clear superclass + logical subclasses with shared structure
 * (1) Basic inheritance present but weak design
 * (0) No meaningful inheritance
@@ -262,7 +209,6 @@ Students must submit:
 ---
 
 **2. Constructors & `super()` (2 pts)**
-
 * (2) Correct use of constructors and `super()`
 * (1) Partial or incorrect use
 * (0) Missing or incorrect
@@ -270,7 +216,6 @@ Students must submit:
 ---
 
 **3. Method Overriding (2 pts)**
-
 * (2) Correct overriding with different behavior
 * (1) Attempted but incorrect or unclear
 * (0) No overriding
@@ -278,7 +223,6 @@ Students must submit:
 ---
 
 **4. Polymorphism with ArrayList (2 pts)**
-
 * (2) Uses `ArrayList<Superclass>` and demonstrates dynamic method calls
 * (1) Partial use or unclear understanding
 * (0) Not present
@@ -286,28 +230,24 @@ Students must submit:
 ---
 
 **5. Casting / Advanced Behavior (1 pt)**
-
 * (1) Correct use of `instanceof` or casting
 * (0) Missing or incorrect
 
 ---
 
 **6. Output & Program Functionality (1 pt)**
-
 * (1) Output clearly demonstrates inheritance concepts
 * (0) Output unclear or broken
 
 ---
 
 **7. Explanation of Concepts (Written) (1 pt)**
-
 * (1) Clear explanation of inheritance + polymorphism
 * (0) Weak or missing explanation
 
 ---
 
 **Extension**
-
 * Abstract classes
 * More complex hierarchies (multilevel)
 
