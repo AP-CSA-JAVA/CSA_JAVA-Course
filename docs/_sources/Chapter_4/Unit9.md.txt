@@ -6,7 +6,7 @@
 - Write program code to define a new type by creating superclasses and subclasses.
 
 
-#### Keywords
+### Inheritance Keywords
 <details><summary>Click Here</summary>
 
 ---
@@ -186,6 +186,8 @@ ArrayList<Superclass> list = new ArrayList<>();
   * Meaningful printed results
 
 ---
+
+***Submit your finished code as a .java file. Provide appropriate comments within your program. Use Java Time API to display Local Date Time. Submit one document for your test case(s) showing that program works as intended (pdf).***
 
 **Deliverables:**
 
