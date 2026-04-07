@@ -202,48 +202,42 @@ ArrayList<Superclass> list = new ArrayList<>();
 ***10-Point Rubric***
 
 **1. Class Design (2 pts)**
-* (2) Clear superclass + logical subclasses with shared structure
+* (2) Clear superclass + logical subclasses with shared structure with comments
 * (1) Basic inheritance present but weak design
 * (0) No meaningful inheritance
 
 ---
 
 **2. Constructors & `super()` (2 pts)**
-* (2) Correct use of constructors and `super()`
+* (2) Correct use of constructors and `super()` with comments
 * (1) Partial or incorrect use
 * (0) Missing or incorrect
 
 ---
 
 **3. Method Overriding (2 pts)**
-* (2) Correct overriding with different behavior
+* (2) Correct overriding with different behaviorwith comments
 * (1) Attempted but incorrect or unclear
 * (0) No overriding
 
 ---
 
 **4. Polymorphism with ArrayList (2 pts)**
-* (2) Uses `ArrayList<Superclass>` and demonstrates dynamic method calls
+* (2) Uses `ArrayList<Superclass>` and demonstrates dynamic method calls with comments
 * (1) Partial use or unclear understanding
 * (0) Not present
 
 ---
 
 **5. Casting / Advanced Behavior (1 pt)**
-* (1) Correct use of `instanceof` or casting
+* (1) Correct use of `instanceof` or casting with comments
 * (0) Missing or incorrect
 
 ---
 
 **6. Output & Program Functionality (1 pt)**
-* (1) Output clearly demonstrates inheritance concepts
+* (1) Output clearly demonstrates inheritance + polymorphism concepts with comments
 * (0) Output unclear or broken
-
----
-
-**7. Explanation of Concepts (Written) (1 pt)**
-* (1) Clear explanation of inheritance + polymorphism
-* (0) Weak or missing explanation
 
 ---
 
