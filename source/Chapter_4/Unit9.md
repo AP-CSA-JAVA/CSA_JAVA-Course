@@ -329,7 +329,7 @@ In Java, the `protected` and `private` keywords are **access modifiers** that co
 
 ---
 
-**🔒 `private`**:
+**`private`**:
 - **Access Level:** Most restrictive.
 - **Accessible From:**
   - Only within the **same class**.
@@ -338,7 +338,7 @@ In Java, the `protected` and `private` keywords are **access modifiers** that co
   - Other classes in the same package.
   - Any external class.
 
-**✅ Use Case**:
+**Use Case**:
 Use `private` when you want to **encapsulate** your data or methods so that they cannot be accessed or modified from outside the class.
 
 ```java
@@ -353,7 +353,7 @@ public class Example {
 
 ---
 
-**🛡️ `protected`**:
+**`protected`**:
 - **Access Level:** Less restrictive than `private`, more restrictive than `public`.
 - **Accessible From:**
   - The same class.
@@ -362,7 +362,7 @@ public class Example {
 - **Not Accessible From:**
   - Non-subclass classes in **different packages**.
 
-**✅ Use Case**:
+**Use Case**:
 Use `protected` when you want to **allow subclasses to access** or override certain methods or fields, but still keep access restricted from unrelated classes.
 
 ```java
@@ -377,7 +377,7 @@ public class Example {
 
 ---
 
-🧠 Summary Table:
+Summary Table:
 
 | Modifier   | Same Class | Same Package | Subclass (diff package) | Other Classes |
 |------------|------------|--------------|--------------------------|----------------|
@@ -488,7 +488,7 @@ a.speak(); // Output: Bark
 
 Even though `a` is declared as an `Animal`, the actual object is a `Dog`, so the `Dog`’s `speak()` method is used.  This is called **dynamic method** or **polymorphism**.
 
-🧠 **Note**:
+**Note**:
 
 Understanding how **void methods behave with inheritance** is key to:
 - Using polymorphism correctly
@@ -551,7 +551,7 @@ Dog barks
 ```
 
 
-📌 Sample Question
+**Sample Question**
 
 ```java
 public class Shape {
@@ -573,7 +573,7 @@ s.printType();
 What does `s` print?
 <details><Summary>Check Here</Summary>
 
-✅ **`Circle`**
+**`Circle`**
 
 Even though `s` is declared as a `Shape`, it refers to a `Circle` object, so the `Circle`’s version of `printType()` runs.
 
@@ -584,7 +584,7 @@ Even though `s` is declared as a `Shape`, it refers to a `Circle` object, so the
 
 In Java, the super keyword is used to refer to the superclass, allowing you to access its members (fields and methods) from within a subclass. It is particularly useful when you want to distinguish between the superclass's members and the subclass's members that have the same name. The super keyword can be used to invoke the superclass's constructor, access its instance variables or methods, and invoke its overridden methods. 
 
-🔑 **Vocabulary**
+**Vocabulary**
 
 1. **`super` keyword** – A reference to the **parent (superclass)** of the current object.
 2. **Superclass** – The class being **extended** or inherited from.
@@ -594,7 +594,7 @@ In Java, the super keyword is used to refer to the superclass, allowing you to a
 
 ---
 
-📘 **Main Concepts of `super`**
+**Main Concepts of `super`**
 
 1. `super` is used in **two main ways**:
    - **To call a superclass constructor**
@@ -603,7 +603,7 @@ In Java, the super keyword is used to refer to the superclass, allowing you to a
 ---
 
 
-💡 Notes & Tips:
+**Notes**:
 - If a superclass has a **no-argument constructor**, the compiler automatically inserts `super()` in the subclass constructor.
 - If the superclass only has **constructors with parameters**, then the subclass must explicitly call `super(parameters)`.
 
@@ -675,11 +675,11 @@ Breed: Labrador
 
 ## 9.5 Creating References Using Inheritance Hierarchies
 
-🧠 What Does "Creating References Using Inheritance Hierarchies" Mean?
+What Does "Creating References Using Inheritance Hierarchies" Mean?
 
 In Java, you can create references using inheritance hierarchies to refer to objects of both the superclass and its subclasses. This allows you to treat objects of different classes in the hierarchy as interchangeable, providing flexibility and polymorphic behavior. 
 
-✅ **Key Concept**:
+**Key Concept**:
 You **can use a superclass reference variable to refer to an object of a subclass**. This is legal because the subclass **inherits** from the superclass and is guaranteed to have at least the same structure and behavior.
 
 ```java
@@ -690,9 +690,9 @@ This allows for *flexibility*, *abstraction*, and *polymorphism* in code.
 
 ---
 
-🧩 **Let’s look at this hierarchy Example called `Animals`**:
+**Let’s look at this hierarchy Example called `Animals`**:
 
-🐾 Superclass:
+Superclass:
 ```java
 public class Animal {
     public void speak() {
@@ -701,7 +701,7 @@ public class Animal {
 }
 ```
 
-🐶 Subclass:
+Subclass:
 ```java
 public class Dog extends Animal {
     public void speak() {
@@ -710,7 +710,7 @@ public class Dog extends Animal {
 }
 ```
 
-🐱 Another Subclass:
+Another Subclass:
 ```java
 public class Cat extends Animal {
     public void speak() {
@@ -719,7 +719,7 @@ public class Cat extends Animal {
 }
 ```
 
-✨ Now try this:
+Now try this:
 ```java
 Animal myPet = new Dog();
 myPet.speak();  // Output: Woof!
@@ -1072,4 +1072,260 @@ public class Main {
 ```
 
 In this example, the Person class overrides the hashCode() method inherited from the Object class. The overridden hashCode() method calculates the hash code of the Person object based on its name and age attributes. When we call person.hashCode(), it invokes the overridden hashCode() method to retrieve the hash code value of the object.
+
+You’re right to keep inheritance in your course. Even if the AP exam backed off it, students who *don’t* understand inheritance struggle hard in any real OOP setting later. So let’s make this project worth their time—not just “use extends,” but actually *think in hierarchies*.
+
+---
+
+### AP CSA Project: Designing with Inheritance
+
+**Project Title:** *Build a Simulation Using Inheritance*
+
+---
+
+### **Project Overview:**
+
+You will design and build a Java program that models a real-world system using **inheritance and polymorphism**.
+
+Your program must include:
+
+* A **superclass** that defines shared behavior
+* At least **2–3 subclasses** with specialized behavior
+* Use of **method overriding**
+* Use of **constructors with `super()`**
+* A collection (**ArrayList**) using **polymorphism**
+* At least one use of **casting or `instanceof`**
+* Clear demonstration of **dynamic method behavior**
+
+---
+
+**Project Theme Options:**
+
+Students choose ONE:
+
+**1. Animal Ecosystem**
+
+* Superclass: `Animal`
+* Subclasses: `Dog`, `Bird`, `Fish`, etc.
+* Behaviors: `move()`, `eat()`, `makeSound()`
+
+**2. Vehicle System**
+
+* Superclass: `Vehicle`
+* Subclasses: `Car`, `Truck`, `ElectricCar`
+* Behaviors: `drive()`, `fuelType()`
+
+**3. Game Characters**
+
+* Superclass: `Character`
+* Subclasses: `Warrior`, `Mage`, `Archer`
+* Behaviors: `attack()`, `defend()`
+
+**4. School System**
+
+* Superclass: `Person`
+* Subclasses: `Admin`, `Counselor`, `Teacher`, `Student` 
+* Behaviors: `performRole()`
+
+**5. Inter-disciplinary Project**
+
+* Superclass: `?`
+* Subclasses: `?`, `?`, `?`
+* Behaviors: `?()`
+
+
+---
+
+
+**Learning Objectives:**
+
+Students will be able to:
+
+**Core Inheritance Skills (9.1)**
+
+* Create a superclass and subclass using `extends`
+* Design a class hierarchy with shared and unique behaviors
+
+**Constructors (9.2)**
+
+* Write subclass constructors that call `super()`
+* Properly initialize inherited and new instance variables
+
+**Method Overriding (9.3)**
+
+* Override superclass methods correctly using `@Override`
+* Explain how and why overridden methods behave differently
+
+**super Keyword (9.4)**
+
+* Use `super()` to call constructors
+* Use `super.method()` when extending behavior
+
+**References & Casting (9.5)**
+
+* Use superclass references for subclass objects
+* Demonstrate casting or `instanceof` safely
+
+**Polymorphism (9.6)**
+
+* Use an `ArrayList<Superclass>` to store multiple object types
+* Demonstrate dynamic method calls
+
+**Object Class (9.7)**
+
+* Override `toString()` for meaningful output
+
+---
+
+***Minimum Program Requirements***
+
+Your program MUST include:
+
+**1. Superclass**
+
+* At least **2–3 instance variables**
+* At least **2 methods**
+* A constructor
+
+**2. Subclasses (2–3 minimum)**
+
+* Add at least **1 unique variable**
+* Override at least **1 method**
+* Use `super()` in constructor
+
+**3. Polymorphism**
+
+```java
+ArrayList<Superclass> list = new ArrayList<>();
+```
+
+* Store multiple subclass objects
+* Loop through and call overridden methods
+
+**4. Casting / instanceof**
+
+* Demonstrate accessing subclass-specific behavior
+
+**5. Output**
+
+* Program must clearly show:
+
+  * Different behaviors from same method call
+  * Meaningful printed results
+
+---
+
+**Starter Structure**
+
+```java
+class Animal {
+    protected String name;
+
+    public Animal(String name) {
+        this.name = name;
+    }
+
+    public void makeSound() {
+        System.out.println("Animal sound");
+    }
+
+    public String toString() {
+        return "Animal: " + name;
+    }
+}
+
+class Dog extends Animal {
+    private String breed;
+
+    public Dog(String name, String breed) {
+        super(name);
+        this.breed = breed;
+    }
+
+    @Override
+    public void makeSound() {
+        System.out.println(name + " barks");
+    }
+}
+```
+
+---
+
+### Deliverables
+
+Students must submit:
+
+1. **Java Code**
+2. **Class Diagram**
+3. **Written Explanation**
+
+   * What is your superclass and why?
+   * How does inheritance reduce repetition?
+   * Where is polymorphism happening?
+   * What method did you override and why?
+
+---
+
+#### **10-Point Rubric**
+
+**1. Class Design (2 pts)**
+
+* (2) Clear superclass + logical subclasses with shared structure
+* (1) Basic inheritance present but weak design
+* (0) No meaningful inheritance
+
+---
+
+**2. Constructors & `super()` (2 pts)**
+
+* (2) Correct use of constructors and `super()`
+* (1) Partial or incorrect use
+* (0) Missing or incorrect
+
+---
+
+**3. Method Overriding (2 pts)**
+
+* (2) Correct overriding with different behavior
+* (1) Attempted but incorrect or unclear
+* (0) No overriding
+
+---
+
+**4. Polymorphism with ArrayList (2 pts)**
+
+* (2) Uses `ArrayList<Superclass>` and demonstrates dynamic method calls
+* (1) Partial use or unclear understanding
+* (0) Not present
+
+---
+
+**5. Casting / Advanced Behavior (1 pt)**
+
+* (1) Correct use of `instanceof` or casting
+* (0) Missing or incorrect
+
+---
+
+**6. Output & Program Functionality (1 pt)**
+
+* (1) Output clearly demonstrates inheritance concepts
+* (0) Output unclear or broken
+
+---
+
+**7. Explanation of Concepts (Written) (1 pt)**
+
+* (1) Clear explanation of inheritance + polymorphism
+* (0) Weak or missing explanation
+
+---
+
+**Extension**
+
+* Abstract classes
+* More complex hierarchies (multilevel)
+
+---
+
 
