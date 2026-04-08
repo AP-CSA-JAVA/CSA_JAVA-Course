@@ -267,10 +267,10 @@
 <li><p>Trace the results of a recursive call to determine the results.</p></li>
 <li><p>Rewrite a recursive algorithm as an interactive method.</p></li>
 </ul>
-<p>🌀 <strong>What is Recursion?</strong></p>
+<p><strong>What is Recursion?</strong></p>
 <p><strong>Recursion</strong> is when a function calls <strong>itself</strong> to solve a problem.</p>
 <p>It is a clever way of breaking down big problems into smaller ones. Imagine you have a set of <strong>Russian nesting dolls</strong>. You open the biggest one, and inside is another doll. Then you open that one, and there’s another one… and so on.  Eventually, you reach the tiniest doll that doesn’t open.  Recursion works like that — each step opens a smaller version of the same problem, until it reaches the <strong>base case</strong> (the smallest, simplest version that doesn’t need any more steps).</p>
-<p>💻 <strong>Programming Example: Factorial</strong></p>
+<p><strong>Programming Example: Factorial</strong></p>
 <p>Let’s say you want to find the <strong>factorial</strong> of a number — written like this:</p>
 <p><code class="docutils literal notranslate"><span class="pre">5!</span> <span class="pre">=</span> <span class="pre">5</span> <span class="pre">×</span> <span class="pre">4</span> <span class="pre">×</span> <span class="pre">3</span> <span class="pre">×</span> <span class="pre">2</span> <span class="pre">×</span> <span class="pre">1</span> <span class="pre">=</span> <span class="pre">120</span></code></p>
 <p>Using recursion:</p>
@@ -292,19 +292,19 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>🧠 So if you call <code class="docutils literal notranslate"><span class="pre">factorial(5)</span></code>:</p>
+<p>So if you call <code class="docutils literal notranslate"><span class="pre">factorial(5)</span></code>:</p>
 <ul class="simple">
 <li><p>It calls <code class="docutils literal notranslate"><span class="pre">factorial(4)</span></code></p></li>
 <li><p>Which calls <code class="docutils literal notranslate"><span class="pre">factorial(3)</span></code></p></li>
 <li><p>And so on until <code class="docutils literal notranslate"><span class="pre">factorial(1)</span></code>, which returns 1</p></li>
 <li><p>Then it multiplies all the way back up: <code class="docutils literal notranslate"><span class="pre">2×1</span></code>, then <code class="docutils literal notranslate"><span class="pre">3×2</span></code>, etc.</p></li>
 </ul>
-<p>🔁 <strong>Key Parts of Recursion</strong></p>
+<p><strong>Key Parts of Recursion</strong></p>
 <ol class="arabic simple">
 <li><p><strong>Base Case</strong> – The stopping point. Without this, the function would go forever.</p></li>
 <li><p><strong>Recursive Case</strong> – The part where the function calls itself with a smaller input.</p></li>
 </ol>
-<p>🧩 <strong>Why Use Recursion?</strong></p>
+<p><strong>Why Use Recursion?</strong></p>
 <p>It’s great for:</p>
 <ul class="simple">
 <li><p>Breaking problems into smaller chunks</p></li>
