@@ -8,14 +8,14 @@
 - Rewrite a recursive algorithm as an interactive method.
 
 
-🌀 **What is Recursion?**
+**What is Recursion?**
 
 **Recursion** is when a function calls **itself** to solve a problem.
 
 It is a clever way of breaking down big problems into smaller ones. Imagine you have a set of **Russian nesting dolls**. You open the biggest one, and inside is another doll. Then you open that one, and there’s another one… and so on.  Eventually, you reach the tiniest doll that doesn’t open.  Recursion works like that — each step opens a smaller version of the same problem, until it reaches the **base case** (the smallest, simplest version that doesn't need any more steps).
 
 
-💻 **Programming Example: Factorial**
+**Programming Example: Factorial**
 
 Let’s say you want to find the **factorial** of a number — written like this:
 
@@ -42,20 +42,20 @@ public class Factorial {
 }
 ```
 
-🧠 So if you call `factorial(5)`:
+So if you call `factorial(5)`:
 - It calls `factorial(4)`
 - Which calls `factorial(3)`
 - And so on until `factorial(1)`, which returns 1
 - Then it multiplies all the way back up: `2×1`, then `3×2`, etc.
 
 
-🔁 **Key Parts of Recursion**
+**Key Parts of Recursion**
 
 1. **Base Case** – The stopping point. Without this, the function would go forever.
 2. **Recursive Case** – The part where the function calls itself with a smaller input.
 
 
-🧩 **Why Use Recursion?**
+**Why Use Recursion?**
 
 It’s great for:
 - Breaking problems into smaller chunks
