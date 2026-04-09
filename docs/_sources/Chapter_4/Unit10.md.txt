@@ -80,8 +80,23 @@ Now the program builds the answer back up:
 * factorial(4) = 4 × 6 = 24
 * factorial(5) = 5 × 24 = 120
 
-
 ---
+
+The basic structure of a recursive program will look something like this:
+
+```java
+public static void Main()
+  // base case
+  if (baseCaseCondition) { 
+    baseCaseSteps
+  } 
+  else {
+    do something
+    // recursive call
+    recursiveMethod(); 
+  }
+}
+```
 
 
 **Recursion works** because:
@@ -244,47 +259,6 @@ Now, calling `m2.getSalary()` triggers this:
 ---
 
 
-**Recursion** is a concept in programming where a method calls itself in order to solve a problem. It breaks down a problem into smaller, simpler versions of the same problem. Recursion is particularly useful in problems that have a repetitive structure, such as tree traversals, 
-factorial calculations, and Fibonacci sequences.
-
-**Key Concepts of Recursion**
-1. **Base Case**: Every recursive function needs a base case that stops the recursion. If there is no base case, the recursion will continue indefinitely, leading to a stack overflow.
-2. **Recursive Case**: This is the part of the function that breaks the problem into smaller subproblems and calls the function itself with those smaller inputs.
-
-**Steps to Writing Recursive Functions**
-- **Identify the base case**: This is the simplest scenario where the function doesn’t need to call itself again.
-- **Define the recursive case**: The function should call itself with a smaller or simpler version of the problem.
-- **Ensure progress towards the base case**: Each recursive call should make progress towards reaching the base case.
-
-Recursion can be challenging, but the best way to understand the nuances of it, is to experiment with it.  The basics of a recursive method is the recursive call and the base case.  The recursive call, calls itself.  It can start over with the same parameter or a different one.  After x calls, we reach the base case where the recusion is stopped.
-
-The basic structure will look something like this:
-
-```java
-public static void Main()
-  // base case
-  if (baseCaseCondition) { 
-    baseCaseSteps
-  } 
-  else {
-    do something
-    // recursive call
-    recursiveMethod(); 
-  }
-}
-```
-
-
-Let’s take the example of calculating the factorial of a number (n!). The factorial of a number is defined as:
-- `n! = n * (n-1) * (n-2) * ... * 1`
-- Special case: `0! = 1`
-
-
-The recursive approach to calculating factorial can be described as:
-- Base case: `factorial(0)` or `factorial(1)` is `1`.
-- Recursive case: `factorial(n) = n * factorial(n - 1)`.
-
-
 ```java
 //Recursion Example
 public class RecursionExample {
@@ -304,44 +278,11 @@ public class RecursionExample {
 }
 ```
 
-In this example, the calculateFactorial method is a recursive function that calculates the factorial of a given number n. If n is equal to 0, it returns 1 (since the factorial of 0 is defined as 1). Otherwise, it calls itself with the argument n - 1 and multiplies the result by n.
-When you run this program, it will output the factorial of the number variable, which is set to 5 in this case. The output will be:
+In this example, the calculateFactorial method is a recursive function that calculates the factorial of a given number n. If n is equal to 0, it returns 1 (since the factorial of 0 is defined as 1). Otherwise, it calls itself with the argument n - 1 and multiplies the result by n. When you run this program, it will output the factorial of the number variable, which is set to 5 in this case. The output will be:
 
 ```Factorial of 5 = 120```
 
 This demonstrates how recursion can be used to solve problems by breaking them down into smaller, simpler subproblems.
-
-Let's create a simple Java program that uses recursion to calculate the factorial of a given number. The factorial of a non-negative integer n is the product of all positive integers less than or equal to n. The factorial of n is denoted as n!.
-
-Factorial Formula: `n! = n * (n-1) * (n-2) * ... * 2 * 1`
-
-When you run this program, it will calculate the factorial of the `number` variable (which is set to 5 in this example). The output will be:
-
-Factorial of 5 is: 120
-
-
-public class FactorialRecursion {
-    public static int factorial(int n) {
-        // Base case: 0! and 1! are both equal to 1
-        if (n == 0 || n == 1) {
-            return 1;
-        } else {
-            // Recursive case: n! = n * (n-1)!
-            return n * factorial(n - 1);
-        }
-    }
-
-    public static void main(String[] args) {
-        int number = 5; // Change this number to calculate the factorial of a different value
-
-        int result = factorial(number);
-        System.out.println("Factorial of " + number + " is: " + result);
-    }
-}
-
-
-The program uses recursion to calculate the factorial. When `factorial(n)` is called, it checks if `n` is equal to 0 or 1 (the base case). If `n` is 0 or 1, it returns 1. Otherwise, it recursively calls `factorial(n - 1)` to calculate `(n-1)!` and multiplies it by `n` to get the final result `n!`.
-
 
 > <!Note> A recursive method is like saying:
 > “I’ll solve a small part of the problem, and trust that the rest will be solved the same way.”

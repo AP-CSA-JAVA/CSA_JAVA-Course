@@ -330,6 +330,20 @@ This is where the method:</p></li>
 <li><p>factorial(5) = 5 × 24 = 120</p></li>
 </ul>
 <hr class="docutils" />
+<p>The basic structure of a recursive program will look something like this:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">()</span>
+<span class="w">  </span><span class="c1">// base case</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">baseCaseCondition</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">    </span><span class="n">baseCaseSteps</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">do</span><span class="w"> </span><span class="n">something</span>
+<span class="w">    </span><span class="c1">// recursive call</span>
+<span class="w">    </span><span class="n">recursiveMethod</span><span class="p">();</span><span class="w"> </span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 <p><strong>Recursion works</strong> because:</p>
 <ul class="simple">
 <li><p>Each step makes the problem smaller</p></li>
@@ -486,44 +500,6 @@ This is where the method:</p></li>
 </ul>
 </details>
 <hr class="docutils" />
-<p><strong>Recursion</strong> is a concept in programming where a method calls itself in order to solve a problem. It breaks down a problem into smaller, simpler versions of the same problem. Recursion is particularly useful in problems that have a repetitive structure, such as tree traversals,
-factorial calculations, and Fibonacci sequences.</p>
-<p><strong>Key Concepts of Recursion</strong></p>
-<ol class="arabic simple">
-<li><p><strong>Base Case</strong>: Every recursive function needs a base case that stops the recursion. If there is no base case, the recursion will continue indefinitely, leading to a stack overflow.</p></li>
-<li><p><strong>Recursive Case</strong>: This is the part of the function that breaks the problem into smaller subproblems and calls the function itself with those smaller inputs.</p></li>
-</ol>
-<p><strong>Steps to Writing Recursive Functions</strong></p>
-<ul class="simple">
-<li><p><strong>Identify the base case</strong>: This is the simplest scenario where the function doesn’t need to call itself again.</p></li>
-<li><p><strong>Define the recursive case</strong>: The function should call itself with a smaller or simpler version of the problem.</p></li>
-<li><p><strong>Ensure progress towards the base case</strong>: Each recursive call should make progress towards reaching the base case.</p></li>
-</ul>
-<p>Recursion can be challenging, but the best way to understand the nuances of it, is to experiment with it.  The basics of a recursive method is the recursive call and the base case.  The recursive call, calls itself.  It can start over with the same parameter or a different one.  After x calls, we reach the base case where the recusion is stopped.</p>
-<p>The basic structure will look something like this:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">()</span>
-<span class="w">  </span><span class="c1">// base case</span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">baseCaseCondition</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-<span class="w">    </span><span class="n">baseCaseSteps</span>
-<span class="w">  </span><span class="p">}</span><span class="w"> </span>
-<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">do</span><span class="w"> </span><span class="n">something</span>
-<span class="w">    </span><span class="c1">// recursive call</span>
-<span class="w">    </span><span class="n">recursiveMethod</span><span class="p">();</span><span class="w"> </span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p>Let’s take the example of calculating the factorial of a number (n!). The factorial of a number is defined as:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">n!</span> <span class="pre">=</span> <span class="pre">n</span> <span class="pre">*</span> <span class="pre">(n-1)</span> <span class="pre">*</span> <span class="pre">(n-2)</span> <span class="pre">*</span> <span class="pre">...</span> <span class="pre">*</span> <span class="pre">1</span></code></p></li>
-<li><p>Special case: <code class="docutils literal notranslate"><span class="pre">0!</span> <span class="pre">=</span> <span class="pre">1</span></code></p></li>
-</ul>
-<p>The recursive approach to calculating factorial can be described as:</p>
-<ul class="simple">
-<li><p>Base case: <code class="docutils literal notranslate"><span class="pre">factorial(0)</span></code> or <code class="docutils literal notranslate"><span class="pre">factorial(1)</span></code> is <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
-<li><p>Recursive case: <code class="docutils literal notranslate"><span class="pre">factorial(n)</span> <span class="pre">=</span> <span class="pre">n</span> <span class="pre">*</span> <span class="pre">factorial(n</span> <span class="pre">-</span> <span class="pre">1)</span></code>.</p></li>
-</ul>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">//Recursion Example</span>
 <span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">RecursionExample</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -542,34 +518,9 @@ factorial calculations, and Fibonacci sequences.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>In this example, the calculateFactorial method is a recursive function that calculates the factorial of a given number n. If n is equal to 0, it returns 1 (since the factorial of 0 is defined as 1). Otherwise, it calls itself with the argument n - 1 and multiplies the result by n.
-When you run this program, it will output the factorial of the number variable, which is set to 5 in this case. The output will be:</p>
+<p>In this example, the calculateFactorial method is a recursive function that calculates the factorial of a given number n. If n is equal to 0, it returns 1 (since the factorial of 0 is defined as 1). Otherwise, it calls itself with the argument n - 1 and multiplies the result by n. When you run this program, it will output the factorial of the number variable, which is set to 5 in this case. The output will be:</p>
 <p><code class="docutils literal notranslate"><span class="pre">Factorial</span> <span class="pre">of</span> <span class="pre">5</span> <span class="pre">=</span> <span class="pre">120</span></code></p>
 <p>This demonstrates how recursion can be used to solve problems by breaking them down into smaller, simpler subproblems.</p>
-<p>Let’s create a simple Java program that uses recursion to calculate the factorial of a given number. The factorial of a non-negative integer n is the product of all positive integers less than or equal to n. The factorial of n is denoted as n!.</p>
-<p>Factorial Formula: <code class="docutils literal notranslate"><span class="pre">n!</span> <span class="pre">=</span> <span class="pre">n</span> <span class="pre">*</span> <span class="pre">(n-1)</span> <span class="pre">*</span> <span class="pre">(n-2)</span> <span class="pre">*</span> <span class="pre">...</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">1</span></code></p>
-<p>When you run this program, it will calculate the factorial of the <code class="docutils literal notranslate"><span class="pre">number</span></code> variable (which is set to 5 in this example). The output will be:</p>
-<p>Factorial of 5 is: 120</p>
-<p>public class FactorialRecursion {
-public static int factorial(int n) {
-// Base case: 0! and 1! are both equal to 1
-if (n == 0 || n == 1) {
-return 1;
-} else {
-// Recursive case: n! = n * (n-1)!
-return n * factorial(n - 1);
-}
-}</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>public static void main(String[] args) {
-    int number = 5; // Change this number to calculate the factorial of a different value
-
-    int result = factorial(number);
-    System.out.println(&quot;Factorial of &quot; + number + &quot; is: &quot; + result);
-}
-</pre></div>
-</div>
-<p>}</p>
-<p>The program uses recursion to calculate the factorial. When <code class="docutils literal notranslate"><span class="pre">factorial(n)</span></code> is called, it checks if <code class="docutils literal notranslate"><span class="pre">n</span></code> is equal to 0 or 1 (the base case). If <code class="docutils literal notranslate"><span class="pre">n</span></code> is 0 or 1, it returns 1. Otherwise, it recursively calls <code class="docutils literal notranslate"><span class="pre">factorial(n</span> <span class="pre">-</span> <span class="pre">1)</span></code> to calculate <code class="docutils literal notranslate"><span class="pre">(n-1)!</span></code> and multiplies it by <code class="docutils literal notranslate"><span class="pre">n</span></code> to get the final result <code class="docutils literal notranslate"><span class="pre">n!</span></code>.</p>
 <blockquote>
 <div><!Note> A recursive method is like saying:
 <p>“I’ll solve a small part of the problem, and trust that the rest will be solved the same way.”</p>
