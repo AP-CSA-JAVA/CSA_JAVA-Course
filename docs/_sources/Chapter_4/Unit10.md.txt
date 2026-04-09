@@ -10,18 +10,12 @@
 
 **What is Recursion?**
 
-Recursion is when a method calls itself to solve a problem.  A helpful way to think about recursion is to imagine a task that repeats in smaller and smaller versions of itself. Each step solves a piece of the problem and passes the rest along. A classic analogy is Russian nesting dolls. You open one doll to find a smaller one inside, and keep going until you reach the smallest doll that cannot be opened. That smallest doll is where the process stops.
-
-In recursion:
-
-Each “smaller doll” is a recursive call. The smallest doll is the base case. 
+Recursion is when a method calls itself to solve a problem.  A helpful way to think about recursion is to imagine a task that repeats in smaller and smaller versions of itself. Each step solves a piece of the problem and passes the rest along. A classic analogy is Russian nesting dolls. You open one doll to find a smaller one inside, and keep going until you reach the smallest doll that cannot be opened. That smallest doll is where the process stops. In recursion, each “smaller doll” is a recursive call. The smallest doll is the base case. 
 
 **The Two Key Parts that every recursive method must have:**
-
 1. **Base Case** (Stopping Point)
 This is the condition where the method stops calling itself.
 Without it, the program would run forever (and crash).
-
 2. **Recursive Case** (The Work)
 This is where the method:
 
