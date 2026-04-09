@@ -31,11 +31,11 @@ The factorial of a number means multiplying it by all smaller positive integers.
 
 Instead of doing it all at once, think like this:
 
-5! = 5 × 4!
-4! = 4 × 3!
-3! = 3 × 2!
-2! = 2 × 1!
-1! = 1 ← base case
+- 5! = 5 × 4!
+- 4! = 4 × 3!
+- 3! = 3 × 2!
+- 2! = 2 × 1!
+- 1! = 1 ← base case
 
 Using recursion:
 
