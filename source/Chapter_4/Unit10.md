@@ -476,12 +476,9 @@ At first, recursion can feel confusing because the method calls itself. But once
 
 Recursive searching and sorting are techniques in Java where the searching or sorting algorithm calls itself repeatedly on smaller portions of the data until the desired result is found or the data is sorted. Here are explanations and examples of recursive searching and sorting in Java:
 
-    Recursive Searching (Binary Search):
-    Binary search is a commonly used searching algorithm that works efficiently on 
-    sorted arrays. It divides the array into two halves and compares the target 
-    element with the middle element. Based on the comparison, it either continues 
-    searching in the left half or the right half of the array. Here's an example of 
-    recursive binary search in Java:
+**Recursive Searching (Binary Search):** Binary search is a commonly used searching algorithm that works efficiently on sorted arrays. It divides the array into two halves and compares the target element with the middle element. Based on the comparison, it either continues searching in the left half or the right half of the array. 
+
+Here's an example of recursive binary search in Java:
     
 ```java
 public class BinarySearch {
@@ -520,7 +517,7 @@ public class BinarySearch {
 Element found at index 5
 ```
 
-In this example, the binarySearch() method performs a recursive binary search on the sorted array to find the target element. It takes the array, target element, low index, and high index as parameters. If the low index becomes greater than the high index, it means the target element is not present in the array, so it returns -1. Otherwise, it calculates the mid index and compares the element at that index with the target element. If they match, it returns the index. If the element at mid is greater than the target element, it recursively calls binarySearch() on the left half of the array, otherwise on the right half.
+In this example, the `binarySearch()` method performs a recursive binary search on the sorted array to find the target element. It takes the array, target element, low index, and high index as parameters. If the low index becomes greater than the high index, it means the target element is not present in the array, so it returns -1. Otherwise, it calculates the mid index and compares the element at that index with the target element. If they match, it returns the index. If the element at mid is greater than the target element, it recursively calls `binarySearch()` on the left half of the array, otherwise on the right half.
 
 Recursive Sorting (Merge Sort):
 Merge sort is a popular sorting algorithm that uses a divide-and-conquer approach. It divides the array into two halves, recursively sorts each half, and then merges the two sorted halves into a single sorted array. Here's an example of recursive merge sort in Java:
@@ -595,6 +592,6 @@ Original Array: [8, 3, 1, 5, 9, 2, 6, 4, 7]
 Sorted Array: [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
-In this example, the mergeSort() method performs recursive merge sort on the array. It takes the array, left index, and right index as parameters. It recursively calls itself to sort the left half and the right half of the array, and then merges the two sorted halves using the merge() method. The merge() method merges the two sorted halves into a single sorted array.
+In this example, the `mergeSort()` method performs recursive merge sort on the array. It takes the array, left index, and right index as parameters. It recursively calls itself to sort the left half and the right half of the array, and then merges the two sorted halves using the `merge()` method. The `merge()` method merges the two sorted halves into a single sorted array.
 
 Both examples demonstrate the power of recursion in searching and sorting algorithms. Recursive searching allows for efficient retrieval of elements from sorted data, while recursive sorting algorithms provide efficient ways to sort arrays or collections.
