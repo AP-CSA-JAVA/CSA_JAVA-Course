@@ -32,7 +32,6 @@ Your goal is to design and implement a **recursive backtracking algorithm** that
 **REQUIREMENTS**
 
 You must:
-
 * Minimum size of the maze must be 5 x 5
 * Use **recursion with backtracking**
 * Write clean, organized methods
@@ -58,7 +57,6 @@ public static boolean solveMaze(char[][] maze, int row, int col)
 
 
 **Optional Extensions for Maze**
-
 * Count number of possible paths
 * Shortest path only
 * **GUI Extension**
@@ -88,7 +86,6 @@ S * |
 ---
 
 **Key Ideas**
-
 * Try moving (up/down/left/right)
 * If blocked → return false
 * If correct path → continue
@@ -99,7 +96,6 @@ S * |
 ### OPTION B: Sudoku Solver
 
 **Problem**
-
 Fill a 9×9 grid so that:
 * Each row has 1–9
 * Each column has 1–9
@@ -152,7 +148,6 @@ public static boolean solveSudoku(int[][] board)
 ---
 
 **Key Ideas**
-
 * Find empty cell
 * Try numbers 1–9
 * If valid → recurse
@@ -178,7 +173,7 @@ public static boolean solveSudoku(int[][] board)
 **Project Rubric**
 
 | Category              | Points | Description                          |
-| --------------------- | ------ | ------------------------------------ |
+| --------------------- | :-----: | ------------------------------------ |
 | **Recursive Logic**   | 3      | Correct base case + backtracking     |
 | **Program Comments**	| 1		 | Appropriate comments on key concepts |
 | **Correctness**       | 1      | Produces valid solution              |
