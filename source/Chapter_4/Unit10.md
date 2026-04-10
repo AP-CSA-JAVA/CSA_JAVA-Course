@@ -11,54 +11,46 @@
 
 You will choose **ONE** of the following recursive problem-solving challenges:
 
-Option A: Maze Solver
+**Option A:** Maze Solver
+**Option B:** Sudoku Solver
 
-Option B: Sudoku Solver
-
-Your goal is to design and implement a **recursive backtracking algorithm** that solves 
-your chosen problem.
+Your goal is to design and implement a **recursive backtracking algorithm** that solves your chosen problem.
 
 ---
 
 **Important Expectation**
 
-> You are not being graded on finishing fast—you are being graded on having a deep
-**understanding of recursion**.
+> You are not being graded on finishing fast—you are being graded on having a deep **understanding of recursion**.
 
 ---
 
-#  **REQUIREMENTS**
-
-You must:
-
-* Minimum size of the maze must be 5 x 5
-* Use **recursion with backtracking**
-* Use a **2D array**
-* Write clean, organized methods
-* Include **at least 2 test cases**
-* Explain your algorithm clearly using comments
-* Use Java Time API
-
----
 
 **OPTION A: Maze Solver**
 
 **Problem:** Find a path from **Begin (B)** to **End (E)** in a maze.
 
----
 
-**Requirements**
 
-* Represent maze as `char[][]`
-* Symbols:
+**REQUIREMENTS**
 
-  * `'B'` = Begin
-  * `'E'` = End
-  * `'|'` = Wall
-  * `'-'` = Open space
-* Mark solution path (e.g., `'*'`)
+You must:
 
----
+* Minimum size of the maze must be 5 x 5
+* Use **recursion with backtracking**
+* Write clean, organized methods
+* Include **at least 2 test cases**
+* Explain your algorithm clearly using comments
+* Use Java Time API
+* Project Block Header
+* Test Cases
+* Use a **2D array**
+  * Represent maze as `char[][]`
+  * Symbols:
+    * `'B'` = Begin
+    * `'E'` = End
+    * `'|'` = Wall
+    * `'-'` = Open space
+  * Mark solution path (e.g., `'*'`)
 
 **Required Method**
 
@@ -66,7 +58,6 @@ You must:
 public static boolean solveMaze(char[][] maze, int row, int col)
 ```
 
----
 
 **Optional Extensions for Maze**
 
@@ -80,7 +71,7 @@ public static boolean solveMaze(char[][] maze, int row, int col)
 
 ***Example***
 
-Input
+*Input*
 
 ```java
 B - |
@@ -88,7 +79,7 @@ B - |
 | - E
 ```
 
-### Output
+*Output*
 
 ```java
 S * |
@@ -124,6 +115,9 @@ Fill a 9×9 grid so that:
 * Use `int[][]`
 * Empty cells = `0`
 * Must validate placement
+* Use Java Time API
+* Project Block Header
+* Test Cases
 
 **Optional Extensions for Sudoku**
 
