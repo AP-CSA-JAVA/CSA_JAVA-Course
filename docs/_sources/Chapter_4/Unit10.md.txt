@@ -25,11 +25,9 @@ Your goal is to design and implement a **recursive backtracking algorithm** that
 ---
 
 
-**OPTION A: Maze Solver**
+### OPTION A: Maze Solver
 
 **Problem:** Find a path from **Begin (B)** to **End (E)** in a maze.
-
-
 
 **REQUIREMENTS**
 
@@ -103,16 +101,13 @@ S * |
 **Problem**
 
 Fill a 9×9 grid so that:
-
 * Each row has 1–9
 * Each column has 1–9
 * Each 3×3 box has 1–9
 
----
-
 **Requirements**
-
-* Use `int[][]`
+* Use a **2D array**
+  * Use `int[][]`
 * Empty cells = `0`
 * Must validate placement
 * Use Java Time API
@@ -120,7 +115,6 @@ Fill a 9×9 grid so that:
 * Test Cases
 
 **Optional Extensions for Sudoku**
-
 * Count all solutions
 * Generate a puzzle
 * **GUI Extension**
@@ -169,16 +163,12 @@ public static boolean solveSudoku(int[][] board)
 **Regardless of the Program that you chose, you must do the following:**
 
 **REQUIRED EXPLANATION**
-
-Must Explain:
-
 1. What is your **base case**?
 2. Where does **backtracking happen**?
 3. What would cause your algorithm to fail?
 4. How does the call stack behave?
 
 **TESTING REQUIREMENT**
-
 * Minimum **2 different inputs**
 * One must be **more complex**
 * Show before + after output
