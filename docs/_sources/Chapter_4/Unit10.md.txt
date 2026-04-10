@@ -1,5 +1,225 @@
 # Unit 10
 
+
+## Project Recursion Game
+
+<details><summary>Project Instructions - Click Here</summary>
+
+## AP CSA Recursion Project: Choose Your Challenge
+
+**Project Overview**
+
+You will choose **ONE** of the following recursive problem-solving challenges:
+
+Option A: Maze Solver
+
+Option B: Sudoku Solver
+
+Your goal is to design and implement a **recursive backtracking algorithm** that solves 
+your chosen problem.
+
+---
+
+**Important Expectation**
+
+> You are not being graded on finishing fast—you are being graded on having a deep
+**understanding of recursion**.
+
+---
+
+#  **REQUIREMENTS**
+
+You must:
+
+* Minimum size of the maze must be 5 x 5
+* Use **recursion with backtracking**
+* Use a **2D array**
+* Write clean, organized methods
+* Include **at least 2 test cases**
+* Explain your algorithm clearly using comments
+* Use Java Time API
+
+---
+
+**OPTION A: Maze Solver**
+
+**Problem:** Find a path from **Begin (B)** to **End (E)** in a maze.
+
+---
+
+**Requirements**
+
+* Represent maze as `char[][]`
+* Symbols:
+
+  * `'B'` = Begin
+  * `'E'` = End
+  * `'|'` = Wall
+  * `'-'` = Open space
+* Mark solution path (e.g., `'*'`)
+
+---
+
+**Required Method**
+
+```java
+public static boolean solveMaze(char[][] maze, int row, int col)
+```
+
+---
+
+**Optional Extensions for Maze**
+
+* Count number of possible paths
+* Shortest path only
+* **GUI Extension**
+* - Use `JPanel` grid
+* - Color path vs walls
+
+---
+
+***Example***
+
+Input
+
+```java
+B - |
+- - |
+| - E
+```
+
+### Output
+
+```java
+S * |
+- * |
+| * E
+```
+
+---
+
+**Key Ideas**
+
+* Try moving (up/down/left/right)
+* If blocked → return false
+* If correct path → continue
+* If dead end → **backtrack (undo move)**
+
+---
+
+**OPTION B: Sudoku Solver**
+
+**Problem**
+
+Fill a 9×9 grid so that:
+
+* Each row has 1–9
+* Each column has 1–9
+* Each 3×3 box has 1–9
+
+---
+
+**Requirements**
+
+* Use `int[][]`
+* Empty cells = `0`
+* Must validate placement
+
+**Optional Extensions for Sudoku**
+
+* Count all solutions
+* Generate a puzzle
+* **GUI Extension**
+* Use `JTextField[][]`
+* Button to trigger solver
+
+---
+
+**Required Method**
+
+```java
+public static boolean solveSudoku(int[][] board)
+```
+
+---
+
+**Example**
+
+*Input*
+
+```
+5 3 0
+6 0 0
+0 9 8
+```
+
+*Output*
+
+```
+5 3 4
+6 7 2
+1 9 8
+```
+
+---
+
+**Key Ideas**
+
+* Find empty cell
+* Try numbers 1–9
+* If valid → recurse
+* If it fails later → **backtrack**
+
+---
+
+**Regardless of the Program that you chose, you must do the following:**
+
+**REQUIRED EXPLANATION**
+
+Must Explain:
+
+1. What is your **base case**?
+2. Where does **backtracking happen**?
+3. What would cause your algorithm to fail?
+4. How does the call stack behave?
+
+**TESTING REQUIREMENT**
+
+* Minimum **2 different inputs**
+* One must be **more complex**
+* Show before + after output
+
+---
+
+**Project Rubric**
+
+| Category              | Points | Description                          |
+| --------------------- | ------ | ------------------------------------ |
+| **Recursive Logic**   | 3      | Correct base case + backtracking     |
+| **Program Comments**	| 1		 | Appropriate comments on key concepts |
+| **Correctness**       | 1      | Produces valid solution              |
+| **2D Array Use**      | 1      | Proper traversal/manipulation        |
+| **Code Organization** | 1      | Clean structure, readable            |
+| **Testing**           | 1      | Multiple test cases                  |
+| **Explanation**       | 2      | Clear understanding of recursion     |
+|        **Total Points:**| **10** |                                    |
+
+---
+
+
+**Note: Common Problems**
+
+* “It runs forever” → you are missing base case
+* “It almost works” → you are not backtracking properly
+* “It skips spots” → Your program is not written correctly -- bad indexing
+* “It works once only” → You are modifying shared data incorrectly
+
+
+</details>
+
+---
+
+
 ## 10.1 Recursion
 
 **Goals**
@@ -14,12 +234,10 @@ Recursion is when a method calls itself to solve a problem.  A helpful way to th
 
 **The Two Key Parts that every recursive method must have:**
 1. **Base Case** (Stopping Point)
-This is the condition where the method stops calling itself.
-Without it, the program would run forever (and crash).
-2. **Recursive Case** (The Work)
-This is where the method:
+This is the condition where the method stops calling itself. Without it, the program would run forever (and crash).
 
-A small part of the problem 'calls' itself with a smaller input.
+3. **Recursive Case** (The Work)
+This is where the method calls a small part of the problem within method itself with a smaller input.
 
 ***Example:*** **Factorial**
 
