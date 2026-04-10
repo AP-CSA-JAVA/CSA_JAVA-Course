@@ -218,7 +218,6 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Unit9.html">Unit 9</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Unit 10</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#requirements"><strong>REQUIREMENTS</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Final_Project.html">Final Project</a></li>
 </ul>
 
@@ -268,37 +267,30 @@
 <h2>AP CSA Recursion Project: Choose Your Challenge<a class="headerlink" href="#ap-csa-recursion-project-choose-your-challenge" title="Link to this heading">¶</a></h2>
 <p><strong>Project Overview</strong></p>
 <p>You will choose <strong>ONE</strong> of the following recursive problem-solving challenges:</p>
-<p>Option A: Maze Solver</p>
-<p>Option B: Sudoku Solver</p>
-<p>Your goal is to design and implement a <strong>recursive backtracking algorithm</strong> that solves
-your chosen problem.</p>
+<p><strong>Option A:</strong> Maze Solver
+<strong>Option B:</strong> Sudoku Solver</p>
+<p>Your goal is to design and implement a <strong>recursive backtracking algorithm</strong> that solves your chosen problem.</p>
 <hr class="docutils" />
 <p><strong>Important Expectation</strong></p>
 <blockquote>
-<div><p>You are not being graded on finishing fast—you are being graded on having a deep
-<strong>understanding of recursion</strong>.</p>
+<div><p>You are not being graded on finishing fast—you are being graded on having a deep <strong>understanding of recursion</strong>.</p>
 </div></blockquote>
-</section>
-</section>
 <hr class="docutils" />
-<section id="requirements">
-<h1><strong>REQUIREMENTS</strong><a class="headerlink" href="#requirements" title="Link to this heading">¶</a></h1>
+<p><strong>OPTION A: Maze Solver</strong></p>
+<p><strong>Problem:</strong> Find a path from <strong>Begin (B)</strong> to <strong>End (E)</strong> in a maze.</p>
+<p><strong>REQUIREMENTS</strong></p>
 <p>You must:</p>
 <ul class="simple">
 <li><p>Minimum size of the maze must be 5 x 5</p></li>
 <li><p>Use <strong>recursion with backtracking</strong></p></li>
-<li><p>Use a <strong>2D array</strong></p></li>
 <li><p>Write clean, organized methods</p></li>
 <li><p>Include <strong>at least 2 test cases</strong></p></li>
 <li><p>Explain your algorithm clearly using comments</p></li>
 <li><p>Use Java Time API</p></li>
-</ul>
-<hr class="docutils" />
-<p><strong>OPTION A: Maze Solver</strong></p>
-<p><strong>Problem:</strong> Find a path from <strong>Begin (B)</strong> to <strong>End (E)</strong> in a maze.</p>
-<hr class="docutils" />
-<p><strong>Requirements</strong></p>
-<ul class="simple">
+<li><p>Project Block Header</p></li>
+<li><p>Test Cases</p></li>
+<li><p>Use a <strong>2D array</strong></p>
+<ul>
 <li><p>Represent maze as <code class="docutils literal notranslate"><span class="pre">char[][]</span></code></p></li>
 <li><p>Symbols:</p>
 <ul>
@@ -310,12 +302,12 @@ your chosen problem.</p>
 </li>
 <li><p>Mark solution path (e.g., <code class="docutils literal notranslate"><span class="pre">'*'</span></code>)</p></li>
 </ul>
-<hr class="docutils" />
+</li>
+</ul>
 <p><strong>Required Method</strong></p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">solveMaze</span><span class="p">(</span><span class="kt">char</span><span class="o">[][]</span><span class="w"> </span><span class="n">maze</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">row</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">col</span><span class="p">)</span>
 </pre></div>
 </div>
-<hr class="docutils" />
 <p><strong>Optional Extensions for Maze</strong></p>
 <ul class="simple">
 <li><p>Count number of possible paths</p></li>
@@ -332,14 +324,13 @@ your chosen problem.</p>
 </ul>
 <hr class="docutils" />
 <p><em><strong>Example</strong></em></p>
-<p>Input</p>
+<p><em>Input</em></p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">B</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="o">|</span>
 <span class="o">-</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="o">|</span>
 <span class="o">|</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">E</span>
 </pre></div>
 </div>
-<section id="output">
-<h2>Output<a class="headerlink" href="#output" title="Link to this heading">¶</a></h2>
+<p><em>Output</em></p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">S</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">|</span>
 <span class="o">-</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">|</span>
 <span class="o">|</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">E</span>
@@ -368,6 +359,9 @@ your chosen problem.</p>
 <li><p>Use <code class="docutils literal notranslate"><span class="pre">int[][]</span></code></p></li>
 <li><p>Empty cells = <code class="docutils literal notranslate"><span class="pre">0</span></code></p></li>
 <li><p>Must validate placement</p></li>
+<li><p>Use Java Time API</p></li>
+<li><p>Project Block Header</p></li>
+<li><p>Test Cases</p></li>
 </ul>
 <p><strong>Optional Extensions for Sudoku</strong></p>
 <ul class="simple">
@@ -911,10 +905,6 @@ Merge sort is a popular sorting algorithm that uses a divide-and-conquer approac
 <li><a class="reference internal" href="#">Unit 10</a><ul>
 <li><a class="reference internal" href="#project-recursion-game">Project Recursion Game</a></li>
 <li><a class="reference internal" href="#ap-csa-recursion-project-choose-your-challenge">AP CSA Recursion Project: Choose Your Challenge</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#requirements"><strong>REQUIREMENTS</strong></a><ul>
-<li><a class="reference internal" href="#output">Output</a></li>
 <li><a class="reference internal" href="#recursion">10.1 Recursion</a><ul>
 <li><a class="reference internal" href="#when-should-you-use-recursion">When Should You Use Recursion?</a></li>
 </ul>
