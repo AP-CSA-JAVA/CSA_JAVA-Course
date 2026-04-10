@@ -494,6 +494,40 @@ This is the condition where the method stops calling itself. Without it, the pro
 <li><p><strong>Recursive Case</strong> (The Work)
 This is where the method calls a small part of the problem within method itself with a smaller input.</p></li>
 </ol>
+<p>The basic structure of a recursive program will look something like this:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">()</span>
+<span class="w">  </span><span class="c1">// base case</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">baseCaseCondition</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">    </span><span class="n">baseCaseSteps</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">do</span><span class="w"> </span><span class="n">something</span>
+<span class="w">    </span><span class="c1">// recursive call</span>
+<span class="w">    </span><span class="n">recursiveMethod</span><span class="p">();</span><span class="w"> </span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Recursion works</strong> because:</p>
+<ul class="simple">
+<li><p>Each step makes the problem smaller</p></li>
+<li><p>Eventually, it reaches a case we already know how to solve</p></li>
+<li><p>Then the answers “stack back up”</p></li>
+</ul>
+<p><strong>When Should You Use Recursion?</strong></p>
+<ul class="simple">
+<li><p>Can be broken into smaller identical problems</p></li>
+<li><p>Have a natural “divide and conquer” structure</p></li>
+<li><p>Involve trees, hierarchies, or nested data</p></li>
+</ul>
+<p><strong>Examples:</strong></p>
+<ul class="simple">
+<li><p>Factorials</p></li>
+<li><p>Searching (Binary Search)</p></li>
+<li><p>Sorting (Merge Sort)</p></li>
+<li><p>File systems and organization charts</p></li>
+</ul>
+<hr class="docutils" />
 <p><em><strong>Example:</strong></em> <strong>Factorial</strong></p>
 <p>The factorial of a number means multiplying it by all smaller positive integers.</p>
 <p>5! = 5 × 4 × 3 × 2 × 1 = 120</p>
@@ -546,41 +580,6 @@ This is where the method calls a small part of the problem within method itself 
 <li><p>factorial(5) = 5 × 24 = 120</p></li>
 </ul>
 <hr class="docutils" />
-<p>The basic structure of a recursive program will look something like this:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">()</span>
-<span class="w">  </span><span class="c1">// base case</span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">baseCaseCondition</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-<span class="w">    </span><span class="n">baseCaseSteps</span>
-<span class="w">  </span><span class="p">}</span><span class="w"> </span>
-<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">do</span><span class="w"> </span><span class="n">something</span>
-<span class="w">    </span><span class="c1">// recursive call</span>
-<span class="w">    </span><span class="n">recursiveMethod</span><span class="p">();</span><span class="w"> </span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p><strong>Recursion works</strong> because:</p>
-<ul class="simple">
-<li><p>Each step makes the problem smaller</p></li>
-<li><p>Eventually, it reaches a case we already know how to solve</p></li>
-<li><p>Then the answers “stack back up”</p></li>
-</ul>
-<section id="when-should-you-use-recursion">
-<h3>When Should You Use Recursion?<a class="headerlink" href="#when-should-you-use-recursion" title="Link to this heading">¶</a></h3>
-<p>Recursion is especially useful when problems:</p>
-<ul class="simple">
-<li><p>Can be broken into smaller identical problems</p></li>
-<li><p>Have a natural “divide and conquer” structure</p></li>
-<li><p>Involve trees, hierarchies, or nested data</p></li>
-</ul>
-<p><strong>Examples:</strong></p>
-<ul class="simple">
-<li><p>Factorials</p></li>
-<li><p>Searching (Binary Search)</p></li>
-<li><p>Sorting (Merge Sort)</p></li>
-<li><p>File systems and organization charts</p></li>
-</ul>
 <p>In Java, multiple inheritance can be achieved through interfaces, and we can use an ArrayList along with recursion to demonstrate the concept. Below is a program that models the hierarchy of employees in a company using multiple inheritance through interfaces. We’ll also use recursion to calculate the total salary of all employees in the hierarchy.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
 
@@ -729,7 +728,6 @@ This is where the method calls a small part of the problem within method itself 
 <li><p>Trust a repeating process to build the final solution</p></li>
 </ul>
 <p>At first, recursion can feel confusing because the method calls itself. But once you learn to identify the base case and the recursive step, it becomes a powerful and elegant tool. As you continue practicing, you’ll start to recognize patterns where recursion is the natural solution—and in many of those cases, it leads to code that is simpler, cleaner, and easier to understand than traditional loops. The real goal is not just to write recursive programs, but to think recursively—because that skill applies far beyond programming.</p>
-</section>
 </section>
 <section id="recursive-searching-and-sorting">
 <h2>10.2 Recursive Searching and Sorting<a class="headerlink" href="#recursive-searching-and-sorting" title="Link to this heading">¶</a></h2>
@@ -915,10 +913,7 @@ Merge sort is a popular sorting algorithm that uses a divide-and-conquer approac
 <li><a class="reference internal" href="#option-b-sudoku-solver">OPTION B: Sudoku Solver</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#recursion">10.1 Recursion</a><ul>
-<li><a class="reference internal" href="#when-should-you-use-recursion">When Should You Use Recursion?</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#recursion">10.1 Recursion</a></li>
 <li><a class="reference internal" href="#recursive-searching-and-sorting">10.2 Recursive Searching and Sorting</a></li>
 </ul>
 </li>

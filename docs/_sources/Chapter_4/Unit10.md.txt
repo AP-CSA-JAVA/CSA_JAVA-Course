@@ -218,6 +218,42 @@ This is the condition where the method stops calling itself. Without it, the pro
 3. **Recursive Case** (The Work)
 This is where the method calls a small part of the problem within method itself with a smaller input.
 
+The basic structure of a recursive program will look something like this:
+
+```java
+public static void Main()
+  // base case
+  if (baseCaseCondition) { 
+    baseCaseSteps
+  } 
+  else {
+    do something
+    // recursive call
+    recursiveMethod(); 
+  }
+}
+```
+
+**Recursion works** because:
+* Each step makes the problem smaller
+* Eventually, it reaches a case we already know how to solve
+* Then the answers “stack back up”
+
+**When Should You Use Recursion?**
+* Can be broken into smaller identical problems
+* Have a natural “divide and conquer” structure
+* Involve trees, hierarchies, or nested data
+
+**Examples:**
+* Factorials
+* Searching (Binary Search)
+* Sorting (Merge Sort)
+* File systems and organization charts
+
+
+---
+
+
 ***Example:*** **Factorial**
 
 The factorial of a number means multiplying it by all smaller positive integers.
@@ -277,42 +313,8 @@ Now the program builds the answer back up:
 * factorial(4) = 4 × 6 = 24
 * factorial(5) = 5 × 24 = 120
 
+
 ---
-
-The basic structure of a recursive program will look something like this:
-
-```java
-public static void Main()
-  // base case
-  if (baseCaseCondition) { 
-    baseCaseSteps
-  } 
-  else {
-    do something
-    // recursive call
-    recursiveMethod(); 
-  }
-}
-```
-
-
-**Recursion works** because:
-* Each step makes the problem smaller
-* Eventually, it reaches a case we already know how to solve
-* Then the answers “stack back up”
-
-#### When Should You Use Recursion?
-
-Recursion is especially useful when problems:
-* Can be broken into smaller identical problems
-* Have a natural “divide and conquer” structure
-* Involve trees, hierarchies, or nested data
-
-**Examples:**
-* Factorials
-* Searching (Binary Search)
-* Sorting (Merge Sort)
-* File systems and organization charts
 
 
 In Java, multiple inheritance can be achieved through interfaces, and we can use an ArrayList along with recursion to demonstrate the concept. Below is a program that models the hierarchy of employees in a company using multiple inheritance through interfaces. We'll also use recursion to calculate the total salary of all employees in the hierarchy.
@@ -383,11 +385,13 @@ public class MultipleInheritanceWithArrayListAndRecursion {
 Total salary for manager1 and his subordinates: $10500.0
 Total salary for manager2 and his subordinates: $17000.0
 ```
+
 ---
 
 In this program, we have three classes: Employee, Manager, and RegularEmployee. The Employee interface ensures that both Manager and RegularEmployee classes have a getSalary() method. The Manager class contains an ArrayList of subordinates, and the addSubordinate() method is used to add employees to the manager's team.
 
 The main method creates instances of employees and managers, arranges them in a hierarchy, and then calculates the total salary using recursion through the getSalary() method of the Manager class. The program outputs the total salaries for the managers and their subordinates.
+
 
 ---
 
