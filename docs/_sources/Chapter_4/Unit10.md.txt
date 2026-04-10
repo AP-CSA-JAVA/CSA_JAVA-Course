@@ -5,7 +5,7 @@
 
 <details><summary>Project Instructions - Click Here</summary>
 
-## AP CSA Recursion Project: Choose Your Challenge
+### AP CSA Recursion Project: Choose Your Challenge
 
 **Project Overview**
 
