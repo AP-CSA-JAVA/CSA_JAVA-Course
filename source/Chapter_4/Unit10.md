@@ -96,7 +96,7 @@ S * |
 
 ---
 
-**OPTION B: Sudoku Solver**
+### OPTION B: Sudoku Solver
 
 **Problem**
 
