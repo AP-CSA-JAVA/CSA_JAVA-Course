@@ -400,9 +400,9 @@ The main method creates instances of employees and managers, arranges them in a 
 
 
 
-Manager:
+**Manager:**
    - Has a base salary.
-   - Has a list of subordinates (other Employee objects — either RegularEmployee`s or other Manager`s).
+   - Has a list of subordinates (other Employee objects — either RegularEmployee's or other Manager's).
    - When `getSalary()` is called, it returns:
      - Its own base salary
      - Plus, the sum of all subordinates' salaries (recursively).

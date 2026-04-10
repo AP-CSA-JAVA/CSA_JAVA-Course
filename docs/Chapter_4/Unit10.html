@@ -651,10 +651,10 @@ This is where the method calls a small part of the problem within method itself 
 <p>The main method creates instances of employees and managers, arranges them in a hierarchy, and then calculates the total salary using recursion through the getSalary() method of the Manager class. The program outputs the total salaries for the managers and their subordinates.</p>
 <hr class="docutils" />
 <details><summary>Let's look at this in another way!</summary>
-<p>Manager:</p>
+<p><strong>Manager:</strong></p>
 <ul class="simple">
 <li><p>Has a base salary.</p></li>
-<li><p>Has a list of subordinates (other Employee objects — either RegularEmployee<code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">or</span> <span class="pre">other</span> <span class="pre">Manager</span></code>s).</p></li>
+<li><p>Has a list of subordinates (other Employee objects — either RegularEmployee’s or other Manager’s).</p></li>
 <li><p>When <code class="docutils literal notranslate"><span class="pre">getSalary()</span></code> is called, it returns:</p>
 <ul>
 <li><p>Its own base salary</p></li>
