@@ -398,7 +398,7 @@ The main method creates instances of employees and managers, arranges them in a 
 
 <details><summary>Let's look at this in another way!</summary>
 
-
+---
 
 **Manager:**
    - Has a base salary.
