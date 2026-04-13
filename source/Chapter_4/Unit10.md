@@ -5,13 +5,14 @@
 
 <details><summary>Project Instructions - Click Here</summary>
 
-### AP CSA Recursion Project: Choose Your Challenge
+### AP CSA Recursion Project:
 
 **Project Overview**
 
 You will choose **ONE** of the following recursive problem-solving challenges:
 
 **Option A:** Maze Solver
+
 **Option B:** Sudoku Solver
 
 Your goal is to design and implement a **recursive backtracking algorithm** that solves your chosen problem.
