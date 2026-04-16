@@ -845,6 +845,682 @@ Merge sort is a popular sorting algorithm that uses a divide-and-conquer approac
 <p>In this example, the <code class="docutils literal notranslate"><span class="pre">mergeSort()</span></code> method performs recursive merge sort on the array. It takes the array, left index, and right index as parameters. It recursively calls itself to sort the left half and the right half of the array, and then merges the two sorted halves using the <code class="docutils literal notranslate"><span class="pre">merge()</span></code> method. The <code class="docutils literal notranslate"><span class="pre">merge()</span></code> method merges the two sorted halves into a single sorted array.</p>
 <p>Both examples demonstrate the power of recursion in searching and sorting algorithms. Recursive searching allows for efficient retrieval of elements from sorted data, while recursive sorting algorithms provide efficient ways to sort arrays or collections.</p>
 </section>
+<hr class="docutils" />
+<section id="lambda-expressions">
+<h2>10.3 Lambda Expressions<a class="headerlink" href="#lambda-expressions" title="Link to this heading">¶</a></h2>
+<p>Lambda expressions allow you to treat functionality as method arguments, enabling functional programming in Java. They were introduced in Java 8.</p>
+<p><strong>Basic Syntax:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">parameters</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">expression</span>
+<span class="c1">// or</span>
+<span class="p">(</span><span class="n">parameters</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">statements</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Why do we want to code this way?</p>
+<p><strong>Conciseness:</strong> Reduces boilerplate code
+<strong>Readability:</strong> Makes intent clearer
+<strong>Functional Programming:</strong> Enables passing behavior as data</p>
+<p><strong>Simple Example:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Before (Anonymous Class)</span>
+<span class="n">Runnable</span><span class="w"> </span><span class="n">r1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Runnable</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">run</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hello&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="c1">// After (Lambda)</span>
+<span class="n">Runnable</span><span class="w"> </span><span class="n">r2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hello&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>2. Lambdas and the forEach Method</strong>
+<strong>The <code class="docutils literal notranslate"><span class="pre">forEach</span> <span class="pre">Method</span></code>:</strong> The <code class="docutils literal notranslate"><span class="pre">forEach</span></code> method accepts a <code class="docutils literal notranslate"><span class="pre">Consumer&lt;T&gt;</span></code> functional interface and applies an operation to each element.</p>
+<p><strong>Example:</strong> Iterating Over a List</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Arrays</span><span class="p">;</span>
+
+<span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="s">&quot;Alice&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Bob&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Charlie&quot;</span><span class="p">);</span>
+
+<span class="c1">// Traditional for-each loop</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">names</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Using forEach with Lambda</span>
+<span class="n">names</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">name</span><span class="p">));</span>
+
+<span class="c1">// Method reference (shorthand)</span>
+<span class="n">names</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">);</span>
+<span class="n">Multi</span><span class="o">-</span><span class="n">line</span><span class="w"> </span><span class="n">Lambda</span>
+<span class="n">names</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">upper</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">();</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">upper</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>3. Predicates and Lambdas</strong></p>
+<p><strong>What is a Predicate?</strong></p>
+<ul class="simple">
+<li><p>A <code class="docutils literal notranslate"><span class="pre">Predicate&lt;T&gt;</span></code> is a functional interface that takes an argument and returns a boolean.</p></li>
+</ul>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="nd">@FunctionalInterface</span>
+<span class="kd">interface</span> <span class="nc">Predicate</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">test</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">t</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="cm">/* Common Use Cases:</span>
+
+<span class="cm">- Filtering collections</span>
+<span class="cm">- Conditional logic</span>
+<span class="cm">- Validation</span>
+<span class="cm">*/</span>
+
+
+<span class="c1">// Example: Filtering Numbers</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Arrays</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.function.Predicate</span><span class="p">;</span>
+
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span>
+
+<span class="c1">// Predicate to find even numbers</span>
+<span class="n">Predicate</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">isEven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="c1">// Filter using predicate</span>
+<span class="n">numbers</span><span class="p">.</span><span class="na">stream</span><span class="p">()</span>
+<span class="w">       </span><span class="p">.</span><span class="na">filter</span><span class="p">(</span><span class="n">isEven</span><span class="p">)</span>
+<span class="w">       </span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">));</span>
+<span class="c1">// Output: 2 4 6 8 10</span>
+<span class="n">Predicate</span><span class="w"> </span><span class="n">Methods</span>
+<span class="n">Predicate</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">isEven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="n">Predicate</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">isGreaterThan5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+
+<span class="c1">// AND</span>
+<span class="n">Predicate</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">both</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">isEven</span><span class="p">.</span><span class="na">and</span><span class="p">(</span><span class="n">isGreaterThan5</span><span class="p">);</span>
+
+<span class="c1">// OR</span>
+<span class="n">Predicate</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">either</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">isEven</span><span class="p">.</span><span class="na">or</span><span class="p">(</span><span class="n">isGreaterThan5</span><span class="p">);</span>
+
+<span class="c1">// NOT</span>
+<span class="n">Predicate</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">notEven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">isEven</span><span class="p">.</span><span class="na">negate</span><span class="p">();</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>4. Predicate and Lambda for Your Dog</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Dog</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">breed</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Dog</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">breed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">breed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">breed</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getName</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getAge</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">age</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getBreed</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">breed</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; (&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">breed</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; years old)&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Creating Predicates for Dogs</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Arrays</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.function.Predicate</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.stream.Collectors</span><span class="p">;</span>
+
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;</span><span class="w"> </span><span class="n">dogs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span>
+<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">(</span><span class="s">&quot;Buddy&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Golden Retriever&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">(</span><span class="s">&quot;Max&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;German Shepherd&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">(</span><span class="s">&quot;Bella&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Labrador&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">(</span><span class="s">&quot;Charlie&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Beagle&quot;</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="c1">// Predicate: Find adult dogs (age &gt;= 3)</span>
+<span class="n">Predicate</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;</span><span class="w"> </span><span class="n">isAdult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dog</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">dog</span><span class="p">.</span><span class="na">getAge</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+
+<span class="c1">// Predicate: Find Golden Retrievers</span>
+<span class="n">Predicate</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;</span><span class="w"> </span><span class="n">isGoldenRetriever</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dog</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">&quot;Golden Retriever&quot;</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">dog</span><span class="p">.</span><span class="na">getBreed</span><span class="p">());</span>
+
+<span class="c1">// Combined Predicate: Adult Golden Retrievers</span>
+<span class="n">Predicate</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;</span><span class="w"> </span><span class="n">adultGolden</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">isAdult</span><span class="p">.</span><span class="na">and</span><span class="p">(</span><span class="n">isGoldenRetriever</span><span class="p">);</span>
+
+<span class="c1">// Using with filter</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;</span><span class="w"> </span><span class="n">adultDogs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dogs</span><span class="p">.</span><span class="na">stream</span><span class="p">()</span>
+<span class="w">    </span><span class="p">.</span><span class="na">filter</span><span class="p">(</span><span class="n">isAdult</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">toList</span><span class="p">());</span>
+
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;</span><span class="w"> </span><span class="n">goldenRetrievers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dogs</span><span class="p">.</span><span class="na">stream</span><span class="p">()</span>
+<span class="w">    </span><span class="p">.</span><span class="na">filter</span><span class="p">(</span><span class="n">isGoldenRetriever</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">toList</span><span class="p">());</span>
+
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;</span><span class="w"> </span><span class="n">adultGoldens</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dogs</span><span class="p">.</span><span class="na">stream</span><span class="p">()</span>
+<span class="w">    </span><span class="p">.</span><span class="na">filter</span><span class="p">(</span><span class="n">adultGolden</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">toList</span><span class="p">());</span>
+
+<span class="c1">// Print results</span>
+<span class="n">adultDogs</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">dog</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">dog</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; is an adult&quot;</span><span class="p">));</span>
+<span class="n">Teaching</span><span class="w"> </span><span class="n">Tip</span>
+<span class="n">Have</span><span class="w"> </span><span class="n">students</span><span class="w"> </span><span class="n">create</span><span class="w"> </span><span class="n">their</span><span class="w"> </span><span class="n">own</span><span class="w"> </span><span class="n">predicates</span><span class="w"> </span><span class="n">like</span><span class="p">:</span>
+
+<span class="n">isPuppy</span><span class="w"> </span><span class="p">(</span><span class="n">age</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="n">isNamedBuddy</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="n">equals</span><span class="w"> </span><span class="s">&quot;Buddy&quot;</span><span class="p">)</span>
+<span class="n">isOlderThan</span><span class="p">(</span><span class="n">dog</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">compare</span><span class="w"> </span><span class="n">ages</span><span class="p">)</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>5. Predicate and Lambda for Your Horse</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Horse</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">height</span><span class="p">;</span><span class="w"> </span><span class="c1">// in hands</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">color</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Horse</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">color</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">height</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">color</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getName</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getAge</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">age</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getHeight</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">height</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getColor</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">color</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; (&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; hands, &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; years old)&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="n">Creating</span><span class="w"> </span><span class="n">Predicates</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">Horses</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Arrays</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.function.Predicate</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.stream.Collectors</span><span class="p">;</span>
+
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Horse</span><span class="o">&gt;</span><span class="w"> </span><span class="n">horses</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span>
+<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">Horse</span><span class="p">(</span><span class="s">&quot;Spirit&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mf">15.2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Bay&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">Horse</span><span class="p">(</span><span class="s">&quot;Thunder&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mf">16.0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Black&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">Horse</span><span class="p">(</span><span class="s">&quot;Whisper&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mf">14.5</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Chestnut&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">Horse</span><span class="p">(</span><span class="s">&quot;Shadow&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mf">15.8</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Gray&quot;</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="c1">// Predicate: Find tall horses (height &gt;= 15.5 hands)</span>
+<span class="n">Predicate</span><span class="o">&lt;</span><span class="n">Horse</span><span class="o">&gt;</span><span class="w"> </span><span class="n">isTall</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">horse</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">horse</span><span class="p">.</span><span class="na">getHeight</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">15.5</span><span class="p">;</span>
+
+<span class="c1">// Predicate: Find young horses (age &lt; 5)</span>
+<span class="n">Predicate</span><span class="o">&lt;</span><span class="n">Horse</span><span class="o">&gt;</span><span class="w"> </span><span class="n">isYoung</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">horse</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">horse</span><span class="p">.</span><span class="na">getAge</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+
+<span class="c1">// Predicate: Find specific colors</span>
+<span class="n">Predicate</span><span class="o">&lt;</span><span class="n">Horse</span><span class="o">&gt;</span><span class="w"> </span><span class="n">isBay</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">horse</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">&quot;Bay&quot;</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">horse</span><span class="p">.</span><span class="na">getColor</span><span class="p">());</span>
+
+<span class="c1">// Combined: Tall AND Bay horses</span>
+<span class="n">Predicate</span><span class="o">&lt;</span><span class="n">Horse</span><span class="o">&gt;</span><span class="w"> </span><span class="n">tallAndBay</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">isTall</span><span class="p">.</span><span class="na">and</span><span class="p">(</span><span class="n">isBay</span><span class="p">);</span>
+
+<span class="c1">// Using with filter</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Horse</span><span class="o">&gt;</span><span class="w"> </span><span class="n">tallHorses</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">horses</span><span class="p">.</span><span class="na">stream</span><span class="p">()</span>
+<span class="w">    </span><span class="p">.</span><span class="na">filter</span><span class="p">(</span><span class="n">isTall</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">toList</span><span class="p">());</span>
+
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Horse</span><span class="o">&gt;</span><span class="w"> </span><span class="n">youngHorses</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">horses</span><span class="p">.</span><span class="na">stream</span><span class="p">()</span>
+<span class="w">    </span><span class="p">.</span><span class="na">filter</span><span class="p">(</span><span class="n">isYoung</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">toList</span><span class="p">());</span>
+
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Horse</span><span class="o">&gt;</span><span class="w"> </span><span class="n">tallBayHorses</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">horses</span><span class="p">.</span><span class="na">stream</span><span class="p">()</span>
+<span class="w">    </span><span class="p">.</span><span class="na">filter</span><span class="p">(</span><span class="n">tallAndBay</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">toList</span><span class="p">());</span>
+
+<span class="c1">// Print results</span>
+<span class="n">tallHorses</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">horse</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">horse</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; is tall&quot;</span><span class="p">));</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<blockquote>
+<div><p><strong>Common Student Misconceptions</strong>
+“Lambdas replace all loops” → Not true; use when appropriate
+“Predicates must be separate classes” → Can be inline lambdas
+“Lambdas are slower” → Performance is comparable to anonymous classes
+“Cannot use local variables” → Can use effectively final variables</p>
+</div></blockquote>
+<p>Assessment Ideas</p>
+<p>Code Conversion: Give students anonymous class code, have them convert to lambdas
+Predicate Writing: Provide requirements, students write matching predicates
+Debugging: Give broken lambda code, students fix it
+Creative Extension: Have students create their own animal class with custom predicates</p>
+<p>Here are two engaging, challenging projects designed to solidify student understanding of Lambda Expressions, Functional Interfaces (Predicate, Consumer, Function), and the Stream API.</p>
+<section id="project-1-the-galactic-zoo-manager">
+<h3>Project 1: The “Galactic Zoo” Manager<a class="headerlink" href="#project-1-the-galactic-zoo-manager" title="Link to this heading">¶</a></h3>
+<p><strong>Theme:</strong> Students manage a database of alien species visiting a space station.
+<strong>Challenge Level:</strong> High (Requires combining multiple stream operations and custom logic).
+<strong>Scenario:</strong> The Space Station Alpha has received 50+ alien species. The station commander needs a system to filter, sort, and analyze the population based on complex biological traits. The system must be built entirely using <code class="docutils literal notranslate"><span class="pre">Streams</span></code> and <code class="docutils literal notranslate"><span class="pre">Lambdas</span></code> (no traditional for loops allowed for data processing).</p>
+<p><strong>Requirements:</strong></p>
+<p><strong>Data Structure:</strong> Create a <code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">Alien</span></code> with fields: <code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">species</span></code>, <code class="docutils literal notranslate"><span class="pre">intelligenceLevel</span> <span class="pre">(1-10)</span></code>, <code class="docutils literal notranslate"><span class="pre">dangerLevel</span> <span class="pre">(1-10)</span></code>, <code class="docutils literal notranslate"><span class="pre">homePlanet</span></code>, and <code class="docutils literal notranslate"><span class="pre">hasWings</span> <span class="pre">(boolean)</span></code>.</p>
+<p><strong>Population Generation:</strong> Create a list of at least 20 unique aliens.</p>
+<p><strong>Feature 1:</strong> The Danger Filter (Predicate)</p>
+<ul class="simple">
+<li><p>Create a Predicate<Alien> that identifies “Safe Visitors” (Danger Level &lt; 3 AND Intelligence &gt; 5).</p></li>
+<li><p>Use .filter() to display only safe visitors.</p></li>
+</ul>
+<p><strong>Feature 2:</strong> The Intelligence Sort (Comparator via Lambda)</p>
+<ul class="simple">
+<li><p>Sort the entire list by intelligenceLevel descending.</p></li>
+<li><p>If intelligence is equal, sort alphabetically by name.</p>
+<ul>
+<li><p>Hint: Use Comparator.comparing(…).thenComparing(…).</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Feature 3</strong>: The Planet Report (Grouping)</p>
+<ul class="simple">
+<li><p>Group aliens by homePlanet.</p></li>
+<li><p>Print a report showing which planet has the highest average intelligence.</p></li>
+</ul>
+<p><strong>Feature 4:</strong> The “Wing” Transformation (Function)</p>
+<ul class="simple">
+<li><p>Create a Function&lt;Alien, String&gt; that generates a flight status string: “Can Fly” if wings are true, “Grounded” if false.</p></li>
+<li><p>Map the list to a list of these strings and print them.</p></li>
+</ul>
+<p><strong>Feature 5:</strong> The Commander’s Summary (Reduce/Collect)</p>
+<ul class="simple">
+<li><p>Calculate the total “Threat Score” of the station (Sum of all dangerLevel * intelligenceLevel).</p></li>
+<li><p>Print the result using .reduce().</p></li>
+</ul>
+<p><em><strong>Constraints:</strong></em></p>
+<ul class="simple">
+<li><p>No for, while, or do-while loops for processing the list.</p></li>
+<li><p>Must use at least 3 different functional interfaces (Predicate, Function, Consumer, Comparator).</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="project-2-the-eco-economy-simulator">
+<h3>Project 2: The “Eco-Economy” Simulator<a class="headerlink" href="#project-2-the-eco-economy-simulator" title="Link to this heading">¶</a></h3>
+<p><strong>Theme:</strong> Managing a dynamic market for renewable energy resources.
+<strong>Challenge Level:</strong> Medium-High (Focuses on state mutation, side effects, and complex filtering).
+<strong>Scenario:</strong> Students are building the backend for a green energy trading platform. They need to simulate market fluctuations, identify profitable trades, and generate automated alerts for investors.</p>
+<hr class="docutils" />
+<p><strong>Requirements:</strong></p>
+<p><strong>Data Structure:</strong> Create a <code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">EnergyResource</span></code> with fields: <code class="docutils literal notranslate"><span class="pre">resourceType</span> <span class="pre">(Solar,</span> <span class="pre">Wind,</span> <span class="pre">Hydro,</span> <span class="pre">Nuclear)</span></code>, <code class="docutils literal notranslate"><span class="pre">costPerUnit</span></code>, <code class="docutils literal notranslate"><span class="pre">efficiencyRating</span> <span class="pre">(0.0</span> <span class="pre">-</span> <span class="pre">1.0)</span></code>, <code class="docutils literal notranslate"><span class="pre">availability</span> <span class="pre">(boolean)</span></code>, and <code class="docutils literal notranslate"><span class="pre">carbonFootprint</span> <span class="pre">(int)</span></code>.
+Market Simulation: Generate a list of 15 resources with random values.</p>
+<p><strong>Feature 1:</strong> The “Green Deal” Filter (Predicate)</p>
+<p>Define a <code class="docutils literal notranslate"><span class="pre">predicate</span></code> that finds resources that are: <code class="docutils literal notranslate"><span class="pre">availability</span> <span class="pre">==</span> <span class="pre">true</span> <span class="pre">AND</span> <span class="pre">carbonFootprint</span> <span class="pre">&lt;</span> <span class="pre">50</span> <span class="pre">AND</span> <span class="pre">efficiencyRating</span> <span class="pre">&gt;</span> <span class="pre">0.7</span></code>.
+Display the names of these resources.</p>
+<p><strong>Feature 2:</strong> Dynamic Pricing (Function)</p>
+<p>Create a <code class="docutils literal notranslate"><span class="pre">Function&lt;EnergyResource</span></code>, Double&gt; that calculates a “Market Price” based on: <code class="docutils literal notranslate"><span class="pre">costPerUnit</span> <span class="pre">*</span> <span class="pre">(1.0</span> <span class="pre">/</span> <span class="pre">efficiencyRating)</span></code>.
+Map the list to a new list of prices and find the minimum and maximum price.</p>
+<p><strong>Feature 3:</strong> The Investor Alert (Consumer)</p>
+<p>Create a <code class="docutils literal notranslate"><span class="pre">Consumer&lt;EnergyResource&gt;</span></code> that prints a formatted alert message: “ ALERT: [Name] is a high-value investment!” if the calculated Market Price is below 10.0.
+Apply this consumer to the filtered list of “Green Deals”.</p>
+<p><strong>Feature 4:</strong> The Efficiency Dashboard (Partitioning)</p>
+<p>Partition the resources into two groups: “High Efficiency” (&gt; 0.8) and “Low Efficiency”.
+Print the count of resources in each group.</p>
+<p><strong>Feature 5:</strong> The Total Carbon Impact (Reduce)</p>
+<p>Calculate the total carbon footprint of only the “High Efficiency” group.</p>
+<p><strong>Constraints</strong></p>
+<p>Must use Stream.collect(Collectors.partitioningBy(…)) for Feature 4.
+Must use Stream.reduce() for Feature 5.
+No manual iteration.</p>
+<p><strong>10-Point Rubric</strong>
+This rubric applies to both projects. It emphasizes correct usage of Lambdas over just getting the right output.
+CriteriaPointsExcellent (Full Points)Proficient (Partial Points)Needs Improvement (Low/No Points)Lambda Syntax &amp; Usage3Correctly uses -&gt; syntax in all required places. Uses method references where appropriate. No compilation errors.Uses lambdas but makes minor syntax errors or overuses anonymous classes where lambdas were required.Relies heavily on anonymous inner classes or traditional loops instead of lambdas. Syntax errors prevent compilation.Functional Interfaces2Correctly implements Predicate, Function, Consumer, and Comparator as distinct variables/methods.Implements some interfaces correctly but confuses roles (e.g., using a Consumer where a Predicate is needed).Fails to use functional interfaces; logic is embedded directly in loops or methods without abstraction.Stream Operations2Correctly chains filter, map, sorted, collect, reduce, and forEach in a logical pipeline.Uses streams but misses a step (e.g., forgets to collect after filter) or chains incorrectly.Uses streams only for forEach without filtering or mapping. Logic is procedural, not functional.Logic &amp; Problem Solving2All business logic (sorting, grouping, calculating) is accurate and meets the specific project constraints.Logic is mostly correct but fails on edge cases (e.g., sorting order is wrong, math formula slightly off).Logic is fundamentally flawed; results do not match the scenario requirements.Code Quality &amp; Readability1Code is clean, well-commented, variable names are descriptive, and formatting is consistent.Code is readable but lacks comments or has inconsistent naming.Code is messy, hard to read, or lacks necessary comments explaining the lambda logic.Total10</p>
+<p>The “Loop” Trap: If a student uses a for loop to iterate the list, deduct points immediately from Stream Operations. The whole point is to practice the Stream API.
+Method References: Award bonus points (extra credit) if a student uses System.out::println instead of x -&gt; System.out.println(x) where appropriate.
+Chaining: Look for “Stream Chaining.” A student who writes list.stream().filter(…).forEach(…) is demonstrating a higher level of understanding than one who assigns intermediate lists to variables unnecessarily.
+Debugging: Encourage students to use peek() during development to debug their streams, but remind them not to leave it in the final submission.</p>
+<p>These projects move beyond “Hello World” lambdas and force students to think about data transformation pipelines, which is the core power of Java 8+.</p>
+<p>To make the Eco-Economy Simulator realistic and educationally valuable for AP CSA students, the “market fluctuations” should be modeled using simple mathematical logic that students can implement with basic arithmetic and randomization.Since this is a Java project, the fluctuations should be deterministic enough to test but random enough to require dynamic code.Here are the three most impactful market fluctuation types to focus on, along with how to implement them in code:1. Weather Dependency Volatility (The “Sun/Wind” Factor)
+Impact: Renewable energy sources (Solar, Wind) are intermittent. Their “availability” and “efficiency” fluctuate wildly based on simulated weather, directly impacting supply and price.</p>
+<p>Why it matters: It teaches students that availability isn’t a static boolean; it’s a dynamic state.
+The Logic:</p>
+<p>Solar: Efficiency drops to 0% at night (simulated by a random “time of day” or weather event) and drops on cloudy days.
+Wind: Efficiency spikes during storms but drops to 0% during calm periods.
+Hydro/Nuclear: Stable (low volatility).</p>
+<p>Implementation Idea:
+// Simulate a “Day” event
+double weatherFactor = Math.random(); // 0.0 to 1.0</p>
+<p>if (resource.getType().equals(“Solar”)) {
+// Solar is useless if weatherFactor &lt; 0.3 (cloudy/rainy)
+resource.setEfficiency(resource.getBaseEfficiency() * (weatherFactor &gt; 0.3 ? 1.0 : 0.1));
+resource.setAvailability(weatherFactor &gt; 0.3);
+} else if (resource.getType().equals(“Wind”)) {
+// Wind is great if weatherFactor &gt; 0.7 (stormy)
+resource.setEfficiency(resource.getBaseEfficiency() * (weatherFactor &gt; 0.7 ? 1.5 : 0.2));
+resource.setAvailability(weatherFactor &gt; 0.5);
+}</p>
+<p>Student Challenge: Write a Predicate that filters for resources that are currently viable (efficiency &gt; 0.5 AND availability == true) after the weather update.</p>
+<ol class="arabic simple" start="2">
+<li><p>Policy Subsidy Shocks (The “Government” Factor)
+Impact: Governments often subsidize specific green technologies, causing sudden price drops or demand spikes. This affects the costPerUnit calculation.</p></li>
+</ol>
+<p>Why it matters: It introduces the concept of external variables affecting internal state.
+The Logic:</p>
+<p>Randomly select a resource type (e.g., “Solar”) to receive a subsidy.
+The costPerUnit for that type drops by 20-40%.
+Alternatively, a “Carbon Tax” increases the costPerUnit for high-carbon resources (Nuclear/Coal if included).</p>
+<p>Implementation Idea:
+// Simulate a policy change
+String subsidizedType = getRandomResourceType(); // e.g., “Wind”
+double subsidyAmount = 0.30; // 30% discount</p>
+<p>resources.forEach(r -&gt; {
+if (r.getResourceType().equals(subsidizedType)) {
+r.setCostPerUnit(r.getCostPerUnit() * (1 - subsidyAmount));
+System.out.println(“Policy Update: “ + subsidizedType + “ subsidized!”);
+}
+});</p>
+<p>Student Challenge: Use a Consumer to apply the subsidy to the list, then use a Function to recalculate the “Market Price” based on the new cost.</p>
+<ol class="arabic simple" start="3">
+<li><p>Demand Surges (The “Grid Load” Factor)
+Impact: Energy demand fluctuates based on time of day or season. High demand drives up the “Market Price” (supply/demand economics).</p></li>
+</ol>
+<p>Why it matters: It teaches students how to calculate dynamic pricing based on a global variable.
+The Logic:</p>
+<p>Create a globalDemandMultiplier (e.g., 0.8 for night, 1.5 for peak afternoon).
+Market Price = (Cost / Efficiency) * DemandMultiplier.
+If demand is high, prices go up, making inefficient resources suddenly profitable.</p>
+<p><strong>Implementation Idea:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">demandMultiplier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0.5</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mf">1.4</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mf">0.9</span><span class="p">;</span><span class="w"> </span><span class="c1">// Peak or Off-Peak</span>
+
+<span class="c1">// Calculate new market price for ALL resources</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">newPrices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">resources</span><span class="p">.</span><span class="na">stream</span><span class="p">()</span>
+<span class="w">    </span><span class="p">.</span><span class="na">map</span><span class="p">(</span><span class="n">r</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="na">calculateMarketPrice</span><span class="p">(</span><span class="n">demandMultiplier</span><span class="p">))</span><span class="w"> </span><span class="c1">// Function</span>
+<span class="w">    </span><span class="p">.</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">toList</span><span class="p">());</span>
+</pre></div>
+</div>
+<p><strong>Challenge:</strong> Filter for resources where <code class="docutils literal notranslate"><span class="pre">Market</span> <span class="pre">Price</span> <span class="pre">&lt;</span> <span class="pre">10.0</span> <span class="pre">//</span> <span class="pre">(Good</span> <span class="pre">Deal)</span></code> specifically during a high-demand surge.</p>
+<p><strong>How to Integrate This into the Project</strong>
+Instead of just generating a static list, you will create a “Simulation Loop”:</p>
+<p>Initialize: Create the 15 resources.
+Loop (e.g., 10 “Days”):</p>
+<p>Step A: Apply Weather Fluctuations (Update efficiency/availability).
+Step B: Apply Policy Shocks (Randomly change costs).
+Step C: Apply Demand Surge (Calculate new prices).
+Step D: Alert Generation: Use a Predicate to find “Profitable Trades” (Price &lt; Cost * 1.1) and a Consumer to print alerts.
+Step E: Dashboard: Use Collectors.groupingBy to show average efficiency per resource type for that day.</p>
+<section id="ap-csa-oracle-foundations">
+<h4>AP CSA &amp; Oracle Foundations<a class="headerlink" href="#ap-csa-oracle-foundations" title="Link to this heading">¶</a></h4>
+<p><em><strong>Object-Oriented Design</strong></em>: Students must update fields in their EnergyResource objects (Encapsulation).</p>
+<p><strong>Lambda Mastery:</strong></p>
+<ul class="simple">
+<li><p><strong>Predicate</strong>: “Is this resource viable right now?”</p></li>
+<li><p><strong>Function</strong>: “What is the price given the current demand?”</p></li>
+<li><p><strong>Consumer</strong>: “Print the alert.”</p></li>
+<li><p><strong>Logic Complexity:</strong> It moves beyond “static data” to “dynamic systems,” which is exactly what the Oracle Foundations exam tests (handling real-world variability).</p></li>
+<li><p><strong>Debugging:</strong> Students can easily see if their logic is wrong (“Solar is producing power at night” = bug in the weather logic).</p></li>
+</ul>
+<p>Sample MarketEvent class:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">enum</span><span class="w"> </span><span class="n">EventType</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">WEATHER_STORM</span><span class="p">,</span><span class="w"> </span><span class="n">POLICY_SUBSIDY</span><span class="p">,</span><span class="w"> </span><span class="n">PEAK_DEMAND</span><span class="w"> </span><span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">MarketEvent</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">EventType</span><span class="w"> </span><span class="n">type</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">intensity</span><span class="p">;</span><span class="w"> </span><span class="c1">// 0.0 to 1.0</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">apply</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">EnergyResource</span><span class="o">&gt;</span><span class="w"> </span><span class="n">resources</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">switch</span><span class="p">(</span><span class="n">type</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="n">WEATHER_STORM</span><span class="p">:</span>
+<span class="w">                </span><span class="c1">// Logic to lower solar, raise wind</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="n">POLICY_SUBSIDY</span><span class="p">:</span>
+<span class="w">                </span><span class="c1">// Logic to lower cost</span>
+<span class="w">                </span><span class="k">break</span><span class="p">;</span>
+<span class="w">            </span><span class="c1">// ...</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>You can use <code class="docutils literal notranslate"><span class="pre">resources.forEach(r</span> <span class="pre">-&gt;</span> <span class="pre">event.applySingle(r))</span></code> or a similar pattern.
+This will be a mini-simulation engine, for you to develop this project.</p>
+<p>Below is a scaffolded implementation for <strong>Steps B, C, and D</strong>.</p>
+<p><strong>Step B: Apply Policy Shocks (Randomly Change Costs):</strong></p>
+<blockquote>
+<div><p><strong>Explanation:</strong>
+“The government announced a new subsidy for Wind Energy. It is now cheaper to buy. In your code, you need to pick a random resource type and lower its cost for everyone in that category.
+You will use a Consumer to visit every resource and apply the change.”</p>
+</div></blockquote>
+<p><strong>Student Template:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// 1. Define the possible policy changes</span>
+<span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">policyTypes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;Solar&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Wind&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Hydro&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Nuclear&quot;</span><span class="p">};</span>
+<span class="n">String</span><span class="w"> </span><span class="n">targetResource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">policyTypes</span><span class="o">[</span><span class="p">(</span><span class="kt">int</span><span class="p">)(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">policyTypes</span><span class="p">.</span><span class="na">length</span><span class="p">)</span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="c1">// Pick one randomly</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">discountRate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.20</span><span class="p">;</span><span class="w"> </span><span class="c1">// 20% discount</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;POLICY UPDATE: Government subsidizes &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">targetResource</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;!&quot;</span><span class="p">);</span>
+
+<span class="c1">// 2. Apply the change using a Consumer</span>
+<span class="c1">// A Consumer takes an object and does something to it (returns nothing)</span>
+<span class="n">resources</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">resource</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">resource</span><span class="p">.</span><span class="na">getResourceType</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="n">targetResource</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Lower the cost by 20%</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">newCost</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">resource</span><span class="p">.</span><span class="na">getCostPerUnit</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mf">1.0</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">discountRate</span><span class="p">);</span>
+<span class="w">        </span><span class="n">resource</span><span class="p">.</span><span class="na">setCostPerUnit</span><span class="p">(</span><span class="n">newCost</span><span class="p">);</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c1">// Optional: Print what happened for this specific item</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;   -&gt; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">resource</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; cost dropped to $&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">newCost</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p><strong>Key Concepts:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">forEach</span></code>: Loops through the list.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">if</span></code>: Checks if the current item matches the policy.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">setCostPerUnit</span></code>: Updates the object’s state.</p></li>
+</ul>
+<p><strong>Step C: Apply Demand Surge (Calculate New Prices)</strong></p>
+<blockquote>
+<div><p><strong>Explanation:</strong>
+Now that the costs have changed, you will need to calculate the ‘Market Price’. Unfortunately, the market is crazy today. Sometimes demand is high (prices go up), sometimes low (prices go down). You will create a ‘Demand Multiplier’ and use a function to calculate the new price for every resource.”</p>
+</div></blockquote>
+<p>Student Template:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Simulate the market (Random number between 0.8 and 1.5)</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">demandMultiplier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.8</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.7</span><span class="p">);</span><span class="w"> </span>
+<span class="n">String</span><span class="w"> </span><span class="n">marketCondition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">demandMultiplier</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">1.2</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s">&quot;HIGH DEMAND&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;LOW DEMAND&quot;</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;MARKET STATUS: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">marketCondition</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; (Multiplier: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">demandMultiplier</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;)&quot;</span><span class="p">);</span>
+
+<span class="c1">// Calculate new prices using a Function</span>
+<span class="c1">// A Function takes an object and RETURNS a new value (Double)</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">newPrices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">resources</span><span class="p">.</span><span class="na">stream</span><span class="p">()</span>
+<span class="w">    </span><span class="p">.</span><span class="na">map</span><span class="p">(</span><span class="n">resource</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Formula: (Cost / Efficiency) * Demand</span>
+<span class="w">        </span><span class="c1">// Note: Handle division by zero if efficiency is 0</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">baseValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">resource</span><span class="p">.</span><span class="na">getCostPerUnit</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="n">resource</span><span class="p">.</span><span class="na">getEfficiencyRating</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">resource</span><span class="p">.</span><span class="na">getEfficiencyRating</span><span class="p">());</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">baseValue</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">demandMultiplier</span><span class="p">;</span>
+<span class="w">    </span><span class="p">})</span>
+<span class="w">    </span><span class="p">.</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">toList</span><span class="p">());</span>
+
+<span class="c1">// Update the resources with the new calculated prices</span>
+<span class="c1">// (Sync the list back to the objects)</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">resources</span><span class="p">.</span><span class="na">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">resources</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="na">setCurrentMarketPrice</span><span class="p">(</span><span class="n">newPrices</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Prices updated for all resources.&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Key Concepts:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">stream().map()</span></code>: Transforms every object into a new value (the price).</p></li>
+<li><p><strong>Formula</strong>: They just plug in their math logic here.</p></li>
+<li><p><strong>Syncing</strong>: Remind them that map creates a new list of numbers, so they have to put those numbers back into the objects.</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>Step D: Alert Generation (Predicate + Consumer)</strong></p>
+<blockquote>
+<div><p><strong>Explanation:</strong>
+A trade is considered profitable if the Market Price is low enough compared to the cost.
+You will use a ‘Predicate’ to filter the list for these deals, and a ‘Consumer’ to shout out the alerts!”</p>
+</div></blockquote>
+<p>Student Template:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// 1. Define the Profitability Rule (Predicate)</span>
+<span class="c1">// Returns TRUE if the deal is good (Price is less than 110% of the base cost)</span>
+<span class="n">Predicate</span><span class="o">&lt;</span><span class="n">EnergyResource</span><span class="o">&gt;</span><span class="w"> </span><span class="n">isProfitableTrade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">resource</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Logic: Is the current market price less than 1.1 * the base cost?</span>
+<span class="w">    </span><span class="c1">// (We assume a 10% profit margin is the threshold)</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">resource</span><span class="p">.</span><span class="na">getCurrentMarketPrice</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">resource</span><span class="p">.</span><span class="na">getCostPerUnit</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1.1</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;SCANNING FOR PROFITABLE TRADES...&quot;</span><span class="p">);</span>
+
+<span class="c1">// Filter and Alert</span>
+<span class="n">resources</span><span class="p">.</span><span class="na">stream</span><span class="p">()</span>
+<span class="w">    </span><span class="p">.</span><span class="na">filter</span><span class="p">(</span><span class="n">isProfitableTrade</span><span class="p">)</span><span class="w"> </span><span class="c1">// Keep only the ones that match the Predicate</span>
+<span class="w">    </span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">resource</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span><span class="w">     </span><span class="c1">// Do something for each one (Consumer)</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">profitMargin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">resource</span><span class="p">.</span><span class="na">getCostPerUnit</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">resource</span><span class="p">.</span><span class="na">getCurrentMarketPrice</span><span class="p">();</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;ALERT: Buy &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">resource</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;! &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">                           </span><span class="s">&quot;Market Price: $&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;%.2f&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">resource</span><span class="p">.</span><span class="na">getCurrentMarketPrice</span><span class="p">())</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<span class="w">                           </span><span class="s">&quot; | Potential Profit: $&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;%.2f&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">profitMargin</span><span class="p">));</span>
+<span class="w">    </span><span class="p">});</span>
+
+<span class="c1">// If no alerts, print a message</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">resources</span><span class="p">.</span><span class="na">stream</span><span class="p">().</span><span class="na">noneMatch</span><span class="p">(</span><span class="n">isProfitableTrade</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;💤 No profitable trades found today. Wait for the next cycle.&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Key Concepts:</strong></p>
+<ul class="simple">
+<li><p><strong>filter(predicate)</strong>: The “Gatekeeper”. Only lets items through if the method returns true.</p></li>
+<li><p><strong>forEach(consumer)</strong>: The “Action Taker”. Prints the alert.</p></li>
+<li><p><strong>noneMatch</strong>: A handy helper to check if the list is empty after filtering.</p></li>
+</ul>
+<hr class="docutils" />
+<p>Below is a skeleton that you can use to complete the logic inside the loop.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Main Simulation Loop</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">day</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">day</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">day</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\n========== DAY &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">day</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; ==========&quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Step A: Weather (Already done in previous lesson, just call it)</span>
+<span class="w">    </span><span class="n">applyWeatherFluctuations</span><span class="p">(</span><span class="n">resources</span><span class="p">);</span><span class="w"> </span>
+
+<span class="w">    </span><span class="c1">// Step B: Policy Shocks</span>
+<span class="w">    </span><span class="n">applyPolicyShocks</span><span class="p">(</span><span class="n">resources</span><span class="p">);</span><span class="w"> </span>
+
+<span class="w">    </span><span class="c1">// Step C: Demand Surge</span>
+<span class="w">    </span><span class="n">applyDemandSurge</span><span class="p">(</span><span class="n">resources</span><span class="p">);</span><span class="w"> </span>
+
+<span class="w">    </span><span class="c1">// Step D: Alerts</span>
+<span class="w">    </span><span class="n">generateAlerts</span><span class="p">(</span><span class="n">resources</span><span class="p">);</span><span class="w"> </span>
+
+<span class="w">    </span><span class="c1">// Step E: Dashboard (Optional for now)</span>
+<span class="w">    </span><span class="c1">// generateDashboard(resources); </span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Do not write the whole thing at once.</strong></p>
+<p>Before running the loop, print the initial list.
+Start with Step B - Run the code and see the costs change.
+Add Step C - Show how the prices change based on the multiplier.
+Add Step D - Show the alerts appearing only when the math works out.</p>
+<p><strong>If you get stuck use <em>Print Debugging</em>.</strong></p>
+<ul class="simple">
+<li><p>add <code class="docutils literal notranslate"><span class="pre">System.out.println</span></code> inside the lambdas to see what is happening within each object.</p></li>
+</ul>
+<hr class="docutils" />
+<blockquote>
+<div><p><strong>Computational Thinking Goal:</strong>
+Define the “rules” of a system and let the computer execute the data generation.
+This is what software engineers do when they build a simulation.
+The numbers are random, but the logical relationships are based on real-world facts they researched.
+“Think of this like a video game. When you play SimCity, the game doesn’t connect to the real city hall to get traffic data.
+It uses math to simulate traffic. Your program is the engine that creates the world.”</p>
+</div></blockquote>
+<p><strong>Research the “Rules”, and not the “Numbers”.</strong></p>
+<p>Research the concepts below to determine their ranges and formulas:</p>
+<ul class="simple">
+<li><p>Solar</p>
+<ul>
+<li><p>“How much does solar efficiency drop at night?”</p>
+<ul>
+<li><p><strong>Code Implementation:</strong> <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">(time</span> <span class="pre">==</span> <span class="pre">night)</span> <span class="pre">efficiency</span> <span class="pre">=</span> <span class="pre">0;</span></code></p></li>
+</ul>
+</li>
+<li><p>“What is the best efficiency for solar?”</p></li>
+</ul>
+</li>
+<li><p>Wind turbines</p>
+<ul>
+<li><p>“Do wind turbines work better in storms?”</p>
+<ul>
+<li><p><strong>Code Implementation:</strong> <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">(windSpeed</span> <span class="pre">&gt;</span> <span class="pre">50)</span> <span class="pre">efficiency</span> <span class="pre">=</span> <span class="pre">0;</span> <span class="pre">else</span> <span class="pre">efficiency</span> <span class="pre">=</span> <span class="pre">windSpeed</span> <span class="pre">*</span> <span class="pre">0.02;</span></code></p></li>
+</ul>
+</li>
+<li><p>“What is the best range to determine the best efficiency for wind turbines?”</p></li>
+</ul>
+</li>
+<li><p>Nuclear</p>
+<ul>
+<li><p>“Does nuclear produce more energy than comparable green energy sources?”</p>
+<ul>
+<li><p>“What is a typical cost for a solar panel vs. nuclear?”</p></li>
+<li><p><strong>Code Implementation:</strong> Set <code class="docutils literal notranslate"><span class="pre">baseCost</span></code> for <code class="docutils literal notranslate"><span class="pre">Solar</span></code> to 50 and <code class="docutils literal notranslate"><span class="pre">Nuclear</span></code> to 500.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<ol class="arabic simple" start="3">
+<li><p>The “Data Factory” Method</p></li>
+</ol>
+<p><strong>Example Program:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">EnergyDataFactory</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// Helper to generate random numbers in a range</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">randomInRange</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">min</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">max</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">min</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">max</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">min</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">EnergyResource</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">generateInitialMarket</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">EnergyResource</span><span class="o">&gt;</span><span class="w"> </span><span class="n">market</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">types</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;Solar&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Wind&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Hydro&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Nuclear&quot;</span><span class="p">};</span>
+<span class="w">        </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;SunRay&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Zephyr&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;RiverFlow&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;AtomCore&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Breeze&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Tide&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;GeoThermal&quot;</span><span class="p">};</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">count</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">types</span><span class="o">[</span><span class="p">(</span><span class="kt">int</span><span class="p">)(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">types</span><span class="p">.</span><span class="na">length</span><span class="p">)</span><span class="o">]</span><span class="p">;</span>
+<span class="w">            </span>
+<span class="w">            </span><span class="c1">// Set realistic BASE ranges based on research</span>
+<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">baseCost</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">baseEfficiency</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">            </span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">type</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;Solar&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">baseCost</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">randomInRange</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">60</span><span class="p">);</span>
+<span class="w">                </span><span class="n">baseEfficiency</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">randomInRange</span><span class="p">(</span><span class="mf">0.6</span><span class="p">,</span><span class="w"> </span><span class="mf">0.9</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">type</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;Wind&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">baseCost</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">randomInRange</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">);</span>
+<span class="w">                </span><span class="n">baseEfficiency</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">randomInRange</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.85</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">type</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;Hydro&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">baseCost</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">randomInRange</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="mi">120</span><span class="p">);</span>
+<span class="w">                </span><span class="n">baseEfficiency</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">randomInRange</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span><span class="w"> </span><span class="mf">0.95</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Nuclear</span>
+<span class="w">                </span><span class="n">baseCost</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">randomInRange</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="p">);</span>
+<span class="w">                </span><span class="n">baseEfficiency</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">randomInRange</span><span class="p">(</span><span class="mf">0.9</span><span class="p">,</span><span class="w"> </span><span class="mf">0.98</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="c1">// Create the object</span>
+<span class="w">            </span><span class="n">EnergyResource</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">EnergyResource</span><span class="p">(</span>
+<span class="w">                </span><span class="n">names</span><span class="o">[</span><span class="p">(</span><span class="kt">int</span><span class="p">)(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">names</span><span class="p">.</span><span class="na">length</span><span class="p">)</span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;_&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">,</span>
+<span class="w">                </span><span class="n">type</span><span class="p">,</span>
+<span class="w">                </span><span class="n">baseCost</span><span class="p">,</span>
+<span class="w">                </span><span class="n">baseEfficiency</span><span class="p">,</span>
+<span class="w">                </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">// Initially available</span>
+<span class="w">                </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">randomInRange</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="c1">// Carbon footprint</span>
+<span class="w">            </span><span class="p">);</span>
+<span class="w">            </span>
+<span class="w">            </span><span class="n">market</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">res</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">market</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
 </section>
 
         </article>
@@ -911,6 +1587,14 @@ Merge sort is a popular sorting algorithm that uses a divide-and-conquer approac
 </li>
 <li><a class="reference internal" href="#recursion">10.1 Recursion</a></li>
 <li><a class="reference internal" href="#recursive-searching-and-sorting">10.2 Recursive Searching and Sorting</a></li>
+<li><a class="reference internal" href="#lambda-expressions">10.3 Lambda Expressions</a><ul>
+<li><a class="reference internal" href="#project-1-the-galactic-zoo-manager">Project 1: The “Galactic Zoo” Manager</a></li>
+<li><a class="reference internal" href="#project-2-the-eco-economy-simulator">Project 2: The “Eco-Economy” Simulator</a><ul>
+<li><a class="reference internal" href="#ap-csa-oracle-foundations">AP CSA &amp; Oracle Foundations</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
