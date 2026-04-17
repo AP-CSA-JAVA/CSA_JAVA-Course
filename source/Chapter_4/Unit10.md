@@ -833,7 +833,7 @@ public static void generateAlerts(List<EnergyResource> resources) {
 
 
 **Lambda Project Rubric (10 Points)**
-| Criteria | Excellent (Full Points)| Proficient (Partial) | Needs Improvement |
+| Criteria | Excellent(2) | Proficient(1) | Developing(0) |
 | -------- | ---------------------- | -------------------- | ----------------- |
 | Lambda Syntax | Correct -> usage, method references where appropriate. | Minor syntax errors or overuse of anonymous classes. | Relies on loops or anonymous classes; syntax errors. |
 | Functional Interfaces | Distinct use of Predicate, Function, Consumer. | Confuses roles (e.g., using Consumer for filtering). | Logic embedded directly in loops without abstraction. |
