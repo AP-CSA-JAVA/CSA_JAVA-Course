@@ -617,6 +617,10 @@ AP CSA and Oracle Foundations students.
 
 A [lambda expression in Java](https://www.youtube.com/watch?v=tj5sLSFjVj4) is a short block of code representing an anonymous function. Introduced in Java 8, it allows you to treat functionality as data.
 
+| Old Way (loop) | lambda + stream |
+| -------------- | --------------- |
+| 
+
 **Key Rules:**
 * Must implement a Functional Interface (an interface with exactly one abstract method).
 * The compiler infers types from context.
