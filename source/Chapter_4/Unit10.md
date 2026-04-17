@@ -626,6 +626,22 @@ Below are methods that are defined in the **Java Stream API**:
 * `map()` needs a transformation → you give it a lambda
 * `forEach()` needs an action → you give it a lambda
 
+**How it Works**
+The syntax consists of three main parts:
+* **Parameters:** The input variables
+* **Arrow Token:** The `->` operator
+* **Body:** The code or expression
+
+**Basic Syntax**
+* **Zero parameters:** () -> System.out.println("Hello");
+* **One parameter:** (x) -> x * x;
+* **Multiple parameters:** (x, y) -> x + y;
+
+```java
+List<String> names = Arrays.asList("Zebra", "Apple", "Mango");
+// Using the arrow operator to define the sorting logic
+names.sort((a, b) -> a.compareTo(b)); 
+```
 
 **Key Rules:**
 * Must implement a Functional Interface (an interface with exactly one abstract method).
@@ -639,6 +655,8 @@ Common Functional Interfaces
 | Consumer   | “Do something (no return)”  | `a -> System.out.println(a)`                         |
 | Function   | “Change data into new data” | `a -> a.getName()`                                   |
 | Comparator | “Decide order”              | `(a,b) -> a.getIntelligence() - b.getIntelligence()` |
+
+---
 
 **Concept 1:** Lambdas WITHOUT streams
 
