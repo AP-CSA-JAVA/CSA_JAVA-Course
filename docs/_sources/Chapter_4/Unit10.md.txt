@@ -619,7 +619,7 @@ A [lambda expression in Java](https://www.youtube.com/watch?v=tj5sLSFjVj4) is a 
 
 | Old Way (loop) | lambda + stream |
 | -------------- | --------------- |
-| <img width="855" height="297" alt="Image" src="https://github.com/user-attachments/assets/8b8f1cb4-227a-460f-bccf-529ba9068b7c" /> | <img width="1066" height="206" alt="Image" src="https://github.com/user-attachments/assets/35f19e2c-8a2f-4586-9ebc-3358f0a24f2c" /><img width="1066" height="206" alt="Image" src="https://github.com/user-attachments/assets/35f19e2c-8a2f-4586-9ebc-3358f0a24f2c" /> |
+| <img width="855" height="297" alt="Image" src="https://github.com/user-attachments/assets/8b8f1cb4-227a-460f-bccf-529ba9068b7c" /> | <img width="1066" height="206" alt="Image" src="https://github.com/user-attachments/assets/35f19e2c-8a2f-4586-9ebc-3358f0a24f2c" /> |
 
 
 **Key Rules:**
