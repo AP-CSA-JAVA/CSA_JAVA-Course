@@ -604,7 +604,7 @@ Both examples demonstrate the power of recursion in searching and sorting algori
 
 
 ## 10.3 Lambda Expressions
-AP CSA and Oracle Foundations students.
+*AP CSA and Oracle Foundations*
 
 **Learning Goals**
 * **Foundations:** Lambda syntax, functional interfaces (Predicate, Consumer, Function), and Stream basics.
