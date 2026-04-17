@@ -878,6 +878,24 @@ Merge sort is a popular sorting algorithm that uses a divide-and-conquer approac
 <li><p><code class="docutils literal notranslate"><span class="pre">map()</span></code> needs a transformation → you give it a lambda</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">forEach()</span></code> needs an action → you give it a lambda</p></li>
 </ul>
+<p><strong>How it Works</strong>
+The syntax consists of three main parts:</p>
+<ul class="simple">
+<li><p><strong>Parameters:</strong> The input variables</p></li>
+<li><p><strong>Arrow Token:</strong> The <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code> operator</p></li>
+<li><p><strong>Body:</strong> The code or expression</p></li>
+</ul>
+<p><strong>Basic Syntax</strong></p>
+<ul class="simple">
+<li><p><strong>Zero parameters:</strong> () -&gt; System.out.println(“Hello”);</p></li>
+<li><p><strong>One parameter:</strong> (x) -&gt; x * x;</p></li>
+<li><p><strong>Multiple parameters:</strong> (x, y) -&gt; x + y;</p></li>
+</ul>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="s">&quot;Zebra&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Mango&quot;</span><span class="p">);</span>
+<span class="c1">// Using the arrow operator to define the sorting logic</span>
+<span class="n">names</span><span class="p">.</span><span class="na">sort</span><span class="p">((</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="na">compareTo</span><span class="p">(</span><span class="n">b</span><span class="p">));</span><span class="w"> </span>
+</pre></div>
+</div>
 <p><strong>Key Rules:</strong></p>
 <ul class="simple">
 <li><p>Must implement a Functional Interface (an interface with exactly one abstract method).</p></li>
@@ -913,6 +931,7 @@ Merge sort is a popular sorting algorithm that uses a divide-and-conquer approac
 </tbody>
 </table>
 </div>
+<hr class="docutils" />
 <p><strong>Concept 1:</strong> Lambdas WITHOUT streams</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Predicate</span><span class="o">&lt;</span><span class="n">Alien</span><span class="o">&gt;</span><span class="w"> </span><span class="n">isSafe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="na">getDangerLevel</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">isSafe</span><span class="p">.</span><span class="na">test</span><span class="p">(</span><span class="n">alien</span><span class="p">));</span>
