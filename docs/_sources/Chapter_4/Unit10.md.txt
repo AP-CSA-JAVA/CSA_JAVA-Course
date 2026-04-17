@@ -615,7 +615,7 @@ AP CSA and Oracle Foundations students.
 
 **Part 1: Lambda Fundamentals**
 
-A lambda expression is a short block of code representing an anonymous function. Introduced in Java 8, it allows you to treat functionality as data.
+A [lambda expression in Java](https://www.youtube.com/watch?v=tj5sLSFjVj4) is a short block of code representing an anonymous function. Introduced in Java 8, it allows you to treat functionality as data.
 
 **Key Rules:**
 * Must implement a Functional Interface (an interface with exactly one abstract method).
