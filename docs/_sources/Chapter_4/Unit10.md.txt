@@ -615,11 +615,16 @@ AP CSA and Oracle Foundations students.
 
 **Part 1: Lambda Fundamentals**
 
-A [lambda expression in Java](https://www.youtube.com/watch?v=tj5sLSFjVj4) is a short block of code representing an anonymous function. Introduced in Java 8, it allows you to treat functionality as data.
+A [lambda expression in Java](https://www.youtube.com/watch?v=tj5sLSFjVj4) is a **shortcut for writing a small method without naming it**.  You use it when you need to pass behavior (what to do) into another method.
 
 | Old Way (loop) | lambda + stream |
 | -------------- | --------------- |
 | <img width="855" height="297" alt="Image" src="https://github.com/user-attachments/assets/8b8f1cb4-227a-460f-bccf-529ba9068b7c" /> | <img width="1066" height="206" alt="Image" src="https://github.com/user-attachments/assets/35f19e2c-8a2f-4586-9ebc-3358f0a24f2c" /> |
+
+Below are methods that are defined in the **Java Stream API**:
+* `filter()` needs a rule → you give it a lambda
+* `map()` needs a transformation → you give it a lambda
+* `forEach()` needs an action → you give it a lambda
 
 
 **Key Rules:**
@@ -628,18 +633,44 @@ A [lambda expression in Java](https://www.youtube.com/watch?v=tj5sLSFjVj4) is a 
 * Syntax: (parameters) -> { body }
 
 Common Functional Interfaces
-| Interface | Method Signature | Use Case |
-| --------- | ---------------- | -------- |
-| Predicate<T> | boolean test(T t) | Filtering (True/False checks) |
-| Consumer<T> | void accept(T t) | Side effects (Printing, logging) |
-| Function<T,R> | R apply(T t) | Transforming data (Input → Output) |
-| Comparator<T> | int compare(T a, T b) | Sorting logic |
+| Interface  | Translation                 | Example                                              |
+| ---------- | --------------------------- | ---------------------------------------------------- |
+| Predicate  | “Ask a YES/NO question”     | `a -> a.getDangerLevel() < 3`                        |
+| Consumer   | “Do something (no return)”  | `a -> System.out.println(a)`                         |
+| Function   | “Change data into new data” | `a -> a.getName()`                                   |
+| Comparator | “Decide order”              | `(a,b) -> a.getIntelligence() - b.getIntelligence()` |
 
-> **Critical Concept:** Mutation vs. Immutability
-> Teacher Note: In pure functional programming, we avoid changing data. However, real-world simulations (like our Eco-Economy) often require updating object state (e.g., changing a price).
-The Hybrid Approach: We use Streams to traverse data efficiently, but we intentionally use forEach to mutate object fields. This is a pragmatic pattern used in industry for simulations, even if it breaks "pure" functional rules.
-> Rule of Thumb: Use map() for creating new data. Use forEach() with setters only when you must update existing objects.
-> 
+**Concept 1:** Lambdas WITHOUT streams
+
+```java
+Predicate<Alien> isSafe = a -> a.getDangerLevel() < 3;
+System.out.println(isSafe.test(alien));
+```
+
+**Concept 2:** Lambdas WITH simple collections
+
+```java
+aliens.forEach(a -> System.out.println(a.getName()));
+```
+
+**Concept 3:** Streams
+
+```java
+aliens.stream().filter(...).collect(...)
+```
+
+---
+
+
+> When **NOT** to Use Lambdas:
+>
+> * Logic is long or complex
+> * You need multiple steps or variables
+> * Readability gets worse
+
+
+---
+
 
 ### Project 1 – The "Galactic Zoo" Manager
 
@@ -658,11 +689,61 @@ The Hybrid Approach: We use Streams to traverse data efficiently, but we intenti
 * **The "Wing" Transformation (Function):** Map to "Can Fly" or "Grounded".
 * **Commander's Summary (reduce):** Calculate total Threat Score (Sum of danger * intelligence).
 
+**Visual Model**
+
+```
+List → Stream → Filter → Map → Result
+
+Aliens
+  ↓
+.filter(a -> safe)
+  ↓
+.map(a -> name)
+  ↓
+.collect()
+```
+
+---
+
+
+**Step 1:**
+
+```java
+aliens.stream()
+      .filter(a -> ???) // What rule do you want to apply here?
+      .forEach(a -> System.out.println(a));
+```
+
+<details><summarize>filter()</summarize>
+
+```java
+a -> a.getDangerLevel() < 3
+```
+
+</details>
+
+---
+
+**Step 2:**
+
+Write full filter + forEach
+
+**Step 3:**
+
+Build full features 
+
+> **Level Up Concept:** Mutation vs. Immutability
+> Teacher Note: In pure functional programming, we avoid changing data. However, real-world simulations (like our Eco-Economy) often require updating object state (e.g., changing a price).  The 'Hybrid' Approach: We use `streams` to traverse data efficiently, but we intentionally use `forEach` to mutate object fields. This is a pragmatic pattern used in industry for simulations, even if it breaks 'pure' functional rules.
+> **Rule of Thumb:** Use `map()` for creating new data. Use `forEach()` with setters only when you must update existing objects.
+
+
+---
+
 
 ### Project 2 – The "Eco-Economy" Simulator
 
 **Theme:** Managing a dynamic renewable energy market.
-**Goal:** Simulate market fluctuations (Weather, Policy, Demand) and trigger alerts.
+**Goal:** Simulate market fluctuations (Weather, Policy, Demand) and trigger alerts.  This project is about applying lambdas inside a larger system.
 
 **Setup: The Data Factory**
 
@@ -819,7 +900,7 @@ public static void generateAlerts(List<EnergyResource> resources) {
         .count(); // Count triggers the stream
 
     if (count == 0) {
-        System.out.println("💤 No profitable trades found today. Wait for the next cycle.");
+        System.out.println("No profitable trades found today. Wait for the next cycle.");
     }
 }
 ```
@@ -845,6 +926,7 @@ public static void generateAlerts(List<EnergyResource> resources) {
 | Stream Operations | Logical chain: filter → map → collect/reduce. | Misses a step or chains incorrectly. | Uses streams only for forEach; procedural logic. |
 | Logic & Accuracy | Business logic (math, sorting) is accurate. | Logic mostly correct but fails edge cases. | Results do not match requirements. | 
 | Code Quality | Clean, commented, meaningful variable names. | Readable but lacks comments. | Messy, hard to read, no comments. |
+| Conceptual Understanding | Can clearly explain what a lambda does and why it is used | Is able to explain general lambda functionality | Misuses concepts or misstates functionality |
 
 **Bonus Challenge (Extra Credit)**
 * **Method References:** Replace `x -> System.out.println(x)` with `System.out::println`.
