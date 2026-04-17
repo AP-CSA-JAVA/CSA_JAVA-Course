@@ -633,15 +633,24 @@ The syntax consists of three main parts:
 * **Body:** The code or expression
 
 **Basic Syntax**
-* **Zero parameters:** () -> System.out.println("Hello");
+* **Zero parameters:** ( ) -> System.out.println("Hello"); //parentheses with no method are intentional
 * **One parameter:** (x) -> x * x;
 * **Multiple parameters:** (x, y) -> x + y;
 
 ```java
+// using a list
 List<String> names = Arrays.asList("Zebra", "Apple", "Mango");
 // Using the arrow operator to define the sorting logic
 names.sort((a, b) -> a.compareTo(b)); 
+
+// using switch case
+int days = switch (month) {
+    case "FEBRUARY" -> 28;
+    case "APRIL", "JUNE" -> 30;
+    default -> 31;
+};
 ```
+
 
 **Key Rules:**
 * Must implement a Functional Interface (an interface with exactly one abstract method).
