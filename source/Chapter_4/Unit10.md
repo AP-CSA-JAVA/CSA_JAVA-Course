@@ -633,7 +633,7 @@ The syntax consists of three main parts:
 * **Body:** The code or expression
 
 **Basic Syntax**
-* **Zero parameters:** ( ) -> System.out.println("Hello"); //parentheses with no method are intentional
+* **Zero parameters:** ( ) -> System.out.println("Hello"); //parentheses with no method was intentional
 * **One parameter:** (x) -> x * x;
 * **Multiple parameters:** (x, y) -> x + y;
 
