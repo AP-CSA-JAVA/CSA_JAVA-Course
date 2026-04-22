@@ -253,9 +253,7 @@ public static void Main()
 * Sorting (Merge Sort)
 * File systems and organization charts
 
-
 ---
-
 
 ***Example:*** **Factorial**
 
@@ -315,6 +313,85 @@ Now the program builds the answer back up:
 * factorial(3) = 3 × 2 = 6
 * factorial(4) = 4 × 6 = 24
 * factorial(5) = 5 × 24 = 120
+
+---
+
+
+**Progam Example Version 1: Recursion**
+
+```java
+// Interface defining the behavior
+interface DigitSummer {
+    int sumDigits(int n);
+}
+// Recursive implementation
+class RecursiveDigitSummer implements DigitSummer {
+    public int sumDigits(int n) {
+        // Base case: if number is a single digit
+        if (n < 10) {
+            return n;
+        }
+        // Recursive case:
+        // Add last digit to result of smaller problem
+        return (n % 10) + sumDigits(n / 10);
+    }
+}
+// Main class
+public class RecursionExample {
+    public static void main(String[] args) {
+        RecursiveDigitSummer summer = new RecursiveDigitSummer();
+        int result = summer.sumDigits(1234);
+        System.out.println("Recursive Result: " + result);
+    }
+}
+```
+
+
+---
+
+
+**Program Example Version 2: Iterative (NO Interface)**
+
+```java
+public class IterationExample {
+
+    // Method to sum digits using a loop
+    public static int sumDigits(int n) {
+        int sum = 0;
+        // Loop until n becomes 0
+        while (n > 0) {
+            // Add last digit
+            sum += n % 10;
+            // Remove last digit
+            n = n / 10;
+        }
+        return sum;
+    }
+    public static void main(String[] args) {
+        int result = sumDigits(1234);
+        System.out.println("Iterative Result: " + result);
+    }
+}
+```
+
+---
+
+***The key comparison:***
+
+* Recursive:
+
+  ```java
+  return (n % 10) + sumDigits(n / 10);
+  ```
+* Iterative:
+
+  ```java
+  sum += n % 10;
+  n = n / 10;
+  ```
+
+> [!NOTE]
+> Same exact logic. Different control structure.
 
 
 ---
