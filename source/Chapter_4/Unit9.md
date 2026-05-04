@@ -269,7 +269,7 @@ Here are examples that illustrates each of these variations:
 Single inheritance is a type of inheritance where a class extends only one superclass. In this example, we'll create a base class called Animal and a derived class called Dog, which inherits from Animal.
 
 
-<center> <img width="613" height="393" alt="Image" src="https://github.com/user-attachments/assets/c833d173-bc35-48d9-afc8-cd00c24d0ac4" /> </center>
+<center><img width="613" height="393" alt="Image" src="https://github.com/user-attachments/assets/c833d173-bc35-48d9-afc8-cd00c24d0ac4" /></center>
 
 ```java
 // Single Inheritance
@@ -297,6 +297,9 @@ public class Main {
 **Multiple Inheritance (through interfaces):**
 
 In Java, **interfaces** provide a way to achieve multiple inheritance of behavior without the problems caused by inheriting from multiple classes. Java does not allow a class to extend more than one superclass because of the *diamond problem*, where two parent classes might define the same method and create ambiguity. Instead, interfaces act as **contracts** that specify what methods a class must implement, without providing the full implementation. This allows a class to adopt multiple abilities safely. In this example, the interfaces `Swim` and `Fly` define behaviors, and the `Bird` class implements both, meaning it agrees to provide implementations for `swim()` and `fly()`. This demonstrates how a single class can take on multiple roles—something that would not be possible using class inheritance alone—while avoiding conflicts and maintaining clear, organized code.
+
+
+<center><img width="670" height="410" alt="Image" src="https://github.com/user-attachments/assets/8bb18a80-6219-4456-9993-1cd8296cce0b" /></center>
 
 
 ```java
@@ -333,6 +336,11 @@ public class Main {
 
 In multilevel inheritance, a class extends another class, and that class further extends another class. In this example, we'll create a base class Vehicle, a derived class Car that inherits from Vehicle, and another class Sedan that inherits from Car.
 
+
+<center><img width="662" height="393" alt="Image" src="https://github.com/user-attachments/assets/fc7386ec-a36d-4b31-a211-7476329f00cb" /></center>
+
+
+
 ```java
 // Multilevel Inheritance
 class Vehicle {
@@ -368,6 +376,10 @@ public class Main {
 **Hierarchical Inheritance:**
 
 Hierarchical inheritance is a type of inheritance where multiple classes inherit from a single base class. In this example, we'll create a base class Shape and two derived classes Circle and Square, which both inherit from Shape.
+
+
+<center><img width="612" height="406" alt="Image" src="https://github.com/user-attachments/assets/560510bd-f018-4e57-a6a9-633eaf11f03c" /></center>
+
 
 ```java
 // Hierarchical Inheritance
