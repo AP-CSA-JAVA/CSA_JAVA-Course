@@ -522,7 +522,7 @@
 <p>Here are examples that illustrates each of these variations:</p>
 <p><strong>Single Inheritance:</strong></p>
 <p>Single inheritance is a type of inheritance where a class extends only one superclass. In this example, we’ll create a base class called Animal and a derived class called Dog, which inherits from Animal.</p>
-<center> <img width="613" height="393" alt="Image" src="https://github.com/user-attachments/assets/c833d173-bc35-48d9-afc8-cd00c24d0ac4" /> </center>
+<center><img width="613" height="393" alt="Image" src="https://github.com/user-attachments/assets/c833d173-bc35-48d9-afc8-cd00c24d0ac4" /></center>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Single Inheritance</span>
 <span class="kd">class</span> <span class="nc">Animal</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">sound</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -547,6 +547,7 @@
 </div>
 <p><strong>Multiple Inheritance (through interfaces):</strong></p>
 <p>In Java, <strong>interfaces</strong> provide a way to achieve multiple inheritance of behavior without the problems caused by inheriting from multiple classes. Java does not allow a class to extend more than one superclass because of the <em>diamond problem</em>, where two parent classes might define the same method and create ambiguity. Instead, interfaces act as <strong>contracts</strong> that specify what methods a class must implement, without providing the full implementation. This allows a class to adopt multiple abilities safely. In this example, the interfaces <code class="docutils literal notranslate"><span class="pre">Swim</span></code> and <code class="docutils literal notranslate"><span class="pre">Fly</span></code> define behaviors, and the <code class="docutils literal notranslate"><span class="pre">Bird</span></code> class implements both, meaning it agrees to provide implementations for <code class="docutils literal notranslate"><span class="pre">swim()</span></code> and <code class="docutils literal notranslate"><span class="pre">fly()</span></code>. This demonstrates how a single class can take on multiple roles—something that would not be possible using class inheritance alone—while avoiding conflicts and maintaining clear, organized code.</p>
+<center><img width="670" height="410" alt="Image" src="https://github.com/user-attachments/assets/8bb18a80-6219-4456-9993-1cd8296cce0b" /></center>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Multiple Inheritance (through interfaces)</span>
 <span class="kd">interface</span> <span class="nc">Swim</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">swim</span><span class="p">();</span>
@@ -578,6 +579,7 @@
 </div>
 <p><strong>Multilevel Inheritance:</strong></p>
 <p>In multilevel inheritance, a class extends another class, and that class further extends another class. In this example, we’ll create a base class Vehicle, a derived class Car that inherits from Vehicle, and another class Sedan that inherits from Car.</p>
+<center><img width="662" height="393" alt="Image" src="https://github.com/user-attachments/assets/fc7386ec-a36d-4b31-a211-7476329f00cb" /></center>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Multilevel Inheritance</span>
 <span class="kd">class</span> <span class="nc">Vehicle</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">drive</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -611,6 +613,7 @@
 </div>
 <p><strong>Hierarchical Inheritance:</strong></p>
 <p>Hierarchical inheritance is a type of inheritance where multiple classes inherit from a single base class. In this example, we’ll create a base class Shape and two derived classes Circle and Square, which both inherit from Shape.</p>
+<center><img width="612" height="406" alt="Image" src="https://github.com/user-attachments/assets/560510bd-f018-4e57-a6a9-633eaf11f03c" /></center>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Hierarchical Inheritance</span>
 <span class="kd">class</span> <span class="nc">Shape</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
