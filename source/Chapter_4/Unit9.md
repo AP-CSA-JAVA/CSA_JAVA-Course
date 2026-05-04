@@ -268,6 +268,9 @@ Here are examples that illustrates each of these variations:
 
 Single inheritance is a type of inheritance where a class extends only one superclass. In this example, we'll create a base class called Animal and a derived class called Dog, which inherits from Animal.
 
+
+<center> <img width="613" height="393" alt="Image" src="https://github.com/user-attachments/assets/c833d173-bc35-48d9-afc8-cd00c24d0ac4" /> </center>
+
 ```java
 // Single Inheritance
 class Animal {
