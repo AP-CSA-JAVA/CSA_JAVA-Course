@@ -142,25 +142,28 @@ When you declare a variable, you must state the variable type along with the var
 
 Once you have declared the variable type, you **do not need to do it again** to reassign a value to the variable. If you declare a variable as `final` you cannot change the value of it. `final` variables are written as ALL CAPS.
 
-### Assignment 1.2.1 — Allowance
-
-Write a program that will determine who receives an allowance or not. Use the information below as a guide:
-- [ ] Allowance is always $30.00/week
-- [ ] Non-teenagers do not receive an allowance
-- [ ] Jon is 16 years old; Ed is 12 years old; Michael was born four years before Jon
-- [ ] Print out who receives an allowance and who does not using `int`, `double`, and `boolean` variables.
-
+>
+> ### Assignment 1.2.1 — Allowance
+>
+> Write a program that will determine who receives an allowance or not. Use the information below as a guide:
+> - [ ] Allowance is always $30.00/week
+> - [ ] Non-teenagers do not receive an allowance
+> - [ ] Jon is 16 years old; Ed is 12 years old; Michael was born four years before Jon
+> - [ ] Print out who receives an allowance and who does not using `int`, `double`, and `boolean` variables.
+> - [ ] Submit your program as a `.java` file and include test cases that your program worked as intended
+> 
 ---
 
-### Assignment 1.2.2 — Scanner Class
-
-The Scanner class is a package that provides primitive input within Java programs. It can be found in the [java.util Package](https://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html).
-
-- [ ] To create an object of the Scanner class, we must pass `System.in` as the defined object.
-- [ ] To read the data type we need to use the function `next<DataType>()`. For example, to read an `int` use `nextInt()`.
-- [ ] To read strings, use `nextLine()`.
-
-**Assignment:** Create four questions that will ask the user for a `String`, `int`, `double`, and a `boolean`.
+> ### Assignment 1.2.2 — Scanner Class
+> 
+> The Scanner class is a package that provides primitive input within Java programs. It can be found in the [java.util Package](https://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html).
+> 
+> - [ ] To create an object of the Scanner class, we must pass `System.in` as the defined object.
+> - [ ] To read the data type we need to use the function `next<DataType>()`. For example, to read an `int` use `nextInt()`.
+> - [ ] To read strings, use `nextLine()`.
+> - [ ] Create four questions that will ask the user for a `String`, `int`, `double`, and a `boolean`.
+> - [ ] Submit your program as a `.java` file and include test cases that your program worked as intended
+> 
 
 ---
 
