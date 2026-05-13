@@ -563,7 +563,114 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 
 ### Activity 1.11.1 — Roller Coaster Simulator
 
-Use `Math.random()` and `Math.round()` to simulate the experience of riding a roller coaster, generating random values for speed, height, and rating.
+**Project Overview:**
+
+Students will write a program that helps a theme park design safe roller coasters based on physics-related math. Use `Math.random()` and `Math.round()` to simulate the experience of riding a roller coaster, generating random values for speed, height, and rating.  The user (acting as an engineer) inputs the parameters of a coaster hill, and the program will:
+
+* Calculate speed at the bottom of the hill
+* Estimate time to fall using height
+* Warn if g-forces exceed safety limits
+* Round values for display
+
+
+**Concepts Covered:**
+
+* `Math` class: `Math.pow`, `Math.sqrt`, `Math.abs`, `Math.max`, `Math.min`
+* `Scanner` for input
+* Decision-making and problem-solving
+* Realistic application of physics/math concepts
+
+
+**Key Functionalities:**
+
+<img width="422" height="490" alt="Image" src="https://github.com/user-attachments/assets/5e02c085-c41f-4ab5-a17b-63a53ce3ce0f" />
+
+
+---
+
+**Example Output**
+
+```java
+Welcome to the Roller Coaster Simulator
+Enter hill height (in meters): 50
+Enter slope angle (in degrees): 40
+Enter track length (in meters): 100
+
+--- Results ---
+Estimated Speed at Bottom: 31.30 m/s
+Time to Fall: 3.19 seconds
+Estimated G-force in curve: 10.0 Gs TOO DANGEROUS!
+
+Recommendation: Reduce hill height or increase curve radius.
+
+--- Rounded Data ---
+Speed Rounded Up: 32.0 m/s
+Time Rounded Down: 3.0 sec
+```
+
+---
+
+
+```java
+public class RollerCoasterSimulator {
+    private static final double GRAVITY = 9.8; // m/s^2 // DO NOT CHANGE
+
+	// Attributes (height, speen, time, gForce, angle, trackLength)
+
+
+    // Constructor
+
+
+    // Perform all calculations
+
+
+    // Return calculated results to main
+
+
+    // Helper method for safety
+
+}
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+
+		// Use Scanner to get inputs for Speed, time and GForce
+
+
+        // Get user inputs
+
+
+        // Create an instance of RollerCoasterSimulator
+        
+
+        // Get and display results
+        double speed = sim.getSpeed();
+        double time = sim.getTime();
+        double gForce = sim.getGForce();
+
+
+        if (!sim.isSafe()) {
+            // if speed Gforce is too excessive print "TOO DANGEROUS!"
+			// Recommend that the user make changes to height or curve
+			// else print "Safe for riders!"
+
+
+
+		System.out.println("\n--- Rounded Data ---");
+		// Round speed up
+		// Round time down 
+
+        input.close();
+    }
+}
+```
+Submit your java program code and your test cases that demonstrates your program works as intended.
+
+
 
 ### Activity 1.11.2 — Race Car
 
