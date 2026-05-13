@@ -69,22 +69,24 @@ public static void main(String args[])
 
 > **NOTE:** `public` is an access specifier.
 
-### Assignment 1.1.1 — My Timeline
 
-Create a personal timeline of at least seven meaningful events in your life using the `print` and `println` methods. The timeline will proceed vertically — earlier events near the top, later events near the bottom. Make it look professional. HINT: use `\t`
-
-```
-Year                 Age                    Description
-1971              0 years old               Born in Long Beach
-1976              5 years old               Started kindergarten
-1989             17 years old               Graduated high school
-1995             24 years old               Graduated college Long Beach State
-1998             27 years old               Got Married
-1998             27 years old               Began teaching career
-2021             50 years old               First year at CAMS
-```
-
-Include seven meaningful events. No repetitive events such as "started kindergarten, started first grade, etc."
+> ### Assignment 1.1.1 — My Timeline
+>
+> Create a personal timeline of at least seven meaningful events in your life using the `print` and `println` methods. The timeline will proceed vertically — earlier events near the top, later events near the bottom. Make it look professional. HINT: use `\t`
+>
+> ```
+> Year                 Age                    Description
+> 1971              0 years old               Born in Long Beach
+> 1976              5 years old               Started kindergarten
+> 1989             17 years old               Graduated high school
+> 1995             24 years old               Graduated college Long Beach State
+> 1998             27 years old               Got Married
+> 1998             27 years old               Began teaching career
+> 2021             50 years old               First year at CAMS
+> ```
+>
+> Include seven meaningful events. No repetitive events such as "started kindergarten, started first grade, etc."
+> 
 
 ---
 
