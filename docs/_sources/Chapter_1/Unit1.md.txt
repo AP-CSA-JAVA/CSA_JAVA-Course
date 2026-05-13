@@ -1,275 +1,78 @@
-# Unit 1 - Primitive Types
- 
-## 1.1 Why Programming Why Java
+# Unit 1 — Using Objects and Methods
+*AP Exam Weighting: 15–25% | Suggested Pacing: ~32–34 Class Periods*
+
+<details>
+<summary>📋 Unit 1 Standards Alignment</summary>
+
+| Standard | Description |
+| -------- | ----------- |
+| ICT 1.0 | Academics — apply academic standards across content areas |
+| ICT 2.0 | Communications — communicate clearly in written and electronic formats |
+| ICT 4.0 | Technology — use electronic tools and reference materials |
+| ICT 5.4 | Interpret information and draw conclusions to make informed decisions |
+| ICT 5.8 | Create and use algorithms to solve problems |
+| ICT 5.9 | Deconstruct large problems into smaller components |
+| ICT 5.10 | Use multiple layers of abstraction |
+| ICT 5.11 | Understand base systems including binary and hexadecimal |
+| ICT 7.5 | Apply high-quality techniques to product design and development |
+| ICT 10.1 | Interpret and explain ICT-specific terminology |
+| C4.4 | Identify and apply data types and encoding |
+| C4.5 | Demonstrate awareness of the OOP paradigm |
+| C4.6 | Use proper programming language syntax |
+| C4.7 | Use various data structures including objects |
+| C4.8 | Use OOP concepts: properties, methods, and inheritance |
+| C4.9 | Create programs using control structures, procedures, and variables |
+| C4.11 | Document development work using comments |
+| CRP 1 | Apply appropriate technical skills and academic knowledge |
+| CRP 2 | Communicate clearly, effectively, and with reason |
+| CRP 4 | Apply technology to enhance productivity |
+| CRP 5 | Utilize critical thinking to make sense of problems |
+| CRP 7 | Act as a responsible and contributing citizen and employee |
+
+</details>
+
+---
+
+## 1.1 Introduction to Algorithms, Programming, and Compilers
+
+<details>
+<summary>📌 Standards — 1.1</summary>
+
+| Standard | Description |
+| -------- | ----------- |
+| ICT 1.0 | Academics — apply academic standards |
+| ICT 5.8 | Create and use algorithms and solve problems |
+| ICT 10.1 | Interpret and explain ICT-specific terminology |
+| C4.6 | Use proper programming language syntax |
+| CRP 1 | Apply appropriate technical skills and academic knowledge |
+
+</details>
 
 - [ ] Learn about the Java™ programming language and create your first Java program.
-	- [ ] 	I will be able to write a basic java program
+	- [ ] I will be able to write a basic java program
 - [ ] Learn some basic rules of Java programming by identifying and correcting errors in code.
-	- [ ]   I will be able to indentify basic syntax of a java program
+	- [ ] I will be able to identify basic syntax of a java program
 - [ ] Generate outputs to a console by calling System class methods.
 - [ ] Understand the difference between the `print()` method and the `println()` method.
 
-
-Java is an Object Oriented Program.  Within every Java program begins with the creation of a class.  Consider a class as a blueprint for your program.  In this instance, we created a class called *MyFirstClass*.  Within the class there is a main method that is required to execute the program.  Below is a simple program that will print "Hello, World".
+Java is an Object Oriented Program. Within every Java program begins with the creation of a class. Consider a class as a blueprint for your program. In this instance, we created a class called *MyFirstClass*. Within the class there is a main method that is required to execute the program. Below is a simple program that will print "Hello, World".
 
 ![first_Java](https://user-images.githubusercontent.com/12989939/162324090-a9292f5d-3c02-46d8-bb05-e69cb0f72845.PNG)
 
-Notice that with every  { ,  there is a corresponding  } .  You may hear me refer to it as a curly brace.  A missing a curly brace is one of the most common errors among new programmers.  The name 'public' allows users to be able to see the specific parts of your program.  Notice also that the name of the class starts with a **capital letter**.  The main class will always start with a capital letter.
+Notice that with every `{` there is a corresponding `}`. You may hear me refer to it as a curly brace. A missing curly brace is one of the most common errors among new programmers. The name `public` allows users to be able to see the specific parts of your program. Notice also that the name of the class starts with a **capital letter**. The main class will always start with a capital letter.
 
-In Java there is a "main method" that is required for all java programs.  The code will always be the same.  It looks like:
+In Java there is a "main method" that is required for all java programs. The code will always be the same:
 
 ```java
 public static void main(String args[])
 ```
 
-**`public`** is an access specifier.  As you may infer, public is public and everyone will have access to it.
+**`public`** is an access specifier.
 
-**`static`** is a keyword in java.  A `static` method belongs to the class and not to the object (We will learn more about this later!). A `static` method can **only** access static data. It is a method which belongs to the class and not to the instaniation of the object.  There are differences between `static` nested class and `non-static` nested class.
+### Assignment 1.1.1 — My Timeline
 
-|   | Static method | Non-static method |
-| ----- | ----- | ----- |
-| Definition | A static method is a method that belongs to a class, but it does not belong to an instance of that class and this method can be called without the instance or object of that class. | Every method in Java defaults to a non-static method without a static keyword preceding it. non-static methods can access any static method and static variable also, without using the object of the class. |
-| Accessing members and methods | In the static method, the method can only access only static data members and static methods of another class or the same class but cannot access non-static methods and variables. | In the non-static method, the method can access static data members and static methods as well as non-static members and methods of another class or the same class. | 
-| Binding process | The static method uses compile-time or early binding. | The non-static method uses runtime or dynamic binding. |
-| Overriding | The static method cannot be overridden because of early binding.	| The non-static method can be overridden because of runtime binding. |
-| Memory allocation| In the static method, less memory is used for execution because memory allocation happens only once because the static keyword fixed a particular memory for that method in ram. | In the non-static method, much memory is used for execution because here memory allocation happens when the method is invoked and the memory is allocated every time when the method is called. |
+Create a personal timeline of at least seven meaningful events in your life using the `print` and `println` methods. The timeline will proceed vertically — earlier events near the top, later events near the bottom. Make it look professional. HINT: use `\t`
 
-
-
-
-**`void`** is also a keyword.  It is a 'return type'.  What does `void` return? Nothing!  It is used to specify that a method **does not** return anything. If the main method is not void, it will return an error.
-
-**`main`** is the name of the Java main method.  It identifies the starting point of a Java program.  If we change the name while initiating the main method, it will return an error.
-
-**`String[] args`** It is an array of string type.  It stores Java command-line arguments and is an array of type `java.lang.String` class.  The name of the String array is `args`.  It is not fixed and the user can use any name in place of it (It is not recommended as some IDEs will require args in the main method.).
-
-
-Notice that within the main method there is a print statement.  Let's break down this print statement. 
-<p align="center"><b> System.out.println("Hello, World");</b></p>
-
-- [ ] <b>System</b> is a class defined in the java lang package.</br>
-- [ ] <b>out</b> is a public static field of the PrintStream type.</br>
-- [ ] <b>println()</b> is invoked by the PrintStream class.</br>
-- [ ] <b>NOTE</b> <i>println()</i> when executed will return to the next line. Whereas <i>print()</i> will execute the string literal but not return to the next line. You can also create a new line inside a print statement by adding   <b>\n</b>  anywhere inside the quotation marks of a print statement.
-
-
--------------------------------------------------------------------------------------------------------------------
-
-
-Take a look at the diagram below:
-
-![ClassSuperSub](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/assets/12989939/5b1567d7-c25b-44cd-95b7-f6d02d61c277)
-
-
-What observations can you make about the diagram?
-
-A powerful tool that you can use in OOP is the concept of `inheritance`.  `Inheritance` is the concept where a Java Class can inherit properties from another class.  You can think of this as a child inheritiing characteristics of a parent.  Java refers to this as **extending** a class.  The Class that is being extended or "inherited" is called a **superclass**.  The class that extends or "inherits" is referred to as a **subclass**.  We will explore this in more detail in Chapter 4.
-
-
-<p align="center">---------------------------------------------------------------------------- </p>
-
-## 2.1 Instances of Classes
-
-- [ ] Explain the relationship between a class and an object
-	- [ ] I will be able to create a poster demonstrating classes and objects
-
-
-As stated earlier, a *class* is a blueprint of an object.  So we can also say that an *object* is an instance of a class.  What we define as a class determines what objects that will be associated with the class and how things will operate within it.  For example, we can define `human` as a class.  We can assign attributes to that class like a nose, ears, eyes, hands, feet, etc.  **NOTE:** Attribute and state are interchangable terms.
-
-We can also create a *method* that will call the attributes within a class.  For example, we can create a method called running or sleeping.  Now each of these methods will use an attribute or attributes of its class to perform something within the `human` class.  If we create an instance of the `human` class, let say Object John , then John will have all the attributes (nose , ears, eyes, hands, legs) unique to it and will also have access to these methods to carry out basic functions. **NOTE:** Method and behavior are interchangable terms.
-
-The value of the attributes define the state of the object. What makes this efficient is that the class does not hold any space in the memory because we just create a definition.  The moment we *instantiate* the class the object will require a dedicated space in memory.  Thus we can say that a Class defines how the object should look and object is the actual representation of the same.
-
- -------------------------------------------------------------------------------------------
-**Mr Potato Head Activity:**
-
-Supplies will be provide for you to complete this activity.
-
-    Split into pairs.
-    Each pair will create:
-        a potato head character.
-        a list describing what it is, what characteristics it has, and what it can do(actions).
-			write PROPERTIES/ characteristics 
-			write METHODS/ actions
-    What are the object oriented concepts to your Mr. Potato Head?
-        Class:
-        Object:
-        Properties:
-        Methods:
-    Visually demonstrate the properties of inheritance by creating a subclass(es) of your Superclass.  
-    Include the Characteristics and actions of the subclass(es).
-
- -------------------------------------------------------------------------------------------
-
-
-
-**Example:**
-```java
-class Bicycle {
-
-    // attribute or state
-    int gear = 1;
-    String color = white;
-    
-    // behavior or method
-    public void pedaling() {
-        System.out.println("Pedaling to accelerate!");
-    }
-} 
-```
-**Sample Output**
-```java
-My bicycle has 1 gear and is painted white!
-Pedaling to accelerate!
-```
-
-<details><summary>Sample Solution</summary>
-
-```java
-
-class Main {
-  public static void main(String[] args) {
-    Bicycle myBicycle = new Bicycle();  // Creation of a constructor
-					// We will learn more about this later
-    
-    myBicycle.pedaling(); //Calling Method
-  }
-}
-
-public class Bicycle { //Instaniation of the constructor created in the Main Class
-    private int gear;
-    private String color;
-
-    // Constructor to initialize gear and color
-    public Bicycle() {
-        gear = 1;
-        color = "white";
-    }
-
-    // Method to pedal the bicycle
-    public void pedaling() {
-        System.out.println("My bicycle has " + gear + " gear and is painted " + color + "!");
-        System.out.println("Pedaling to accelerate!");
-    }
-}
-
-```
-</details>
-
-
-
-------------------------------------------------------------------------------------------------------------
-
-**Things to Remember**
-Object-oriented Programming Facts:
-- [ ] Properties are the characteristics of your objects
-- [ ] Object-Oriented programming focuses on the data represented in the problem
-- [ ] Object-Oriented programs remove details from many programs, making the code rewrite less frequent.
-- [ ] Methods are the actions that your object can take.
-- [ ] A class is like a blueprint or a recipe.
-- [ ] A class is used to create an instance of a class, called an object
-
-<p align="center">---------------------------------------------------------------------------- </p>
-
-
-## 5.3 Documentation with Comments
-
-
-- [ ] Understand how to properly comment code.
-- [ ] Implement precondition and postcondition commenting to summarize methods.
-- [ ] Use single-line comments to make code more readable and understand what tasks it performs.
-	- [ ] I will practice industry standard commenting standards in my programs.
-
-Typing comments within your program is considered a professional practice, and I expect you to comment your code as appropriate throughtout the year.  When other people read your program, they may not understand the purpose of the variables and/ or methods in
-your program.  That's why it's important to document your code with comments. A comment is a piece of text that the
-computer will not recognize as code and will not execute. It's only there for the other programmers to read. While you can write whatever
-you want inside a comment, you should stick to explaining what your code does to document it properly.
-
-There are three ways in Java to create a comment:
-
-// Using these two slashes will create a single-line comment.
-
-/* Using the slash and an asterisk will create a multi-line comment for longer explanations.</br> Be sure to close it with an asterisk, then a slash. */
-
-/** Using the slash and two asterisks will create a Java API documentation comment. </br>In these comments, you can use tags to specify the parameters of a method and </br>the return values of the method. These comments aren't as important for the AP CSA curriculum. **/
-
-@param -- explanation of parameter</br>
-@return -- explanation of what the method returns
-
-Example of appropriate comments with a program:
-
-With **every** program that you submit, I want you to list the following: 
-- your name/ partners name (if applicable) 
-- the date of submission 
-- Period 
-- and the assignment  
- 
-Please follow the convention shown below.</br>
-
-**Main() Block method**
-
-At the top of the file containing your program's main() block method, place an `external' block comment containing the following content.
-
-```
-/*=============================================================================
- |   Assignment:  Program #[n]:  [Assignment Title]
- |       Author:  [Your Name ]
- |      Partner:  [Partner's Name ]
- |
- |  Course Name:  [Course Name]
- |   Instructor:  John Smith
- |     Due Date:  [Due Date and Time]
- |
- |  Description:  [Describe the program's goal, IN DETAIL.]
- |
- |     Language:  [ Java version 8]
- | Ex. Packages:  [List names and sources of all external packages
- |                required by this program.]
- |                
- | Deficiencies:  [If you know of any problems with the code, provide
- |                details here, otherwise clearly state that you know
- |                of no unsatisfied requirements and no logic errors.]
- *===========================================================================*/
-```
-
-### Practice 1.1.1
-
- ![76b4e00f998549e6a8717c6e5d5f0f1a](https://user-images.githubusercontent.com/12989939/162492248-21683f86-fc3f-4756-b78f-ddfe9373ab60.png)</br>
-Create the happy face image above using the following criteria:
-
-- [ ] Create a class
-- [ ] Create a main method
-- [ ] Use System.out.print at least two lines
-- [ ] Use System.out.println at least three times
-
-<details><summary> Sample Solution </summary>
-
-```java
-public class Main
-{
-  public static void main(String[] args)
-  {
-  	System.out.println("----------");
-  	System.out.print("--0----0--\n");
-  	System.out.println("----__----");
-  	System.out.print("-(______)-\n");
-  	System.out.println("----------");
-
-  }
-}
-```
-
-</details>
-
-### Assignment 1.1.2
-
-**Personal Timeline**
-For this assignment, you will create a program that outputs a personal timeline of events in your life. The timeline will proceed vertically. Earlier events will be displayed nearer the top of the timeline while later events are displayed near the bottom.
-
-Include seven meaningful events in your life. No repetitive events such as "started kindergarten, started first grade, etc".
-
-Make it look professional. HINT: use \t</br>
-More examples of Escape Sequences can be found [here](https://ap-csa-java.github.io/CSA_JAVA-Course/Chapter_1/Unit2.html#string-objects-concatenation-literals-and-other-things).
 ```
 Year                 Age                    Description
 1971              0 years old               Born in Long Beach
@@ -281,50 +84,48 @@ Year                 Age                    Description
 2021             50 years old               First year at CAMS
 ```
 
-
-<details><summary> Sample Solution </summary>
-
-```java
-class Main {
-  public static void main(String[] args) {
-    System.out.println("Year \t\t Age \t\t\t Description");
-    System.out.println("1971 \t  0 years old \t\t Born in Long Beach");
-    System.out.println("1976 \t  5 years old \t\t Started Kindergarten");
-    System.out.println("1989 \t 17 years old \t\t Graduated high school");
-    System.out.println("1995 \t 24 years old \t\t Graduated college Long Beach State");
-    System.out.println("1998 \t 27 years old \t\t Got Married");
-    System.out.println("1998 \t 27 years old \t\t Began teaching career");
-    System.out.println("2021 \t 50 years old \t\t First year at CAMS");
-
-  }
-}
-```
-</details>
-
+Include seven meaningful events. No repetitive events such as "started kindergarten, started first grade, etc."
 
 ---
 
-
 ## 1.2 Variables and Data Types
+
+<details>
+<summary>📌 Standards — 1.2</summary>
+
+| Standard | Description |
+| -------- | ----------- |
+| ICT 1.0 | Academics — apply academic standards |
+| ICT 5.8 | Create and use algorithms and solve problems |
+| ICT 5.9 | Deconstruct large problems into components |
+| ICT 10.1 | Interpret and explain ICT-specific terminology |
+| C4.4 | Identify and apply data types and encoding |
+| C4.6 | Use proper programming language syntax |
+| C4.9 | Create programs using variables and control structures |
+| CRP 1 | Apply appropriate technical skills and academic knowledge |
+| CRP 5 | Utilize critical thinking to make sense of problems |
+
+</details>
 
 - [ ] Learn to use variables so that the same algorithm runs using different input values.
 - [ ] Determine the appropriate use for specific variables and data types.
 	- [ ] I will be able to write a program using primitive and non-primitive types.
 
-There are eight primitive types in Java. In no particular order, they are int, double, boolean, float, char, byte, long and short.  For this course we will be using only int, double, and boolean.
-- [ ] **int** is short for integer deals with whole numbers and uses 32 bits of memory
-- [ ] **double** is a 64 bit data type that stores decimal numbers
-- [ ] **boolean** is used to represent true or false values
-- [ ] **float** is very similar to a double but uses less memory
-- [ ] **char** is a 16 bit unicode with a minimum value of \u0000 (0) to uffff (65,535)
-- [ ] **byte** is an 8 bit integer with a range from -128 to 127
-- [ ] **long** is a 64 bit datatype with a minimum value of -2^63 to 2^63
-- [ ] **short** is a 16 bit datatype with a minimum value of -32,768 to 32,767
+There are eight primitive types in Java: `int`, `double`, `boolean`, `float`, `char`, `byte`, `long`, and `short`. For this course we will primarily use `int`, `double`, and `boolean`.
 
-Non-primitive data types include a String, Arrays and Classes.
-- [ ] **String** is a data type that is a collection of characters encompassed by quotes
-- [ ] **Arrays** are used to store multiple values (think 'list')
-- [ ] **Class** is an object constructor, blueprint, for creating objects.
+- [ ] **int** — whole numbers; uses 32 bits of memory
+- [ ] **double** — 64-bit decimal numbers
+- [ ] **boolean** — true or false values
+- [ ] **float** — similar to double but uses less memory
+- [ ] **char** — 16-bit unicode character (`\u0000` to `\uffff`)
+- [ ] **byte** — 8-bit integer, range −128 to 127
+- [ ] **long** — 64-bit integer, range −2^63 to 2^63
+- [ ] **short** — 16-bit integer, range −32,768 to 32,767
+
+Non-primitive data types include String, Arrays, and Classes:
+- [ ] **String** — a collection of characters enclosed in quotes
+- [ ] **Arrays** — used to store multiple values (think 'list')
+- [ ] **Class** — a blueprint/constructor for creating objects
 
 **Variable Naming Convention**
 - [ ] Always choose a name that indicates the purpose of the variable
@@ -333,587 +134,180 @@ Non-primitive data types include a String, Arrays and Classes.
 - [ ] A variable cannot begin with any special characters
 - [ ] A variable cannot have the same name as a Java keyword
 
-When you declare a variable, you must state the variable type along with the variable name followed by the value assignment to the variable.</br>  For example:  *int height = 72;*</br></br>
-Once you have declared the variable type, you <b> do not need to do it again </b> to reassign a value to the variable.</br> Example:  </br>*int height = 72;</br>height = 70;*</br></br>
-If you declare a variable as *final* you cannot change the value of it.  We can refer to the *final* variable as immutable (unchanging).  Another variable norm is that *final* variables are written as ALL CAPS to remind you that they cannot change.</br> Example:</br> final double PI = 3.14159;</br></br>
+When you declare a variable, you must state the variable type along with the variable name followed by the value assignment: `int height = 72;`
 
-### Assignment 1.2.1
-**Allowance**
-Write a program that will determine who receives an allowance or not.  Use the information below as a guide:
-- [ ] Allowance is always $30.00/ week
+Once you have declared the variable type, you **do not need to do it again** to reassign a value to the variable. If you declare a variable as `final` you cannot change the value of it. `final` variables are written as ALL CAPS.
+
+### Assignment 1.2.1 — Allowance
+
+Write a program that will determine who receives an allowance or not. Use the information below as a guide:
+- [ ] Allowance is always $30.00/week
 - [ ] Non-teenagers do not receive an allowance
-- [ ] Jon is 16 years old
-- [ ] Ed is 12 years old
-- [ ] Michael was born fours years before Jon
-- [ ] Print out who receives an allowance and who does not by using an int, double and boolean variables.
-
-```java
-int JonsAge = 16;
-boolean Teenager = true;
-double allowance = 30.00;
-
-System.out.println("Jon's age is " + JonsAge);
-System.out.println("Eligible for allowance? " + Teenager);
-System.out.println("Jon's weekly allownace is " + allowance);
-```
-
-
-**Example Output:**<br>
-Jon's age is 16<br>
-Eligible for allowance? True<br>
-Jon's weekly allowance is $30.00<br>
-<br>
-Ed's age is 12<br>
-Eligible for allowance? False<br>
-Ed's weekly allowance is $0.00<br>
-<br>
-Michael's age is 20<br>
-Eligible for allowance? False<br>
-Michael's weekly allowance is $0.00<br>
-
+- [ ] Jon is 16 years old; Ed is 12 years old; Michael was born four years before Jon
+- [ ] Print out who receives an allowance and who does not using `int`, `double`, and `boolean` variables.
 
 ---
 
+### Assignment 1.2.2 — Scanner Class
 
-### Assignment 1.2.2 - Scanner Class
+The Scanner class is a package that provides primitive input within Java programs. It can be found in the [java.util Package](https://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html).
 
-The scanner class is a package that provides primitive input within Java programs.  It can be found in the [java.util Package](https://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html) website.
+- [ ] To create an object of the Scanner class, we must pass `System.in` as the defined object.
+- [ ] To read the data type we need to use the function `next<DataType>()`. For example, to read an `int` use `nextInt()`.
+- [ ] To read strings, use `nextLine()`.
 
-- [ ] Click on [Scanner_Input](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/8455326/Scanner_Input.pptx) to learn more.
-- [ ] An example of a Scanner Input can be found [here](https://replit.com/@jonvirak/JavaScannerBasics#Main.java).
-- [ ] To create an object of the Scanner class, we must pass a defined object in `System.in` which is the standard input.
-- [ ] To read the data type we need to use the function next**data type**().  For example, to read an `int` we would type `nextint()`.
-- [ ] To read strings, we would use `nextLine()`.
-- [ ] To read a single character we would use `next()` or `charAt()`.
-- [ ] The `next()` function returns the next word in the input as a string.
-- [ ] Whereas, `charAt()` function returns the first character in that string.
-- [ ] Scanner problem using `nextline()` **(see below)**
-
-In Java, `Scanner.nextLine()` doesn't always work as expected when it's used after methods like `nextInt()`, `nextDouble()`, or `next()`. This happens because of how the `Scanner` class handles input in terms of whitespace and line breaks.
-
-Here's the Problem:
-
-* `nextInt()`, `nextDouble()`, and `next()` do not consume the newline character (`\n`) that is left when the user presses Enter. They only read the actual data (like the number or the word), but the newline character remains in the input buffer.
-
-* `nextLine()`, on the other hand, reads everything up to and including the newline character, consuming it in the process. If it's called right after one of these methods, `nextLine()` immediately reads the leftover newline from the previous input, effectively "skipping" the actual user input you expect.
-
-**Example:**
-
-```java
-Scanner scanner = new Scanner(System.in);
-System.out.println("Enter a number: ");
-int num = scanner.nextInt();  // Reads the integer but leaves the newline behind
-System.out.println("Enter a string: ");
-String str = scanner.nextLine();  // This reads the leftover newline instead of the input
-System.out.println("You entered: " + str);
-```
-
-**Unexpected Output:**
-
-```
-Enter a number: 
-42
-Enter a string: 
-You entered: 
-```
-
-**Solution:**
-
-To fix this, you can add an extra `scanner.nextLine()` after reading the number or other data types to consume the leftover newline character.
-
-**Corrected Example:**
-
-```java
-Scanner scanner = new Scanner(System.in);
-System.out.println("Enter a number: ");
-int num = scanner.nextInt();  				// Reads the integer
-scanner.nextLine();  						// Consumes the leftover newline character
-System.out.println("Enter a string: ");
-String str = scanner.nextLine();  			// Now it reads the actual input
-System.out.println("You entered: " + str);
-```
-
-**Output (corrected):**
-
-```
-Enter a number: 
-42
-Enter a string: 
-Hello, World!
-You entered: Hello, World!
-```
-By calling `nextLine()` after reading an integer or another token, you clear the input buffer of the unwanted newline character, ensuring that the next call to `nextLine()` behaves as expected and reads a full line of input.
-
-
-**Assignment:** Create four questions that will ask the user for a string, int, double, and a boolean. 
-
+**Assignment:** Create four questions that will ask the user for a `String`, `int`, `double`, and a `boolean`.
 
 ---
 
+## 1.3 Expressions and Output
 
-## 1.3 Expressions and Assignment Statements
+<details>
+<summary>📌 Standards — 1.3</summary>
+
+| Standard | Description |
+| -------- | ----------- |
+| ICT 1.0 | Academics — apply academic standards |
+| ICT 5.8 | Create and use algorithms |
+| ICT 5.9 | Deconstruct large problems into components |
+| ICT 5.11 | Understand base systems including binary and hexadecimal |
+| C4.6 | Use proper programming language syntax |
+| C4.9 | Create programs using control structures, variables, functions |
+| CRP 1 | Apply appropriate technical skills and academic knowledge |
+| CRP 5 | Utilize critical thinking to make sense of problems |
+
+</details>
 
 - [ ] Describe the functionality of a program using a single-line comment.
 - [ ] Use operators to construct compound expressions.
 - [ ] Evaluate the results of an expression with an assignment statement.
 	- [ ] I will understand and practice proper commenting in programming
 
-Math Operators are a very important part of computing. Below are the most common operators that we will be using in this course.
-| Symbol | Name  | Usage |
-| :---:  | :---: | :---: |
-| ( ) | Parentheses | You will evaluate based on what is within the parentheses |
-| * | Multiplication | multiply two values together |
-| / | Division | divide two values |
-| % | Modulo | the remainder after dividing two values |
-| + | Addition | add two values together |
-| - | Subtraction | subtract two values |
+| Symbol | Name | Usage |
+| :---: | :---: | :---: |
+| ( ) | Parentheses | Evaluate based on what is within the parentheses |
+| * | Multiplication | Multiply two values together |
+| / | Division | Divide two values |
+| % | Modulo | The remainder after dividing two values |
+| + | Addition | Add two values together |
+| - | Subtraction | Subtract two values |
 
-**Note** When you divide an integer by zero your program will return an <i>ArthmeticException</i> error.
+**Note:** When you divide an integer by zero your program will return an *ArithmeticException* error.
 
-**Please Excuse My Dear Aunt Sally**
-In Java, the order of operation works pretty much the same with the exception of the modulo.</br>Take for example the following math equation: **5 + 12 * 18 - 10 / 2 % 2**
+### Assignment 1.3.1 — Calculate Your Weight on Jupiter
 
-| Step  | Operation        | Result |
-| :---: | :---:            | :---:  |
-|  1    | Multiply 12 * 18 | = 216  |
-|  2    | Divide 10 / 2    | = 5    |
-|  3    | Modulo 5 % 2     | = 1    |
-|  4    | Add 5 + 216      | = 221  |
-|  5    | Subtract 221 - 1 | = 220  |
+Using the equation below, calculate what your weight would be on different planets:
 
-<details><summary>JAVA Order of Operations</summary>
+`weightOnPlanet = (weightOnEarth / earthGravity) × planetGravity`
 
-| Level	| Operator | Description | Associativity |
-| :---: | :------: | :---------: | :-----------: |
-|  16	| (), [], new, . , :: | parentheses, array access, object creation, member access, method reference | left-to-right |
-|  15	| ++, -- | unary post-increment, unary post-decrement |	left-to-right |
-|  14	| +, -, !, ~, ++, -- | unary plus, unary minus, unary logical NOT, unary bitwise NOT, unary pre-increment, unary pre-decrement 	| right-to-left |
-| 13 | () | cast	| right-to-left |
-| 12 | * / %  | multiplicative | left-to-right |
-| 11 | + - , + | additive, string concatenation | left-to-right |
-| 10 | <<, >>, >>> | shift | left-to-right |
-| 9 | <, <=, >, >=, instanceof | relational | left-to-right |
-| 8 | ==, != | equality | left-to-right |
-| 7 | &	| bitwise AND | left-to-right |
-| 6 | ^	| bitwise XOR | left-to-right |
-| 5 | \| | bitwise OR | left-to-right |
-| 4 | && | logical AND |left-to-right |
-| 3 | \|\| | logical OR | left-to-right |
-| 2 | ?: | ternary | right-to-left |
-| 1 | =, +=, -=, *=, /=, %=, &=, ^=, \|=, <<=, >>=, >>>= | assignment | right-to-left |
-| 0 | -> | lambda expression, switch expression | right-to-left |
-
-
-</details>
-
------------------------------------------------------------------------------------
-
-
-### Assignment 1.3.1
-**Calculate your weight on Jupiter**
-
-```
-The expression F=ma allows you to calculate your weight (in newtons) based on your mass
-(in kilograms) the acceleration due to gravity on Earth (9.81 m/sec2). A typical mass of a
-human might be 58.9 kg.
-
-F = ma
-F = (58.9 kg)(9.81 m/s^2)
-F = 578 Newtons
-One newton is equal to 0.225 lbs. So on Earth, this human weighs 130 lbs.
-
-F = (578 N)(0.225 lbs/ 1 N) = 130 lbs
-
-But Jupiter is more massive than the Earth. The force of gravity is stronger, making the
-acceleration due to gravity much larger (24.79 m/sec^2). Below is a list of variables that
-will be used in the program.
-
-Using the equation below, you can determine what your weight on Jupiter would be in pounds
-and not have to worry about converting units.
-
-(weightOnJupiter) = (weightOnEarth)/1 x (jupiterGravity)/(earthGravity)
-
-weightOnJupiter = 130
-earthGravity = 9.81 
-jupiterGravity = 24.79
-**weightOnJupiter = weightOnJupiter / earthGravity * jupiterGravity**
-
-```
-**Using the chart below, create a program called GalaxyWeight that outputs information of the user's weight
-on four different planets and takes the average of those weights.  You will use the <i>scanner class</i> for 
-this assignment.**
-
-| Planet | Acceleration Due to Gravity (m/sec^2) |
+| Planet | Acceleration Due to Gravity (m/sec²) |
 | :---: | :---: |
 | Earth | 9.81 |
 | Mercury | 3.59 |
 | Venus | 8.87 |
 | Mars | 3.711 |
-| Jupiter | 24.79 | 
+| Jupiter | 24.79 |
 | Saturn | 11.08 |
 | Uranus | 10.67 |
 | Neptune | 11.15 |
 
-```java
+### Assignment 1.3.2 — Simple Math
 
-// Starter Code.  Add 3 more planets that you will travel to.
-
-public class GalaxyWeight
-{
-	public static void main(String[] args) 
-	{
-    // declare and initialize weightOnEarth, earthGravity, and jupiterGravity 
-    int weightOnEarth = 177;
-    double earthGravity = 9.81;
-    double jupiterGravity = 24.79;
-    
-    // calculate weight
-    double weightOnJupiter = weightOnEarth * jupiterGravity / earthGravity;
-    
-    // show results
-    System.out.print("Your weight on Jupiter is ");
-    System.out.print(weightOnJupiter);
-    System.out.println(" lbs.");
-  }
-}
-```
-
+- [ ] Create a program that will ask the user for two distinct integers
+- [ ] Use the Scanner class to receive input from the user
+- [ ] Store those values and perform addition, subtraction, multiplication, division, and modulo
 
 ---
 
+## 1.4 Assignment Statements and Input
 
-### Assignment 1.3.2
-**Simple Math**
-- [ ] Create a program that will ask the user for two distinct numbers (integers)
-- [ ] Use the scanner class to receive input from the user  
-- [ ] Store those values and perform some basic operations with those numbers
+<details>
+<summary>📌 Standards — 1.4</summary>
 
+| Standard | Description |
+| -------- | ----------- |
+| ICT 1.0 | Academics — apply academic standards |
+| ICT 5.8 | Create and use algorithms |
+| ICT 5.9 | Deconstruct large problems into components |
+| C4.6 | Use proper programming language syntax |
+| C4.9 | Create programs using control structures and variables |
+| CRP 1 | Apply appropriate technical skills and academic knowledge |
+| CRP 5 | Utilize critical thinking to make sense of problems |
 
-
-**Example Output**
-```java
-Enter first number:
-20
-Enter second number:
-5
-
-Sum: 25
-Difference: 15
-Product: 100
-Dividing: 4 with remainder 0
-
-```
-
-<details><summary>Sample Solution</summary>
-
-```java
-
-import java.util.Scanner; 
-
-class Main 
-{
- public static void main(String[] args) 
- {
-  // declare two integers a and b
-  int a;
-  int b;
-
-  // asks the user for the integers and stores it in a and b
-  System.out.println("Enter the first integer:");
-  Scanner sc = new Scanner(System.in);
-   a = sc.nextInt();
-   System.out.println("Enter the second integer:");
-   b = sc.nextInt();
-
-   System.out.println("When you add the two numbers, the sum is " + (a + b));
-   System.out.println("When you subtract the two numbers, the difference is  " + (a - b));
-   System.out.println("When you multiply the two numbers, the product is " + (a * b));
-   System.out.print("When you divide the two numbers, the answer is  " + (a / b));
-   System.out.println(" with a remainder " + (a%b));
- }
-}
-
-```
 </details>
-
-----------------------------------------------------------------------------------------------
-
-## 1.4 Compound Assignment Operators
 
 - [ ] Use the compound assignment and increment/decrement operators in a program.
 	- [ ] I will be able to increment a variable based on java protocol
-- [ ] Describe the behavior of a given segment of program code, including the result it produces.
-	- [ ] I will be able to implement appropriate order of operation as it relates to java
 
-
-In Java, you can modify a variable by referencing it, performing an operation on it, and assigning the result back to the variable. Thus, you can reference a variable to change its own value. For example, if x equals 0 , the following statement modifies x.</br>
+Java supports **Compound Assignment Operators** which perform a mathematical calculation and assignment in one step:
 
 ```java
-
-// Will this program run as written?  Why or why not?
-
-public class Main
-{
-  public static void main(String[] args)
-  {
-    x = 0;
-    x = x + 1; //common programming convention
-    System.out.println("x = " + x);
-  }
-}
-Output:
-x = 1
-```
-```java
-// Compound assignment operators
-class Main {
-public static void main(String args[])
-	{
-		int b = 120; //initial value
-		b += 10;
-		int b1 = 120; //initial value
-		b1 *= 10;
-		int b2 = 330; //initial value
-		b2 -= 30;
-		int b3 = 127; //initial value
-		b3 %= 7;
-
-		System.out.println(b);
-		System.out.println(b1);
-		System.out.println(b2);
-		System.out.println(b3);
-	}
-}
++=   assigns the result of the addition.
+-=   assigns the result of the subtraction.
+*=   assigns the result of the multiplication
+/=   assigns the result of the division.
+%=   assigns the remainder of the division.
 ```
 
-**Sample Output**
-```java
-130
-1200
-300
-1
-```
+**Increment and Decrement Operators**
 
-In algebra, this is an impossible statement, but in programming, the assignment operator makes this a simple and logical statement. To interpret assignment statements such as this, begin with the first instruction to the right of the assignment operator.
-
-In Java, a strong convention is to declare variables close to where they are first used, at the beginning of a code block. 
-A code block is denoted by curly braces, { }.  Notice that the print statement uses quotes around 'x = ' followed by plus(+) sign. This is referred to as a **concatenation operator** where you can add a string literal to a variable.
-
-Java like other programs has simplified the compound operators.  **Compound Assignment Operators** performs two tasks in one step.  It performs a mathematical calculation by and assignment.  It is written as:  
-
-Java supports 11 compound-assignment operators, but for this course we will use just five.
-```java
- +=   assigns the result of the addition.
- -=   assigns the result of the subtraction.
- *=   assigns the result of the multiplication
- /=   assigns the result of the division.
- %=   assigns the remainder of the division.
- ```
-
-**Increment and Decrement Operator** 
-
-In Java programming, the increment operator (*++*) increases the value of a variable by 1. Similarly, the decrement operator (*--*) decreases the value of a variable by 1.  These may also be referred to as prefix and postfix operators.
+The increment operator (`++`) increases the value of a variable by 1. The decrement operator (`--`) decreases it by 1.
 
 ```java
-public class MyClass {
-  public static void main(String args[]) {
-    int a = 5;
-    int b = 5;
-    int c = 5;
-    int d = 5;
-
-    System.out.println("a = " + ++a);
-    System.out.println("b = " + b++);
-    System.out.println("c = " + --c);
-    System.out.println("d = " + d--);
-  }
-}
+int a = 5;
+System.out.println("a = " + ++a);  // a = 6 (pre-increment)
+int b = 5;
+System.out.println("b = " + b++);  // b = 5 (post-increment: original returned first)
 ```
 
+### Assignment 1.4.1 — Compound Operators
 
-**Sample Output**
-```java
-a = 6
-b = 5
-c = 4
-d = 5
-```
+Rewrite a provided program using compound assignment and increment/decrement operators, then extend it to calculate average years and days in school for a group.
 
+### Assignment 1.4.2 — Average Test Score / Cashier Totals
 
-There is an important difference when these two operators are used as a prefix and a postfix.
-  - If you use the ++ operator as a prefix like: ++a, the value of a is incremented by 1; then it 
-    returns the value.
-  - If you use the ++ operator as a postfix like: b++, the original value of var is returned first; 
-    then b is incremented by 1.
+Write two programs: one that averages four test scores, and one that calculates cashier totals for burgers and fries.
 
-
-### Assignment 1.4.1
-  
-**Compound Operators**
-```java
-
-public class CompoundOperators
-{
-  public static void main(String[] args)
-  {
-    int numPeople = 0;  
-    double totalYears = 0;
-
-    double years = 11.5;  // I will soon be halfway through my junior year.
-
-    totalYears = totalYears + years;
-    numPeople = numPeople + 1;
-  }
-}
-
-```
-- [ ] Rewrite the statements of the program above to use the compound assignment and/or the increment/decrement operators.
-- [ ] TODO 1) Add at least three other people to your program, such as siblings, friends, or neighbors.
-- [ ] TODO 2) Use people that are in different grades to validate your program can work for different school grades.
-- [ ] TODO 3) For their years in school, use values that indicate they will soon be halfway through their current school year, as shown in the provided code.
-- [ ] TODO 4)The average years you and your friends, siblings, neighbors have been in school.
-- [ ] TODO 5) The total days you have all been in school, assuming you spend 180 days per year in school.
-- [ ] TODO 6) The average days you have all spent in school.
-
-```
-Sample Output:
-I have 11.5 years in school and 0.5 years to graduate.
-Total people: 1, total years: 11.5
-My best friend has 10.5 years in school and 1.5 years to graduate.
-Total people: 2, total years: 22.0
-My sister has 8.5 years in school and 3.5 years to graduate.
-Total people: 3, total years: 30.5
-My neighbor has 5.5 years in school and 6.5 years to graduate.
-Total people: 4, total years: 36.0
-
-Average years in school: 9.0
-Total days in school: 6480.0
-Average days per person: 1620.0 
-```
-
-<p align="center">---------------------------------------------------------------------------- </p>
-
-### Assignment 1.4.2
-**Average Test Score**
-Directions: Write two programs that will do the following:
-
-**Average Test Score**
-- [ ] ask the user for four test scores
-- [ ] calculate and show the result
-
-**Cashier Totals**
-- [ ] ask the user for the number of burgers sold and how much each one costs
-- [ ] ask the user for the number of fries sold and how much each costs
-- [ ] display the total items sold
-- [ ] display the total sales
-
-**Sample Output:**
-```
-Enter the first test score:
-95
-Enter the second test score:
-87
-Enter the third test score:
-74
-Enter the forth test score:
-75
-
-Average test score: 82.75%
----------------------------------
-Enter the number of burgers ordered:
-10
-Price of a burger:
-5.65
-Enter the number of fries ordered:
-4
-Price of fries:
-1.95
-
-Total Items Sold: 14
-Total Sales: $64.3
-```
-
+---
 
 ## 1.5 Casting and Range of Variables
 
+<details>
+<summary>📌 Standards — 1.5</summary>
+
+| Standard | Description |
+| -------- | ----------- |
+| ICT 1.0 | Academics — apply academic standards |
+| ICT 5.4 | Interpret information and draw conclusions to make informed decisions |
+| ICT 5.8 | Create and use algorithms |
+| C4.4 | Identify and apply data types and encoding |
+| C4.6 | Use proper programming language syntax |
+| CRP 1 | Apply appropriate technical skills and academic knowledge |
+| CRP 5 | Utilize critical thinking to make sense of problems |
+
+</details>
 
 - [ ] Evaluate arithmetic expressions that use manual and automatic casting.
 - [ ] Perform mathematical rounding.
 	- [ ] I will be able to explain why a code segment will not compile or work as intended.
 
-There are some unique features to Java that help programmers create programs that are flexible in how they display data.  We learned earlier that we need to declare a variable by it's type.  It can be an `int` or a `double`.  As you may remember, an `int` is any whole negative or positive number.
+**Casting** is converting from one data type to another, such as from a *double* to an *int*, potentially losing data.
 
-A `double` is any number with a decimal.  1.0 is a whole number, but it has a decimal. So, Java considers 1.0 as a `double`.  We can convert the `double` by declaring a new variable that changes the `double` to an `int`.
-
-```java 
+```java
 double temp = 98.6;
-int newTemp = (int)temp;
+int newTemp = (int)temp;  // newTemp = 98 (truncated, NOT rounded)
 ```
-What is the value of newTemp?  Did you guess 99?  The actual value of newTemp is 98.  The variable is not **rounded** it is *truncated*.  Java does not round unless you tell it to round.
+
+- [ ] **widening** — converting from a smaller data type to a larger: `byte` → `short` → `char` → `int` → `long` → `float` → `double`
+- [ ] **narrowing** — converting from a larger data type to a smaller: `double` → `float` → `long` → `int` → `char` → `short` → `byte`
+
+### Assignment 1.5.1 — FivePlanetTravel
+
+You will explore the PlanetTravel program called **FivePlanetTravel**. The program is set up to plan a five-planet tour!
+
+**Starter Code:**
 
 ```java
-double a = 3.9;
-int b = (int) a;
-System.out.println(b); // b is 3
-
-double c = -4.8;
-int d = (int) c;
-System.out.println(d); // d is -4
-```
-In both cases, the digits to the right of the decimal are is just chopped off:
-
-
->
->	To fix this, you can use `Math.round(x)` ***(we will get to this later, as a class)***
->	or you can add .5 to correct the problem.
->
->
->	`double a = 3.9;`
->
->	`int b = (int) a + .5;`
->
->   `System.out.println(b); // b is 4`
->
->	`double c = -4.8;`
->
->	`int d = (int) c + .5;`
->
->   `System.out.println(d); // d is -5`
->
-
-You will need to be familiar with some terms:
-
-- [ ] **widening** - converting from a smaller data type (int) to a larger data type (double).
-	- [ ] `byte` -> `short` -> `char` -> `int` -> `long` -> `float` -> `double`
-- [ ] **narrowing** - converting a larger data type (double) to a smaller data type (int).
-	- [ ] `double` -> `float` -> `long` -> `int` -> `char` -> `short` -> `byte`
- 	     
-In this instance, we 'narrowed' the value of temp.  There is another term that you need to be familiar with and it is called **casting**.  Casting is converting from one data type to another, such as from a *double* to an *int*, potentially losing data. 
-
-Take a look at this program:
-
-```java
-public class CastingEggs {
-  public static void main(String args[]) {
-    int eggs = 9;
-    int dozen = 12;// the variable dozen will not change
-
-    System.out.println("Total eggs = " + eggs/dozen + " dozen");
-    System.out.println("Total eggs = " + eggs/ (double)dozen + " dozen");
-    System.out.println("Total eggs = " + (double)eggs/ dozen + " dozen");
-
-// Example output:
-// Total eggs = 0 dozen
-// Total eggs = 0.75 dozen
-// Total eggs = 0.75 dozen
-
-```
-We know that we don't have 0 eggs.  We can rewrite our program to show how many eggs we have in decimal form.
-    
-
-### Assignment 1.5.1
-You will explore the PlanetTravel program called FivePlanetTravel. The program is set up to plan a five-planet tour!:
-```
 /* 
  * Activity 1.1.5
  */
@@ -942,15 +336,16 @@ public class FivePlanetTravel
     total +=  mars / (double) lightSpeed;
 
 
-	int average = (int)(total / numPlanets);
+    int average = (int)(total / numPlanets);
     System.out.println("Total travel time:" + total);
-	System.out.println("Average travel time: " + average);
+    System.out.println("Average travel time: " + average);
   }
 }
 ```
 
 **Example Output:**
-```java
+
+```
 Travel time to ...
  Mercury 0 hours
  Venus: 0 hours
@@ -970,35 +365,971 @@ Total travel time:19.59838263477574
 Average travel time: approximatley 4 hours.
 ```
 
-*Your output should look similar to the example above.*
+Your output should look similar to the example above. You will write a **widening algorithm** that shows the travel time to and from all planets using casting. The one rule is that you must use the provided code and **not change any provided data types**.
 
-You will write a widening algorithm that will show the travel time to and from all planets.  You will write a casting version without new variables to show the travel times. The one rule is that you must use the provided code and not change any provided data types.
+---
+
+## 1.6 Compound Assignment Operators
+
+*(See section 1.4 — covered in depth with compound assignment operators and prefix/postfix increment/decrement.)*
+
+---
+
+## 1.7 Application Program Interface (API) and Libraries
+
+<details>
+<summary>📌 Standards — 1.7</summary>
+
+| Standard | Description |
+| -------- | ----------- |
+| ICT 4.0 | Technology — use electronic tools and reference materials |
+| ICT 4.1 | Use electronic reference materials to gather information |
+| ICT 4.5 | Research technological advances in computing |
+| ICT 10.9 | Use common industry-standard software applications |
+| C4.2 | Describe interaction of programming languages and protocols |
+| C4.3 | Identify and use IDEs and authoring tools |
+| CRP 4 | Apply technology to enhance productivity |
+| CRP 11 | Employ valid and reliable research strategies |
+
+</details>
+
+- [ ] Understand what an API is and how Java libraries provide pre-built functionality.
+- [ ] Import and use packages from the Java standard library.
+
+Java's standard library (API) provides pre-built classes and methods organized into packages:
+
+| Package | Purpose |
+| ------- | ------- |
+| `java.util` | Scanner, ArrayList, Random, etc. |
+| `java.lang` | String, Math, Integer, Double (automatically imported) |
+| `java.time` | LocalDate, LocalTime, DateTimeFormatter |
+
+You import packages using the `import` statement:
+
+```java
+import java.util.Scanner;
+import java.util.ArrayList;
+```
+
+---
+
+## 1.8 Documentation with Comments
+
+<details>
+<summary>📌 Standards — 1.8</summary>
+
+| Standard | Description |
+| -------- | ----------- |
+| ICT 2.0 | Communications — communicate effectively in written formats |
+| ICT 2.4 | Demonstrate elements of written and electronic communication |
+| ICT 2.5 | Communicate to multiple audiences using a variety of formats |
+| ICT 7.5 | Apply high-quality techniques to product design and development |
+| C4.11 | Document development work for various audiences |
+| CRP 2 | Communicate clearly, effectively, and with reason |
+| CRP 7 | Act as a responsible and contributing citizen and employee |
+
+</details>
+
+- [ ] Understand how to properly comment code.
+- [ ] Implement precondition and postcondition commenting to summarize methods.
+- [ ] Use single-line comments to make code more readable.
+	- [ ] I will practice industry standard commenting standards in my programs.
+
+There are three ways in Java to create a comment:
+
+`// Using these two slashes will create a single-line comment.`
+
+`/* Using the slash and an asterisk will create a multi-line comment. */`
+
+`/** Using the slash and two asterisks will create a Java API documentation comment. **/`
+
+With **every** program that you submit, include the following block comment at the top of your main file:
+
+```java
+/*=============================================================================
+ |   Assignment:  Program #[n]:  [Assignment Title]
+ |       Author:  [Your Name]
+ |      Partner:  [Partner's Name]
+ |
+ |  Course Name:  [Course Name]
+ |   Instructor:  John Smith
+ |     Due Date:  [Due Date and Time]
+ |
+ |  Description:  [Describe the program's goal, IN DETAIL.]
+ |
+ |     Language:  Java version 8
+ |
+ | Deficiencies:  [If you know of any problems with the code, provide
+ |                details here, otherwise clearly state that you know
+ |                of no unsatisfied requirements and no logic errors.]
+ *===========================================================================*/
+```
+
+---
+
+## 1.9 Method Signatures
+
+<details>
+<summary>📌 Standards — 1.9</summary>
+
+| Standard | Description |
+| -------- | ----------- |
+| ICT 5.8 | Create and use algorithms and solve problems |
+| ICT 5.9 | Deconstruct large problems into components |
+| C4.8 | Use OOP concepts: properties and methods |
+| C4.9 | Create programs using procedures and functions with parameters |
+| CRP 1 | Apply appropriate technical skills and academic knowledge |
+| CRP 5 | Utilize critical thinking to make sense of problems |
+
+</details>
+
+- [ ] Understand what a method signature consists of.
+- [ ] Distinguish between void methods and non-void (return) methods.
+
+A **method signature** in Java includes:
+- Access modifier (`public`, `private`, etc.)
+- Return type (`void`, `int`, `String`, etc.)
+- Method name
+- Parameter list (type and name of each parameter)
+
+```java
+public int add(int a, int b)    // signature: name=add, params=int,int, returns=int
+public void printName(String s) // signature: name=printName, params=String, returns=nothing
+```
+
+| | Static method | Non-static method |
+| --- | --- | --- |
+| Definition | Belongs to the class; can be called without creating an object. | Belongs to an instance of the class. |
+| Accessing members | Can only access static data members and static methods. | Can access static and non-static members. |
+| Overriding | Cannot be overridden (compile-time binding). | Can be overridden (runtime/dynamic binding). |
+
+---
+
+## 1.10 Calling Class Methods
+
+<details>
+<summary>📌 Standards — 1.10</summary>
+
+| Standard | Description |
+| -------- | ----------- |
+| ICT 5.8 | Create and use algorithms |
+| ICT 5.9 | Deconstruct large problems |
+| C4.6 | Use proper programming language syntax |
+| C4.9 | Create programs using control structures, procedures, and functions |
+| CRP 1 | Apply appropriate technical skills and academic knowledge |
+| CRP 5 | Utilize critical thinking to make sense of problems |
+
+</details>
+
+- [ ] Call static methods from existing classes (e.g., `Math` class).
+- [ ] Distinguish between class (static) methods and instance methods.
+
+```java
+// Calling a static class method
+int result = Math.abs(-5);     // No object needed
+double r = Math.random();      // Returns 0.0 to < 1.0
+```
+
+---
+
+## 1.11 Math Class
+
+<details>
+<summary>📌 Standards — 1.11</summary>
+
+| Standard | Description |
+| -------- | ----------- |
+| ICT 1.0 | Academics — apply academic standards |
+| ICT 4.1 | Use electronic reference materials |
+| ICT 5.8 | Create and use algorithms |
+| C4.6 | Use proper programming language syntax |
+| C4.9 | Create programs using procedures and functions |
+| CRP 1 | Apply appropriate technical skills and academic knowledge |
+| CRP 5 | Utilize critical thinking to make sense of problems |
+
+</details>
+
+- [ ] Use the `Math` class to perform common mathematical operations.
+
+| Method | Description | Example |
+| ------ | ----------- | ------- |
+| `Math.abs(x)` | Absolute value | `Math.abs(-3)` → `3` |
+| `Math.pow(a, b)` | a raised to power b | `Math.pow(2, 3)` → `8.0` |
+| `Math.sqrt(x)` | Square root | `Math.sqrt(16)` → `4.0` |
+| `Math.random()` | Random double [0.0, 1.0) | `Math.random()` |
+| `Math.round(x)` | Round to nearest long | `Math.round(3.7)` → `4` |
+| `Math.min(a, b)` | Smaller of two values | `Math.min(5, 3)` → `3` |
+| `Math.max(a, b)` | Larger of two values | `Math.max(5, 3)` → `5` |
+
+### Activity 1.11.1 — Roller Coaster Simulator
+
+Use `Math.random()` and `Math.round()` to simulate the experience of riding a roller coaster, generating random values for speed, height, and rating.
+
+### Activity 1.11.2 — Race Car
+
+Apply `Math.abs()` and `Math.pow()` to a race car simulation that computes distance and speed.
+
+---
+
+## 1.12 Objects: Instances of Classes
+
+<details>
+<summary>📌 Standards — 1.12</summary>
+
+| Standard | Description |
+| -------- | ----------- |
+| ICT 5.9 | Deconstruct large problems into components to solve |
+| ICT 5.10 | Use multiple layers of abstraction |
+| C4.5 | Demonstrate awareness of the OOP paradigm |
+| C4.8 | Use OOP concepts: properties, methods, and inheritance |
+| CRP 1 | Apply appropriate technical skills and academic knowledge |
+| CRP 5 | Utilize critical thinking to make sense of problems |
+
+</details>
+
+- [ ] Explain the relationship between a class and an object
+	- [ ] I will be able to create a poster demonstrating classes and objects
+
+A *class* is a blueprint of an object. An *object* is an instance of a class. What we define as a class determines what objects will be associated with the class and how things will operate within it.
+
+We can also create a *method* that will call the attributes within a class. **NOTE:** Method and behavior are interchangeable terms.
+
+**Mr Potato Head Activity:**
+
+    Split into pairs.
+    Each pair will create:
+        a potato head character.
+        a list describing what it is, what characteristics it has, and what it can do (actions).
+            write PROPERTIES / characteristics
+            write METHODS / actions
+    What are the object oriented concepts to your Mr. Potato Head?
+        Class:
+        Object:
+        Properties:
+        Methods:
+    Visually demonstrate the properties of inheritance by creating a subclass(es) of your Superclass.
+
+**Things to Remember:**
+- [ ] Properties are the characteristics of your objects
+- [ ] Methods are the actions that your object can take.
+- [ ] A class is like a blueprint or a recipe.
+- [ ] A class is used to create an instance of a class, called an object.
+
+---
+
+## 1.13 Object Creation and Storage (Instantiation)
+
+<details>
+<summary>📌 Standards — 1.13</summary>
+
+| Standard | Description |
+| -------- | ----------- |
+| ICT 5.9 | Deconstruct large problems into components to solve |
+| ICT 5.10 | Use multiple layers of abstraction |
+| C4.5 | Demonstrate awareness of the OOP paradigm |
+| C4.7 | Use various data structures including objects |
+| C4.8 | Use OOP concepts: properties, methods, and inheritance |
+| C4.9 | Create programs using control structures and variables |
+| CRP 1 | Apply appropriate technical skills and academic knowledge |
+| CRP 5 | Utilize critical thinking to make sense of problems |
+
+</details>
+
+- [ ] Explain the relationship between a class and an object
+- [ ] Identify different constructor signatures and create objects using them
+- [ ] Use variables to represent object references
+	- [ ] I will be able to write more complex programs using classes and objects
+
+A **constructor** in Java is a special method that is used to initialize objects. The constructor is called when an object of a class is created.
+
+**Null Objects**
+
+Null is a reserved keyword in Java for literal values. It is a value that shows that the object is referring to nothing. This will create a **NullPointerException** error if called.
+
+```java
+Car emptyCar = null;
+Car myCar = new Car(5.6);
+Car yourCar = new Car();
+Car ourCar = new Car(2);
+
+System.out.println("myCar=" + myCar);       // myCar=Car@6d06d69c
+System.out.println("emptyCar=" +emptyCar);  // emptyCar=null
+```
+
+![Constructors_image](https://user-images.githubusercontent.com/12989939/195926575-c2a49adc-afdb-4ef0-91e1-c5d93fb54539.PNG)
+
+**Constructor Overloading:** It is possible to write two or more constructors within a program. The difference between the constructors are the *parameters* defined within each constructor.
+
+The **default constructor** is the constructor with no parameters. If an overloaded constructor is missing a parameter, the value will default to the default constructor.
+
+```java
+// Example of Overloading Constructors
+class Box {
+    double width, height, depth;
+
+    // constructor with no parameters specified
+    Box() {
+        width = 0;
+        height = 0;
+        depth = 0;
+    }
+
+    // constructor with three parameters specified
+    Box(double w, double h, double d) {
+        width = w;
+        height = h;
+        depth = d;
+    }
+}
+```
+
+### toString() Method
+
+The `toString()` method provides a meaningful String representation of an object. It is called automatically when you print an object.
+
+```java
+public class Car {
+    private String make;
+    private String model;
+    private int year;
+
+    public Car(String make, String model, int year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+
+    @Override
+    public String toString() {
+        return "Car: " + make + " " + model + " (" + year + ")";
+    }
+
+    public static void main(String[] args) {
+        Car car1 = new Car("Toyota", "Camry", 2022);
+        System.out.println(car1);  // Calls toString() automatically
+        // Output: Car: Toyota Camry (2022)
+    }
+}
+```
+
+---
+
+## 1.14 Calling Instance Methods
+
+<details>
+<summary>📌 Standards — 1.14</summary>
+
+| Standard | Description |
+| -------- | ----------- |
+| ICT 5.8 | Create and use algorithms and solve problems |
+| ICT 5.9 | Deconstruct large problems into components |
+| C4.8 | Use OOP concepts: properties and methods |
+| C4.9 | Create programs using procedures and functions with parameters |
+| CRP 1 | Apply appropriate technical skills and academic knowledge |
+| CRP 5 | Utilize critical thinking to make sense of problems |
+
+</details>
+
+- [ ] Understand how to call methods on an object.
+- [ ] Distinguish between calling void and non-void instance methods.
+
+```java
+// Calling an instance method on an object
+String greeting = "Hello, World";
+int len = greeting.length();        // non-void: returns a value
+System.out.println(greeting);       // void: performs an action
+```
+
+---
+
+### Activity 2.1.1 — Sports Class
+
+Write a class related to a professional sport (Football, soccer, basketball, etc.)
+
+- Create a class related to a professional sport of your choice
+- Create attributes/instance variables for the class
+- Create a constructor for your class
+- Create an instance of the class
+- Create a `toString()` method to print out the object
+
+**Example Output:**
+```
+Name: Marcelo Vieira da Silva Jr.
+Team: Real Madrid
+Position: left-back
+Number: 12
+Goals: 0
+Starting: True
+```
+
+---
+
+### Activity 2.1.2 — Not Another Cake
+
+**Directions:** Look at the `Cake.java` program below. Create a 1-tier cake, 2-tier cake, and a 3-tier cake. Print out the reference location of the constructor. A solution is provided if you get stuck.
+
+**Submission Requirements:**
+- Create a **unique program of your choice** (not another Cake)
+- Create four constructors:
+  - default constructor (no parameters)
+  - constructor with 1 parameter
+  - constructor with 2 parameters
+  - constructor with 3 parameters
+- Use appropriate comments throughout your program
+- Use `toString()` method to display all objects
+- Submit all program files as `.java` files (Main.java, YourClass.java, etc.)
+
+**Cake.java — Reference Program:**
+
+```java
+public class Cake
+{    
+  int tiers;
+
+  public Cake()
+  {
+    tiers = 1;
+    System.out.println("   ,,,\n   |||\n(~~~~~~~)\n(       )\n(~~~~~~~)\n");
+  }
+  
+  public Cake(int t) 
+  {
+    tiers = t;
+    System.out.println("      ,,,\n      |||\n  (**********)\n  (*        *)\n  (*        *)");
+    System.out.println("(**************)\n(*            *)\n(*            *)\n(**************)\n");        
+  }
+  
+  public Cake(double t)
+  { 
+    tiers = (int) t;
+    System.out.println("        ,,,\n        |||\n    (**********)\n    (*        *)\n    (*        *)");
+    System.out.println("  (**************)\n  (*            *)\n  (*            *)");
+    System.out.println("(******************)\n(*                *)\n(*                *)\n(******************)\n");
+  }
+}
+```
+
+**Main.java — Starter Code:**
+
+```java
+public class Main
+{
+  public static void main(String[] args)
+  {
+    // create a double variable named 't' and assign a value of 3.
 
 
-### Numbers Riddle Project 
+    // create a variable that can store the object reference myCake created with new Cake(t)
 
 
-- [ ] Apply coding concepts you have learned up to this point.
-- [ ] Apply a programming development process to create your first project.
-- [ ] Capture your project and communicate how each part of your program works.
-	- [ ] I will demonstrate my understanding of a Unit 1 by writing a program
+    // Create two more object references using yourCake and ourCake constructors
 
+
+    // Print out all three Cake object reference variables
+
+
+    // Initialize the emptyCake variable with a value of null
+
+
+  }
+}
+```
+
+**Sample Output:**
+
+```
+        ,,,
+        |||
+    (**********)
+    (*        *)
+    (*        *)
+  (**************)
+  (*            *)
+  (*            *)
+(******************)
+(*                *)
+(*                *)
+(******************)
+
+
+   ,,,
+   |||
+(~~~~~~~)
+(       )
+(~~~~~~~)
+
+      ,,,
+      |||
+  (**********)
+  (*        *)
+  (*        *)
+(**************)
+(*            *)
+(*            *)
+(**************)
+
+myCake=Cake@15db9742
+yourCake=Cake@6d06d69c
+ourCake=Cake@7852e922
+emptyCake=null
+```
+
+---
+
+### Activity 2.1.3 — Dog Pizza
+
+- Complete `Dog.java` by filling in the attributes and creating the constructor
+- Instantiate 3 pizzas and print them out by:
+  - Creating a `Pizza` class
+  - Filling out the attributes
+  - Creating the constructor
+  - Creating 3 pizza objects and printing them out
+  - Use the `toString()` method to print the pizza size, type, and toppings:
+    - 12 inch Veggie pizza with Tomatoes, onions, olives
+    - 15 inch Cheese pizza with Cheese
+    - 20 inch Meat pizza with Pepperoni, sausage, bacon
+
+**Main.java — Starter Code:**
+
+```java
+class Main 
+{
+    public static void main(String[] args) 
+    {
+        Dog golden = new Dog("Golden Retriever", "Sammy");
+        System.out.println(golden);
+        
+        // instantiate 3 pizzas below and print them out
+
+
+    }
+}
+```
+
+**Dog.java — Starter Code:**
+
+```java
+public class Dog 
+{
+    // attributes
+
+    // constructor
+
+    // This method should work after you add the
+    // new instance variable and update the constructor.
+    // DO NOT modify this method.
+    public String toString()
+    {
+        return name + " is a " + breed;
+    }
+}
+```
+
+**Pizza.java — Starter Code:**
+
+```java
+// Your code here
+```
+
+---
+
+### Activity 2.1.4 — Bicycle Revisited
+
+1. Create a `Bike` class with the following attributes:
+   - `kind` (Cruiser, road bike, tricycle, hybrid)
+   - `gear` (single, three-speed, 10 speed, 30 speed)
+   - `size` (20, 22, 26, 28)
+   - `cost` (175.99, 300.00, 1049.00, 1500.00)
+2. Create a no-argument constructor. Default values are: Cruiser, 26, and 175.99
+3. Create a constructor that takes only `kind` and `size` as parameters
+4. Create a constructor that takes all four parameters
+5. Create two more objects to match the sample output
+
+**Sample Output:**
+
+```
+My bicycle has 1 gear and is painted white!
+Pedaling to accelerate!
+My cruiser has 10 gears costs $150.
+Pedaling to accelerate.
+My tricycle has 3 gears costs $300.
+Pedaling to accelerate.
+```
+
+---
+
+### Activity 2.1.5 — Constructor Practice
+
+1. Create a class called `Student` with the following instance variables:
+   - `name` (String)
+   - `age` (int)
+   - `gpa` (double)
+
+2. Write **at least four constructors**:
+   - A no-argument constructor that sets all values to defaults (`"Unknown"`, `0`, `0.0`)
+   - A constructor that takes only a name
+   - A constructor that takes a name and age
+   - A constructor that takes all three values (name, age, gpa)
+
+3. Write a `toString()` method that returns the student information as a single string:
+   ```
+   Student{name='Alice', age=16, gpa=3.5}
+   ```
+
+4. Create a `Main` class with a `main` method. In `main`:
+   - Create at least one `Student` object using each constructor
+   - Print each object
+
+**Example Output:**
+
+```
+Student{name='Unknown', age=0, gpa=0.0}
+Student{name='Alice', age=0, gpa=0.0}
+Student{name='Bob', age=17, gpa=0.0}
+Student{name='Charlie', age=18, gpa=3.7}
+```
+
+---
+
+## 1.15 String Manipulation
+
+<details>
+<summary>📌 Standards — 1.15</summary>
+
+| Standard | Description |
+| -------- | ----------- |
+| ICT 2.0 | Communications — communicate effectively in written formats |
+| ICT 2.4 | Demonstrate elements of written and electronic communication |
+| ICT 2.5 | Communicate to multiple audiences using a variety of formats |
+| ICT 5.8 | Create and use algorithms |
+| ICT 5.9 | Deconstruct large problems |
+| C4.6 | Use proper programming language syntax |
+| C4.9 | Create programs using control structures and variables |
+| CRP 2 | Communicate clearly, effectively, and with reason |
+| CRP 5 | Utilize critical thinking to make sense of problems |
+
+</details>
+
+- [ ] Perform String operations including concatenation and comparisons.
+- [ ] Use built-in String methods.
+
+**String Methods**
+
+| Method | Description |
+| ------ | ----------- |
+| `str.length()` | Returns number of characters |
+| `str.substring(i, j)` | Returns substring from index i to j-1 |
+| `str.indexOf(str2)` | Returns first index of str2, -1 if not found |
+| `str.equals(str2)` | Returns true if strings have equal content |
+| `str.compareTo(str2)` | Compares strings lexicographically |
+| `str.toLowerCase()` | Returns lowercase version |
+| `str.toUpperCase()` | Returns uppercase version |
+| `str.trim()` | Removes leading/trailing whitespace |
+
+**String Concatenation:** You can use the `+` operator to combine strings and other values:
+
+```java
+String name = "World";
+System.out.println("Hello, " + name + "!");  // Hello, World!
+```
+
+**Important: Object Equality with Strings**
+
+`==` compares object references (memory locations), while `.equals()` compares the actual content of strings:
+
+```java
+String s1 = new String("HELLO");
+String s2 = new String("HELLO");
+System.out.println(s1 == s2);      // false (different memory locations)
+System.out.println(s1.equals(s2)); // true  (same content)
+```
+
+**Aliasing:** When `shape3 = shape1`, both point to the same memory address. Any change to one changes the other. In Java, this is known as **aliasing**.
+
+### Activity 2.7.1 — Wordplay
+
+Starter Files: [WordPlay.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/13031419/WordPlay.zip)
+
+
+You will write a program that asks the user to enter their first name and their last name, 
+separated by a space. Then it asks the user to enter a phrase. You will write and call the following:
+
+| Methods |  |
+| --------- | --------- |
+| getFirstName() | returns the first name from the full name of user |
+| getLastName() | returns the last name from the full name of user |
+| getInitials() | returns the initials from the full name of user |
+| makePassword() | returns a password created by the following: length of first name + first half of first name + last name + last half of last name + length of last name |
+| ceeBee() | returns the phrase with all the c's replaced by b's |
+
+**Hint:** You may want to use API documentation to understand: `split()`, `charAt()`, `substring()`, `replace()`
+
+**Sample Output:**
+
+```java
+Enter your first name and last name, separated by a space: 
+Bernard Heally
+Enter a phrase: 
+Give papa a proper cup of coffee in a copper coffee cup.
+
+Your first name is Bernard
+Your last name is Heally
+Your initials are BH
+
+Your new password: 8BernHeallylly5
+
+Give papa a proper bup of boffee in a bopper boffee bup.
+```
+
+Submit your program code as a java file and test cases as 1 pdf.
+
+
+### Activity 2.7.2 — Speaking
+
+
+Starter files: [Speaking.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/13031428/127-Speaking.zip)
+
+Create a program that will ask the user for their name and their partners name. Create the following:
+
+| Methods |  |
+| ------- | ---- |
+| yelling() | returns a name in all caps |
+| whisper() | returns a name in all lower case |
+| pigLatin() | takes a word and take the first letter and put it at the end of the word and add the letters “ay” to the end. For example, “pig” becomes “igpay” |
+| nameJoin() | takes two parameters, name1 and name2, and combines them by taking the first half of name1 and second half of name2 and combine them |
+
+
+**Sample Output**
+```java
+Enter your first name:
+ Samantha
+Enter your partner's name:
+ Russell
+
+Yelling your name: SAMANTHA
+Whispering your partner's name: russell
+Your name in Pig Latin: amanthaSay
+Your partner's name in Pig Latin: ussellray
+Your team name is Samaell
+```
+
+Submit your program code as a java file and test cases as 1 pdf.
+
+
+
+---
+
+## 1.16 Formatting and StringBuilder — *Oracle Foundations 1Z0-811*
+
+<details>
+<summary>📌 Standards — 1.16</summary>
+
+| Standard | Description |
+| -------- | ----------- |
+| ICT 2.0 | Communications — communicate effectively in written and electronic formats |
+| ICT 2.4 | Demonstrate elements of written and electronic communication |
+| ICT 2.5 | Communicate to multiple audiences using a variety of media |
+| ICT 10.1 | Interpret and explain ICT-specific terminology |
+| C4.6 | Use proper programming language syntax |
+| C4.9 | Create programs using control structures and variables |
+| CRP 2 | Communicate clearly, effectively, and with reason |
+| CRP 4 | Apply technology to enhance productivity |
+
+</details>
+
+> **Oracle Exam Note:** `String.format()`, `printf()`, and `StringBuilder` are covered on the Oracle Java Foundations exam (1Z0-811).
+
+### String Formatting
+
+Java provides two main ways to format output:
+
+**`System.out.printf()`** — formatted printing:
+
+```java
+double price = 9.99;
+String name = "Widget";
+System.out.printf("%-15s $%.2f%n", name, price);
+// Output: Widget          $9.99
+```
+
+**`String.format()`** — returns a formatted String:
+
+```java
+String result = String.format("Name: %s, Age: %d, GPA: %.1f", "Alex", 17, 3.85);
+System.out.println(result);
+// Output: Name: Alex, Age: 17, GPA: 3.9
+```
+
+| Format Specifier | Meaning |
+| :---: | ------- |
+| `%d` | Integer |
+| `%f` | Floating-point (default 6 decimal places) |
+| `%.2f` | Float with 2 decimal places |
+| `%s` | String |
+| `%n` | Newline |
+| `%-10s` | Left-align in 10-char field |
+| `%10s` | Right-align in 10-char field |
+
+### StringBuilder
+
+A **`StringBuilder`** is a mutable sequence of characters. Unlike `String`, it can be modified without creating new objects — making it efficient for building strings in loops.
+
+```java
+StringBuilder sb = new StringBuilder();
+sb.append("Hello");
+sb.append(", ");
+sb.append("World");
+sb.append("!");
+System.out.println(sb.toString());  // Hello, World!
+```
+
+**Key `StringBuilder` Methods:**
+
+| Method | Description |
+| ------ | ----------- |
+| `append(x)` | Appends x to the end |
+| `insert(i, x)` | Inserts x at index i |
+| `delete(start, end)` | Removes chars from start to end-1 |
+| `reverse()` | Reverses the sequence |
+| `length()` | Returns current length |
+| `toString()` | Converts to a regular String |
+
+```java
+// Efficient table builder
+StringBuilder table = new StringBuilder();
+String[] names = {"Alice", "Bob", "Carol"};
+int[] scores = {95, 87, 92};
+
+for (int i = 0; i < names.length; i++) {
+    table.append(String.format("%-10s %d%n", names[i], scores[i]));
+}
+System.out.print(table.toString());
+```
+
+### Activity 1.16.1 — Formatted Report
+Create a formatted student report card that displays names, scores, and letter grades in aligned columns using `String.format()`.
+
+### Activity 1.16.2 — StringBuilder Reverse
+Use `StringBuilder` to write a program that checks whether a given word is a palindrome.
+
+---
+
+## 1.17 Wrapper Classes — Integer and Double
+
+<details>
+<summary>📌 Standards — 1.17</summary>
+
+| Standard | Description |
+| -------- | ----------- |
+| ICT 1.0 | Academics — apply academic standards |
+| ICT 5.8 | Create and use algorithms |
+| ICT 5.9 | Deconstruct large problems into components |
+| C4.4 | Identify and apply data types and encoding |
+| C4.7 | Use various data structures and objects |
+| C4.6 | Use proper programming language syntax |
+| CRP 1 | Apply appropriate technical skills and academic knowledge |
+| CRP 5 | Utilize critical thinking to make sense of problems |
+
+</details>
+
+- [ ] Use wrapper classes to convert between primitive and reference types.
+- [ ] Understand autoboxing and unboxing.
+
+| Wrapper Class | Primitive | Useful Methods |
+| ------------- | --------- | -------------- |
+| `Integer` | `int` | `Integer.parseInt(str)`, `Integer.MAX_VALUE` |
+| `Double` | `double` | `Double.parseDouble(str)` |
+| `Boolean` | `boolean` | `Boolean.parseBoolean(str)` |
+
+```java
+// Autoboxing: int → Integer automatically
+int x = 5;
+Integer boxed = x;
+
+// Unboxing: Integer → int automatically
+Integer y = 10;
+int unboxed = y;
+
+// Parsing strings to numbers
+String numStr = "42";
+int num = Integer.parseInt(numStr);
+double d = Double.parseDouble("3.14");
+```
+
+### Activity 1.17.1 — Wrapper Classes
+
+Directions: Create a class called WrapperExamples that will demonstrate each of the following:
+
+    Integer Constructor: Create an Integer object from a primitive int.
+
+    intValue() Method: Retrieve the primitive int value from the Integer object.
+
+    Double Constructor: Create a Double object from a primitive double.
+
+    doubleValue() Method: Retrieve the primitive double value from the Double object.
+
+    Maximum Double Value: Display the maximum value for a double.
+
+    Minimum Double Value: Display the minimum value for a double.
+
+    Autoboxing: Automatically converting a primitive int to an Integer object.
+
+    Unboxing: Automatically converting an Integer object back to a primitive int.
+
+Answer the following questions as a .txt file.
+
+    What happens if you try to unbox a null Integer? Why?
+
+    How can you handle situations where a wrapper class might be null before performing unboxing?
+
+    Can you think of a situation where autoboxing might cause performance issues? Explain.
+
+    What happens when you try to change the value of MAX_VALUE and MIN_VALUE?
+
+Submit your java & txt files. Add in-line comments to describe each example. Provide a screenshot of your executed program.
+
+---
+
+## Numbers Riddle Project
 
 In this project, you will write a program that incorporates the Java™ concepts you have learned throughout this unit.
 
-Your program will include:
+<details>
+<summary>📌 Standards — Numbers Riddle Project</summary>
 
-- [ ] Use of the [camelCase](https://betterprogramming.pub/string-case-styles-camel-pascal-snake-and-kebab-case-981407998841) naming convention
-- [ ] Both multiline and inline comments -- **see below**
-- [ ] The print and printtln methods
-- [ ] Variables (appropriately named)
-- [ ] Arithmetic expressions
-- [ ] The compound assignment operator
-- [ ] Conversion between int and double data types
+| Standard | Description |
+| -------- | ----------- |
+| ICT 5.8 | Create and use algorithms and solve problems |
+| ICT 5.9 | Deconstruct large problems into smaller components |
+| ICT 7.5 | Apply high-quality techniques to product design and development |
+| C4.4 | Identify and apply data types and encoding |
+| C4.6 | Use proper programming language syntax |
+| C4.9 | Create programs using control structures and variables |
+| C4.11 | Document development work using comments |
+| C5.4 | Design a solution to a problem |
+| C5.5 | Implement a solution |
+| CRP 1 | Apply appropriate technical skills and academic knowledge |
+| CRP 5 | Utilize critical thinking to make sense of problems |
+
+</details>
+
+- [ ] Apply coding concepts you have learned up to this point.
+- [ ] Apply a programming development process to create your first project.
+	- [ ] I will demonstrate my understanding of Unit 1 by writing a program
 
 **The Numbers Riddle**
 
-<p align="center">Choose any integer, double it, add six, divide it in half, and subtract the number you started with. The answer is always three! </p>
+> Choose any integer, double it, add six, divide it in half, and subtract the number you started with. The answer is always three!
+
+Your program must include:
+- [ ] Use of camelCase naming convention
+- [ ] Both multiline and inline comments
+- [ ] The `print` and `println` methods
+- [ ] Variables (appropriately named)
+- [ ] Arithmetic expressions
+- [ ] The compound assignment operator
+- [ ] Conversion between `int` and `double` data types
+
 
 **Example:** 
 
@@ -1027,7 +1358,8 @@ Looking back at previous programs and the requirements stated above, you know yo
 - [ ] a print statement displaying the number you chose
 - [ ] a print statement displaying each calculation and the final result
 - [ ] comments in your code
-- [ ] use of camelCase when appropriate
+  - [ ] Include Main Block method ~ **See** - [Java Style Guidelines](https://ap-csa-java.github.io/CSA_JAVA-Course/home.html)
+- [ ] appropriate use of camelCase
 
 **Test Cases**
 Create variables and choose numbers that match the following number types to verify your program works for each.  
@@ -1038,25 +1370,3 @@ Create variables and choose numbers that match the following number types to ver
 - [ ] Negative Double
 
 **Document the output and submit your program as a java file.**
-
-<details><summary>Comments Requirement</summary>
-
-```java
-/*=============================================================================
- |   Assignment:  Project 1.6 Numbers Riddle
- |       Author:  [Your First and Last Name (Your E-mail Address)]
- |      
- |  Course Name:  AP Computer Science A
- |   Instructor:  Mr. Jonathan Virak
- |     Due Date:  [Due Date and Time]
- |
- |  Description:  [Describe the program's goal, IN DETAIL.]
- |
- |     Language:  [java]           
- |                
- | Deficiencies:  [If you know of any problems with the code, provide
- |                details here, otherwise clearly state that you know
- |                of no unsatisfied requirements and no logic errors.]
- *===========================================================================*/
-```
-</details>
