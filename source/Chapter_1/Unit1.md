@@ -262,13 +262,91 @@ System.out.println("b = " + b++);  // b = 5 (post-increment: original returned f
 
 ### Assignment 1.4.1 — Compound Operators
 
-Rewrite a provided program using compound assignment and increment/decrement operators, then extend it to calculate average years and days in school for a group.
+```java
+
+public class CompoundOperators
+{
+  public static void main(String[] args)
+  {
+    int numPeople = 0;  
+    double totalYears = 0;
+
+    double years = 11.5;  // I will soon be halfway through my junior year.
+
+    totalYears = totalYears + years;
+    numPeople = numPeople + 1;
+  }
+}
+
+```
+- [ ] Rewrite the statements of the program above to use the compound assignment and/or the increment/decrement operators.
+- [ ] TODO 1) Add at least three other people to your program, such as siblings, friends, or neighbors.
+- [ ] TODO 2) Use people that are in different grades to validate your program can work for different school grades.
+- [ ] TODO 3) For their years in school, use values that indicate they will soon be halfway through their current school year, as shown in the provided code.
+- [ ] TODO 4)The average years you and your friends, siblings, neighbors have been in school.
+- [ ] TODO 5) The total days you have all been in school, assuming you spend 180 days per year in school.
+- [ ] TODO 6) The average days you have all spent in school.
+
+```
+Sample Output:
+I have 11.5 years in school and 0.5 years to graduate.
+Total people: 1, total years: 11.5
+My best friend has 10.5 years in school and 1.5 years to graduate.
+Total people: 2, total years: 22.0
+My sister has 8.5 years in school and 3.5 years to graduate.
+Total people: 3, total years: 30.5
+My neighbor has 5.5 years in school and 6.5 years to graduate.
+Total people: 4, total years: 36.0
+
+Average years in school: 9.0
+Total days in school: 6480.0
+Average days per person: 1620.0 
+```
+
 
 ### Assignment 1.4.2 — Average Test Score / Cashier Totals
 
-Write two programs: one that averages four test scores, and one that calculates cashier totals for burgers and fries.
+Directions: Write two programs that will do the following:
+
+**Average Test Score**
+- [ ] ask the user for four test scores
+- [ ] calculate and show the result
+
+**Cashier Totals**
+- [ ] ask the user for the number of burgers sold and how much each one costs
+- [ ] ask the user for the number of fries sold and how much each costs
+- [ ] display the total items sold
+- [ ] display the total sales
+
+**Sample Output:**
+```
+Enter the first test score:
+95
+Enter the second test score:
+87
+Enter the third test score:
+74
+Enter the forth test score:
+75
+
+Average test score: 82.75%
+---------------------------------
+Enter the number of burgers ordered:
+10
+Price of a burger:
+5.65
+Enter the number of fries ordered:
+4
+Price of fries:
+1.95
+
+Total Items Sold: 14
+Total Sales: $64.3
+```
+
 
 ---
+
 
 ## 1.5 Casting and Range of Variables
 
@@ -291,15 +369,65 @@ Write two programs: one that averages four test scores, and one that calculates 
 - [ ] Perform mathematical rounding.
 	- [ ] I will be able to explain why a code segment will not compile or work as intended.
 
-**Casting** is converting from one data type to another, such as from a *double* to an *int*, potentially losing data.
+There are some unique features to Java that help programmers create programs that are flexible in how they display data.  We learned earlier that we need to declare a variable by it's type.  It can be an `int` or a `double`.  As you may remember, an `int` is any whole negative or positive number.
+
+A `double` is any number with a decimal.  1.0 is a whole number, but it has a decimal. So, Java considers 1.0 as a `double`.  We can convert the `double` by declaring a new variable that changes the `double` to an `int`.  **Casting** is converting from one data type to another, such as from a *double* to an *int*, potentially losing data.
 
 ```java
 double temp = 98.6;
 int newTemp = (int)temp;  // newTemp = 98 (truncated, NOT rounded)
 ```
 
+```java
+double a = 3.9;
+int b = (int) a;
+System.out.println(b); // b is 3
+
+double c = -4.8;
+int d = (int) c;
+System.out.println(d); // d is -4
+```
+In both cases, the digits to the right of the decimal are is just chopped off:
+
+
+>
+>	To fix this, you can use `Math.round(x)` ***(we will get to this later, as a class)***or you can add .5 to correct the problem.
+>
+>
+>	`double a = 3.9;`
+>	`int b = (int) a + .5;`
+>   `System.out.println(b); // b is 4`
+>	`double c = -4.8;`
+>	`int d = (int) c + .5;`
+>   `System.out.println(d); // d is -5`
+>
+
+You will need to be familiar with some terms:
+
 - [ ] **widening** — converting from a smaller data type to a larger: `byte` → `short` → `char` → `int` → `long` → `float` → `double`
 - [ ] **narrowing** — converting from a larger data type to a smaller: `double` → `float` → `long` → `int` → `char` → `short` → `byte`
+
+In this instance, we 'narrowed' the value of temp.  There is another term that you need to be familiar with and it is called **casting**.  Casting is converting from one data type to another, such as from a *double* to an *int*, potentially losing data. 
+
+Take a look at this program:
+
+```java
+public class CastingEggs {
+  public static void main(String args[]) {
+    int eggs = 9;
+    int dozen = 12;// the variable dozen will not change
+
+    System.out.println("Total eggs = " + eggs/dozen + " dozen");
+    System.out.println("Total eggs = " + eggs/ (double)dozen + " dozen");
+    System.out.println("Total eggs = " + (double)eggs/ dozen + " dozen");
+
+// Example output:
+// Total eggs = 0 dozen
+// Total eggs = 0.75 dozen
+// Total eggs = 0.75 dozen
+
+```
+We know that we don't have 0 eggs.  We can rewrite our program to show how many eggs we have in decimal form.
 
 ### Assignment 1.5.1 — FivePlanetTravel
 
@@ -435,15 +563,17 @@ import java.util.ArrayList;
 - [ ] Use single-line comments to make code more readable.
 	- [ ] I will practice industry standard commenting standards in my programs.
 
-There are three ways in Java to create a comment:
+There are different ways to create a comment in Java:
 
 `// Using these two slashes will create a single-line comment.`
 
 `/* Using the slash and an asterisk will create a multi-line comment. */`
 
+`/** Using the slash and two asterisks and end with asterisk and a slash will create a Javadoc comment. */
+
 `/** Using the slash and two asterisks will create a Java API documentation comment. **/`
 
-With **every** program that you submit, include the following block comment at the top of your main file:
+With **every** .java project that you submit, include the following block comment at the top of your main file:
 
 ```java
 /*=============================================================================
