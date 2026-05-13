@@ -64,10 +64,8 @@ Notice that with every `{` there is a corresponding `}`. You may hear me refer t
 In Java there is a "main method" that is required for all java programs. The code will always be the same:
 
 ```java
-public static void main(String args[])
+public static void main(String args[]) // `public` is an access specifier.
 ```
-
-> **NOTE:** `public` is an access specifier.
 
 
 > ### Assignment 1.1.1 — My Timeline
