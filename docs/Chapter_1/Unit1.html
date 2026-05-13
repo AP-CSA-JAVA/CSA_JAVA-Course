@@ -710,11 +710,86 @@
 </div>
 <section id="assignment-1-4-1-compound-operators">
 <h3>Assignment 1.4.1 — Compound Operators<a class="headerlink" href="#assignment-1-4-1-compound-operators" title="Link to this heading">¶</a></h3>
-<p>Rewrite a provided program using compound assignment and increment/decrement operators, then extend it to calculate average years and days in school for a group.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CompoundOperators</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">numPeople</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">totalYears</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">years</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">11.5</span><span class="p">;</span><span class="w">  </span><span class="c1">// I will soon be halfway through my junior year.</span>
+
+<span class="w">    </span><span class="n">totalYears</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">totalYears</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">years</span><span class="p">;</span>
+<span class="w">    </span><span class="n">numPeople</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numPeople</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Rewrite the statements of the program above to use the compound assignment and/or the increment/decrement operators.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> TODO 1) Add at least three other people to your program, such as siblings, friends, or neighbors.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> TODO 2) Use people that are in different grades to validate your program can work for different school grades.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> TODO 3) For their years in school, use values that indicate they will soon be halfway through their current school year, as shown in the provided code.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> TODO 4)The average years you and your friends, siblings, neighbors have been in school.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> TODO 5) The total days you have all been in school, assuming you spend 180 days per year in school.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> TODO 6) The average days you have all spent in school.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Sample</span> <span class="n">Output</span><span class="p">:</span>
+<span class="n">I</span> <span class="n">have</span> <span class="mf">11.5</span> <span class="n">years</span> <span class="ow">in</span> <span class="n">school</span> <span class="ow">and</span> <span class="mf">0.5</span> <span class="n">years</span> <span class="n">to</span> <span class="n">graduate</span><span class="o">.</span>
+<span class="n">Total</span> <span class="n">people</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="n">total</span> <span class="n">years</span><span class="p">:</span> <span class="mf">11.5</span>
+<span class="n">My</span> <span class="n">best</span> <span class="n">friend</span> <span class="n">has</span> <span class="mf">10.5</span> <span class="n">years</span> <span class="ow">in</span> <span class="n">school</span> <span class="ow">and</span> <span class="mf">1.5</span> <span class="n">years</span> <span class="n">to</span> <span class="n">graduate</span><span class="o">.</span>
+<span class="n">Total</span> <span class="n">people</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="n">total</span> <span class="n">years</span><span class="p">:</span> <span class="mf">22.0</span>
+<span class="n">My</span> <span class="n">sister</span> <span class="n">has</span> <span class="mf">8.5</span> <span class="n">years</span> <span class="ow">in</span> <span class="n">school</span> <span class="ow">and</span> <span class="mf">3.5</span> <span class="n">years</span> <span class="n">to</span> <span class="n">graduate</span><span class="o">.</span>
+<span class="n">Total</span> <span class="n">people</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="n">total</span> <span class="n">years</span><span class="p">:</span> <span class="mf">30.5</span>
+<span class="n">My</span> <span class="n">neighbor</span> <span class="n">has</span> <span class="mf">5.5</span> <span class="n">years</span> <span class="ow">in</span> <span class="n">school</span> <span class="ow">and</span> <span class="mf">6.5</span> <span class="n">years</span> <span class="n">to</span> <span class="n">graduate</span><span class="o">.</span>
+<span class="n">Total</span> <span class="n">people</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="n">total</span> <span class="n">years</span><span class="p">:</span> <span class="mf">36.0</span>
+
+<span class="n">Average</span> <span class="n">years</span> <span class="ow">in</span> <span class="n">school</span><span class="p">:</span> <span class="mf">9.0</span>
+<span class="n">Total</span> <span class="n">days</span> <span class="ow">in</span> <span class="n">school</span><span class="p">:</span> <span class="mf">6480.0</span>
+<span class="n">Average</span> <span class="n">days</span> <span class="n">per</span> <span class="n">person</span><span class="p">:</span> <span class="mf">1620.0</span> 
+</pre></div>
+</div>
 </section>
 <section id="assignment-1-4-2-average-test-score-cashier-totals">
 <h3>Assignment 1.4.2 — Average Test Score / Cashier Totals<a class="headerlink" href="#assignment-1-4-2-average-test-score-cashier-totals" title="Link to this heading">¶</a></h3>
-<p>Write two programs: one that averages four test scores, and one that calculates cashier totals for burgers and fries.</p>
+<p>Directions: Write two programs that will do the following:</p>
+<p><strong>Average Test Score</strong></p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> ask the user for four test scores</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> calculate and show the result</p></li>
+</ul>
+<p><strong>Cashier Totals</strong></p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> ask the user for the number of burgers sold and how much each one costs</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> ask the user for the number of fries sold and how much each costs</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> display the total items sold</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> display the total sales</p></li>
+</ul>
+<p><strong>Sample Output:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Enter the first test score:
+95
+Enter the second test score:
+87
+Enter the third test score:
+74
+Enter the forth test score:
+75
+
+Average test score: 82.75%
+---------------------------------
+Enter the number of burgers ordered:
+10
+Price of a burger:
+5.65
+Enter the number of fries ordered:
+4
+Price of fries:
+1.95
+
+Total Items Sold: 14
+Total Sales: $64.3
+</pre></div>
+</div>
 </section>
 </section>
 <hr class="docutils" />
@@ -763,15 +838,54 @@
 </ul>
 </li>
 </ul>
-<p><strong>Casting</strong> is converting from one data type to another, such as from a <em>double</em> to an <em>int</em>, potentially losing data.</p>
+<p>There are some unique features to Java that help programmers create programs that are flexible in how they display data.  We learned earlier that we need to declare a variable by it’s type.  It can be an <code class="docutils literal notranslate"><span class="pre">int</span></code> or a <code class="docutils literal notranslate"><span class="pre">double</span></code>.  As you may remember, an <code class="docutils literal notranslate"><span class="pre">int</span></code> is any whole negative or positive number.</p>
+<p>A <code class="docutils literal notranslate"><span class="pre">double</span></code> is any number with a decimal.  1.0 is a whole number, but it has a decimal. So, Java considers 1.0 as a <code class="docutils literal notranslate"><span class="pre">double</span></code>.  We can convert the <code class="docutils literal notranslate"><span class="pre">double</span></code> by declaring a new variable that changes the <code class="docutils literal notranslate"><span class="pre">double</span></code> to an <code class="docutils literal notranslate"><span class="pre">int</span></code>.  <strong>Casting</strong> is converting from one data type to another, such as from a <em>double</em> to an <em>int</em>, potentially losing data.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">98.6</span><span class="p">;</span>
 <span class="kt">int</span><span class="w"> </span><span class="n">newTemp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">temp</span><span class="p">;</span><span class="w">  </span><span class="c1">// newTemp = 98 (truncated, NOT rounded)</span>
 </pre></div>
 </div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.9</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">b</span><span class="p">);</span><span class="w"> </span><span class="c1">// b is 3</span>
+
+<span class="kt">double</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mf">4.8</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">d</span><span class="p">);</span><span class="w"> </span><span class="c1">// d is -4</span>
+</pre></div>
+</div>
+<p>In both cases, the digits to the right of the decimal are is just chopped off:</p>
+<blockquote>
+<div><p>To fix this, you can use <code class="docutils literal notranslate"><span class="pre">Math.round(x)</span></code> ***(we will get to this later, as a class)***or you can add .5 to correct the problem.</p>
+<p><code class="docutils literal notranslate"><span class="pre">double</span> <span class="pre">a</span> <span class="pre">=</span> <span class="pre">3.9;</span></code>
+<code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">b</span> <span class="pre">=</span> <span class="pre">(int)</span> <span class="pre">a</span> <span class="pre">+</span> <span class="pre">.5;</span></code>
+<code class="docutils literal notranslate"><span class="pre">System.out.println(b);</span> <span class="pre">//</span> <span class="pre">b</span> <span class="pre">is</span> <span class="pre">4</span></code>
+<code class="docutils literal notranslate"><span class="pre">double</span> <span class="pre">c</span> <span class="pre">=</span> <span class="pre">-4.8;</span></code>
+<code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">d</span> <span class="pre">=</span> <span class="pre">(int)</span> <span class="pre">c</span> <span class="pre">+</span> <span class="pre">.5;</span></code>
+<code class="docutils literal notranslate"><span class="pre">System.out.println(d);</span> <span class="pre">//</span> <span class="pre">d</span> <span class="pre">is</span> <span class="pre">-5</span></code></p>
+</div></blockquote>
+<p>You will need to be familiar with some terms:</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>widening</strong> — converting from a smaller data type to a larger: <code class="docutils literal notranslate"><span class="pre">byte</span></code> → <code class="docutils literal notranslate"><span class="pre">short</span></code> → <code class="docutils literal notranslate"><span class="pre">char</span></code> → <code class="docutils literal notranslate"><span class="pre">int</span></code> → <code class="docutils literal notranslate"><span class="pre">long</span></code> → <code class="docutils literal notranslate"><span class="pre">float</span></code> → <code class="docutils literal notranslate"><span class="pre">double</span></code></p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>narrowing</strong> — converting from a larger data type to a smaller: <code class="docutils literal notranslate"><span class="pre">double</span></code> → <code class="docutils literal notranslate"><span class="pre">float</span></code> → <code class="docutils literal notranslate"><span class="pre">long</span></code> → <code class="docutils literal notranslate"><span class="pre">int</span></code> → <code class="docutils literal notranslate"><span class="pre">char</span></code> → <code class="docutils literal notranslate"><span class="pre">short</span></code> → <code class="docutils literal notranslate"><span class="pre">byte</span></code></p></li>
 </ul>
+<p>In this instance, we ‘narrowed’ the value of temp.  There is another term that you need to be familiar with and it is called <strong>casting</strong>.  Casting is converting from one data type to another, such as from a <em>double</em> to an <em>int</em>, potentially losing data.</p>
+<p>Take a look at this program:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CastingEggs</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">args</span><span class="o">[]</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">eggs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">dozen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span><span class="c1">// the variable dozen will not change</span>
+
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Total eggs = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">eggs</span><span class="o">/</span><span class="n">dozen</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; dozen&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Total eggs = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">eggs</span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="n">dozen</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; dozen&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Total eggs = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="n">eggs</span><span class="o">/</span><span class="w"> </span><span class="n">dozen</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; dozen&quot;</span><span class="p">);</span>
+
+<span class="c1">// Example output:</span>
+<span class="c1">// Total eggs = 0 dozen</span>
+<span class="c1">// Total eggs = 0.75 dozen</span>
+<span class="c1">// Total eggs = 0.75 dozen</span>
+</pre></div>
+</div>
+<p>We know that we don’t have 0 eggs.  We can rewrite our program to show how many eggs we have in decimal form.</p>
 <section id="assignment-1-5-1-fiveplanettravel">
 <h3>Assignment 1.5.1 — FivePlanetTravel<a class="headerlink" href="#assignment-1-5-1-fiveplanettravel" title="Link to this heading">¶</a></h3>
 <p>You will explore the PlanetTravel program called <strong>FivePlanetTravel</strong>. The program is set up to plan a five-planet tour!</p>
@@ -958,11 +1072,12 @@
 </ul>
 </li>
 </ul>
-<p>There are three ways in Java to create a comment:</p>
+<p>There are different ways to create a comment in Java:</p>
 <p><code class="docutils literal notranslate"><span class="pre">//</span> <span class="pre">Using</span> <span class="pre">these</span> <span class="pre">two</span> <span class="pre">slashes</span> <span class="pre">will</span> <span class="pre">create</span> <span class="pre">a</span> <span class="pre">single-line</span> <span class="pre">comment.</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">/*</span> <span class="pre">Using</span> <span class="pre">the</span> <span class="pre">slash</span> <span class="pre">and</span> <span class="pre">an</span> <span class="pre">asterisk</span> <span class="pre">will</span> <span class="pre">create</span> <span class="pre">a</span> <span class="pre">multi-line</span> <span class="pre">comment.</span> <span class="pre">*/</span></code></p>
+<p>`/** Using the slash and two asterisks and end with asterisk and a slash will create a Javadoc comment. */</p>
 <p><code class="docutils literal notranslate"><span class="pre">/**</span> <span class="pre">Using</span> <span class="pre">the</span> <span class="pre">slash</span> <span class="pre">and</span> <span class="pre">two</span> <span class="pre">asterisks</span> <span class="pre">will</span> <span class="pre">create</span> <span class="pre">a</span> <span class="pre">Java</span> <span class="pre">API</span> <span class="pre">documentation</span> <span class="pre">comment.</span> <span class="pre">**/</span></code></p>
-<p>With <strong>every</strong> program that you submit, include the following block comment at the top of your main file:</p>
+<p>With <strong>every</strong> .java project that you submit, include the following block comment at the top of your main file:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/*=============================================================================</span>
 <span class="cm"> |   Assignment:  Program #[n]:  [Assignment Title]</span>
 <span class="cm"> |       Author:  [Your Name]</span>
