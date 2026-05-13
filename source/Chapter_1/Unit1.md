@@ -67,7 +67,7 @@ In Java there is a "main method" that is required for all java programs. The cod
 public static void main(String args[])
 ```
 
-> [!Note] **`public`** is an access specifier.
+> **`public`** is an access specifier.
 
 ### Assignment 1.1.1 — My Timeline
 
