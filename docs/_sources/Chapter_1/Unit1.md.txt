@@ -111,16 +111,18 @@ Include seven meaningful events. No repetitive events such as "started kindergar
 - [ ] Determine the appropriate use for specific variables and data types.
 	- [ ] I will be able to write a program using primitive and non-primitive types.
 
-There are eight primitive types in Java: `int`, `double`, `boolean`, `float`, `char`, `byte`, `long`, and `short`. For this course we will primarily use `int`, `double`, and `boolean`.
+There are **eight primitive types** in Java: `int`, `double`, `boolean`, `float`, `char`, `byte`, `long`, and `short`. 
+For this course we will primarily use `int`, `double`, and `boolean`.
 
-- [ ] **int** — whole numbers; uses 32 bits of memory
-- [ ] **double** — 64-bit decimal numbers
-- [ ] **boolean** — true or false values
-- [ ] **float** — similar to double but uses less memory
-- [ ] **char** — 16-bit unicode character (`\u0000` to `\uffff`)
-- [ ] **byte** — 8-bit integer, range −128 to 127
-- [ ] **long** — 64-bit integer, range −2^63 to 2^63
-- [ ] **short** — 16-bit integer, range −32,768 to 32,767
+- [ ] `int` — whole numbers; uses 32 bits of memory
+- [ ] `double` — 64-bit decimal numbers
+- [ ] `boolean` — true or false values
+- [ ] `float` — 32-bit decimal numbers; uses less memory than `double`
+- [ ] `char` — 16-bit Unicode character (`\u0000` to `\uffff`)
+- [ ] `byte` — 8-bit integer, range −128 to 127
+- [ ] `long` — 64-bit integer, range −2^63 to 2^63 − 1
+- [ ] `short` — 16-bit integer, range −32,768 to 32,767
+
 
 Non-primitive data types include String, Arrays, and Classes:
 - [ ] **String** — a collection of characters enclosed in quotes
