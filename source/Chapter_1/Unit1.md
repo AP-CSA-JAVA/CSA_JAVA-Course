@@ -1,5 +1,5 @@
 # Unit 1 — Using Objects and Methods
-*AP Exam Weighting: 15–25% | Suggested Pacing: ~32–34 Class Periods*
+*AP Exam Weighting: 15–25%*
 
 <details>
 <summary>📋 Unit 1 Standards Alignment</summary>
