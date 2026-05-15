@@ -200,7 +200,8 @@
 <p class="caption" role="heading"><span class="caption-text">Chapter 1:</span></p>
 <ul class="current">
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Unit 1 — Using Objects and Methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#id1">Unit 1 — Using Objects and Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#activity-1-7-1-magic-8-ball-exploring-apis-and-libraries">Activity 1.7.1 — Magic 8-Ball: Exploring APIs and Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#id13">Unit 1 — Using Objects and Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Unit2.html">Unit 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Unit3.html">Unit 3</a></li>
 </ul>
@@ -261,6 +262,121 @@
           <section id="unit-1-using-objects-and-methods">
 <h1>Unit 1 — Using Objects and Methods<a class="headerlink" href="#unit-1-using-objects-and-methods" title="Link to this heading">¶</a></h1>
 <p><em>AP Exam Weighting: 15–25%</em></p>
+<section id="ap-computer-science-a-assignment-rubric">
+<h2>AP Computer Science A — Assignment Rubric<a class="headerlink" href="#ap-computer-science-a-assignment-rubric" title="Link to this heading">¶</a></h2>
+<hr class="docutils" />
+<details>
+<summaryAssignment Header></summary>
+<p>All submitted documents and <code class="docutils literal notranslate"><span class="pre">.java</span></code> files must include the following header. This mirrors the block comment required in <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> and follows the standard used by university CS departments.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Name:          [Your Full Name]
+Partner:       [Partner&#39;s Full Name, or &quot;None&quot;]
+Course:        AP Computer Science A
+Instructor:    [Instructor Name]
+Assignment:    [Assignment Number — Assignment Title]
+Due Date:      [Month Day, Year]
+</pre></div>
+</div>
+<p><strong>Example:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="nl">Name</span><span class="p">:</span><span class="w">          </span><span class="n">Jordan</span><span class="w"> </span><span class="n">Smith</span>
+<span class="nl">Partner</span><span class="p">:</span><span class="w">       </span><span class="n">Alex</span><span class="w"> </span><span class="n">Rivera</span>
+<span class="nl">Course</span><span class="p">:</span><span class="w">        </span><span class="n">AP</span><span class="w"> </span><span class="n">Computer</span><span class="w"> </span><span class="n">Science</span><span class="w"> </span><span class="n">A</span>
+<span class="nl">Instructor</span><span class="p">:</span><span class="w">    </span><span class="o">[</span><span class="n">Instructor</span><span class="w"> </span><span class="n">Name</span><span class="o">]</span>
+<span class="nl">Assignment</span><span class="p">:</span><span class="w">    </span><span class="mf">1.3.1</span><span class="w"> </span><span class="err">—</span><span class="w"> </span><span class="n">Calculate</span><span class="w"> </span><span class="n">Your</span><span class="w"> </span><span class="n">Weight</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">Jupiter</span>
+<span class="n">Due</span><span class="w"> </span><span class="n">Date</span><span class="p">:</span><span class="w">      </span><span class="n">September</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">2026</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>This header must appear at the top of your <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> block comment AND on your Test Cases document. Submissions missing the header will be penalized one point.</p>
+</div></blockquote>
+<hr class="docutils" />
+<p><strong>Submission Requirements</strong></p>
+<p>All assignments require the following unless otherwise stated:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> All <code class="docutils literal notranslate"><span class="pre">.java</span></code> source file(s)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Test Cases document showing inputs, expected output, actual output, and Pass/Fail result</p></li>
+</ul>
+<p><em><strong>Projects</strong></em> will have their own dedicated rubric and submission instructions.</p>
+<hr class="docutils" />
+<p><strong>5-Point Assignment Rubric</strong></p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>Points</p></th>
+<th class="head text-center"><p>Grade</p></th>
+<th class="head"><p>Compilation &amp; Output</p></th>
+<th class="head"><p>Documentation &amp; Style</p></th>
+<th class="head"><p>Submission</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p><strong>5</strong></p></td>
+<td class="text-center"><p>Full Credit</p></td>
+<td><p>Program compiles and runs without errors or warnings. Output matches expected results for <strong>all</strong> test cases.</p></td>
+<td><p>Block comment header fully completed. Meaningful variable names, camelCase convention, proper indentation. Inline and multi-line comments present throughout.</p></td>
+<td><p>All required <code class="docutils literal notranslate"><span class="pre">.java</span></code> files and test cases submitted with completed assignment header.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong>4</strong></p></td>
+<td class="text-center"><p>Near Full Credit</p></td>
+<td><p>Program compiles and runs. Output is correct for most test cases with <strong>one</strong> minor error or omission.</p></td>
+<td><p>Block comment header complete. Comments mostly present. Minor style or formatting inconsistency.</p></td>
+<td><p>All required files submitted. Assignment header present.</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong>3</strong></p></td>
+<td class="text-center"><p>Partial Credit</p></td>
+<td><p>Program compiles but produces incorrect output for <strong>some</strong> test cases, or compiles with warnings.</p></td>
+<td><p>Limited comments. Block comment header partially completed. Variable names or formatting inconsistent.</p></td>
+<td><p>Most required files submitted. Test cases incomplete or partially documented.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong>2</strong></p></td>
+<td class="text-center"><p>Minimal Credit</p></td>
+<td><p>Program has syntax or logic errors that cause significant incorrect output, or fails to fully compile.</p></td>
+<td><p>Little to no commenting. Block comment header missing or blank. Poor variable naming or formatting.</p></td>
+<td><p>A required <code class="docutils literal notranslate"><span class="pre">.java</span></code> file or test cases document is missing. Assignment header absent.</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong>1</strong></p></td>
+<td class="text-center"><p>Attempted</p></td>
+<td><p>Code submitted shows a clear attempt but does not compile or run.</p></td>
+<td><p>Minimal or no documentation present.</p></td>
+<td><p>At least one file submitted, but submission is largely incomplete.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong>0</strong></p></td>
+<td class="text-center"><p>No Credit</p></td>
+<td><p>Nothing submitted, file is empty, or code is unrelated to the assignment.</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<p><strong>Academic Integrity Policy</strong></p>
+<blockquote>
+<div><p><strong>Any submission that violates academic integrity will receive a grade of 0 and will be referred for disciplinary action in accordance with school policy.</strong></p>
+</div></blockquote>
+<p>The following are considered academic integrity violations in this course:</p>
+<ul class="simple">
+<li><p>Submitting another student’s code as your own</p></li>
+<li><p>Copying code from the internet without citation and modification</p></li>
+<li><p>Allowing another student to copy your code</p></li>
+<li><p>Using AI-generated code and submitting it as your own work without instructor approval</p></li>
+<li><p>Sharing your source files with another student outside of an approved partner assignment</p></li>
+</ul>
+<p><strong>Approved Collaboration:</strong> Discussing concepts, approaches, and debugging strategies with classmates is encouraged. Writing or sharing actual code is not permitted unless the assignment is explicitly designated as a partner assignment.</p>
+<p><strong>Partner Assignments:</strong> Both partners must be listed in the assignment header. Both partners are equally responsible for the integrity of the submitted work.</p>
+<hr class="docutils" />
+<p><strong>Late Work Policy</strong></p>
+<p>Late assignments are graded using the same rubric above with no grade penalty. Submit your best work regardless of when it is turned in.</p>
+<hr class="docutils" />
+<p><strong>Grading Notes</strong></p>
+<ul class="simple">
+<li><p>A program that does not compile cannot earn higher than a <strong>2</strong>.</p></li>
+<li><p>A missing test cases document cannot earn higher than a <strong>4</strong>.</p></li>
+<li><p>A missing block comment header deducts <strong>1 point</strong> from the earned score.</p></li>
+<li><p>A missing assignment header deducts <strong>1 point</strong> from the earned score.</p></li>
+<li><p>Style and documentation are evaluated holistically — occasional lapses do not automatically lower a grade, but a consistent pattern does.</p></li>
+</ul>
+</details>
+<hr class="docutils" />
 <details>
 <summary>📋 Unit 1 Standards Alignment</summary>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -341,6 +457,7 @@
 </table>
 </div>
 </details>
+</section>
 <hr class="docutils" />
 <section id="introduction-to-algorithms-programming-and-compilers">
 <h2>1.1 Introduction to Algorithms, Programming, and Compilers<a class="headerlink" href="#introduction-to-algorithms-programming-and-compilers" title="Link to this heading">¶</a></h2>
@@ -601,8 +718,8 @@ For this course we will primarily use <code class="docutils literal notranslate"
 </table>
 </div>
 <p><strong>Note:</strong> When you divide an integer by zero your program will return an <em>ArithmeticException</em> error.</p>
-<section id="assignment-1-3-1-calculate-your-weight-on-jupiter">
-<h3>Assignment 1.3.1 — Calculate Your Weight on Jupiter<a class="headerlink" href="#assignment-1-3-1-calculate-your-weight-on-jupiter" title="Link to this heading">¶</a></h3>
+<blockquote>
+<div><p class="rubric" id="assignment-1-3-1-calculate-your-weight-on-jupiter">Assignment 1.3.1 — Calculate Your Weight on Jupiter</p>
 <p>Using the equation below, calculate what your weight would be on different planets:</p>
 <p><code class="docutils literal notranslate"><span class="pre">weightOnPlanet</span> <span class="pre">=</span> <span class="pre">(weightOnEarth</span> <span class="pre">/</span> <span class="pre">earthGravity)</span> <span class="pre">×</span> <span class="pre">planetGravity</span></code></p>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -640,15 +757,38 @@ For this course we will primarily use <code class="docutils literal notranslate"
 </tbody>
 </table>
 </div>
-</section>
-<section id="assignment-1-3-2-simple-math">
-<h3>Assignment 1.3.2 — Simple Math<a class="headerlink" href="#assignment-1-3-2-simple-math" title="Link to this heading">¶</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Starter Code.  Add 3 more planets that you will travel to.</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">GalaxyWeight</span>
+<span class="p">{</span>
+<span class="w">	</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span>
+<span class="w">	</span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// declare and initialize weightOnEarth, earthGravity, and jupiterGravity </span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">weightOnEarth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">177</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">earthGravity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">9.81</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">jupiterGravity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">24.79</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// calculate weight</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">weightOnJupiter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">weightOnEarth</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">jupiterGravity</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">earthGravity</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// show results</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Your weight on Jupiter is &quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">weightOnJupiter</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot; lbs.&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<hr class="docutils" />
+<blockquote>
+<div><p class="rubric" id="assignment-1-3-2-simple-math">Assignment 1.3.2 — Simple Math</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create a program that will ask the user for two distinct integers</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use the Scanner class to receive input from the user</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Store those values and perform addition, subtraction, multiplication, division, and modulo</p></li>
 </ul>
-</section>
+</div></blockquote>
 </section>
 <hr class="docutils" />
 <section id="assignment-statements-and-input">
@@ -711,12 +851,12 @@ For this course we will primarily use <code class="docutils literal notranslate"
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;b = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="o">++</span><span class="p">);</span><span class="w">  </span><span class="c1">// b = 5 (post-increment: original returned first)</span>
 </pre></div>
 </div>
-<section id="assignment-1-4-1-compound-operators">
-<h3>Assignment 1.4.1 — Compound Operators<a class="headerlink" href="#assignment-1-4-1-compound-operators" title="Link to this heading">¶</a></h3>
+<blockquote>
+<div><p class="rubric" id="assignment-1-4-1-compound-operators">Assignment 1.4.1 — Compound Operators</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CompoundOperators</span>
 <span class="p">{</span>
 <span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
-<span class="w">  </span><span class="p">{</span>
+<span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">numPeople</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span>
 <span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">totalYears</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 
@@ -737,7 +877,7 @@ For this course we will primarily use <code class="docutils literal notranslate"
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> TODO 5) The total days you have all been in school, assuming you spend 180 days per year in school.</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> TODO 6) The average days you have all spent in school.</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Sample</span> <span class="n">Output</span><span class="p">:</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">**</span><span class="n">Sample</span> <span class="n">Output</span><span class="p">:</span><span class="o">**</span>
 <span class="n">I</span> <span class="n">have</span> <span class="mf">11.5</span> <span class="n">years</span> <span class="ow">in</span> <span class="n">school</span> <span class="ow">and</span> <span class="mf">0.5</span> <span class="n">years</span> <span class="n">to</span> <span class="n">graduate</span><span class="o">.</span>
 <span class="n">Total</span> <span class="n">people</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="n">total</span> <span class="n">years</span><span class="p">:</span> <span class="mf">11.5</span>
 <span class="n">My</span> <span class="n">best</span> <span class="n">friend</span> <span class="n">has</span> <span class="mf">10.5</span> <span class="n">years</span> <span class="ow">in</span> <span class="n">school</span> <span class="ow">and</span> <span class="mf">1.5</span> <span class="n">years</span> <span class="n">to</span> <span class="n">graduate</span><span class="o">.</span>
@@ -752,9 +892,10 @@ For this course we will primarily use <code class="docutils literal notranslate"
 <span class="n">Average</span> <span class="n">days</span> <span class="n">per</span> <span class="n">person</span><span class="p">:</span> <span class="mf">1620.0</span> 
 </pre></div>
 </div>
-</section>
-<section id="assignment-1-4-2-average-test-score-cashier-totals">
-<h3>Assignment 1.4.2 — Average Test Score / Cashier Totals<a class="headerlink" href="#assignment-1-4-2-average-test-score-cashier-totals" title="Link to this heading">¶</a></h3>
+</div></blockquote>
+<hr class="docutils" />
+<blockquote>
+<div><p class="rubric" id="assignment-1-4-2-average-test-score-cashier-totals">Assignment 1.4.2 — Average Test Score / Cashier Totals</p>
 <p>Directions: Write two programs that will do the following:</p>
 <p><strong>Average Test Score</strong></p>
 <ul class="contains-task-list simple">
@@ -793,7 +934,7 @@ Total Items Sold: 14
 Total Sales: $64.3
 </pre></div>
 </div>
-</section>
+</div></blockquote>
 </section>
 <hr class="docutils" />
 <section id="casting-and-range-of-variables">
@@ -889,14 +1030,11 @@ Total Sales: $64.3
 </pre></div>
 </div>
 <p>We know that we don’t have 0 eggs.  We can rewrite our program to show how many eggs we have in decimal form.</p>
-<section id="assignment-1-5-1-fiveplanettravel">
-<h3>Assignment 1.5.1 — FivePlanetTravel<a class="headerlink" href="#assignment-1-5-1-fiveplanettravel" title="Link to this heading">¶</a></h3>
+<blockquote>
+<div><p class="rubric" id="assignment-1-5-1-fiveplanettravel">Assignment 1.5.1 — FivePlanetTravel</p>
 <p>You will explore the PlanetTravel program called <strong>FivePlanetTravel</strong>. The program is set up to plan a five-planet tour!</p>
 <p><strong>Starter Code:</strong></p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/* </span>
-<span class="cm"> * Activity 1.1.5</span>
-<span class="cm"> */</span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">FivePlanetTravel</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">FivePlanetTravel</span>
 <span class="p">{</span>
 <span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
 <span class="w">  </span><span class="p">{</span>
@@ -948,8 +1086,8 @@ Total Sales: $64.3
 <span class="n">Average</span> <span class="n">travel</span> <span class="n">time</span><span class="p">:</span> <span class="n">approximatley</span> <span class="mi">4</span> <span class="n">hours</span><span class="o">.</span>
 </pre></div>
 </div>
+</div></blockquote>
 <p>Your output should look similar to the example above. You will write a <strong>widening algorithm</strong> that shows the travel time to and from all planets using casting. The one rule is that you must use the provided code and <strong>not change any provided data types</strong>.</p>
-</section>
 </section>
 <hr class="docutils" />
 <section id="compound-assignment-operators">
@@ -1028,7 +1166,213 @@ Total Sales: $64.3
 </pre></div>
 </div>
 </section>
+</section>
 <hr class="docutils" />
+<section id="activity-1-7-1-magic-8-ball-exploring-apis-and-libraries">
+<h1>Activity 1.7.1 — Magic 8-Ball: Exploring APIs and Libraries<a class="headerlink" href="#activity-1-7-1-magic-8-ball-exploring-apis-and-libraries" title="Link to this heading">¶</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">¶</a></h2>
+<p>In this activity you will explore the Java API documentation to understand how libraries and packages work, then build a Magic 8-Ball program that imports and uses classes from the Java standard library.</p>
+<p>By the end of this activity you will be able to:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Explain what an API and a library are in the context of Java</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Navigate the official Java API documentation at <a class="reference external" href="https://docs.oracle.com/javase/8/docs/api/">docs.oracle.com</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use an <code class="docutils literal notranslate"><span class="pre">import</span></code> statement to include a package in your program</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Call methods from <code class="docutils literal notranslate"><span class="pre">java.util.Scanner</span></code> and <code class="docutils literal notranslate"><span class="pre">java.util.Random</span></code> meaningfully in a program</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="background">
+<h2>Background<a class="headerlink" href="#background" title="Link to this heading">¶</a></h2>
+<p>When you write a Java program, you do not have to build everything from scratch. Java provides thousands of pre-built classes organized into <strong>packages</strong>. A <strong>package</strong> is a folder of related classes. Together, all of these packages make up the Java <strong>standard library</strong>.</p>
+<p>An <strong>Application Programming Interface (API)</strong> is the set of rules and definitions that describes how you interact with a library — what classes are available, what methods they have, what parameters they take, and what they return. Think of the API documentation as the instruction manual for the library.</p>
+<p>To use a class from a package that is not automatically included, you must <strong>import</strong> it:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span><span class="w">   </span><span class="c1">// imports the Scanner class from the java.util package</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Random</span><span class="p">;</span><span class="w">    </span><span class="c1">// imports the Random class from the java.util package</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">java.lang</span></code> (which contains <code class="docutils literal notranslate"><span class="pre">String</span></code>, <code class="docutils literal notranslate"><span class="pre">Math</span></code>, <code class="docutils literal notranslate"><span class="pre">Integer</span></code>, etc.) is imported <strong>automatically</strong> — you never need to import it manually.</p>
+</div></blockquote>
+<hr class="docutils" />
+<blockquote>
+<div><p class="rubric" id="activity-1-7-1-api-investigation">Activity 1.7.1 — API Investigation</p>
+<p>Using the Java 8 API documentation at <strong>https://docs.oracle.com/javase/8/docs/api/</strong>, answer the following questions in a comment block at the top of your <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> file or in a separate text document submitted alongside your code.</p>
+<p class="rubric" id="section-a-packages-and-classes">Section A — Packages and Classes</p>
+<ol class="arabic simple">
+<li><p>What is the full package path for the <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> class?</p></li>
+<li><p>What is the full package path for the <code class="docutils literal notranslate"><span class="pre">Random</span></code> class?</p></li>
+<li><p>Name <strong>two other classes</strong> found in the <code class="docutils literal notranslate"><span class="pre">java.util</span></code> package.</p></li>
+<li><p>Name <strong>one class</strong> found in the <code class="docutils literal notranslate"><span class="pre">java.time</span></code> package and describe what it does in one sentence.</p></li>
+<li><p>In your own words, what is the difference between a <strong>package</strong> and a <strong>class</strong>?</p></li>
+</ol>
+<p class="rubric" id="section-b-scanner-class">Section B — Scanner Class</p>
+<p>Navigate to the <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> class in the documentation.</p>
+<ol class="arabic simple" start="6">
+<li><p>What does the <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> constructor <code class="docutils literal notranslate"><span class="pre">Scanner(InputStream</span> <span class="pre">source)</span></code> do?</p></li>
+<li><p>What method would you use to read a full line of text entered by the user? What does it return?</p></li>
+<li><p>What method would you use to read a single <code class="docutils literal notranslate"><span class="pre">int</span></code> entered by the user?</p></li>
+<li><p>Why is it important to call <code class="docutils literal notranslate"><span class="pre">scanner.close()</span></code> when you are done using a Scanner?</p></li>
+</ol>
+<p class="rubric" id="section-c-random-class">Section C — Random Class</p>
+<p>Navigate to the <code class="docutils literal notranslate"><span class="pre">Random</span></code> class in the documentation.</p>
+<ol class="arabic simple" start="10">
+<li><p>What does <code class="docutils literal notranslate"><span class="pre">nextInt(int</span> <span class="pre">bound)</span></code> return? What is the range of values it can produce?</p></li>
+<li><p>How would you use <code class="docutils literal notranslate"><span class="pre">nextInt()</span></code> to generate a random number between <strong>1 and 8 inclusive</strong>? Write the expression.</p></li>
+<li><p>What is the difference between <code class="docutils literal notranslate"><span class="pre">nextInt()</span></code> and <code class="docutils literal notranslate"><span class="pre">nextDouble()</span></code>?</p></li>
+<li><p>Why might a program produce the same “random” sequence every time if you pass a fixed value to the <code class="docutils literal notranslate"><span class="pre">Random</span></code> constructor (e.g., <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Random(42)</span></code>)?</p></li>
+</ol>
+<hr class="docutils" />
+<p class="rubric" id="activity1-7-2-magic-8-ball-program">Activity1.7.2 — Magic 8-Ball Program</p>
+<p class="rubric" id="program-description">Program Description</p>
+<p>Build a Magic 8-Ball program that:</p>
+<ul class="simple">
+<li><p>Asks the user to enter a yes/no question</p></li>
+<li><p>Uses <code class="docutils literal notranslate"><span class="pre">java.util.Random</span></code> to select one of <strong>eight responses</strong> at random</p></li>
+<li><p>Displays the response in a formatted output</p></li>
+<li><p>Asks the user if they want to ask another question and loops until they choose to quit</p></li>
+</ul>
+<p class="rubric" id="requirements-checklist">Requirements Checklist</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Include the required block comment header in <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> (all fields completed)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Import <code class="docutils literal notranslate"><span class="pre">java.util.Scanner</span></code> and <code class="docutils literal notranslate"><span class="pre">java.util.Random</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use a <code class="docutils literal notranslate"><span class="pre">String</span></code> array to store all eight Magic 8-Ball responses</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use <code class="docutils literal notranslate"><span class="pre">Random.nextInt()</span></code> to select a response index at random</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> to read the user’s question and their yes/no to continue</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use <code class="docutils literal notranslate"><span class="pre">.equalsIgnoreCase()</span></code> to check if the user wants to continue</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use <code class="docutils literal notranslate"><span class="pre">String.toUpperCase()</span></code> or formatting to display the response dramatically</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Close the Scanner before the program ends</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Include meaningful inline comments throughout</p></li>
+</ul>
+<p class="rubric" id="the-eight-responses">The Eight Responses</p>
+<p>Your program must include <strong>all eight</strong> of the following responses:</p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>#</p></th>
+<th class="head"><p>Response</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td><p>It is certain.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td><p>Without a doubt.</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td><p>Reply hazy, try again.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>4</p></td>
+<td><p>Ask again later.</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>5</p></td>
+<td><p>Don’t count on it.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>6</p></td>
+<td><p>My sources say no.</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>7</p></td>
+<td><p>Outlook not so good.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>8</p></td>
+<td><p>Very doubtful.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<p class="rubric" id="starter-code">Starter Code</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Import the required packages</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Random</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Create Scanner and Random objects</span>
+<span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Random</span><span class="w"> </span><span class="n">rand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Random</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// Array of Magic 8-Ball responses</span>
+<span class="w">        </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">responses</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// your eight responses here</span>
+<span class="w">        </span><span class="p">};</span>
+
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">continueChoice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;yes&quot;</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Welcome to the Magic 8-Ball!&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;============================&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Loop while the user wants to keep asking questions</span>
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">continueChoice</span><span class="p">.</span><span class="na">equalsIgnoreCase</span><span class="p">(</span><span class="s">&quot;yes&quot;</span><span class="p">))</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// Prompt the user for a question</span>
+
+<span class="w">            </span><span class="c1">// Generate a random index using rand.nextInt()</span>
+
+<span class="w">            </span><span class="c1">// Display the response</span>
+
+<span class="w">            </span><span class="c1">// Ask if the user wants to continue</span>
+
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;The Magic 8-Ball has spoken. Goodbye!&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Close the Scanner</span>
+<span class="w">        </span><span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p class="rubric" id="sample-output">Sample Output</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Welcome to the Magic 8-Ball!
+============================
+Ask your yes/no question: Will I ace my CS test?
+
+🎱 The Magic 8-Ball says...
+   WITHOUT A DOUBT.
+
+Ask another question? (yes/no): yes
+
+Ask your yes/no question: Will it rain tomorrow?
+
+🎱 The Magic 8-Ball says...
+   REPLY HAZY, TRY AGAIN.
+
+Ask another question? (yes/no): no
+
+The Magic 8-Ball has spoken. Goodbye!
+</pre></div>
+</div>
+<hr class="docutils" />
+<p class="rubric" id="extension-challenges">Extension Challenges</p>
+<p>Completed early? Try one or more of the following:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Expand the responses</strong> — add at least four more responses of your own for a total of twelve</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Add a response counter</strong> — track and display how many questions the user asked at the end</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Categorize responses</strong> — use a second array to label each response as <code class="docutils literal notranslate"><span class="pre">&quot;Positive&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Neutral&quot;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&quot;Negative&quot;</span></code> and display the category alongside the answer</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Seeded Random</strong> — let the user enter a “lucky number” that seeds the Random object. Investigate what happens when they use the same number twice.</p></li>
+</ul>
+<hr class="docutils" />
+<p class="rubric" id="submission">Submission</p>
+<p>Upload the following to the assignment:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> — your completed program with block comment header</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Test Cases document — showing at least <strong>three</strong> runs of your program with different questions and the responses generated</p></li>
+</ul>
+<hr class="docutils" />
+<p class="rubric" id="grading">Grading</p>
+<p>This assignment is graded using the <strong>AP CSA Generic Assignment Rubric</strong> (5-point scale). Pay particular attention to:</p>
+<ul class="simple">
+<li><p>Import statements are present and used (not just written)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Random.nextInt()</span></code> is used correctly to stay within the bounds of your array</p></li>
+<li><p>Scanner is closed before the program ends</p></li>
+<li><p>Part 1 investigation questions are answered in your block comment or submitted document</p></li>
+</ul>
+</div></blockquote>
+</section>
 <section id="documentation-with-comments">
 <h2>1.8 Documentation with Comments<a class="headerlink" href="#documentation-with-comments" title="Link to this heading">¶</a></h2>
 <details>
@@ -1220,8 +1564,315 @@ Total Sales: $64.3
 <span class="kt">double</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">();</span><span class="w">      </span><span class="c1">// Returns 0.0 to &lt; 1.0</span>
 </pre></div>
 </div>
-</section>
 <hr class="docutils" />
+<blockquote>
+<div><p class="rubric" id="activity-1-10-1-mission-control-calling-class-methods">Activity 1.10.1 — Mission Control: Calling Class Methods</p>
+<p class="rubric" id="id1">Overview</p>
+<p>In this activity you will investigate how <strong>class methods</strong> (also called <strong>static methods</strong>) work in Java, then build a Mission Control program that calls static methods to calculate rocket launch data.</p>
+<p>By the end of this activity you will be able to:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Explain the difference between a static (class) method and an instance method</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Call static methods from existing Java classes without creating an object</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Write your own static methods and call them from <code class="docutils literal notranslate"><span class="pre">main</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Decompose a larger problem into smaller methods, each responsible for one task</p></li>
+</ul>
+<hr class="docutils" />
+<p class="rubric" id="id2">Background</p>
+<p>A <strong>class method</strong> (declared with the keyword <code class="docutils literal notranslate"><span class="pre">static</span></code>) belongs to the <strong>class itself</strong> — not to any specific object. You call it using the class name, not an object reference:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Calling a static method from the Math class — no object needed</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">sqrt</span><span class="p">(</span><span class="mi">144</span><span class="p">);</span><span class="w">     </span><span class="c1">// returns 12.0</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">rolled</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">abs</span><span class="p">(</span><span class="o">-</span><span class="mi">7</span><span class="p">);</span><span class="w">        </span><span class="c1">// returns 7</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">rand</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">();</span><span class="w">       </span><span class="c1">// returns a value in [0.0, 1.0)</span>
+</pre></div>
+</div>
+<p>You have already used static methods every time you called <code class="docutils literal notranslate"><span class="pre">Math.pow()</span></code>, <code class="docutils literal notranslate"><span class="pre">Math.round()</span></code>, or <code class="docutils literal notranslate"><span class="pre">System.out.println()</span></code>. <code class="docutils literal notranslate"><span class="pre">main</span></code> itself is a static method — that is why Java can run it without creating an object first.</p>
+<p><strong>Static vs. Instance — Side by Side:</strong></p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>Static (Class) Method</p></th>
+<th class="head"><p>Instance Method</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Keyword</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">static</span></code></p></td>
+<td><p><em>(no static)</em></p></td>
+</tr>
+<tr class="row-odd"><td><p>Called on</p></td>
+<td><p>The class name</p></td>
+<td><p>An object reference</p></td>
+</tr>
+<tr class="row-even"><td><p>Example call</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Math.sqrt(25)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">myString.length()</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Requires an object?</p></td>
+<td><p>No</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-even"><td><p>Can access instance variables?</p></td>
+<td><p>No</p></td>
+<td><p>Yes</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Writing Your Own Static Method:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">celsiusToFahrenheit</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">celsius</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">celsius</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">9.0</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">5.0</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">32</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span></code> — accessible from anywhere</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">static</span></code> — belongs to the class, not an object</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">double</span></code> — the return type</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">celsiusToFahrenheit</span></code> — the method name</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(double</span> <span class="pre">celsius)</span></code> — one parameter</p></li>
+</ul>
+<p>Call it from <code class="docutils literal notranslate"><span class="pre">main</span></code> like this:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">celsiusToFahrenheit</span><span class="p">(</span><span class="mf">100.0</span><span class="p">);</span><span class="w">   </span><span class="c1">// returns 212.0</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>A method that returns nothing uses <code class="docutils literal notranslate"><span class="pre">void</span></code> as its return type. A <code class="docutils literal notranslate"><span class="pre">void</span></code> method performs an action but does not hand a value back to the caller.</p>
+<hr class="docutils" />
+<p class="rubric" id="part-1-investigation">Part 1 — Investigation</p>
+<p>Answer the following questions in a comment block at the top of your <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> or in a separate document submitted alongside your code.</p>
+<p class="rubric" id="section-a-understanding-static-methods">Section A — Understanding Static Methods</p>
+<ol class="arabic simple">
+<li><p>Why can you call <code class="docutils literal notranslate"><span class="pre">Math.sqrt()</span></code> without first writing <code class="docutils literal notranslate"><span class="pre">Math</span> <span class="pre">m</span> <span class="pre">=</span> <span class="pre">new</span> <span class="pre">Math()</span></code>?</p></li>
+<li><p>What keyword makes a method a class (static) method?</p></li>
+<li><p>What is the return type of <code class="docutils literal notranslate"><span class="pre">Math.random()</span></code>? What range of values can it produce?</p></li>
+<li><p>What is the return type of <code class="docutils literal notranslate"><span class="pre">Math.round(double</span> <span class="pre">a)</span></code>? Why is the return type different from <code class="docutils literal notranslate"><span class="pre">double</span></code>?</p></li>
+<li><p>In your own words, explain why <code class="docutils literal notranslate"><span class="pre">main</span></code> must be declared <code class="docutils literal notranslate"><span class="pre">static</span></code>.</p></li>
+</ol>
+<p class="rubric" id="section-b-reading-method-signatures">Section B — Reading Method Signatures</p>
+<p>Look at the following method signatures and answer the questions below each one.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">max</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>How many parameters does this method take?</p></li>
+<li><p>What data type does it return?</p></li>
+<li><p>Write a line of code that calls this method with the values 42 and 17 and stores the result in a variable.</p></li>
+</ol>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printDivider</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="9">
+<li><p>What does a <code class="docutils literal notranslate"><span class="pre">void</span></code> return type mean?</p></li>
+<li><p>Can you store the result of calling this method in a variable? Why or why not?</p></li>
+</ol>
+<p class="rubric" id="section-c-decomposing-a-problem">Section C — Decomposing a Problem</p>
+<p>A good programmer breaks a large problem into smaller, focused methods — each doing <strong>one job</strong>.</p>
+<ol class="arabic simple" start="11">
+<li><p>Look at the following task: <em>“Calculate the fuel needed for a rocket launch, warn the crew if fuel is low, and print a launch report.”</em> Identify <strong>three</strong> static methods you could write to decompose this problem. For &gt; each, write the method signature only (no body needed).</p></li>
+</ol>
+<hr class="docutils" />
+<p class="rubric" id="part-2-mission-control-program">Part 2 — Mission Control Program</p>
+<p class="rubric" id="id3">Program Description</p>
+<p>You are writing the launch software for Mission Control. Your program will:</p>
+<ul class="simple">
+<li><p>Accept rocket launch parameters from the user via <code class="docutils literal notranslate"><span class="pre">Scanner</span></code></p></li>
+<li><p>Call static methods to calculate fuel consumption, estimated flight time, and thrust-to-weight ratio</p></li>
+<li><p>Warn the crew if any value falls outside safe limits</p></li>
+<li><p>Print a formatted launch report</p></li>
+</ul>
+<p class="rubric" id="id4">Requirements Checklist</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Include the required block comment header in <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> (all fields completed)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Write and call <strong>at least four</strong> static methods of your own (see specifications below)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> At least one method must be <code class="docutils literal notranslate"><span class="pre">void</span></code> (performs an action, returns nothing)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> At least one method must return a <code class="docutils literal notranslate"><span class="pre">double</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> At least one method must return a <code class="docutils literal notranslate"><span class="pre">boolean</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Call at least <strong>two</strong> <code class="docutils literal notranslate"><span class="pre">Math</span></code> class static methods within your own methods</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> to accept user input for rocket name, fuel amount, and rocket mass</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use the return values of your static methods meaningfully in <code class="docutils literal notranslate"><span class="pre">main</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use <code class="docutils literal notranslate"><span class="pre">String.format()</span></code> or <code class="docutils literal notranslate"><span class="pre">printf()</span></code> to produce the formatted launch report</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Include meaningful inline comments throughout</p></li>
+</ul>
+<hr class="docutils" />
+<p class="rubric" id="required-static-methods">Required Static Methods</p>
+<p>Implement the following four static methods in <code class="docutils literal notranslate"><span class="pre">Main.java</span></code>:</p>
+<p class="rubric" id="calculatefuelconsumption">1. <code class="docutils literal notranslate"><span class="pre">calculateFuelConsumption</span></code></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">calculateFuelConsumption</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">distanceKm</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">fuelEfficiency</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Returns the estimated fuel consumed: <code class="docutils literal notranslate"><span class="pre">distanceKm</span> <span class="pre">/</span> <span class="pre">fuelEfficiency</span></code></p></li>
+<li><p>Call <code class="docutils literal notranslate"><span class="pre">Math.round()</span></code> on the result before returning it as a <code class="docutils literal notranslate"><span class="pre">double</span></code></p></li>
+</ul>
+<p class="rubric" id="calculateflighttime">2. <code class="docutils literal notranslate"><span class="pre">calculateFlightTime</span></code></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">calculateFlightTime</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">distanceKm</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">speedKph</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Returns estimated flight time in hours: <code class="docutils literal notranslate"><span class="pre">distanceKm</span> <span class="pre">/</span> <span class="pre">speedKph</span></code></p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">Math.abs()</span></code> to ensure the result is always positive</p></li>
+</ul>
+<p class="rubric" id="issafelaunch">3. <code class="docutils literal notranslate"><span class="pre">isSafeLaunch</span></code></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">isSafeLaunch</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">thrustKn</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">massKg</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Calculates thrust-to-weight ratio: <code class="docutils literal notranslate"><span class="pre">thrustKn</span> <span class="pre">/</span> <span class="pre">(massKg</span> <span class="pre">*</span> <span class="pre">9.8</span> <span class="pre">/</span> <span class="pre">1000)</span></code></p></li>
+<li><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the ratio is greater than <strong>1.5</strong> (minimum safe ratio), <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise</p></li>
+</ul>
+<p class="rubric" id="printlaunchreport">4. <code class="docutils literal notranslate"><span class="pre">printLaunchReport</span></code></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printLaunchReport</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">rocketName</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">fuel</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">flightTime</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">safe</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">void</span></code> method — prints the complete formatted launch report to the console</p></li>
+<li><p>Uses <code class="docutils literal notranslate"><span class="pre">String.format()</span></code> or <code class="docutils literal notranslate"><span class="pre">printf()</span></code> for aligned output</p></li>
+<li><p>Prints a safety status message based on the <code class="docutils literal notranslate"><span class="pre">boolean</span></code> parameter</p></li>
+</ul>
+<hr class="docutils" />
+<p class="rubric" id="id5">Starter Code</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// ─── Static Methods ───────────────────────────────────────────────────────</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">calculateFuelConsumption</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">distanceKm</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">fuelEfficiency</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// your code here</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">calculateFlightTime</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">distanceKm</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">speedKph</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// your code here</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">isSafeLaunch</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">thrustKn</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">massKg</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// your code here</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printLaunchReport</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">rocketName</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">fuel</span><span class="p">,</span>
+<span class="w">                                         </span><span class="kt">double</span><span class="w"> </span><span class="n">flightTime</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">safe</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// your code here</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// ─── Main ─────────────────────────────────────────────────────────────────</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;=== MISSION CONTROL LAUNCH SYSTEM ===&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Get user inputs</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Enter rocket name: &quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">rocketName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Enter fuel amount (liters): &quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">fuel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Enter rocket mass (kg): &quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">mass</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Enter engine thrust (kN): &quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">thrust</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+
+<span class="w">       </span><span class="c1">// Mission constants</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">distanceKm</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mf">400.0</span><span class="p">;</span><span class="w">   </span><span class="c1">// destination distance in km</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">fuelEfficiency</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">12.5</span><span class="p">;</span><span class="w">   </span><span class="c1">// km per liter</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">speedKph</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mf">28000.0</span><span class="p">;</span><span class="w"> </span><span class="c1">// cruising speed in km/h</span>
+
+<span class="w">        </span><span class="c1">// Call your static methods and store the results</span>
+
+<span class="w">       </span><span class="c1">// Call printLaunchReport</span>
+
+<span class="w">        </span><span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>}</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="o">---</span>
+
+<span class="c1">## Sample Output</span>
+
+</pre></div>
+</div>
+<p>=== MISSION CONTROL LAUNCH SYSTEM ===
+Enter rocket name: Falcon Alpha
+Enter fuel amount (liters): 5000
+Enter rocket mass (kg): 120000
+Enter engine thrust (kN): 2500</p>
+<p class="rubric" id="mission-control-report">========================================
+MISSION CONTROL REPORT</p>
+<p class="rubric" id="rocket-name-falcon-alpha-fuel-consumed-32-0-liters-flight-time-0-01-hours-thrust-weight-2-13">Rocket Name:       Falcon Alpha
+Fuel Consumed:     32.0 liters
+Flight Time:       0.01 hours
+Thrust/Weight:     2.13</p>
+<p class="rubric" id="launch-status-safe-for-launch">LAUNCH STATUS:     ✓ SAFE FOR LAUNCH</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>=== MISSION CONTROL LAUNCH SYSTEM ===
+Enter rocket name: Titan IV
+Enter fuel amount (liters): 800
+Enter rocket mass (kg): 300000
+Enter engine thrust (kN): 1200</p>
+<p class="rubric" id="id6">========================================
+MISSION CONTROL REPORT</p>
+<p class="rubric" id="rocket-name-titan-iv-fuel-consumed-32-0-liters-flight-time-0-01-hours-thrust-weight-0-41">Rocket Name:       Titan IV
+Fuel Consumed:     32.0 liters
+Flight Time:       0.01 hours
+Thrust/Weight:     0.41</p>
+<p class="rubric" id="launch-status-unsafe-abort-launch">LAUNCH STATUS:     ✗ UNSAFE — ABORT LAUNCH</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+---
+
+## Extension Challenges
+
+Completed early? Try one or more of the following:
+
+- [ ] **Add a fifth method** `calculateMaxAltitude(double thrustKn, double massKg)` that returns an estimated max altitude using `Math.pow()` and `Math.sqrt()` in the formula
+- [ ] **Add a countdown** — write a `void` method called `launchCountdown(int seconds)` that prints a countdown from the given number to zero using a loop
+- [ ] **Multiple rockets** — use a loop in `main` to process three different rockets and report which one has the best thrust-to-weight ratio using `Math.max()`
+- [ ] **Unit conversion** — add a static method that converts `km/h` to `m/s` and display both speeds in the report
+
+---
+
+## Submission
+
+Upload the following to the assignment:
+
+- [ ] `Main.java` — your completed program with block comment header
+- [ ] Test Cases document — showing at least **three** runs with different rocket inputs, including one that triggers the unsafe launch warning
+
+---
+
+## Grading
+
+This assignment is graded using the **AP CSA Generic Assignment Rubric** (5-point scale). Pay particular attention to:
+
+- All four required static methods are present, correctly implemented, and called in `main`
+- Return values from non-void methods are stored and used — not ignored
+- `Math` class static methods are called inside your own methods, not just in `main`
+- Part 1 investigation questions are answered in your block comment or submitted document
+- The launch report is formatted using `String.format()` or `printf()` — not plain `println` concatenation
+
+---
+
+</pre></div>
+</div>
+</div></blockquote>
+</section>
 <section id="math-class">
 <h2>1.11 Math Class<a class="headerlink" href="#math-class" title="Link to this heading">¶</a></h2>
 <details>
@@ -1302,8 +1953,8 @@ Total Sales: $64.3
 </tbody>
 </table>
 </div>
-<section id="activity-1-11-1-roller-coaster-simulator">
-<h3>Activity 1.11.1 — Roller Coaster Simulator<a class="headerlink" href="#activity-1-11-1-roller-coaster-simulator" title="Link to this heading">¶</a></h3>
+<blockquote>
+<div><p class="rubric" id="activity-1-11-1-roller-coaster-simulator">Activity 1.11.1 — Roller Coaster Simulator</p>
 <p><strong>Project Overview:</strong></p>
 <p>Students will write a program that helps a theme park design safe roller coasters based on physics-related math. Use <code class="docutils literal notranslate"><span class="pre">Math.random()</span></code> and <code class="docutils literal notranslate"><span class="pre">Math.round()</span></code> to simulate the experience of riding a roller coaster, generating random values for speed, height, and rating.  The user (acting as an engineer) inputs the parameters of a coaster hill, and the program will:</p>
 <ul class="simple">
@@ -1346,17 +1997,13 @@ Total Sales: $64.3
 
 <span class="w">	</span><span class="c1">// Attributes (height, speen, time, gForce, angle, trackLength)</span>
 
+<span class="w">  </span><span class="c1">// Constructor</span>
 
-<span class="w">    </span><span class="c1">// Constructor</span>
+<span class="w">  </span><span class="c1">// Perform all calculations</span>
 
+<span class="w">  </span><span class="c1">// Return calculated results to main</span>
 
-<span class="w">    </span><span class="c1">// Perform all calculations</span>
-
-
-<span class="w">    </span><span class="c1">// Return calculated results to main</span>
-
-
-<span class="w">    </span><span class="c1">// Helper method for safety</span>
+<span class="w">   </span><span class="c1">// Helper method for safety</span>
 
 <span class="p">}</span>
 
@@ -1369,11 +2016,10 @@ Total Sales: $64.3
 
 <span class="w">		</span><span class="c1">// Use Scanner to get inputs for Speed, time and GForce</span>
 
+<span class="w">     </span><span class="c1">// Get user inputs</span>
 
-<span class="w">        </span><span class="c1">// Get user inputs</span>
 
-
-<span class="w">        </span><span class="c1">// Create an instance of RollerCoasterSimulator</span>
+<span class="w">     </span><span class="c1">// Create an instance of RollerCoasterSimulator</span>
 <span class="w">        </span>
 
 <span class="w">        </span><span class="c1">// Get and display results</span>
@@ -1388,7 +2034,6 @@ Total Sales: $64.3
 <span class="w">			</span><span class="c1">// else print &quot;Safe for riders!&quot;</span>
 
 
-
 <span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\n--- Rounded Data ---&quot;</span><span class="p">);</span>
 <span class="w">		</span><span class="c1">// Round speed up</span>
 <span class="w">		</span><span class="c1">// Round time down </span>
@@ -1399,10 +2044,251 @@ Total Sales: $64.3
 </pre></div>
 </div>
 <p>Submit your java program code and your test cases that demonstrates your program works as intended.</p>
-</section>
+</div></blockquote>
 <section id="activity-1-11-2-race-car">
 <h3>Activity 1.11.2 — Race Car<a class="headerlink" href="#activity-1-11-2-race-car" title="Link to this heading">¶</a></h3>
-<p>Apply <code class="docutils literal notranslate"><span class="pre">Math.abs()</span></code> and <code class="docutils literal notranslate"><span class="pre">Math.pow()</span></code> to a race car simulation that computes distance and speed.</p>
+<blockquote>
+<div><p class="rubric" id="activity-1-11-2-race-car-applying-the-math-class">Activity 1.11.2 — Race Car: Applying the Math Class</p>
+<p class="rubric" id="standards">Standards</p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Standard</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ICT 5.8</p></td>
+<td><p>Create and use algorithms</p></td>
+</tr>
+<tr class="row-odd"><td><p>ICT 5.9</p></td>
+<td><p>Deconstruct large problems</p></td>
+</tr>
+<tr class="row-even"><td><p>C4.6</p></td>
+<td><p>Use proper programming language syntax</p></td>
+</tr>
+<tr class="row-odd"><td><p>C4.9</p></td>
+<td><p>Create programs using control structures, procedures, and functions</p></td>
+</tr>
+<tr class="row-even"><td><p>CRP 1</p></td>
+<td><p>Apply appropriate technical skills and academic knowledge</p></td>
+</tr>
+<tr class="row-odd"><td><p>CRP 5</p></td>
+<td><p>Utilize critical thinking to make sense of problems</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<p class="rubric" id="id7">Overview</p>
+<p>In this activity you will apply what you have learned about the <code class="docutils literal notranslate"><span class="pre">Math</span></code> class, static methods, object instantiation, and <code class="docutils literal notranslate"><span class="pre">java.util.Random</span></code> to simulate a drag race between two cars. You will complete a partially written program by implementing the <code class="docutils literal notranslate"><span class="pre">computeTime</span></code> method in <code class="docutils literal notranslate"><span class="pre">Racecar.java</span></code> and filling in the guided comments in <code class="docutils literal notranslate"><span class="pre">Main.java</span></code>.</p>
+<p>By the end of this activity you will be able to:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use <code class="docutils literal notranslate"><span class="pre">Math.sqrt()</span></code> inside an instance method to solve a physics formula</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use <code class="docutils literal notranslate"><span class="pre">Math.round()</span></code> to format a result to three decimal places</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use <code class="docutils literal notranslate"><span class="pre">java.util.Random</span></code> to generate a bounded random integer</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Instantiate objects and call instance methods on them</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Connect prior concepts — classes, constructors, <code class="docutils literal notranslate"><span class="pre">toString()</span></code>, and static methods — in a complete program</p></li>
+</ul>
+<hr class="docutils" />
+<p class="rubric" id="id8">Background</p>
+<p class="rubric" id="connecting-prior-activities">Connecting Prior Activities</p>
+<p>You have already used these concepts individually. This activity brings them together:</p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Prior Activity</p></th>
+<th class="head"><p>Concept Used Here</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1.7.1 Magic 8-Ball</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">java.util.Random</span></code>, <code class="docutils literal notranslate"><span class="pre">nextInt(bound)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>1.10.1 Mission Control</p></td>
+<td><p>Writing and calling static and instance methods</p></td>
+</tr>
+<tr class="row-even"><td><p>1.11.1 Roller Coaster Simulator</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Math.sqrt()</span></code>, physics formulas, <code class="docutils literal notranslate"><span class="pre">Math.round()</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>1.13 Object Creation</p></td>
+<td><p>Constructors, instance variables, <code class="docutils literal notranslate"><span class="pre">toString()</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<p class="rubric" id="the-physics-formula">The Physics Formula</p>
+<p>The time it takes a vehicle to travel a distance from a standing start under constant acceleration is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>t = √( 2 × d / a )
+</pre></div>
+</div>
+<p>Where:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">t</span></code> = time in seconds</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">d</span></code> = distance in meters</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">a</span></code> = acceleration in m/s²</p></li>
+</ul>
+<p>You implemented a similar formula in <strong>Activity 1.11.1</strong> when calculating speed at the bottom of a roller coaster hill. Here you will apply the same <code class="docutils literal notranslate"><span class="pre">Math.sqrt()</span></code> approach inside an <strong>instance method</strong> instead of directly in <code class="docutils literal notranslate"><span class="pre">main</span></code>.</p>
+<hr class="docutils" />
+<p class="rubric" id="generating-a-bounded-random-integer">Generating a Bounded Random Integer</p>
+<p>In <strong>Activity 1.7.1</strong> you used <code class="docutils literal notranslate"><span class="pre">Random.nextInt(bound)</span></code> to pick a Magic 8-Ball response. Here you will use it to assign each car a random acceleration between <strong>20 and 50 inclusive</strong>:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Random</span><span class="w"> </span><span class="n">rand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Random</span><span class="p">();</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">accel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rand</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="mi">31</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w">  </span><span class="c1">// produces 0–30, shifted to 20–50</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p><strong>Why <code class="docutils literal notranslate"><span class="pre">nextInt(31)</span></code>?</strong>
+<code class="docutils literal notranslate"><span class="pre">nextInt(bound)</span></code> returns a value from <code class="docutils literal notranslate"><span class="pre">0</span></code> up to but <strong>not including</strong> <code class="docutils literal notranslate"><span class="pre">bound</span></code>.
+To get the range 20–50 (31 possible values), use <code class="docutils literal notranslate"><span class="pre">nextInt(31)</span></code> then add 20.</p>
+</div></blockquote>
+<hr class="docutils" />
+<p class="rubric" id="rounding-to-three-decimal-places">Rounding to Three Decimal Places</p>
+<p><code class="docutils literal notranslate"><span class="pre">Math.round()</span></code> rounds to the nearest whole number. To round to three decimal places, scale up, round, then scale back down:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10.5963847</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">rounded</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">round</span><span class="p">(</span><span class="n">time</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1000.0</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">1000.0</span><span class="p">;</span><span class="w">  </span><span class="c1">// 10.596</span>
+</pre></div>
+</div>
+<p>You used <code class="docutils literal notranslate"><span class="pre">Math.round()</span></code> in <strong>Activity 1.10.1</strong> to clean up fuel consumption values. Apply the same technique here inside <code class="docutils literal notranslate"><span class="pre">computeTime</span></code>.</p>
+<hr class="docutils" />
+<p class="rubric" id="starter-files">Starter Files</p>
+<p class="rubric" id="racecar-java">Racecar.java</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Racecar</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">accel</span><span class="p">;</span><span class="w"> </span><span class="c1">// acceleration in m/s²</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w">  </span><span class="c1">// name of the driver</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Racecar</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">acceleration</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">driver</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">accel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">acceleration</span><span class="p">;</span>
+<span class="w">        </span><span class="n">name</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">driver</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Returns the time it takes the racecar to complete</span>
+<span class="w">    </span><span class="c1">// the track rounded to three decimal places.</span>
+<span class="w">    </span><span class="c1">// Formula: t = √(2 × d / a)</span>
+<span class="w">    </span><span class="c1">// where t = time (seconds), d = distance (meters), a = acceleration (m/s²)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">computeTime</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">distance</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Step 1: Calculate time using the formula above and Math.sqrt()</span>
+
+<span class="w">        </span><span class="c1">// Step 2: Round to three decimal places using Math.round()</span>
+
+<span class="w">        </span><span class="c1">// Step 3: Return the rounded time</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// replace this</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Racer &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p class="rubric" id="main-java">Main.java</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Random</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Random</span><span class="w"> </span><span class="n">rand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Random</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// Length of the track in meters</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">distance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2414</span><span class="p">;</span><span class="w"> </span><span class="c1">// ~1.5 miles</span>
+
+<span class="w">        </span><span class="c1">// Generate a random acceleration (integer) for each car</span>
+<span class="w">        </span><span class="c1">// from 20 to 50 (inclusive) using rand.nextInt()</span>
+<span class="w">        </span><span class="c1">// Hint: review Activity 1.7.1 — how did you restrict nextInt() to a range?</span>
+
+
+<span class="w">        </span><span class="c1">// Create two Racecar objects — one named &quot;Tom&quot;, one named &quot;Jerry&quot;</span>
+<span class="w">        </span><span class="c1">// Pass each car its random acceleration (cast to double) and driver name</span>
+<span class="w">        </span><span class="c1">// Hint: review Activity 1.13 — how did you instantiate objects?</span>
+
+
+<span class="w">        </span><span class="c1">// Compute the finishing time for both cars</span>
+<span class="w">        </span><span class="c1">// Call computeTime(distance) on each Racecar object and store the result</span>
+<span class="w">        </span><span class="c1">// Hint: review Activity 1.10.1 — how did you store a method&#39;s return value?</span>
+
+
+<span class="w">        </span><span class="c1">// Print the finishing time for each car</span>
+<span class="w">        </span><span class="c1">// Use the toString() method of Racecar — it is called automatically when</span>
+<span class="w">        </span><span class="c1">// you concatenate a Racecar object with a String</span>
+<span class="w">        </span><span class="c1">// Expected format:  Racer Tom&#39;s car finished in 10.596 seconds.</span>
+
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p class="rubric" id="what-you-need-to-complete">What You Need to Complete</p>
+<p class="rubric" id="in-racecar-java">In Racecar.java</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Implement <code class="docutils literal notranslate"><span class="pre">computeTime(double</span> <span class="pre">distance)</span></code> using <code class="docutils literal notranslate"><span class="pre">Math.sqrt()</span></code> and the formula <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">√(2</span> <span class="pre">×</span> <span class="pre">d</span> <span class="pre">/</span> <span class="pre">a)</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Round the result to three decimal places using <code class="docutils literal notranslate"><span class="pre">Math.round()</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Return the rounded value</p></li>
+</ul>
+<p class="rubric" id="in-main-java">In Main.java</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Generate a random acceleration for each car from <strong>20 to 50 inclusive</strong></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Instantiate two <code class="docutils literal notranslate"><span class="pre">Racecar</span></code> objects with their acceleration and driver name</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Call <code class="docutils literal notranslate"><span class="pre">computeTime(distance)</span></code> on each car and store the result</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Print the finishing time for each car in the format shown below</p></li>
+</ul>
+<hr class="docutils" />
+<p class="rubric" id="id9">Sample Output</p>
+<p>Because acceleration is random, your times will differ each run. The format must match exactly:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Racer</span> <span class="n">Tom</span><span class="s1">&#39;s car finished in 10.596 seconds.</span>
+<span class="n">Racer</span> <span class="n">Jerry</span><span class="s1">&#39;s car finished in 11.423 seconds.</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Racer</span> <span class="n">Tom</span><span class="s1">&#39;s car finished in 8.744 seconds.</span>
+<span class="n">Racer</span> <span class="n">Jerry</span><span class="s1">&#39;s car finished in 8.744 seconds.</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>It is possible (but unlikely) for both cars to receive the same random acceleration and finish in the same time. This is expected behavior — your program does not need to handle a tie specially.</p>
+</div></blockquote>
+<hr class="docutils" />
+<p class="rubric" id="connecting-the-concepts">Connecting the Concepts</p>
+<p>Before you begin coding, trace through these questions to make sure you understand what each part of the program does. You may answer these in your block comment or a separate document.</p>
+<ol class="arabic simple">
+<li><p>In <code class="docutils literal notranslate"><span class="pre">computeTime</span></code>, why do you use <code class="docutils literal notranslate"><span class="pre">accel</span></code> directly instead of passing acceleration as a parameter?</p></li>
+<li><p>Why must <code class="docutils literal notranslate"><span class="pre">computeTime</span></code> be an <strong>instance method</strong> rather than a <strong>static method</strong>?</p></li>
+<li><p>In <code class="docutils literal notranslate"><span class="pre">Main</span></code>, why do you cast the random acceleration to <code class="docutils literal notranslate"><span class="pre">double</span></code> when passing it to the <code class="docutils literal notranslate"><span class="pre">Racecar</span></code> constructor?</p></li>
+<li><p>What would happen if you used <code class="docutils literal notranslate"><span class="pre">rand.nextInt(50)</span></code> instead of <code class="docutils literal notranslate"><span class="pre">rand.nextInt(31)</span> <span class="pre">+</span> <span class="pre">20</span></code>? What range would that produce?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">toString()</span></code> is already written for you. When <code class="docutils literal notranslate"><span class="pre">System.out.println(car1</span> <span class="pre">+</span> <span class="pre">&quot;'s</span> <span class="pre">car</span> <span class="pre">finished</span> <span class="pre">in</span> <span class="pre">&quot;</span> <span class="pre">+</span> <span class="pre">time</span> <span class="pre">+</span> <span class="pre">&quot;</span> <span class="pre">seconds.&quot;)</span></code> runs, what triggers the call to <code class="docutils literal notranslate"><span class="pre">toString()</span></code>?</p></li>
+</ol>
+<hr class="docutils" />
+<p class="rubric" id="id10">Extension Challenges</p>
+<p>Completed early? Try one or more of the following:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>User input</strong> — use <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> to let the user enter driver names and/or the track length instead of hardcoding them</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Winner announcement</strong> — after printing both times, use an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement and <code class="docutils literal notranslate"><span class="pre">Math.min()</span></code> to determine and print which racer won</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>More cars</strong> — add a third and fourth <code class="docutils literal notranslate"><span class="pre">Racecar</span></code> object and report all four finishing times</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Leaderboard</strong> — sort and print the cars from fastest to slowest finishing time</p></li>
+</ul>
+<hr class="docutils" />
+<p class="rubric" id="id11">Submission</p>
+<p>Upload the following to the assignment:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">Racecar.java</span></code> — with <code class="docutils literal notranslate"><span class="pre">computeTime</span></code> fully implemented</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> — with all comments completed and all code filled in, including the block comment header</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Test Cases document — showing at least <strong>three</strong> runs of your program demonstrating different random acceleration values each time</p></li>
+</ul>
+<hr class="docutils" />
+<p class="rubric" id="id12">Grading</p>
+<p>This assignment is graded using the <strong>AP CSA Generic Assignment Rubric</strong> (5-point scale). Pay particular attention to:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">computeTime</span></code> uses <code class="docutils literal notranslate"><span class="pre">Math.sqrt()</span></code> with the correct formula — not a hardcoded value</p></li>
+<li><p>Rounding is done to <strong>three decimal places</strong> — not zero or two</p></li>
+<li><p>Random acceleration is correctly bounded to <strong>20–50 inclusive</strong> — not a wider or narrower range</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">toString()</span></code> is not rewritten or modified — it is used as provided</p></li>
+<li><p>Output format matches the sample exactly, including the apostrophe-s and the word “seconds”</p></li>
+</ul>
+</div></blockquote>
 </section>
 </section>
 <hr class="docutils" />
@@ -2464,8 +3350,8 @@ Create variables and choose numbers that match the following number types to ver
 </section>
 </section>
 <hr class="docutils" />
-<section id="id1">
-<h1>Unit 1 — Using Objects and Methods<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h1>
+<section id="id13">
+<h1>Unit 1 — Using Objects and Methods<a class="headerlink" href="#id13" title="Link to this heading">¶</a></h1>
 <p><em>AP Exam Weighting: 15–25% | Suggested Pacing: ~32–34 Class Periods</em></p>
 <details>
 <summary>📋 Unit 1 Standards Alignment</summary>
@@ -2548,8 +3434,8 @@ Create variables and choose numbers that match the following number types to ver
 </div>
 </details>
 <hr class="docutils" />
-<section id="id2">
-<h2>1.1 Introduction to Algorithms, Programming, and Compilers<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<section id="id14">
+<h2>1.1 Introduction to Algorithms, Programming, and Compilers<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h2>
 <details>
 <summary>📌 Standards — 1.1</summary>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -2601,8 +3487,8 @@ Create variables and choose numbers that match the following number types to ver
 </pre></div>
 </div>
 <p><strong><code class="docutils literal notranslate"><span class="pre">public</span></code></strong> is an access specifier.</p>
-<section id="id3">
-<h3>Assignment 1.1.1 — My Timeline<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
+<section id="id15">
+<h3>Assignment 1.1.1 — My Timeline<a class="headerlink" href="#id15" title="Link to this heading">¶</a></h3>
 <p>Create a personal timeline of at least seven meaningful events in your life using the <code class="docutils literal notranslate"><span class="pre">print</span></code> and <code class="docutils literal notranslate"><span class="pre">println</span></code> methods. The timeline will proceed vertically — earlier events near the top, later events near the bottom. Make it look professional. HINT: use <code class="docutils literal notranslate"><span class="pre">\t</span></code></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Year</span>                 <span class="n">Age</span>                    <span class="n">Description</span>
 <span class="mi">1971</span>              <span class="mi">0</span> <span class="n">years</span> <span class="n">old</span>               <span class="n">Born</span> <span class="ow">in</span> <span class="n">Long</span> <span class="n">Beach</span>
@@ -2618,8 +3504,8 @@ Create variables and choose numbers that match the following number types to ver
 </section>
 </section>
 <hr class="docutils" />
-<section id="id4">
-<h2>1.2 Variables and Data Types<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h2>
+<section id="id16">
+<h2>1.2 Variables and Data Types<a class="headerlink" href="#id16" title="Link to this heading">¶</a></h2>
 <details>
 <summary>📌 Standards — 1.2</summary>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -2696,8 +3582,8 @@ Create variables and choose numbers that match the following number types to ver
 </ul>
 <p>When you declare a variable, you must state the variable type along with the variable name followed by the value assignment: <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">height</span> <span class="pre">=</span> <span class="pre">72;</span></code></p>
 <p>Once you have declared the variable type, you <strong>do not need to do it again</strong> to reassign a value to the variable. If you declare a variable as <code class="docutils literal notranslate"><span class="pre">final</span></code> you cannot change the value of it. <code class="docutils literal notranslate"><span class="pre">final</span></code> variables are written as ALL CAPS.</p>
-<section id="id5">
-<h3>Assignment 1.2.1 — Allowance<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h3>
+<section id="id17">
+<h3>Assignment 1.2.1 — Allowance<a class="headerlink" href="#id17" title="Link to this heading">¶</a></h3>
 <p>Write a program that will determine who receives an allowance or not. Use the information below as a guide:</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Allowance is always $30.00/week</p></li>
@@ -2707,8 +3593,8 @@ Create variables and choose numbers that match the following number types to ver
 </ul>
 </section>
 <hr class="docutils" />
-<section id="id6">
-<h3>Assignment 1.2.2 — Scanner Class<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h3>
+<section id="id18">
+<h3>Assignment 1.2.2 — Scanner Class<a class="headerlink" href="#id18" title="Link to this heading">¶</a></h3>
 <p>The Scanner class is a package that provides primitive input within Java programs. It can be found in the <a class="reference external" href="https://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html">java.util Package</a>.</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> To create an object of the Scanner class, we must pass <code class="docutils literal notranslate"><span class="pre">System.in</span></code> as the defined object.</p></li>
@@ -2719,8 +3605,8 @@ Create variables and choose numbers that match the following number types to ver
 </section>
 </section>
 <hr class="docutils" />
-<section id="id7">
-<h2>1.3 Expressions and Output<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h2>
+<section id="id19">
+<h2>1.3 Expressions and Output<a class="headerlink" href="#id19" title="Link to this heading">¶</a></h2>
 <details>
 <summary>📌 Standards — 1.3</summary>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -2805,8 +3691,8 @@ Create variables and choose numbers that match the following number types to ver
 </table>
 </div>
 <p><strong>Note:</strong> When you divide an integer by zero your program will return an <em>ArithmeticException</em> error.</p>
-<section id="id8">
-<h3>Assignment 1.3.1 — Calculate Your Weight on Jupiter<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h3>
+<section id="id20">
+<h3>Assignment 1.3.1 — Calculate Your Weight on Jupiter<a class="headerlink" href="#id20" title="Link to this heading">¶</a></h3>
 <p>Using the equation below, calculate what your weight would be on different planets:</p>
 <p><code class="docutils literal notranslate"><span class="pre">weightOnPlanet</span> <span class="pre">=</span> <span class="pre">(weightOnEarth</span> <span class="pre">/</span> <span class="pre">earthGravity)</span> <span class="pre">×</span> <span class="pre">planetGravity</span></code></p>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -2845,8 +3731,8 @@ Create variables and choose numbers that match the following number types to ver
 </table>
 </div>
 </section>
-<section id="id9">
-<h3>Assignment 1.3.2 — Simple Math<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h3>
+<section id="id21">
+<h3>Assignment 1.3.2 — Simple Math<a class="headerlink" href="#id21" title="Link to this heading">¶</a></h3>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create a program that will ask the user for two distinct integers</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use the Scanner class to receive input from the user</p></li>
@@ -2855,8 +3741,8 @@ Create variables and choose numbers that match the following number types to ver
 </section>
 </section>
 <hr class="docutils" />
-<section id="id10">
-<h2>1.4 Assignment Statements and Input<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h2>
+<section id="id22">
+<h2>1.4 Assignment Statements and Input<a class="headerlink" href="#id22" title="Link to this heading">¶</a></h2>
 <details>
 <summary>📌 Standards — 1.4</summary>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -2915,18 +3801,18 @@ Create variables and choose numbers that match the following number types to ver
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;b = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="o">++</span><span class="p">);</span><span class="w">  </span><span class="c1">// b = 5 (post-increment: original returned first)</span>
 </pre></div>
 </div>
-<section id="id11">
-<h3>Assignment 1.4.1 — Compound Operators<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h3>
+<section id="id23">
+<h3>Assignment 1.4.1 — Compound Operators<a class="headerlink" href="#id23" title="Link to this heading">¶</a></h3>
 <p>Rewrite a provided program using compound assignment and increment/decrement operators, then extend it to calculate average years and days in school for a group.</p>
 </section>
-<section id="id12">
-<h3>Assignment 1.4.2 — Average Test Score / Cashier Totals<a class="headerlink" href="#id12" title="Link to this heading">¶</a></h3>
+<section id="id24">
+<h3>Assignment 1.4.2 — Average Test Score / Cashier Totals<a class="headerlink" href="#id24" title="Link to this heading">¶</a></h3>
 <p>Write two programs: one that averages four test scores, and one that calculates cashier totals for burgers and fries.</p>
 </section>
 </section>
 <hr class="docutils" />
-<section id="id13">
-<h2>1.5 Casting and Range of Variables<a class="headerlink" href="#id13" title="Link to this heading">¶</a></h2>
+<section id="id25">
+<h2>1.5 Casting and Range of Variables<a class="headerlink" href="#id25" title="Link to this heading">¶</a></h2>
 <details>
 <summary>📌 Standards — 1.5</summary>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -2979,8 +3865,8 @@ Create variables and choose numbers that match the following number types to ver
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>widening</strong> — converting from a smaller data type to a larger: <code class="docutils literal notranslate"><span class="pre">byte</span></code> → <code class="docutils literal notranslate"><span class="pre">short</span></code> → <code class="docutils literal notranslate"><span class="pre">char</span></code> → <code class="docutils literal notranslate"><span class="pre">int</span></code> → <code class="docutils literal notranslate"><span class="pre">long</span></code> → <code class="docutils literal notranslate"><span class="pre">float</span></code> → <code class="docutils literal notranslate"><span class="pre">double</span></code></p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>narrowing</strong> — converting from a larger data type to a smaller: <code class="docutils literal notranslate"><span class="pre">double</span></code> → <code class="docutils literal notranslate"><span class="pre">float</span></code> → <code class="docutils literal notranslate"><span class="pre">long</span></code> → <code class="docutils literal notranslate"><span class="pre">int</span></code> → <code class="docutils literal notranslate"><span class="pre">char</span></code> → <code class="docutils literal notranslate"><span class="pre">short</span></code> → <code class="docutils literal notranslate"><span class="pre">byte</span></code></p></li>
 </ul>
-<section id="id14">
-<h3>Assignment 1.5.1 — FivePlanetTravel<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h3>
+<section id="id26">
+<h3>Assignment 1.5.1 — FivePlanetTravel<a class="headerlink" href="#id26" title="Link to this heading">¶</a></h3>
 <p>You will explore the PlanetTravel program called <strong>FivePlanetTravel</strong>. The program is set up to plan a five-planet tour!</p>
 <p><strong>Starter Code:</strong></p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/* </span>
@@ -3042,13 +3928,13 @@ Create variables and choose numbers that match the following number types to ver
 </section>
 </section>
 <hr class="docutils" />
-<section id="id15">
-<h2>1.6 Compound Assignment Operators<a class="headerlink" href="#id15" title="Link to this heading">¶</a></h2>
+<section id="id27">
+<h2>1.6 Compound Assignment Operators<a class="headerlink" href="#id27" title="Link to this heading">¶</a></h2>
 <p><em>(See section 1.4 — covered in depth with compound assignment operators and prefix/postfix increment/decrement.)</em></p>
 </section>
 <hr class="docutils" />
-<section id="id16">
-<h2>1.7 Application Program Interface (API) and Libraries<a class="headerlink" href="#id16" title="Link to this heading">¶</a></h2>
+<section id="id28">
+<h2>1.7 Application Program Interface (API) and Libraries<a class="headerlink" href="#id28" title="Link to this heading">¶</a></h2>
 <details>
 <summary>📌 Standards — 1.7</summary>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -3119,8 +4005,8 @@ Create variables and choose numbers that match the following number types to ver
 </div>
 </section>
 <hr class="docutils" />
-<section id="id17">
-<h2>1.8 Documentation with Comments<a class="headerlink" href="#id17" title="Link to this heading">¶</a></h2>
+<section id="id29">
+<h2>1.8 Documentation with Comments<a class="headerlink" href="#id29" title="Link to this heading">¶</a></h2>
 <details>
 <summary>📌 Standards — 1.8</summary>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -3191,8 +4077,8 @@ Create variables and choose numbers that match the following number types to ver
 </div>
 </section>
 <hr class="docutils" />
-<section id="id18">
-<h2>1.9 Method Signatures<a class="headerlink" href="#id18" title="Link to this heading">¶</a></h2>
+<section id="id30">
+<h2>1.9 Method Signatures<a class="headerlink" href="#id30" title="Link to this heading">¶</a></h2>
 <details>
 <summary>📌 Standards — 1.9</summary>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -3266,8 +4152,8 @@ Create variables and choose numbers that match the following number types to ver
 </div>
 </section>
 <hr class="docutils" />
-<section id="id19">
-<h2>1.10 Calling Class Methods<a class="headerlink" href="#id19" title="Link to this heading">¶</a></h2>
+<section id="id31">
+<h2>1.10 Calling Class Methods<a class="headerlink" href="#id31" title="Link to this heading">¶</a></h2>
 <details>
 <summary>📌 Standards — 1.10</summary>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -3311,8 +4197,8 @@ Create variables and choose numbers that match the following number types to ver
 </div>
 </section>
 <hr class="docutils" />
-<section id="id20">
-<h2>1.11 Math Class<a class="headerlink" href="#id20" title="Link to this heading">¶</a></h2>
+<section id="id32">
+<h2>1.11 Math Class<a class="headerlink" href="#id32" title="Link to this heading">¶</a></h2>
 <details>
 <summary>📌 Standards — 1.11</summary>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -3391,8 +4277,8 @@ Create variables and choose numbers that match the following number types to ver
 </tbody>
 </table>
 </div>
-<section id="id21">
-<h3>Activity 1.11.1 — Roller Coaster Simulator<a class="headerlink" href="#id21" title="Link to this heading">¶</a></h3>
+<section id="id33">
+<h3>Activity 1.11.1 — Roller Coaster Simulator<a class="headerlink" href="#id33" title="Link to this heading">¶</a></h3>
 <p><strong>Project Overview:</strong>
 Students will write a program that helps a theme park design safe roller coasters based on physics-related math. The user (acting as an engineer) inputs the parameters of a coaster hill, and the program will:</p>
 <ul class="simple">
@@ -3475,8 +4361,8 @@ Time Rounded Down: 3.0 sec
 <p>Submit your <code class="docutils literal notranslate"><span class="pre">.java</span></code> program code and test cases that demonstrate your program works as intended.</p>
 </section>
 <hr class="docutils" />
-<section id="id22">
-<h3>Activity 1.11.2 — Race Car<a class="headerlink" href="#id22" title="Link to this heading">¶</a></h3>
+<section id="id34">
+<h3>Activity 1.11.2 — Race Car<a class="headerlink" href="#id34" title="Link to this heading">¶</a></h3>
 <p>Starter Files: <a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9757289/Activity129RaceCar.zip">Activity129RaceCar.zip</a></p>
 <p>Complete the <code class="docutils literal notranslate"><span class="pre">computeTime</span></code> method and the comments in <code class="docutils literal notranslate"><span class="pre">Main.java</span></code>:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Length of the track in meters</span>
@@ -3503,8 +4389,8 @@ Time Rounded Down: 3.0 sec
 </section>
 </section>
 <hr class="docutils" />
-<section id="id23">
-<h2>1.12 Objects: Instances of Classes<a class="headerlink" href="#id23" title="Link to this heading">¶</a></h2>
+<section id="id35">
+<h2>1.12 Objects: Instances of Classes<a class="headerlink" href="#id35" title="Link to this heading">¶</a></h2>
 <details>
 <summary>📌 Standards — 1.12</summary>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -3570,8 +4456,8 @@ Visually demonstrate the properties of inheritance by creating a subclass(es) of
 </ul>
 </section>
 <hr class="docutils" />
-<section id="id24">
-<h2>1.13 Object Creation and Storage (Instantiation)<a class="headerlink" href="#id24" title="Link to this heading">¶</a></h2>
+<section id="id36">
+<h2>1.13 Object Creation and Storage (Instantiation)<a class="headerlink" href="#id36" title="Link to this heading">¶</a></h2>
 <details>
 <summary>📌 Standards — 1.13</summary>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -3654,8 +4540,8 @@ Visually demonstrate the properties of inheritance by creating a subclass(es) of
 <span class="p">}</span>
 </pre></div>
 </div>
-<section id="id25">
-<h3>toString() Method<a class="headerlink" href="#id25" title="Link to this heading">¶</a></h3>
+<section id="id37">
+<h3>toString() Method<a class="headerlink" href="#id37" title="Link to this heading">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">toString()</span></code> method provides a meaningful String representation of an object. It is called automatically when you print an object.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Car</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">make</span><span class="p">;</span>
@@ -3683,8 +4569,8 @@ Visually demonstrate the properties of inheritance by creating a subclass(es) of
 </div>
 </section>
 <hr class="docutils" />
-<section id="id26">
-<h3>Activity 2.1.1 — Sports Class<a class="headerlink" href="#id26" title="Link to this heading">¶</a></h3>
+<section id="id38">
+<h3>Activity 2.1.1 — Sports Class<a class="headerlink" href="#id38" title="Link to this heading">¶</a></h3>
 <p>Write a class related to a professional sport (Football, soccer, basketball, etc.)</p>
 <ul class="simple">
 <li><p>Create a class related to a professional sport of your choice</p></li>
@@ -3704,8 +4590,8 @@ Visually demonstrate the properties of inheritance by creating a subclass(es) of
 </div>
 </section>
 <hr class="docutils" />
-<section id="id27">
-<h3>Activity 2.1.2 — Not Another Cake<a class="headerlink" href="#id27" title="Link to this heading">¶</a></h3>
+<section id="id39">
+<h3>Activity 2.1.2 — Not Another Cake<a class="headerlink" href="#id39" title="Link to this heading">¶</a></h3>
 <p><strong>Directions:</strong> Look at the <code class="docutils literal notranslate"><span class="pre">Cake.java</span></code> program below. Create a 1-tier cake, 2-tier cake, and a 3-tier cake. Print out the reference location of the constructor. A solution is provided if you get stuck.</p>
 <p><strong>Submission Requirements:</strong></p>
 <ul class="simple">
@@ -3813,8 +4699,8 @@ Visually demonstrate the properties of inheritance by creating a subclass(es) of
 </div>
 </section>
 <hr class="docutils" />
-<section id="id28">
-<h3>Activity 2.1.3 — Dog Pizza<a class="headerlink" href="#id28" title="Link to this heading">¶</a></h3>
+<section id="id40">
+<h3>Activity 2.1.3 — Dog Pizza<a class="headerlink" href="#id40" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Complete <code class="docutils literal notranslate"><span class="pre">Dog.java</span></code> by filling in the attributes and creating the constructor</p></li>
 <li><p>Instantiate 3 pizzas and print them out by:</p>
@@ -3871,8 +4757,8 @@ Visually demonstrate the properties of inheritance by creating a subclass(es) of
 </div>
 </section>
 <hr class="docutils" />
-<section id="id29">
-<h3>Activity 2.1.4 — Bicycle Revisited<a class="headerlink" href="#id29" title="Link to this heading">¶</a></h3>
+<section id="id41">
+<h3>Activity 2.1.4 — Bicycle Revisited<a class="headerlink" href="#id41" title="Link to this heading">¶</a></h3>
 <ol class="arabic simple">
 <li><p>Create a <code class="docutils literal notranslate"><span class="pre">Bike</span></code> class with the following attributes:</p>
 <ul class="simple">
@@ -3898,8 +4784,8 @@ Pedaling to accelerate.
 </div>
 </section>
 <hr class="docutils" />
-<section id="id30">
-<h3>Activity 2.1.5 — Constructor Practice<a class="headerlink" href="#id30" title="Link to this heading">¶</a></h3>
+<section id="id42">
+<h3>Activity 2.1.5 — Constructor Practice<a class="headerlink" href="#id42" title="Link to this heading">¶</a></h3>
 <ol class="arabic">
 <li><p>Create a class called <code class="docutils literal notranslate"><span class="pre">Student</span></code> with the following instance variables:</p>
 <ul class="simple">
@@ -3938,8 +4824,8 @@ Pedaling to accelerate.
 </section>
 </section>
 <hr class="docutils" />
-<section id="id31">
-<h2>1.14 Calling Instance Methods<a class="headerlink" href="#id31" title="Link to this heading">¶</a></h2>
+<section id="id43">
+<h2>1.14 Calling Instance Methods<a class="headerlink" href="#id43" title="Link to this heading">¶</a></h2>
 <details>
 <summary>📌 Standards — 1.14</summary>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -3984,8 +4870,8 @@ Pedaling to accelerate.
 </div>
 </section>
 <hr class="docutils" />
-<section id="id32">
-<h2>1.15 String Manipulation<a class="headerlink" href="#id32" title="Link to this heading">¶</a></h2>
+<section id="id44">
+<h2>1.15 String Manipulation<a class="headerlink" href="#id44" title="Link to this heading">¶</a></h2>
 <details>
 <summary>📌 Standards — 1.15</summary>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -4081,16 +4967,16 @@ Pedaling to accelerate.
 </pre></div>
 </div>
 <p><strong>Aliasing:</strong> When <code class="docutils literal notranslate"><span class="pre">shape3</span> <span class="pre">=</span> <span class="pre">shape1</span></code>, both point to the same memory address. Any change to one changes the other. In Java, this is known as <strong>aliasing</strong>.</p>
-<section id="id33">
-<h3>Activity 2.7.1 — Wordplay<a class="headerlink" href="#id33" title="Link to this heading">¶</a></h3>
+<section id="id45">
+<h3>Activity 2.7.1 — Wordplay<a class="headerlink" href="#id45" title="Link to this heading">¶</a></h3>
 </section>
-<section id="id34">
-<h3>Activity 2.7.2 — Speaking<a class="headerlink" href="#id34" title="Link to this heading">¶</a></h3>
+<section id="id46">
+<h3>Activity 2.7.2 — Speaking<a class="headerlink" href="#id46" title="Link to this heading">¶</a></h3>
 </section>
 </section>
 <hr class="docutils" />
-<section id="id35">
-<h2>1.16 Formatting and StringBuilder — <em>Oracle Foundations 1Z0-811</em><a class="headerlink" href="#id35" title="Link to this heading">¶</a></h2>
+<section id="id47">
+<h2>1.16 Formatting and StringBuilder — <em>Oracle Foundations 1Z0-811</em><a class="headerlink" href="#id47" title="Link to this heading">¶</a></h2>
 <details>
 <summary>📌 Standards — 1.16</summary>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -4132,8 +5018,8 @@ Pedaling to accelerate.
 <blockquote>
 <div><p><strong>Oracle Exam Note:</strong> <code class="docutils literal notranslate"><span class="pre">String.format()</span></code>, <code class="docutils literal notranslate"><span class="pre">printf()</span></code>, and <code class="docutils literal notranslate"><span class="pre">StringBuilder</span></code> are covered on the Oracle Java Foundations exam (1Z0-811).</p>
 </div></blockquote>
-<section id="id36">
-<h3>String Formatting<a class="headerlink" href="#id36" title="Link to this heading">¶</a></h3>
+<section id="id48">
+<h3>String Formatting<a class="headerlink" href="#id48" title="Link to this heading">¶</a></h3>
 <p>Java provides two main ways to format output:</p>
 <p><strong><code class="docutils literal notranslate"><span class="pre">System.out.printf()</span></code></strong> — formatted printing:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">9.99</span><span class="p">;</span>
@@ -4181,8 +5067,8 @@ Pedaling to accelerate.
 </table>
 </div>
 </section>
-<section id="id37">
-<h3>StringBuilder<a class="headerlink" href="#id37" title="Link to this heading">¶</a></h3>
+<section id="id49">
+<h3>StringBuilder<a class="headerlink" href="#id49" title="Link to this heading">¶</a></h3>
 <p>A <strong><code class="docutils literal notranslate"><span class="pre">StringBuilder</span></code></strong> is a mutable sequence of characters. Unlike <code class="docutils literal notranslate"><span class="pre">String</span></code>, it can be modified without creating new objects — making it efficient for building strings in loops.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">StringBuilder</span><span class="w"> </span><span class="n">sb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringBuilder</span><span class="p">();</span>
 <span class="n">sb</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">&quot;Hello&quot;</span><span class="p">);</span>
@@ -4234,18 +5120,18 @@ Pedaling to accelerate.
 </pre></div>
 </div>
 </section>
-<section id="id38">
-<h3>Activity 1.16.1 — Formatted Report<a class="headerlink" href="#id38" title="Link to this heading">¶</a></h3>
+<section id="id50">
+<h3>Activity 1.16.1 — Formatted Report<a class="headerlink" href="#id50" title="Link to this heading">¶</a></h3>
 <p>Create a formatted student report card that displays names, scores, and letter grades in aligned columns using <code class="docutils literal notranslate"><span class="pre">String.format()</span></code>.</p>
 </section>
-<section id="id39">
-<h3>Activity 1.16.2 — StringBuilder Reverse<a class="headerlink" href="#id39" title="Link to this heading">¶</a></h3>
+<section id="id51">
+<h3>Activity 1.16.2 — StringBuilder Reverse<a class="headerlink" href="#id51" title="Link to this heading">¶</a></h3>
 <p>Use <code class="docutils literal notranslate"><span class="pre">StringBuilder</span></code> to write a program that checks whether a given word is a palindrome.</p>
 </section>
 </section>
 <hr class="docutils" />
-<section id="id40">
-<h2>1.17 Wrapper Classes — Integer and Double<a class="headerlink" href="#id40" title="Link to this heading">¶</a></h2>
+<section id="id52">
+<h2>1.17 Wrapper Classes — Integer and Double<a class="headerlink" href="#id52" title="Link to this heading">¶</a></h2>
 <details>
 <summary>📌 Standards — 1.17</summary>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -4326,8 +5212,8 @@ Pedaling to accelerate.
 <span class="kt">double</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Double</span><span class="p">.</span><span class="na">parseDouble</span><span class="p">(</span><span class="s">&quot;3.14&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
-<section id="id41">
-<h3>Activity 1.17.1 — Wrapper Classes<a class="headerlink" href="#id41" title="Link to this heading">¶</a></h3>
+<section id="id53">
+<h3>Activity 1.17.1 — Wrapper Classes<a class="headerlink" href="#id53" title="Link to this heading">¶</a></h3>
 </section>
 </section>
 <hr class="docutils" />
@@ -4572,8 +5458,8 @@ Thunder Loop: NOT ELIGIBLE
 </ul>
 </section>
 <hr class="docutils" />
-<section id="id42">
-<h4>Part 3 — Main.java<a class="headerlink" href="#id42" title="Link to this heading">¶</a></h4>
+<section id="id54">
+<h4>Part 3 — Main.java<a class="headerlink" href="#id54" title="Link to this heading">¶</a></h4>
 <p>Your <code class="docutils literal notranslate"><span class="pre">main</span></code> method must:</p>
 <ol class="arabic simple">
 <li><p>Include the required block comment header (all fields completed)</p></li>
@@ -4901,29 +5787,23 @@ Available vehicles: 3
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Unit 1 — Using Objects and Methods</a><ul>
+<li><a class="reference internal" href="#ap-computer-science-a-assignment-rubric">AP Computer Science A — Assignment Rubric</a></li>
 <li><a class="reference internal" href="#introduction-to-algorithms-programming-and-compilers">1.1 Introduction to Algorithms, Programming, and Compilers</a></li>
 <li><a class="reference internal" href="#variables-and-data-types">1.2 Variables and Data Types</a></li>
-<li><a class="reference internal" href="#expressions-and-output">1.3 Expressions and Output</a><ul>
-<li><a class="reference internal" href="#assignment-1-3-1-calculate-your-weight-on-jupiter">Assignment 1.3.1 — Calculate Your Weight on Jupiter</a></li>
-<li><a class="reference internal" href="#assignment-1-3-2-simple-math">Assignment 1.3.2 — Simple Math</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#assignment-statements-and-input">1.4 Assignment Statements and Input</a><ul>
-<li><a class="reference internal" href="#assignment-1-4-1-compound-operators">Assignment 1.4.1 — Compound Operators</a></li>
-<li><a class="reference internal" href="#assignment-1-4-2-average-test-score-cashier-totals">Assignment 1.4.2 — Average Test Score / Cashier Totals</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#casting-and-range-of-variables">1.5 Casting and Range of Variables</a><ul>
-<li><a class="reference internal" href="#assignment-1-5-1-fiveplanettravel">Assignment 1.5.1 — FivePlanetTravel</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#expressions-and-output">1.3 Expressions and Output</a></li>
+<li><a class="reference internal" href="#assignment-statements-and-input">1.4 Assignment Statements and Input</a></li>
+<li><a class="reference internal" href="#casting-and-range-of-variables">1.5 Casting and Range of Variables</a></li>
 <li><a class="reference internal" href="#compound-assignment-operators">1.6 Compound Assignment Operators</a></li>
 <li><a class="reference internal" href="#application-program-interface-api-and-libraries">1.7 Application Program Interface (API) and Libraries</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#activity-1-7-1-magic-8-ball-exploring-apis-and-libraries">Activity 1.7.1 — Magic 8-Ball: Exploring APIs and Libraries</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#background">Background</a></li>
 <li><a class="reference internal" href="#documentation-with-comments">1.8 Documentation with Comments</a></li>
 <li><a class="reference internal" href="#method-signatures">1.9 Method Signatures</a></li>
 <li><a class="reference internal" href="#calling-class-methods">1.10 Calling Class Methods</a></li>
 <li><a class="reference internal" href="#math-class">1.11 Math Class</a><ul>
-<li><a class="reference internal" href="#activity-1-11-1-roller-coaster-simulator">Activity 1.11.1 — Roller Coaster Simulator</a></li>
 <li><a class="reference internal" href="#activity-1-11-2-race-car">Activity 1.11.2 — Race Car</a></li>
 </ul>
 </li>
@@ -4959,65 +5839,65 @@ Available vehicles: 3
 <li><a class="reference internal" href="#numbers-riddle-project">Numbers Riddle Project</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id1">Unit 1 — Using Objects and Methods</a><ul>
-<li><a class="reference internal" href="#id2">1.1 Introduction to Algorithms, Programming, and Compilers</a><ul>
-<li><a class="reference internal" href="#id3">Assignment 1.1.1 — My Timeline</a></li>
+<li><a class="reference internal" href="#id13">Unit 1 — Using Objects and Methods</a><ul>
+<li><a class="reference internal" href="#id14">1.1 Introduction to Algorithms, Programming, and Compilers</a><ul>
+<li><a class="reference internal" href="#id15">Assignment 1.1.1 — My Timeline</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id4">1.2 Variables and Data Types</a><ul>
-<li><a class="reference internal" href="#id5">Assignment 1.2.1 — Allowance</a></li>
-<li><a class="reference internal" href="#id6">Assignment 1.2.2 — Scanner Class</a></li>
+<li><a class="reference internal" href="#id16">1.2 Variables and Data Types</a><ul>
+<li><a class="reference internal" href="#id17">Assignment 1.2.1 — Allowance</a></li>
+<li><a class="reference internal" href="#id18">Assignment 1.2.2 — Scanner Class</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id7">1.3 Expressions and Output</a><ul>
-<li><a class="reference internal" href="#id8">Assignment 1.3.1 — Calculate Your Weight on Jupiter</a></li>
-<li><a class="reference internal" href="#id9">Assignment 1.3.2 — Simple Math</a></li>
+<li><a class="reference internal" href="#id19">1.3 Expressions and Output</a><ul>
+<li><a class="reference internal" href="#id20">Assignment 1.3.1 — Calculate Your Weight on Jupiter</a></li>
+<li><a class="reference internal" href="#id21">Assignment 1.3.2 — Simple Math</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id10">1.4 Assignment Statements and Input</a><ul>
-<li><a class="reference internal" href="#id11">Assignment 1.4.1 — Compound Operators</a></li>
-<li><a class="reference internal" href="#id12">Assignment 1.4.2 — Average Test Score / Cashier Totals</a></li>
+<li><a class="reference internal" href="#id22">1.4 Assignment Statements and Input</a><ul>
+<li><a class="reference internal" href="#id23">Assignment 1.4.1 — Compound Operators</a></li>
+<li><a class="reference internal" href="#id24">Assignment 1.4.2 — Average Test Score / Cashier Totals</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id13">1.5 Casting and Range of Variables</a><ul>
-<li><a class="reference internal" href="#id14">Assignment 1.5.1 — FivePlanetTravel</a></li>
+<li><a class="reference internal" href="#id25">1.5 Casting and Range of Variables</a><ul>
+<li><a class="reference internal" href="#id26">Assignment 1.5.1 — FivePlanetTravel</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id15">1.6 Compound Assignment Operators</a></li>
-<li><a class="reference internal" href="#id16">1.7 Application Program Interface (API) and Libraries</a></li>
-<li><a class="reference internal" href="#id17">1.8 Documentation with Comments</a></li>
-<li><a class="reference internal" href="#id18">1.9 Method Signatures</a></li>
-<li><a class="reference internal" href="#id19">1.10 Calling Class Methods</a></li>
-<li><a class="reference internal" href="#id20">1.11 Math Class</a><ul>
-<li><a class="reference internal" href="#id21">Activity 1.11.1 — Roller Coaster Simulator</a></li>
-<li><a class="reference internal" href="#id22">Activity 1.11.2 — Race Car</a></li>
+<li><a class="reference internal" href="#id27">1.6 Compound Assignment Operators</a></li>
+<li><a class="reference internal" href="#id28">1.7 Application Program Interface (API) and Libraries</a></li>
+<li><a class="reference internal" href="#id29">1.8 Documentation with Comments</a></li>
+<li><a class="reference internal" href="#id30">1.9 Method Signatures</a></li>
+<li><a class="reference internal" href="#id31">1.10 Calling Class Methods</a></li>
+<li><a class="reference internal" href="#id32">1.11 Math Class</a><ul>
+<li><a class="reference internal" href="#id33">Activity 1.11.1 — Roller Coaster Simulator</a></li>
+<li><a class="reference internal" href="#id34">Activity 1.11.2 — Race Car</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id23">1.12 Objects: Instances of Classes</a></li>
-<li><a class="reference internal" href="#id24">1.13 Object Creation and Storage (Instantiation)</a><ul>
-<li><a class="reference internal" href="#id25">toString() Method</a></li>
-<li><a class="reference internal" href="#id26">Activity 2.1.1 — Sports Class</a></li>
-<li><a class="reference internal" href="#id27">Activity 2.1.2 — Not Another Cake</a></li>
-<li><a class="reference internal" href="#id28">Activity 2.1.3 — Dog Pizza</a></li>
-<li><a class="reference internal" href="#id29">Activity 2.1.4 — Bicycle Revisited</a></li>
-<li><a class="reference internal" href="#id30">Activity 2.1.5 — Constructor Practice</a></li>
+<li><a class="reference internal" href="#id35">1.12 Objects: Instances of Classes</a></li>
+<li><a class="reference internal" href="#id36">1.13 Object Creation and Storage (Instantiation)</a><ul>
+<li><a class="reference internal" href="#id37">toString() Method</a></li>
+<li><a class="reference internal" href="#id38">Activity 2.1.1 — Sports Class</a></li>
+<li><a class="reference internal" href="#id39">Activity 2.1.2 — Not Another Cake</a></li>
+<li><a class="reference internal" href="#id40">Activity 2.1.3 — Dog Pizza</a></li>
+<li><a class="reference internal" href="#id41">Activity 2.1.4 — Bicycle Revisited</a></li>
+<li><a class="reference internal" href="#id42">Activity 2.1.5 — Constructor Practice</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id31">1.14 Calling Instance Methods</a></li>
-<li><a class="reference internal" href="#id32">1.15 String Manipulation</a><ul>
-<li><a class="reference internal" href="#id33">Activity 2.7.1 — Wordplay</a></li>
-<li><a class="reference internal" href="#id34">Activity 2.7.2 — Speaking</a></li>
+<li><a class="reference internal" href="#id43">1.14 Calling Instance Methods</a></li>
+<li><a class="reference internal" href="#id44">1.15 String Manipulation</a><ul>
+<li><a class="reference internal" href="#id45">Activity 2.7.1 — Wordplay</a></li>
+<li><a class="reference internal" href="#id46">Activity 2.7.2 — Speaking</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id35">1.16 Formatting and StringBuilder — <em>Oracle Foundations 1Z0-811</em></a><ul>
-<li><a class="reference internal" href="#id36">String Formatting</a></li>
-<li><a class="reference internal" href="#id37">StringBuilder</a></li>
-<li><a class="reference internal" href="#id38">Activity 1.16.1 — Formatted Report</a></li>
-<li><a class="reference internal" href="#id39">Activity 1.16.2 — StringBuilder Reverse</a></li>
+<li><a class="reference internal" href="#id47">1.16 Formatting and StringBuilder — <em>Oracle Foundations 1Z0-811</em></a><ul>
+<li><a class="reference internal" href="#id48">String Formatting</a></li>
+<li><a class="reference internal" href="#id49">StringBuilder</a></li>
+<li><a class="reference internal" href="#id50">Activity 1.16.1 — Formatted Report</a></li>
+<li><a class="reference internal" href="#id51">Activity 1.16.2 — StringBuilder Reverse</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id40">1.17 Wrapper Classes — Integer and Double</a><ul>
-<li><a class="reference internal" href="#id41">Activity 1.17.1 — Wrapper Classes</a></li>
+<li><a class="reference internal" href="#id52">1.17 Wrapper Classes — Integer and Double</a><ul>
+<li><a class="reference internal" href="#id53">Activity 1.17.1 — Wrapper Classes</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#unit-1-final-project">Unit 1 Final Project</a><ul>
@@ -5031,7 +5911,7 @@ Available vehicles: 3
 <li><a class="reference internal" href="#option-b-car-dealership-inventory">Option B — Car Dealership Inventory</a><ul>
 <li><a class="reference internal" href="#part-1-car-java">Part 1 — Car.java</a></li>
 <li><a class="reference internal" href="#part-2-customer-java">Part 2 — Customer.java</a></li>
-<li><a class="reference internal" href="#id42">Part 3 — Main.java</a></li>
+<li><a class="reference internal" href="#id54">Part 3 — Main.java</a></li>
 <li><a class="reference internal" href="#sample-output-option-b">Sample Output — Option B</a></li>
 </ul>
 </li>
