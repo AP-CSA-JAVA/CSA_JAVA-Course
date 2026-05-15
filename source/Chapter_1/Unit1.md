@@ -390,6 +390,7 @@ int b = 5;
 System.out.println("b = " + b++);  // b = 5 (post-increment: original returned first)
 ```
 
+>
 > ### Assignment 1.4.1 — Compound Operators
 > 
 > ```java
@@ -436,7 +437,7 @@ System.out.println("b = " + b++);  // b = 5 (post-increment: original returned f
 
 ---
 
-
+>
 > ### Assignment 1.4.2 — Average Test Score / Cashier Totals
 > 
 > Directions: Write two programs that will do the following:
@@ -562,6 +563,8 @@ public class CastingEggs {
 ```
 We know that we don't have 0 eggs.  We can rewrite our program to show how many eggs we have in decimal form.
 
+
+
 > 
 > ### Assignment 1.5.1 — FivePlanetTravel
 > 
@@ -673,9 +676,9 @@ import java.util.ArrayList;
 ---
 
 
-# Activity 1.7.1 — Magic 8-Ball: Exploring APIs and Libraries
+## Activity 1.7.1 — Magic 8-Ball: Exploring APIs and Libraries
 
-## Overview
+### Overview
 
 In this activity you will explore the Java API documentation to understand how libraries and packages work, then build a Magic 8-Ball program that imports and uses classes from the Java standard library.
 
@@ -700,10 +703,11 @@ import java.util.Scanner;   // imports the Scanner class from the java.util pack
 import java.util.Random;    // imports the Random class from the java.util package
 ```
 
-> `java.lang` (which contains `String`, `Math`, `Integer`, etc.) is imported **automatically** — you never need to import it manually.
+`java.lang` (which contains `String`, `Math`, `Integer`, etc.) is imported **automatically** — you never need to import it manually.
 
 ---
 
+>
 > ## Activity 1.7.1 — API Investigation
 > 
 > Using the Java 8 API documentation at **https://docs.oracle.com/javase/8/docs/api/**, answer the following questions in a comment block at the top of your `Main.java` file or in a separate text document submitted alongside your code.
@@ -1000,6 +1004,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 ---
 
 
+>
 > # Activity 1.10.1 — Mission Control: Calling Class Methods
 > 
 > 
@@ -1226,7 +1231,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > 
 >         input.close();
 >     }
-}
+> }
 > ```
 > 
 > ---
@@ -1410,26 +1415,21 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > public class Main {
 >     public static void main(String[] args) {
 > 
-> 
 > 		// Use Scanner to get inputs for Speed, time and GForce
 > 
 >      // Get user inputs
 > 
-> 
 >      // Create an instance of RollerCoasterSimulator
->         
 > 
 >         // Get and display results
 >         double speed = sim.getSpeed();
 >         double time = sim.getTime();
 >         double gForce = sim.getGForce();
 > 
-> 
 >         if (!sim.isSafe()) {
 >             // if speed Gforce is too excessive print "TOO DANGEROUS!"
 > 			// Recommend that the user make changes to height or curve
 > 			// else print "Safe for riders!"
-> 
 > 
 > 		System.out.println("\n--- Rounded Data ---");
 > 		// Round speed up
@@ -1443,9 +1443,11 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > 
 
 
-### Activity 1.11.2 — Race Car
+---
 
-> # Activity 1.11.2 — Race Car: Applying the Math Class
+
+>
+> ### Activity 1.11.2 — Race Car: Applying the Math Class
 > 
 > ## Standards
 > 
