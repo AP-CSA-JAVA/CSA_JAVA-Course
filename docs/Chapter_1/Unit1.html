@@ -199,8 +199,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Chapter 1:</span></p>
 <ul class="current">
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Unit 1 — Using Objects and Methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#activity-1-7-1-magic-8-ball-exploring-apis-and-libraries">Activity 1.7.1 — Magic 8-Ball: Exploring APIs and Libraries</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Unit 1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Unit2.html">Unit 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Unit3.html">Unit 3</a></li>
 </ul>
@@ -1165,12 +1164,11 @@ Total Sales: $64.3
 </pre></div>
 </div>
 </section>
-</section>
 <hr class="docutils" />
 <section id="activity-1-7-1-magic-8-ball-exploring-apis-and-libraries">
-<h1>Activity 1.7.1 — Magic 8-Ball: Exploring APIs and Libraries<a class="headerlink" href="#activity-1-7-1-magic-8-ball-exploring-apis-and-libraries" title="Link to this heading">¶</a></h1>
+<h2>Activity 1.7.1 — Magic 8-Ball: Exploring APIs and Libraries<a class="headerlink" href="#activity-1-7-1-magic-8-ball-exploring-apis-and-libraries" title="Link to this heading">¶</a></h2>
 <section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">¶</a></h2>
+<h3>Overview<a class="headerlink" href="#overview" title="Link to this heading">¶</a></h3>
 <p>In this activity you will explore the Java API documentation to understand how libraries and packages work, then build a Magic 8-Ball program that imports and uses classes from the Java standard library.</p>
 <p>By the end of this activity you will be able to:</p>
 <ul class="contains-task-list simple">
@@ -1179,6 +1177,7 @@ Total Sales: $64.3
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use an <code class="docutils literal notranslate"><span class="pre">import</span></code> statement to include a package in your program</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Call methods from <code class="docutils literal notranslate"><span class="pre">java.util.Scanner</span></code> and <code class="docutils literal notranslate"><span class="pre">java.util.Random</span></code> meaningfully in a program</p></li>
 </ul>
+</section>
 </section>
 <hr class="docutils" />
 <section id="background">
@@ -1190,9 +1189,7 @@ Total Sales: $64.3
 <span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Random</span><span class="p">;</span><span class="w">    </span><span class="c1">// imports the Random class from the java.util package</span>
 </pre></div>
 </div>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">java.lang</span></code> (which contains <code class="docutils literal notranslate"><span class="pre">String</span></code>, <code class="docutils literal notranslate"><span class="pre">Math</span></code>, <code class="docutils literal notranslate"><span class="pre">Integer</span></code>, etc.) is imported <strong>automatically</strong> — you never need to import it manually.</p>
-</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">java.lang</span></code> (which contains <code class="docutils literal notranslate"><span class="pre">String</span></code>, <code class="docutils literal notranslate"><span class="pre">Math</span></code>, <code class="docutils literal notranslate"><span class="pre">Integer</span></code>, etc.) is imported <strong>automatically</strong> — you never need to import it manually.</p>
 <hr class="docutils" />
 <blockquote>
 <div><p class="rubric" id="activity-1-7-1-api-investigation">Activity 1.7.1 — API Investigation</p>
@@ -1794,84 +1791,76 @@ The Magic 8-Ball has spoken. Goodbye!
 
 <span class="w">        </span><span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
 <span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
-</div></blockquote>
-<p>}</p>
-<blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-<span class="o">---</span>
-
-<span class="c1">## Sample Output</span>
-
-</pre></div>
-</div>
-<p>=== MISSION CONTROL LAUNCH SYSTEM ===
+<hr class="docutils" />
+<p class="rubric" id="id6">Sample Output</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>=== MISSION CONTROL LAUNCH SYSTEM ===
 Enter rocket name: Falcon Alpha
 Enter fuel amount (liters): 5000
 Enter rocket mass (kg): 120000
-Enter engine thrust (kN): 2500</p>
-<p class="rubric" id="mission-control-report">========================================
-MISSION CONTROL REPORT</p>
-<p class="rubric" id="rocket-name-falcon-alpha-fuel-consumed-32-0-liters-flight-time-0-01-hours-thrust-weight-2-13">Rocket Name:       Falcon Alpha
+Enter engine thrust (kN): 2500
+
+========================================
+        MISSION CONTROL REPORT
+========================================
+Rocket Name:       Falcon Alpha
 Fuel Consumed:     32.0 liters
 Flight Time:       0.01 hours
-Thrust/Weight:     2.13</p>
-<p class="rubric" id="launch-status-safe-for-launch">LAUNCH STATUS:     ✓ SAFE FOR LAUNCH</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+Thrust/Weight:     2.13
+----------------------------------------
+LAUNCH STATUS:     ✓ SAFE FOR LAUNCH
+========================================
 </pre></div>
 </div>
-<p>=== MISSION CONTROL LAUNCH SYSTEM ===
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>=== MISSION CONTROL LAUNCH SYSTEM ===
 Enter rocket name: Titan IV
 Enter fuel amount (liters): 800
 Enter rocket mass (kg): 300000
-Enter engine thrust (kN): 1200</p>
-<p class="rubric" id="id6">========================================
-MISSION CONTROL REPORT</p>
-<p class="rubric" id="rocket-name-titan-iv-fuel-consumed-32-0-liters-flight-time-0-01-hours-thrust-weight-0-41">Rocket Name:       Titan IV
+Enter engine thrust (kN): 1200
+
+========================================
+        MISSION CONTROL REPORT
+========================================
+Rocket Name:       Titan IV
 Fuel Consumed:     32.0 liters
 Flight Time:       0.01 hours
-Thrust/Weight:     0.41</p>
-<p class="rubric" id="launch-status-unsafe-abort-launch">LAUNCH STATUS:     ✗ UNSAFE — ABORT LAUNCH</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
----
-
-## Extension Challenges
-
-Completed early? Try one or more of the following:
-
-- [ ] **Add a fifth method** `calculateMaxAltitude(double thrustKn, double massKg)` that returns an estimated max altitude using `Math.pow()` and `Math.sqrt()` in the formula
-- [ ] **Add a countdown** — write a `void` method called `launchCountdown(int seconds)` that prints a countdown from the given number to zero using a loop
-- [ ] **Multiple rockets** — use a loop in `main` to process three different rockets and report which one has the best thrust-to-weight ratio using `Math.max()`
-- [ ] **Unit conversion** — add a static method that converts `km/h` to `m/s` and display both speeds in the report
-
----
-
-## Submission
-
-Upload the following to the assignment:
-
-- [ ] `Main.java` — your completed program with block comment header
-- [ ] Test Cases document — showing at least **three** runs with different rocket inputs, including one that triggers the unsafe launch warning
-
----
-
-## Grading
-
-This assignment is graded using the **AP CSA Generic Assignment Rubric** (5-point scale). Pay particular attention to:
-
-- All four required static methods are present, correctly implemented, and called in `main`
-- Return values from non-void methods are stored and used — not ignored
-- `Math` class static methods are called inside your own methods, not just in `main`
-- Part 1 investigation questions are answered in your block comment or submitted document
-- The launch report is formatted using `String.format()` or `printf()` — not plain `println` concatenation
-
----
-
+Thrust/Weight:     0.41
+----------------------------------------
+LAUNCH STATUS:     ✗ UNSAFE — ABORT LAUNCH
+========================================
 </pre></div>
 </div>
+<hr class="docutils" />
+<p class="rubric" id="id7">Extension Challenges</p>
+<p>Completed early? Try one or more of the following:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Add a fifth method</strong> <code class="docutils literal notranslate"><span class="pre">calculateMaxAltitude(double</span> <span class="pre">thrustKn,</span> <span class="pre">double</span> <span class="pre">massKg)</span></code> that returns an estimated max altitude using <code class="docutils literal notranslate"><span class="pre">Math.pow()</span></code> and <code class="docutils literal notranslate"><span class="pre">Math.sqrt()</span></code> in the formula</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Add a countdown</strong> — write a <code class="docutils literal notranslate"><span class="pre">void</span></code> method called <code class="docutils literal notranslate"><span class="pre">launchCountdown(int</span> <span class="pre">seconds)</span></code> that prints a countdown from the given number to zero using a loop</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Multiple rockets</strong> — use a loop in <code class="docutils literal notranslate"><span class="pre">main</span></code> to process three different rockets and report which one has the best thrust-to-weight ratio using <code class="docutils literal notranslate"><span class="pre">Math.max()</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Unit conversion</strong> — add a static method that converts <code class="docutils literal notranslate"><span class="pre">km/h</span></code> to <code class="docutils literal notranslate"><span class="pre">m/s</span></code> and display both speeds in the report</p></li>
+</ul>
+<hr class="docutils" />
+<p class="rubric" id="id8">Submission</p>
+<p>Upload the following to the assignment:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> — your completed program with block comment header</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Test Cases document — showing at least <strong>three</strong> runs with different rocket inputs, including one that triggers the unsafe launch warning</p></li>
+</ul>
+<hr class="docutils" />
+<p class="rubric" id="id9">Grading</p>
+<p>This assignment is graded using the <strong>AP CSA Generic Assignment Rubric</strong> (5-point scale). Pay particular attention to:</p>
+<ul class="simple">
+<li><p>All four required static methods are present, correctly implemented, and called in <code class="docutils literal notranslate"><span class="pre">main</span></code></p></li>
+<li><p>Return values from non-void methods are stored and used — not ignored</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Math</span></code> class static methods are called inside your own methods, not just in <code class="docutils literal notranslate"><span class="pre">main</span></code></p></li>
+<li><p>Part 1 investigation questions are answered in your block comment or submitted document</p></li>
+<li><p>The launch report is formatted using <code class="docutils literal notranslate"><span class="pre">String.format()</span></code> or <code class="docutils literal notranslate"><span class="pre">printf()</span></code> — not plain <code class="docutils literal notranslate"><span class="pre">println</span></code> concatenation</p></li>
+</ul>
 </div></blockquote>
 </section>
+<hr class="docutils" />
 <section id="math-class">
 <h2>1.11 Math Class<a class="headerlink" href="#math-class" title="Link to this heading">¶</a></h2>
 <details>
@@ -2012,26 +2001,21 @@ This assignment is graded using the **AP CSA Generic Assignment Rubric** (5-poin
 <span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 
-
 <span class="w">		</span><span class="c1">// Use Scanner to get inputs for Speed, time and GForce</span>
 
 <span class="w">     </span><span class="c1">// Get user inputs</span>
 
-
 <span class="w">     </span><span class="c1">// Create an instance of RollerCoasterSimulator</span>
-<span class="w">        </span>
 
 <span class="w">        </span><span class="c1">// Get and display results</span>
 <span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">speed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sim</span><span class="p">.</span><span class="na">getSpeed</span><span class="p">();</span>
 <span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sim</span><span class="p">.</span><span class="na">getTime</span><span class="p">();</span>
 <span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">gForce</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sim</span><span class="p">.</span><span class="na">getGForce</span><span class="p">();</span>
 
-
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">sim</span><span class="p">.</span><span class="na">isSafe</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="c1">// if speed Gforce is too excessive print &quot;TOO DANGEROUS!&quot;</span>
 <span class="w">			</span><span class="c1">// Recommend that the user make changes to height or curve</span>
 <span class="w">			</span><span class="c1">// else print &quot;Safe for riders!&quot;</span>
-
 
 <span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\n--- Rounded Data ---&quot;</span><span class="p">);</span>
 <span class="w">		</span><span class="c1">// Round speed up</span>
@@ -2044,8 +2028,7 @@ This assignment is graded using the **AP CSA Generic Assignment Rubric** (5-poin
 </div>
 <p>Submit your java program code and your test cases that demonstrates your program works as intended.</p>
 </div></blockquote>
-<section id="activity-1-11-2-race-car">
-<h3>Activity 1.11.2 — Race Car<a class="headerlink" href="#activity-1-11-2-race-car" title="Link to this heading">¶</a></h3>
+<hr class="docutils" />
 <blockquote>
 <div><p class="rubric" id="activity-1-11-2-race-car-applying-the-math-class">Activity 1.11.2 — Race Car: Applying the Math Class</p>
 <p class="rubric" id="standards">Standards</p>
@@ -2079,7 +2062,7 @@ This assignment is graded using the **AP CSA Generic Assignment Rubric** (5-poin
 </table>
 </div>
 <hr class="docutils" />
-<p class="rubric" id="id7">Overview</p>
+<p class="rubric" id="id10">Overview</p>
 <p>In this activity you will apply what you have learned about the <code class="docutils literal notranslate"><span class="pre">Math</span></code> class, static methods, object instantiation, and <code class="docutils literal notranslate"><span class="pre">java.util.Random</span></code> to simulate a drag race between two cars. You will complete a partially written program by implementing the <code class="docutils literal notranslate"><span class="pre">computeTime</span></code> method in <code class="docutils literal notranslate"><span class="pre">Racecar.java</span></code> and filling in the guided comments in <code class="docutils literal notranslate"><span class="pre">Main.java</span></code>.</p>
 <p>By the end of this activity you will be able to:</p>
 <ul class="contains-task-list simple">
@@ -2090,7 +2073,7 @@ This assignment is graded using the **AP CSA Generic Assignment Rubric** (5-poin
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Connect prior concepts — classes, constructors, <code class="docutils literal notranslate"><span class="pre">toString()</span></code>, and static methods — in a complete program</p></li>
 </ul>
 <hr class="docutils" />
-<p class="rubric" id="id8">Background</p>
+<p class="rubric" id="id11">Background</p>
 <p class="rubric" id="connecting-prior-activities">Connecting Prior Activities</p>
 <p>You have already used these concepts individually. This activity brings them together:</p>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -2237,7 +2220,7 @@ To get the range 20–50 (31 possible values), use <code class="docutils literal
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Print the finishing time for each car in the format shown below</p></li>
 </ul>
 <hr class="docutils" />
-<p class="rubric" id="id9">Sample Output</p>
+<p class="rubric" id="id12">Sample Output</p>
 <p>Because acceleration is random, your times will differ each run. The format must match exactly:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Racer</span> <span class="n">Tom</span><span class="s1">&#39;s car finished in 10.596 seconds.</span>
 <span class="n">Racer</span> <span class="n">Jerry</span><span class="s1">&#39;s car finished in 11.423 seconds.</span>
@@ -2261,7 +2244,7 @@ To get the range 20–50 (31 possible values), use <code class="docutils literal
 <li><p><code class="docutils literal notranslate"><span class="pre">toString()</span></code> is already written for you. When <code class="docutils literal notranslate"><span class="pre">System.out.println(car1</span> <span class="pre">+</span> <span class="pre">&quot;'s</span> <span class="pre">car</span> <span class="pre">finished</span> <span class="pre">in</span> <span class="pre">&quot;</span> <span class="pre">+</span> <span class="pre">time</span> <span class="pre">+</span> <span class="pre">&quot;</span> <span class="pre">seconds.&quot;)</span></code> runs, what triggers the call to <code class="docutils literal notranslate"><span class="pre">toString()</span></code>?</p></li>
 </ol>
 <hr class="docutils" />
-<p class="rubric" id="id10">Extension Challenges</p>
+<p class="rubric" id="id13">Extension Challenges</p>
 <p>Completed early? Try one or more of the following:</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>User input</strong> — use <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> to let the user enter driver names and/or the track length instead of hardcoding them</p></li>
@@ -2270,7 +2253,7 @@ To get the range 20–50 (31 possible values), use <code class="docutils literal
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Leaderboard</strong> — sort and print the cars from fastest to slowest finishing time</p></li>
 </ul>
 <hr class="docutils" />
-<p class="rubric" id="id11">Submission</p>
+<p class="rubric" id="id14">Submission</p>
 <p>Upload the following to the assignment:</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">Racecar.java</span></code> — with <code class="docutils literal notranslate"><span class="pre">computeTime</span></code> fully implemented</p></li>
@@ -2278,7 +2261,7 @@ To get the range 20–50 (31 possible values), use <code class="docutils literal
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Test Cases document — showing at least <strong>three</strong> runs of your program demonstrating different random acceleration values each time</p></li>
 </ul>
 <hr class="docutils" />
-<p class="rubric" id="id12">Grading</p>
+<p class="rubric" id="id15">Grading</p>
 <p>This assignment is graded using the <strong>AP CSA Generic Assignment Rubric</strong> (5-point scale). Pay particular attention to:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">computeTime</span></code> uses <code class="docutils literal notranslate"><span class="pre">Math.sqrt()</span></code> with the correct formula — not a hardcoded value</p></li>
@@ -2288,7 +2271,6 @@ To get the range 20–50 (31 possible values), use <code class="docutils literal
 <li><p>Output format matches the sample exactly, including the apostrophe-s and the word “seconds”</p></li>
 </ul>
 </div></blockquote>
-</section>
 </section>
 <hr class="docutils" />
 <section id="objects-instances-of-classes">
@@ -3474,8 +3456,8 @@ Thunder Loop: NOT ELIGIBLE
 </ul>
 </section>
 <hr class="docutils" />
-<section id="id13">
-<h4>Part 3 — Main.java<a class="headerlink" href="#id13" title="Link to this heading">¶</a></h4>
+<section id="id16">
+<h4>Part 3 — Main.java<a class="headerlink" href="#id16" title="Link to this heading">¶</a></h4>
 <p>Your <code class="docutils literal notranslate"><span class="pre">main</span></code> method must:</p>
 <ol class="arabic simple">
 <li><p>Include the required block comment header (all fields completed)</p></li>
@@ -3811,18 +3793,15 @@ Available vehicles: 3
 <li><a class="reference internal" href="#casting-and-range-of-variables">1.5 Casting and Range of Variables</a></li>
 <li><a class="reference internal" href="#compound-assignment-operators">1.6 Compound Assignment Operators</a></li>
 <li><a class="reference internal" href="#application-program-interface-api-and-libraries">1.7 Application Program Interface (API) and Libraries</a></li>
-</ul>
-</li>
 <li><a class="reference internal" href="#activity-1-7-1-magic-8-ball-exploring-apis-and-libraries">Activity 1.7.1 — Magic 8-Ball: Exploring APIs and Libraries</a><ul>
 <li><a class="reference internal" href="#overview">Overview</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#background">Background</a></li>
 <li><a class="reference internal" href="#documentation-with-comments">1.8 Documentation with Comments</a></li>
 <li><a class="reference internal" href="#method-signatures">1.9 Method Signatures</a></li>
 <li><a class="reference internal" href="#calling-class-methods">1.10 Calling Class Methods</a></li>
-<li><a class="reference internal" href="#math-class">1.11 Math Class</a><ul>
-<li><a class="reference internal" href="#activity-1-11-2-race-car">Activity 1.11.2 — Race Car</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#math-class">1.11 Math Class</a></li>
 <li><a class="reference internal" href="#objects-instances-of-classes">1.12 Objects: Instances of Classes</a></li>
 <li><a class="reference internal" href="#object-creation-and-storage-instantiation">1.13 Object Creation and Storage (Instantiation)</a><ul>
 <li><a class="reference internal" href="#tostring-method">toString() Method</a></li>
@@ -3863,7 +3842,7 @@ Available vehicles: 3
 <li><a class="reference internal" href="#option-b-car-dealership-inventory">Option B — Car Dealership Inventory</a><ul>
 <li><a class="reference internal" href="#part-1-car-java">Part 1 — Car.java</a></li>
 <li><a class="reference internal" href="#part-2-customer-java">Part 2 — Customer.java</a></li>
-<li><a class="reference internal" href="#id13">Part 3 — Main.java</a></li>
+<li><a class="reference internal" href="#id16">Part 3 — Main.java</a></li>
 <li><a class="reference internal" href="#sample-output-option-b">Sample Output — Option B</a></li>
 </ul>
 </li>
