@@ -1,6 +1,99 @@
 # Unit 1 — Using Objects and Methods
 *AP Exam Weighting: 15–25%*
 
+## AP Computer Science A — Assignment Rubric
+
+---
+
+<details>
+<summaryAssignment Header></summary>
+
+All submitted documents and `.java` files must include the following header. This mirrors the block comment required in `Main.java` and follows the standard used by university CS departments.
+
+```
+Name:          [Your Full Name]
+Partner:       [Partner's Full Name, or "None"]
+Course:        AP Computer Science A
+Instructor:    [Instructor Name]
+Assignment:    [Assignment Number — Assignment Title]
+Due Date:      [Month Day, Year]
+```
+
+**Example:**
+```java
+Name:          Jordan Smith
+Partner:       Alex Rivera
+Course:        AP Computer Science A
+Instructor:    [Instructor Name]
+Assignment:    1.3.1 — Calculate Your Weight on Jupiter
+Due Date:      September 12, 2026
+```
+
+> This header must appear at the top of your `Main.java` block comment AND on your Test Cases document. Submissions missing the header will be penalized one point.
+
+---
+
+**Submission Requirements**
+
+All assignments require the following unless otherwise stated:
+
+- [ ] All `.java` source file(s)
+- [ ] Test Cases document showing inputs, expected output, actual output, and Pass/Fail result
+
+***Projects*** will have their own dedicated rubric and submission instructions.
+
+---
+
+**5-Point Assignment Rubric**
+
+| Points | Grade | Compilation & Output | Documentation & Style | Submission |
+|:------:|:-----:|----------------------|-----------------------|------------|
+| **5** | Full Credit | Program compiles and runs without errors or warnings. Output matches expected results for **all** test cases. | Block comment header fully completed. Meaningful variable names, camelCase convention, proper indentation. Inline and multi-line comments present throughout. | All required `.java` files and test cases submitted with completed assignment header. |
+| **4** | Near Full Credit | Program compiles and runs. Output is correct for most test cases with **one** minor error or omission. | Block comment header complete. Comments mostly present. Minor style or formatting inconsistency. | All required files submitted. Assignment header present. |
+| **3** | Partial Credit | Program compiles but produces incorrect output for **some** test cases, or compiles with warnings. | Limited comments. Block comment header partially completed. Variable names or formatting inconsistent. | Most required files submitted. Test cases incomplete or partially documented. |
+| **2** | Minimal Credit | Program has syntax or logic errors that cause significant incorrect output, or fails to fully compile. | Little to no commenting. Block comment header missing or blank. Poor variable naming or formatting. | A required `.java` file or test cases document is missing. Assignment header absent. |
+| **1** | Attempted | Code submitted shows a clear attempt but does not compile or run. | Minimal or no documentation present. | At least one file submitted, but submission is largely incomplete. |
+| **0** | No Credit | Nothing submitted, file is empty, or code is unrelated to the assignment. | N/A | N/A |
+
+---
+
+**Academic Integrity Policy**
+
+> **Any submission that violates academic integrity will receive a grade of 0 and will be referred for disciplinary action in accordance with school policy.**
+
+The following are considered academic integrity violations in this course:
+
+- Submitting another student's code as your own
+- Copying code from the internet without citation and modification
+- Allowing another student to copy your code
+- Using AI-generated code and submitting it as your own work without instructor approval
+- Sharing your source files with another student outside of an approved partner assignment
+
+**Approved Collaboration:** Discussing concepts, approaches, and debugging strategies with classmates is encouraged. Writing or sharing actual code is not permitted unless the assignment is explicitly designated as a partner assignment.
+
+**Partner Assignments:** Both partners must be listed in the assignment header. Both partners are equally responsible for the integrity of the submitted work.
+
+---
+
+**Late Work Policy**
+
+Late assignments are graded using the same rubric above with no grade penalty. Submit your best work regardless of when it is turned in.
+
+---
+
+**Grading Notes**
+
+- A program that does not compile cannot earn higher than a **2**.
+- A missing test cases document cannot earn higher than a **4**.
+- A missing block comment header deducts **1 point** from the earned score.
+- A missing assignment header deducts **1 point** from the earned score.
+- Style and documentation are evaluated holistically — occasional lapses do not automatically lower a grade, but a consistent pattern does.
+</details>
+
+
+---
+
+
 <details>
 <summary>📋 Unit 1 Standards Alignment</summary>
 
@@ -149,9 +242,11 @@ Once you have declared the variable type, you **do not need to do it again** to 
 > - [ ] Jon is 16 years old; Ed is 12 years old; Michael was born four years before Jon
 > - [ ] Print out who receives an allowance and who does not using `int`, `double`, and `boolean` variables.
 > - [ ] Submit your program as a `.java` file and include test cases that your program worked as intended
-> 
+>
+
 ---
 
+>
 > ### Assignment 1.2.2 — Scanner Class
 > 
 > The Scanner class is a package that provides primitive input within Java programs. It can be found in the [java.util Package](https://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html).
@@ -199,28 +294,58 @@ Once you have declared the variable type, you **do not need to do it again** to 
 
 **Note:** When you divide an integer by zero your program will return an *ArithmeticException* error.
 
-### Assignment 1.3.1 — Calculate Your Weight on Jupiter
+>
+> ### Assignment 1.3.1 — Calculate Your Weight on Jupiter
+>
+> Using the equation below, calculate what your weight would be on different planets:
+>
+> `weightOnPlanet = (weightOnEarth / earthGravity) × planetGravity`
+> 
+> | Planet | Acceleration Due to Gravity (m/sec²) |
+> | :---: | :---: |
+> | Earth | 9.81 |
+> | Mercury | 3.59 |
+> | Venus | 8.87 |
+> | Mars | 3.711 |
+> | Jupiter | 24.79 |
+> | Saturn | 11.08 |
+> | Uranus | 10.67 |
+> | Neptune | 11.15 |
+>
+> ```java
+> 
+> // Starter Code.  Add 3 more planets that you will travel to.
+> 
+> public class GalaxyWeight
+> {
+> 	public static void main(String[] args) 
+> 	{
+>     // declare and initialize weightOnEarth, earthGravity, and jupiterGravity 
+>     int weightOnEarth = 177;
+>     double earthGravity = 9.81;
+>     double jupiterGravity = 24.79;
+>     
+>     // calculate weight
+>     double weightOnJupiter = weightOnEarth * jupiterGravity / earthGravity;
+>     
+>     // show results
+>     System.out.print("Your weight on Jupiter is ");
+>     System.out.print(weightOnJupiter);
+>     System.out.println(" lbs.");
+>   }
+> }
+> ```
+>
 
-Using the equation below, calculate what your weight would be on different planets:
+---
 
-`weightOnPlanet = (weightOnEarth / earthGravity) × planetGravity`
-
-| Planet | Acceleration Due to Gravity (m/sec²) |
-| :---: | :---: |
-| Earth | 9.81 |
-| Mercury | 3.59 |
-| Venus | 8.87 |
-| Mars | 3.711 |
-| Jupiter | 24.79 |
-| Saturn | 11.08 |
-| Uranus | 10.67 |
-| Neptune | 11.15 |
-
-### Assignment 1.3.2 — Simple Math
-
-- [ ] Create a program that will ask the user for two distinct integers
-- [ ] Use the Scanner class to receive input from the user
-- [ ] Store those values and perform addition, subtraction, multiplication, division, and modulo
+> 
+> ### Assignment 1.3.2 — Simple Math
+> 
+> - [ ] Create a program that will ask the user for two distinct integers
+> - [ ] Use the Scanner class to receive input from the user
+> - [ ] Store those values and perform addition, subtraction, multiplication, division, and modulo
+> 
 
 ---
 
@@ -265,89 +390,92 @@ int b = 5;
 System.out.println("b = " + b++);  // b = 5 (post-increment: original returned first)
 ```
 
-### Assignment 1.4.1 — Compound Operators
+> ### Assignment 1.4.1 — Compound Operators
+> 
+> ```java
+> 
+> public class CompoundOperators
+> {
+>   public static void main(String[] args)
+> {
+>     int numPeople = 0;  
+>     double totalYears = 0;
+> 
+>     double years = 11.5;  // I will soon be halfway through my junior year.
+> 
+>     totalYears = totalYears + years;
+>     numPeople = numPeople + 1;
+>   }
+> }
+> 
+> ```
+> - [ ] Rewrite the statements of the program above to use the compound assignment and/or the increment/decrement operators.
+> - [ ] TODO 1) Add at least three other people to your program, such as siblings, friends, or neighbors.
+> - [ ] TODO 2) Use people that are in different grades to validate your program can work for different school grades.
+> - [ ] TODO 3) For their years in school, use values that indicate they will soon be halfway through their current school year, as shown in the provided code.
+> - [ ] TODO 4)The average years you and your friends, siblings, neighbors have been in school.
+> - [ ] TODO 5) The total days you have all been in school, assuming you spend 180 days per year in school.
+> - [ ] TODO 6) The average days you have all spent in school.
+> 
+> ```
+> **Sample Output:**
+> I have 11.5 years in school and 0.5 years to graduate.
+> Total people: 1, total years: 11.5
+> My best friend has 10.5 years in school and 1.5 years to graduate.
+> Total people: 2, total years: 22.0
+> My sister has 8.5 years in school and 3.5 years to graduate.
+> Total people: 3, total years: 30.5
+> My neighbor has 5.5 years in school and 6.5 years to graduate.
+> Total people: 4, total years: 36.0
+> 
+> Average years in school: 9.0
+> Total days in school: 6480.0
+> Average days per person: 1620.0 
+> ```
 
-```java
 
-public class CompoundOperators
-{
-  public static void main(String[] args)
-  {
-    int numPeople = 0;  
-    double totalYears = 0;
-
-    double years = 11.5;  // I will soon be halfway through my junior year.
-
-    totalYears = totalYears + years;
-    numPeople = numPeople + 1;
-  }
-}
-
-```
-- [ ] Rewrite the statements of the program above to use the compound assignment and/or the increment/decrement operators.
-- [ ] TODO 1) Add at least three other people to your program, such as siblings, friends, or neighbors.
-- [ ] TODO 2) Use people that are in different grades to validate your program can work for different school grades.
-- [ ] TODO 3) For their years in school, use values that indicate they will soon be halfway through their current school year, as shown in the provided code.
-- [ ] TODO 4)The average years you and your friends, siblings, neighbors have been in school.
-- [ ] TODO 5) The total days you have all been in school, assuming you spend 180 days per year in school.
-- [ ] TODO 6) The average days you have all spent in school.
-
-```
-Sample Output:
-I have 11.5 years in school and 0.5 years to graduate.
-Total people: 1, total years: 11.5
-My best friend has 10.5 years in school and 1.5 years to graduate.
-Total people: 2, total years: 22.0
-My sister has 8.5 years in school and 3.5 years to graduate.
-Total people: 3, total years: 30.5
-My neighbor has 5.5 years in school and 6.5 years to graduate.
-Total people: 4, total years: 36.0
-
-Average years in school: 9.0
-Total days in school: 6480.0
-Average days per person: 1620.0 
-```
+---
 
 
-### Assignment 1.4.2 — Average Test Score / Cashier Totals
-
-Directions: Write two programs that will do the following:
-
-**Average Test Score**
-- [ ] ask the user for four test scores
-- [ ] calculate and show the result
-
-**Cashier Totals**
-- [ ] ask the user for the number of burgers sold and how much each one costs
-- [ ] ask the user for the number of fries sold and how much each costs
-- [ ] display the total items sold
-- [ ] display the total sales
-
-**Sample Output:**
-```
-Enter the first test score:
-95
-Enter the second test score:
-87
-Enter the third test score:
-74
-Enter the forth test score:
-75
-
-Average test score: 82.75%
----------------------------------
-Enter the number of burgers ordered:
-10
-Price of a burger:
-5.65
-Enter the number of fries ordered:
-4
-Price of fries:
-1.95
-
-Total Items Sold: 14
-Total Sales: $64.3
-```
+> ### Assignment 1.4.2 — Average Test Score / Cashier Totals
+> 
+> Directions: Write two programs that will do the following:
+> 
+> **Average Test Score**
+> - [ ] ask the user for four test scores
+> - [ ] calculate and show the result
+> 
+> **Cashier Totals**
+> - [ ] ask the user for the number of burgers sold and how much each one costs
+> - [ ] ask the user for the number of fries sold and how much each costs
+> - [ ] display the total items sold
+> - [ ] display the total sales
+> 
+> **Sample Output:**
+> ```
+> Enter the first test score:
+> 95
+> Enter the second test score:
+> 87
+> Enter the third test score:
+> 74
+> Enter the forth test score:
+> 75
+> 
+> Average test score: 82.75%
+> ---------------------------------
+> Enter the number of burgers ordered:
+> 10
+> Price of a burger:
+> 5.65
+> Enter the number of fries ordered:
+> 4
+> Price of fries:
+> 1.95
+> 
+> Total Items Sold: 14
+> Total Sales: $64.3
+> ```
 
 
 ---
@@ -434,69 +562,67 @@ public class CastingEggs {
 ```
 We know that we don't have 0 eggs.  We can rewrite our program to show how many eggs we have in decimal form.
 
-### Assignment 1.5.1 — FivePlanetTravel
-
-You will explore the PlanetTravel program called **FivePlanetTravel**. The program is set up to plan a five-planet tour!
-
-**Starter Code:**
-
-```java
-/* 
- * Activity 1.1.5
- */
-public class FivePlanetTravel
-{
-  public static void main(String[] args)
-  {
-    // theplanets.org average distance from earth to the planets
-    int mercury = 56974146;
-    int venus = 25724767;
-    int mars = 48678219;
-    int jupiter = 390674710;
-    int saturn = 792248270;
-    // number of planets to visit
-    int numPlanets = 5;
-    // speed of light and our speed
-    int lightSpeed =  670616629;
-    lightSpeed /= 10;
-    // total travel time
-    double total = 0;
-
-    /* your code here */
-
-    System.out.println("Travel time to ...");
-    System.out.println("Mars: " + mars / (double) lightSpeed + " hours");
-    total +=  mars / (double) lightSpeed;
-
-
-    int average = (int)(total / numPlanets);
-    System.out.println("Total travel time:" + total);
-    System.out.println("Average travel time: " + average);
-  }
-}
-```
-
-**Example Output:**
-
-```
-Travel time to ...
- Mercury 0 hours
- Venus: 0 hours
- Mars: 0 hours
- Jupiter: 5 hours
- Saturn:11 hours
-Total travel time:16.0
-
-Travel time to ...
- Mercury: 0.8495784968765016 hours
- Venus: 0.38359870949813324 hours
- Mars: 0.7258725410056196 hours
- Jupiter: 5.825604352006665 hours
- Saturn: 11.813728535388819 hours
-Total travel time:19.59838263477574
-
-Average travel time: approximatley 4 hours.
-```
+> 
+> ### Assignment 1.5.1 — FivePlanetTravel
+> 
+> You will explore the PlanetTravel program called **FivePlanetTravel**. The program is set up to plan a five-planet tour!
+> 
+> **Starter Code:**
+> 
+> ```java
+> public class FivePlanetTravel
+> {
+>   public static void main(String[] args)
+>   {
+>     // theplanets.org average distance from earth to the planets
+>     int mercury = 56974146;
+>     int venus = 25724767;
+>     int mars = 48678219;
+>     int jupiter = 390674710;
+>     int saturn = 792248270;
+>     // number of planets to visit
+>     int numPlanets = 5;
+>     // speed of light and our speed
+>     int lightSpeed =  670616629;
+>     lightSpeed /= 10;
+>     // total travel time
+>     double total = 0;
+> 
+>     /* your code here */
+> 
+>     System.out.println("Travel time to ...");
+>     System.out.println("Mars: " + mars / (double) lightSpeed + " hours");
+>     total +=  mars / (double) lightSpeed;
+> 
+> 
+>     int average = (int)(total / numPlanets);
+>     System.out.println("Total travel time:" + total);
+>     System.out.println("Average travel time: " + average);
+>   }
+> }
+> ```
+> 
+> **Example Output:**
+> 
+> ```
+> Travel time to ...
+>  Mercury 0 hours
+>  Venus: 0 hours
+>  Mars: 0 hours
+>  Jupiter: 5 hours
+>  Saturn:11 hours
+> Total travel time:16.0
+> 
+> Travel time to ...
+>  Mercury: 0.8495784968765016 hours
+>  Venus: 0.38359870949813324 hours
+>  Mars: 0.7258725410056196 hours
+>  Jupiter: 5.825604352006665 hours
+>  Saturn: 11.813728535388819 hours
+> Total travel time:19.59838263477574
+> 
+> Average travel time: approximatley 4 hours.
+> ```
 
 Your output should look similar to the example above. You will write a **widening algorithm** that shows the travel time to and from all planets using casting. The one rule is that you must use the provided code and **not change any provided data types**.
 
@@ -545,6 +671,211 @@ import java.util.ArrayList;
 ```
 
 ---
+
+
+# Activity 1.7.1 — Magic 8-Ball: Exploring APIs and Libraries
+
+## Overview
+
+In this activity you will explore the Java API documentation to understand how libraries and packages work, then build a Magic 8-Ball program that imports and uses classes from the Java standard library.
+
+By the end of this activity you will be able to:
+- [ ] Explain what an API and a library are in the context of Java
+- [ ] Navigate the official Java API documentation at [docs.oracle.com](https://docs.oracle.com/javase/8/docs/api/)
+- [ ] Use an `import` statement to include a package in your program
+- [ ] Call methods from `java.util.Scanner` and `java.util.Random` meaningfully in a program
+
+---
+
+## Background
+
+When you write a Java program, you do not have to build everything from scratch. Java provides thousands of pre-built classes organized into **packages**. A **package** is a folder of related classes. Together, all of these packages make up the Java **standard library**.
+
+An **Application Programming Interface (API)** is the set of rules and definitions that describes how you interact with a library — what classes are available, what methods they have, what parameters they take, and what they return. Think of the API documentation as the instruction manual for the library.
+
+To use a class from a package that is not automatically included, you must **import** it:
+
+```java
+import java.util.Scanner;   // imports the Scanner class from the java.util package
+import java.util.Random;    // imports the Random class from the java.util package
+```
+
+> `java.lang` (which contains `String`, `Math`, `Integer`, etc.) is imported **automatically** — you never need to import it manually.
+
+---
+
+> ## Activity 1.7.1 — API Investigation
+> 
+> Using the Java 8 API documentation at **https://docs.oracle.com/javase/8/docs/api/**, answer the following questions in a comment block at the top of your `Main.java` file or in a separate text document submitted alongside your code.
+> 
+> ### Section A — Packages and Classes
+> 
+> 1. What is the full package path for the `Scanner` class?
+> 2. What is the full package path for the `Random` class?
+> 3. Name **two other classes** found in the `java.util` package.
+> 4. Name **one class** found in the `java.time` package and describe what it does in one sentence.
+> 5. In your own words, what is the difference between a **package** and a **class**?
+> 
+> ### Section B — Scanner Class
+> 
+> Navigate to the `Scanner` class in the documentation.
+> 
+> 6. What does the `Scanner` constructor `Scanner(InputStream source)` do?
+> 7. What method would you use to read a full line of text entered by the user? What does it return?
+> 8. What method would you use to read a single `int` entered by the user?
+> 9. Why is it important to call `scanner.close()` when you are done using a Scanner?
+> 
+> ### Section C — Random Class
+> 
+> Navigate to the `Random` class in the documentation.
+> 
+> 10. What does `nextInt(int bound)` return? What is the range of values it can produce?
+> 11. How would you use `nextInt()` to generate a random number between **1 and 8 inclusive**? Write the expression.
+> 12. What is the difference between `nextInt()` and `nextDouble()`?
+> 13. Why might a program produce the same "random" sequence every time if you pass a fixed value to the `Random` constructor (e.g., `new Random(42)`)?
+> 
+> ---
+> 
+> ## Activity1.7.2 — Magic 8-Ball Program
+> 
+> ### Program Description
+> 
+> Build a Magic 8-Ball program that:
+> - Asks the user to enter a yes/no question
+> - Uses `java.util.Random` to select one of **eight responses** at random
+> - Displays the response in a formatted output
+> - Asks the user if they want to ask another question and loops until they choose to quit
+> 
+> ### Requirements Checklist
+> 
+> - [ ] Include the required block comment header in `Main.java` (all fields completed)
+> - [ ] Import `java.util.Scanner` and `java.util.Random`
+> - [ ] Use a `String` array to store all eight Magic 8-Ball responses
+> - [ ] Use `Random.nextInt()` to select a response index at random
+> - [ ] Use `Scanner` to read the user's question and their yes/no to continue
+> - [ ] Use `.equalsIgnoreCase()` to check if the user wants to continue
+> - [ ] Use `String.toUpperCase()` or formatting to display the response dramatically
+> - [ ] Close the Scanner before the program ends
+> - [ ] Include meaningful inline comments throughout
+> 
+> ### The Eight Responses
+> 
+> Your program must include **all eight** of the following responses:
+> 
+> | # | Response |
+> |:-:|----------|
+> | 1 | It is certain. |
+> | 2 | Without a doubt. |
+> | 3 | Reply hazy, try again. |
+> | 4 | Ask again later. |
+> | 5 | Don't count on it. |
+> | 6 | My sources say no. |
+> | 7 | Outlook not so good. |
+> | 8 | Very doubtful. |
+> 
+> ---
+> 
+> ## Starter Code
+> 
+> ```java
+> // Import the required packages
+> import java.util.Scanner;
+> import java.util.Random;
+> 
+> public class Main
+> {
+>     public static void main(String[] args)
+>     {
+>         // Create Scanner and Random objects
+>         Scanner input = new Scanner(System.in);
+>         Random rand = new Random();
+> 
+>         // Array of Magic 8-Ball responses
+>         String[] responses = {
+>             // your eight responses here
+>         };
+> 
+>         String continueChoice = "yes";
+> 
+>         System.out.println("Welcome to the Magic 8-Ball!");
+>         System.out.println("============================");
+> 
+>         // Loop while the user wants to keep asking questions
+>         while (continueChoice.equalsIgnoreCase("yes"))
+>         {
+>             // Prompt the user for a question
+> 
+>             // Generate a random index using rand.nextInt()
+> 
+>             // Display the response
+> 
+>             // Ask if the user wants to continue
+> 
+>         }
+> 
+>         System.out.println("The Magic 8-Ball has spoken. Goodbye!");
+> 
+>         // Close the Scanner
+>         input.close();
+>     }
+> }
+> ```
+>
+> 
+> 
+> 
+> ## Sample Output
+> 
+> ```
+> Welcome to the Magic 8-Ball!
+> ============================
+> Ask your yes/no question: Will I ace my CS test?
+> 
+> 🎱 The Magic 8-Ball says...
+>    WITHOUT A DOUBT.
+> 
+> Ask another question? (yes/no): yes
+> 
+> Ask your yes/no question: Will it rain tomorrow?
+> 
+> 🎱 The Magic 8-Ball says...
+>    REPLY HAZY, TRY AGAIN.
+> 
+> Ask another question? (yes/no): no
+> 
+> The Magic 8-Ball has spoken. Goodbye!
+> ```
+> 
+> ---
+> 
+> ## Extension Challenges
+> 
+> Completed early? Try one or more of the following:
+> 
+> - [ ] **Expand the responses** — add at least four more responses of your own for a total of twelve
+> - [ ] **Add a response counter** — track and display how many questions the user asked at the end
+> - [ ] **Categorize responses** — use a second array to label each response as `"Positive"`, `"Neutral"`, or `"Negative"` and display the category alongside the answer
+> - [ ] **Seeded Random** — let the user enter a "lucky number" that seeds the Random object. Investigate what happens when they use the same number twice.
+> 
+> ---
+> 
+> ## Submission
+> 
+> Upload the following to the assignment:
+> 
+> - [ ] `Main.java` — your completed program with block comment header
+> - [ ] Test Cases document — showing at least **three** runs of your program with different questions and the responses generated
+> 
+> ---
+> 
+> ## Grading
+> 
+> This assignment is graded using the **AP CSA Generic Assignment Rubric** (5-point scale). Pay particular attention to:
+> - Import statements are present and used (not just written)
+> - `Random.nextInt()` is used correctly to stay within the bounds of your array
+> - Scanner is closed before the program ends
+> - Part 1 investigation questions are answered in your block comment or submitted document
+> 
 
 ## 1.8 Documentation with Comments
 
@@ -665,7 +996,316 @@ int result = Math.abs(-5);     // No object needed
 double r = Math.random();      // Returns 0.0 to < 1.0
 ```
 
+
 ---
+
+
+> # Activity 1.10.1 — Mission Control: Calling Class Methods
+> 
+> 
+> ## Overview
+> 
+> In this activity you will investigate how **class methods** (also called **static methods**) work in Java, then build a Mission Control program that calls static methods to calculate rocket launch data.
+> 
+> By the end of this activity you will be able to:
+> - [ ] Explain the difference between a static (class) method and an instance method
+> - [ ] Call static methods from existing Java classes without creating an object
+> - [ ] Write your own static methods and call them from `main`
+> - [ ] Decompose a larger problem into smaller methods, each responsible for one task
+> 
+> ---
+> 
+> ## Background
+> 
+> A **class method** (declared with the keyword `static`) belongs to the **class itself** — not to any specific object. You call it using the class name, not an object reference:
+> 
+> ```java
+> // Calling a static method from the Math class — no object needed
+> double result = Math.sqrt(144);     // returns 12.0
+> int rolled   = Math.abs(-7);        // returns 7
+> double rand  = Math.random();       // returns a value in [0.0, 1.0)
+> ```
+> 
+> You have already used static methods every time you called `Math.pow()`, `Math.round()`, or `System.out.println()`. `main` itself is a static method — that is why Java can run it without creating an object first.
+> 
+> **Static vs. Instance — Side by Side:**
+> 
+> | | Static (Class) Method | Instance Method |
+> |---|---|---|
+> | Keyword | `static` | *(no static)* |
+> | Called on | The class name | An object reference |
+> | Example call | `Math.sqrt(25)` | `myString.length()` |
+> | Requires an object? | No | Yes |
+> | Can access instance variables? | No | Yes |
+> 
+> **Writing Your Own Static Method:**
+> 
+> ```java
+> public static double celsiusToFahrenheit(double celsius)
+> {
+>     return (celsius * 9.0 / 5.0) + 32;
+> }
+> ```
+>
+> - `public` — accessible from anywhere
+> - `static` — belongs to the class, not an object
+> - `double` — the return type
+> - `celsiusToFahrenheit` — the method name
+> - `(double celsius)` — one parameter
+> 
+> Call it from `main` like this:
+> 
+> ```java
+> double temp = celsiusToFahrenheit(100.0);   // returns 212.0
+> System.out.println(temp);
+> ```
+> 
+> A method that returns nothing uses `void` as its return type. A `void` method performs an action but does not hand a value back to the caller.
+> 
+> ---
+> 
+> ## Part 1 — Investigation
+> 
+> Answer the following questions in a comment block at the top of your `Main.java` or in a separate document submitted alongside your code.
+> 
+> ### Section A — Understanding Static Methods
+> 
+> 1. Why can you call `Math.sqrt()` without first writing `Math m = new Math()`?
+> 2. What keyword makes a method a class (static) method?
+> 3. What is the return type of `Math.random()`? What range of values can it produce?
+> 4. What is the return type of `Math.round(double a)`? Why is the return type different from `double`?
+> 5. In your own words, explain why `main` must be declared `static`.
+> 
+> ### Section B — Reading Method Signatures
+> 
+> Look at the following method signatures and answer the questions below each one.
+> 
+> ```java
+> public static int max(int a, int b)
+> ```
+> 6. How many parameters does this method take?
+> 7. What data type does it return?
+> 8. Write a line of code that calls this method with the values 42 and 17 and stores the result in a variable.
+> 
+> ```java
+> public static void printDivider(int width)
+> ```
+> 9. What does a `void` return type mean?
+> 10. Can you store the result of calling this method in a variable? Why or why not?
+> 
+> ### Section C — Decomposing a Problem
+> 
+> A good programmer breaks a large problem into smaller, focused methods — each doing **one job**.
+> 
+> 11. Look at the following task: *"Calculate the fuel needed for a rocket launch, warn the crew if fuel is low, and print a launch report."* Identify **three** static methods you could write to decompose this problem. For > each, write the method signature only (no body needed).
+> 
+> ---
+> 
+> ## Part 2 — Mission Control Program
+> 
+> ### Program Description
+> 
+> You are writing the launch software for Mission Control. Your program will:
+> - Accept rocket launch parameters from the user via `Scanner`
+> - Call static methods to calculate fuel consumption, estimated flight time, and thrust-to-weight ratio
+> - Warn the crew if any value falls outside safe limits
+> - Print a formatted launch report
+> 
+> ### Requirements Checklist
+> 
+> - [ ] Include the required block comment header in `Main.java` (all fields completed)
+> - [ ] Write and call **at least four** static methods of your own (see specifications below)
+> - [ ] At least one method must be `void` (performs an action, returns nothing)
+> - [ ] At least one method must return a `double`
+> - [ ] At least one method must return a `boolean`
+> - [ ] Call at least **two** `Math` class static methods within your own methods
+> - [ ] Use `Scanner` to accept user input for rocket name, fuel amount, and rocket mass
+> - [ ] Use the return values of your static methods meaningfully in `main`
+> - [ ] Use `String.format()` or `printf()` to produce the formatted launch report
+> - [ ] Include meaningful inline comments throughout
+> 
+> ---
+> 
+> ### Required Static Methods
+> 
+> Implement the following four static methods in `Main.java`:
+> 
+> #### 1. `calculateFuelConsumption`
+> ```java
+> public static double calculateFuelConsumption(double distanceKm, double fuelEfficiency)
+> ```
+> - Returns the estimated fuel consumed: `distanceKm / fuelEfficiency`
+> - Call `Math.round()` on the result before returning it as a `double`
+> 
+> #### 2. `calculateFlightTime`
+> ```java
+> public static double calculateFlightTime(double distanceKm, double speedKph)
+> ```
+> - Returns estimated flight time in hours: `distanceKm / speedKph`
+> - Use `Math.abs()` to ensure the result is always positive
+> 
+> #### 3. `isSafeLaunch`
+> ```java
+> public static boolean isSafeLaunch(double thrustKn, double massKg)
+> ```
+> - Calculates thrust-to-weight ratio: `thrustKn / (massKg * 9.8 / 1000)`
+> - Returns `true` if the ratio is greater than **1.5** (minimum safe ratio), `false` otherwise
+> 
+> #### 4. `printLaunchReport`
+> ```java
+> public static void printLaunchReport(String rocketName, double fuel, double flightTime, boolean safe)
+> ```
+> - `void` method — prints the complete formatted launch report to the console
+> - Uses `String.format()` or `printf()` for aligned output
+> - Prints a safety status message based on the `boolean` parameter
+> 
+> ---
+> 
+> ## Starter Code
+> 
+> ```java
+> import java.util.Scanner;
+> 
+> public class Main
+> {
+>     // ─── Static Methods ───────────────────────────────────────────────────────
+> 
+>     public static double calculateFuelConsumption(double distanceKm, double fuelEfficiency)
+>     {
+>         // your code here
+>         return 0;
+>     }
+> 
+>     public static double calculateFlightTime(double distanceKm, double speedKph)
+>     {
+>         // your code here
+>         return 0;
+>     }
+> 
+>     public static boolean isSafeLaunch(double thrustKn, double massKg)
+>     {
+>         // your code here
+>         return false;
+>     }
+> 
+>     public static void printLaunchReport(String rocketName, double fuel,
+>                                          double flightTime, boolean safe)
+>     {
+>         // your code here
+>     }
+> 
+>     // ─── Main ─────────────────────────────────────────────────────────────────
+> 
+>     public static void main(String[] args)
+>     {
+>         Scanner input = new Scanner(System.in);
+> 
+>         System.out.println("=== MISSION CONTROL LAUNCH SYSTEM ===");
+> 
+>         // Get user inputs
+>         System.out.print("Enter rocket name: ");
+>         String rocketName = input.nextLine();
+> 
+>         System.out.print("Enter fuel amount (liters): ");
+>         double fuel = input.nextDouble();
+> 
+>         System.out.print("Enter rocket mass (kg): ");
+>         double mass = input.nextDouble();
+> 
+>         System.out.print("Enter engine thrust (kN): ");
+>         double thrust = input.nextDouble();
+> 
+>        // Mission constants
+>         double distanceKm    = 400.0;   // destination distance in km
+>         double fuelEfficiency = 12.5;   // km per liter
+>         double speedKph      = 28000.0; // cruising speed in km/h
+> 
+>         // Call your static methods and store the results
+> 
+>        // Call printLaunchReport
+> 
+>         input.close();
+>     }
+}
+> ```
+> 
+> ---
+> 
+> ## Sample Output
+> 
+> ```
+> === MISSION CONTROL LAUNCH SYSTEM ===
+> Enter rocket name: Falcon Alpha
+> Enter fuel amount (liters): 5000
+> Enter rocket mass (kg): 120000
+> Enter engine thrust (kN): 2500
+> 
+> ========================================
+>         MISSION CONTROL REPORT
+> ========================================
+> Rocket Name:       Falcon Alpha
+> Fuel Consumed:     32.0 liters
+> Flight Time:       0.01 hours
+> Thrust/Weight:     2.13
+> ----------------------------------------
+> LAUNCH STATUS:     ✓ SAFE FOR LAUNCH
+> ========================================
+> ```
+> 
+> ```
+> === MISSION CONTROL LAUNCH SYSTEM ===
+> Enter rocket name: Titan IV
+> Enter fuel amount (liters): 800
+> Enter rocket mass (kg): 300000
+> Enter engine thrust (kN): 1200
+> 
+> ========================================
+>         MISSION CONTROL REPORT
+> ========================================
+> Rocket Name:       Titan IV
+> Fuel Consumed:     32.0 liters
+> Flight Time:       0.01 hours
+> Thrust/Weight:     0.41
+> ----------------------------------------
+> LAUNCH STATUS:     ✗ UNSAFE — ABORT LAUNCH
+> ========================================
+> ```
+> 
+> ---
+> 
+> ## Extension Challenges
+> 
+> Completed early? Try one or more of the following:
+> 
+> - [ ] **Add a fifth method** `calculateMaxAltitude(double thrustKn, double massKg)` that returns an estimated max altitude using `Math.pow()` and `Math.sqrt()` in the formula
+> - [ ] **Add a countdown** — write a `void` method called `launchCountdown(int seconds)` that prints a countdown from the given number to zero using a loop
+> - [ ] **Multiple rockets** — use a loop in `main` to process three different rockets and report which one has the best thrust-to-weight ratio using `Math.max()`
+> - [ ] **Unit conversion** — add a static method that converts `km/h` to `m/s` and display both speeds in the report
+> 
+> ---
+> 
+> ## Submission
+> 
+> Upload the following to the assignment:
+> 
+> - [ ] `Main.java` — your completed program with block comment header
+> - [ ] Test Cases document — showing at least **three** runs with different rocket inputs, including one that triggers the unsafe launch warning
+> 
+> ---
+> 
+> ## Grading
+> 
+> This assignment is graded using the **AP CSA Generic Assignment Rubric** (5-point scale). Pay particular attention to:
+> 
+> - All four required static methods are present, correctly implemented, and called in `main`
+> - Return values from non-void methods are stored and used — not ignored
+> - `Math` class static methods are called inside your own methods, not just in `main`
+> - Part 1 investigation questions are answered in your block comment or submitted document
+> - The launch report is formatted using `String.format()` or `printf()` — not plain `println` concatenation
+> 
+> ---
+>
+
 
 ## 1.11 Math Class
 
@@ -696,120 +1336,359 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 | `Math.min(a, b)` | Smaller of two values | `Math.min(5, 3)` → `3` |
 | `Math.max(a, b)` | Larger of two values | `Math.max(5, 3)` → `5` |
 
-### Activity 1.11.1 — Roller Coaster Simulator
 
-**Project Overview:**
-
-Students will write a program that helps a theme park design safe roller coasters based on physics-related math. Use `Math.random()` and `Math.round()` to simulate the experience of riding a roller coaster, generating random values for speed, height, and rating.  The user (acting as an engineer) inputs the parameters of a coaster hill, and the program will:
-
-* Calculate speed at the bottom of the hill
-* Estimate time to fall using height
-* Warn if g-forces exceed safety limits
-* Round values for display
-
-
-**Concepts Covered:**
-
-* `Math` class: `Math.pow`, `Math.sqrt`, `Math.abs`, `Math.max`, `Math.min`
-* `Scanner` for input
-* Decision-making and problem-solving
-* Realistic application of physics/math concepts
-
-
-**Key Functionalities:**
-
-<img width="422" height="490" alt="Image" src="https://github.com/user-attachments/assets/5e02c085-c41f-4ab5-a17b-63a53ce3ce0f" />
-
-
----
-
-**Example Output**
-
-```java
-Welcome to the Roller Coaster Simulator
-Enter hill height (in meters): 50
-Enter slope angle (in degrees): 40
-Enter track length (in meters): 100
-
---- Results ---
-Estimated Speed at Bottom: 31.30 m/s
-Time to Fall: 3.19 seconds
-Estimated G-force in curve: 10.0 Gs TOO DANGEROUS!
-
-Recommendation: Reduce hill height or increase curve radius.
-
---- Rounded Data ---
-Speed Rounded Up: 32.0 m/s
-Time Rounded Down: 3.0 sec
-```
-
----
-
-
-```java
-public class RollerCoasterSimulator {
-    private static final double GRAVITY = 9.8; // m/s^2 // DO NOT CHANGE
-
-	// Attributes (height, speen, time, gForce, angle, trackLength)
-
-
-    // Constructor
-
-
-    // Perform all calculations
-
-
-    // Return calculated results to main
-
-
-    // Helper method for safety
-
-}
-
-
-import java.util.Scanner;
-
-public class Main {
-    public static void main(String[] args) {
-
-
-		// Use Scanner to get inputs for Speed, time and GForce
-
-
-        // Get user inputs
-
-
-        // Create an instance of RollerCoasterSimulator
-        
-
-        // Get and display results
-        double speed = sim.getSpeed();
-        double time = sim.getTime();
-        double gForce = sim.getGForce();
-
-
-        if (!sim.isSafe()) {
-            // if speed Gforce is too excessive print "TOO DANGEROUS!"
-			// Recommend that the user make changes to height or curve
-			// else print "Safe for riders!"
-
-
-
-		System.out.println("\n--- Rounded Data ---");
-		// Round speed up
-		// Round time down 
-
-        input.close();
-    }
-}
-```
-Submit your java program code and your test cases that demonstrates your program works as intended.
-
+> 
+> ### Activity 1.11.1 — Roller Coaster Simulator
+> 
+> **Project Overview:**
+> 
+> Students will write a program that helps a theme park design safe roller coasters based on physics-related math. Use `Math.random()` and `Math.round()` to simulate the experience of riding a roller coaster, generating random values for speed, height, and rating.  The user (acting as an engineer) inputs the parameters of a coaster hill, and the program will:
+> 
+> * Calculate speed at the bottom of the hill
+> * Estimate time to fall using height
+> * Warn if g-forces exceed safety limits
+> * Round values for display
+> 
+> 
+> **Concepts Covered:**
+> 
+> * `Math` class: `Math.pow`, `Math.sqrt`, `Math.abs`, `Math.max`, `Math.min`
+> * `Scanner` for input
+> * Decision-making and problem-solving
+> * Realistic application of physics/math concepts
+> 
+> 
+> **Key Functionalities:**
+> 
+> <img width="422" height="490" alt="Image" src="https://github.com/user-attachments/assets/5e02c085-c41f-4ab5-a17b-63a53ce3ce0f" />
+> 
+> 
+> ---
+> 
+> **Example Output**
+> 
+> ```java
+> Welcome to the Roller Coaster Simulator
+> Enter hill height (in meters): 50
+> Enter slope angle (in degrees): 40
+> Enter track length (in meters): 100
+> 
+> --- Results ---
+> Estimated Speed at Bottom: 31.30 m/s
+> Time to Fall: 3.19 seconds
+> Estimated G-force in curve: 10.0 Gs TOO DANGEROUS!
+> 
+> Recommendation: Reduce hill height or increase curve radius.
+> 
+> --- Rounded Data ---
+> Speed Rounded Up: 32.0 m/s
+> Time Rounded Down: 3.0 sec
+> ```
+> 
+> ---
+> 
+> 
+> ```java
+> public class RollerCoasterSimulator {
+>     private static final double GRAVITY = 9.8; // m/s^2 // DO NOT CHANGE
+> 
+> 	// Attributes (height, speen, time, gForce, angle, trackLength)
+> 
+>   // Constructor
+> 
+>   // Perform all calculations
+> 
+>   // Return calculated results to main
+> 
+>    // Helper method for safety
+> 
+> }
+> 
+> 
+> import java.util.Scanner;
+> 
+> public class Main {
+>     public static void main(String[] args) {
+> 
+> 
+> 		// Use Scanner to get inputs for Speed, time and GForce
+> 
+>      // Get user inputs
+> 
+> 
+>      // Create an instance of RollerCoasterSimulator
+>         
+> 
+>         // Get and display results
+>         double speed = sim.getSpeed();
+>         double time = sim.getTime();
+>         double gForce = sim.getGForce();
+> 
+> 
+>         if (!sim.isSafe()) {
+>             // if speed Gforce is too excessive print "TOO DANGEROUS!"
+> 			// Recommend that the user make changes to height or curve
+> 			// else print "Safe for riders!"
+> 
+> 
+> 		System.out.println("\n--- Rounded Data ---");
+> 		// Round speed up
+> 		// Round time down 
+> 
+>         input.close();
+>     }
+> }
+> ```
+> Submit your java program code and your test cases that demonstrates your program works as intended.
+> 
 
 
 ### Activity 1.11.2 — Race Car
 
-Apply `Math.abs()` and `Math.pow()` to a race car simulation that computes distance and speed.
+> # Activity 1.11.2 — Race Car: Applying the Math Class
+> 
+> ## Standards
+> 
+> | Standard | Description |
+> | -------- | ----------- |
+> | ICT 5.8 | Create and use algorithms |
+> | ICT 5.9 | Deconstruct large problems |
+> | C4.6 | Use proper programming language syntax |
+> | C4.9 | Create programs using control structures, procedures, and functions |
+> | CRP 1 | Apply appropriate technical skills and academic knowledge |
+> | CRP 5 | Utilize critical thinking to make sense of problems |
+> 
+> ---
+> 
+> ## Overview
+> 
+> In this activity you will apply what you have learned about the `Math` class, static methods, object instantiation, and `java.util.Random` to simulate a drag race between two cars. You will complete a partially written program by implementing the `computeTime` method in `Racecar.java` and filling in the guided comments in `Main.java`.
+> 
+> By the end of this activity you will be able to:
+> - [ ] Use `Math.sqrt()` inside an instance method to solve a physics formula
+> - [ ] Use `Math.round()` to format a result to three decimal places
+> - [ ] Use `java.util.Random` to generate a bounded random integer
+> - [ ] Instantiate objects and call instance methods on them
+> - [ ] Connect prior concepts — classes, constructors, `toString()`, and static methods — in a complete program
+> 
+> ---
+> 
+> ## Background
+> 
+> ### Connecting Prior Activities
+> 
+> You have already used these concepts individually. This activity brings them together:
+> 
+> | Prior Activity | Concept Used Here |
+> | -------------- | ----------------- |
+> | 1.7.1 Magic 8-Ball | `import java.util.Random`, `nextInt(bound)` |
+> | 1.10.1 Mission Control | Writing and calling static and instance methods |
+> | 1.11.1 Roller Coaster Simulator | `Math.sqrt()`, physics formulas, `Math.round()` |
+> | 1.13 Object Creation | Constructors, instance variables, `toString()` |
+> 
+> ---
+> 
+> ### The Physics Formula
+> 
+> The time it takes a vehicle to travel a distance from a standing start under constant acceleration is:
+> 
+> ```
+> t = √( 2 × d / a )
+> ```
+> 
+> Where:
+> - `t` = time in seconds
+> - `d` = distance in meters
+> - `a` = acceleration in m/s²
+> 
+> You implemented a similar formula in **Activity 1.11.1** when calculating speed at the bottom of a roller coaster hill. Here you will apply the same `Math.sqrt()` approach inside an **instance method** instead of directly in `main`.
+> 
+> ---
+> 
+> ### Generating a Bounded Random Integer
+> 
+> In **Activity 1.7.1** you used `Random.nextInt(bound)` to pick a Magic 8-Ball response. Here you will use it to assign each car a random acceleration between **20 and 50 inclusive**:
+> 
+> ```java
+> Random rand = new Random();
+> int accel = rand.nextInt(31) + 20;  // produces 0–30, shifted to 20–50
+> ```
+> 
+> > **Why `nextInt(31)`?**
+> > `nextInt(bound)` returns a value from `0` up to but **not including** `bound`.
+> > To get the range 20–50 (31 possible values), use `nextInt(31)` then add 20.
+> 
+> ---
+> 
+> ### Rounding to Three Decimal Places
+> 
+> `Math.round()` rounds to the nearest whole number. To round to three decimal places, scale up, round, then scale back down:
+> 
+> ```java
+> double time = 10.5963847;
+> double rounded = Math.round(time * 1000.0) / 1000.0;  // 10.596
+> ```
+> 
+> You used `Math.round()` in **Activity 1.10.1** to clean up fuel consumption values. Apply the same technique here inside `computeTime`.
+> 
+> ---
+> 
+> ## Starter Files
+> 
+> ### Racecar.java
+> 
+> ```java
+> public class Racecar
+> {
+>     private double accel; // acceleration in m/s²
+>     private String name;  // name of the driver
+> 
+>     public Racecar(double acceleration, String driver)
+>     {
+>         accel = acceleration;
+>         name  = driver;
+>     }
+> 
+>     // Returns the time it takes the racecar to complete
+>     // the track rounded to three decimal places.
+>     // Formula: t = √(2 × d / a)
+>     // where t = time (seconds), d = distance (meters), a = acceleration (m/s²)
+>     public double computeTime(double distance)
+>     {
+>         // Step 1: Calculate time using the formula above and Math.sqrt()
+> 
+>         // Step 2: Round to three decimal places using Math.round()
+> 
+>         // Step 3: Return the rounded time
+>         return 0; // replace this
+>     }
+> 
+>     public String toString()
+>     {
+>         return "Racer " + name;
+>     }
+> }
+> ```
+> 
+> ---
+> 
+> ### Main.java
+> 
+> ```java
+> 
+> import java.util.Random;
+> 
+> public class Main
+> {
+>     public static void main(String[] args)
+>     {
+>         Random rand = new Random();
+> 
+>         // Length of the track in meters
+>         double distance = 2414; // ~1.5 miles
+> 
+>         // Generate a random acceleration (integer) for each car
+>         // from 20 to 50 (inclusive) using rand.nextInt()
+>         // Hint: review Activity 1.7.1 — how did you restrict nextInt() to a range?
+> 
+> 
+>         // Create two Racecar objects — one named "Tom", one named "Jerry"
+>         // Pass each car its random acceleration (cast to double) and driver name
+>         // Hint: review Activity 1.13 — how did you instantiate objects?
+> 
+> 
+>         // Compute the finishing time for both cars
+>         // Call computeTime(distance) on each Racecar object and store the result
+>         // Hint: review Activity 1.10.1 — how did you store a method's return value?
+> 
+> 
+>         // Print the finishing time for each car
+>         // Use the toString() method of Racecar — it is called automatically when
+>         // you concatenate a Racecar object with a String
+>         // Expected format:  Racer Tom's car finished in 10.596 seconds.
+> 
+>     }
+> }
+> ```
+> 
+> ---
+> 
+> ## What You Need to Complete
+> 
+> ### In Racecar.java
+> - [ ] Implement `computeTime(double distance)` using `Math.sqrt()` and the formula `t = √(2 × d / a)`
+> - [ ] Round the result to three decimal places using `Math.round()`
+> - [ ] Return the rounded value
+> 
+> ### In Main.java
+> - [ ] Generate a random acceleration for each car from **20 to 50 inclusive**
+> - [ ] Instantiate two `Racecar` objects with their acceleration and driver name
+> - [ ] Call `computeTime(distance)` on each car and store the result
+> - [ ] Print the finishing time for each car in the format shown below
+> 
+> ---
+> 
+> ## Sample Output
+> 
+> Because acceleration is random, your times will differ each run. The format must match exactly:
+> 
+> ```
+> Racer Tom's car finished in 10.596 seconds.
+> Racer Jerry's car finished in 11.423 seconds.
+> ```
+> 
+> ```
+> Racer Tom's car finished in 8.744 seconds.
+> Racer Jerry's car finished in 8.744 seconds.
+> ```
+> 
+> > It is possible (but unlikely) for both cars to receive the same random acceleration and finish in the same time. This is expected behavior — your program does not need to handle a tie specially.
+> 
+> ---
+> 
+> ## Connecting the Concepts
+> 
+> Before you begin coding, trace through these questions to make sure you understand what each part of the program does. You may answer these in your block comment or a separate document.
+> 
+> 1. In `computeTime`, why do you use `accel` directly instead of passing acceleration as a parameter?
+> 2. Why must `computeTime` be an **instance method** rather than a **static method**?
+> 3. In `Main`, why do you cast the random acceleration to `double` when passing it to the `Racecar` constructor?
+> 4. What would happen if you used `rand.nextInt(50)` instead of `rand.nextInt(31) + 20`? What range would that produce?
+> 5. `toString()` is already written for you. When `System.out.println(car1 + "'s car finished in " + time + " seconds.")` runs, what triggers the call to `toString()`?
+> 
+> ---
+> 
+> ## Extension Challenges
+> 
+> Completed early? Try one or more of the following:
+> 
+> - [ ] **User input** — use `Scanner` to let the user enter driver names and/or the track length instead of hardcoding them
+> - [ ] **Winner announcement** — after printing both times, use an `if` statement and `Math.min()` to determine and print which racer won
+> - [ ] **More cars** — add a third and fourth `Racecar` object and report all four finishing times
+> - [ ] **Leaderboard** — sort and print the cars from fastest to slowest finishing time
+> 
+> ---
+> 
+> ## Submission
+> 
+> Upload the following to the assignment:
+> 
+> - [ ] `Racecar.java` — with `computeTime` fully implemented
+> - [ ] `Main.java` — with all comments completed and all code filled in, including the block comment header
+> - [ ] Test Cases document — showing at least **three** runs of your program demonstrating different random acceleration values each time
+> 
+> ---
+> 
+> ## Grading
+> 
+> This assignment is graded using the **AP CSA Generic Assignment Rubric** (5-point scale). Pay particular attention to:
+> 
+> - `computeTime` uses `Math.sqrt()` with the correct formula — not a hardcoded value
+> - Rounding is done to **three decimal places** — not zero or two
+> - Random acceleration is correctly bounded to **20–50 inclusive** — not a wider or narrower range
+> - `toString()` is not rewritten or modified — it is used as provided
+> - Output format matches the sample exactly, including the apostrophe-s and the word "seconds"
+>
 
 ---
 
