@@ -8,7 +8,7 @@
 <details>
 <summaryAssignment Header></summary>
 
-All submitted documents and `.java` files must include the following header. This mirrors the block comment required in `Main.java` and follows the standard used by university CS departments.
+All submitted documents and `.java` files must include the header below. This mirrors the block comment required in `Main.java` and follows the standard used by university CS departments.
 
 ```
 Name:          [Your Full Name]
@@ -29,7 +29,7 @@ Assignment:    1.3.1 — Calculate Your Weight on Jupiter
 Due Date:      September 12, 2026
 ```
 
-> This header must appear at the top of your `Main.java` block comment AND on your Test Cases document. Submissions missing the header will be penalized one point.
+> This header must appear at the top of your `Main.java` block comment AND on your Test Cases document. Submissions missing the header will be penalized *one point*.
 
 ---
 
@@ -59,7 +59,7 @@ All assignments require the following unless otherwise stated:
 
 **Academic Integrity Policy**
 
-> **Any submission that violates academic integrity will receive a grade of 0 and will be referred for disciplinary action in accordance with school policy.**
+> **Any submission that violates academic integrity will receive no credit and will be referred for disciplinary action in accordance with school policy.**
 
 The following are considered academic integrity violations in this course:
 
