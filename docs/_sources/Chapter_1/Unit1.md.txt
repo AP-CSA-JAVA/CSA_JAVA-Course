@@ -678,7 +678,7 @@ import java.util.ArrayList;
 ---
 
 
-## Activity 1.7.1 — Magic 8-Ball: Exploring APIs and Libraries
+## Assignment 1.7.1 — Magic 8-Ball: Exploring APIs and Libraries
 
 ### Overview
 
@@ -710,7 +710,7 @@ import java.util.Random;    // imports the Random class from the java.util packa
 ---
 
 >
-> ## Activity 1.7.1 — API Investigation
+> ## Assignment 1.7.1a — API Investigation
 > 
 > Using the Java 8 API documentation at **https://docs.oracle.com/javase/8/docs/api/**, answer the following questions in a comment block at the top of your `Main.java` file or in a separate text document submitted alongside your code.
 > 
@@ -742,7 +742,7 @@ import java.util.Random;    // imports the Random class from the java.util packa
 > 
 > ---
 > 
-> ## Activity1.7.2 — Magic 8-Ball Program
+> ## Assignment 1.7.2 — Magic 8-Ball Program
 > 
 > ### Program Description
 > 
@@ -1007,7 +1007,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 
 
 >
-> # Activity 1.10.1 — Mission Control: Calling Class Methods
+> # Assignment 1.10.1 — Mission Control: Calling Class Methods
 > 
 > 
 > ## Overview
@@ -1345,7 +1345,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 
 
 > 
-> ### Activity 1.11.1 — Roller Coaster Simulator
+> ### Project 1.11.1 — Roller Coaster Simulator
 > 
 > **Project Overview:**
 > 
@@ -1867,7 +1867,7 @@ System.out.println(greeting);       // void: performs an action
 
 ---
 
-### Activity 2.1.1 — Sports Class
+### Assignment 2.1.1 — Sports Class
 
 Write a class related to a professional sport (Football, soccer, basketball, etc.)
 
@@ -1889,7 +1889,7 @@ Starting: True
 
 ---
 
-### Activity 2.1.2 — Not Another Cake
+### Assignment 2.1.2 — Not Another Cake
 
 **Directions:** Look at the `Cake.java` program below. Create a 1-tier cake, 2-tier cake, and a 3-tier cake. Print out the reference location of the constructor. A solution is provided if you get stuck.
 
@@ -2001,7 +2001,7 @@ emptyCake=null
 
 ---
 
-### Activity 2.1.3 — Dog Pizza
+### Assignment 2.1.3 — Dog Pizza
 
 - Complete `Dog.java` by filling in the attributes and creating the constructor
 - Instantiate 3 pizzas and print them out by:
@@ -2058,7 +2058,7 @@ public class Dog
 
 ---
 
-### Activity 2.1.4 — Bicycle Revisited
+### Assignment 2.1.4 — Bicycle Revisited
 
 1. Create a `Bike` class with the following attributes:
    - `kind` (Cruiser, road bike, tricycle, hybrid)
@@ -2083,7 +2083,7 @@ Pedaling to accelerate.
 
 ---
 
-### Activity 2.1.5 — Constructor Practice
+### Assignment 2.1.5 — Constructor Practice
 
 1. Create a class called `Student` with the following instance variables:
    - `name` (String)
@@ -2209,7 +2209,7 @@ Give papa a proper bup of boffee in a bopper boffee bup.
 Submit your program code as a java file and test cases as 1 pdf.
 
 
-### Activity 2.7.2 — Speaking
+### Assignment 2.7.2 — Speaking
 
 
 Starter files: [Speaking.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/13031428/127-Speaking.zip)
@@ -2331,10 +2331,10 @@ for (int i = 0; i < names.length; i++) {
 System.out.print(table.toString());
 ```
 
-### Activity 1.16.1 — Formatted Report
+### Assignment 1.16.1 — Formatted Report
 Create a formatted student report card that displays names, scores, and letter grades in aligned columns using `String.format()`.
 
-### Activity 1.16.2 — StringBuilder Reverse
+### Assignment 1.16.2 — StringBuilder Reverse
 Use `StringBuilder` to write a program that checks whether a given word is a palindrome.
 
 ---
@@ -2381,7 +2381,7 @@ int num = Integer.parseInt(numStr);
 double d = Double.parseDouble("3.14");
 ```
 
-### Activity 1.17.1 — Wrapper Classes
+### Assignment 1.17.1 — Wrapper Classes
 
 Directions: Create a class called WrapperExamples that will demonstrate each of the following:
 
