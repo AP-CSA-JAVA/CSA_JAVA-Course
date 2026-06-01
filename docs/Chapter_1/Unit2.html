@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="Unit 3" href="Unit3.html"><link rel="prev" title="Unit 1 — Using Objects and Methods" href="Unit1.html">
 
     <!-- Generated with Sphinx 8.1.3 and Furo 2025.12.19 -->
-        <title>Unit 3 - Class Creation - CSA JAVA Course</title>
+        <title>Unit 2 - Selection and Iteration - CSA JAVA Course</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=8dab3a3b" />
@@ -256,596 +256,721 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="unit-3-class-creation">
-<h1>Unit 3 - Class Creation<a class="headerlink" href="#unit-3-class-creation" title="Link to this heading">¶</a></h1>
-<p><em>AP Exam Weighting: 10–18% | Suggested Pacing: ~20–22 Class Periods</em></p>
+          <section id="unit-2-selection-and-iteration">
+<h1>Unit 2 - Selection and Iteration<a class="headerlink" href="#unit-2-selection-and-iteration" title="Link to this heading">¶</a></h1>
+<p><em>AP Exam Weighting: 25–35% | Suggested Pacing: ~29–31 Class Periods</em></p>
 <hr class="docutils" />
-<section id="abstraction-and-program-design">
-<h2>3.1 Abstraction and Program Design<a class="headerlink" href="#abstraction-and-program-design" title="Link to this heading">¶</a></h2>
+<section id="algorithms-with-selection-and-repetition">
+<h2>2.1 Algorithms with Selection and Repetition<a class="headerlink" href="#algorithms-with-selection-and-repetition" title="Link to this heading">¶</a></h2>
 <p><strong>Goals</strong></p>
 <ul class="simple">
-<li><p>Understand the design principles of a class.</p></li>
-<li><p>Use a non-programming methodology to design code.</p></li>
-<li><p>Create a roadmap for the next activities.</p></li>
+<li><p>Understand how algorithms can use selection (if/else) and repetition (loops) to solve problems.</p></li>
+<li><p>Trace through algorithms to predict their output.</p></li>
 </ul>
-<p>A class is a blueprint for the objects of that class. A class contains variables and methods to store and manipulate information. To create a class, you first state whether you want it to be public or private, use the class keyword, and name the class.</p>
-<p><strong>Design Principles of a Class:</strong></p>
+<p>An <strong>algorithm</strong> is a step-by-step set of instructions to solve a problem. In Java, algorithms use:</p>
 <ul class="simple">
-<li><p><mark>Encapsulation</mark>: Use access modifiers (<code class="docutils literal notranslate"><span class="pre">private</span></code>, <code class="docutils literal notranslate"><span class="pre">public</span></code>, <code class="docutils literal notranslate"><span class="pre">protected</span></code>) to encapsulate attributes, allowing controlled access through getter and setter methods.</p></li>
-<li><p><mark>Abstraction</mark>: The class hides implementation details and exposes only essential features.</p></li>
-<li><p><mark>Modularity</mark>: A class is a modular unit that represents a single entity or concept and can be reused as needed.</p></li>
-<li><p><mark>Single Responsibility Principle (SRP)</mark>: A class should only deal with managing one responsibility.</p></li>
-<li><p><mark>Information Hiding</mark>: Making attributes <code class="docutils literal notranslate"><span class="pre">private</span></code> so external code can only interact through well-defined methods.</p></li>
+<li><p><strong>Selection</strong>: Choosing different paths based on conditions (<code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">if/else</span></code>, <code class="docutils literal notranslate"><span class="pre">switch</span></code>)</p></li>
+<li><p><strong>Repetition</strong>: Repeating steps until a condition is met (<code class="docutils literal notranslate"><span class="pre">while</span></code>, <code class="docutils literal notranslate"><span class="pre">for</span></code>, <code class="docutils literal notranslate"><span class="pre">do-while</span></code>)</p></li>
 </ul>
 </section>
 <hr class="docutils" />
-<section id="impact-of-program-design">
-<h2>3.2 Impact of Program Design<a class="headerlink" href="#impact-of-program-design" title="Link to this heading">¶</a></h2>
+<section id="boolean-expressions">
+<h2>2.2 Boolean Expressions<a class="headerlink" href="#boolean-expressions" title="Link to this heading">¶</a></h2>
 <p><strong>Goals</strong></p>
 <ul class="simple">
-<li><p>Understand the ethical and social implications of computing systems.</p></li>
-<li><p>Understand beneficial and/or harmful effects of programs.</p></li>
-<li><p>Develop awareness around ethical issues applying to internet service providers.</p></li>
-</ul>
-<p><strong>Ethical and Social Implications of Computing Systems:</strong></p>
-<ul class="simple">
-<li><p><mark>Privacy Concerns</mark>: Computing systems often collect and store vast amounts of personal data, raising concerns about privacy and data security.</p></li>
-<li><p><mark>Bias and Discrimination</mark>: Algorithms and AI systems can inherit biases from training data, leading to discriminatory outcomes.</p></li>
-<li><p><mark>Cybersecurity</mark>: Computing systems’ vulnerabilities pose significant risks through cyberattacks and data breaches.</p></li>
-<li><p><mark>Digital Divide</mark>: Unequal access to technology can exacerbate existing social inequalities.</p></li>
-<li><p><mark>Employment Disruption</mark>: Automation and AI can lead to job displacement.</p></li>
-</ul>
-<p><strong>Developing Awareness Around Ethical Issues for ISPs:</strong></p>
-<ul class="simple">
-<li><p><mark>Transparency</mark>: ISPs should be transparent about data collection practices and policies.</p></li>
-<li><p><mark>Net Neutrality</mark>: ISPs should treat all internet traffic equally.</p></li>
-<li><p><mark>Ethical Use of User Data</mark>: Obtain explicit consent before collecting and using personal data.</p></li>
-</ul>
-</section>
-<hr class="docutils" />
-<section id="anatomy-of-a-class">
-<h2>3.3 Anatomy of a Class<a class="headerlink" href="#anatomy-of-a-class" title="Link to this heading">¶</a></h2>
-<p><strong>Goals</strong></p>
-<ul class="simple">
-<li><p>Understand the design principles of a class.</p></li>
-</ul>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Class definition</span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Student</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Instance variables (attributes)</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">studentId</span><span class="p">;</span>
-
-<span class="w">    </span><span class="c1">// Constructor</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Student</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">studentId</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
-<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
-<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">studentId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">studentId</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="c1">// Accessor (getter) method</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getName</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="c1">// Mutator (setter) method</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setName</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="c1">// Method to display student information</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">displayInfo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Name: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="p">);</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Age: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">age</span><span class="p">);</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Student ID: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">studentId</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="c1">// Main method to test the Student class</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Student</span><span class="w"> </span><span class="n">student1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Student</span><span class="p">(</span><span class="s">&quot;Ted Lasso&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">45</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;12345&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Initial Information:&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="n">student1</span><span class="p">.</span><span class="na">displayInfo</span><span class="p">();</span>
-
-<span class="w">        </span><span class="n">student1</span><span class="p">.</span><span class="na">setName</span><span class="p">(</span><span class="s">&quot;Roy Kent&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="n">student1</span><span class="p">.</span><span class="na">setAge</span><span class="p">(</span><span class="mi">35</span><span class="p">);</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\nUpdated Information:&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="n">student1</span><span class="p">.</span><span class="na">displayInfo</span><span class="p">();</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</section>
-<hr class="docutils" />
-<section id="constructors">
-<h2>3.4 Constructors<a class="headerlink" href="#constructors" title="Link to this heading">¶</a></h2>
-<p><strong>Goals</strong></p>
-<ul class="simple">
-<li><p>Understand the concept of class constructors.</p></li>
-<li><p>Write your own class constructors.</p></li>
-<li><p>Examine call by value and reference with regard to class constructors.</p>
+<li><p>Understand Boolean expressions.</p></li>
+<li><p>Use relational operators to compute the value of a Boolean expression.</p>
 <ul>
-<li><p>I will be able to write a program that utilizes constructors</p></li>
+<li><p>I will be able to write a program that utilizes a Boolean expression</p></li>
 </ul>
 </li>
 </ul>
-<p>A <strong>constructor</strong> in Java is a special method that is used to initialize objects. The constructor is called when an object of a class is created. It can be used to set the initial values for object attributes.</p>
-<p>Java is a <em>pass-by-value</em> language. If we pass a primitive value, we are passing a copy of that value. However, if we are passing a reference type, we are passing a reference to the data location.</p>
-<p><strong>Constructor Overloading:</strong> It is possible to write two or more constructors within a program. The difference between the constructors are the <em>parameters</em> defined within each constructor.</p>
-<p>The <strong>default constructor</strong> is the constructor with no parameters. If an overloaded constructor is missing a parameter, the value will default to the default constructor.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Example of Overloading Constructors</span>
-<span class="kd">class</span> <span class="nc">Box</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">depth</span><span class="p">;</span>
-
-<span class="w">    </span><span class="c1">// constructor with no parameters specified</span>
-<span class="w">    </span><span class="n">Box</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">        </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">        </span><span class="n">depth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="c1">// constructor with three parameters specified</span>
-<span class="w">    </span><span class="n">Box</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">d</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">w</span><span class="p">;</span>
-<span class="w">        </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">h</span><span class="p">;</span>
-<span class="w">        </span><span class="n">depth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<section id="tostring-method">
-<h3>toString() Method<a class="headerlink" href="#tostring-method" title="Link to this heading">¶</a></h3>
-<p>The <code class="docutils literal notranslate"><span class="pre">toString()</span></code> method provides a meaningful String representation of an object. It is called automatically when you print an object.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Car</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">make</span><span class="p">;</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">model</span><span class="p">;</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">year</span><span class="p">;</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Car</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">make</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">model</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">year</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">make</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">make</span><span class="p">;</span>
-<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">model</span><span class="p">;</span>
-<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">year</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">year</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="nd">@Override</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Car: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; (&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">year</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;)&quot;</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Car</span><span class="w"> </span><span class="n">car1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Car</span><span class="p">(</span><span class="s">&quot;Toyota&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Camry&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2022</span><span class="p">);</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">car1</span><span class="p">);</span><span class="w">  </span><span class="c1">// Calls toString() automatically</span>
-<span class="w">        </span><span class="c1">// Output: Car: Toyota Camry (2022)</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</section>
-<section id="activity-2-1-1">
-<h3>Activity 2.1.1<a class="headerlink" href="#activity-2-1-1" title="Link to this heading">¶</a></h3>
-</section>
-<section id="activity-2-1-2-not-another-cake">
-<h3>Activity 2.1.2 Not another Cake<a class="headerlink" href="#activity-2-1-2-not-another-cake" title="Link to this heading">¶</a></h3>
-</section>
-<section id="activity-2-1-3-dog-pizza-java">
-<h3>Activity 2.1.3 Dog Pizza java<a class="headerlink" href="#activity-2-1-3-dog-pizza-java" title="Link to this heading">¶</a></h3>
-</section>
-<section id="activity-2-1-4-bicycle-revisited">
-<h3>Activity 2.1.4 - Bicycle Revisited<a class="headerlink" href="#activity-2-1-4-bicycle-revisited" title="Link to this heading">¶</a></h3>
-</section>
-<section id="activity-2-1-5-constructor-practice">
-<h3>Activity 2.1.5 Constructor Practice<a class="headerlink" href="#activity-2-1-5-constructor-practice" title="Link to this heading">¶</a></h3>
-</section>
-</section>
-<hr class="docutils" />
-<section id="methods-how-to-write-them">
-<h2>3.5 Methods: How to Write Them<a class="headerlink" href="#methods-how-to-write-them" title="Link to this heading">¶</a></h2>
-<p><strong>Goals</strong></p>
-<ul class="simple">
-<li><p>Define behaviors of an object using non-void class methods with parameters.</p></li>
-<li><p>Create new types using classes.</p></li>
-</ul>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">BankAccount</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">accountNumber</span><span class="p">;</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">balance</span><span class="p">;</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">BankAccount</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">accountNumber</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">initialBalance</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">accountNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">accountNumber</span><span class="p">;</span>
-<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">balance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">initialBalance</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="c1">// Non-void method: deposits money and returns new balance</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">deposit</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">amount</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">amount</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">balance</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">amount</span><span class="p">;</span>
-<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Deposit successful. New balance: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">balance</span><span class="p">);</span>
-<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Invalid deposit amount.&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">balance</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="c1">// Void method: displays account info</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">displayInfo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Account Number: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">accountNumber</span><span class="p">);</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Balance: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">balance</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<section id="accessor-getter-methods">
-<h3>3.5.1 Accessor (Getter) Methods<a class="headerlink" href="#accessor-getter-methods" title="Link to this heading">¶</a></h3>
-<p><strong>Goals</strong></p>
-<ul class="simple">
-<li><p>Understand how to properly encapsulate the attributes of a class.</p></li>
-<li><p>Write methods to display encapsulated attributes.</p></li>
-</ul>
-<p>Accessor methods (getters) are <code class="docutils literal notranslate"><span class="pre">public</span></code> methods that return the value of <code class="docutils literal notranslate"><span class="pre">private</span></code> instance variables:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getBrand</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">brand</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getMaxSpeed</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">maxSpeed</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</section>
-<section id="mutator-setter-methods">
-<h3>3.5.2 Mutator (Setter) Methods<a class="headerlink" href="#mutator-setter-methods" title="Link to this heading">¶</a></h3>
-<p><strong>Goals</strong></p>
-<ul class="simple">
-<li><p>Write methods to change the encapsulated attributes of a class.</p></li>
-</ul>
-<p>Mutator methods (setters) are <code class="docutils literal notranslate"><span class="pre">public</span></code> methods that modify <code class="docutils literal notranslate"><span class="pre">private</span></code> instance variables:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setBrand</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">brand</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">brand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">brand</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setMaxSpeed</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">maxSpeed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">maxSpeed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">maxSpeed</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</section>
-</section>
-<hr class="docutils" />
-<section id="methods-passing-and-returning-references-of-an-object">
-<h2>3.6 Methods: Passing and Returning References of an Object<a class="headerlink" href="#methods-passing-and-returning-references-of-an-object" title="Link to this heading">¶</a></h2>
-<p><strong>Goals</strong></p>
-<ul class="simple">
-<li><p>Pass objects as parameters to methods.</p></li>
-<li><p>Return objects from methods.</p></li>
-</ul>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Student</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Student</span><span class="w"> </span><span class="nf">copyArgument</span><span class="p">(</span><span class="n">Student</span><span class="w"> </span><span class="n">std</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="p">.</span><span class="na">name</span><span class="p">;</span>
-<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="p">.</span><span class="na">grade</span><span class="p">;</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="p">;</span><span class="w">  </span><span class="c1">// returning a reference to an object</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</section>
-<hr class="docutils" />
-<section id="class-variables-and-methods">
-<h2>3.7 Class Variables and Methods<a class="headerlink" href="#class-variables-and-methods" title="Link to this heading">¶</a></h2>
-<p><strong>Goals</strong></p>
-<ul class="simple">
-<li><p>Define behaviors of a class through static methods.</p></li>
-<li><p>Define static variables that belong to the class.</p></li>
-</ul>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MathUtility</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Static variable (belongs to the class, shared by all instances)</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14159</span><span class="p">;</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-
-<span class="w">    </span><span class="c1">// Static method (called on the class, not an instance)</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">calculateCircleArea</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">radius</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">radius</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">radius</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">incrementCount</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">count</span><span class="o">++</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getCount</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">count</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p>Static methods and variables are associated with the class itself rather than specific instances. Call them using the class name: <code class="docutils literal notranslate"><span class="pre">MathUtility.calculateCircleArea(5.0)</span></code>.</p>
-</section>
-<hr class="docutils" />
-<section id="scope-and-access">
-<h2>3.8 Scope and Access<a class="headerlink" href="#scope-and-access" title="Link to this heading">¶</a></h2>
-<p><strong>Goals</strong></p>
-<ul class="simple">
-<li><p>Explain where variables can be used in a program.</p></li>
-</ul>
+<p>George Boole formulated the basic rules of Boolean algebra back in 1847. Below are the relational operators that you will need to know for the AP exam.</p>
 <div class="table-wrapper colwidths-auto docutils container">
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>Variable Type</p></th>
-<th class="head"><p>Declared In</p></th>
-<th class="head"><p>Accessible From</p></th>
+<tr class="row-odd"><th class="head text-center"><p>Relational Operator</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Boolean Value</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><strong>Local variable</strong></p></td>
-<td><p>Inside a method</p></td>
-<td><p>Only within that method</p></td>
+<tr class="row-even"><td class="text-center"><p>a &lt; b</p></td>
+<td><p>a less than b</p></td>
+<td><p>Equates to ‘true’ if a is less than b,’false’ otherwise</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Instance variable</strong></p></td>
-<td><p>Class body (outside methods)</p></td>
-<td><p>Any non-static method in the class</p></td>
+<tr class="row-odd"><td class="text-center"><p>a &lt;= b</p></td>
+<td><p>a less than or equal to b</p></td>
+<td><p>Equates to ‘true’ if a is less than or equal to b, ‘false’ otherwise.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Static variable</strong></p></td>
-<td><p>Class body with <code class="docutils literal notranslate"><span class="pre">static</span></code> keyword</p></td>
-<td><p>Any method in the class (including static methods)</p></td>
+<tr class="row-even"><td class="text-center"><p>a &gt; b</p></td>
+<td><p>a greater than b</p></td>
+<td><p>Equates to ‘true’ if a is greater than b, ‘false’ otherwise.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>a &gt;= b</p></td>
+<td><p>a greater than or equal to b</p></td>
+<td><p>Equates to ‘true’ if a is greater than or equal to b, ‘false’ otherwise.</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>a == b</p></td>
+<td><p>a equals b*</p></td>
+<td><p>Equates to ‘true’ if a has the same value as b.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>a != b</p></td>
+<td><p>a does not equal b</p></td>
+<td><p>Equates to ‘true’ if a does not have the same value as b, ‘false’ otherwise.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ScopeExample</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">instanceVar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;instance&quot;</span><span class="p">;</span><span class="w">      </span><span class="c1">// instance variable</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">staticVar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w">            </span><span class="c1">// static variable</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">exampleMethod</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">localVar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w">                          </span><span class="c1">// local variable</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">instanceVar</span><span class="p">);</span><span class="w">           </span><span class="c1">// ✅ accessible</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">staticVar</span><span class="p">);</span><span class="w">             </span><span class="c1">// ✅ accessible</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">localVar</span><span class="p">);</span><span class="w">              </span><span class="c1">// ✅ accessible</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">staticMethod</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">staticVar</span><span class="p">);</span><span class="w">             </span><span class="c1">// ✅ accessible</span>
-<span class="w">        </span><span class="c1">// System.out.println(instanceVar);        // ❌ NOT accessible in static method</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
+<p><strong>Logical Operators</strong></p>
+<p>Logical operators are used to combine Boolean expressions:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>AND Operator ( &amp;&amp; ) – if( a &amp;&amp; b ) [if true execute else don&#39;t]
+OR Operator ( || ) – if( a || b) [if one of them is true execute else don&#39;t]
+NOT Operator ( ! ) – !(a&lt;b) [returns false if a is smaller than b]
 </pre></div>
 </div>
-<p><strong>Access Modifiers:</strong></p>
+<p><strong>Short-Circuit Evaluation:</strong> When using <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code>, if the first expression is <code class="docutils literal notranslate"><span class="pre">false</span></code>, the second is never evaluated. When using <code class="docutils literal notranslate"><span class="pre">||</span></code>, if the first expression is <code class="docutils literal notranslate"><span class="pre">true</span></code>, the second is never evaluated.</p>
 <div class="table-wrapper colwidths-auto docutils container">
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>Modifier</p></th>
-<th class="head"><p>Same Class</p></th>
-<th class="head"><p>Same Package</p></th>
-<th class="head"><p>Subclass</p></th>
-<th class="head"><p>Other Classes</p></th>
+<tr class="row-odd"><th class="head"><p>A</p></th>
+<th class="head"><p>!A</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">public</span></code></p></td>
-<td><p>✅</p></td>
-<td><p>✅</p></td>
-<td><p>✅</p></td>
-<td><p>✅</p></td>
+<tr class="row-even"><td><p>false</p></td>
+<td><p>true</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">protected</span></code></p></td>
-<td><p>✅</p></td>
-<td><p>✅</p></td>
-<td><p>✅</p></td>
-<td><p>❌</p></td>
-</tr>
-<tr class="row-even"><td><p>(default)</p></td>
-<td><p>✅</p></td>
-<td><p>✅</p></td>
-<td><p>❌</p></td>
-<td><p>❌</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">private</span></code></p></td>
-<td><p>✅</p></td>
-<td><p>❌</p></td>
-<td><p>❌</p></td>
-<td><p>❌</p></td>
+<tr class="row-odd"><td><p>true</p></td>
+<td><p>false</p></td>
 </tr>
 </tbody>
 </table>
 </div>
+<section id="activity-2-2-1">
+<h3>Activity 2.2.1<a class="headerlink" href="#activity-2-2-1" title="Link to this heading">¶</a></h3>
+<p>Fill in the truth table for <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&amp;&amp;</span> <span class="pre">(b</span> <span class="pre">||</span> <span class="pre">c)</span></code>:</p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>a</p></th>
+<th class="head"><p>b</p></th>
+<th class="head"><p>c</p></th>
+<th class="head"><p>b || c</p></th>
+<th class="head"><p>a &amp;&amp; (b || c)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>F</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>T</p></td>
+<td><p>F</p></td>
+<td><p>T</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>T</p></td>
+<td><p>F</p></td>
+<td><p>F</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>F</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>F</p></td>
+<td><p>T</p></td>
+<td><p>F</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>F</p></td>
+<td><p>F</p></td>
+<td><p>T</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>F</p></td>
+<td><p>F</p></td>
+<td><p>F</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<details><summary>Solution</summary>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>a</p></th>
+<th class="head"><p>b</p></th>
+<th class="head"><p>c</p></th>
+<th class="head"><p>b || c</p></th>
+<th class="head"><p>a &amp;&amp; (b || c)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+</tr>
+<tr class="row-odd"><td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>F</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+</tr>
+<tr class="row-even"><td><p>T</p></td>
+<td><p>F</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+</tr>
+<tr class="row-odd"><td><p>T</p></td>
+<td><p>F</p></td>
+<td><p>F</p></td>
+<td><p>F</p></td>
+<td><p>F</p></td>
+</tr>
+<tr class="row-even"><td><p>F</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>F</p></td>
+</tr>
+<tr class="row-odd"><td><p>F</p></td>
+<td><p>T</p></td>
+<td><p>F</p></td>
+<td><p>T</p></td>
+<td><p>F</p></td>
+</tr>
+<tr class="row-even"><td><p>F</p></td>
+<td><p>F</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>F</p></td>
+</tr>
+<tr class="row-odd"><td><p>F</p></td>
+<td><p>F</p></td>
+<td><p>F</p></td>
+<td><p>F</p></td>
+<td><p>F</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+</section>
+<section id="activity-2-2-2-boolean-expression">
+<h3>Activity 2.2.2 - Boolean Expression<a class="headerlink" href="#activity-2-2-2-boolean-expression" title="Link to this heading">¶</a></h3>
+</section>
+<section id="activity-2-2-3-comparing-objects-with-equals">
+<h3>Activity 2.2.3 - Comparing Objects with .equals()<a class="headerlink" href="#activity-2-2-3-comparing-objects-with-equals" title="Link to this heading">¶</a></h3>
+<p><strong>IMPORTANT: Object Equality</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">==</span></code> compares object references (memory locations). To compare the values of two objects, use <code class="docutils literal notranslate"><span class="pre">.equals()</span></code>:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="s">&quot;HELLO&quot;</span><span class="p">);</span>
+<span class="n">String</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="s">&quot;HELLO&quot;</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">s2</span><span class="p">);</span><span class="w">      </span><span class="c1">// false – different memory locations</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s1</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">s2</span><span class="p">));</span><span class="w"> </span><span class="c1">// true  – same content</span>
+</pre></div>
+</div>
+</section>
 </section>
 <hr class="docutils" />
-<section id="this-keyword">
-<h2>3.9 this Keyword<a class="headerlink" href="#this-keyword" title="Link to this heading">¶</a></h2>
+<section id="if-statements">
+<h2>2.3 if Statements<a class="headerlink" href="#if-statements" title="Link to this heading">¶</a></h2>
 <p><strong>Goals</strong></p>
 <ul class="simple">
-<li><p>Evaluate object reference expressions that use the keyword <code class="docutils literal notranslate"><span class="pre">this</span></code>.</p></li>
+<li><p>Write <code class="docutils literal notranslate"><span class="pre">if</span></code> statements to control the flow of a program.</p></li>
+<li><p>I will be able to write a program that uses if/else statements.</p></li>
 </ul>
-<p><code class="docutils literal notranslate"><span class="pre">this</span></code> keyword refers to the current object in a method. It is useful when attribute and parameter names are the same:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w">  </span><span class="c1">// &quot;this.x&quot; is the instance variable; &quot;x&quot; is the parameter</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Main</span><span class="w"> </span><span class="n">numObj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Main</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;The instantiated value of x is &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">numObj</span><span class="p">.</span><span class="na">x</span><span class="p">);</span>
-<span class="w">        </span><span class="c1">// Output: The instantiated value of x is 5</span>
-<span class="w">    </span><span class="p">}</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">condition</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// code executed when condition is true</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">this</span></code> can be used to:</p>
-<ul class="simple">
-<li><p>Distinguish instance variables from parameters with the same name</p></li>
-<li><p>Invoke current constructor (<code class="docutils literal notranslate"><span class="pre">this()</span></code>)</p></li>
-<li><p>Pass the current object as an argument</p></li>
-<li><p>Return the current object from a method</p></li>
-</ul>
+<section id="activity-2-3-1-guesschecker-pt-1">
+<h3>Activity 2.3.1 - guessChecker Pt 1<a class="headerlink" href="#activity-2-3-1-guesschecker-pt-1" title="Link to this heading">¶</a></h3>
+</section>
+<section id="activity-2-3-2-sevens-game">
+<h3>Activity 2.3.2 - Sevens Game<a class="headerlink" href="#activity-2-3-2-sevens-game" title="Link to this heading">¶</a></h3>
+</section>
 </section>
 <hr class="docutils" />
-<section id="exceptions-oracle-foundations-1z0-811">
-<h2>Exceptions — <em>Oracle Foundations 1Z0-811</em><a class="headerlink" href="#exceptions-oracle-foundations-1z0-811" title="Link to this heading">¶</a></h2>
+<section id="nested-if-statements">
+<h2>2.4 Nested if Statements<a class="headerlink" href="#nested-if-statements" title="Link to this heading">¶</a></h2>
+<p><strong>Goals</strong></p>
+<ul class="simple">
+<li><p>Write nested <code class="docutils literal notranslate"><span class="pre">if/else</span> <span class="pre">if/else</span></code> statements for multi-branch logic.</p></li>
+</ul>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">score</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">90</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;A&quot;</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">score</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">80</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">score</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">70</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;F&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<section id="activity-2-4-1-guesschecker-pt-2">
+<h3>Activity 2.4.1 - guessChecker Pt 2<a class="headerlink" href="#activity-2-4-1-guesschecker-pt-2" title="Link to this heading">¶</a></h3>
+</section>
+<section id="activity-2-4-2-activity-director">
+<h3>Activity 2.4.2 - Activity Director<a class="headerlink" href="#activity-2-4-2-activity-director" title="Link to this heading">¶</a></h3>
+</section>
+<section id="activity-2-4-3-smallest-divisible-number">
+<h3>Activity 2.4.3 - Smallest Divisible Number<a class="headerlink" href="#activity-2-4-3-smallest-divisible-number" title="Link to this heading">¶</a></h3>
+</section>
+</section>
+<hr class="docutils" />
+<section id="switch-statements-oracle-foundations-1z0-811">
+<h2>2.4.1 Switch Statements — <em>Oracle Foundations 1Z0-811</em><a class="headerlink" href="#switch-statements-oracle-foundations-1z0-811" title="Link to this heading">¶</a></h2>
 <blockquote>
-<div><p><strong>Oracle Exam Note:</strong> Exception handling is tested on the Oracle Java Foundations exam (1Z0-811).</p>
+<div><p><strong>Oracle Exam Note:</strong> <code class="docutils literal notranslate"><span class="pre">switch</span></code> statements and the ternary operator are tested on the Oracle Java Foundations exam (1Z0-811).</p>
 </div></blockquote>
-<p>An <strong>exception</strong> is an event that disrupts the normal flow of a program at runtime. Java uses exception handling to manage errors gracefully.</p>
-<p><strong>Common Java Exceptions:</strong></p>
+<p>A <code class="docutils literal notranslate"><span class="pre">switch</span></code> statement is an alternative to long <code class="docutils literal notranslate"><span class="pre">if/else</span> <span class="pre">if</span></code> chains when testing a single variable against multiple constant values.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">day</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">day</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Monday&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Tuesday&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">3</span><span class="p">:</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Wednesday&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">default</span><span class="p">:</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Other day&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Important rules:</strong></p>
+<ul class="simple">
+<li><p>Each <code class="docutils literal notranslate"><span class="pre">case</span></code> ends with <code class="docutils literal notranslate"><span class="pre">break</span></code> to prevent <strong>fall-through</strong> (executing subsequent cases).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> is optional and runs if no case matches — similar to a final <code class="docutils literal notranslate"><span class="pre">else</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">switch</span></code> works with <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">char</span></code>, <code class="docutils literal notranslate"><span class="pre">String</span></code>, and enum types.</p></li>
+</ul>
+<p><strong>Fall-Through Example:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">month</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
+<span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">month</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">4</span><span class="p">:</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">6</span><span class="p">:</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">9</span><span class="p">:</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">11</span><span class="p">:</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;30 days&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;28 or 29 days&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">default</span><span class="p">:</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;31 days&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<section id="ternary-operator-oracle-foundations-1z0-811">
+<h3>Ternary Operator — <em>Oracle Foundations 1Z0-811</em><a class="headerlink" href="#ternary-operator-oracle-foundations-1z0-811" title="Link to this heading">¶</a></h3>
+<p>The <strong>ternary operator</strong> <code class="docutils literal notranslate"><span class="pre">?</span> <span class="pre">:</span></code> is a compact one-line <code class="docutils literal notranslate"><span class="pre">if/else</span></code>:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Syntax: condition ? valueIfTrue : valueIfFalse</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">17</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">age</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">18</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s">&quot;adult&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;minor&quot;</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">status</span><span class="p">);</span><span class="w">  </span><span class="c1">// minor</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">   </span><span class="c1">// max = 20</span>
+</pre></div>
+</div>
+<p>Use the ternary operator for simple conditional assignments; prefer <code class="docutils literal notranslate"><span class="pre">if/else</span></code> for more complex logic.</p>
+</section>
+<section id="activity-2-4-1-1-text-based-calculator-with-mode-selection">
+<h3>Activity 2.4.1.1 - Text-Based Calculator with Mode Selection<a class="headerlink" href="#activity-2-4-1-1-text-based-calculator-with-mode-selection" title="Link to this heading">¶</a></h3>
+<p>Write a Java program that:</p>
+<ol class="arabic simple">
+<li><p>Asks the user to choose a mode: <code class="docutils literal notranslate"><span class="pre">basic</span></code>, <code class="docutils literal notranslate"><span class="pre">scientific</span></code>, or <code class="docutils literal notranslate"><span class="pre">stats</span></code></p></li>
+<li><p>Uses a <code class="docutils literal notranslate"><span class="pre">switch</span></code> statement to route to the correct mode</p></li>
+<li><p>Within each mode, uses ternary operators for simple comparisons (e.g., “result is positive/negative”)</p></li>
+<li><p>Includes a <code class="docutils literal notranslate"><span class="pre">default</span></code> case for invalid input</p></li>
+</ol>
+</section>
+</section>
+<hr class="docutils" />
+<section id="compound-boolean-expressions">
+<h2>2.5 Compound Boolean Expressions<a class="headerlink" href="#compound-boolean-expressions" title="Link to this heading">¶</a></h2>
+<p><strong>Goals</strong></p>
+<ul class="simple">
+<li><p>Combine multiple conditions using <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code>, <code class="docutils literal notranslate"><span class="pre">||</span></code>, and <code class="docutils literal notranslate"><span class="pre">!</span></code>.</p></li>
+</ul>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Compound condition: between 18 and 65</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">age</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">18</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">65</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Working age&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Compound condition: invalid input</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">score</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Invalid score&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<section id="activity-2-5-1">
+<h3>Activity 2.5.1<a class="headerlink" href="#activity-2-5-1" title="Link to this heading">¶</a></h3>
+</section>
+<section id="activity-2-5-2">
+<h3>Activity 2.5.2<a class="headerlink" href="#activity-2-5-2" title="Link to this heading">¶</a></h3>
+</section>
+<section id="activity-2-5-3-guesschecker-pt-3">
+<h3>Activity 2.5.3 - guessChecker Pt 3<a class="headerlink" href="#activity-2-5-3-guesschecker-pt-3" title="Link to this heading">¶</a></h3>
+</section>
+</section>
+<hr class="docutils" />
+<section id="comparing-boolean-expressions">
+<h2>2.6 Comparing Boolean Expressions<a class="headerlink" href="#comparing-boolean-expressions" title="Link to this heading">¶</a></h2>
+<p><strong>Goals</strong></p>
+<ul class="simple">
+<li><p>Understand equivalent Boolean expressions.</p></li>
+<li><p>Apply De Morgan’s Laws.</p></li>
+</ul>
+<p><strong>De Morgan’s Laws:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="o">!</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w">  </span><span class="o">==</span><span class="w">  </span><span class="p">(</span><span class="o">!</span><span class="n">a</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">!</span><span class="n">b</span><span class="p">)</span><span class="w">    </span><span class="c1">// NOT (A AND B) equals (NOT A) OR (NOT B)</span>
+<span class="o">!</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w">  </span><span class="o">==</span><span class="w">  </span><span class="p">(</span><span class="o">!</span><span class="n">a</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="n">b</span><span class="p">)</span><span class="w">    </span><span class="c1">// NOT (A OR B) equals (NOT A) AND (NOT B)</span>
+</pre></div>
+</div>
+<section id="activity-2-6-1">
+<h3>Activity 2.6.1<a class="headerlink" href="#activity-2-6-1" title="Link to this heading">¶</a></h3>
+</section>
+<section id="activity-2-6-2">
+<h3>Activity 2.6.2<a class="headerlink" href="#activity-2-6-2" title="Link to this heading">¶</a></h3>
+</section>
+</section>
+<hr class="docutils" />
+<section id="while-loops">
+<h2>2.7 while Loops<a class="headerlink" href="#while-loops" title="Link to this heading">¶</a></h2>
+<p><strong>Goals</strong></p>
+<ul class="simple">
+<li><p>Write <code class="docutils literal notranslate"><span class="pre">while</span></code> loops to repeat code while a condition is true.</p></li>
+<li><p>I will be able to write a program that uses while loops.</p></li>
+</ul>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="w">    </span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">// Prints 1 through 5</span>
+</pre></div>
+</div>
+<p><strong>Important:</strong> Make sure the loop condition eventually becomes <code class="docutils literal notranslate"><span class="pre">false</span></code>; otherwise you create an infinite loop.</p>
+<section id="activity-2-7-1">
+<h3>Activity 2.7.1<a class="headerlink" href="#activity-2-7-1" title="Link to this heading">¶</a></h3>
+</section>
+<section id="activity-2-7-2">
+<h3>Activity 2.7.2<a class="headerlink" href="#activity-2-7-2" title="Link to this heading">¶</a></h3>
+</section>
+</section>
+<hr class="docutils" />
+<section id="a-do-while-loops-oracle-foundations-1z0-811">
+<h2>2.7a do-while Loops — <em>Oracle Foundations 1Z0-811</em><a class="headerlink" href="#a-do-while-loops-oracle-foundations-1z0-811" title="Link to this heading">¶</a></h2>
+<blockquote>
+<div><p><strong>Oracle Exam Note:</strong> <code class="docutils literal notranslate"><span class="pre">do-while</span></code> loops are tested on the Oracle Java Foundations exam (1Z0-811) but are <strong>not</strong> assessed on the AP CSA exam.</p>
+</div></blockquote>
+<p>A <code class="docutils literal notranslate"><span class="pre">do-while</span></code> loop executes the code block <strong>at least once</strong> before checking the condition — the opposite of a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">//Do While Example</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">posNum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Enter a positive number: &quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">posNum</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">number</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Please enter a positive number.&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">number</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w">  </span><span class="c1">// checks AFTER the block executes</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You entered a positive number: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">number</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>When to use <code class="docutils literal notranslate"><span class="pre">do-while</span></code>:</strong> Use it when you need to guarantee the loop body runs at least once, such as menu-driven programs or input validation.</p>
+<section id="activity-2-7a-1-guessing-game">
+<h3>Activity 2.7a.1 - Guessing Game<a class="headerlink" href="#activity-2-7a-1-guessing-game" title="Link to this heading">¶</a></h3>
+<p>Write a java program that asks the user to pick a number between 1 - 100. Use a <code class="docutils literal notranslate"><span class="pre">do-while</span></code> loop to compare a randomly generated number with the user’s guess. Tell the user how close they are if incorrect. End with a congratulatory message when correct. Include the Java Time API and test cases.</p>
+</section>
+<section id="activity-2-7a-2-convert-program">
+<h3>Activity 2.7a.2 - Convert program<a class="headerlink" href="#activity-2-7a-2-convert-program" title="Link to this heading">¶</a></h3>
+</section>
+<section id="activity-2-7a-3-age-name">
+<h3>Activity 2.7a.3 - Age/Name<a class="headerlink" href="#activity-2-7a-3-age-name" title="Link to this heading">¶</a></h3>
+</section>
+<section id="activity-2-7a-4-char-oracle">
+<h3>Activity 2.7a.4 - <code class="docutils literal notranslate"><span class="pre">char</span></code> — Oracle<a class="headerlink" href="#activity-2-7a-4-char-oracle" title="Link to this heading">¶</a></h3>
+</section>
+<section id="break-and-continue-keywords-oracle-foundations-1z0-811">
+<h3>Break and Continue Keywords — <em>Oracle Foundations 1Z0-811</em><a class="headerlink" href="#break-and-continue-keywords-oracle-foundations-1z0-811" title="Link to this heading">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">break</span></code> immediately exits a loop. <code class="docutils literal notranslate"><span class="pre">continue</span></code> skips the rest of the current iteration and moves to the next.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// break example: stop at first even number</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;First even: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// continue example: skip odd numbers</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">continue</span><span class="p">;</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w">  </span><span class="c1">// prints 2 4 6 8 10</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="activity-2-7a-5-break-continue">
+<h3>Activity 2.7a.5 - Break &amp; Continue<a class="headerlink" href="#activity-2-7a-5-break-continue" title="Link to this heading">¶</a></h3>
+</section>
+</section>
+<hr class="docutils" />
+<section id="for-loops">
+<h2>2.8 for Loops<a class="headerlink" href="#for-loops" title="Link to this heading">¶</a></h2>
+<p><strong>Goals</strong></p>
+<ul class="simple">
+<li><p>Write <code class="docutils literal notranslate"><span class="pre">for</span></code> loops for counter-controlled repetition.</p></li>
+</ul>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Standard for loop</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w">   </span><span class="c1">// 0, 1, 2, 3, 4</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<section id="important-off-by-one-error">
+<h3><mark>IMPORTANT: off-by-one error</mark><a class="headerlink" href="#important-off-by-one-error" title="Link to this heading">¶</a></h3>
+<p>The most common loop mistake is iterating one too many or too few times:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// WRONG: runs 6 times (0-5) when you want 5 iterations (0-4)</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
+
+<span class="c1">// CORRECT: runs 5 times (0-4)</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="activity-2-8-1">
+<h3>Activity 2.8.1<a class="headerlink" href="#activity-2-8-1" title="Link to this heading">¶</a></h3>
+</section>
+<section id="activity-2-8-2-factorial-x">
+<h3>Activity 2.8.2 - Factorial X<a class="headerlink" href="#activity-2-8-2-factorial-x" title="Link to this heading">¶</a></h3>
+</section>
+<section id="activity-2-8-3">
+<h3>Activity 2.8.3<a class="headerlink" href="#activity-2-8-3" title="Link to this heading">¶</a></h3>
+</section>
+</section>
+<hr class="docutils" />
+<section id="implementing-selection-and-iteration-algorithms">
+<h2>2.9 Implementing Selection and Iteration Algorithms<a class="headerlink" href="#implementing-selection-and-iteration-algorithms" title="Link to this heading">¶</a></h2>
+<p><strong>Goals</strong></p>
+<ul class="simple">
+<li><p>Combine <code class="docutils literal notranslate"><span class="pre">if/else</span></code> and loops to implement common algorithms.</p></li>
+</ul>
+<section id="project-mad-libs">
+<h3>Project Mad Libs<a class="headerlink" href="#project-mad-libs" title="Link to this heading">¶</a></h3>
+<p>Apply all you’ve learned about conditionals and loops to create an interactive Mad Libs program.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="implementing-string-algorithms">
+<h2>2.10 Implementing String Algorithms<a class="headerlink" href="#implementing-string-algorithms" title="Link to this heading">¶</a></h2>
+<p><strong>Goals</strong></p>
+<ul class="simple">
+<li><p>Use String methods combined with loops to process text.</p></li>
+</ul>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Count vowels in a string</span>
+<span class="n">String</span><span class="w"> </span><span class="n">word</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;programming&quot;</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">vowelCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">word</span><span class="p">.</span><span class="na">length</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">word</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;aeiouAEIOU&quot;</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">vowelCount</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Vowels: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">vowelCount</span><span class="p">);</span>
+</pre></div>
+</div>
+<section id="activity-2-10-1-everyother-vowels-dbpq">
+<h3>Activity 2.10.1 - EveryOther, vowels, dbpq<a class="headerlink" href="#activity-2-10-1-everyother-vowels-dbpq" title="Link to this heading">¶</a></h3>
+</section>
+<section id="activity-2-10-2-wordcount-vowelcount-hexadecimal">
+<h3>Activity 2.10.2 - wordCount/vowelCount/Hexadecimal<a class="headerlink" href="#activity-2-10-2-wordcount-vowelcount-hexadecimal" title="Link to this heading">¶</a></h3>
+</section>
+</section>
+<hr class="docutils" />
+<section id="nested-iteration">
+<h2>2.11 Nested Iteration<a class="headerlink" href="#nested-iteration" title="Link to this heading">¶</a></h2>
+<p><strong>Goals</strong></p>
+<ul class="simple">
+<li><p>Write nested loops (a loop inside another loop).</p></li>
+<li><p>Determine how many times nested loops execute.</p></li>
+</ul>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Nested loop: print multiplication table</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;%4d&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">j</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<section id="activity-2-11-1-java-patterns">
+<h3>Activity 2.11.1 - Java Patterns<a class="headerlink" href="#activity-2-11-1-java-patterns" title="Link to this heading">¶</a></h3>
+</section>
+</section>
+<hr class="docutils" />
+<section id="informal-run-time-analysis">
+<h2>2.12 Informal Run-Time Analysis<a class="headerlink" href="#informal-run-time-analysis" title="Link to this heading">¶</a></h2>
+<p><strong>Goal</strong></p>
+<ul class="simple">
+<li><p>Determine the number of times a code segment will execute.</p></li>
+</ul>
+<p><strong>What is Informal Code Analysis?</strong></p>
+<p>Informal code analysis involves reviewing and reasoning about code without executing it — also known as <strong>code tracing</strong>. Successful code tracing requires you to pay attention to the logic, notating how many times code executes, all variable values, and what output is produced.</p>
+<p><strong>Key Concepts:</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Tracing Code</strong>: Follow the flow of logic and variable values.</p></li>
+<li><p><strong>Identifying Errors</strong>: Spot compile-time errors (syntax) and runtime errors (<code class="docutils literal notranslate"><span class="pre">NullPointerException</span></code>, array bounds violations).</p></li>
+<li><p><strong>Understanding Behavior</strong>: Predict what a program will output for given inputs.</p></li>
+<li><p><strong>Checking for Logic Errors</strong>: Find faults in logic that produce incorrect results.</p></li>
+</ol>
+<p><strong>Hand-Tracing Tools:</strong></p>
+<p><a class="reference external" href="https://pythontutor.com/render.html#mode=display">https://pythontutor.com/render.html#mode=display</a></p>
+<p><a class="reference external" href="https://cscircles.cemc.uwaterloo.ca/java_visualize/">https://cscircles.cemc.uwaterloo.ca/java_visualize/</a></p>
+<p><strong>Summary of Informal Analysis Process:</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Understand the Problem</strong>: Read the prompt carefully.</p></li>
+<li><p><strong>Simulate Execution</strong>: Walk through the code logically.</p></li>
+<li><p><strong>Check for Errors</strong>: Syntax, runtime, logic.</p></li>
+<li><p><strong>Test Edge Cases</strong>: null, empty arrays, extreme values.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="project-2-choose-your-own-adventure">
+<h2>Project 2 — Choose Your Own Adventure<a class="headerlink" href="#project-2-choose-your-own-adventure" title="Link to this heading">¶</a></h2>
+<p><strong>Goals</strong></p>
+<ul class="simple">
+<li><p>Apply all you’ve learned about conditionals to create a “Choose Your Own Adventure” game.</p></li>
+<li><p>Apply the development process to create a project.</p></li>
+<li><p>Each student will create their own project</p></li>
+</ul>
+<p><strong>Requirements:</strong></p>
+<ul class="simple">
+<li><p>At least three Boolean expressions that change the path in the program</p></li>
+<li><p>At least <strong>three</strong> nested <em><strong>if/else-if/else</strong></em> clauses</p></li>
+<li><p>Print statements depending on current and previous choices</p></li>
+</ul>
+<p><strong>You Must Include:</strong></p>
+<ul class="simple">
+<li><p>Digital flowchart (appropriate shapes and lines)</p></li>
+<li><p>Digital timeline chart</p></li>
+<li><p>Main Block Method comment header</p></li>
+</ul>
+<p><strong>Deliverables:</strong> Flowchart, timeline, quality screenshots of output, and completed <code class="docutils literal notranslate"><span class="pre">.java</span></code> file submitted as one PDF.</p>
+</section>
+<hr class="docutils" />
+<section id="java-time-api-oracle-foundations-1z0-811">
+<h2>Java Time API — <em>Oracle Foundations 1Z0-811</em><a class="headerlink" href="#java-time-api-oracle-foundations-1z0-811" title="Link to this heading">¶</a></h2>
+<blockquote>
+<div><p><strong>Oracle Exam Note:</strong> The <code class="docutils literal notranslate"><span class="pre">java.time</span></code> package (Calendar data) is tested on the Oracle Java Foundations exam (1Z0-811).</p>
+</div></blockquote>
+<p>Java 8 introduced the <strong><code class="docutils literal notranslate"><span class="pre">java.time</span></code></strong> package to fix issues with the older <code class="docutils literal notranslate"><span class="pre">Date</span></code> and <code class="docutils literal notranslate"><span class="pre">Calendar</span></code> classes.</p>
 <div class="table-wrapper colwidths-auto docutils container">
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>Exception</p></th>
-<th class="head"><p>Cause</p></th>
+<tr class="row-odd"><th class="head"><p>Concept</p></th>
+<th class="head"><p>Class</p></th>
+<th class="head"><p>Example</p></th>
+<th class="head"><p>Description</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ArithmeticException</span></code></p></td>
-<td><p>Dividing an integer by zero</p></td>
+<tr class="row-even"><td><p>Representing a date</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">LocalDate</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">LocalDate.of(2024,</span> <span class="pre">8,</span> <span class="pre">26)</span></code></p></td>
+<td><p>Date (no time zone)</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">NullPointerException</span></code></p></td>
-<td><p>Calling a method on a <code class="docutils literal notranslate"><span class="pre">null</span></code> reference</p></td>
+<tr class="row-odd"><td><p>Representing a time</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">LocalTime</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">LocalTime.now()</span></code></p></td>
+<td><p>Time (no date)</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ArrayIndexOutOfBoundsException</span></code></p></td>
-<td><p>Accessing an invalid array index</p></td>
+<tr class="row-even"><td><p>Representing both</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">LocalDateTime</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">LocalDateTime.now()</span></code></p></td>
+<td><p>Date and time combined</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">NumberFormatException</span></code></p></td>
-<td><p>Parsing a non-numeric string as a number</p></td>
+<tr class="row-odd"><td><p>Formatting</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">DateTimeFormatter</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">DateTimeFormatter.ofPattern(&quot;MM-dd-yyyy&quot;)</span></code></p></td>
+<td><p>Format into readable string</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">IllegalArgumentException</span></code></p></td>
-<td><p>Illegal argument passed to a constructor or method</p></td>
+<tr class="row-even"><td><p>Date differences</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Period</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Period.between(d1,</span> <span class="pre">d2)</span></code></p></td>
+<td><p>Years, months, days between dates</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<p><strong>try-catch-finally:</strong></p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Code that might throw an exception</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ArithmeticException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Handle the specific exception</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Error: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
-<span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Always executes, whether or not an exception occurred</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;This always runs.&quot;</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p><strong>Multiple catch blocks:</strong></p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="na">length</span><span class="p">());</span>
-<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">NullPointerException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Null pointer: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
-<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;General error: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p><strong>Throwing exceptions:</strong></p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setAge</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">age</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">150</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&quot;Invalid age: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">age</span><span class="p">);</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.time.LocalDate</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.time.LocalDateTime</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.time.format.DateTimeFormatter</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">DateExample</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">LocalDate</span><span class="w"> </span><span class="n">today</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LocalDate</span><span class="p">.</span><span class="na">now</span><span class="p">();</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Today&#39;s date: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">today</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">LocalDate</span><span class="w"> </span><span class="n">firstDay</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LocalDate</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="mi">2024</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">26</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;First day of school: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">firstDay</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Format a date</span>
+<span class="w">        </span><span class="n">DateTimeFormatter</span><span class="w"> </span><span class="n">fmt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DateTimeFormatter</span><span class="p">.</span><span class="na">ofPattern</span><span class="p">(</span><span class="s">&quot;MMMM d, yyyy&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">today</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="n">fmt</span><span class="p">));</span>
+
+<span class="w">        </span><span class="c1">// Measure elapsed time</span>
+<span class="w">        </span><span class="n">LocalDateTime</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LocalDateTime</span><span class="p">.</span><span class="na">now</span><span class="p">();</span>
+<span class="w">        </span><span class="c1">// ... do something ...</span>
+<span class="w">        </span><span class="n">LocalDateTime</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LocalDateTime</span><span class="p">.</span><span class="na">now</span><span class="p">();</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Elapsed: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">start</span><span class="p">.</span><span class="na">until</span><span class="p">(</span><span class="n">end</span><span class="p">,</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">time</span><span class="p">.</span><span class="na">temporal</span><span class="p">.</span><span class="na">ChronoUnit</span><span class="p">.</span><span class="na">MILLIS</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; ms&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<section id="activity-3-e-1-exception-handling-practice">
-<h3>Activity 3.E.1 - Exception Handling Practice<a class="headerlink" href="#activity-3-e-1-exception-handling-practice" title="Link to this heading">¶</a></h3>
-<p>Write a program that prompts the user for an integer. Use a <code class="docutils literal notranslate"><span class="pre">try-catch</span></code> block to handle <code class="docutils literal notranslate"><span class="pre">NumberFormatException</span></code> if the user enters non-numeric input, and <code class="docutils literal notranslate"><span class="pre">ArithmeticException</span></code> if the user enters 0 for a division operation.</p>
+<section id="activity-birthday-countdown">
+<h3>Activity — Birthday Countdown<a class="headerlink" href="#activity-birthday-countdown" title="Link to this heading">¶</a></h3>
 </section>
+<section id="activity-date-formatting-challenge">
+<h3>Activity — Date Formatting Challenge<a class="headerlink" href="#activity-date-formatting-challenge" title="Link to this heading">¶</a></h3>
 </section>
-<hr class="docutils" />
-<section id="lambda-expressions-oracle-foundations-1z0-811">
-<h2>Lambda Expressions — <em>Oracle Foundations 1Z0-811</em><a class="headerlink" href="#lambda-expressions-oracle-foundations-1z0-811" title="Link to this heading">¶</a></h2>
-<blockquote>
-<div><p><strong>Oracle Exam Note:</strong> Lambda expressions are tested on the Oracle Java Foundations exam (1Z0-811) but are <strong>not</strong> on the AP CSA exam.</p>
-</div></blockquote>
-<p>A <strong>lambda expression</strong> is a short block of code that takes in parameters and returns a value. Lambda expressions are similar to anonymous methods (methods without a name).</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Syntax: (parameters) -&gt; expression</span>
-<span class="c1">// OR:     (parameters) -&gt; { statements; }</span>
-
-<span class="c1">// Traditional approach</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Collections</span><span class="p">;</span>
-
-<span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-<span class="n">names</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Charlie&quot;</span><span class="p">);</span>
-<span class="n">names</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Alice&quot;</span><span class="p">);</span>
-<span class="n">names</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Bob&quot;</span><span class="p">);</span>
-
-<span class="c1">// Traditional sort using Comparator</span>
-<span class="n">Collections</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">names</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">util</span><span class="p">.</span><span class="na">Comparator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">compare</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="na">compareTo</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">});</span>
-
-<span class="c1">// Lambda expression (much more concise)</span>
-<span class="n">Collections</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">names</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="na">compareTo</span><span class="p">(</span><span class="n">b</span><span class="p">));</span>
-</pre></div>
-</div>
-<p><strong>Lambda with forEach:</strong></p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Print each name</span>
-<span class="n">names</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">name</span><span class="p">));</span>
-
-<span class="c1">// Or even shorter using method reference</span>
-<span class="n">names</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">);</span>
-</pre></div>
-</div>
-<p><strong>Lambda with filtering (streams):</strong></p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.stream.Collectors</span><span class="p">;</span>
-
-<span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">longNames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">names</span><span class="p">.</span><span class="na">stream</span><span class="p">()</span>
-<span class="w">    </span><span class="p">.</span><span class="na">filter</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">name</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span>
-<span class="w">    </span><span class="p">.</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">toList</span><span class="p">());</span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">longNames</span><span class="p">);</span>
-</pre></div>
-</div>
-<section id="activity-3-l-1-lambda-sorting">
-<h3>Activity 3.L.1 - Lambda Sorting<a class="headerlink" href="#activity-3-l-1-lambda-sorting" title="Link to this heading">¶</a></h3>
-<p>Create an ArrayList of student objects. Use a lambda expression to sort them by GPA in descending order, then print the sorted list.</p>
+<section id="activity-event-timer">
+<h3>Activity — Event Timer<a class="headerlink" href="#activity-event-timer" title="Link to this heading">¶</a></h3>
 </section>
-</section>
-<hr class="docutils" />
-<section id="class-design-project">
-<h2>Class Design Project<a class="headerlink" href="#class-design-project" title="Link to this heading">¶</a></h2>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/*=============================================================================</span>
-<span class="cm"> |   Assignment:  Project 3.7.1 - Clue</span>
-<span class="cm"> |       Author:  [Your First and Last Name (Your E-mail Address)]</span>
-<span class="cm"> |</span>
-<span class="cm"> |  Course Name:  AP Computer Science A</span>
-<span class="cm"> |   Instructor:  John Smith</span>
-<span class="cm"> |     Due Date:  [Due Date and Time]</span>
-<span class="cm"> |</span>
-<span class="cm"> |  Description:  [Describe the program&#39;s goal, IN DETAIL.]</span>
-<span class="cm"> |</span>
-<span class="cm"> |     Language:  [java]</span>
-<span class="cm"> |</span>
-<span class="cm"> | Deficiencies:  [If you know of any problems with the code, provide</span>
-<span class="cm"> |                details here, otherwise clearly state that you know</span>
-<span class="cm"> |                of no unsatisfied requirements and no logic errors.]</span>
-<span class="cm"> *===========================================================================*/</span>
-</pre></div>
-</div>
-<p><strong>Project 3.7.1 - Clue</strong></p>
-<p><a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/10015355/137Clue.zip">137Clue.zip</a></p>
-<p><strong>Directions</strong> Review the current program. Look at “what works” and “what needs work”. Make the necessary changes so it produces the intended outcome.</p>
-<p>This program simulates Clue.</p>
-<p>Here is what works:</p>
-<ul class="simple">
-<li><p>the program randomly generates a final murderer, weapon, and room</p></li>
-<li><p>prints out choices for the user</p></li>
-<li><p>asks user for final guess</p></li>
-</ul>
-<p>Here is what needs to work:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">equals()</span></code> comparison is incorrect</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">check()</span></code> should only get called if our guess isn’t 100% correct</p></li>
-<li><p>The table of Suspect, Weapon and Room should be aligned — use <code class="docutils literal notranslate"><span class="pre">\t</span></code></p></li>
-<li><p>Should print “You have the correct murderer.” if correct.</p></li>
-<li><p>Should print “You have the correct weapon.” if correct.</p></li>
-<li><p>Should print “You have the correct room.” if correct.</p></li>
-</ul>
-<p>Extra:</p>
-<ul class="simple">
-<li><p>Ignore case, use <code class="docutils literal notranslate"><span class="pre">.equalsIgnoreCase()</span></code></p></li>
-<li><p>Allow the user to iterate through the program to pick the correct Suspect, Weapon and Room</p></li>
-</ul>
 </section>
 </section>
 
@@ -904,37 +1029,83 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Unit 3 - Class Creation</a><ul>
-<li><a class="reference internal" href="#abstraction-and-program-design">3.1 Abstraction and Program Design</a></li>
-<li><a class="reference internal" href="#impact-of-program-design">3.2 Impact of Program Design</a></li>
-<li><a class="reference internal" href="#anatomy-of-a-class">3.3 Anatomy of a Class</a></li>
-<li><a class="reference internal" href="#constructors">3.4 Constructors</a><ul>
-<li><a class="reference internal" href="#tostring-method">toString() Method</a></li>
-<li><a class="reference internal" href="#activity-2-1-1">Activity 2.1.1</a></li>
-<li><a class="reference internal" href="#activity-2-1-2-not-another-cake">Activity 2.1.2 Not another Cake</a></li>
-<li><a class="reference internal" href="#activity-2-1-3-dog-pizza-java">Activity 2.1.3 Dog Pizza java</a></li>
-<li><a class="reference internal" href="#activity-2-1-4-bicycle-revisited">Activity 2.1.4 - Bicycle Revisited</a></li>
-<li><a class="reference internal" href="#activity-2-1-5-constructor-practice">Activity 2.1.5 Constructor Practice</a></li>
+<li><a class="reference internal" href="#">Unit 2 - Selection and Iteration</a><ul>
+<li><a class="reference internal" href="#algorithms-with-selection-and-repetition">2.1 Algorithms with Selection and Repetition</a></li>
+<li><a class="reference internal" href="#boolean-expressions">2.2 Boolean Expressions</a><ul>
+<li><a class="reference internal" href="#activity-2-2-1">Activity 2.2.1</a></li>
+<li><a class="reference internal" href="#activity-2-2-2-boolean-expression">Activity 2.2.2 - Boolean Expression</a></li>
+<li><a class="reference internal" href="#activity-2-2-3-comparing-objects-with-equals">Activity 2.2.3 - Comparing Objects with .equals()</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#methods-how-to-write-them">3.5 Methods: How to Write Them</a><ul>
-<li><a class="reference internal" href="#accessor-getter-methods">3.5.1 Accessor (Getter) Methods</a></li>
-<li><a class="reference internal" href="#mutator-setter-methods">3.5.2 Mutator (Setter) Methods</a></li>
+<li><a class="reference internal" href="#if-statements">2.3 if Statements</a><ul>
+<li><a class="reference internal" href="#activity-2-3-1-guesschecker-pt-1">Activity 2.3.1 - guessChecker Pt 1</a></li>
+<li><a class="reference internal" href="#activity-2-3-2-sevens-game">Activity 2.3.2 - Sevens Game</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#methods-passing-and-returning-references-of-an-object">3.6 Methods: Passing and Returning References of an Object</a></li>
-<li><a class="reference internal" href="#class-variables-and-methods">3.7 Class Variables and Methods</a></li>
-<li><a class="reference internal" href="#scope-and-access">3.8 Scope and Access</a></li>
-<li><a class="reference internal" href="#this-keyword">3.9 this Keyword</a></li>
-<li><a class="reference internal" href="#exceptions-oracle-foundations-1z0-811">Exceptions — <em>Oracle Foundations 1Z0-811</em></a><ul>
-<li><a class="reference internal" href="#activity-3-e-1-exception-handling-practice">Activity 3.E.1 - Exception Handling Practice</a></li>
+<li><a class="reference internal" href="#nested-if-statements">2.4 Nested if Statements</a><ul>
+<li><a class="reference internal" href="#activity-2-4-1-guesschecker-pt-2">Activity 2.4.1 - guessChecker Pt 2</a></li>
+<li><a class="reference internal" href="#activity-2-4-2-activity-director">Activity 2.4.2 - Activity Director</a></li>
+<li><a class="reference internal" href="#activity-2-4-3-smallest-divisible-number">Activity 2.4.3 - Smallest Divisible Number</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#lambda-expressions-oracle-foundations-1z0-811">Lambda Expressions — <em>Oracle Foundations 1Z0-811</em></a><ul>
-<li><a class="reference internal" href="#activity-3-l-1-lambda-sorting">Activity 3.L.1 - Lambda Sorting</a></li>
+<li><a class="reference internal" href="#switch-statements-oracle-foundations-1z0-811">2.4.1 Switch Statements — <em>Oracle Foundations 1Z0-811</em></a><ul>
+<li><a class="reference internal" href="#ternary-operator-oracle-foundations-1z0-811">Ternary Operator — <em>Oracle Foundations 1Z0-811</em></a></li>
+<li><a class="reference internal" href="#activity-2-4-1-1-text-based-calculator-with-mode-selection">Activity 2.4.1.1 - Text-Based Calculator with Mode Selection</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#class-design-project">Class Design Project</a></li>
+<li><a class="reference internal" href="#compound-boolean-expressions">2.5 Compound Boolean Expressions</a><ul>
+<li><a class="reference internal" href="#activity-2-5-1">Activity 2.5.1</a></li>
+<li><a class="reference internal" href="#activity-2-5-2">Activity 2.5.2</a></li>
+<li><a class="reference internal" href="#activity-2-5-3-guesschecker-pt-3">Activity 2.5.3 - guessChecker Pt 3</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#comparing-boolean-expressions">2.6 Comparing Boolean Expressions</a><ul>
+<li><a class="reference internal" href="#activity-2-6-1">Activity 2.6.1</a></li>
+<li><a class="reference internal" href="#activity-2-6-2">Activity 2.6.2</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#while-loops">2.7 while Loops</a><ul>
+<li><a class="reference internal" href="#activity-2-7-1">Activity 2.7.1</a></li>
+<li><a class="reference internal" href="#activity-2-7-2">Activity 2.7.2</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#a-do-while-loops-oracle-foundations-1z0-811">2.7a do-while Loops — <em>Oracle Foundations 1Z0-811</em></a><ul>
+<li><a class="reference internal" href="#activity-2-7a-1-guessing-game">Activity 2.7a.1 - Guessing Game</a></li>
+<li><a class="reference internal" href="#activity-2-7a-2-convert-program">Activity 2.7a.2 - Convert program</a></li>
+<li><a class="reference internal" href="#activity-2-7a-3-age-name">Activity 2.7a.3 - Age/Name</a></li>
+<li><a class="reference internal" href="#activity-2-7a-4-char-oracle">Activity 2.7a.4 - <code class="docutils literal notranslate"><span class="pre">char</span></code> — Oracle</a></li>
+<li><a class="reference internal" href="#break-and-continue-keywords-oracle-foundations-1z0-811">Break and Continue Keywords — <em>Oracle Foundations 1Z0-811</em></a></li>
+<li><a class="reference internal" href="#activity-2-7a-5-break-continue">Activity 2.7a.5 - Break &amp; Continue</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#for-loops">2.8 for Loops</a><ul>
+<li><a class="reference internal" href="#important-off-by-one-error"><mark>IMPORTANT: off-by-one error</mark></a></li>
+<li><a class="reference internal" href="#activity-2-8-1">Activity 2.8.1</a></li>
+<li><a class="reference internal" href="#activity-2-8-2-factorial-x">Activity 2.8.2 - Factorial X</a></li>
+<li><a class="reference internal" href="#activity-2-8-3">Activity 2.8.3</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#implementing-selection-and-iteration-algorithms">2.9 Implementing Selection and Iteration Algorithms</a><ul>
+<li><a class="reference internal" href="#project-mad-libs">Project Mad Libs</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#implementing-string-algorithms">2.10 Implementing String Algorithms</a><ul>
+<li><a class="reference internal" href="#activity-2-10-1-everyother-vowels-dbpq">Activity 2.10.1 - EveryOther, vowels, dbpq</a></li>
+<li><a class="reference internal" href="#activity-2-10-2-wordcount-vowelcount-hexadecimal">Activity 2.10.2 - wordCount/vowelCount/Hexadecimal</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#nested-iteration">2.11 Nested Iteration</a><ul>
+<li><a class="reference internal" href="#activity-2-11-1-java-patterns">Activity 2.11.1 - Java Patterns</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#informal-run-time-analysis">2.12 Informal Run-Time Analysis</a></li>
+<li><a class="reference internal" href="#project-2-choose-your-own-adventure">Project 2 — Choose Your Own Adventure</a></li>
+<li><a class="reference internal" href="#java-time-api-oracle-foundations-1z0-811">Java Time API — <em>Oracle Foundations 1Z0-811</em></a><ul>
+<li><a class="reference internal" href="#activity-birthday-countdown">Activity — Birthday Countdown</a></li>
+<li><a class="reference internal" href="#activity-date-formatting-challenge">Activity — Date Formatting Challenge</a></li>
+<li><a class="reference internal" href="#activity-event-timer">Activity — Event Timer</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
