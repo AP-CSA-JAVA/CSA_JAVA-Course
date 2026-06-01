@@ -1,507 +1,2454 @@
-# Unit 2 - Selection and Iteration
-*AP Exam Weighting: 25–35% | Suggested Pacing: ~29–31 Class Periods*
+# Unit 2 - Using Objects
+
+
+## 2.2 Creating and Storing Objects
+
+- [ ] Explain the relationship between a class and an object
+- [ ] Identify different constructor signatures and create objects using them
+- [ ] Use variables to represent object references
+	- [ ] I will be able to write more complex programs using classes and objects
+
+The next two concepts will be used in most of your programs moving forward.  Read through **constructor** and **toString()** below.
+
+## 5.2 - Constructors 
+
+
+- [ ] Understand the concept of class constructors.
+- [ ] Write your own class constructors for a PhraseSolverGame program.
+- [ ] Examine call by value and reference with regard to class constructors.
+	- [ ] I will be able to write a program that utilizes constructors
+
+A **constructor** in <mark>Java is a special method that is used to initialize objects</mark>. The constructor is called when an object of a class is created. It can be used to set the initial values for object attributes/variable names<sup>1</sup>.  It is possible to write two or more constructors within a program.  The difference between the constructors are the *parameters* that are defined within the constructor itself.  This is known as constructor **overloading**. 
+
+Java is a *pass-by-value* language.  If we pass a primitive value, we are passing a copy of that value. So, if we change the value inside a constructor, the value outside the constructor doesn't change.  However, if we are passing a reference type, we are passing a reference to the data location.  If we modify the parameter values inside a constructor, then the object changes outside the constructor too!
+
+The Box class is located in the file Box.java where you can find the constructor(s).  The signature of the constructor is the class name along with the parameter list, if any.  If you recall from your prior CS courses the word 'abstraction'.  We are taking the complexity out of the action for the user.  The user does not need to know how constructors work, they just need to know that it does what it is supposed to do within the program.
+
+If you use the constructor signature incorrectly, you may get an **IllegalArgumentException**.  Take for example you create a constructor called *Student*.  The *Student* class has parameters *int age, String name, and double gpa*.  If you alter the order of the variables within the parameter, it will return an error.
+
+The **default constructor** is the constructor with no parameters in the parameter list. So, if an overloaded constructor is missing a parameter, then the predetermined value will default to the default constructor.
+
+**Null Objects**
+Null is a reserved keyword in Java for literal values. It is a value that shows that the object is referring to nothing.  You cannot call an object that has been declared as *null* since there is not characteristics of that object.  This will create a **NullPointerException** error.  Java, variables of reference types (such as classes and arrays) hold a reference to an object in memory, rather than the actual object itself. This reference is a memory address that points to the location in memory where the object is stored.  If there is no object associated with a reference type, the value of said type is null, which indicates that the variable does not currently reference any object.
+
+Example:
+```java
+    /* missing code */
+    
+    Car emptyCar = null;
+    
+    Car myCar = new Car(5.6);
+    Car yourCar = new Car();
+    Car ourCar = new Car(2);
+    
+    System.out.println("myCar=" + myCar);
+    System.out.println("yourCar=" + yourCar);
+    System.out.println("ourCar=" + ourCar);
+    System.out.println("emptyCar=" +emptyCar);
+```
+Sample Output:
+```java
+    myCar=Car@6d06d69c
+    yourCar=Car@7852e922
+    ourCar=Car@4e25154f
+    emptyCar=null
+``` 
+
+
+<sup>1 *Object names follow the same rules as variable names (because they can also be used as variables), and also follow camel-case naming conventions, where the first letter is lowercase while the first letter of any other words are uppercase.* </sup>
+
+
+
+![Constructors_image](https://user-images.githubusercontent.com/12989939/195926575-c2a49adc-afdb-4ef0-91e1-c5d93fb54539.PNG)
+
+Take a look at the example below:
+
+```java
+// Example of Overloading Constructors 
+class Box
+{
+ double width, height, depth;
+
+ // constructor with no parameters specified
+ Box() {
+  width = 0;
+  height = 0;
+  depth = 0;
+ }
+ 
+ // constructor with three parameters specified
+ Box(double w, double h, double d) {
+  width = w;
+  height = h;
+  depth = d;
+ }
+
+ // constructor for a cube using a single parameter
+ Box(double len) {
+  width = height = depth = len;
+ }
+
+ // compute and return volume
+ double volume() {
+  return width * height * depth;
+ }
+}
+
+// Main Class 
+public class Main
+{
+ public static void main(String[] args)
+ {
+  // create boxes using various constructors
+  Box mybox1 = new Box(10, 20, 15);
+  Box mybox2 = new Box();
+  Box mycube = new Box(7);
+
+  double vol;
+
+  // get volume of first box
+  vol = mybox1.volume();
+  System.out.println(" Volume of mybox1 is " + vol);
+
+  // get volume of second box
+  vol = mybox2.volume();
+  System.out.println(" Volume of mybox2 is " + vol);
+
+  // get volume of cube
+  vol = mycube.volume();
+  System.out.println(" Volume of mycube is " + vol);
+ }
+}
+
+```
+It is a *best practice* to keep your class definitions in a separate file from the file containing the main method that executes a program. This way, your class definitions can be used in another program without connecting to unnecessary code.
+
+***Object Reference*** variables holds a memory address that refers to a specific object.
+
+Take a look at the program below:
+
+**Program 1**
+```java
+import java.io.*;
+
+class Demo {
+ int x = 10;
+ int display()
+ {
+  System.out.println("x = " + x);
+  return 0;
+ }
+}
+
+class Main {
+ public static void main(String[] args)
+ {
+  Demo D1 = new Demo(); // point 1
+
+  System.out.println(D1); // point 2
+
+  System.out.println(D1.display()); // point 3
+ }
+}
+```
+***Output***
+```java
+Demo@214c265e
+x = 10
+0
+```
+
+---------------------------------------------------------------
+Take a look a Program 2 and notice the changes in the Main class:
+
+**Program 2**
+```java
+import java.io.*;
+class Demo {
+ int x = 10;
+
+ int display()
+ {
+  System.out.println("x = " + x);
+  return 0;
+ }
+}
+
+class Main {
+ public static void main(String[] args)
+ {
+  // create instance
+  Demo D1 = new Demo();
+
+  // accessing instance(object) variable
+  System.out.println(D1.x);
+
+  // point 3
+  // accessing instance(object) method
+  D1.display();
+ }
+}
+```
+***Output***
+```java
+10
+x = 10
+```
+
+
+---------------------------------------------------------------
+
+A **toString()** is a prebuilt method in Java that returns the value in a string format. Therefore, any object that this method is applied on, will return as a string object.
+
+The first example below is when it is called as a method of an object instance.
+```java
+public class Main {
+    public static void main( String args[] ) {
+
+        //Creating an integer of value 1
+        Integer x = 1;
+        // Calling the toString method as a function of the Integer variable
+        System.out.println(x.toString());
+	System.out.println(Integer.toString(7));
+    }
+}
+```
+**Sample Output**
+```java
+1
+7
+```
+
+The second example is when you call the method of a class by passing the value as an argument.
+```java
+class Child{
+
+  String name;
+  int age; //Integer is a wrapper class for the int data type
+
+  Child(){
+    this.name = "Miguel";   
+    this.age = 12;          
+  }
+	
+  Child(String n, int a){
+    this.name=n;
+    this.age=a; //'this' is an instance of the variable
+  }
+//Over-riding the toString function as a class function
+  public String toString(){
+    return "The name of the child is " + this.name + ". The age of the child is " + this.age + ".";
+  }
+}
+
+class Main {
+    public static void main( String args[] ) {
+      Child a = new Child(); //constructor - no defined parameter
+      Child p = new Child("Francis",10); // constructor - overloading
+      
+      //Calling the class version of toString()
+        System.out.println(a.toString());
+        System.out.println(p.toString()); 
+    }
+}
+```
+**Sample Output**
+```java
+The name of the child is Miguel. The age of the child is 12.
+The name of the child is Francis. The age of the child is 10.
+```
+
+### Activity 2.1.1
+
+Write a class related to a professional sport (i.e. Football, soccer, basketball, etc)
+
+- [ ] Create class related to a professional sport of our choice
+- [ ] Create attributes/instance variables for the class
+- [ ] Create a constructor for your class
+- [ ] Create an instance of the class
+- [ ] Create a toString() method to printout the object
+
+**Example**
+```java
+Name: Marcelo Vieira da Silva Jr.
+Team: Real Madrid 
+Position: left-back
+Number: 12
+Goals: 0
+Starting: True
+```
+
+### Activity 2.1.2 Not another Cake
+
+**Directions:*  Look at the Cake.java program.  Create a 1 tier care, 2 tier cake, and a 3 tier cake.  Print out the reference location of the constructor.  I provided the solution for you if you get stuck.
+
+**Submission:**
+
+- [ ] Create a unique program of your choice.
+- [ ] Create three constructors
+   - [ ] default constructor
+   - [ ] constructor with 1 parameter
+   - [ ] constructor with 2 parameters
+   - [ ] constructor with 3 parameters
+- [ ] Use appropriate comments throughout your program.
+- [ ] Use toString() method to display all objects.
+- [ ] Submit all of your your program files as a .java file. (Main.java, x.java, etc.)
+
+
+```java
+
+public class Cake
+{    
+  int tiers;
+
+  public Cake()
+  {
+    tiers = 1;
+    
+    System.out.println("   ,,,\n   |||\n(~~~~~~~)\n(       )\n(~~~~~~~)\n");
+  }
+  
+  public Cake(int t) 
+  {
+    tiers = t;
+  
+    System.out.println("      ,,,\n      |||\n  (**********)\n  (*        *)\n  (*        *)");
+    System.out.println("(**************)\n(*            *)\n(*            *)\n(**************)\n");        
+  }
+  
+   public Cake(double t)
+   { 
+    tiers = (int) t;
+
+    System.out.println("        ,,,\n        |||\n    (**********)\n    (*        *)\n    (*        *)");
+    System.out.println("  (**************)\n  (*            *)\n  (*            *)");
+    System.out.println("(******************)\n(*                *)\n(*                *)\n(******************)\n");
+   }
+}
+public class Main
+{
+  public static void main(String[] args)
+  {
+    // create a double variable named 't' and assign a value of 3.
+    
+    // create a variable that can store the object reference myCake created with new Cake(t)
+
+    
+    // Create two more object references using yourCake and ourCake constructors
+
+
+    // Print out all three Cake object reference variables
+
+
+    // Initialize the emptyCake variable with a value of null
+
+
+  }
+
+}
+
+```
+
+
+**Sample Output**
+
+```java
+        ,,,
+        |||
+    (**********)
+    (*        *)
+    (*        *)
+  (**************)
+  (*            *)
+  (*            *)
+(******************)
+(*                *)
+(*                *)
+(******************)
+
+
+   ,,,
+   |||
+(~~~~~~~)
+(       )
+(~~~~~~~)
+
+      ,,,
+      |||
+  (**********)
+  (*        *)
+  (*        *)
+(**************)
+(*            *)
+(*            *)
+(**************)
+
+myCake=Cake@15db9742
+yourCake=Cake@6d06d69c
+ourCake=Cake@7852e922
+emptyCake=null
+```
+
+
+<details><summary> Sample Solution </summary>
+
+```java
+public class Main
+{
+  public static void main(String[] args)
+  {
+    double t = 3.0;
+    
+    // Create a variable that can store the object reference created with new Cake(t)
+   Cake myCake = new Cake(t);
+        
+    // Creation of two Cake constructors
+    Cake yourCake = new Cake();
+    Cake ourCake = new Cake(2);
+
+    // Three Cake objects with their respective reference variables
+    System.out.println("myCake=" + myCake);
+    System.out.println("yourCake=" + yourCake);
+    System.out.println("ourCake=" + ourCake);
+
+    // EmptyCake variable equal to null
+    Cake emptyCake = null;
+    System.out.println("emptyCake=" +emptyCake);
+
+  }
+
+}
+```
+</details>
+
+
+
+### Activity 2.1.3 Dog Pizza java
+
+- [ ] Complete Dog.java by: filling in the attributes & creating the constructor found in **Canvas**
+- [ ] Instantiate 3 pizzas and print them out by:
+	- [ ] creating a Pizza class
+ 	- [ ] filling out the attributes
+  	- [ ] creating the constructor
+  	- [ ] create the 3 pizzas and print them out
+  	- [ ] use the `toString()` method to print out the pizza size, type of pizza, and toppings
+  		- 12 inch Veggie pizza with Tomatoes, onions, olives
+  	 	- 15 inch Cheese pizza with Cheese
+  	  	- 20 inch Meat pizza with Pepperoni, sausage, bacon
+
+**Main Class**
+```java
+class Main 
+{
+	public static void main(String[] args) 
+	{
+    	Dog golden = new Dog("Golden Retriever", "Sammy");
+        System.out.println(golden);
+    	
+    	//instantiate 3 pizzas below and print them out below
+
+
+	}
+}
+```
+
+**Dog.java** file
+```java
+public class Dog 
+{
+    //attributes
+
+    //constructor
+
+    // This method should work after you add the
+    // new instance variable and update the constructor.
+    // DO NOT modify this method.
+    public String toString()
+    {
+        return name + " is a " + breed;
+    }
+}
+```
+**Pizza.java**
+```java
+
+//Your code here
+
+```
 
 ---
 
-## 2.1 Algorithms with Selection and Repetition
-
-**Goals**
-- Understand how algorithms can use selection (if/else) and repetition (loops) to solve problems.
-- Trace through algorithms to predict their output.
-
-An **algorithm** is a step-by-step set of instructions to solve a problem. In Java, algorithms use:
-- **Selection**: Choosing different paths based on conditions (`if`, `if/else`, `switch`)
-- **Repetition**: Repeating steps until a condition is met (`while`, `for`, `do-while`)
-
 ---
 
-## 2.2 Boolean Expressions
 
-**Goals**
--   Understand Boolean expressions.
--   Use relational operators to compute the value of a Boolean expression.
-	-  I will be able to write a program that utilizes a Boolean expression
+<details><summary> Click Here to view the code</summary>
 
-George Boole formulated the basic rules of Boolean algebra back in 1847. Below are the relational operators that you will need to know for the AP exam.
+When you run the program, this is the intended output:
 
-| Relational Operator | Description | Boolean Value |
-| :-----------------: | ----------- | ------------- |
-| a < b | a less than b | Equates to 'true' if a is less than b,'false' otherwise |
-| a <= b | a less than or equal to b | Equates to 'true' if a is less than or equal to b, 'false' otherwise. |
-| a > b | a greater than b | Equates to 'true' if a is greater than b, 'false' otherwise. |
-| a >= b | a greater than or equal to b | Equates to 'true' if a is greater than or equal to b, 'false' otherwise. |
-| a == b | a equals b\* | Equates to 'true' if a has the same value as b. |
-| a != b | a does not equal b | Equates to 'true' if a does not have the same value as b, 'false' otherwise. |
+```java
+Fruit: Apple, Color: Red, Weight: 0.2 lbs.
+Fruit: Banana, Color: Yellow, Weight: 0.0 lbs.
+Vegetable: Carrot, Color: Orange, Weight: 0.0 lbs.
+Vegetable: Potato, Color: Brown, Weight: 0.5 lbs.
+```
 
-**Logical Operators**
+```java
+// -------- File 1 --------
 
-Logical operators are used to combine Boolean expressions:
+public class Main {
+    public static void main(String[] args) {
 
-    AND Operator ( && ) – if( a && b ) [if true execute else don't]
-    OR Operator ( || ) – if( a || b) [if one of them is true execute else don't]
-    NOT Operator ( ! ) – !(a<b) [returns false if a is smaller than b]
+        Fruit apple = new Fruit("Apple", "Red", 0.2);
+        Fruit banana = new Fruit("Banana", "Yellow");
+        
+        Vegetable carrot = new Vegetable("Carrot", "Orange");
+        Vegetable potato = new Vegetable("Potato", "Brown", 0.5);
 
-**Short-Circuit Evaluation:** When using `&&`, if the first expression is `false`, the second is never evaluated. When using `||`, if the first expression is `true`, the second is never evaluated.
 
-| A | !A |
-| ------ | ------ |
-| false | true |
-| true | false |
+        System.out.println(apple.toString());
+        System.out.println(banana.toString());
+        System.out.println(carrot.toString());
+        System.out.println(potato.toString());
+    }
 
-### Activity 2.2.1
-Fill in the truth table for `a && (b || c)`:
+// -------- File 2 --------
 
-| a | b | c | b \|\| c | a && (b \|\| c) |
-| -----  |  ----- | -----  | ------ | ------ |
-| T | T | T |  |  |
-| T | T | F |  |  |
-| T | F | T |  |  |
-| T | F | F |  |  |
-| F | T | T |  |  |
-| F | T | F |  |  |
-| F | F | T |  |  |
-| F | F | F |  |  |
+class Fruit {
+    String name;
+    String color;
+    double weight;
 
-<details><summary>Solution</summary>
+    // Constructor with three parameters: name, color, and weight
+    public Fruit(String name, String color, double weight) {
+        this.name = name;
+        this.color = color;
+        this.weight = weight;
+    }
 
-| a | b | c | b \|\| c | a && (b \|\| c) |
-| -----  |  ----- | -----  | ------ | ------ |
-| T | T | T | T | T |
-| T | T | F | T | T |
-| T | F | T | T | T |
-| T | F | F | F | F |
-| F | T | T | T | F |
-| F | T | F | T | F |
-| F | F | T | T | F |
-| F | F | F | F | F |
+    // Constructor with two parameters: name and color
+    public Fruit(String name, String color) {
+        this.name = name;
+        this.color = color;
+        // Missing initialization of weight, should be 0 by default or given a value.
+    }
+
+
+    public String toString() {
+        return "Fruit: " + name + ", Color: " + color + ", Weight: " + weight + "lbs.";
+    }
+}
+
+// -------- File 3 --------
+
+class Vegetable {
+    String name;
+    String color;
+    double weight;
+
+    public Vegetable(String name, String color) {
+        this.name = name;
+        this.color = color;
+        // Missing initialization for weight
+    }
+
+
+    public Vegetable(String name, String color, double weight) {
+        this.name = name;
+        this.color = color;
+        this.weight = weight;
+    }
+
+
+    public String toString() {
+        return "Vegetable: " + name + ", Color: " + color + ", Weight: " + weight + "lbs.";
+    }
+}
+
+```
 
 </details>
 
-### Activity 2.2.2 - Boolean Expression
+---
 
-### Activity 2.2.3 - Comparing Objects with .equals()
+---
 
-**IMPORTANT: Object Equality**
+### Activity 2.1.4 - Bicycle Revisited
 
-`==` compares object references (memory locations). To compare the values of two objects, use `.equals()`:
+**Instructions:**
 
+1. Create a Bike class to have the following attributes:
+   - `kind`  (Cruiser, road bike, tricycle, hybrid)
+   - `gear`  (single, three-speed, 10 speed, 30 speed)
+   - `size`  (20, 22, 26, 28)
+   - `cost`  (175.99, 300.00, 1049.00, 1500.00)
+2. Create a no argument constructor. The values are Cruiser, 26, and 175.99
+3. Create a constructor that only takes type and size as parameters
+4. Create a constructor that takes all the parameters
+5. Create two more objects that will match the sample output.
+
+**Sample Output:**
 ```java
-String s1 = new String("HELLO");
-String s2 = new String("HELLO");
 
-System.out.println(s1 == s2);      // false – different memory locations
-System.out.println(s1.equals(s2)); // true  – same content
+My bicycle has 1 gear and is painted white!
+Pedaling to accelerate!
+My cruiser has 10 gears costs $150.
+Pedaling to accelerate.
+My tricycle has 3 gears costs $300.
+Pedaling to accelerate.
+```
+ 
+---
+
+
+### Activity 2.1.5 Constructor Practice
+
+
+1. **Create a class called `Student`.**
+
+   * The class should have the following **instance variables**:
+
+     * `name` (String)
+     * `age` (int)
+     * `gpa` (double)
+
+2. **Write at least four constructors:**
+
+   * A **no-argument constructor** that sets all values to defaults (e.g., `"Unknown"`, `0`, `0.0`).
+   * A constructor that takes only a **name**.
+   * A constructor that takes a **name and age**.
+   * A constructor that takes all three values (**name, age, gpa**).
+
+3. **Write a `toString` method** that returns the student information as a single string. Example:
+
+   ```java
+   Student{name='Alice', age=16, gpa=3.5}
+   ```
+
+4. **Create a `Main` class** with a `main` method. In `main`:
+
+   * Create at least **one `Student` object using each constructor**.
+   * Print each object.
+
+
+**Example Output**:
+
+```
+Student{name='Unknown', age=0, gpa=0.0}
+Student{name='Alice', age=0, gpa=0.0}
+Student{name='Bob', age=17, gpa=0.0}
+Student{name='Charlie', age=18, gpa=3.7}
 ```
 
 ---
 
-## 2.3 if Statements
 
-**Goals**
-- Write `if` statements to control the flow of a program.
-- I will be able to write a program that uses if/else statements.
+## 2.3 Calling a Void Method
+
+- [ ] Call non-static void methods without parameters
+	- [ ] I will be able to write and identify a non-static void method program
+
+Class methods represent an object's behavior, defining what an object can do within a program.
+
+Recall the Child program created above.  We will use the one constructor that has no defined parameters to create behaviors of our object.
 
 ```java
-if (condition) {
-    // code executed when condition is true
+class Child{
+
+  String name;
+  Integer age; //Integer is a wrapper class for the int data type
+
+  Child(){
+    System.out.println("I am a child."); // constructor without parameters
+    }
+  Child(String n, Integer a){ //constructor with parameters
+    this.name=n;
+    this.age=a; //'this' is a Java keyword and refers to a specific instance of the variable
+  }
+   public void running(){
+     System.out.println("I am running!");
+  }
+     public void sleeping(){
+     System.out.println("Zzzzzzz!");
+  }
+     public void singing(){
+     System.out.println("Lah-la-la-LAH-la-la!");
+  }
+  
+  
+//Over-riding the toString function as a class function
+  public String toString(){
+    return "The name of the child is " + this.name + ". The age of the child is " + this.age + ".";
+  }
 }
+
+class Main {
+    public static void main( String args[] ) {
+      Child a = new Child(); //constructor - no defined parameter
+      Child p = new Child("Francis",10); // overloaded constructor - adding one or more parameter to the constructor 
+      
+      //Calling the class version of toString()
+        System.out.println(p.toString());
+        
+      //Calling the original toString()
+      System.out.println(Integer.toString(12));
+      a.running(); // running method
+      a.sleeping(); // sleeping method
+      a.singing(); //singing method
+    }
+}
+
+      
 ```
 
-### Activity 2.3.1 - guessChecker Pt 1
-### Activity 2.3.2 - Sevens Game
+**Sample output**
+```java
+I am a child
+The name of the child is Francis. The age of the child is 10.
+12
+I am running!
+Zzzzzzz!
+Lah-la-la-LAH-la-la!
+```
+
+The `void` keyword will not return *anything* from the method declaration.  While the void method of the class does not return any value, the constructors return an object reference.  Thus, they can be called as a part of an expression.  Explained another way, void means that nothing is returned from a method, nor will anything ever be returned. It is an absence of any value.
+
+**NOTE:** 'Null' is a place holder for a reference that does not have an object.  If defines a memory address that may eventually hold a value.
+
+## 2.4 Calling a Void Method with Parameters
+
+- [ ] Call non-static void methods with parameters
+- [ ] Use overloaded methods
+	- [ ] I will be able to write a program using overloaded methods
+
+Using parameters allows us the freedom to write a program that is more flexible and specific.  It is similar to providing specific instructions for the program.  When you pass multiple parameters, it is important to make sure that the order is correct.  Incorrect order will return incorrect results.  As we did with constructors, we can overload a method.  Recall that the method name has also an ordered list of parameters.  You can also overload a method by giving the method the same name as another method, and provide a different set of parameters.
+
+For example:
+```java
+public class Restaurant {
+    public static void main(String[] args) {
+        // Using overloaded constructors
+        BurgerOrder order1 = new BurgerOrder("Cheese");
+        BurgerOrder order2 = new BurgerOrder("Bacon", true);
+        BurgerOrder order3 = new BurgerOrder("Veggie", true, "Soda");
+
+        // Using overloaded methods
+        order1.makeBurger("Cheese");
+        order2.makeBurger("Bacon", true);
+        order3.makeBurger("Veggie", true, "Soda");
+    }
+}
+
+class BurgerOrder {
+    private String topping;
+    private boolean withFries;
+    private String drink;
+
+    // Constructor 1: Just topping
+    public BurgerOrder(String topping) {
+        this.topping = topping;
+        this.withFries = false; // default
+        this.drink = "None";   // default
+    }
+
+    // Constructor 2: Topping + Fries
+    public BurgerOrder(String topping, boolean withFries) {
+        this.topping = topping;
+        this.withFries = withFries;
+        this.drink = "None"; // default
+    }
+
+    // Constructor 3: Topping + Fries + Drink
+    public BurgerOrder(String topping, boolean withFries, String drink) {
+        this.topping = topping;
+        this.withFries = withFries;
+        this.drink = drink;
+    }
+
+    // Overloaded Methods
+    public void makeBurger(String topping) {
+        System.out.println("One " + topping + " burger. No fries. No drink.");
+    }
+
+    public void makeBurger(String topping, boolean withFries) {
+        String friesText = withFries ? "with fries" : "no fries";
+        System.out.println("One " + topping + " burger, " + friesText + ". No drink.");
+    }
+
+    public void makeBurger(String topping, boolean withFries, String drink) {
+        String friesText = withFries ? "with fries" : "no fries";
+        System.out.println("One " + topping + " burger, " + friesText + ", and a " + drink + ".");
+    }
+}
+
+```
+
+
+
+### Activity 2.4.1(a)
+<details><summary>Click Here</summary>
+
+--- 
+
+
+**Instructions DigiPet**
+You will create a class DigiPet
+
+1. Create a DigiPet class with the following attributes:  
+	- `animal`
+	- `name`
+	- `food`
+	- `energy`
+	- `happy`
+	- 
+2. Create a constructor with variables for `animal` and `name`. `food`, `energy`, and `happy` should be set to 20.
+3. In the main class, create two pets with their name and print them out.
+4. Create the following void methods according to these rules:
+  - `speak()` - If your pet is a dog, print out "woof! woof!". If you choose another animal follow the format of the dog. 
+  - `play()` - print out "Do you wanna play?", increase `happy` by 10, decrease `food` and `energy` by 10.
+  - `feed()` - If food is greater than 15, print out the pet is not hungry and decrease `happy` by 10. Otherwise, print "Yay! Food!", increase `food` and `energy` by 10.
+  - `sleep()` - if energy is 20 or more, print out the pet is not sleepy and decrease `happy` by 10. Otherwise, print "zzzzzzzzzzzzzzz!", increase `happy` by 15 and set energy to 50.
+5. Call each method according to the sample output below.
+
+**Sample Output:**
+```java
+Hangry the cat
+Hunger: 20
+Energy: 20
+Happy: 20
+
+Fido the dog
+Hunger: 20
+Energy: 20
+Happy: 20
+
+Purr! Purr!
+Bark! Bark!
+Yay! Let's play!
+Hangry's not sleepy!
+zzzzzzzzzzzzzzz!
+Hangry's not hungry!
+Yay! Food!
+
+Hangry the cat
+Hunger: 20
+Energy: 20
+Happy: 0
+
+Fido the dog
+Hunger: 20
+Energy: 60
+Happy: 45
+```
 
 ---
 
-## 2.4 Nested if Statements
-
-**Goals**
-- Write nested `if/else if/else` statements for multi-branch logic.
-
-```java
-if (score >= 90) {
-    grade = "A";
-} else if (score >= 80) {
-    grade = "B";
-} else if (score >= 70) {
-    grade = "C";
-} else {
-    grade = "F";
-}
-```
-
-### Activity 2.4.1 - guessChecker Pt 2
-### Activity 2.4.2 - Activity Director
-### Activity 2.4.3 - Smallest Divisible Number
+</details>
 
 ---
 
-## 2.4.1 Switch Statements — *Oracle Foundations 1Z0-811*
+### Activity 2.4.1(b)
 
-> **Oracle Exam Note:** `switch` statements and the ternary operator are tested on the Oracle Java Foundations exam (1Z0-811).
-
-A `switch` statement is an alternative to long `if/else if` chains when testing a single variable against multiple constant values.
-
-```java
-int day = 3;
-switch (day) {
-    case 1:
-        System.out.println("Monday");
-        break;
-    case 2:
-        System.out.println("Tuesday");
-        break;
-    case 3:
-        System.out.println("Wednesday");
-        break;
-    default:
-        System.out.println("Other day");
-}
-```
-
-**Important rules:**
-- Each `case` ends with `break` to prevent **fall-through** (executing subsequent cases).
-- `default` is optional and runs if no case matches — similar to a final `else`.
-- `switch` works with `int`, `char`, `String`, and enum types.
-
-**Fall-Through Example:**
-```java
-int month = 4;
-switch (month) {
-    case 4:
-    case 6:
-    case 9:
-    case 11:
-        System.out.println("30 days");
-        break;
-    case 2:
-        System.out.println("28 or 29 days");
-        break;
-    default:
-        System.out.println("31 days");
-}
-```
-
-### Ternary Operator — *Oracle Foundations 1Z0-811*
-
-The **ternary operator** `? :` is a compact one-line `if/else`:
-
-```java
-// Syntax: condition ? valueIfTrue : valueIfFalse
-int age = 17;
-String status = (age >= 18) ? "adult" : "minor";
-System.out.println(status);  // minor
-
-int a = 10, b = 20;
-int max = (a > b) ? a : b;   // max = 20
-```
-
-Use the ternary operator for simple conditional assignments; prefer `if/else` for more complex logic.
-
-### Activity 2.4.1.1 - Text-Based Calculator with Mode Selection
-
-Write a Java program that:
-1. Asks the user to choose a mode: `basic`, `scientific`, or `stats`
-2. Uses a `switch` statement to route to the correct mode
-3. Within each mode, uses ternary operators for simple comparisons (e.g., "result is positive/negative")
-4. Includes a `default` case for invalid input
+<details><summary> Click Here </summary>
 
 ---
 
-## 2.5 Compound Boolean Expressions
 
-**Goals**
-- Combine multiple conditions using `&&`, `||`, and `!`.
+**Virtual Arcade Machine**
+
+**Instructions:**
+
+You will create a class called `ArcadeGame`.
+
+1. **Attributes**
+
+   * `title` (String)
+   * `credits` (int)
+
+2. **Constructor**
+
+   * Takes in a `title`.
+   * `credits` starts at `0`.
+
+3. **Void Methods (no parameters):**
+
+   * `insertCoin()` → increases credits by 1 and prints `"Coin inserted! Current credits: X"`.
+   * `startGame()` → if credits ≥ 1, print `"Starting [title]!"` and reduce credits by 1. Otherwise print `"Not enough credits!"`.
+
+4. **Void Methods (with parameters):**
+
+   * `insertCoins(int amount)` → increases credits by `amount` and prints how many coins were added.
+   * `playMultiplayer(int players)` → if credits ≥ players, subtract that many credits and print `"Starting [title] with [players] players!"`. Otherwise print `"Not enough credits for multiplayer."`.
+
+5. **Main Class**
+
+   * Create two different arcade games (Pac-Man and Street Fighter).
+   * Demonstrate both **parameterless methods** and **parameterized methods** in action.
+
+---
+
+**Sample Output**
+
+```
+Coin inserted! Current credits: 1
+Starting Pac-Man!
+Not enough credits!
+Added 5 coins! Current credits: 5
+Starting Street Fighter with 2 players!
+Not enough credits for multiplayer.
+```
+
+**Extenstions (Optional)**
+
+**1. High Score Tracking**
+	* Add an attribute `highScore` to the `ArcadeGame` class.
+	* Create a **void method with parameters** `updateScore(int score)` that updates the high score if the new score is higher.
+	* Print a message if the high score is beaten: `"New high score: X!"`.
+
+**2. Bonus Credits**
+	* Add a **void method with parameters** `bonusCredits(int multiplier)` that multiplies the current credits by a number and prints the new total.
+	* Example: `bonusCredits(2)` doubles the credits.
+
+**3. Multiple Rounds / Levels**
+	* Add a **void method** `playLevel()` without parameters that decreases 1 credit per level and prints `"Level X completed!"`.
+	* Add another **void method with parameters** `playLevels(int levels)` to let the player attempt multiple levels at once.
+
+**4. Player Names**
+	* Add a `playerName` attribute and create a **void method with parameters** `setPlayerName(String name)` to assign it.
+	* Modify other methods to personalize output, e.g., `"Starting Street Fighter for player Alex!"`.
+
+
+---
+
+</details>
+
+---
+
+
+## 2.5 Non-Void Methods
+
+
+If you've programmed in Python, you may remember that we used functions to execute a small chunk of code in other areas of the program.  Non-Void methods are very similar to functions in that they return a value of some type.  You have used non-void methods already, you just may not have recognized it. For example, the Scanner Class has non-void methods like nextInt(), nextDouble(), nextLine(), and next().  There are a number of methods that can be found in the Java standard library methods that are non-void methods.  Take a look at the example below.
 
 ```java
-// Compound condition: between 18 and 65
-if (age >= 18 && age <= 65) {
-    System.out.println("Working age");
+public int sum(){
+   return num1 + num2;
 }
+```
 
-// Compound condition: invalid input
-if (score < 0 || score > 100) {
-    System.out.println("Invalid score");
-}
+ The keyword **return** is *required* in all non-void methods. Since the method sum has a **return** type of `int` the return line is required to return a value of this type.
+ 
+ ## 2.5 Calling a non-void method
+ 
+
+- [ ] Call a non-void method.
+- [ ] Use a return value from a non-void method in a variable or as part of an expression.
+	- [ ] I will be able to write a program that utilizes a program using a non-void method
+ 
+The way that a non-void method is called differs from the way that a void method is called in that the call is made from within other Java statements. Since a non-void method always returns a value, this value has to be stored in a variable, printed, or returned to a Java control structure or another method. Here are some examples.
+
+The method call can be in an **assignment statement**.
+
+```java
+int num = sum();
+double avg = calculateAverage();
+String name = getName();
+```
+
+The method call can be in a **print** or **println statement**.
+
+```java
+System.out.println("The sum is " + sum());
+System.out.println("Avg = " + calculateAverage();
+System.out.println(getName() + " is my name");
+```
+
+The method call can be inside a Java structure such as a **conditional statement** or a **looping structure**.
+
+```java
+if(sum() > 500)
+if(calculateAverage() == 100)
+if(getName().equals("John Wang"))
+while(!getName().equals("stop")
+```
+
+The method call can be on the **return line** of another method.
+
+```java
+return sum() / numItems;
+return calculateAverage() > 70;
 ```
 
 ### Activity 2.5.1
+**Instructions Shape using Non-Void Methods**
+
+1. In the Shape class, the attributes and constructor is complete. Look them over.
+2. In the Main class, instantiate the three objects described in the comments
+3. In the Shape class, write the following methods:
+     - `getPerimeter()` - calculates and returns perimeter depending on the shape. The perimeter of a circle is `2*3.14*length`
+     - `getArea()` - calculates and returns area depending on the shape. The area of an equilateral triangle is `0.25*1.732*length*length`. 
+        The area of a circle is `3.14*length*length`	
+
+4. In the Main class, follow the comments and call the appropriate methods. 
+
+[Assignment1_Shape.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9708290/Assignment1_Shape.zip)
+
+**Sample Output**
+```java
+Perimeter of Triangle: 18.0
+Area of Triangle: 15.588
+
+Perimeter of Square: 20.0
+Area of Square: 25.0
+
+Perimeter of Circle: 50.24
+Area of Circle: 200.96
+```
+Submit your link to the finished program
+
+__________________________________________________________________________________________________________________
+
 ### Activity 2.5.2
-### Activity 2.5.3 - guessChecker Pt 3
+
+**Instructions RoadTrip Simulator (With Car, EV, and Motorcycle) using Non-Void Methods**
+
+
+
+**Objective:**
+
+In this project, you will build a Java program to simulate a road trip using three types of vehicles:
+
+* A gas-powered **Car**
+* An **Electric Vehicle (EV)**
+* A gas-powered **Motorcycle**
+
+Each vehicle will keep track of:
+
+* How far it has driven
+* How far it can go based on remaining fuel or charge
+* Whether it can drive a given distance
+* How much fuel or charge it has
+
+You will create **three separate classes** and write a `Main` class that tests them.
 
 ---
 
-## 2.6 Comparing Boolean Expressions
+**Build the Vehicle Classes**
 
-**Goals**
-- Understand equivalent Boolean expressions.
-- Apply De Morgan's Laws.
+You will create three Java files:
 
-**De Morgan's Laws:**
-```java
-!(a && b)  ==  (!a || !b)    // NOT (A AND B) equals (NOT A) OR (NOT B)
-!(a || b)  ==  (!a && !b)    // NOT (A OR B) equals (NOT A) AND (NOT B)
+* `Car.java`
+* `EV.java`
+* `Motorcycle.java`
+
+Each class should include:
+
+**Attributes:**
+
+| Car & Motorcycle             | EV                                      |
+| ---------------------------- | --------------------------------------- |
+| `mpg` (miles per gallon)     | `milesPerKWh` (miles per kilowatt-hour) |
+| `tankSize` (maximum gallons) | `batteryCapacity` (maximum kWh)         |
+| `gasInTank`                  | `batteryLevel`                          |
+| `milesDriven`                | `milesDriven`                           |
+
+---
+
+**Methods for Each Class:**
+
+`Constructor`
+
+Set the efficiency and tank/battery size when the object is created. Initialize fuel/charge to 0.
+
+`void showOdometer()`
+
+Prints how many miles the vehicle has driven.
+Example:
+
+```
+Miles Driven (Car): 300.0
 ```
 
-### Activity 2.6.1
-### Activity 2.6.2
+`void checkRange()`
+
+Prints how many miles the vehicle can still drive based on its current fuel or charge.
+Example:
+
+```
+Miles Available (EV): 240.0
+```
+
+`void fillUp(double amount)`
+
+Adds gas (for Car or Motorcycle) or charge (for EV).
+
+* If the new total goes over the max tank or battery, cap it.
+* Print a message like:
+
+```
+Adding gas to car...
+```
+
+or
+
+```
+Charging EV...
+```
+
+`void goDrive(double distance)`
+
+Try to drive a certain number of miles.
+
+* If there’s enough fuel/charge:
+
+  * Print `Driving [distance]`
+  * Subtract fuel/charge used
+  * Add miles to total
+* If there’s **not** enough:
+
+  * Print `Can't drive [distance]. That's too far!` or similar
 
 ---
 
-## 2.7 while Loops
+**Test Your Program in `Main.java`**
 
-**Goals**
-- Write `while` loops to repeat code while a condition is true.
-- I will be able to write a program that uses while loops.
+In the `Main` class, you will:
+
+1. Create **one object of each vehicle**:
+
+   * Car: 20 mpg, 15-gallon tank
+   * EV: 4 mi/kWh, 85 kWh battery
+   * Motorcycle: 60 mpg, 4-gallon tank
+
+2. Call methods to simulate a trip:
+
+**Sample Method Calls:**
 
 ```java
-int i = 1;
-while (i <= 5) {
-    System.out.println(i);
-    i++;
+car.showOdometer();
+car.checkRange();
+car.fillUp(15);
+car.checkRange();
+car.goDrive(100);
+car.checkRange();
+car.fillUp(2);
+car.goDrive(200);
+car.showOdometer();
+```
+
+Repeat similar steps for the EV and Motorcycle.
+
+---
+
+**Sample Output:**
+
+```
+--- Car ---
+Miles Driven (Car): 0.0
+Miles Available (Car): 0.0
+Adding gas to car...
+Miles Available (Car): 300.0
+Driving car 100.0
+Miles Available (Car): 200.0
+Driving car 200.0
+Miles Driven (Car): 300.0
+
+--- Electric Vehicle ---
+Miles Driven (EV): 0.0
+Miles Available (EV): 0.0
+Charging EV...
+Miles Available (EV): 320.0
+Driving EV 250.0
+Miles Available (EV): 70.0
+Can't drive EV 120.0. Not enough charge!
+Miles Driven (EV): 250.0
+
+--- Motorcycle ---
+Miles Driven (Motorcycle): 0.0
+Miles Available (Motorcycle): 0.0
+Filling motorcycle...
+Miles Available (Motorcycle): 180.0
+Driving motorcycle 100.0
+Miles Available (Motorcycle): 80.0
+Can't drive motorcycle 200.0. Not enough fuel!
+Miles Driven (Motorcycle): 100.0
+```
+
+---
+
+**Requirements Checklist:**
+
+| Task                                           | Completed? |
+| ---------------------------------------------- | ---------- |
+| Created `Car`, `EV`, and `Motorcycle` classes  |          |
+| Each class has attributes and constructor      |          |
+| Each class includes the 4 methods              |          |
+| Created and tested each vehicle in `Main.java` |          |
+| Output matches the example structure           |         |
+
+---
+
+**Extra Credit (Optional):**
+
+* Add a method that returns how much fuel/charge is left.
+* Allow user input using `Scanner` to choose drive distances.
+* Make a trip log that records each successful drive.
+
+---
+
+_____________________________________________________________________________________________________
+
+## 2.6 String Objects: Concatenation, Literals, and Other Things
+
+- [ ] Create String objects
+- [ ] Reference String objects
+- [ ] Understand that in java, String objects are immutable and can only be called by reference
+	- [ ] I will be able to write a program using String objects
+
+String objects can be instantiated in **two different** ways, either by assigning a **String literal** directly to a String variable or by calling the **String class constructor**. In the example below, the code on the left uses a String literal assignment, and the code on the right uses the String class constructor.
+
+| String literal assignment | String class constructor |
+| ----------- | ---------- |
+| String state = "Maine"; | String state = new String("Maine"); |
+
+String objects have the benefit of many methods, one such method is *concat*. Concatenation means appending one string to the end of another and is the function performed by the concat method.
+String objects are *immutable*. This means that you cannot change the String object.  In this case, the program created a String object with a specific value. When the `concat()` method is called, it creates a *new String object* in memory with the new value. This does not replace the original reference.
+
+**concat() vs. the + Operator for Concatenation**
+
+| concat() | + Operator |
+| ----------- | ---------- |
+| Suppose **str1** is `null` and **str2** is "Java".  Result of `str1.concat(str2) will throw a NullPointerException.| Assume **str1** is `null` and **str2** ia "Java".  Result of `str1 + str2` returns "nullJava". |
+| You can only pass a String to the `concat()` method. |  If one of the operands is a string and the other is a non-string value, then the non-string value is converted to a string before concatentation.  For example, ` "Java" + 5 ` will return ` "Java5" `. |
+
+***Example***
+```java
+public class Main 
+{
+  public static void main(String[] args) 
+  {
+    String str1 = "My string";
+    // The string str1 does not change even though it is being invoked by the method.
+    // concat(), as it is immutable must have an explicit assignment to produce the desired outcome.
+    str1.concat("is immutable");
+    System.out.println(str1);
+    str1 = str1.concat(" is immutable, so I have to assign it explicitly here.");
+    System.out.println(str1);
+  }
 }
-// Prints 1 through 5
+```
+**Output**
+```java
+My string
+My string is immutable, so I have to assign it explicitly here.
 ```
 
-**Important:** Make sure the loop condition eventually becomes `false`; otherwise you create an infinite loop.
+**Example 2**
+Take a look at the following program:
+```java
+public class Main {
+    public static void main(String[] args) {
+	String str1 = "Hello ";
+	String str2 = "neighbor, ";
+	String str3 = "How are you?";
+	// concatentating 1 string
+	String str4 = str1.concat(str2);
+	System.out.println(str4);
+	//concatenating more strings
+	String str5 = str1.concat(str2).concat(str3);
+	System.out.println(str5);
+    }
+}
+```
 
-### Activity 2.7.1
-### Activity 2.7.2
+**Output**
+```java
+Hello neighbor,
+Hello neighbor, How are you?
+```
+
+```java
+public class Main {
+    public static void main(String[] args) {
+	String str1 = "Coyotes";
+	String str2 = "Our mascot is the ".concat(str1);
+
+	System.out.println(str2);
+    }
+}
+```
+
+```java
+Our mascot is the Coyotes
+```
+
+
+Complete the code below using each of the concatenation operators where noted in the comments. When the program runs, it should display Whoopie Pie and Wild Blueberry.
+
+```java
+public class Main
+{
+  public static void main(String[] args) 
+  {
+    String stateTreat = "Whoopie";
+    String stateBerry = "Wild ";
+    
+    /* Use the + operator on stateTreat to append " Pie" */
+    
+    
+    
+    /* Use the += operator on stateBerry to append "Blueberry" */
+    
+    
+    
+    System.out.println(stateTreat);
+    System.out.println(stateBerry);
+  }
+}
+```
+**NOTE** Java allows for *implicit type conversion* during concatenation. This means that even if a primitive is stored as a primitive type (be it *int* or *double*), it can still be concatenated to a String. The *int* is converted to a String before the + operator is applied.
+
+**NOTE** Certain characters need special treatment to be included in strings in Java. Either they are “non-printable,” such as the character that indicates a new line of output (called the newline character), or they already have other meanings in the Java language.
+
+Escape sequences begin with the \ character (back slash as opposed to a forward slash) and allow a programmer to type these characters in String literals. Take a look at the examples below.
+
+**Escape Sequence**
+
+| newline | backslash | single quote | double quote | tab | backspace |
+| ---------- | ---------- | ---------- | ---------- | ---------- | ---------- |
+| `\n` | `\\` | `\'` | `\"` | `\t` | `\b` |
+
+```java
+public class Main
+{
+  public static void main(String[] args) 
+  {
+    // Notice a new line in your code does not mean
+    // a newline in your output, line breaks after
+    // operators are allowed
+    String stateSong = 
+      "\"Oh, Pine Tree State,\n Your woods\\ fields\\ and hills\\\"";
+    System.out.println(stateSong);
+  }
+}
+```
+**Output**
+
+"Oh, Pine Tree State,
+
+ Your woods\ fields\ and hills\"
+ 
+ 
+1. Create a new java file.
+     - Research a College Fight Song to use for this assignment.
+
+2. Implement the following features (in any order) and comment where they occur.
+	1. A `String` created using a literal
+	2. A `String` created using the `String` class constructor
+	3. An immutable `String`
+	4. An implicit conversion via concatenation
+	5. The += operator for concatenation
+	6. The + operator for concatenation
+	7. Three escape sequences
+
+Submit your java program file(s).  Comment your code showing that you completed each of the bullet points above.
+Provide a screen shot of your executed program.  
+
+_____________________________________________________________________________________________________
+## 2.7 String Methods
+
+
+- [ ] Compare `String` Objects
+- [ ] Use `String` Methods
+- [ ] Using Java API Specification
+- [ ] Using ASCII table within Java
+	- [ ] I will be able to write a program that utitlizes String methods
+
+Navigate to and review the information that can be found at [Java API Specification](https://docs.oracle.com/en/java/javase/14/docs/api/index.html).
+
+| Navigation |
+| ---------- |
+| Select java.base > java.lang |
+| Scroll through Class Summary until you find `String` |
+| Review String class description |
+| Click on `String` class link to explore the class |
+|  |
+| Click on 'Constructor Summary' to explore how you can call the String Constructor |
+| Click on 'Method' to view the Method Summary |
+
+**Note** 
+- [ ] Application programming interfaces (APIs) simplify complex programming tasks.
+- [ ] In APIs, classes are grouped into packages, also called modules.
+- [ ] The `String` class is part of the `java.lang` package. Classes in the `java.lang` package are available by default.
+- [ ] Documentation for APIs and libraries is essential to understanding the attributes and behaviors of a class and its methods.
+
+| String Class Constructors and Methods | Explanation |
+| --------------- | --------------- |
+| `String(String str)` | Constructs a new String object that represents the same sequence of characters as str. |
+| `int length()` | Returns the number of characters in a String object. |
+| `String substring(int from, int to)` | Returns the substring beginning at index from and ending at index to – 1. |
+| `String substring(int from)` | Returns substring(from, length()). |
+| `int indexOf(String str)` | Returns the index of the first occurrence of str; returns –1 if not found. |
+| `boolean equals(String other)` | Returns true if this is equal to other; returns false otherwise. |
+| `int compareTo(String other)` | Returns a value < 0 if this is less than other; returns zero if this is equal to other; returns a value > 0 if this is greater than other. |
+| `String startsWith(String str)` | The method checks whether a string starts with the specified character(s). |
+| `String equalsIgnoreCase(String str)` | The method compares two strings, ignoring lower case and upper case differences. |
+
+Take a look at the code below:
+```java
+     String horse = "percheron";
+     System.out.print("Percheron is ");
+     //
+     System.out.print(horse.length());
+     //
+     System.out.println(" letters long.");
+```
+
+**Output**
+```
+Percheron is 9 letters long.
+```
+
+Use the program as a reference, create a program that:
+- [ ] Creates a `String` of length three that references the `String` literal "cat"
+- [ ] Calls the `length` method of that object, storing the result in a variable of type `int`
+- [ ] Displays the value store in that variable
+- [ ] Concatenates a `String` of your choice to the end of "cat"
+- [ ] Displays the new length of the `String`
+
+**String** 
+`substring(int from, int to)` - ***Returns the substring beginning at index `from` and ending at index `to` -1.***
+
+![5973746a769a40f78540dfbd24529a0c](https://user-images.githubusercontent.com/12989939/194594983-728dab7d-02bb-406c-896e-6e081001fbd5.png)
+
+**Example 1** 
+```java
+public class Main
+{
+  public static void main (String[] args)
+  {
+    String pangram = "The quick brown fox jumps over the lazy dog";
+    System.out.println(pangram.substring(4, 19));
+  }
+}
+```
+
+**Sample Output**
+`quick brown fox`
+
+```java
+public class Main
+{
+  public static void main (String[] args)
+  {
+    String pangram = "The quick brown fox jumps over the lazy dog";
+    System.out.println(pangram.substring(41, 44));
+  }
+}
+```
+
+**Note** A String object has index values from 0 to length – 1. Attempting to access indices outside this range will result in an IndexOutOfBoundsException.
+
+**Sample Output**
+```
+Exception in thread "main" java.lang.StringIndexOutOfBoundsException: String index out of range: 44
+	at java.lang.String.substring(String.java:1963)
+	at IndexTester.main(IndexTester.java:9)
+```
+How would you fix this error above?
+
+```java
+class Main {
+  public static void main(String[] args) {
+	String pangram = "The quick brown fox jumps over the lazy dog";
+    System.out.println(pangram.indexOf("b")); 
+
+  }
+}
+```
+**Output**
+`10`
+
+```java
+class Main {
+  public static void main(String[] args) {
+	String pangram = "The quick brown fox jumps over the lazy dog";
+    System.out.println(pangram.indexOf(44)); 
+
+  }
+}
+```
+**Output**
+`-1`
+
+```java
+public class Main
+{
+  public static void main(String[] args)
+  {
+    String placeName = "New Brunswick";
+    /* 	What is the length of placeName?
+	What is the indexOf "N"?        */
+    System.out.println();
+  }
+}
+```
+
+What would go within the println statement?
+
+```java
+public class Main
+{
+  public static void main(String[] args){
+    String word1 = "motorcycle";
+    String word2 = "recycle";
+    
+    String word1part2 = word1.substring(5);
+    String word2part2 = word2.substring(5);
+    System.out.println(word1part2.equals(word2part2));
+  }
+}
+```
+How would you modify the calls to substring so that the program below will print true. 
+
+
+| compareTo | |
+| --------- | --------- |
+| int compareTo(String other) | Returns a value < 0 if this is less than other; returns zero if this is equal to other; returns a value > 0 if this is greater than other. |
+
+```java
+public class Main
+{
+  public static void main(String[] args)
+  {
+    String string1 = "park";
+    String string2 = "parkway";
+    
+    System.out.println(string1.compareTo(string2));
+  }
+}
+```
+
+What is the output of this program?
+<details><summary>Answer</summary>
+<p>
+
+`-3`
+</p>
+</details>
+
+What is the output if String1 was `parkway` and string2 was `park`?
+<details><summary>Answer</summary>
+<p>
+
+`3`
+</p>
+</details>
+
+What is the output of String1 and String2 if they are both 'parkway'?
+<details><summary>Answer</summary>
+<p>
+
+`0`
+</p>
+</details>
+
+| boolean equals | |
+| -------------------------------  | ------- |
+| boolean equals(String other) | Compares the current string to the specified other string and returns **true** if they are equal, **false** otherwise.  Given the following code segment, predict whether the output will be **true** or **false**. |
+
+```java
+String word1 = "tricycle";
+String word2 = "recycle";
+System.out.println(word1.equals(word2));
+```
+
+| String Substring | |
+| ------------------------------------ | -------- |
+| String substring(int beginIndex) | Returns a string that is a substring of the current string. The substring begins with the character at the specified **beginIndex** and extends to the end of the current string. |
+
+Given the following code segment, predict whether the output will be **true** or **false**.
+
+```java
+String word1 = "tricycle";
+String word2 = "bicycle";
+
+String word1part2 = word1.substring(5);
+String word2part2 = word2.substring(5);
+System.out.println(word1part2.equals(word2part2));
+```
+    
+Take a look at this ASCII table: [ascii-table-characters.pdf](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9737398/ascii-table-characters.pdf)
+
+Experiment with the program above by changing the values of the two Strings until you can answer the questions that follow definitively. Use the ASCII table resource to help guide your exploration.
+
+1. Which is greater, a capital letter or a lowercase letter? 
+2. Which is greater given two Strings that vary only in their last character? 
+3. Which is greater, a String beginning with a number, or one that begins with a letter? 
+4. When two Strings begin with the same substring and one is longer, which is greater? 
+
+
+**String Objects Practice:** 
+[Activity 126 String Objects_Vers1.docx](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9735560/Activity.126.String.Objects_Vers1.docx)
+
+
+**String Object Practice Part II:** [Activity 126 String Objects_Vers2.docx](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9737627/Activity.126.String.Objects_Vers2.docx)
+
+
+
+### Activity 2.7.1 - Wordplay
+
+Starter Files: [WordPlay.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/13031419/WordPlay.zip)
+
+
+You will write a program that asks the user to enter their first name and their last name, 
+separated by a space. Then it asks the user to enter a phrase. You will write and call the following:
+
+| Methods |  |
+| --------- | --------- |
+| getFirstName() | returns the first name from the full name of user |
+| getLastName() | returns the last name from the full name of user |
+| getInitials() | returns the initials from the full name of user |
+| makePassword() | returns a password created by the following: length of first name + first half of first name + last name + last half of last name + length of last name |
+| ceeBee() | returns the phrase with all the c's replaced by b's |
+
+**Hint:** You may want to use API documentation to understand: `split()`, `charAt()`, `substring()`, `replace()`
+
+**Sample Output:**
+
+```java
+Enter your first name and last name, separated by a space: 
+Bernard Heally
+Enter a phrase: 
+Give papa a proper cup of coffee in a copper coffee cup.
+
+Your first name is Bernard
+Your last name is Heally
+Your initials are BH
+
+Your new password: 8BernHeallylly5
+
+Give papa a proper bup of boffee in a bopper boffee bup.
+```
+
+Submit your repl.it file on Canvas.
+
+### Activity 2.7.2 - Speaking
+
+Starter files: [Speaking.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/13031428/127-Speaking.zip)
+
+Create a program that will ask the user for their name and their partners name. Create the following:
+
+| Methods |  |
+| ------- | ---- |
+| yelling() | returns a name in all caps |
+| whisper() | returns a name in all lower case |
+| pigLatin() | takes a word and take the first letter and put it at the end of the word and add the letters “ay” to the end. For example, “pig” becomes “igpay” |
+| nameJoin() | takes two parameters, name1 and name2, and combines them by taking the first half of name1 and second half of name2 and combine them |
+
+
+**Sample Output**
+```java
+Enter your first name:
+ Samantha
+Enter your partner's name:
+ Russell
+
+Yelling your name: SAMANTHA
+Whispering your partner's name: russell
+Your name in Pig Latin: amanthaSay
+Your partner's name in Pig Latin: ussellray
+Your team name is Samaell
+```
+_______________________________________________________________________________________________________________
+
+## 2.8 Wrapper Classes - Integer and Double
+
+- [ ] Convert between primitive data types and objects.
+	- [ ] I will be able to identify a wrapper class
+	- [ ] I will be able to convert primitives to an object of a wrapper class
+	- [ ] I will be able to identify autoboxing/ unboxing of primitive and reference types
+- [ ] I will be able to write programs using wrapper classes
+
+**NOTE:**  Wrapper classes have been deprecated as of Java 9.  If you use this in replit, it will notify you that it has been depracated.  For more information [click here.](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/class-use/Deprecated.html)
+
+
+________________________________________________________________________________________________
+
+
+Recall that primitive data types are int, double, boolean & char.  A wrapper class is a class that allows you to extend a primitive type into an object.  A wrapper class contains a single attribute that is its primitive type.  For example, `Integer` is a wrapper class for primitive type `int`.  For every Wrapper Class there is a corresponding primitive type <see below>.  Integer belongs to the Java.lang package that can be found in the [API documentation](https://docs.oracle.com/en/java/javase/14/docs/api/index.html) that we reviewed in a prior lesson.
+
+**What are the advantages of using Wrapper Classes**
+
+- They convert primitive data types into objects. Objects are needed if we want to modify arguments passed to a method.
+- The classes in `java.util` package only handles objects thus wrapper classes are appropriate to use.
+- Data structures such as an ArrayList, store only objects and not primitive types.
+- We can call multiple methods like compareTo(), equals(), toString()
+
+	
+<details><summary>Wrapper Classes</summary>
+<p>
+
+| Primitive Data Type |	Wrapper Class |
+| ----------- | ------------ |
+| byte | Byte |
+| short | Short |
+| int | Integer |
+| long | Long |
+| float | Float |
+| double | Double |
+| boolean | Boolean |
+| char | Character |
+
+</p>
+</details>
+
+
+| Integer Class Constructors and Methods | Explanation |
+| --------------------- | --------- |
+| Integer(int value) | Constructs a new Integer object that represents the specified int value. |
+| Integer.MIN_VALUE | The minimum value represented by int or Integer. |
+| Integer.MAX_VALUE | The maximum value represented by int or Integer. |
+| int intValue() | Returns the value of this Integer as an int. |
+
+
+The program below retrieves the value wrapped by an Integer and stores it in a primitive int before using that value. 
+Modify the program so that it stores the value of int1 in int2.
+
+```java
+public class Main
+{
+  public static void main(String[] args)
+  {
+    Integer int1;
+    Integer int2;
+    int primitiveInt;
+    
+    int1 = new Integer(20);
+    int2 = new Integer(int1.intValue()); // solution 1
+    int2 = int1.intValue(); // solution 2
+    
+    System.out.println("int2 value is: " + int2.intValue());
+  }
+  
+}
+```
+
+**Sample Output**
+`int2 value is: 20`
+
+
+| Double Class Constructors and Methods | Explanation |
+| ----------------- | ------------ |
+| Double(double value) | Constructs a new Double object that represents the specified double value. |
+| double doubleValue() | Returns the value of this Double as a double. |
+
+```java 
+public class Main
+{
+  public static void main(String[] args)
+  {
+    Double dub = new Double(1.5); // instantiates a Double
+    // Uses the doubleValue method in a print statement
+    System.out.println("dub value is: " + dub.doubleValue()); 
+    
+  } 
+}
+```
+
+**Sample Output**
+`dub value is: 1.5`
+
+
+**Autoboxing/ Unboxing**
+In the program below the JVM did some extra work at lines 5 and 6. Java automatically converted from the int and double primitive types to their corresponding object reference types. This is called **autoboxing**, an automatic conversion that the Java compiler makes between primitive types and their corresponding object wrapper classes.
+
+```java
+1 public class Main
+2 {
+3   public static void main(String[] args)
+4   {
+5     Integer integerInstance = 5;
+6     Double doubleInstance = 2.0;
+7     // Newlines are allowed around operators
+8     System.out.println("integerInstance: " + integerInstance.intValue() +
+9                        " doubleInstance: " + doubleInstance.doubleValue());
+10  }
+11 }
+```
+
+**Note:** Autoboxing is the automatic conversion that the Java compiler makes between primitive types and their corresponding object wrapper classes, including int to Integer, double to Double, and boolean to Boolean.
+
+The program below demonstrates the opposite of autoboxing called **unboxing**. Java automatically converted the Integer reference types to its corresponding int primitive types.
+
+```java
+public class Main
+{
+  public static void main(String[] args)
+  {
+    unboxInt(new Integer(42));
+    unboxDouble(new Double(3.14159));
+    unboxBoolean(new Boolean(true));
+  }
+  
+  public static void unboxInt(int i)
+  {
+    System.out.println(i);
+  }
+  
+  public static void unboxDouble(double d)
+  {
+    System.out.println(d);
+  }
+  
+  public static void unboxBoolean(boolean b)
+  {
+    System.out.println(b);
+  }
+}
+```
+
+**Sample Output**
+```java
+42
+3.14159
+true
+```
+
+
+**Note:** Unboxing is the automatic conversion that the Java compiler makes from the wrapper class to the primitive type. 
+This includes converting an Integer to an int and a Double to a double.
+
+The Java compiler applies unboxing when a wrapper class object is:
+- Passed as a parameter to a method that expects a value of the corresponding primitive type.
+- Assigned to a variable of the corresponding primitive type.
+
+In the program below, which line of code contains an example of *autoboxing*?
+
+In the program below, which line of code contains an example of *unboxing*?
+
+```java
+1 public class Main
+2 {
+3   public static void main(String[] args){
+4    Integer cardboardWidth = new Integer(4);
+5    Integer cardboardHeight = new Integer(5);
+6    
+7    Box cardboardBox = new Box(cardboardWidth, cardboardHeight);
+8    cardboardBox.changeDimensions(2,3);
+9    System.out.println("Ending box dimensions: " + cardboardBox.getWidth() 
+10                       + " x " + cardboardBox.getHeight());
+11  }
+12
+13  private static class Box
+14  {
+15    private int width, height;
+16    
+17    public Box(int w, int h){
+18      width = w;
+19      height = h;
+20    }
+21    
+22    public void changeDimensions(Integer w, Integer h){
+23      width = w.intValue();
+24      height = h.intValue();
+25    }
+26    
+27    public int getWidth(){
+28      return width;
+29    }
+30    public int getHeight(){
+31      return height;
+32    }
+33  }
+34 }
+```
+<details><summary>Answer</summary>
+<p>
+
+
+
+ **Unboxing** occurs on *line 7* when Integer parameters are automatically converted to ints 
+in the constructor.
+   
+ **Autoboxing** occurs on *line 8* when int parameters are automatically converted to Integers 
+ in the method.
+
+
+**Sample Output**
+```java
+Ending box dimensions: 2 x 3
+```
+
+</p>
+</details>
+
+
+### Activity 2.8.1 Wrapper Classes
+
+
+**Directions:** Create a class called `WrapperExamples` that will demonstrate each of the following:
+
+- Integer Constructor: Create an Integer object from a primitive int.
+- intValue() Method: Retrieve the primitive int value from the Integer object.
+- Double Constructor: Create a Double object from a primitive double.
+- doubleValue() Method: Retrieve the primitive double value from the Double object.
+- Maximum Double Value: Display the maximum value for a double.
+- Minimum Double Value: Display the minimum value for a double.
+- Autoboxing: Automatically converting a primitive int to an Integer object.
+- Unboxing: Automatically converting an Integer object back to a primitive int.
+
+**Answer the following questions as a `.txt` file.**
+
+1. What happens if you try to unbox a `null` `Integer`? Why?
+2. How can you handle situations where a wrapper class might be `null` before performing unboxing?
+3. Can you think of a situation where autoboxing might cause performance issues? Explain.
+4. What happens when you try to change the value of `MAX_VALUE` and `MIN_VALUE`?
+
+Submit your java & txt files.  Add in-line comments to describe each example.
+Provide a screenshot of your executed program.
+
 
 ---
 
-## 2.7a do-while Loops — *Oracle Foundations 1Z0-811*
 
-> **Oracle Exam Note:** `do-while` loops are tested on the Oracle Java Foundations exam (1Z0-811) but are **not** assessed on the AP CSA exam.
+## 2.9 Using the Math Class
 
-A `do-while` loop executes the code block **at least once** before checking the condition — the opposite of a `while` loop.
+- [ ]  Use methods from the Math package
+	- [ ] I will be able to write programs using math methods
+ 	- [ ] I will write a segment of code that will convert an annuity into java
+- [ ]  Incorporate randomness into a program
+	- [ ] I will be able to write a program using random method
+	
+The Math class can be found in the java.lang package.  The Math class contains only static methods.  Some of the more commonly use Math methods are listed below.
+
+<details><summary>Oracle Java Methods & Classes</summary>
+
+
+Navigate to and review the information that can be found at [Java API Specification](https://docs.oracle.com/en/java/javase/14/docs/api/index.html).
+
+| Navigation |
+| ---------- |
+| Select java.base > java.lang |
+| Scroll through `Class Summary` until you find `Math` |
+| Review Math class description |
+| Click on `Math` class link to explore the class |
+|  |
+| Click on 'Method Summary' for **All Methods** to explore how you can call the implement a method |
+| Click on a 'Method' to view the Method Summary |
+
+
+</details>
+
+| Math Class Methods | Explanations |
+| ----------- | --------- |
+| int abs(int x) | Returns the absolute value of an int value |
+| double abs(double x) | Returns the absolute value of a double value |
+| double pow(double base, double exponent) | Returns the value of the first parameter raised to the power of the second parameter |
+| double sqrt(double x) | Returns the positive square root of a double value |
+| double random() | Returns a double value greater than or equal to 0.0 and less than 1.0 |
+| round() | Returns the round of the decimal number to the nearest value |
+| ceil() | Returns a double greater than or equal to the original number |
+| floor() | Returns a double less than or equal to the orignal number |
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+<details>
+<summary>Math Method: Primitive Type Returned</summary>
+<p>
+
+**Math.round:**
+- Math.round is designed to round a floating-point number to the nearest integer. Its purpose is to convert a floating-point value to an integer value, effectively removing the decimal part. Rounding to the nearest integer makes sense because it's often used in scenarios where you need an integer result. For example, if you have a floating-point number that represents a measurement and you want to round it to the nearest whole number, Math.round is a convenient function to use.
+- The return type of Math.round is long, but if you want an integer result, you can cast it to int or store it in an int variable. This is because rounding can result in a value that may not fit into the range of a 32-bit integer, so it's safer to return a long.
+	
+**Math.sqrt:**
+- Math.sqrt is designed to calculate the square root of a number, which may not always result in an integer value. In many cases, the square root of a number is a decimal value (a double in Java). This is because not all numbers have integer square roots. For example, the square root of 25 is exactly 5, but the square root of 26 is approximately 5.09901951359.
+- To accommodate the fact that square roots can have decimal parts, Math.sqrt returns a double by default to provide a precise and flexible result. If you know that the input value will always have an integer square root and you want the result as an integer, you can cast the result to an int.
+
+**Math.ceil:**
+- Math.ceil is a method in the Math class that is used to round a floating-point number up to the nearest integer greater than or equal to the original number (the "ceiling"). This means that it always returns a double value. The result will have a decimal part of 0.0 if the input is already an integer.
+
+**Math.floor:**
+- Math.floor is another method in the Math class, and it is used to round a floating-point number down to the nearest integer less than or equal to the original number (the "floor"). Like Math.ceil, Math.floor also returns a double value.
+
+**Math.round**
+- Round is a another method in the Math class which returns the closest long to the argument. The result is rounded to an integer by adding 1/2, taking the floor of the result after adding 1/2, and casting the result to type long. If the argument is NaN, the result is 0.
+
+
+</p>
+</details>
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+Having seen the Math method `abs` method in use, refer to the Java Quick Reference to predict 
+how you could use the `pow` method to raise a base of 2 to the exponent 10 (2<sup>10</sup> ).
+
+<details><summary>Answer</summary>
+<p>
 
 ```java
-//Do While Example
+Math.pow(2, 10)
+```
+</p>
+</details>
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+How would you write the `sqrt` method to get the square root of 9.
+
+<details><summary>Answer</summary>
+<p>
+
+```java
+Math.sqrt(9)
+```
+</p>
+</details>
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+How would you write the `round` method to get the round of 79.52.
+
+<details><summary>Answer</summary>
+<p>
+
+```java
+Math.round(79.52) 
+```
+</p>
+</details>
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+**The random Method**
+
+For programs that require some amount of randomness, such as games, security, simulations, and statistics, Java’s Math class provides a random method. This method returns a double value that falls in the range from 0.0 to 1.0 non-inclusive, expressed mathematically as [0.0, 1.0) to indicate that it includes 0.0 but that its highest value is .999999999999999. With random values from 0 to .99..., you can mathematically generate any random number you may need. As you will see, you can manipulate the results in a variety of ways to fit your needs.
+
+```java
+public class Main
+{
+  public static void main(String[] args)
+  {
+    int rnum = (int) (Math.random() * 24 );
+    // This program produces a random integer between 0 and 23 inclusive.
+    System.out.println(rnum);
+  }
+}
+```
+You can also create a range using the random method in the formula below.
+
+Math.random() * n<sup>1</sup> + m<sup>2</sup>
+
+<sup>1</sup> = Number of integers included in range
+
+<sup>2</sup> = Lowest integer in range
+
+Use the `Math.random` method to generate a double value greater than or equal to 10.0 (inclusive) and less than 15.0 (exclusive).
+
+```java
+public class Main
+{
+  public static void main(String[] args)
+  {
+    System.out.println(Math.random() * 5 + 10);
+  }
+}
+```
+How would you modify a program to produce `int` values between **70** inclusive and **100** exclusive?
+
+<details><Answer</summary>
+<p>
+
+```java
+System.out.println(Math.random() * 30 + 70);
+```
+</p>
+</details>
+
+
+As stated above, Math methods are static.  This means that you do not use an object reference like you did with non-static methods (cat.length()).  Instead, you reference the class name itself followed by the static method. Some examples are listed below.
+
+| Math Method Examples |
+| --------- |
+| Math.abs(-5) |
+| Math.abs(2.3) |
+| Math.sqrt(4) |
+| Math.random() |
+
+If you were to write your program using a constructor and reference the object your program will return an error.
+
+```
+Math m = new Math();
+m.random();
+```
+
+The correct use of the math class should be done like this:
+
+```java
+double r = Math.random();               
+double squareRoot = Math.sqrt(25);     
+int absolute = Math.abs(-10);          
+```
+
+
+
+Review the Math Class Methods in the table above and determine the correct syntax to execute each print statement.
+
+```java
+1 public class MathPractice
+2 {
+3  public static void main(String[] args)
+4  {
+5    // Find 8x8x8x8
+6    System.out.println(     );
+7    // Find the square root of 64
+8    System.out.println(     );
+9    // Find the square root of 65
+10    System.out.println(     );
+11    // Find the square root of the absolute value of the difference
+12    // between 12 squared and 5 squared.
+13    System.out.println(     );
+14  }
+15 }
+```
+
+<details><summary>8x8x8x8 answer</summary>
+<p>
+
+```java
+System.out.println(Math.pow(8, 4));
+```
+</p>
+</details>
+
+
+<details><summary>square root of 64 answer</summary>
+<p>
+
+```java
+System.out.println(Math.sqrt(64));
+```
+</p>
+</details>
+
+
+<details><summary>square root of 65 answer</summary>
+<p>
+
+```java
+System.out.println(Math.sqrt(65));
+```
+</p>
+</details>
+
+
+<details><summary>difference between 12 squared and 5 squared answer</summary>
+<p>
+
+```java
+System.out.println(Math.sqrt(Math.abs(Math.pow(12, 2) - Math.pow(5, 2))));
+```
+</p>
+</details>
+
+---
+
+**An example of single vs double quotes**
+
+<details><summary>Click Here</summary>
+<p>
+
+```java
+	
+class Main {
+  public static void main(String[] args) {
+    System.out.println( "a" + (char)1 ); // output is a
+	System.out.println( "a" ); // output is a
+	System.out.println( 'a' + (char)1 ); // output is 98
+	System.out.println( "a" + 1 ); //output a1
+	System.out.println( 'a' + 1 ); //output 98
+  }
+}
+```
+
+        
+</p>
+</details>
+
+**Prefix & Postfix Operators**
+
+<details><summary>Click Here</summary>
+<p>
+
+***++ and - - used as a prefix or as a postfix***
+
+Assume for what is being discussed that what works for increment operators(`++`) will also work with decrement operators(`--`).  I will only use increment operators for the sake of brevity.
+	
+If you use the `++` operator as a prefix like: `++var`, the value of `var` is incremented by 1; then it returns the value.
+If you use the `++` operator as a postfix like: `var++`, the original value of `var` is returned first; then `var` is incremented by 1.
+
+```java
+class Main {
+    public static void main(String[] args) {
+        int var1 = 5, var2 = 5;
+
+        // 5 is displayed
+        // Then, var1 is increased to 6.
+        System.out.println(var1++); //output is 5
+
+        // var2 is increased to 6
+        // Then, var2 is displayed
+        System.out.println(++var2); //output is 6
+		System.out.println(var1); // output is now 6
+		System.out.println(var2); // output is still 6
+    }
+}
+```
+
+
+As a wrap-up, consider the ++ operator as: 
+ - x = x++; //Post-increment
+ - x = ++x; //Pre-increment
+
+
+	
+</p>
+</details>
+
+
+
+### Activity 2.9.1 - Math Class Worksheet 1 & 2	
+
+In pairs, work on both worksheets in class.  We will review your work in class.
+
+**ascii Table:** [ascii-table-characters.pdf](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9737398/ascii-table-characters.pdf)
+
+**Download:** [mathclassworksheet1.docx](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9778281/mathclassworksheet1.docx)
+	
+**Download:** [mathClassWorksheet2.docx](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9778287/mathClassWorksheet2.docx)
+
+---
+
+
+### Activity 2.9.2 - Roller Coaster Simulator
+
+
+**Project Overview:**
+
+Students will write a program that helps a theme park design safe roller coasters based on physics-related math. The user (acting as an engineer) inputs the parameters of a coaster hill, and the program will:
+
+* Calculate speed at the bottom of the hill
+* Estimate time to fall using height
+* Warn if g-forces exceed safety limits
+* Round values for display
+
+
+**Concepts Covered:**
+
+* `Math` class: `Math.pow`, `Math.sqrt`, `Math.abs`, `Math.max`, `Math.min`
+* `Scanner` for input
+* Decision-making and problem-solving
+* Realistic application of physics/math concepts
+
+
+**Key Functionalities:**
+
+<img width="422" height="490" alt="Image" src="https://github.com/user-attachments/assets/5e02c085-c41f-4ab5-a17b-63a53ce3ce0f" />
+
+
+---
+
+**Example Output**
+
+```java
+Welcome to the Roller Coaster Simulator
+Enter hill height (in meters): 50
+Enter slope angle (in degrees): 40
+Enter track length (in meters): 100
+
+--- Results ---
+Estimated Speed at Bottom: 31.30 m/s
+Time to Fall: 3.19 seconds
+Estimated G-force in curve: 10.0 Gs TOO DANGEROUS!
+
+Recommendation: Reduce hill height or increase curve radius.
+
+--- Rounded Data ---
+Speed Rounded Up: 32.0 m/s
+Time Rounded Down: 3.0 sec
+```
+
+---
+
+
+```java
+public class RollerCoasterSimulator {
+    private static final double GRAVITY = 9.8; // m/s^2 // DO NOT CHANGE
+
+	// Attributes (height, speen, time, gForce, angle, trackLength)
+
+
+    // Constructor
+
+
+    // Perform all calculations
+
+
+    // Return calculated results to main
+
+
+    // Helper method for safety
+
+}
+
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner posNum = new Scanner(System.in);
-        int number;
 
-        do {
-            System.out.print("Enter a positive number: ");
-            number = posNum.nextInt();
-            if (number <= 0) {
-                System.out.println("Please enter a positive number.");
-            }
-        } while (number <= 0);  // checks AFTER the block executes
 
-        System.out.println("You entered a positive number: " + number);
+		// Use Scanner to get inputs for Speed, time and GForce
+
+
+        // Get user inputs
+
+
+        // Create an instance of RollerCoasterSimulator
+        
+
+        // Get and display results
+        double speed = sim.getSpeed();
+        double time = sim.getTime();
+        double gForce = sim.getGForce();
+
+
+        if (!sim.isSafe()) {
+            // if speed Gforce is too excessive print "TOO DANGEROUS!"
+			// Recommend that the user make changes to height or curve
+			// else print "Safe for riders!"
+
+
+
+		System.out.println("\n--- Rounded Data ---");
+		// Round speed up
+		// Round time down 
+
+        input.close();
     }
 }
 ```
 
-**When to use `do-while`:** Use it when you need to guarantee the loop body runs at least once, such as menu-driven programs or input validation.
 
-### Activity 2.7a.1 - Guessing Game
-Write a java program that asks the user to pick a number between 1 - 100. Use a `do-while` loop to compare a randomly generated number with the user's guess. Tell the user how close they are if incorrect. End with a congratulatory message when correct. Include the Java Time API and test cases.
 
-### Activity 2.7a.2 - Convert program
-### Activity 2.7a.3 - Age/Name
-### Activity 2.7a.4 - `char` — Oracle
 
-### Break and Continue Keywords — *Oracle Foundations 1Z0-811*
 
-`break` immediately exits a loop. `continue` skips the rest of the current iteration and moves to the next.
+-------------------------------------------------------------------------------
 
-```java
-// break example: stop at first even number
-for (int i = 1; i <= 10; i++) {
-    if (i % 2 == 0) {
-        System.out.println("First even: " + i);
-        break;
-    }
-}
 
-// continue example: skip odd numbers
-for (int i = 1; i <= 10; i++) {
-    if (i % 2 != 0) continue;
-    System.out.println(i);  // prints 2 4 6 8 10
-}
-```
+### Activity 2.9.3 - Race Car
 
-### Activity 2.7a.5 - Break & Continue
+Starter Files: [Activity129RaceCar.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9757289/Activity129RaceCar.zip)
 
----
-
-## 2.8 for Loops
-
-**Goals**
-- Write `for` loops for counter-controlled repetition.
+Complete the `computeTime` method and the comments in Main.java
 
 ```java
-// Standard for loop
-for (int i = 0; i < 5; i++) {
-    System.out.println(i);   // 0, 1, 2, 3, 4
-}
+	//Length of the track in meters
+        double distance = 2414; // ~ 1.5 miles
+        
+        // Generate a random acceleration (integer) 
+        // for each car from 20 - 50 (inclusive)
+
+        // Create two Racecar objects
+
+        // Compute the finishing times for both cars
+        // Print times of each car
 ```
 
-### <mark>IMPORTANT: off-by-one error</mark>
-The most common loop mistake is iterating one too many or too few times:
-```java
-// WRONG: runs 6 times (0-5) when you want 5 iterations (0-4)
-for (int i = 0; i <= 5; i++) { ... }
+You will need to complete the methods and toString within Racecar.java
 
-// CORRECT: runs 5 times (0-4)
-for (int i = 0; i < 5; i++) { ... }
-```
+Include one of the options below:
+- Allow user input for driver names and/or track length
+- Add more cars using an array or list
+- Add attributes like car color or top speed
 
-### Activity 2.8.1
-### Activity 2.8.2 - Factorial X
-### Activity 2.8.3
+Submit your .java files and a screenshot of your executed program
 
----
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+	
+<details><summary>Free Response Question (FRQ)</summary>
+<p>
 
-## 2.9 Implementing Selection and Iteration Algorithms
+**Free Response Question**
+	
+Students will work in pairs during this activity.
 
-**Goals**
-- Combine `if/else` and loops to implement common algorithms.
+In this part of the activity, you and a partner will answer your first Free Response Question (FRQ). FRQs define a set of requirements that an algorithm must meet. You provide answers to the FRQ in the form of handwritten Java code.
 
-### Project Mad Libs
+FRQs are also great ways to apply the knowledge and skills you have learned. They are also on the College Board’s AP exam, representing approximately 45 percent of the Exam. You should practice hand writing your answers to FRQs since this is the format you will use on the exam.
 
-Apply all you've learned about conditionals and loops to create an interactive Mad Libs program.
+As to the structure of FRQs, the one you will complete now is a shortened version of an FRQ you might see on an exam. Other FRQs in this course will be longer and more like the FRQs you will see in an exam. In general, FRQs describe a scenario and specific requirements that your code must meet. Sometimes FRQs provide code to enhance. They can also omit irrelevant code, using comments similar to `/* implementation not shown */`. 
 
----
+Your first FRQ is titled Annuity. It requires you to write expressions using a Math method you learned in this activity and to use a return statement to return a value from a method.
 
-## 2.10 Implementing String Algorithms
+Your teacher will distribute the Annuity FRQ. Work together with a partner to write your solution.
 
-**Goals**
-- Use String methods combined with loops to process text.
+Once you complete the FRQ, ask your teacher for the scoring guidelines and with the guidelines in hand, join another team of two. Exchange solutions and grade each other’s FRQs according to the canonical (most well-established or ideal) solution.
+	
 
-```java
-// Count vowels in a string
-String word = "programming";
-int vowelCount = 0;
-for (int i = 0; i < word.length(); i++) {
-    char c = word.charAt(i);
-    if ("aeiouAEIOU".indexOf(c) >= 0) {
-        vowelCount++;
-    }
-}
-System.out.println("Vowels: " + vowelCount);
-```
+</p>
+</details>
 
-### Activity 2.10.1 - EveryOther, vowels, dbpq
-### Activity 2.10.2 - wordCount/vowelCount/Hexadecimal
 
----
+	
+________________________________________________________________________________________________________
+	
 
-## 2.11 Nested Iteration
+## Project Mad Libs
 
-**Goals**
-- Write nested loops (a loop inside another loop).
-- Determine how many times nested loops execute.
+- [ ] Apply coding concepts you have learned up to this point.
+- [ ] Apply the programming development process to create a project.
+- [ ] Capture your project and communicate how each part of your program works.
 
-```java
-// Nested loop: print multiplication table
-for (int i = 1; i <= 3; i++) {
-    for (int j = 1; j <= 3; j++) {
-        System.out.printf("%4d", i * j);
-    }
-    System.out.println();
-}
-```
+**Requirements of this project**
 
-### Activity 2.11.1 - Java Patterns
+Give a Mad Lib with five user inputs, create a user-generated story with the correct parts of speech. 
+Your program should allow a user to enter values that change the output of a story. Specifically, it should include:
+- [ ] Main Block Method (See Below)
+- [ ] a class definition header that matches the file name
+- [ ] a main method for the program
+- [ ] the use of camelCase when appropriate
+- [ ] comments describing the algorithms 
+- [ ] a variable containing the incomplete Mad Lib
+- [ ] methods from String class
+- [ ] algorithm(s) that process user input
+- [ ] algorithm(s) to parse for the parts of speech to replace
+- [ ] algorithm(s) to parse for sections to include
+	- [ ] various prompts to keep the user on track
+	- [ ] a final print statement to display the completed story
 
----
+**Penalty:**
+- [ ] Appropriate sentence structure & syntax
+- [ ] Code that causes errors
 
-## 2.12 Informal Run-Time Analysis
-
-**Goal**
-- Determine the number of times a code segment will execute.
-
-**What is Informal Code Analysis?**
-
-Informal code analysis involves reviewing and reasoning about code without executing it — also known as **code tracing**. Successful code tracing requires you to pay attention to the logic, notating how many times code executes, all variable values, and what output is produced.
-
-**Key Concepts:**
-1. **Tracing Code**: Follow the flow of logic and variable values.
-2. **Identifying Errors**: Spot compile-time errors (syntax) and runtime errors (`NullPointerException`, array bounds violations).
-3. **Understanding Behavior**: Predict what a program will output for given inputs.
-4. **Checking for Logic Errors**: Find faults in logic that produce incorrect results.
-
-**Hand-Tracing Tools:**
-
-[https://pythontutor.com/render.html#mode=display](https://pythontutor.com/render.html#mode=display)
-
-[https://cscircles.cemc.uwaterloo.ca/java_visualize/](https://cscircles.cemc.uwaterloo.ca/java_visualize/)
-
-**Summary of Informal Analysis Process:**
-1. **Understand the Problem**: Read the prompt carefully.
-2. **Simulate Execution**: Walk through the code logically.
-3. **Check for Errors**: Syntax, runtime, logic.
-4. **Test Edge Cases**: null, empty arrays, extreme values.
-
----
-
-## Project 2 — Choose Your Own Adventure
-
-**Goals**
--  Apply all you've learned about conditionals to create a "Choose Your Own Adventure" game.
--  Apply the development process to create a project.
--  Each student will create their own project
-
-**Requirements:**
-- At least three Boolean expressions that change the path in the program
-- At least **three** nested ***if/else-if/else*** clauses
-- Print statements depending on current and previous choices
-
-**You Must Include:**
-- Digital flowchart (appropriate shapes and lines)
-- Digital timeline chart
-- Main Block Method comment header
-
-**Deliverables:** Flowchart, timeline, quality screenshots of output, and completed `.java` file submitted as one PDF.
-
----
-
-## Java Time API — *Oracle Foundations 1Z0-811*
-
-> **Oracle Exam Note:** The `java.time` package (Calendar data) is tested on the Oracle Java Foundations exam (1Z0-811).
-
-Java 8 introduced the **`java.time`** package to fix issues with the older `Date` and `Calendar` classes.
-
-| Concept | Class | Example | Description |
-| ------- | ----- | ------- | ----------- |
-| Representing a date | `LocalDate` | `LocalDate.of(2024, 8, 26)` | Date (no time zone) |
-| Representing a time | `LocalTime` | `LocalTime.now()` | Time (no date) |
-| Representing both | `LocalDateTime` | `LocalDateTime.now()` | Date and time combined |
-| Formatting | `DateTimeFormatter` | `DateTimeFormatter.ofPattern("MM-dd-yyyy")` | Format into readable string |
-| Date differences | `Period` | `Period.between(d1, d2)` | Years, months, days between dates |
 
 ```java
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-
-public class DateExample {
-    public static void main(String[] args) {
-        LocalDate today = LocalDate.now();
-        System.out.println("Today's date: " + today);
-
-        LocalDate firstDay = LocalDate.of(2024, 8, 26);
-        System.out.println("First day of school: " + firstDay);
-
-        // Format a date
-        DateTimeFormatter fmt = DateTimeFormatter.ofPattern("MMMM d, yyyy");
-        System.out.println(today.format(fmt));
-
-        // Measure elapsed time
-        LocalDateTime start = LocalDateTime.now();
-        // ... do something ...
-        LocalDateTime end = LocalDateTime.now();
-        System.out.println("Elapsed: " + start.until(end, java.time.temporal.ChronoUnit.MILLIS) + " ms");
-    }
-}
+/*=============================================================================
+ |   Assignment:  Program #:  [Assignment Title]
+ |       Author:  [Your Name ]
+ |      Partner:  [Partner's Name (if any)]
+ |
+ |  Course Name:  [Course Name]
+ |   Instructor:  John Smith
+ |     Due Date:  [Due Date and Time]
+ |
+ |  Description:  [Describe the program's goal, IN DETAIL.]
+ |
+ |     Language:  [ Java version 8]
+ | Ex. Packages:  [List names and sources of all external packages
+ |                required by this program.]
+ |                
+ | Deficiencies:  [If you know of any problems with the code, provide
+ |                details here, otherwise clearly state that you know
+ |                of no unsatisfied requirements and no logic errors.]
+ *===========================================================================*/
 ```
-
-### Activity — Birthday Countdown
-### Activity — Date Formatting Challenge
-### Activity — Event Timer
