@@ -1,1591 +1,515 @@
-# Unit 3
+# Unit 3 - Class Creation
+*AP Exam Weighting: 10–18% | Suggested Pacing: ~20–22 Class Periods*
 
-## Logical Operators
+---
 
-Logical operators are used to performing logical “AND”, “OR” and “NOT” operations, i.e. the function similar to AND gate and OR gate in digital electronics. They are used to combine two or more conditions/constraints or to complement the evaluation of the original condition under particular consideration. One thing to keep in mind is the second condition is not evaluated if the first one is false.  For example, using the `&&` comparison, if the first expression is false, the value of the second expression doesn’t matter. Likewise, for the `||` comparison, if the first expression is <mark>true</mark>, the second value doesn’t matter.  When the result of a logical expression using `&&` or `||` can be determined by evaluating only the first Boolean operand, the second is not executed or evaluated. This is known as *short-circuited*.  This is used extensively to test for several conditions for making a decision.
-
-    AND Operator ( && ) – if( a && b ) [if true execute else don’t]
-    OR Operator ( || ) – if( a || b) [if one of them is true execute else don’t]
-    NOT Operator ( ! ) – !(a<b) [returns false if a is smaller than b]
-    
-    
-## 3.1 Boolean Expressions
+## 3.1 Abstraction and Program Design
 
 **Goals**
--   Understand Boolean expressions.
--   Use relational operators to compute the value of a Boolean expression.
-	-  I will be able to write a program that utilizes a Boolean expression 
+- Understand the design principles of a class.
+- Use a non-programming methodology to design code.
+- Create a roadmap for the next activities.
 
+A class is a blueprint for the objects of that class. A class contains variables and methods to store and manipulate information. To create a class, you first state whether you want it to be public or private, use the class keyword, and name the class.
 
-George Boole formulated the basic rules of Boolean algebra back in 1847. His endeavor created the mathematical logic that we use today.  Below are the relational operators that you will need to know for the AP exam.
+**Design Principles of a Class:**
 
-| Relational Operator | Description | Boolean Value |
-| :-----------------: | ----------- | ------------- |
-| a < b | a less than b | Equates to 'true' if a is less than b,'false' otherwise |
-| a <= b | a less than or equal to b | Equates to 'true' if a is less than or equal to b, 'false' otherwise. |
-| a > b | a greater than b | Equates to 'true' if a is greater than b, 'false' otherwise. |
-| a >= b | a greater than or equal to b | Equates to 'true' if a is greater than or equal to b, 'false' otherwise. |
-| a == b | a equals b\* | Equates to 'true' if a has the same value as b. |
-| a != b | a does not equal b | Equates to 'true' if a does not have the same value as b, 'false' otherwise. |
+- <mark>Encapsulation</mark>: Use access modifiers (`private`, `public`, `protected`) to encapsulate attributes, allowing controlled access through getter and setter methods.
 
-\* Sometimes this comparison can be misleading.  `==` can look at the value `a` and compare it to `b` to see if it is located at the same memory location.
+- <mark>Abstraction</mark>: The class hides implementation details and exposes only essential features.
 
-![Boolean_1](https://user-images.githubusercontent.com/12989939/197055817-30b782a8-c6fb-4610-bf3c-03db4db06cf5.PNG)
+- <mark>Modularity</mark>: A class is a modular unit that represents a single entity or concept and can be reused as needed.
 
-| A | !A |  
-| ------ | ------ |   
-| false | true |    
-| true | false |    
-  
-![Boolean_2](https://user-images.githubusercontent.com/12989939/197055928-de3c4faa-0c52-4284-9c9e-e9f93b26225e.PNG)
+- <mark>Single Responsibility Principle (SRP)</mark>: A class should only deal with managing one responsibility.
 
-| A | B | A \|\| B |
-| ----- | ----- | ----- |
-| false | false |       |
-| false | true  |       |
-| true  | false |       |
-| true  | true  |       |
-
-
-1.  Given `boolean` **variables** `a` ,`b` , and `c`, fill in the truth table for `a && (B || c)`.
-
-| a | b | c | b \|\| c | a && (b \|\| c) |
-| -----  |  ----- | -----  | ------ | ------ |
-| T | T | T |  |  |
-| T | T | F |  |  |
-| T | F | T |  |  |
-| T | F | F |  |  |
-| F | T | T |  |  |
-| F | T | F |  |  |
-| F | F | T |  |  |
-| F | F | F |  |  |
-
-<details><summary>Solution</summary>
-
-| a | b | c | b \|\| c | a && (b \|\| c) |
-| -----  |  ----- | -----  | ------ | ------ |
-| T | T | T | T | T |
-| T | T | F | T | T |
-| T | F | T | T | T |
-| T | F | F | F | F |
-| F | T | T | T | F |
-| F | T | F | T | F |
-| F | F | T | T | F |
-| F | F | F | F | F |
-    
-</details>
-
-
-In Java logical operators, if the evaluation of a logical expression exits in between before complete evaluation, then it is known as **Short-circuit**. A *short circuit* happens because the result is clear even before the complete evaluation of the expression, and the result is returned. Short circuit evaluation avoids unnecessary work and leads to efficient processing.
-
-**&& short circuit:**
-In the case of &&, the expression is evaluated until we get one false result because the result will always be false, independent of the further conditions. If there is an expression with &&(logical AND), and the first operand itself is false, then a short circuit occurs, the further expression is not evaluated, and false is returned.
-
-**|| short circuit:** 
-In the case of ||, the expression is evaluated until we get one true result because the result will always be true, independent of the further conditions. If there is an expression with ||(logical OR), and the first operand itself is true, a short circuit occurs, evaluation stops, and true is returned.
-
-
-2.  Which of the following expressions will short circuit when `happy` is `true` and `pink` is `false`?  Why?
-
-- [ ] !happy && pink
-- [ ] happy | | pink
-- [ ] pink | | happy
-
-
-<details><summary>Solution</summary>
-
-An `&&` statement short circuits when the left operand is `false`. `!happy` is `false`, so `!happy && pink` will short circuit to `false`.
-    
-An \|\| statement short circuits when the left operand is `true`.  `happy` is `true`, so `happy || pink` will short circuit to `true`.
-
-</details>
-
-
-### Activity 3.1.1  
-
-**Write the body of the method given the following requirements.**
-
-You have three numbers to work with: `ints a`, `b` and `c`.  
-- [ ] If the numbers are all different from each other, print "unique".  
-- [ ] If all of the numbers are the same, print "boring".  
-- [ ] If two of the numbers are the same, print "twins!".
-
-```java
-public void suchFun(int a, int b, int c) {
-
-
-}
-```
-
-
--------------------------------------------------------------------
-
-
-### Activity 3.1.2
-
-**Rent-a-Car:**
-- ask the user to enter their name, age, and how much money they have
-- write conditional statements using logical operators, to determine whether the user can rent a car
-  - a person must be 25 or older to rent a car
-     - if a person is old enough and has enough money ($999), print they can rent a car
-     - if a person is old enough but does not have enough money, tell them to come back with more money
-  - if a person is not old enough, let them know and tell them when they can come back
-- take care to match the sample outputs exactly
-- your program must pass all 3 tests
-
-
-```java
-//starter code
-import java.util.Scanner;
-
-class Main 
-{
-  public static void main(String[] args) 
-	{
-    Scanner input = new Scanner(System.in);
-		//your code goes below
-  }
-}
-```
-
-**Sample Output 1:**
-```java
-Enter your name:
-Maxim
-Enter your age:
-28
-How much money do you have?
-500.12
-Maxim please visit us again when you have more money.
-```
-**Sample Output 2:**
-```java
-Enter your name:
-Jorge
-Enter your age:
-30
-How much money do you have?
-1000
-Jorge we would be happy to rent you a car.  
-```
-**Sample Output 3:**
-```java
-Enter your name:
-Erika
-Enter your age:
-17
-How much money do you have?
-542364
-Erika you are too young to rent a car, please visit us again when you are 25 years old.
-```
-
-### Activity 3.1.3 - Boolean Expression
-
-**Instructions**
-Write a program that will take 2 doubles from the user.  Use Boolean Expression to compare the two values using: <, <=, =, !=, >, and >=. Evaluate if the expression is true or false.
-
-```java
-Input a number: 4
-Input a second number: 5
-
-4.0 is LESS THAN 5.0 evaluates to true
-4.0 is LESS THAN/ EQUAL to 5.0 evaluates to true
-4.0 is EQUAL to 5.0 evaluates to false
-4.0 is NOT EQUAL to 5.0 evaluates to true
-4.0 is GREATER THAN 5.0 evaluates to false
-4.0 is GREATER THAN / EQUAL to 5.0 evaluates to false
-```
-
+- <mark>Information Hiding</mark>: Making attributes `private` so external code can only interact through well-defined methods.
 
 ---
 
-
-## 3.2 If Statements and Control Flow
+## 3.2 Impact of Program Design
 
 **Goals**
--   Gain an understanding of how to control program flow with `if` statements.
--   Start to implement control flow in more complex programs.
-	-   I will be able to write a program that uses if statements to control how a program will operate
+- Understand the ethical and social implications of computing systems.
+- Understand beneficial and/or harmful effects of programs.
+- Develop awareness around ethical issues applying to internet service providers.
 
-In Java, decision driven statements are used in conjunction with mathematical logical operators to navigate complex programs.  We use these logical operators below to differentiate solutions based on specific information.
+**Ethical and Social Implications of Computing Systems:**
 
-- Less than: a < b
-- Less than or equal to: a <= b
-- Greater than: a > b
-- Greater than or equal to: a >= b
-- Equal to a == b
-- Not Equal to: a != b
+- <mark>Privacy Concerns</mark>: Computing systems often collect and store vast amounts of personal data, raising concerns about privacy and data security.
 
-You can use these conditions to perform different actions based on the decisions from user input.  
+- <mark>Bias and Discrimination</mark>: Algorithms and AI systems can inherit biases from training data, leading to discriminatory outcomes.
 
-The Java if statement is the most simple-decision making statement.  Java has the following conditional statements:
+- <mark>Cybersecurity</mark>: Computing systems' vulnerabilities pose significant risks through cyberattacks and data breaches.
 
-- Use the `if` keyword to specify a block of code to be executed, if a condition is `true`
-- Use the `else if` keyword to specify a new condition to test, if the first condition is `false`
-- Use the `else` keyword to specify a block of code to be executed, if the above conditions are `false`
-  
+- <mark>Digital Divide</mark>: Unequal access to technology can exacerbate existing social inequalities.
 
+- <mark>Employment Disruption</mark>: Automation and AI can lead to job displacement.
 
-**Basic `if` statement format**
-```java
-if(condition) 
-{
-   // Statements to execute if
-   // condition is true
-}
-```
+**Developing Awareness Around Ethical Issues for ISPs:**
 
-**Example 1**
-
-```java
-class Main {
-    public static void main(String args[]) {
-	int i = 1;
-	if (i < 5) {
-  	    System.out.println("1 < 5");
-            }
-	System.out.println("This statement is outside of the if statement.");
-  }
-}
-```
-
-**Example 2**
-```java
-class Main {
-    public static void main(String args[]) {
-        String str = "Your Name Here!";
-        int i = 1;
-	if (i == 1) {
-            System.out.println(str);
-            i++;
-            }
-        System.out.println("i = " + i);
-  }
-}
-```
-
-**Example 3**
-```java
-public class Main {
-    public static void main(String[] args) {
-        boolean Yes = true;
-        boolean No = false;
-		
-        if (Yes) {
-            System.out.println("a is true"); }
-        else {
-            System.out.println("a is false"); }
-		
-        if (No) {
-            System.out.println("b is true"); }
-        else {
-            System.out.println("b is false"); }
-  }
-}
-```
-
-Advantages of the `if-else` statement –
-
-**Conditional execution**: The `if-else` statement allows code to be executed conditionally based on the result of a Boolean expression. This provides a way to make decisions and control the flow of a program based on different inputs and conditions.
-
-**Readability**: The `if-else` statement makes code more readable by clearly indicating when a particular block of code should be executed. This makes it easier for others to understand and maintain the code.
-
-**Reusability**: By using `if-else` statements, developers can write code that can be reused in different parts of the program. This reduces the amount of code that needs to be written and maintained, making the development process more efficient.
-
-**Debugging**: The `if-else` statement can help simplify the debugging process by making it easier to trace problems in the code. By clearly indicating when a particular block of code should be executed, it becomes easier to determine why a particular piece of code is not working as expected.
-
-**Flexibility**: The `if-else` statement provides a flexible way to control the flow of a program. It allows developers to handle different scenarios and respond dynamically to changes in the program’s inputs.
-
-
-**Example 4**
-
-```java
-if (condition1) {
-  // if condition1 is true then the blocks will be executed. 
-} else if (condition2) {
-  // if the condition1 is false, but condition2 is true then the blocks for block 2 will be executed. 
-} else {
-  // if both condition1 and condition2 are false, the else statement will be executed
-}
-```
-
-```java
-public class Main {
-    public static void main(String[] args) {
-	int age = 21;
-	if (age < 12) {
-             System.out.println("You are a child.");}
-	else if (age < 19) {
-             System.out.println("You are a teenager."); }
-	else {
-             System.out.println("You are an adult."); }
-
-  }
-}
-```
-
-**Check your understanding**
-<details><summary>Program 1</summary>
-
-1.  Take a look at the code below:
-
-```java
-1	if(age >= 18);
-2	{
-3	 System.out.println( "You are a high school student." );
-4	}
-```
-
-What error(s), if any, do you see?
-
-</details>
-
----------------------------------------------------------------------------
-
-<details><summary>Program 2</summary>
-
-2. Take a look at the code below:
-
-```java
-
-1	if( age = 18 )
-2	{
-3 	 System.out.println( "You are a high school student." );
-4	}
-```
-
-
-What error(s), if any, do you see?
-
-
-</details>
-
----------------------------------------------------------------------------
-
-
-<details><summary>Program 3</summary>
-
-3. Take a look at the code below:
-
-```java
-1	if( age < 18 )
-2	{
-3	 System.out.println( "You are a minor." );
-4	}
-5	if( age < 120 )
-6	{
-7	 System.out.println( "You are an adult." );
-8	}
-9	else
-10	{
-11	 System.out.println( "You are not human!" );
-12	}
-```
-
-
-What error(s), if any, do you see?
-
-</details>
-
-
----------------------------------------------------------------------------
-
-<details><summary>Program 4</summary>
-
-4.  Take a look at the code below:
-
-```java
-1	if( age < 18 )
-2		System.out.print( "You are a minor, " );
-3		System.out.println( "but you will grow up!" );
-```
-
-What error(s), if any, do you see?
-
-</details>
-
----------------------------------------------------------------------------
-
-
-<details><summary>Program 5</summary>
-
-5.  Take a look at the code below:
-
-```java
-1	if( age < 18 )
-2	{
-3	 System.out.println( "You are a minor." );
-4	}
-5	else
-6	{
-7	 System.out.println( 'You are an adult.' );
-8	}
-9	else
-10	{
-11	 System.out.println( "You are not human!" );
-12	}
-```
-
-What error(s), if any, do you see?
-
-</details>
-
----------------------------------------------------------------------------
-
-
-
-> **NOTE:** *<mark>The body of an if statement in Java is not dependent on indentation.</mark> Indenting in Java is a strong convention that makes code segments readable. Java is often flexible about spacing. The three constructs below are equivalent and like indentation, spacing is used to improve readability.*
-
-```java
-1	// Example 1
-2	if(b!=0){System.out.println("...");}
-
-1	// Example 2
-2	if (b!=0)
-3	    {System.out.println("...");}
-
-1	//Example 3
-2	if (b!=0){
-3	System.out.println("...");
-4	}
-```
-  The `parseint` method is used to get the primitive data type of a certain String.
-
-Following are all the variants of the `parseint` method:
-- `static int parseInt(String s)`
-- `static int parseInt(String s, int radix)`
-
-`parseint` parameter details:
-
-- `s` − This is a string representation of a decimal.
-- `radix` − This would be used to convert a String s into an integer.
-
-Return Value:
-- `parseInt(String s)` − This returns an integer (decimal only).
-- `parseInt(int i)` − This returns an integer, given a string representation of decimal, binary, octal, or hexadecimal (radix equals 10, 2, 8, or 16 respectively) numbers as input.
-
-
-  **Note College Board Exclusion:** You will not be required to use the `parseInt` or `parseDouble` methods on the AP exam.
-
-
-Look at the code below.
-
-```java
-
-import java.util.Scanner;
- 
-public class GuessChecker
-{
-	public static void main(String[] args)
-	{
-    /* Add any variables you will need throughout the program here. */
-  
-    // Generate the random number
-    String targetStr = makeCode();
-    //System.out.println(targetStr);  // uncomment for debugging
-    
-    // Break the random number into four variables.
-    int r1 = Integer.parseInt(targetStr.substring(0, 1));
-    int r2 = Integer.parseInt(targetStr.substring(1, 2));
-    int r3 = Integer.parseInt(targetStr.substring(2, 3));
-    int r4 = Integer.parseInt(targetStr.substring(3, 4));
-    
-    // Get the user's guess.
-    String guess = getGuess();
-    //System.out.println(guess);   // uncomment for debugging
-    
-    // Break the user's guess into four variables.
-    int g1 = Integer.parseInt(guess.substring(0, 1));
-    int g2 = Integer.parseInt(guess.substring(1, 2));
-    int g3 = Integer.parseInt(guess.substring(2, 3));
-    int g4 = Integer.parseInt(guess.substring(3, 4));
-
-    /*your code here*/
-   
-	}
- 
-  // Checks to ensure no duplicate digits in a int.
-	public static boolean hasDupes(int num)
-	{ 
-		boolean[] digs = new boolean[10];
-		while (num > 0)
-		{
-			if (digs[num % 10])
-			  return true;
-			digs[num % 10] = true;
-			num /= 10;
-		}
-		return false;
-	}
-
-  // Creates a new random 4 digit code 1000-9999 with no duplicates.
-  public static String makeCode() 
-  { 
-		int target = (int) (Math.random() * 9000 + 1000);
-		while (hasDupes(target))
-		  target = (int) (Math.random() * 9000 + 1000);
-    String targetStr = target + "";
-    return targetStr;
-  }
-
-  // Prompts the user for a guess and repeats until valid guess is made.
-  public static String getGuess() 
-  { 
-    Scanner sc = new Scanner(System.in);
-    boolean validGuess = false;
-    int userGuess = 0;
-    while (!validGuess)
-    {
-      System.out.print("Guess a 4-digit number from 1000 to 9999 with no duplicate digits: ");
-      userGuess = sc.nextInt();
-      if (!(hasDupes(userGuess) || (userGuess < 1000))) 
-        validGuess = true;
-    }
-    String userStr = userGuess + "";
-    return userStr;
-  }
-}
-
-```
-
-| Method Summary |      |
-| -------------- | ---- |
-| `getGuess()` | Prompts the user for a four-digit guess |
-| `makeCode()` | Creates the random code that will try to be guessed |
-| `boolean hasDupes(int sum)` | Used by `getGuess()` and `makeCode() to ensure that no digits are duplicated |
-
-
-### Activity 3.2.1 guessChecker Pt 1
-
-Modify the above code where you see `/*your code here*/` in the following ways:
-- Use if statements to compare each digit in the user's guess to the digit in the same position of the random number to see if they match.
-- Implement a "hit" counter that increase by one if the user's guessed digit matches the random number digit in the same position
-- Display the total number of hits at the end of your program
-- line 14: System.out.println(targetStr);  // leave this line uncommented
-
-**Sample output:**
-```java
-3768 // random number that was generated
-Guess a 4-digit number from 1000 to 9999 with no duplicate digits:  7658
-Number of hits:1
-Guess a 4-digit number from 1000 to 9999 with no duplicate digits:  3658
-Number of hits:2
-```
-
-**NOTE** You will be building this program and making changes to it as we navigate the unit.  You will submit 1 program at the end of **Unit 3.5 Compound Boolean Expressions**
-
+- <mark>Transparency</mark>: ISPs should be transparent about data collection practices and policies.
+- <mark>Net Neutrality</mark>: ISPs should treat all internet traffic equally.
+- <mark>Ethical Use of User Data</mark>: Obtain explicit consent before collecting and using personal data.
 
 ---
 
-
-### Activity 3.2.2 - Sevens Game
-
-The number 7 is often considered lucky — but not in this game!  Here, 7 is the number you want to avoid. The goal is to earn the **highest total score** from dice that **don’t** add up to seven.
-
----
-
-**What You’ll Need**
-
-* 2 Players
-* 6 Dice
-
----
-
-**How to Play**
-
-1. **Decide how many rounds to play** (no more than 10) and choose who goes first.
-
-2. **Player 1 rolls all six dice.**
-
-   * After the roll, look for **any pairs of dice** whose numbers add up to **7** (for example: 1 + 6, 2 + 5, or 3 + 4).
-   * Each pair that adds to 7 must be **removed** from play for that turn. Those dice are “set aside” and not rolled again.
-
-3. **Scoring after the roll:**
-
-   * Add up the numbers shown on the **remaining dice** (the ones not removed).
-   * This total is the player’s **current score** for that roll.
-
-4. **Rolling again (risk and reward):**
-
-   * Player 1 may roll up to **three times total** during their turn.
-   * After each roll, any new pairs that total 7 must also be removed and set aside.
-   * After each roll, the player may either **keep** their current score or **risk another roll** to try for a higher one.
-   * Once the player decides to stop, their final total for that round is recorded.
-
-5. **Player 2’s turn:**
-
-   * Player 2 follows the same steps.
-   * However, Player 2 may only roll **as many times as Player 1 did.**
-
-     * Example: if Player 1 rolled twice, Player 2 may roll up to two times (not three).
-
-6. **End of the round:**
-
-   * Both players’ scores are recorded.
-   * Continue playing until the chosen number of rounds is complete.
-
-7. **Winning the game:**
-
-   * After all rounds, add up each player’s total score.
-   * The player with the **highest total** wins!
-
----
-
-**Your program should include:**
-
-* Variables for **Player 1** and **Player 2**
-* User input for the **number of rounds** (integer, up to 10)
-* Rolling **six dice**, with the option for the user to **remove all but one die**
-* Logic for **re-rolls**, where Player 1 determines how many times Player 2 may re-roll (maximum of 3 total rolls)
-* Calculation of the total from the remaining dice each round, and adding it to each player’s cumulative score
-* A **winner announcement** after all rounds have been played
-
-
----
-
-
-**Example Round**
-
-**Players:**
-
-* Player 1: Alex
-* Player 2: Jamie
-
-**Dice:** 6 total
-**Number of Rounds:** 1 (for this example)
-**Maximum Rolls per Turn:** 3
-
----
-
-**Player 1’s Turn**
-
-**First Roll:**
-
-Alex rolls: 2, 3, 4, 5, 1, 6
-Removed dice: (1, 6), (2, 5), (3, 4)
-Remaining dice: 0
-
-Alex's total = **0**
-
-Alex decides to **roll again** because the score is 0.
-(Since all dice were removed, Alex rolls all six dice again.)
-
----
-
-**Second Roll:**
-
-Alex rolls: 2, 2, 3, 5, 4, 1
-Removed dice: (2, 5), (3, 4) 
-Remaining dice: 2, 1
-
-Alex's total = **3**
-
-Alex **stops** here and scores **3 points** for this round.
-**NOTE:** Alex rolled **twice**, so Player 2, Jamie, can roll **up to twice** as well.
-
----
-
-**Player 2’s Turn**
-
-**First Roll:**
-
-Jamie rolls: 6, 6, 3, 3, 2, 5
-Removed dice: (2, 5)
-Remaining dice: 6, 6, 3, 3
-
-Jamie’s total = **18**
-
-
----
-
-
-**End of Round**
-
-| Player           | Roll Attempts | Round Score |
-| ---------------- | ------------- | ----------- |
-| Alex (Player 1)  | 2             | 3           |
-| Jamie (Player 2) | 1             | 18          |
-
-Jamie wins this round.
-
-*If the game had more rounds, both players would keep adding to their total scores each round until all rounds are complete.*
-
-
-Submit your `.java` file(s) and a test case (`.png`, `.txt`, or `.pdf`).
-
-
----
-
-
-## 3.3 If/ Else Statements
+## 3.3 Anatomy of a Class
 
 **Goals**
--   Learn the if/else statement.
-	-   I will be able to simplify a complex program with if/else statements.
-
+- Understand the design principles of a class.
 
 ```java
-class Main {
-  public static void main(String[] args) {
-  int grade = 95;
-  if (grade >92)
-	{
-	System.out.println("You have an A in the class.");
-	}
-   else
-	{
-	System.out.println("You do not have an A in the class");
-	}
-  }
-}
-```
-
-Take a look at the code below...
-```java
-class Main {
-  public static void main(String[] args) {
-    int Age = 25;
-    int Weight = 89;
-
-	if  (Age >= 18)
-	{
-		if (Weight > 90)
-		{
-			System.out.println("You are eligible to donate blood.");
-		}
-		else
-		{
-			System.out.println("You are not eligible to donate blood.");
-		}
-	}
-	else
-	{
-		System.out.println("Age must be greater than 18.");
-	}
-  }
-}
-```
-### Activity 3.3.1 - Shipping
-
-**Starter Code:**  [starterFile_Shipping.txt](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9913050/starterFile_Shipping.txt)
-
-[.equals() Method object equality](https://ap-csa-java.github.io/CSA_JAVA-Course/Chapter_1/Unit3.html#equals-method)
-
-**Directions:**
-*Shipping*
-- [ ] ask user for the weight of package, method of shipping, and coupon code
-- **Weight**
-- - [ ] if weight is between 0 and 1.00, shippingCost is $1.
-- - [ ] if weight is between 1.01 and 5.00,
-shippingCost is $7.50 and add 1 day to shippingDays.
-- - [ ] if weight is over 5.01, shippingCost is $10.25 and add 3 days to shippingDays.
-- **Method of Shipping**
-- - [ ] "Standard" adds 3 days to shippingDays 
-- - [ ] "Express" subtracts 3 days from shippingDays and add $10 to shippingCosts
-- - [ ] "Overnight" sets shippingDays to be 1 and add $20 to shippingCosts
-- **CouponCode** If the user had the correct coupon code, subtract $10 from the shippingCost
-
-**Sample Outputs:**
-```java
-Weight of Package:
-0.5
-Method of Shipping: Standard, Express, or Overnight:
-Standard
-Coupon Code:
-none
-
-Total Shipping Cost: $1.0
-Days to Deliver: 8
-```
-```java
-Weight of Package:
-10
-Method of Shipping: Standard, Express, or Overnight:
-Express
-Coupon Code:
-none    
-
-Total Shipping Cost: $20.25
-Days to Deliver: 5
-```
-```java
-Weight of Package:
-7.5
-Method of Shipping: Standard, Express, or Overnight:
-Overnight
-Coupon Code:
-COUPON17 
-
-Total Shipping Cost: $20.25
-Days to Deliver: 1
-```
-
-### Activity 3.3.2 - Tip Calculator
-
-The Bill class can help you calculate a tip depending on the number of people who have dinner with you.
-
-Complete addTip() method so it work like this:
-- there are 8 or more people the tip is automatically 25%
-- If there are 4 or more people (but less than 8) the tip is automatically 20%
-- If there are 2 or more people (but less than 4) the tip is automatically 15%
-- Otherwise, let the user decide on the percentage of the tip.
-
-Use Main.java to test class method. Make sure to test for all possible outcomes.
-
-```java
-import java.util.Scanner;
-
-public class Bill
-{
-	//attributes
-	private double costOfMeal;
-	private int totalCustomers;
-  Scanner input = new Scanner(System.in);
+// Class definition
+public class Student {
+    // Instance variables (attributes)
+    private String name;
+    private int age;
+    private String studentId;
 
     // Constructor
-	public Bill(double totalBill, int numCustomers)
-	{
-		costOfMeal = totalBill;
-		totalCustomers = numCustomers;
-	}
-	
-	// Add a tip based on the number of guests
-
-	public void addTip()
-    {
-    /* Your code here */
-
+    public Student(String name, int age, String studentId) {
+        this.name = name;
+        this.age = age;
+        this.studentId = studentId;
     }
 
-
-    public String toString()
-    {
-        // Round the bill to two decimal places
-        double roundedBill = Math.round(costOfMeal * 100) / 100.0;
-        
-        return "The total cost of the bill with tip for " + totalCustomers + " customers comes to $" + roundedBill;
+    // Accessor (getter) method
+    public String getName() {
+        return name;
     }
-	
-	
+
+    // Mutator (setter) method
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // Method to display student information
+    public void displayInfo() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Student ID: " + studentId);
+    }
+
+    // Main method to test the Student class
+    public static void main(String[] args) {
+        Student student1 = new Student("Ted Lasso", 45, "12345");
+        System.out.println("Initial Information:");
+        student1.displayInfo();
+
+        student1.setName("Roy Kent");
+        student1.setAge(35);
+        System.out.println("\nUpdated Information:");
+        student1.displayInfo();
+    }
 }
 ```
-```java
-// starter code
-import java.util.Scanner;
-
-public class Main 
-{
-	public static void main(String[] args) 
-	{
-    int guests;
-    double cost;
-    Scanner input = new Scanner(System.in);
-    System.out.print("Number of guests: ");
-    guests = input.nextInt();
-    System.out.print("Cost of meal: $");
-    cost = input.nextDouble();
-    Bill check = new Bill(cost, guests);
-    check.addTip();
-    System.out.println(check);
-	}
-}
-
-```
-
-
-## 3.4 Else If Statements
-
-**Goals**
--   Learn multiple selections with the if/else-if/ else conditional.
-	-   I will be able to use else if statements to improve the complexity of a program.
-  
-
-A *multi-way selection* is written when there are a series of conditions with different statements for each condition. Multi-way selection is performed using if/else-if statements such that exactly one section of code is executed based on the first condition that evaluates to true.
-
-```java
-if (condition 1) // true
-    {
-    // body of the first 'if'
-    // statement to be executed
-    }
-else if (condition 2) // if condition 1 is false
-    {
-    // if condition 2 is true
-    // body of second 'if'
-    // statements to be executed
-    }
-else if (condition 3) // if condition 2 is false
-    {
-    // if condition 3 is true
-    // body of third 'if'
-    // statements to be executed
-    }
-else // if condition 3 is false
-    {
-    // body of the 'else'
-    // statements to be executed
-    }
-
-```
-
-### Activity 3.4.1 guessChecker Pt 2
-
-**Directions:** Modify your program to include “near hits.” These are correctly guessed numbers that are in the wrong position.
-
-- Report actual `hits` at the end of the program
-- Report the `near hit` counter at the end of your program 
-- Use if/else-if/else statements
-
-Comment where you made the changes include the date. No submission.
-
-### Activity 3.4.2 - Activity Director
-
-**Instructions activityDirector:**
-Write a program that will do the following:
-- choose a random number for the temperature from 10 - 101
-- if the temperature is greater than 95 or less than 20, print “Visit our shops!” 
-- As the Activities Director, it is your job to suggest appropriate activities to your guests based on the weather.
-- Use `else if` statements only
-- Write conditional `else if` statements that meet the following requirements: 
-
-``` 
-  temp >= 80:           Go swimming!
-  60 >= temp < 80:      Play tennis!
-  40 >= temp < 60:      Play golf!
-  temp <= 39.9:         Go skiing!
-``` 
-
-**Sample Output:**
-```java
-Temperature:
-72
-Play Tennis!
-```
-```java
-Temperature:
-100
-Go Swimming!
-Visit our shops!
-```
-```java
-Temperature:
-35
-Go skiing!
-```
-
-
-### Activity 3.4.3 - Smallest Divisible Number
-
-**Instructions:**
-- Write a java program that will determine the smallest number that is evenly divisible by 1,2,3,4,5,6,7,8,9, & 10.  Use Logical Operators and conditions for this program.
-- Use `else if` statements to determine if numbers 1,2,3,4,5,6,7,8,9,10 are evenly divisible by the smallest number.
- - Submit your program code. 
-
 
 ---
 
+## 3.4 Constructors
 
-## 3.4.1 Switch Statements - Oracle 
+**Goals**
+- Understand the concept of class constructors.
+- Write your own class constructors.
+- Examine call by value and reference with regard to class constructors.
+	- I will be able to write a program that utilizes constructors
 
-The switch statement is designed to be simple and fast and is not time-consuming.
+A **constructor** in Java is a special method that is used to initialize objects. The constructor is called when an object of a class is created. It can be used to set the initial values for object attributes.
 
-- A case label can be literals: `characters`, `integers`, or `strings`.
-- A case label can include mathematical operations whose result is an `int` (not a `double`).
-- A case label can include a method invocation whose result is an `int`, `char`, or `String`.
-- A case label does not allow comparison operators, logical operators, or object references other than Strings.
+Java is a *pass-by-value* language. If we pass a primitive value, we are passing a copy of that value. However, if we are passing a reference type, we are passing a reference to the data location.
 
-Inside the main method, we prompt the user to enter a number representing a day of the week (1-7).  We use a switch statement to evaluate the value of the `day` variable.  Each `case` represents a different value of `day`. If the value matches one of the `cases`, the corresponding code block is executed.  The `break` statement is used to exit the switch statement after a `case` is matched. Without `break`, the code would continue to execute the code for subsequent cases until it reaches a `break` statement.  If the value of day doesn't match any of the `case` values, the default `case` is executed, which sets `dayName` to "Invalid day."  Finally, we display the result to the user, indicating the `day` of the week based on their input.  When you run this program and enter a number between 1 and 7, it will display the corresponding day of the week.  If you enter a number outside this range, it will show "Invalid day."
+**Constructor Overloading:** It is possible to write two or more constructors within a program. The difference between the constructors are the *parameters* defined within each constructor.
+
+The **default constructor** is the constructor with no parameters. If an overloaded constructor is missing a parameter, the value will default to the default constructor.
 
 ```java
-import java.util.Scanner;
+// Example of Overloading Constructors
+class Box {
+    double width, height, depth;
 
-public class SwitchDemo {
-    public static void main(String[] args) {
-        // Create a Scanner object to get user input
-        Scanner scanner = new Scanner(System.in);
+    // constructor with no parameters specified
+    Box() {
+        width = 0;
+        height = 0;
+        depth = 0;
+    }
 
-        // Prompt the user for a day of the week (1-7)
-        System.out.print("Enter a day of the week (1-7): ");
-        int day = scanner.nextInt();
-
-        // Switch statement to determine the day of the week
-        String dayName;
-        switch (day) {
-            case 1:
-                dayName = "Sunday";
-                break;
-            case 2:
-                dayName = "Monday";
-                break;
-            case 3:
-                dayName = "Tuesday";
-                break;
-            case 4:
-                dayName = "Wednesday";
-                break;
-            case 5:
-                dayName = "Thursday";
-                break;
-            case 6:
-                dayName = "Friday";
-                break;
-            case 7:
-                dayName = "Saturday";
-                break;
-            default:
-                dayName = "Invalid day"; // This is the default case if the input is not 1-7
-        }
-
-        // Display the result
-        System.out.println("The day of the week is " + dayName);
+    // constructor with three parameters specified
+    Box(double w, double h, double d) {
+        width = w;
+        height = h;
+        depth = d;
     }
 }
-
 ```
 
-Inside the main method, we prompt the user to enter a fruit name.  We convert the input to lowercase using **`toLowerCase()`** to make the comparison case-insensitive. This ensures that "apple" and "Apple" are treated the same.  We use a **`switch`** statement to evaluate the fruit variable, which is a string.  Each case represents a different fruit name. If the fruit matches one of the cases, the corresponding code block is executed.  Again, the **`break`** statement is used to exit the **`switch`** statement after a **`case`** is matched.  If the fruit doesn't match any of the case values, the *default case* is executed, setting the category to "Unknown."  We display the result, indicating the category of the entered fruit.  When you run this program and enter a fruit name, it will display the category of the fruit based on your input. If the entered fruit is not recognized, it will show "Unknown."
+### toString() Method
+
+The `toString()` method provides a meaningful String representation of an object. It is called automatically when you print an object.
 
 ```java
-import java.util.Scanner;
+public class Car {
+    private String make;
+    private String model;
+    private int year;
 
-public class Main {
+    public Car(String make, String model, int year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+
+    @Override
+    public String toString() {
+        return "Car: " + make + " " + model + " (" + year + ")";
+    }
+
     public static void main(String[] args) {
-        // Create a Scanner object to get user input
-        Scanner myfruit = new Scanner(System.in);
+        Car car1 = new Car("Toyota", "Camry", 2022);
+        System.out.println(car1);  // Calls toString() automatically
+        // Output: Car: Toyota Camry (2022)
+    }
+}
+```
 
-        // Prompt the user for a fruit name
-        System.out.print("Enter a fruit name: ");
-        String fruit = myfruit.nextLine();
+### Activity 2.1.1
+### Activity 2.1.2 Not another Cake
+### Activity 2.1.3 Dog Pizza java
+### Activity 2.1.4 - Bicycle Revisited
+### Activity 2.1.5 Constructor Practice
 
-        // Convert the input to lowercase to make the comparison case-insensitive
-        fruit = fruit.toLowerCase();
+---
 
-        // Switch statement to determine the fruit category
-        String category;
-        switch (fruit) {
-            case "apple":
-            case "banana":
-            case "cherry":
-                category = "Tropical fruit";
-                break;
-            case "grape":
-            case "blueberry":
-            case "strawberry":
-                category = "Berry";
-                break;
-            case "orange":
-            case "lemon":
-            case "lime":
-                category = "Citrus fruit";
-                break;
-            default:
-                category = "Unknown";
-        }
+## 3.5 Methods: How to Write Them
 
-        // Display the result
-        if (!category.equals("Unknown")) {
-            System.out.println(fruit + " is a " + category + ".");
+**Goals**
+- Define behaviors of an object using non-void class methods with parameters.
+- Create new types using classes.
+
+```java
+public class BankAccount {
+    private String accountNumber;
+    private double balance;
+
+    public BankAccount(String accountNumber, double initialBalance) {
+        this.accountNumber = accountNumber;
+        this.balance = initialBalance;
+    }
+
+    // Non-void method: deposits money and returns new balance
+    public double deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            System.out.println("Deposit successful. New balance: " + balance);
         } else {
-            System.out.println("Sorry, I don't know the category of " + fruit + ".");
+            System.out.println("Invalid deposit amount.");
         }
+        return balance;
+    }
+
+    // Void method: displays account info
+    public void displayInfo() {
+        System.out.println("Account Number: " + accountNumber);
+        System.out.println("Balance: " + balance);
     }
 }
 ```
 
-### Activity 3.4.1.1 - Text-Based Calculator with Mode Selection
-**Directions:**  Write a program that is called `SmartCalculator.java` that allows the user to choose different modes (Basic Math, Geometry, and Conversions) using a **`switch` statement**. Each mode presents a different set of operations, and the user can perform calculations based on input choices.
+### 3.5.1 Accessor (Getter) Methods
 
+**Goals**
+- Understand how to properly encapsulate the attributes of a class.
+- Write methods to display encapsulated attributes.
 
-**Program Specification**
-
-1. Displays a main menu with three modes:
-
-   ```java
-   Welcome to SmartCalculator!
-   Select a mode:
-   1. Basic Math
-   2. Geometry
-   3. Conversions
-   4. Quit
-   ```
-2. Based on the user’s choice, use a **`switch`** statement to branch into the appropriate section.
-
-**Mode 1: Basic Math**
-
-* Ask the user for two numbers.
-* Then show a second menu:
-
-  ```java
-  Choose operation:
-  a. Addition
-  b. Subtraction
-  c. Multiplication
-  d. Division
-  ```
-* Use another **`switch`** to perform the selected operation.
-* Print the result with clear formatting.
-
-
-**Mode 2: Geometry**
-
-Ask for the shape type:
-
+Accessor methods (getters) are `public` methods that return the value of `private` instance variables:
 ```java
-Choose shape:
-a. Circle (Area)
-b. Rectangle (Area)
-c. Triangle (Area)
+public String getBrand() {
+    return brand;
+}
+
+public int getMaxSpeed() {
+    return maxSpeed;
+}
 ```
 
-Then:
+### 3.5.2 Mutator (Setter) Methods
 
-* Circle: ask for radius → compute area = πr²
-* Rectangle: ask for width and height → compute area = w×h
-* Triangle: ask for base and height → compute area = ½×b×h
+**Goals**
+- Write methods to change the encapsulated attributes of a class.
 
-Use `Math.PI` and `Math.pow` where needed.
-
-
-**Mode 3: Conversions**
-
-Ask the user to choose:
-
+Mutator methods (setters) are `public` methods that modify `private` instance variables:
 ```java
-Choose conversion:
-a. Celsius to Fahrenheit
-b. Fahrenheit to Celsius
-c. Inches to Centimeters
-d. Centimeters to Inches
+public void setBrand(String brand) {
+    this.brand = brand;
+}
+
+public void setMaxSpeed(int maxSpeed) {
+    this.maxSpeed = maxSpeed;
+}
 ```
-
-**Selection 4: Quit**
-
-Print:
-
-```java
-Goodbye! Thanks for using SmartCalculator.
-```
-
-
-**Challenge Options**
-
-* Wrapping the main menu in a loop so users can perform multiple operations until they choose Quit.
-* Handling invalid inputs using `default` cases.
-* Formatting results to 2 decimal places.
 
 ---
 
-**Example Output**
+## 3.6 Methods: Passing and Returning References of an Object
+
+**Goals**
+- Pass objects as parameters to methods.
+- Return objects from methods.
 
 ```java
-Welcome to SmartCalculator!
-Select a mode:
-1. Basic Math
-2. Geometry
-3. Conversions
-4. Quit
-Enter your choice: 1
-
-You selected Basic Math.
-Enter first number: 12.5
-Enter second number: 3.5
-Choose operation:
-a. Addition
-b. Subtraction
-c. Multiplication
-d. Division
-Enter your choice: c
-
-Result: 12.5 * 3.5 = 43.75
+public class Student {
+    public Student copyArgument(Student std) {
+        this.name = std.name;
+        this.grade = std.grade;
+        return std;  // returning a reference to an object
+    }
+}
 ```
-
-Submit your .java files and provide multiple test cases
-
 
 ---
 
-
-## 3.5 Compound Boolean Expressions
+## 3.7 Class Variables and Methods
 
 **Goals**
--   Understand how to evaluate a Boolean expression with multiple parts.
--   Use truth tables to simplify expressions.
-	-   I will be able to modify and improve the GuessChecker program.
-
-
-1. Using **AND** (`&&`)
-   ```java
-   int age = 25;
-   boolean hasLicense = true;
-   boolean isEligible = age >= 18 && hasLicense;
-   ```
-   **Explanation**: Here, `isEligible` will be `true` only if both `age >= 18` and `hasLicense` are `true`. In Java, `&&` is the **AND** operator, which requires both conditions to be true for the entire expression to evaluate as `true`. If either condition is false, `isEligible` will be `false`.
-
-2. Using **OR** (`||`)
-   ```java
-   int temperature = 35;
-   boolean isRaining = false;
-   boolean goForWalk = temperature >= 20 || isRaining;
-   ```
-   **Explanation**: The variable `goForWalk` will be `true` if either `temperature >= 20` or `isRaining` is `true`. In Java, `||` is the **OR** operator, meaning that only one of these conditions needs to be true for `goForWalk` to be true. If both are false, then `goForWalk` will be `false`.
-
-3. Combining **AND** and **OR** with Parentheses
-   ```java
-   boolean isWeekend = true;
-   boolean hasFreeTime = false;
-   boolean isTired = false;
-   boolean canGoHiking = isWeekend && (hasFreeTime || !isTired);
-   ```
-   **Explanation**: In this case, `canGoHiking` will be `true` if it is the weekend (`isWeekend` is `true`) **and** either there is free time (`hasFreeTime` is `true`) **or** the person is not tired (`!isTired`). The parentheses ensure that `hasFreeTime || !isTired` is evaluated together before applying the `&&` with `isWeekend`.
-
-4. Using **NOT** (`!`)
-   ```java
-   boolean isStudent = false;
-   boolean hasDiscount = !isStudent;
-   ```
-   **Explanation**: The expression `!isStudent` reverses the Boolean value of `isStudent`. If `isStudent` is `false`, then `hasDiscount` will be `true`. In Java, the **NOT** operator (`!`) is used to negate a condition.
-
-5. Complex Condition with **Multiple AND/OR/NOT**
-   ```java
-   int age = 30;
-   boolean isMember = true;
-   boolean hasDiscountCoupon = false;
-   boolean getsDiscount = (age > 25 || isMember) && !hasDiscountCoupon;
-   ```
-   **Explanation**: Here, `getsDiscount` will be `true` if either `age > 25` **or** `isMember` is `true`, but **only** if `hasDiscountCoupon` is `false`. The expression `(age > 25 || isMember)` will evaluate first, and then `!hasDiscountCoupon` is checked.
-
-6. Nested Compound Boolean Expression
-   ```java
-   int score = 80;
-   int attendance = 90;
-   boolean hasPassed = (score >= 70 && attendance >= 80) || (score >= 60 && attendance >= 90);
-   ```
-   **Explanation**: Here, `hasPassed` will be `true` if:
-   - The score is at least 70 and attendance is at least 80, **or**
-   - The score is at least 60 and attendance is at least 90.
-
-   This compound expression allows multiple pathways for a person to "pass." In Java, parentheses help control the evaluation order, ensuring that the `&&` comparisons are evaluated before the `||`.
-
-7. Example of **Short-circuiting** with `&&` and `||`
-   ```java
-   int x = 5;
-   boolean isValid = x > 0 && (x < 10 || x % 2 == 0);
-   ```
-   **Explanation**: Here, Java will evaluate `x > 0` first. If `x > 0` is `false`, then the expression short-circuits and `isValid` becomes `false` immediately. If `x > 0` is `true`, then Java evaluates the next part: `(x < 10 || x % 2 == 0)`. This condition uses `||`, so it will short-circuit if `x < 10` is `true`, without needing to evaluate `x % 2 == 0`.
-
-
-
-
-### Activity 3.5.1
-
-**Directions:** Using logical and relational operators, write a program that will take 3 numbers and return the if the number is greater than, less than or equal to the other two numbers.  Print out the results of your program.  Submit your replit link on Canvas.
+- Define behaviors of a class through static methods.
+- Define static variables that belong to the class.
 
 ```java
-Enter the first number
- 15
-Enter the second number
- 32
-Enter the third number
- 56
-A is less than B and B is less than C
-A is not greater than B
-B is not greater than C
+public class MathUtility {
+    // Static variable (belongs to the class, shared by all instances)
+    private static final double PI = 3.14159;
+    private static int count = 0;
+
+    // Static method (called on the class, not an instance)
+    public static double calculateCircleArea(double radius) {
+        return PI * radius * radius;
+    }
+
+    public static void incrementCount() {
+        count++;
+    }
+
+    public static int getCount() {
+        return count;
+    }
+}
 ```
 
-### Activity 3.5.2
+Static methods and variables are associated with the class itself rather than specific instances. Call them using the class name: `MathUtility.calculateCircleArea(5.0)`.
 
-**Instructions**
-Write a program that will use more than just <, > or =. Imagine a grandmother must approve you to date her grandchild. You can date her grandchild if you meet the following requirements:
+---
 
-- age bewteen 25 and 45
-- gainfully employed or very attractive. 
-
-Variables:
-int age
-int income = 76000;
-double cuteScale = 8.5;
-boolean date = false;
-
-**Sample Output**
-```java
-How old are you? 40
-How much money do you make?  49000
-On a scale of 0.0 to 10.0, how do you rate your looks? 8
-You are not allowed to date my grandchild!
-```
-
-
-### Activity 3.5.3 guessChecker Pt 3
-
-
-**Directions:** Update GuessChecker to use compound Boolean statements.  Give the user at minimum three opportunities to guess the correct answer and print out how many of the remaining guesses they have.  You will submit your completed program as a java file comments on Canvas.  Include tests to validate your program.
-
-```java
-9782
-Guess a 4-digit number from 1000 to 9999 with no duplicate digits:  9728
-Number of hits: 2
-Number of near hits: 2
-You have 2 guesses remaining.
-
-Guess a 4-digit number from 1000 to 9999 with no duplicate digits:  7928
-Number of hits: 0
-Number of near hits: 4
-You have 1 guesses remaining.
-
-Guess a 4-digit number from 1000 to 9999 with no duplicate digits:  9782
-Number of hits: 4
-Number of near hits: 0
-You have 0 guesses remaining.
-```
-
-## 3.6 Equivalent Boolean Expressions
-
- **Goals**
-
--   Understand De Morgan’s Laws.
-	-   I will be able to convert complex Boolean statements to conditional statements in code.
-
-
-
-**De Morgan’s law** was developed by the mathematician Augustus De Morgan in the 1800s. He created them to interpret the negation 
-of conditional expressions, like the expressions !(a > b) that you saw in the last activity.  This particular negation may seem simple, 
-but conditional expressions can become complex when joined by multiple logical operators, for example, !((x < 3) || (y > 2)). De Morgan 
-created simple laws, or rules, to help handle these types of complex conditional expressions. 
-
-Specifically, De Morgan’s laws are:
-
-    not (a and b) is the same as (not a) or (not b)
-    not (a or b) is the same as (not a) and (not b)
-    
-    To better understand these laws, you can use the distributive property of mathematics:
-
-    Law 1: not (a and b) is the same as (not a) or (not b)
-    Starting with not (a and b), distribute the not and switch the logical operator to get (not a) or (not b). 
-    In Java, this can be written as:
-
-     !(a && b) == (!a || !b)
-    Law 2: not (a or b) is the same as (not a) and (not b)
-    Again, distribute the not and switch the logical operator to get (not a) and (not b) . In Java:
-     !(a || b) == (!a && !b)
-     
-To apply De Morgan’s laws, distribute the not using the distributive property of mathematics and switch the logical operator (from and to or or from or to and).
-
-De Morgan’s laws can also be applied to conditional operators. When negating conditional operators (such as <, >, >=), they become the opposite of what they are.
-
-| Conditional Operator | De Morgan’s Law | De Morgan’s Law Applied |
-| :-----------------: | :-------------: | :----------------------: |
-| < | not < | >= |
-| > |	not > |	<= |
-| == |	not == | != |
-| <= |	not <= | > |
-| >= |	not >= | < |
-| != |	not not equal |	== |
-
-### Activity 3.6.1
-
-[DeMorgan___Starter_Files.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/9941153/DeMorgan___Starter_Files.zip)
-
-**Instructions:** 
-
-1.  In DeMorgansLaw.java, add the code to validate the first part of De Morgan’s Laws: not (a and b) is the same as (not a) or (not b).
- - Use two if/else statements, one for each expression.
- - Show output to confirm the results.
- - Test for all possible values of a and b (true | true, true | false, false | true, false | false).
-
-
-2.  Continuing in DeMorgansLaw, add the code to validate the second part of De Morgan’s Laws: not (a or b) is the same as (not a) and (not b).
- - Use two if/else statements, one for each expression.
- - Show output to confirm the results.
- - Test for all possible values of a and b (true | true, true | false, false | true, false | false).
-
-**Sample Output**
-```java
-Enter 'true' or 'false' for A
- true
-Enter 'true' or 'false' for B
- false
-NOT (a AND b) evaluates to true
-NOT a OR NOT b evaluates to true
--------------------------------------
-NOT (a OR b) evaluates to false
-NOT a AND NOT b evaluates to false
-```
-
-3.  In DeMorgansLawIf.java, reproduce the compound Boolean expressions provided in the code without using logical operators. Instead, use nested if/else statements to duplicate their logic. Note there are two sections to modify, one to reproduce !(a && b) and one to reproduce !(a || b).
-- Create truth tables if you find it helpful.
-- Test for all possible values of a and b (true | true, true | false, false | true, false | false).
-
-
-**Sample Output**
-```java
-Enter 'true' or 'false' for A
- true
-Enter 'true' or 'false' for B
- false
-NOT (a AND b) evaluates to true
-NOT (a AND b) evaluates to true
--------------------------------------
-NOT (a OR b) evaluates to false
-NOT (a OR b) evaluates to false
-```
-
-
-4.  In DeMorgansLawGTLT.java, use De Morgan’s Laws to reproduce the provided if statement, creating a new if statement that uses a logical OR. Test for all combinations of positive, negative, and zero values.
-
-- Comment where short-circuited evaluation could occur and describe how it could occur.
-- Find the equivalent compound Boolean expression in one of your truth tables and use it to create the or version.
-
-**Sample Output**
-```java
-//program with a negative input
-Enter a number for X
- -5
-Enter a number for Y
- 19
-Checking that both x and y input as a negative ... 
-at least one number is negative
-
-
-//program with positive inputs
-Enter a number for X
- 5
-Enter a number for Y
- 15
-Checking that both x and y are not negative ... 
-Both x and y are not negative
-Both x and y are not negative
-```
-
-
-### Activity 3.6.2 
-
-**Body Mass Index (BMI)**
-
-**Instructions**
-Body Mass Index (BMI) is a person's weight measured in kilograms or pounds divided by the square of height in meters or feet. A high BMI can indicate high body fat. BMI screens for weight categories that may lead to health problems, but it does not diagnose the health of an individual.
-
-| BMI | Weight Class |
-| --- | ----- |
-| < 18.5 | underweight |
-| 18.5 - 25 | normal |
-| 25.0 - 30 | overweight |
-| 30.0 > | obese |
-
-The formula for body mass index (BMI):
-
-| Measurement Units | Formula |
-| -------------- | ------- |
-| Kilograms and meters (or centimeters) | BMI = weight(kg)/ height(m)<sup>2</sup> |
-|           |  If height has been measured in centimeters, divide by 100 to convert this to meters. |
-| Pounds and inches | BMI = (weight(lbs)/height(in)<sup>2</sup>) * 703 |
-
-*[cdc.gov/healthyweight](https://www.cdc.gov/healthyweight/assessing/bmi/childrens_BMI/childrens_BMI_formula.html)*
-
-Your program must include two methods:
-- the `bmi` method must take two double parameters `height` and `weight` and returns the `bmi`
-- the `weightClass`method must take two double parameters `height` and `weight` and returns a string classifying the weight class. 
-- The `weightClass` method must call the `bmi` method.
-- Reminder: Use the Scanner class for input.  
-- **Extra credit**:  allow the user to calculate in either Metric or Imperial standards.
-
-```java
-Would you like t ocalculate your weight using metric(m) or imperial(i) standard?
-i
-
-Height (in inches): 70.0
-Weight (in pounds): 194.25
-BMI = 27.868928571428572
-You are considered overweight.
-```
-<span style="color:green"></span>
-
-## 3.7 Comparing Objects
+## 3.8 Scope and Access
 
 **Goals**
-- Learn how to compare instances of classes to one another
-- Create your own `equals` method (.equals()) for a class
-- Practice `if` statements and coding skills
-	- I will be able to write a program that compares String values and not String location	 
+- Explain where variables can be used in a program.
 
-<mark >You may recall that the String class is included in the Java language package</mark> [(See java.lang)](https://docs.oracle.com/javase/8/docs/api/java/lang/package-summary.html).  When you create a String object from its class, the object is a reference variable. For example, the following declarations create two String reference variables.
-
-`String s1 = null;`
-`String s2 = new String("HELLO");`
-
-Note that the value of the first reference variable s1 is null. It was not assigned an actual String object like s2 was. This reference variable, and in fact any reference variable, can be compared with null, using == or != to determine if the variable actually references an object.
-
-**Note:** You do not need to use the `new string` constructor to create a string.  Instead you can use `String s = "HELLO"`.  The `String` constructor is used to demonstrate object equality.
-
-### .equals() Method
-
-
-**IMPORTANT: Object Equality**
-
-In addition to comparing an object to `null`, the == operator can be used to test if two variables reference the same object. For example, consider the following code:
-
-`String s1 = new String("HELLO");`
-`String s2 = s1;`
-
-If you were to compare `s1 == s2`, the result would be `true`. Both objects refer to the same storage location in memory. Compare the above code to the following:
-
-`String s1 = new String("HELLO");`
-`String s2 = new String("HELLO");`
-
-Both `s1` and `s2` contain the same string, but they are different objects in memory, so the comparison of `s1 == s2 is false`. They are not the same object; they just happen to contain the same value. When comparing objects, `==` is used to compare object references (memory locations.) To compare the values of two objects, you must use a new method called `equals`.  Using `s1` and `s2` as an example, the syntax of the equals method is:
-
-`s1.equals(s2);`
-
-The `equals` method is a Boolean method that returns `true` if the contents of `s1` is equal to the contents of `s2`; otherwise, it returns `false`.
-
-**Notes:** The == operator is used to compare object references, and the equals method is used to compare object contents. In other words, == checks if both objects point to the same memory location, whereas the equals method compares the values in the objects.
-
-**Aliasing**
+| Variable Type | Declared In | Accessible From |
+| ------------- | ----------- | --------------- |
+| **Local variable** | Inside a method | Only within that method |
+| **Instance variable** | Class body (outside methods) | Any non-static method in the class |
+| **Static variable** | Class body with `static` keyword | Any method in the class (including static methods) |
 
 ```java
-1 public class ShapeEquals
-2 {
-3  public static void main(String[] args) 
-4  {
-5    Shape shape1 = new Shape();
-6    shape1.setShape("Triangle", 3);
-7  
-8    Shape shape2 = new Shape();
-9    shape2.setShape("Square", 4);
-10  
-11   Shape shape3 = shape1; <---
-12    shape3.setShape("Hexagon", 6); <---
-13    
-14    System.out.println(shape1.getShape());
-15  }
-16 }
+public class ScopeExample {
+    private String instanceVar = "instance";      // instance variable
+    private static int staticVar = 10;            // static variable
+
+    public void exampleMethod() {
+        int localVar = 5;                          // local variable
+        System.out.println(instanceVar);           // ✅ accessible
+        System.out.println(staticVar);             // ✅ accessible
+        System.out.println(localVar);              // ✅ accessible
+    }
+
+    public static void staticMethod() {
+        System.out.println(staticVar);             // ✅ accessible
+        // System.out.println(instanceVar);        // ❌ NOT accessible in static method
+    }
+}
 ```
-Take a look at the program above.  Looking at the program, you may have thought that the output of "shape1" would display "Triangle".  Look carefully at lines 11 and 12. When `shape3` is set to `shape1`, `shape3` points to the same address in memory as `shape1`. Any changes to `shape1` or `shape3` will change the contents of the memory, thereby changing the values of both variables. In Java, this is known as aliasing.  
 
-**Note:** Two object references are considered aliases when they both reference the same object. Object references can be compared using == and != to identify aliases. 
+**Access Modifiers:**
 
-### Project 3.7.1 - Clue
+| Modifier | Same Class | Same Package | Subclass | Other Classes |
+| -------- | ---------- | ------------ | -------- | ------------- |
+| `public` | ✅ | ✅ | ✅ | ✅ |
+| `protected` | ✅ | ✅ | ✅ | ❌ |
+| (default) | ✅ | ✅ | ❌ | ❌ |
+| `private` | ✅ | ❌ | ❌ | ❌ |
 
-[137Clue.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/10015355/137Clue.zip)
+---
+
+## 3.9 this Keyword
+
+**Goals**
+- Evaluate object reference expressions that use the keyword `this`.
+
+`this` keyword refers to the current object in a method. It is useful when attribute and parameter names are the same:
+
+```java
+public class Main {
+    int x = 2;
+
+    public Main(int x) {
+        this.x = x;  // "this.x" is the instance variable; "x" is the parameter
+    }
+
+    public static void main(String[] args) {
+        Main numObj = new Main(5);
+        System.out.println("The instantiated value of x is " + numObj.x);
+        // Output: The instantiated value of x is 5
+    }
+}
+```
+
+`this` can be used to:
+- Distinguish instance variables from parameters with the same name
+- Invoke current constructor (`this()`)
+- Pass the current object as an argument
+- Return the current object from a method
+
+---
+
+## Exceptions — *Oracle Foundations 1Z0-811*
+
+> **Oracle Exam Note:** Exception handling is tested on the Oracle Java Foundations exam (1Z0-811).
+
+An **exception** is an event that disrupts the normal flow of a program at runtime. Java uses exception handling to manage errors gracefully.
+
+**Common Java Exceptions:**
+
+| Exception | Cause |
+| --------- | ----- |
+| `ArithmeticException` | Dividing an integer by zero |
+| `NullPointerException` | Calling a method on a `null` reference |
+| `ArrayIndexOutOfBoundsException` | Accessing an invalid array index |
+| `NumberFormatException` | Parsing a non-numeric string as a number |
+| `IllegalArgumentException` | Illegal argument passed to a constructor or method |
+
+**try-catch-finally:**
+
+```java
+try {
+    // Code that might throw an exception
+    int result = 10 / 0;
+} catch (ArithmeticException e) {
+    // Handle the specific exception
+    System.out.println("Error: " + e.getMessage());
+} finally {
+    // Always executes, whether or not an exception occurred
+    System.out.println("This always runs.");
+}
+```
+
+**Multiple catch blocks:**
+```java
+try {
+    String s = null;
+    System.out.println(s.length());
+} catch (NullPointerException e) {
+    System.out.println("Null pointer: " + e.getMessage());
+} catch (Exception e) {
+    System.out.println("General error: " + e.getMessage());
+}
+```
+
+**Throwing exceptions:**
+```java
+public void setAge(int age) {
+    if (age < 0 || age > 150) {
+        throw new IllegalArgumentException("Invalid age: " + age);
+    }
+    this.age = age;
+}
+```
+
+### Activity 3.E.1 - Exception Handling Practice
+Write a program that prompts the user for an integer. Use a `try-catch` block to handle `NumberFormatException` if the user enters non-numeric input, and `ArithmeticException` if the user enters 0 for a division operation.
+
+---
+
+## Lambda Expressions — *Oracle Foundations 1Z0-811*
+
+> **Oracle Exam Note:** Lambda expressions are tested on the Oracle Java Foundations exam (1Z0-811) but are **not** on the AP CSA exam.
+
+A **lambda expression** is a short block of code that takes in parameters and returns a value. Lambda expressions are similar to anonymous methods (methods without a name).
+
+```java
+// Syntax: (parameters) -> expression
+// OR:     (parameters) -> { statements; }
+
+// Traditional approach
+import java.util.ArrayList;
+import java.util.Collections;
+
+ArrayList<String> names = new ArrayList<>();
+names.add("Charlie");
+names.add("Alice");
+names.add("Bob");
+
+// Traditional sort using Comparator
+Collections.sort(names, new java.util.Comparator<String>() {
+    public int compare(String a, String b) {
+        return a.compareTo(b);
+    }
+});
+
+// Lambda expression (much more concise)
+Collections.sort(names, (a, b) -> a.compareTo(b));
+```
+
+**Lambda with forEach:**
+```java
+// Print each name
+names.forEach(name -> System.out.println(name));
+
+// Or even shorter using method reference
+names.forEach(System.out::println);
+```
+
+**Lambda with filtering (streams):**
+```java
+import java.util.List;
+import java.util.stream.Collectors;
+
+List<String> longNames = names.stream()
+    .filter(name -> name.length() > 4)
+    .collect(Collectors.toList());
+System.out.println(longNames);
+```
+
+### Activity 3.L.1 - Lambda Sorting
+Create an ArrayList of student objects. Use a lambda expression to sort them by GPA in descending order, then print the sorted list.
+
+---
+
+## Class Design Project
 
 ```java
 /*=============================================================================
  |   Assignment:  Project 3.7.1 - Clue
  |       Author:  [Your First and Last Name (Your E-mail Address)]
- |      
+ |
  |  Course Name:  AP Computer Science A
  |   Instructor:  John Smith
  |     Due Date:  [Due Date and Time]
  |
  |  Description:  [Describe the program's goal, IN DETAIL.]
  |
- |     Language:  [java]           
- |                
+ |     Language:  [java]
+ |
  | Deficiencies:  [If you know of any problems with the code, provide
  |                details here, otherwise clearly state that you know
  |                of no unsatisfied requirements and no logic errors.]
  *===========================================================================*/
 ```
-**Directions**  Review the current program as it is currently written. Look at "what works" and "what needs work". Make the necessary changes to the program so it produces the intended outcome (see sample below).
+
+**Project 3.7.1 - Clue**
+
+[137Clue.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/10015355/137Clue.zip)
+
+**Directions** Review the current program. Look at "what works" and "what needs work". Make the necessary changes so it produces the intended outcome.
 
 This program simulates Clue.
 
@@ -1594,110 +518,14 @@ Here is what works:
 - prints out choices for the user
 - asks user for final guess
 
-
 Here is what needs to work:
+- `equals()` comparison is incorrect
+- `check()` should only get called if our guess isn't 100% correct
+- The table of Suspect, Weapon and Room should be aligned — use `\t`
+- Should print "You have the correct murderer." if correct.
+- Should print "You have the correct weapon." if correct.
+- Should print "You have the correct room." if correct.
 
-    we want to see if our guess is the same as the solution, but something is off with equals()
-    check() should only get called if our guess isn't 100% correct
-
-       - The table of the Suspect, Weapon and Room are not aligned.  Use \t to organize each column.
-       - Should print "You have the correct muderer." if we have the correct muderer.
-       - Should print "You have the correct weapon." if we have the correct weapon.
-       - Should print "You have the correct room." if we have the correct room.
-
-
-Extra: 
-- Ignore case, use .equalsIgnoreCase()
+Extra:
+- Ignore case, use `.equalsIgnoreCase()`
 - Allow the user to iterate through the program to pick the correct Suspect, Weapon and Room
-
-**Sample Output:**
-
-```java
-Welcome to Clue! Choose one from each category.
-
-Suspect				Weapon			Room
-Miss Scarlett		Candlestick		Kitchen
-Mr. Green			Knife			Ballroom
-Colonel Mustard		Lead Pipe		Conservatory
-Professor Plum		Revolver		Billiard Room
-Mrs. Peacock		Rope			Library
-Mrs. White			Wrench			Study
-									Hall
-									Lounge
-									Dining Room
-
-
-Make you final accusation, separated by the enter key:
-Miss Scarlett
-Knife
-Kitchen
-
-Congratulations!
-It was Miss Scarlett with the Knife in the Kitchen
-```
-
-
----
-
-
-## 3.8 Project
-
-**Choose Your Own Adventure**
-
--  Apply all you’ve learned about conditionals to create a “Choose Your Own Adventure” game.
--  Apply the development process to create a project.
--  Each student will create their own project
-
-In this project, you will create a “Choose Your Own Adventure” game or story. You will ask the user for several inputs 
-and use conditionals to display different choices and results. You will first plan out the path and the flow of your program on paper.
-
-**Requirements of this project**
-
-Your program should present the user with several choices. Each of those choices will branch into other choices. 
-This can be done by setting Boolean variables or executing different sections of code based on the user’s input.
-
-Looking back at previous programs and the requirements stated above, you know you will need:
-- At least three Boolean expressions that change the path in the program 
-- Print statements, depending on current and previous choices. 
-- At least **three** nested ***if/else-if/else*** clauses
-
-**You Must Include**
-- Flowchart of your program
-  - Must be digital
-  - Must use appropriate shapes and lines
-- Develop a timeline chart of when you plan to start and complete a specific task within your project
-  - Must be digital
-  - Must be posted and shared
-- If you modify the program, add new additions within your timeline
-- Main Block Method
-
-```java
-/*=============================================================================
- |   Assignment:  Project 3.8 Choose Your Own Adventure
- |       Author:  [Your First and Last Name (Your E-mail Address)]
- |      
- |  Course Name:  AP Computer Science A
- |   Instructor:  John Smith
- |     Due Date:  [Due Date and Time]
- |
- |  Description:  [Describe the program's goal, IN DETAIL.]
- |
- |     Language:  [java]           
- |                
- | Deficiencies:  [If you know of any problems with the code, provide
- |                details here, otherwise clearly state that you know
- |                of no unsatisfied requirements and no logic errors.]
- *===========================================================================*/
-```
-
-**Deliverables**
-Document and collect the following items:
-- Development process of your program
-	- documented brainstorming ideas
-	- flowchart
-	- timeline chart
-	- Quality screenshots of your program’s output 
-		- To convey your program’s functionality use more than one screenshot and explain what each one illustrates
-- Your completed code submitted as a .java file(s)
-- Your documentation submitted digitally as one pdf document
-
