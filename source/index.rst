@@ -28,7 +28,6 @@ Welcome to CSA JAVA!
    :caption: Chapter 2:
 
    Unit 4 <./Chapter_2/Unit4.md>
-   Unit 5 <./Chapter_2/Unit5.md>
 
 .. toctree:: 
    :maxdepth: 2
