@@ -1,5 +1,5 @@
 # Unit 3 - Class Creation
-*AP Exam Weighting: 10–18% | Suggested Pacing: ~20–22 Class Periods*
+*AP Exam Weighting: 10–18%*
 
 ---
 
