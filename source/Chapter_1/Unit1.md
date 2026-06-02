@@ -692,7 +692,7 @@ By the end of this activity you will be able to:
 
 ---
 
-## Background
+## Packages & APIs
 
 When you write a Java program, you do not have to build everything from scratch. Java provides thousands of pre-built classes organized into **packages**. A **package** is a folder of related classes. Together, all of these packages make up the Java **standard library**.
 
@@ -709,8 +709,11 @@ import java.util.Random;    // imports the Random class from the java.util packa
 
 ---
 
+
+## Assignment 1.7.1a — API Investigation
+
+
 >
-> ## Assignment 1.7.1a — API Investigation
 > 
 > Using the Java 8 API documentation at **https://docs.oracle.com/javase/8/docs/api/**, answer the following questions in a comment block at the top of your `Main.java` file or in a separate text document submitted alongside your code.
 > 
@@ -742,7 +745,12 @@ import java.util.Random;    // imports the Random class from the java.util packa
 > 
 > ---
 > 
-> ## Assignment 1.7.2 — Magic 8-Ball Program
+
+
+## Assignment 1.7.2 — Magic 8-Ball Program
+
+
+>
 > 
 > ### Program Description
 > 
