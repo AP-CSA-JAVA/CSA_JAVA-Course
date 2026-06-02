@@ -172,7 +172,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
       </label>
     </div>
@@ -193,8 +193,7 @@
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../home.html">Home</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Oracle Resources</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#oracle-java-foundations-1z0-811-deep-dive-topic-reference">Oracle Java Foundations (1Z0-811) — Deep Dive Topic Reference</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Resources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="AP_Resources.html">AP Resources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="SCRUM.html">SCRUM</a></li>
 </ul>
@@ -241,21 +240,21 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
           </label>
         </div>
         <article role="main" id="furo-main-content">
           <section id="oracle-resources">
 <h1>Oracle Resources<a class="headerlink" href="#oracle-resources" title="Link to this heading">¶</a></h1>
-</section>
 <section id="oracle-java-foundations-1z0-811-deep-dive-topic-reference">
-<h1>Oracle Java Foundations (1Z0-811) — Deep Dive Topic Reference<a class="headerlink" href="#oracle-java-foundations-1z0-811-deep-dive-topic-reference" title="Link to this heading">¶</a></h1>
+<h2>Oracle Java Foundations (1Z0-811) — Deep Dive Topic Reference<a class="headerlink" href="#oracle-java-foundations-1z0-811-deep-dive-topic-reference" title="Link to this heading">¶</a></h2>
 <section id="for-ap-csa-instructors-curriculum-integration-guide">
-<h2>For AP CSA Instructors · Curriculum Integration Guide<a class="headerlink" href="#for-ap-csa-instructors-curriculum-integration-guide" title="Link to this heading">¶</a></h2>
+<h3>For AP CSA Instructors · Curriculum Integration Guide<a class="headerlink" href="#for-ap-csa-instructors-curriculum-integration-guide" title="Link to this heading">¶</a></h3>
 <blockquote>
 <div><p>Each section identifies the <strong>best placement</strong> in the AP CSA pacing guide, explains the concept in full, and provides classroom-ready examples with common exam traps highlighted.</p>
 </div></blockquote>
+</section>
 </section>
 <hr class="docutils" />
 <section id="table-of-contents">
@@ -1613,8 +1612,116 @@ A: Yes — IF a JRE (or JDK) is installed on the Mac. The .class bytecode is
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Oracle Resources</a><ul>
+<li><a class="reference internal" href="#oracle-java-foundations-1z0-811-deep-dive-topic-reference">Oracle Java Foundations (1Z0-811) — Deep Dive Topic Reference</a><ul>
+<li><a class="reference internal" href="#for-ap-csa-instructors-curriculum-integration-guide">For AP CSA Instructors · Curriculum Integration Guide</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#table-of-contents">TABLE OF CONTENTS</a></li>
+<li><a class="reference internal" href="#jvm-jre">1. JVM &amp; JRE</a><ul>
+<li><a class="reference internal" href="#best-placement-in-csa-curriculum">📍 Best Placement in CSA Curriculum</a></li>
+<li><a class="reference internal" href="#concept-overview">Concept Overview</a></li>
+<li><a class="reference internal" href="#key-exam-nuances">Key Exam Nuances</a></li>
+<li><a class="reference internal" href="#practice-question">✅ Practice Question</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#the-this-keyword">2. The <code class="docutils literal notranslate"><span class="pre">this</span></code> Keyword</a><ul>
+<li><a class="reference internal" href="#id1">📍 Best Placement in CSA Curriculum</a></li>
+<li><a class="reference internal" href="#id2">Concept Overview</a></li>
+<li><a class="reference internal" href="#use-case-1-disambiguate-field-from-parameter-most-common">Use Case 1 — Disambiguate field from parameter (most common)</a></li>
+<li><a class="reference internal" href="#use-case-2-constructor-chaining-with-this">Use Case 2 — Constructor chaining with <code class="docutils literal notranslate"><span class="pre">this()</span></code></a></li>
+<li><a class="reference internal" href="#use-case-3-passing-the-current-object-as-an-argument">Use Case 3 — Passing the current object as an argument</a></li>
+<li><a class="reference internal" href="#this-vs-super-key-contrast-for-inheritance-week"><code class="docutils literal notranslate"><span class="pre">this</span></code> vs <code class="docutils literal notranslate"><span class="pre">super</span></code> — Key Contrast for Inheritance Week</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#oop-principles">3. OOP Principles</a><ul>
+<li><a class="reference internal" href="#id3">📍 Best Placement in CSA Curriculum</a></li>
+<li><a class="reference internal" href="#the-four-pillars">The Four Pillars</a><ul>
+<li><a class="reference internal" href="#a-encapsulation">3A. Encapsulation</a></li>
+<li><a class="reference internal" href="#b-inheritance">3B. Inheritance</a></li>
+<li><a class="reference internal" href="#c-polymorphism">3C. Polymorphism</a></li>
+<li><a class="reference internal" href="#d-abstraction">3D. Abstraction</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#packages-classpath">4. Packages &amp; CLASSPATH</a><ul>
+<li><a class="reference internal" href="#id4">📍 Best Placement in CSA Curriculum</a></li>
+<li><a class="reference internal" href="#id5">Concept Overview</a></li>
+<li><a class="reference internal" href="#declaring-a-package">Declaring a Package</a></li>
+<li><a class="reference internal" href="#importing-a-package">Importing a Package</a></li>
+<li><a class="reference internal" href="#the-classpath">The CLASSPATH</a></li>
+<li><a class="reference internal" href="#java-lang-vs-java-util-what-s-automatically-available"><code class="docutils literal notranslate"><span class="pre">java.lang</span></code> vs <code class="docutils literal notranslate"><span class="pre">java.util</span></code> — What’s Automatically Available</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#access-modifiers-visibility">5. Access Modifiers &amp; Visibility</a><ul>
+<li><a class="reference internal" href="#id6">📍 Best Placement in CSA Curriculum</a></li>
+<li><a class="reference internal" href="#the-four-access-levels">The Four Access Levels</a></li>
+<li><a class="reference internal" href="#examples-across-all-four-levels">Examples Across All Four Levels</a></li>
+<li><a class="reference internal" href="#applying-to-methods-same-rules">Applying to Methods — Same Rules</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#throwable-hierarchy-exception-handling">6. Throwable Hierarchy &amp; Exception Handling</a><ul>
+<li><a class="reference internal" href="#id7">📍 Best Placement in CSA Curriculum</a></li>
+<li><a class="reference internal" href="#the-throwable-hierarchy">The Throwable Hierarchy</a></li>
+<li><a class="reference internal" href="#checked-vs-unchecked">Checked vs. Unchecked</a></li>
+<li><a class="reference internal" href="#try-catch-finally-mechanics">try / catch / finally Mechanics</a></li>
+<li><a class="reference internal" href="#e-getmessage-vs-e-tostring-vs-e-printstacktrace"><code class="docutils literal notranslate"><span class="pre">e.getMessage()</span></code> vs <code class="docutils literal notranslate"><span class="pre">e.toString()</span></code> vs <code class="docutils literal notranslate"><span class="pre">e.printStackTrace()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#swallowing-empty-catch-blocks">7. “Swallowing” — Empty Catch Blocks</a><ul>
+<li><a class="reference internal" href="#id8">📍 Best Placement in CSA Curriculum</a></li>
+<li><a class="reference internal" href="#what-it-is">What It Is</a></li>
+<li><a class="reference internal" href="#why-it-s-dangerous">Why It’s Dangerous</a></li>
+<li><a class="reference internal" href="#what-to-do-instead">What to Do Instead</a></li>
+<li><a class="reference internal" href="#exam-nuance-what-does-the-code-actually-do">Exam Nuance — What Does the Code ACTUALLY Do?</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#comparing">8. Comparing</a><ul>
+<li><a class="reference internal" href="#id9">📍 Best Placement in CSA Curriculum</a></li>
+<li><a class="reference internal" href="#three-tools-three-purposes">Three Tools, Three Purposes</a></li>
+<li><a class="reference internal" href="#comparing-primitives-is-correct">Comparing Primitives — <code class="docutils literal notranslate"><span class="pre">==</span></code> is correct</a></li>
+<li><a class="reference internal" href="#comparing-objects-tests-reference-not-content">Comparing Objects — <code class="docutils literal notranslate"><span class="pre">==</span></code> tests REFERENCE, not content</a></li>
+<li><a class="reference internal" href="#string-pool-trap-from-the-exam">String Pool Trap (from the Exam)</a></li>
+<li><a class="reference internal" href="#compareto-ordering"><code class="docutils literal notranslate"><span class="pre">.compareTo()</span></code> — Ordering</a></li>
+<li><a class="reference internal" href="#comparing-null-a-common-bug">Comparing <code class="docutils literal notranslate"><span class="pre">null</span></code> — A Common Bug</a></li>
+<li><a class="reference internal" href="#wrapper-class-integer-caching-sneaky-trap">Wrapper Class Integer Caching — Sneaky Trap</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#visibility-scope-vs-lifespan-scope">9. Visibility Scope vs. Lifespan Scope</a><ul>
+<li><a class="reference internal" href="#id10">📍 Best Placement in CSA Curriculum</a></li>
+<li><a class="reference internal" href="#two-different-questions">Two Different Questions</a></li>
+<li><a class="reference internal" href="#visibility-scope-four-levels">Visibility Scope — Four Levels</a></li>
+<li><a class="reference internal" href="#lifespan-storage-scope-the-three-categories">Lifespan / Storage Scope — The Three Categories</a><ul>
+<li><a class="reference internal" href="#local-variables-shortest-life">1. Local Variables — shortest life</a></li>
+<li><a class="reference internal" href="#instance-variables-medium-life">2. Instance Variables — medium life</a></li>
+<li><a class="reference internal" href="#static-variables-longest-life">3. Static Variables — longest life</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#variable-shadowing-the-common-bug">Variable Shadowing — The Common Bug</a></li>
+<li><a class="reference internal" href="#loop-variable-scope-exam-trap">Loop Variable Scope — Exam Trap</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#curriculum-integration-summary">CURRICULUM INTEGRATION SUMMARY</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
