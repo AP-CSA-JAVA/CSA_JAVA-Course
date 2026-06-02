@@ -1,4 +1,5 @@
-# Unit 4 - Data Collections
+# Unit 4
+## Data Collections
 *AP Exam Weighting: 30–40%*
 
 ---
@@ -584,8 +585,11 @@ Build a movie ratings database using an `ArrayList<Movie>`. Load data from a tex
 
 ---
 
-# Unit 5 — Inheritance, Polymorphism, and OOP Design
-*AP Exam Weighting: Part of Unit 4 (10%) | Suggested Pacing: ~18–20 Class Periods*
+# Unit 5 
+## Inheritance, Polymorphism, and OOP Design
+
+
+*AP Exam Weighting: Part of Unit 4 (10%)*
 
 > **Note:** This content corresponds to AP CSA Unit 9 (Inheritance) and aligns with the Oracle Java Foundations exam (1Z0-811) topics: superclasses & subclasses, subclass constructors, overriding methods, super methods, inheritance hierarchies, polymorphism, abstract classes, and interfaces.
 
