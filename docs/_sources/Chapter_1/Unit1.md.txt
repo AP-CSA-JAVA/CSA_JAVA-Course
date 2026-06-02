@@ -1,4 +1,4 @@
-# Unit 1 — Using Objects and Methods
+# Unit 1 - Using Objects and Methods
 *AP Exam Weighting: 15–25%*
 
 ### AP Computer Science A — Assignment Rubric
