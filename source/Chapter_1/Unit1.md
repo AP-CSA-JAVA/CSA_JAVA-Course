@@ -659,6 +659,7 @@ Your output should look similar to the example above. You will write a **widenin
 
 - [ ] Understand what an API is and how Java libraries provide pre-built functionality.
 - [ ] Import and use packages from the Java standard library.
+- [ ] Explain where objects are stored in memory when created with `new`.
 
 Java's standard library (API) provides pre-built classes and methods organized into packages:
 
@@ -677,18 +678,85 @@ import java.util.ArrayList;
 
 ---
 
+## Where Do Objects Live? — Heap Memory
 
-## Assignment 1.7.1 — Magic 8-Ball: Exploring APIs and Libraries
+Every time your program uses `new` to create an object — a `Scanner`, a `Random`, a `String` — Java needs somewhere to store it. That somewhere is called the **heap**.
 
-**Overview**
+The **heap** is the part of your computer's memory where Java stores **objects** — anything created with the `new` keyword. Think of it like a **giant storage warehouse**. Every time your program runs `new Scanner(System.in)` or `new Random()`, Java rents out a chunk of space in that warehouse, puts the object in it, and hands you back an **address** (called a **reference**) so you can find it later.
 
-In this activity you will explore the Java API documentation to understand how libraries and packages work, then build a Magic 8-Ball program that imports and uses classes from the Java standard library.
+> Your variable doesn't *hold* the object — it holds the *address* of where the object lives in the warehouse.
 
-By the end of this activity you will be able to:
-- [ ] Explain what an API and a library are in the context of Java
-- [ ] Navigate the official Java API documentation at [docs.oracle.com](https://docs.oracle.com/javase/8/docs/api/)
-- [ ] Use an `import` statement to include a package in your program
-- [ ] Call methods from `java.util.Scanner` and `java.util.Random` meaningfully in a program
+```java
+Scanner input = new Scanner(System.in);
+//      ↑                   ↑
+//  address tag        the actual object — stored in the heap
+```
+
+This is why two variables can point to the same object:
+
+```java
+Scanner a = new Scanner(System.in);
+Scanner b = a;             // b gets a COPY of the address, not a copy of the Scanner
+
+// a and b are now pointing at the SAME Scanner object in the heap
+```
+
+When nothing holds that address anymore, Java's **garbage collector** sweeps through the warehouse and clears out the unclaimed space automatically — unlike languages like C++ where you'd have to clean it up yourself. This is one of Java's key safety features.
+
+---
+
+### Heap vs. Stack — The Quick Contrast
+
+Java actually uses two memory areas your programs interact with constantly:
+
+| | Stack | Heap |
+|---|---|---|
+| Stores | Local variables & method calls | Objects (`new` anything) |
+| Size | Small, fixed | Large, flexible |
+| Managed by | Automatically (method returns) | Garbage collector |
+| Speed | Very fast | Slower |
+
+```java
+public static void main(String[] args)
+{
+    int x = 5;                        // x lives on the STACK — primitive, gone when method ends
+    Scanner input = new Scanner(System.in);  // Scanner object lives in the HEAP
+                                             // input is just the address
+}
+// When main() finishes: x is gone instantly
+// The Scanner object stays in the heap until the garbage collector clears it
+```
+
+---
+
+### `null` — An Address That Points to Nothing
+
+Because variables hold *addresses*, it is possible to have a variable that holds no address at all. That value is `null`.
+
+```java
+Scanner input = null;   // input holds no address — points to nothing in the heap
+input.nextLine();       // NullPointerException — you followed a blank address label
+```
+
+This is one of the most common runtime errors in Java. You will see it often, and now you know exactly why it happens.
+
+---
+
+### The String Pool — A Special Section of the Heap
+
+The heap has one special region called the **String pool**. When you create a String using a literal (quotes), the JVM checks the pool first — if that String already exists, it reuses the same object rather than creating a new one.
+
+```java
+String s1 = "hello";              // JVM creates "hello" in the pool
+String s2 = "hello";              // JVM finds "hello" already in pool — reuses it
+String s3 = new String("hello");  // forces a brand-new object in the heap, bypasses pool
+
+System.out.println(s1 == s2);         // true  — same address in the pool
+System.out.println(s1 == s3);         // false — s3 is a different heap object
+System.out.println(s1.equals(s3));    // true  — same content
+```
+
+> ⚠️ **Oracle Exam Note:** Always use `.equals()` to compare String content — never `==`. The `==` operator compares *addresses*, not content, and the String pool makes its behavior unpredictable.
 
 ---
 
@@ -709,59 +777,77 @@ import java.util.Random;    // imports the Random class from the java.util packa
 
 ---
 
+## Assignment 1.7.1 — Magic 8-Ball: Exploring APIs and Libraries
+
+**Overview**
+
+In this activity you will explore the Java API documentation to understand how libraries and packages work, then build a Magic 8-Ball program that imports and uses classes from the Java standard library.
+
+By the end of this activity you will be able to:
+- [ ] Explain what an API and a library are in the context of Java
+- [ ] Explain what the heap is and where objects live when created with `new`
+- [ ] Navigate the official Java API documentation at [docs.oracle.com](https://docs.oracle.com/javase/8/docs/api/)
+- [ ] Use an `import` statement to include a package in your program
+- [ ] Call methods from `java.util.Scanner` and `java.util.Random` meaningfully in a program
+
+---
 
 ## Assignment 1.7.1a — API Investigation
 
-
 >
-> 
+>
 > Using the Java 8 API documentation at **https://docs.oracle.com/javase/8/docs/api/**, answer the following questions in a comment block at the top of your `Main.java` file or in a separate text document submitted alongside your code.
-> 
+>
 > ### Section A — Packages and Classes
-> 
+>
 > 1. What is the full package path for the `Scanner` class?
 > 2. What is the full package path for the `Random` class?
 > 3. Name **two other classes** found in the `java.util` package.
 > 4. Name **one class** found in the `java.time` package and describe what it does in one sentence.
 > 5. In your own words, what is the difference between a **package** and a **class**?
-> 
+>
 > ### Section B — Scanner Class
-> 
+>
 > Navigate to the `Scanner` class in the documentation.
-> 
+>
 > 6. What does the `Scanner` constructor `Scanner(InputStream source)` do?
 > 7. What method would you use to read a full line of text entered by the user? What does it return?
 > 8. What method would you use to read a single `int` entered by the user?
 > 9. Why is it important to call `scanner.close()` when you are done using a Scanner?
-> 
+>
 > ### Section C — Random Class
-> 
+>
 > Navigate to the `Random` class in the documentation.
-> 
+>
 > 10. What does `nextInt(int bound)` return? What is the range of values it can produce?
 > 11. How would you use `nextInt()` to generate a random number between **1 and 8 inclusive**? Write the expression.
 > 12. What is the difference between `nextInt()` and `nextDouble()`?
 > 13. Why might a program produce the same "random" sequence every time if you pass a fixed value to the `Random` constructor (e.g., `new Random(42)`)?
-> 
+>
+> ### Section D — Memory & the Heap *(Oracle 1Z0-811)*
+>
+> 14. In your own words, what is the **heap** and what gets stored there?
+> 15. When you write `Scanner input = new Scanner(System.in);`, what does the variable `input` actually hold — the object itself, or something else? Explain.
+> 16. What is `null`, and what happens at runtime if you try to call a method on a `null` variable?
+> 17. What is the **String pool**, and why does `==` sometimes return `true` when comparing two String variables that were never explicitly set equal to each other?
+> 18. What is the **garbage collector** and why is it considered a safety feature of Java?
+>
 > ---
-> 
-
 
 ## Assignment 1.7.2 — Magic 8-Ball Program
 
-
 >
-> 
+>
 > ### Program Description
-> 
+>
 > Build a Magic 8-Ball program that:
 > - Asks the user to enter a yes/no question
 > - Uses `java.util.Random` to select one of **eight responses** at random
 > - Displays the response in a formatted output
 > - Asks the user if they want to ask another question and loops until they choose to quit
-> 
+>
 > ### Requirements Checklist
-> 
+>
 > - [ ] Include the required block comment header in `Main.java` (all fields completed)
 > - [ ] Import `java.util.Scanner` and `java.util.Random`
 > - [ ] Use a `String` array to store all eight Magic 8-Ball responses
@@ -771,11 +857,12 @@ import java.util.Random;    // imports the Random class from the java.util packa
 > - [ ] Use `String.toUpperCase()` or formatting to display the response dramatically
 > - [ ] Close the Scanner before the program ends
 > - [ ] Include meaningful inline comments throughout
-> 
+> - [ ] In your block comment header, add **one sentence** explaining where the `Scanner` and `Random` objects live in memory when your program runs
+>
 > ### The Eight Responses
-> 
+>
 > Your program must include **all eight** of the following responses:
-> 
+>
 > | # | Response |
 > |:-:|----------|
 > | 1 | It is certain. |
@@ -786,110 +873,116 @@ import java.util.Random;    // imports the Random class from the java.util packa
 > | 6 | My sources say no. |
 > | 7 | Outlook not so good. |
 > | 8 | Very doubtful. |
-> 
+>
 > ---
-> 
+>
 > ## Starter Code
-> 
+>
 > ```java
 > // Import the required packages
 > import java.util.Scanner;
 > import java.util.Random;
-> 
+>
 > public class Main
 > {
 >     public static void main(String[] args)
 >     {
 >         // Create Scanner and Random objects
+>         // Note: both objects are stored in the HEAP — these variables hold their addresses
 >         Scanner input = new Scanner(System.in);
 >         Random rand = new Random();
-> 
->         // Array of Magic 8-Ball responses
+>
+>         // Array of Magic 8-Ball responses (also stored in the heap)
 >         String[] responses = {
 >             // your eight responses here
 >         };
-> 
+>
 >         String continueChoice = "yes";
-> 
+>
 >         System.out.println("Welcome to the Magic 8-Ball!");
 >         System.out.println("============================");
-> 
+>
 >         // Loop while the user wants to keep asking questions
 >         while (continueChoice.equalsIgnoreCase("yes"))
 >         {
 >             // Prompt the user for a question
-> 
+>
 >             // Generate a random index using rand.nextInt()
-> 
+>
 >             // Display the response
-> 
+>
 >             // Ask if the user wants to continue
-> 
+>
 >         }
-> 
+>
 >         System.out.println("The Magic 8-Ball has spoken. Goodbye!");
-> 
->         // Close the Scanner
+>
+>         // Close the Scanner — releases the heap resource
 >         input.close();
 >     }
 > }
 > ```
 >
-> 
-> 
-> 
+>
+>
+>
 > ## Sample Output
-> 
+>
 > ```
 > Welcome to the Magic 8-Ball!
 > ============================
 > Ask your yes/no question: Will I ace my CS test?
-> 
+>
 > 🎱 The Magic 8-Ball says...
 >    WITHOUT A DOUBT.
-> 
+>
 > Ask another question? (yes/no): yes
-> 
+>
 > Ask your yes/no question: Will it rain tomorrow?
-> 
+>
 > 🎱 The Magic 8-Ball says...
 >    REPLY HAZY, TRY AGAIN.
-> 
+>
 > Ask another question? (yes/no): no
-> 
+>
 > The Magic 8-Ball has spoken. Goodbye!
 > ```
-> 
+>
 > ---
-> 
+>
 > ## Extension Challenges
-> 
+>
 > Completed early? Try one or more of the following:
-> 
+>
 > - [ ] **Expand the responses** — add at least four more responses of your own for a total of twelve
 > - [ ] **Add a response counter** — track and display how many questions the user asked at the end
 > - [ ] **Categorize responses** — use a second array to label each response as `"Positive"`, `"Neutral"`, or `"Negative"` and display the category alongside the answer
-> - [ ] **Seeded Random** — let the user enter a "lucky number" that seeds the Random object. Investigate what happens when they use the same number twice.
-> 
+> - [ ] **Seeded Random** — let the user enter a "lucky number" that seeds the Random object. Investigate what happens when they use the same number twice. *(Hint: this connects to how the JVM initializes objects in the heap)*
+> - [ ] **Null guard** — add a check so that if the user enters a blank question, the program prints a warning instead of sending an empty question to the 8-Ball. Think about what `null` and empty strings mean in the heap.
+>
 > ---
-> 
+>
 > ## Submission
-> 
+>
 > Upload the following to the assignment:
-> 
+>
 > - [ ] `Main.java` — your completed program with block comment header
 > - [ ] Test Cases document — showing at least **three** runs of your program with different questions and the responses generated
-> 
+>
 > ---
-> 
+>
 > ## Grading
-> 
+>
 > This assignment is graded using the **AP CSA Generic Assignment Rubric** (5-point scale). Pay particular attention to:
 > - Import statements are present and used (not just written)
 > - `Random.nextInt()` is used correctly to stay within the bounds of your array
 > - Scanner is closed before the program ends
 > - Part 1 investigation questions are answered in your block comment or submitted document
-> 
+> - Section D memory questions are answered accurately and in the student's own words
+
+
+---
+
 
 ## 1.8 Documentation with Comments
 
