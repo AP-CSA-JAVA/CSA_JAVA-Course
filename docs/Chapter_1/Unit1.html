@@ -1125,6 +1125,7 @@ Total Sales: $64.3
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Understand what an API is and how Java libraries provide pre-built functionality.</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Import and use packages from the Java standard library.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Explain where objects are stored in memory when created with <code class="docutils literal notranslate"><span class="pre">new</span></code>.</p></li>
 </ul>
 <p>Java’s standard library (API) provides pre-built classes and methods organized into packages:</p>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -1154,17 +1155,96 @@ Total Sales: $64.3
 </div>
 </section>
 <hr class="docutils" />
-<section id="assignment-1-7-1-magic-8-ball-exploring-apis-and-libraries">
-<h2>Assignment 1.7.1 — Magic 8-Ball: Exploring APIs and Libraries<a class="headerlink" href="#assignment-1-7-1-magic-8-ball-exploring-apis-and-libraries" title="Link to this heading">¶</a></h2>
-<p><strong>Overview</strong></p>
-<p>In this activity you will explore the Java API documentation to understand how libraries and packages work, then build a Magic 8-Ball program that imports and uses classes from the Java standard library.</p>
-<p>By the end of this activity you will be able to:</p>
-<ul class="contains-task-list simple">
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Explain what an API and a library are in the context of Java</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Navigate the official Java API documentation at <a class="reference external" href="https://docs.oracle.com/javase/8/docs/api/">docs.oracle.com</a></p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use an <code class="docutils literal notranslate"><span class="pre">import</span></code> statement to include a package in your program</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Call methods from <code class="docutils literal notranslate"><span class="pre">java.util.Scanner</span></code> and <code class="docutils literal notranslate"><span class="pre">java.util.Random</span></code> meaningfully in a program</p></li>
-</ul>
+<section id="where-do-objects-live-heap-memory">
+<h2>Where Do Objects Live? — Heap Memory<a class="headerlink" href="#where-do-objects-live-heap-memory" title="Link to this heading">¶</a></h2>
+<p>Every time your program uses <code class="docutils literal notranslate"><span class="pre">new</span></code> to create an object — a <code class="docutils literal notranslate"><span class="pre">Scanner</span></code>, a <code class="docutils literal notranslate"><span class="pre">Random</span></code>, a <code class="docutils literal notranslate"><span class="pre">String</span></code> — Java needs somewhere to store it. That somewhere is called the <strong>heap</strong>.</p>
+<p>The <strong>heap</strong> is the part of your computer’s memory where Java stores <strong>objects</strong> — anything created with the <code class="docutils literal notranslate"><span class="pre">new</span></code> keyword. Think of it like a <strong>giant storage warehouse</strong>. Every time your program runs <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Scanner(System.in)</span></code> or <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Random()</span></code>, Java rents out a chunk of space in that warehouse, puts the object in it, and hands you back an <strong>address</strong> (called a <strong>reference</strong>) so you can find it later.</p>
+<blockquote>
+<div><p>Your variable doesn’t <em>hold</em> the object — it holds the <em>address</em> of where the object lives in the warehouse.</p>
+</div></blockquote>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Scanner</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="c1">//      ↑                   ↑</span>
+<span class="c1">//  address tag        the actual object — stored in the heap</span>
+</pre></div>
+</div>
+<p>This is why two variables can point to the same object:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Scanner</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<span class="n">Scanner</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w">             </span><span class="c1">// b gets a COPY of the address, not a copy of the Scanner</span>
+
+<span class="c1">// a and b are now pointing at the SAME Scanner object in the heap</span>
+</pre></div>
+</div>
+<p>When nothing holds that address anymore, Java’s <strong>garbage collector</strong> sweeps through the warehouse and clears out the unclaimed space automatically — unlike languages like C++ where you’d have to clean it up yourself. This is one of Java’s key safety features.</p>
+<hr class="docutils" />
+<section id="heap-vs-stack-the-quick-contrast">
+<h3>Heap vs. Stack — The Quick Contrast<a class="headerlink" href="#heap-vs-stack-the-quick-contrast" title="Link to this heading">¶</a></h3>
+<p>Java actually uses two memory areas your programs interact with constantly:</p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>Stack</p></th>
+<th class="head"><p>Heap</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Stores</p></td>
+<td><p>Local variables &amp; method calls</p></td>
+<td><p>Objects (<code class="docutils literal notranslate"><span class="pre">new</span></code> anything)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Size</p></td>
+<td><p>Small, fixed</p></td>
+<td><p>Large, flexible</p></td>
+</tr>
+<tr class="row-even"><td><p>Managed by</p></td>
+<td><p>Automatically (method returns)</p></td>
+<td><p>Garbage collector</p></td>
+</tr>
+<tr class="row-odd"><td><p>Speed</p></td>
+<td><p>Very fast</p></td>
+<td><p>Slower</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w">                        </span><span class="c1">// x lives on the STACK — primitive, gone when method ends</span>
+<span class="w">    </span><span class="n">Scanner</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span><span class="w">  </span><span class="c1">// Scanner object lives in the HEAP</span>
+<span class="w">                                             </span><span class="c1">// input is just the address</span>
+<span class="p">}</span>
+<span class="c1">// When main() finishes: x is gone instantly</span>
+<span class="c1">// The Scanner object stays in the heap until the garbage collector clears it</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="null-an-address-that-points-to-nothing">
+<h3><code class="docutils literal notranslate"><span class="pre">null</span></code> — An Address That Points to Nothing<a class="headerlink" href="#null-an-address-that-points-to-nothing" title="Link to this heading">¶</a></h3>
+<p>Because variables hold <em>addresses</em>, it is possible to have a variable that holds no address at all. That value is <code class="docutils literal notranslate"><span class="pre">null</span></code>.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Scanner</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w">   </span><span class="c1">// input holds no address — points to nothing in the heap</span>
+<span class="n">input</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span><span class="w">       </span><span class="c1">// NullPointerException — you followed a blank address label</span>
+</pre></div>
+</div>
+<p>This is one of the most common runtime errors in Java. You will see it often, and now you know exactly why it happens.</p>
+</section>
+<hr class="docutils" />
+<section id="the-string-pool-a-special-section-of-the-heap">
+<h3>The String Pool — A Special Section of the Heap<a class="headerlink" href="#the-string-pool-a-special-section-of-the-heap" title="Link to this heading">¶</a></h3>
+<p>The heap has one special region called the <strong>String pool</strong>. When you create a String using a literal (quotes), the JVM checks the pool first — if that String already exists, it reuses the same object rather than creating a new one.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;hello&quot;</span><span class="p">;</span><span class="w">              </span><span class="c1">// JVM creates &quot;hello&quot; in the pool</span>
+<span class="n">String</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;hello&quot;</span><span class="p">;</span><span class="w">              </span><span class="c1">// JVM finds &quot;hello&quot; already in pool — reuses it</span>
+<span class="n">String</span><span class="w"> </span><span class="n">s3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="s">&quot;hello&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// forces a brand-new object in the heap, bypasses pool</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">s2</span><span class="p">);</span><span class="w">         </span><span class="c1">// true  — same address in the pool</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">s3</span><span class="p">);</span><span class="w">         </span><span class="c1">// false — s3 is a different heap object</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s1</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">s3</span><span class="p">));</span><span class="w">    </span><span class="c1">// true  — same content</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>⚠️ <strong>Oracle Exam Note:</strong> Always use <code class="docutils literal notranslate"><span class="pre">.equals()</span></code> to compare String content — never <code class="docutils literal notranslate"><span class="pre">==</span></code>. The <code class="docutils literal notranslate"><span class="pre">==</span></code> operator compares <em>addresses</em>, not content, and the String pool makes its behavior unpredictable.</p>
+</div></blockquote>
+</section>
 </section>
 <hr class="docutils" />
 <section id="packages-apis">
@@ -1177,6 +1257,20 @@ Total Sales: $64.3
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">java.lang</span></code> (which contains <code class="docutils literal notranslate"><span class="pre">String</span></code>, <code class="docutils literal notranslate"><span class="pre">Math</span></code>, <code class="docutils literal notranslate"><span class="pre">Integer</span></code>, etc.) is imported <strong>automatically</strong> — you never need to import it manually.</p>
+</section>
+<hr class="docutils" />
+<section id="assignment-1-7-1-magic-8-ball-exploring-apis-and-libraries">
+<h2>Assignment 1.7.1 — Magic 8-Ball: Exploring APIs and Libraries<a class="headerlink" href="#assignment-1-7-1-magic-8-ball-exploring-apis-and-libraries" title="Link to this heading">¶</a></h2>
+<p><strong>Overview</strong></p>
+<p>In this activity you will explore the Java API documentation to understand how libraries and packages work, then build a Magic 8-Ball program that imports and uses classes from the Java standard library.</p>
+<p>By the end of this activity you will be able to:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Explain what an API and a library are in the context of Java</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Explain what the heap is and where objects live when created with <code class="docutils literal notranslate"><span class="pre">new</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Navigate the official Java API documentation at <a class="reference external" href="https://docs.oracle.com/javase/8/docs/api/">docs.oracle.com</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use an <code class="docutils literal notranslate"><span class="pre">import</span></code> statement to include a package in your program</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Call methods from <code class="docutils literal notranslate"><span class="pre">java.util.Scanner</span></code> and <code class="docutils literal notranslate"><span class="pre">java.util.Random</span></code> meaningfully in a program</p></li>
+</ul>
 </section>
 <hr class="docutils" />
 <section id="assignment-1-7-1a-api-investigation">
@@ -1207,6 +1301,14 @@ Total Sales: $64.3
 <li><p>What is the difference between <code class="docutils literal notranslate"><span class="pre">nextInt()</span></code> and <code class="docutils literal notranslate"><span class="pre">nextDouble()</span></code>?</p></li>
 <li><p>Why might a program produce the same “random” sequence every time if you pass a fixed value to the <code class="docutils literal notranslate"><span class="pre">Random</span></code> constructor (e.g., <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Random(42)</span></code>)?</p></li>
 </ol>
+<p class="rubric" id="section-d-memory-the-heap-oracle-1z0-811">Section D — Memory &amp; the Heap <em>(Oracle 1Z0-811)</em></p>
+<ol class="arabic simple" start="14">
+<li><p>In your own words, what is the <strong>heap</strong> and what gets stored there?</p></li>
+<li><p>When you write <code class="docutils literal notranslate"><span class="pre">Scanner</span> <span class="pre">input</span> <span class="pre">=</span> <span class="pre">new</span> <span class="pre">Scanner(System.in);</span></code>, what does the variable <code class="docutils literal notranslate"><span class="pre">input</span></code> actually hold — the object itself, or something else? Explain.</p></li>
+<li><p>What is <code class="docutils literal notranslate"><span class="pre">null</span></code>, and what happens at runtime if you try to call a method on a <code class="docutils literal notranslate"><span class="pre">null</span></code> variable?</p></li>
+<li><p>What is the <strong>String pool</strong>, and why does <code class="docutils literal notranslate"><span class="pre">==</span></code> sometimes return <code class="docutils literal notranslate"><span class="pre">true</span></code> when comparing two String variables that were never explicitly set equal to each other?</p></li>
+<li><p>What is the <strong>garbage collector</strong> and why is it considered a safety feature of Java?</p></li>
+</ol>
 </div></blockquote>
 </section>
 <hr class="docutils" />
@@ -1232,6 +1334,7 @@ Total Sales: $64.3
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use <code class="docutils literal notranslate"><span class="pre">String.toUpperCase()</span></code> or formatting to display the response dramatically</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Close the Scanner before the program ends</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Include meaningful inline comments throughout</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> In your block comment header, add <strong>one sentence</strong> explaining where the <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> and <code class="docutils literal notranslate"><span class="pre">Random</span></code> objects live in memory when your program runs</p></li>
 </ul>
 <p class="rubric" id="the-eight-responses">The Eight Responses</p>
 <p>Your program must include <strong>all eight</strong> of the following responses:</p>
@@ -1281,10 +1384,11 @@ Total Sales: $64.3
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">        </span><span class="c1">// Create Scanner and Random objects</span>
+<span class="w">        </span><span class="c1">// Note: both objects are stored in the HEAP — these variables hold their addresses</span>
 <span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
 <span class="w">        </span><span class="n">Random</span><span class="w"> </span><span class="n">rand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Random</span><span class="p">();</span>
 
-<span class="w">        </span><span class="c1">// Array of Magic 8-Ball responses</span>
+<span class="w">        </span><span class="c1">// Array of Magic 8-Ball responses (also stored in the heap)</span>
 <span class="w">        </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">responses</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="c1">// your eight responses here</span>
 <span class="w">        </span><span class="p">};</span>
@@ -1309,7 +1413,7 @@ Total Sales: $64.3
 
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;The Magic 8-Ball has spoken. Goodbye!&quot;</span><span class="p">);</span>
 
-<span class="w">        </span><span class="c1">// Close the Scanner</span>
+<span class="w">        </span><span class="c1">// Close the Scanner — releases the heap resource</span>
 <span class="w">        </span><span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
@@ -1342,7 +1446,8 @@ The Magic 8-Ball has spoken. Goodbye!
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Expand the responses</strong> — add at least four more responses of your own for a total of twelve</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Add a response counter</strong> — track and display how many questions the user asked at the end</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Categorize responses</strong> — use a second array to label each response as <code class="docutils literal notranslate"><span class="pre">&quot;Positive&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Neutral&quot;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&quot;Negative&quot;</span></code> and display the category alongside the answer</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Seeded Random</strong> — let the user enter a “lucky number” that seeds the Random object. Investigate what happens when they use the same number twice.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Seeded Random</strong> — let the user enter a “lucky number” that seeds the Random object. Investigate what happens when they use the same number twice. <em>(Hint: this connects to how the JVM initializes objects in the heap)</em></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Null guard</strong> — add a check so that if the user enters a blank question, the program prints a warning instead of sending an empty question to the 8-Ball. Think about what <code class="docutils literal notranslate"><span class="pre">null</span></code> and empty strings mean in the heap.</p></li>
 </ul>
 <hr class="docutils" />
 <p class="rubric" id="submission">Submission</p>
@@ -1359,9 +1464,11 @@ The Magic 8-Ball has spoken. Goodbye!
 <li><p><code class="docutils literal notranslate"><span class="pre">Random.nextInt()</span></code> is used correctly to stay within the bounds of your array</p></li>
 <li><p>Scanner is closed before the program ends</p></li>
 <li><p>Part 1 investigation questions are answered in your block comment or submitted document</p></li>
+<li><p>Section D memory questions are answered accurately and in the student’s own words</p></li>
 </ul>
 </div></blockquote>
 </section>
+<hr class="docutils" />
 <section id="documentation-with-comments">
 <h2>1.8 Documentation with Comments<a class="headerlink" href="#documentation-with-comments" title="Link to this heading">¶</a></h2>
 <details>
@@ -3786,8 +3893,14 @@ Available vehicles: 3
 <li><a class="reference internal" href="#casting-and-range-of-variables">1.5 Casting and Range of Variables</a></li>
 <li><a class="reference internal" href="#compound-assignment-operators">1.6 Compound Assignment Operators</a></li>
 <li><a class="reference internal" href="#application-program-interface-api-and-libraries">1.7 Application Program Interface (API) and Libraries</a></li>
-<li><a class="reference internal" href="#assignment-1-7-1-magic-8-ball-exploring-apis-and-libraries">Assignment 1.7.1 — Magic 8-Ball: Exploring APIs and Libraries</a></li>
+<li><a class="reference internal" href="#where-do-objects-live-heap-memory">Where Do Objects Live? — Heap Memory</a><ul>
+<li><a class="reference internal" href="#heap-vs-stack-the-quick-contrast">Heap vs. Stack — The Quick Contrast</a></li>
+<li><a class="reference internal" href="#null-an-address-that-points-to-nothing"><code class="docutils literal notranslate"><span class="pre">null</span></code> — An Address That Points to Nothing</a></li>
+<li><a class="reference internal" href="#the-string-pool-a-special-section-of-the-heap">The String Pool — A Special Section of the Heap</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#packages-apis">Packages &amp; APIs</a></li>
+<li><a class="reference internal" href="#assignment-1-7-1-magic-8-ball-exploring-apis-and-libraries">Assignment 1.7.1 — Magic 8-Ball: Exploring APIs and Libraries</a></li>
 <li><a class="reference internal" href="#assignment-1-7-1a-api-investigation">Assignment 1.7.1a — API Investigation</a></li>
 <li><a class="reference internal" href="#assignment-1-7-2-magic-8-ball-program">Assignment 1.7.2 — Magic 8-Ball Program</a></li>
 <li><a class="reference internal" href="#documentation-with-comments">1.8 Documentation with Comments</a></li>
