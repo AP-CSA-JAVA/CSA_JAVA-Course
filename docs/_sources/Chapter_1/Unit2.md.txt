@@ -1,5 +1,5 @@
 # Unit 2 - Selection and Iteration
-*AP Exam Weighting: 25–35% | Suggested Pacing: ~29–31 Class Periods*
+*AP Exam Weighting: 25–35%*
 
 
 ---
