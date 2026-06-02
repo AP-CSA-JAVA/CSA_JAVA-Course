@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="AP Computer Science A — Pacing Guide 2025–26" href="AP_Resources.html"><link rel="prev" title="AP Computer Science A — Course Home" href="../home.html">
 
     <!-- Generated with Sphinx 8.1.3 and Furo 2025.12.19 -->
-        <title>Resources - CSA JAVA Course</title>
+        <title>Oracle Resources - CSA JAVA Course</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=8dab3a3b" />
@@ -193,7 +193,8 @@
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../home.html">Home</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Resources</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Oracle Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#oracle-java-foundations-1z0-811-deep-dive-topic-reference">Oracle Java Foundations (1Z0-811) — Deep Dive Topic Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="AP_Resources.html">AP Resources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="SCRUM.html">SCRUM</a></li>
 </ul>
@@ -245,8 +246,1305 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="resources">
-<h1>Resources<a class="headerlink" href="#resources" title="Link to this heading">¶</a></h1>
+          <section id="oracle-resources">
+<h1>Oracle Resources<a class="headerlink" href="#oracle-resources" title="Link to this heading">¶</a></h1>
+</section>
+<section id="oracle-java-foundations-1z0-811-deep-dive-topic-reference">
+<h1>Oracle Java Foundations (1Z0-811) — Deep Dive Topic Reference<a class="headerlink" href="#oracle-java-foundations-1z0-811-deep-dive-topic-reference" title="Link to this heading">¶</a></h1>
+<section id="for-ap-csa-instructors-curriculum-integration-guide">
+<h2>For AP CSA Instructors · Curriculum Integration Guide<a class="headerlink" href="#for-ap-csa-instructors-curriculum-integration-guide" title="Link to this heading">¶</a></h2>
+<blockquote>
+<div><p>Each section identifies the <strong>best placement</strong> in the AP CSA pacing guide, explains the concept in full, and provides classroom-ready examples with common exam traps highlighted.</p>
+</div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="table-of-contents">
+<h2>TABLE OF CONTENTS<a class="headerlink" href="#table-of-contents" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="#jvm-jre">JVM &amp; JRE — Platform Architecture</a></p></li>
+<li><p><a class="reference internal" href="#the-this-keyword">The <code class="docutils literal notranslate"><span class="pre">this</span></code> Keyword — Nuances &amp; Traps</a></p></li>
+<li><p><a class="reference internal" href="#oop-principles">OOP Principles — Encapsulation, Inheritance, Polymorphism, Abstraction</a></p></li>
+<li><p><a class="reference internal" href="#packages-classpath">Packages &amp; the CLASSPATH</a></p></li>
+<li><p><a class="reference internal" href="#access-modifiers-visibility">Access Modifiers &amp; Visibility</a></p></li>
+<li><p><a class="reference internal" href="#throwable-hierarchy-exception-handling">Throwable Hierarchy &amp; Exception Handling</a></p></li>
+<li><p><a class="reference internal" href="#swallowing-empty-catch-blocks">“Swallowing” — Empty Catch Blocks</a></p></li>
+<li><p><a class="reference internal" href="#comparing">Comparing — <code class="docutils literal notranslate"><span class="pre">==</span></code> vs <code class="docutils literal notranslate"><span class="pre">.equals()</span></code> vs <code class="docutils literal notranslate"><span class="pre">compareTo()</span></code></a></p></li>
+<li><p><a class="reference internal" href="#visibility-scope-vs-lifespan-scope">Visibility Scope vs. Lifespan (Storage) Scope</a></p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="jvm-jre">
+<h2>1. JVM &amp; JRE<a class="headerlink" href="#jvm-jre" title="Link to this heading">¶</a></h2>
+<section id="best-placement-in-csa-curriculum">
+<h3>📍 Best Placement in CSA Curriculum<a class="headerlink" href="#best-placement-in-csa-curriculum" title="Link to this heading">¶</a></h3>
+<p><strong>Unit 1, Week 1</strong> — immediately after “Why Java?” before writing the first program. Students need this mental model before they compile anything.</p>
+</section>
+<section id="concept-overview">
+<h3>Concept Overview<a class="headerlink" href="#concept-overview" title="Link to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  You write:        HelloWorld.java      ← Human-readable source code
+  javac compiles:   HelloWorld.class     ← Bytecode (platform-NEUTRAL)
+  JVM executes:     bytecode → native    ← Platform-SPECIFIC translation
+</pre></div>
+</div>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Component</p></th>
+<th class="head"><p>What It Is</p></th>
+<th class="head"><p>What It Does</p></th>
+<th class="head"><p>Analogy</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>JDK</strong> (Java Development Kit)</p></td>
+<td><p>Developer toolkit</p></td>
+<td><p>Includes <code class="docutils literal notranslate"><span class="pre">javac</span></code> compiler, debugger, <code class="docutils literal notranslate"><span class="pre">javadoc</span></code></p></td>
+<td><p>The full workshop</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>JRE</strong> (Java Runtime Environment)</p></td>
+<td><p>Runtime only</p></td>
+<td><p>Includes JVM + standard libraries (no compiler)</p></td>
+<td><p>The engine to run the car</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>JVM</strong> (Java Virtual Machine)</p></td>
+<td><p>Software interpreter</p></td>
+<td><p>Translates bytecode to native machine code at runtime</p></td>
+<td><p>A universal translator</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="key-exam-nuances">
+<h3>Key Exam Nuances<a class="headerlink" href="#key-exam-nuances" title="Link to this heading">¶</a></h3>
+<p><strong>1. “Write once, run anywhere” — but HOW?</strong>
+The <code class="docutils literal notranslate"><span class="pre">.class</span></code> bytecode is platform-neutral. The JVM is platform-specific (there is a different JVM for Windows, Mac, Linux). The JVM is what makes Java portable, not the source code.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// HelloWorld.java compiles to HelloWorld.class (same on ALL platforms)</span>
+<span class="c1">// The JVM on Windows reads that .class file differently than the JVM on Linux</span>
+<span class="c1">// BUT the bytecode itself never changes — that&#39;s the portability</span>
+</pre></div>
+</div>
+<p><strong>2. JRE contains the JVM — the JDK contains the JRE</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>JDK ⊃ JRE ⊃ JVM
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>To RUN a Java program: you need a JRE (or JDK)</p></li>
+<li><p>To COMPILE a Java program: you need a JDK</p></li>
+<li><p>End users only need the JRE</p></li>
+</ul>
+<p><strong>3. Memory management — Java vs C++</strong>
+The exam tests: “Does Java allow direct memory management (like C++ pointers)?”</p>
+<blockquote>
+<div><p><strong>No.</strong> Memory is managed entirely by the JVM’s garbage collector. Programmers cannot access memory addresses directly.</p>
+</div></blockquote>
+<p><strong>4. The String Pool lives in JVM memory</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;hello&quot;</span><span class="p">;</span><span class="w">           </span><span class="c1">// JVM checks pool → creates 1 object in pool</span>
+<span class="n">String</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;hello&quot;</span><span class="p">;</span><span class="w">           </span><span class="c1">// JVM finds &quot;hello&quot; in pool → NO new object created</span>
+<span class="n">String</span><span class="w"> </span><span class="n">s3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="s">&quot;hello&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Forces NEW object in heap (bypasses pool)</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">s2</span><span class="p">);</span><span class="w">  </span><span class="c1">// true  (same pool reference)</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">s3</span><span class="p">);</span><span class="w">  </span><span class="c1">// false (s3 is a different heap object)</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s1</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">s3</span><span class="p">));</span><span class="w"> </span><span class="c1">// true (same content)</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>⚠️ <strong>Exam Trap:</strong> <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">String(&quot;hello&quot;)</span></code> creates TWO objects — one in the pool (due to the literal) and one in the heap (due to <code class="docutils literal notranslate"><span class="pre">new</span></code>).</p>
+</div></blockquote>
+<p><strong>5. Execution flow diagram</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>HelloWorld.java
+      ↓  javac (compiler in JDK)
+HelloWorld.class  ← bytecode, not native code
+      ↓  java command triggers JVM
+   JVM loads class
+      ↓  Just-In-Time (JIT) compiler
+   Native machine code executes
+      ↓
+   Output to console
+</pre></div>
+</div>
+</section>
+<section id="practice-question">
+<h3>✅ Practice Question<a class="headerlink" href="#practice-question" title="Link to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Q: You compiled HelloWorld.java on a Windows machine and got HelloWorld.class.
+   Can you run HelloWorld.class on a Mac?
+
+A: Yes — IF a JRE (or JDK) is installed on the Mac. The .class bytecode is
+   platform-neutral. The Mac&#39;s JVM translates it to Mac native code at runtime.
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="the-this-keyword">
+<h2>2. The <code class="docutils literal notranslate"><span class="pre">this</span></code> Keyword<a class="headerlink" href="#the-this-keyword" title="Link to this heading">¶</a></h2>
+<section id="id1">
+<h3>📍 Best Placement in CSA Curriculum<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
+<p><strong>Unit 3, Week 12 (3.9)</strong> — taught alongside constructors and instance variables. Revisit during <strong>Inheritance (Week 17)</strong> when <code class="docutils literal notranslate"><span class="pre">super</span></code> is introduced as a contrast.</p>
+</section>
+<section id="id2">
+<h3>Concept Overview<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">this</span></code> is a reference to the <strong>current object</strong> — the instance whose method or constructor is currently executing.</p>
+</section>
+<section id="use-case-1-disambiguate-field-from-parameter-most-common">
+<h3>Use Case 1 — Disambiguate field from parameter (most common)<a class="headerlink" href="#use-case-1-disambiguate-field-from-parameter-most-common" title="Link to this heading">¶</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Dog</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w">   </span><span class="c1">// instance variable</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// WITHOUT this — BROKEN (parameter shadows the field)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Dog</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w">   </span><span class="c1">// ← assigns parameter to itself! field is never set</span>
+<span class="w">        </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">age</span><span class="p">;</span><span class="w">     </span><span class="c1">// ← same problem</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Dog</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// WITH this — CORRECT</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Dog</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w">   </span><span class="c1">// this.name = field, name = parameter</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setName</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w">   </span><span class="c1">// same pattern in setters</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="use-case-2-constructor-chaining-with-this">
+<h3>Use Case 2 — Constructor chaining with <code class="docutils literal notranslate"><span class="pre">this()</span></code><a class="headerlink" href="#use-case-2-constructor-chaining-with-this" title="Link to this heading">¶</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Rectangle</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">color</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Full constructor</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Rectangle</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">color</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">width</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">height</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">color</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Delegates to full constructor — avoids duplicating logic</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Rectangle</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">(</span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;black&quot;</span><span class="p">);</span><span class="w">   </span><span class="c1">// ← this() calls another constructor</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Single-arg delegates too</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Rectangle</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">(</span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">);</span><span class="w">               </span><span class="c1">// calls the 2-arg constructor above</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>⚠️ <strong>Exam Trap #1:</strong> <code class="docutils literal notranslate"><span class="pre">this()</span></code> must be the <strong>first statement</strong> in a constructor. The following will NOT compile:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="nf">Rectangle</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Creating square&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// ← COMPILE ERROR — this() must be first</span>
+<span class="w">    </span><span class="k">this</span><span class="p">(</span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<blockquote>
+<div><p>⚠️ <strong>Exam Trap #2:</strong> <code class="docutils literal notranslate"><span class="pre">this()</span></code> cannot be used in a regular method — ONLY in constructors.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">reset</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;black&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// ← COMPILE ERROR — not a constructor</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="use-case-3-passing-the-current-object-as-an-argument">
+<h3>Use Case 3 — Passing the current object as an argument<a class="headerlink" href="#use-case-3-passing-the-current-object-as-an-argument" title="Link to this heading">¶</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Button</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">label</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Button</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">label</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">label</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">click</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">EventSystem</span><span class="p">.</span><span class="na">register</span><span class="p">(</span><span class="k">this</span><span class="p">);</span><span class="w">  </span><span class="c1">// passes THIS button to the event system</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="this-vs-super-key-contrast-for-inheritance-week">
+<h3><code class="docutils literal notranslate"><span class="pre">this</span></code> vs <code class="docutils literal notranslate"><span class="pre">super</span></code> — Key Contrast for Inheritance Week<a class="headerlink" href="#this-vs-super-key-contrast-for-inheritance-week" title="Link to this heading">¶</a></h3>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Keyword</p></th>
+<th class="head"><p>Refers to</p></th>
+<th class="head"><p>Used in</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">this</span></code></p></td>
+<td><p>Current object / current class constructor</p></td>
+<td><p>Methods &amp; constructors</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">super</span></code></p></td>
+<td><p>Parent class / parent class constructor</p></td>
+<td><p>Methods &amp; constructors</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">this()</span></code></p></td>
+<td><p>Another constructor in the SAME class</p></td>
+<td><p>Constructors only (must be first line)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">super()</span></code></p></td>
+<td><p>Constructor of the PARENT class</p></td>
+<td><p>Constructors only (must be first line)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<div><p>⚠️ <strong>Exam Trap:</strong> You CANNOT use both <code class="docutils literal notranslate"><span class="pre">this()</span></code> AND <code class="docutils literal notranslate"><span class="pre">super()</span></code> in the same constructor. Each must be the first line — so only one can exist.</p>
+</div></blockquote>
+</section>
+</section>
+<hr class="docutils" />
+<section id="oop-principles">
+<h2>3. OOP Principles<a class="headerlink" href="#oop-principles" title="Link to this heading">¶</a></h2>
+<section id="id3">
+<h3>📍 Best Placement in CSA Curriculum<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><strong>Encapsulation</strong> → Unit 3, Week 12 (with 3.1–3.5)</p></li>
+<li><p><strong>Inheritance &amp; Polymorphism</strong> → Inheritance unit, Weeks 16–18</p></li>
+<li><p><strong>Abstraction</strong> → briefly in Unit 1.7 (Objects concept) and revisited in Inheritance</p></li>
+</ul>
+</section>
+<section id="the-four-pillars">
+<h3>The Four Pillars<a class="headerlink" href="#the-four-pillars" title="Link to this heading">¶</a></h3>
+<hr class="docutils" />
+<section id="a-encapsulation">
+<h4>3A. Encapsulation<a class="headerlink" href="#a-encapsulation" title="Link to this heading">¶</a></h4>
+<blockquote>
+<div><p>“Bundle data and the methods that operate on it; hide the internals.”</p>
+</div></blockquote>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">BankAccount</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">balance</span><span class="p">;</span><span class="w">    </span><span class="c1">// ← PRIVATE — hidden from outside</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">BankAccount</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">initialBalance</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">initialBalance</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">balance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">initialBalance</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Controlled access via public methods</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getBalance</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">balance</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">deposit</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">amount</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">amount</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="n">balance</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">amount</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">withdraw</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">amount</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">amount</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">amount</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">balance</span><span class="p">)</span><span class="w"> </span><span class="n">balance</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">amount</span><span class="p">;</span>
+<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Insufficient funds&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Outside the class:</span>
+<span class="n">BankAccount</span><span class="w"> </span><span class="n">acct</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BankAccount</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+<span class="c1">// acct.balance = -9999;   ← COMPILE ERROR — private field protected!</span>
+<span class="n">acct</span><span class="p">.</span><span class="na">withdraw</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span><span class="w">         </span><span class="c1">// ← must go through the validated method</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">acct</span><span class="p">.</span><span class="na">getBalance</span><span class="p">());</span><span class="w"> </span><span class="c1">// 400.0</span>
+</pre></div>
+</div>
+<p><strong>Why it matters on the exam:</strong> Questions about <code class="docutils literal notranslate"><span class="pre">private</span></code> vs <code class="docutils literal notranslate"><span class="pre">public</span></code> fields often test whether you understand that access through getters/setters allows validation that direct field access does not.</p>
+</section>
+<hr class="docutils" />
+<section id="b-inheritance">
+<h4>3B. Inheritance<a class="headerlink" href="#b-inheritance" title="Link to this heading">¶</a></h4>
+<blockquote>
+<div><p>“A subclass acquires the non-private fields and methods of its superclass.”</p>
+</div></blockquote>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Superclass</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Animal</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Animal</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getName</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">speak</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;...&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Subclass</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Dog</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Animal</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">breed</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Dog</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">breed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">);</span><span class="w">           </span><span class="c1">// ← MUST call parent constructor first</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">breed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">breed</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">speak</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Woof!&quot;</span><span class="p">;</span><span class="w">        </span><span class="c1">// ← overrides Animal&#39;s speak()</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getBreed</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">breed</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Usage</span>
+<span class="n">Animal</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">(</span><span class="s">&quot;Rex&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Lab&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// polymorphism — Animal reference, Dog object</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="na">speak</span><span class="p">());</span><span class="w">     </span><span class="c1">// &quot;Woof!&quot; — Dog&#39;s version called (dynamic dispatch)</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span><span class="w">   </span><span class="c1">// &quot;Rex&quot; — inherited from Animal</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>⚠️ <strong>Exam Trap:</strong> Subclasses do NOT inherit <code class="docutils literal notranslate"><span class="pre">private</span></code> members — they exist in the object but are invisible to the subclass. Access them through inherited <code class="docutils literal notranslate"><span class="pre">public</span></code> or <code class="docutils literal notranslate"><span class="pre">protected</span></code> getters.</p>
+</div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="c-polymorphism">
+<h4>3C. Polymorphism<a class="headerlink" href="#c-polymorphism" title="Link to this heading">¶</a></h4>
+<blockquote>
+<div><p>“One interface, many forms — the correct method is chosen at runtime.”</p>
+</div></blockquote>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Animal</span><span class="o">[]</span><span class="w"> </span><span class="n">zoo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">(</span><span class="s">&quot;Rex&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Lab&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">Cat</span><span class="p">(</span><span class="s">&quot;Whiskers&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">Animal</span><span class="p">(</span><span class="s">&quot;Generic&quot;</span><span class="p">)</span>
+<span class="p">};</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Animal</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">zoo</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; says: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="na">speak</span><span class="p">());</span>
+<span class="w">    </span><span class="c1">// Output depends on the ACTUAL type at runtime, not the declared type</span>
+<span class="p">}</span>
+<span class="c1">// Rex says: Woof!</span>
+<span class="c1">// Whiskers says: Meow!</span>
+<span class="c1">// Generic says: ...</span>
+</pre></div>
+</div>
+<p><strong>Compile-time vs Runtime type:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Animal</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">(</span><span class="s">&quot;Rex&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Lab&quot;</span><span class="p">);</span>
+<span class="c1">// Compile-time type: Animal  (what the compiler sees)</span>
+<span class="c1">// Runtime type:      Dog     (what actually runs)</span>
+
+<span class="n">a</span><span class="p">.</span><span class="na">speak</span><span class="p">();</span><span class="w">       </span><span class="c1">// ✔ calls Dog.speak() — runtime type wins for OVERRIDDEN methods</span>
+<span class="n">a</span><span class="p">.</span><span class="na">getBreed</span><span class="p">();</span><span class="w">    </span><span class="c1">// ✘ COMPILE ERROR — Animal doesn&#39;t know about getBreed()</span>
+<span class="w">                 </span><span class="c1">//   must cast: ((Dog) a).getBreed()</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="d-abstraction">
+<h4>3D. Abstraction<a class="headerlink" href="#d-abstraction" title="Link to this heading">¶</a></h4>
+<blockquote>
+<div><p>“Expose what an object does, not how it does it.”</p>
+</div></blockquote>
+<p>This is enforced through <code class="docutils literal notranslate"><span class="pre">private</span></code> fields + public methods (encapsulation) and through abstract classes/interfaces (beyond AP CSA scope but on Oracle exam).</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Users of BankAccount don&#39;t need to know HOW balance is stored</span>
+<span class="c1">// They just know: deposit(), withdraw(), getBalance() exist</span>
+<span class="c1">// That&#39;s abstraction in practice</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="packages-classpath">
+<h2>4. Packages &amp; CLASSPATH<a class="headerlink" href="#packages-classpath" title="Link to this heading">¶</a></h2>
+<section id="id4">
+<h3>📍 Best Placement in CSA Curriculum<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h3>
+<p><strong>Unit 1, Week 2 (1.3)</strong> alongside <code class="docutils literal notranslate"><span class="pre">import</span></code> statements, and revisit briefly in <strong>Unit 3, Week 12</strong> when students write their own classes.</p>
+</section>
+<section id="id5">
+<h3>Concept Overview<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h3>
+<p>A <strong>package</strong> is a namespace that organizes related classes, similar to folders on a hard drive.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>src/
+  com/
+    school/
+      Student.java          ← package com.school;
+      Teacher.java          ← package com.school;
+    math/
+      Calculator.java       ← package com.math;
+</pre></div>
+</div>
+</section>
+<section id="declaring-a-package">
+<h3>Declaring a Package<a class="headerlink" href="#declaring-a-package" title="Link to this heading">¶</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// File: com/school/Student.java</span>
+<span class="kn">package</span><span class="w"> </span><span class="nn">com.school</span><span class="p">;</span><span class="w">         </span><span class="c1">// ← MUST be the first non-comment line</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Student</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">grade</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Student</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">grade</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">grade</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="importing-a-package">
+<h3>Importing a Package<a class="headerlink" href="#importing-a-package" title="Link to this heading">¶</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Three ways to use a class from another package:</span>
+
+<span class="c1">// Option 1 — fully qualified name (no import needed, but verbose)</span>
+<span class="n">com</span><span class="p">.</span><span class="na">school</span><span class="p">.</span><span class="na">Student</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">com</span><span class="p">.</span><span class="na">school</span><span class="p">.</span><span class="na">Student</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">);</span>
+
+<span class="c1">// Option 2 — import specific class</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.school.Student</span><span class="p">;</span>
+<span class="n">Student</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Student</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">);</span>
+
+<span class="c1">// Option 3 — import entire package (wildcard)</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.school.*</span><span class="p">;</span>
+<span class="n">Student</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Student</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">);</span>
+<span class="n">Teacher</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Teacher</span><span class="p">(</span><span class="s">&quot;Ms. Smith&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>⚠️ <strong>Exam Trap #1:</strong> <code class="docutils literal notranslate"><span class="pre">import</span></code> does NOT import sub-packages. <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">com.school.*</span></code> does NOT import <code class="docutils literal notranslate"><span class="pre">com.school.honors.HonorsStudent</span></code>. Sub-packages must be imported separately.</p>
+</div></blockquote>
+<blockquote>
+<div><p>⚠️ <strong>Exam Trap #2:</strong> <code class="docutils literal notranslate"><span class="pre">java.lang</span></code> is automatically imported — you never need to write <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">java.lang.String</span></code> or <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">java.lang.Math</span></code>.</p>
+</div></blockquote>
+<blockquote>
+<div><p>⚠️ <strong>Exam Trap #3:</strong> <code class="docutils literal notranslate"><span class="pre">package</span></code> statement must come BEFORE <code class="docutils literal notranslate"><span class="pre">import</span></code> statements:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">package</span><span class="w"> </span><span class="nn">com.school</span><span class="p">;</span><span class="w">    </span><span class="c1">// 1st: package declaration</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.*</span><span class="p">;</span><span class="w">    </span><span class="c1">// 2nd: imports</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Student</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// 3rd: class definition</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="the-classpath">
+<h3>The CLASSPATH<a class="headerlink" href="#the-classpath" title="Link to this heading">¶</a></h3>
+<p>The CLASSPATH tells the JVM where to look for <code class="docutils literal notranslate"><span class="pre">.class</span></code> files.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Running</span> <span class="kn">from</span><span class="w"> </span><span class="nn">command</span> <span class="n">line</span><span class="p">:</span>
+<span class="n">java</span> <span class="o">-</span><span class="n">classpath</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">student</span><span class="o">/</span><span class="n">classes</span> <span class="n">com</span><span class="o">.</span><span class="n">school</span><span class="o">.</span><span class="n">Student</span>
+
+<span class="o">//</span> <span class="n">Or</span> <span class="k">with</span> <span class="n">environment</span> <span class="n">variable</span><span class="p">:</span>
+<span class="n">CLASSPATH</span><span class="o">=/</span><span class="n">home</span><span class="o">/</span><span class="n">student</span><span class="o">/</span><span class="n">classes</span>
+<span class="n">java</span> <span class="n">com</span><span class="o">.</span><span class="n">school</span><span class="o">.</span><span class="n">Student</span>
+</pre></div>
+</div>
+<p><strong>On the exam:</strong> Know that if a class cannot be found, the JVM throws a <code class="docutils literal notranslate"><span class="pre">ClassNotFoundException</span></code> or <code class="docutils literal notranslate"><span class="pre">NoClassDefFoundError</span></code> at runtime. This is a CLASSPATH problem, not a code problem.</p>
+</section>
+<section id="java-lang-vs-java-util-what-s-automatically-available">
+<h3><code class="docutils literal notranslate"><span class="pre">java.lang</span></code> vs <code class="docutils literal notranslate"><span class="pre">java.util</span></code> — What’s Automatically Available<a class="headerlink" href="#java-lang-vs-java-util-what-s-automatically-available" title="Link to this heading">¶</a></h3>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Always Available (java.lang)</p></th>
+<th class="head"><p>Must Import (java.util)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">String</span></code>, <code class="docutils literal notranslate"><span class="pre">Math</span></code>, <code class="docutils literal notranslate"><span class="pre">Integer</span></code>, <code class="docutils literal notranslate"><span class="pre">Double</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ArrayList</span></code>, <code class="docutils literal notranslate"><span class="pre">Scanner</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Object</span></code>, <code class="docutils literal notranslate"><span class="pre">System</span></code>, <code class="docutils literal notranslate"><span class="pre">StringBuilder</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Random</span></code>, <code class="docutils literal notranslate"><span class="pre">Arrays</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>All wrapper classes</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">HashMap</span></code>, <code class="docutils literal notranslate"><span class="pre">List</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="access-modifiers-visibility">
+<h2>5. Access Modifiers &amp; Visibility<a class="headerlink" href="#access-modifiers-visibility" title="Link to this heading">¶</a></h2>
+<section id="id6">
+<h3>📍 Best Placement in CSA Curriculum<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h3>
+<p><strong>Unit 3, Weeks 12–14 (3.1, 3.4, 3.8)</strong> — taught progressively as fields, then methods, then scope are introduced.</p>
+</section>
+<section id="the-four-access-levels">
+<h3>The Four Access Levels<a class="headerlink" href="#the-four-access-levels" title="Link to this heading">¶</a></h3>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Modifier</p></th>
+<th class="head text-center"><p>Same Class</p></th>
+<th class="head text-center"><p>Same Package</p></th>
+<th class="head text-center"><p>Subclass</p></th>
+<th class="head text-center"><p>Anywhere</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">private</span></code></p></td>
+<td class="text-center"><p>✔</p></td>
+<td class="text-center"><p>✘</p></td>
+<td class="text-center"><p>✘</p></td>
+<td class="text-center"><p>✘</p></td>
+</tr>
+<tr class="row-odd"><td><p><em>(default / package-private)</em></p></td>
+<td class="text-center"><p>✔</p></td>
+<td class="text-center"><p>✔</p></td>
+<td class="text-center"><p>✘</p></td>
+<td class="text-center"><p>✘</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">protected</span></code></p></td>
+<td class="text-center"><p>✔</p></td>
+<td class="text-center"><p>✔</p></td>
+<td class="text-center"><p>✔</p></td>
+<td class="text-center"><p>✘</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">public</span></code></p></td>
+<td class="text-center"><p>✔</p></td>
+<td class="text-center"><p>✔</p></td>
+<td class="text-center"><p>✔</p></td>
+<td class="text-center"><p>✔</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<div><p><strong>AP CSA focuses on <code class="docutils literal notranslate"><span class="pre">private</span></code> and <code class="docutils literal notranslate"><span class="pre">public</span></code>.</strong> The Oracle exam adds <code class="docutils literal notranslate"><span class="pre">protected</span></code> and default (no modifier).</p>
+</div></blockquote>
+</section>
+<section id="examples-across-all-four-levels">
+<h3>Examples Across All Four Levels<a class="headerlink" href="#examples-across-all-four-levels" title="Link to this heading">¶</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">package</span><span class="w"> </span><span class="nn">com.school</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Student</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">schoolName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Lincoln High&quot;</span><span class="p">;</span><span class="w">  </span><span class="c1">// anyone can access</span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">studentId</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;S-1042&quot;</span><span class="p">;</span><span class="w">        </span><span class="c1">// subclasses + same package</span>
+<span class="w">              </span><span class="n">String</span><span class="w"> </span><span class="n">nickname</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Ace&quot;</span><span class="p">;</span><span class="w">           </span><span class="c1">// default: same package only</span>
+<span class="w">    </span><span class="kd">private</span><span class="w">   </span><span class="kt">double</span><span class="w"> </span><span class="n">gpa</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mf">3.8</span><span class="p">;</span><span class="w">             </span><span class="c1">// this class ONLY</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getGpa</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">gpa</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w">          </span><span class="c1">// public getter for private field</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">package</span><span class="w"> </span><span class="nn">com.school</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HonorStudent</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Student</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printInfo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">schoolName</span><span class="p">);</span><span class="w">   </span><span class="c1">// ✔ public</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">studentId</span><span class="p">);</span><span class="w">    </span><span class="c1">// ✔ protected — accessible in subclass</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nickname</span><span class="p">);</span><span class="w">     </span><span class="c1">// ✔ default — same package</span>
+<span class="w">        </span><span class="c1">// System.out.println(gpa);       // ✘ COMPILE ERROR — private</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">getGpa</span><span class="p">());</span><span class="w">     </span><span class="c1">// ✔ uses the public method instead</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">package</span><span class="w"> </span><span class="nn">com.athletics</span><span class="p">;</span><span class="w">       </span><span class="c1">// DIFFERENT package</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.school.Student</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Coach</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">check</span><span class="p">(</span><span class="n">Student</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="na">schoolName</span><span class="p">);</span><span class="w">  </span><span class="c1">// ✔ public</span>
+<span class="w">        </span><span class="c1">// System.out.println(s.studentId); // ✘ protected — different package, not subclass</span>
+<span class="w">        </span><span class="c1">// System.out.println(s.nickname);  // ✘ default — different package</span>
+<span class="w">        </span><span class="c1">// System.out.println(s.gpa);       // ✘ private</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="applying-to-methods-same-rules">
+<h3>Applying to Methods — Same Rules<a class="headerlink" href="#applying-to-methods-same-rules" title="Link to this heading">¶</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Calculator</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// private helper — implementation detail, not exposed</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">validateInput</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">abs</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// public API — what callers use</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">squareRoot</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">sqrt</span><span class="p">(</span><span class="n">validateInput</span><span class="p">(</span><span class="n">x</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>⚠️ <strong>Exam Trap:</strong> A class itself can only be <code class="docutils literal notranslate"><span class="pre">public</span></code> or default (no modifier). You cannot declare a top-level class as <code class="docutils literal notranslate"><span class="pre">private</span></code> or <code class="docutils literal notranslate"><span class="pre">protected</span></code>.</p>
+</div></blockquote>
+<blockquote>
+<div><p>⚠️ <strong>Exam Trap:</strong> <code class="docutils literal notranslate"><span class="pre">private</span></code> members are NOT inherited. They exist in the subclass object’s memory, but the subclass code cannot reference them directly — even with <code class="docutils literal notranslate"><span class="pre">super</span></code>.</p>
+</div></blockquote>
+</section>
+</section>
+<hr class="docutils" />
+<section id="throwable-hierarchy-exception-handling">
+<h2>6. Throwable Hierarchy &amp; Exception Handling<a class="headerlink" href="#throwable-hierarchy-exception-handling" title="Link to this heading">¶</a></h2>
+<section id="id7">
+<h3>📍 Best Placement in CSA Curriculum<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h3>
+<p><strong>Unit 2, Week 10 (2.12 Debugging)</strong> — introduce the hierarchy and checked vs. unchecked. Revisit in <strong>Unit 4, Week 25 (File I/O)</strong> where checked exceptions (<code class="docutils literal notranslate"><span class="pre">IOException</span></code>) become unavoidable.</p>
+</section>
+<section id="the-throwable-hierarchy">
+<h3>The Throwable Hierarchy<a class="headerlink" href="#the-throwable-hierarchy" title="Link to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>java.lang.Throwable
+├── java.lang.Error               ← JVM-level, do NOT catch
+│   ├── OutOfMemoryError
+│   ├── StackOverflowError
+│   └── VirtualMachineError
+└── java.lang.Exception           ← application-level, handle these
+    ├── IOException               ← CHECKED (must declare or catch)
+    │   └── FileNotFoundException
+    ├── SQLException              ← CHECKED
+    ├── RuntimeException          ← UNCHECKED (don&#39;t have to catch)
+    │   ├── ArithmeticException       (divide by zero)
+    │   ├── NullPointerException      (null reference)
+    │   ├── ArrayIndexOutOfBoundsException
+    │   ├── ClassCastException
+    │   ├── NumberFormatException     (Integer.parseInt(&quot;abc&quot;))
+    │   └── IllegalArgumentException
+    └── ...
+</pre></div>
+</div>
+</section>
+<section id="checked-vs-unchecked">
+<h3>Checked vs. Unchecked<a class="headerlink" href="#checked-vs-unchecked" title="Link to this heading">¶</a></h3>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>Checked</p></th>
+<th class="head"><p>Unchecked</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Parent class</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Exception</span></code> (not RuntimeException)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">RuntimeException</span></code> or <code class="docutils literal notranslate"><span class="pre">Error</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Must handle?</p></td>
+<td><p><strong>Yes</strong> — compile error if not</p></td>
+<td><p>No — optional</p></td>
+</tr>
+<tr class="row-even"><td><p>Typical cause</p></td>
+<td><p>External resource issues</p></td>
+<td><p>Programming bugs</p></td>
+</tr>
+<tr class="row-odd"><td><p>Examples</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">IOException</span></code>, <code class="docutils literal notranslate"><span class="pre">FileNotFoundException</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">NPE</span></code>, <code class="docutils literal notranslate"><span class="pre">ArrayIndexOutOfBounds</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// UNCHECKED — ArithmeticException — no try/catch required (but good practice)</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">    </span><span class="c1">// throws ArithmeticException at runtime</span>
+
+<span class="c1">// CHECKED — FileNotFoundException — MUST handle or declare</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span>
+<span class="c1">// This will NOT compile without try/catch or throws declaration:</span>
+<span class="n">FileReader</span><span class="w"> </span><span class="n">fr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileReader</span><span class="p">(</span><span class="s">&quot;data.txt&quot;</span><span class="p">);</span><span class="w">   </span><span class="c1">// ← checked exception!</span>
+</pre></div>
+</div>
+</section>
+<section id="try-catch-finally-mechanics">
+<h3>try / catch / finally Mechanics<a class="headerlink" href="#try-catch-finally-mechanics" title="Link to this heading">¶</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ExceptionDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;1 - try starts&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">                           </span><span class="c1">// ArithmeticException thrown here</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;2 - never reached&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ArithmeticException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;3 - caught ArithmeticException: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">RuntimeException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;4 - never reached — ArithmeticException caught above&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;5 - finally ALWAYS runs&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;6 - after try/catch/finally&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="c1">// Output:</span>
+<span class="c1">// 1 - try starts</span>
+<span class="c1">// 3 - caught ArithmeticException: / by zero</span>
+<span class="c1">// 5 - finally ALWAYS runs</span>
+<span class="c1">// 6 - after try/catch/finally</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>⚠️ <strong>Exam Trap #1:</strong> <code class="docutils literal notranslate"><span class="pre">finally</span></code> ALWAYS executes — even if a <code class="docutils literal notranslate"><span class="pre">catch</span></code> block executes <code class="docutils literal notranslate"><span class="pre">return</span></code>. The only exception is <code class="docutils literal notranslate"><span class="pre">System.exit()</span></code>.</p>
+</div></blockquote>
+<blockquote>
+<div><p>⚠️ <strong>Exam Trap #2:</strong> Catch blocks must go from MOST specific to LEAST specific. If a parent exception type is caught first, child types can never be reached → compile error.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w">           </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w">   </span><span class="c1">// ← WRONG ORDER</span>
+<span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ArithmeticException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w">   </span><span class="c1">// ← COMPILE ERROR: already caught above</span>
+</pre></div>
+</div>
+</div></blockquote>
+<blockquote>
+<div><p>⚠️ <strong>Exam Trap #3:</strong> <code class="docutils literal notranslate"><span class="pre">throws</span></code> in a method signature = declaration (checked exceptions).  <code class="docutils literal notranslate"><span class="pre">throw</span></code> in a method body = actually throwing an exception.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">readFile</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">path</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span><span class="w">   </span><span class="c1">// declaration</span>
+<span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IOException</span><span class="p">(</span><span class="s">&quot;File not found&quot;</span><span class="p">);</span><span class="w">             </span><span class="c1">// throwing</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="e-getmessage-vs-e-tostring-vs-e-printstacktrace">
+<h3><code class="docutils literal notranslate"><span class="pre">e.getMessage()</span></code> vs <code class="docutils literal notranslate"><span class="pre">e.toString()</span></code> vs <code class="docutils literal notranslate"><span class="pre">e.printStackTrace()</span></code><a class="headerlink" href="#e-getmessage-vs-e-tostring-vs-e-printstacktrace" title="Link to this heading">¶</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span><span class="p">;</span>
+<span class="w">    </span><span class="n">arr</span><span class="o">[</span><span class="mi">10</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ArrayIndexOutOfBoundsException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span><span class="w">      </span><span class="c1">// &quot;Index 10 out of bounds for length 3&quot;</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span><span class="w">         </span><span class="c1">// &quot;java.lang.ArrayIndexOutOfBoundsException: Index 10...&quot;</span>
+<span class="w">    </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span><span class="w">                      </span><span class="c1">// full stack trace to stderr</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="swallowing-empty-catch-blocks">
+<h2>7. “Swallowing” — Empty Catch Blocks<a class="headerlink" href="#swallowing-empty-catch-blocks" title="Link to this heading">¶</a></h2>
+<section id="id8">
+<h3>📍 Best Placement in CSA Curriculum<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h3>
+<p><strong>Unit 2, Week 10 (2.12 Debugging)</strong> — taught as an antipattern immediately after introducing try/catch.</p>
+</section>
+<section id="what-it-is">
+<h3>What It Is<a class="headerlink" href="#what-it-is" title="Link to this heading">¶</a></h3>
+<p>An <strong>empty catch block</strong> silently discards an exception. The program continues as if nothing went wrong — but something did.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// ❌ SWALLOWING — this is the antipattern</span>
+<span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">userInput</span><span class="p">);</span>
+<span class="w">    </span><span class="n">process</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">NumberFormatException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// nothing here — exception is &quot;swallowed&quot;</span>
+<span class="p">}</span>
+<span class="c1">// Program continues, result was never set — silent corruption</span>
+</pre></div>
+</div>
+</section>
+<section id="why-it-s-dangerous">
+<h3>Why It’s Dangerous<a class="headerlink" href="#why-it-s-dangerous" title="Link to this heading">¶</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Real classroom example — grade calculator</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">parseGrade</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">input</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Double</span><span class="p">.</span><span class="na">parseDouble</span><span class="p">(</span><span class="n">input</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">NumberFormatException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// swallowed — returns 0.0 by default</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span><span class="w">  </span><span class="c1">// student gets a 0 with no warning or explanation</span>
+<span class="p">}</span>
+
+<span class="c1">// Called with:</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parseGrade</span><span class="p">(</span><span class="s">&quot;A+&quot;</span><span class="p">);</span><span class="w">   </span><span class="c1">// should throw, instead silently returns 0.0</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Grade: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">grade</span><span class="p">);</span><span class="w">   </span><span class="c1">// Grade: 0.0 — bug invisible to user</span>
+</pre></div>
+</div>
+</section>
+<section id="what-to-do-instead">
+<h3>What to Do Instead<a class="headerlink" href="#what-to-do-instead" title="Link to this heading">¶</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// ✔ Option 1 — Log the error</span>
+<span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">NumberFormatException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Invalid input: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+<span class="p">}</span>
+
+<span class="c1">// ✔ Option 2 — Rethrow as a different exception</span>
+<span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">NumberFormatException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&quot;Grade must be a number, got: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">input</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// ✔ Option 3 — Handle with a default + notification</span>
+<span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">NumberFormatException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Could not parse &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39;, defaulting to 0.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// ✔ Option 4 — Add a comment explaining WHY it&#39;s intentionally empty (very rare)</span>
+<span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">InterruptedException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Restore interrupt status — intentional; see Thread.currentThread().interrupt()</span>
+<span class="w">    </span><span class="n">Thread</span><span class="p">.</span><span class="na">currentThread</span><span class="p">().</span><span class="na">interrupt</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="exam-nuance-what-does-the-code-actually-do">
+<h3>Exam Nuance — What Does the Code ACTUALLY Do?<a class="headerlink" href="#exam-nuance-what-does-the-code-actually-do" title="Link to this heading">¶</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// What is the output?</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Test</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;1&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">k</span><span class="p">;</span><span class="w">               </span><span class="c1">// ArithmeticException thrown</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;2&quot;</span><span class="p">);</span><span class="w">     </span><span class="c1">// never reached</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ArithmeticException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;3&quot;</span><span class="p">);</span><span class="w">     </span><span class="c1">// caught here — empty block version below</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">RuntimeException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;4&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;5&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;6&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="c1">// Output: 1, 3, 5, 6</span>
+<span class="c1">// If catch (ArithmeticException e) were EMPTY (swallowed): output would be 1, 5, 6</span>
+<span class="c1">// — the exception is silently gone but &quot;2&quot; was still skipped</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="comparing">
+<h2>8. Comparing<a class="headerlink" href="#comparing" title="Link to this heading">¶</a></h2>
+<section id="id9">
+<h3>📍 Best Placement in CSA Curriculum<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">==</span></code> for primitives</strong> → Unit 1, Week 2 (1.2 Variables &amp; Expressions)</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">==</span></code> vs <code class="docutils literal notranslate"><span class="pre">.equals()</span></code> for objects</strong> → Unit 2, Week 8 (2.7 Comparing Objects)</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">.compareTo()</span></code></strong> → Unit 2, Week 8 + Unit 4 (Sorting)</p></li>
+<li><p><strong>String pool nuances</strong> → Unit 1, Week 5 (1.9 String Objects) and revisit in Unit 2</p></li>
+</ul>
+</section>
+<section id="three-tools-three-purposes">
+<h3>Three Tools, Three Purposes<a class="headerlink" href="#three-tools-three-purposes" title="Link to this heading">¶</a></h3>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Tool</p></th>
+<th class="head"><p>Works on</p></th>
+<th class="head"><p>Tests</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">==</span></code></p></td>
+<td><p>Primitives &amp; references</p></td>
+<td><p>Value equality (primitives) OR same memory address (objects)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">.equals()</span></code></p></td>
+<td><p>Objects</p></td>
+<td><p>Logical/content equality (as defined by the class)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">.compareTo()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Comparable</span></code> objects (String, Integer, etc.)</p></td>
+<td><p>Ordering: negative, zero, positive</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="comparing-primitives-is-correct">
+<h3>Comparing Primitives — <code class="docutils literal notranslate"><span class="pre">==</span></code> is correct<a class="headerlink" href="#comparing-primitives-is-correct" title="Link to this heading">¶</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">   </span><span class="c1">// true — comparing VALUES directly</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="comparing-objects-tests-reference-not-content">
+<h3>Comparing Objects — <code class="docutils literal notranslate"><span class="pre">==</span></code> tests REFERENCE, not content<a class="headerlink" href="#comparing-objects-tests-reference-not-content" title="Link to this heading">¶</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="s">&quot;hello&quot;</span><span class="p">);</span>
+<span class="n">String</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="s">&quot;hello&quot;</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">s2</span><span class="p">);</span><span class="w">       </span><span class="c1">// FALSE — different objects in heap</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s1</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">s2</span><span class="p">));</span><span class="w">  </span><span class="c1">// TRUE — same content</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Heap memory:
+  s1 ──→ [hello]   ← object at address 0x100
+  s2 ──→ [hello]   ← object at address 0x200
+
+  s1 == s2 asks: is 0x100 == 0x200? → false
+  s1.equals(s2) asks: is &quot;hello&quot; == &quot;hello&quot;? → true
+</pre></div>
+</div>
+</section>
+<section id="string-pool-trap-from-the-exam">
+<h3>String Pool Trap (from the Exam)<a class="headerlink" href="#string-pool-trap-from-the-exam" title="Link to this heading">¶</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;hello&quot;</span><span class="p">;</span><span class="w">               </span><span class="c1">// interned in pool</span>
+<span class="n">String</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;hello&quot;</span><span class="p">;</span><span class="w">               </span><span class="c1">// reuses same pool object</span>
+<span class="n">String</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="s">&quot;hello&quot;</span><span class="p">);</span><span class="w">   </span><span class="c1">// NEW heap object (bypasses pool)</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">       </span><span class="c1">// TRUE  — both point to pool object</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">c</span><span class="p">);</span><span class="w">       </span><span class="c1">// FALSE — c is a different heap object</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">c</span><span class="p">));</span><span class="w">  </span><span class="c1">// TRUE  — content is same</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>⚠️ <strong>Exam Trap:</strong> <code class="docutils literal notranslate"><span class="pre">==</span></code> on String literals from the pool often returns <code class="docutils literal notranslate"><span class="pre">true</span></code> — but this is an implementation detail. ALWAYS use <code class="docutils literal notranslate"><span class="pre">.equals()</span></code> for String content comparison.</p>
+</div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="compareto-ordering">
+<h3><code class="docutils literal notranslate"><span class="pre">.compareTo()</span></code> — Ordering<a class="headerlink" href="#compareto-ordering" title="Link to this heading">¶</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Returns:  negative  if this &lt; other</span>
+<span class="c1">//           0         if this == other</span>
+<span class="c1">//           positive  if this &gt; other</span>
+
+<span class="n">String</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;apple&quot;</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;banana&quot;</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">s3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;apple&quot;</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s1</span><span class="p">.</span><span class="na">compareTo</span><span class="p">(</span><span class="n">s2</span><span class="p">));</span><span class="w">   </span><span class="c1">// negative (a &lt; b alphabetically)</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s2</span><span class="p">.</span><span class="na">compareTo</span><span class="p">(</span><span class="n">s1</span><span class="p">));</span><span class="w">   </span><span class="c1">// positive</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s1</span><span class="p">.</span><span class="na">compareTo</span><span class="p">(</span><span class="n">s3</span><span class="p">));</span><span class="w">   </span><span class="c1">// 0 (equal)</span>
+
+<span class="c1">// With integers (wrapper class)</span>
+<span class="n">Integer</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="n">Integer</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="na">compareTo</span><span class="p">(</span><span class="n">y</span><span class="p">));</span><span class="w">     </span><span class="c1">// negative (5 &lt; 10)</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="comparing-null-a-common-bug">
+<h3>Comparing <code class="docutils literal notranslate"><span class="pre">null</span></code> — A Common Bug<a class="headerlink" href="#comparing-null-a-common-bug" title="Link to this heading">¶</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+
+<span class="c1">// ❌ NullPointerException — s is null, can&#39;t call a method on null</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;hello&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
+
+<span class="c1">// ✔ Safe — null check first</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;hello&quot;</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">s</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span><span class="w">   </span><span class="c1">// &quot;hello&quot; is never null</span>
+
+<span class="c1">// ✔ Also safe</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;hello&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="wrapper-class-integer-caching-sneaky-trap">
+<h3>Wrapper Class Integer Caching — Sneaky Trap<a class="headerlink" href="#wrapper-class-integer-caching-sneaky-trap" title="Link to this heading">¶</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Integer</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">127</span><span class="p">;</span>
+<span class="n">Integer</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">127</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">   </span><span class="c1">// TRUE — JVM caches integers -128 to 127</span>
+
+<span class="n">Integer</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">128</span><span class="p">;</span>
+<span class="n">Integer</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">128</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">y</span><span class="p">);</span><span class="w">   </span><span class="c1">// FALSE — outside cache range, different objects</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">y</span><span class="p">));</span><span class="w"> </span><span class="c1">// TRUE — always use .equals() for Integer objects</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>⚠️ This is a well-known Oracle exam trap. The safe rule: always use <code class="docutils literal notranslate"><span class="pre">.equals()</span></code> or <code class="docutils literal notranslate"><span class="pre">.compareTo()</span></code> for <code class="docutils literal notranslate"><span class="pre">Integer</span></code>, <code class="docutils literal notranslate"><span class="pre">Double</span></code>, and other wrapper objects.</p>
+</div></blockquote>
+</section>
+</section>
+<hr class="docutils" />
+<section id="visibility-scope-vs-lifespan-scope">
+<h2>9. Visibility Scope vs. Lifespan Scope<a class="headerlink" href="#visibility-scope-vs-lifespan-scope" title="Link to this heading">¶</a></h2>
+<section id="id10">
+<h3>📍 Best Placement in CSA Curriculum<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h3>
+<p><strong>Unit 3, Week 14 (3.8 Scope &amp; Access)</strong> — core topic. Revisit briefly in <strong>Unit 2, Weeks 8–10</strong> when loop variables are first introduced.</p>
+</section>
+<section id="two-different-questions">
+<h3>Two Different Questions<a class="headerlink" href="#two-different-questions" title="Link to this heading">¶</a></h3>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Question</p></th>
+<th class="head"><p>Concept</p></th>
+<th class="head"><p>The Answer</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>“Can I read/write this variable here?”</p></td>
+<td><p><strong>Visibility Scope</strong></p></td>
+<td><p>Determined by where the variable was declared (block, method, class)</p></td>
+</tr>
+<tr class="row-odd"><td><p>“How long does this variable live in memory?”</p></td>
+<td><p><strong>Lifespan (Storage) Scope</strong></p></td>
+<td><p>Determined by the variable’s type (local, instance, static)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="visibility-scope-four-levels">
+<h3>Visibility Scope — Four Levels<a class="headerlink" href="#visibility-scope-four-levels" title="Link to this heading">¶</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ScopeDemo</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="c1">// ── CLASS SCOPE (static) ─────────────────────────────────</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">studentCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">     </span><span class="c1">// visible to ALL instances</span>
+<span class="w">    </span><span class="c1">//                                          lifespan: from class load until program ends</span>
+
+<span class="w">    </span><span class="c1">// ── INSTANCE SCOPE ───────────────────────────────────────</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w">                      </span><span class="c1">// one per object instance</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">grade</span><span class="p">;</span><span class="w">                        </span><span class="c1">//   lifespan: from new() until garbage collected</span>
+
+<span class="w">    </span><span class="c1">// ── METHOD / PARAMETER SCOPE ─────────────────────────────</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setGrade</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">grade</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">         </span><span class="c1">// parameter &#39;grade&#39; — method scope</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">grade</span><span class="p">;</span><span class="w">                   </span><span class="c1">// &#39;this.grade&#39; = instance var, &#39;grade&#39; = param</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">calculateGpa</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">gpa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span><span class="w">                     </span><span class="c1">// local variable — method scope</span>
+<span class="w">        </span><span class="c1">//            lifespan: created when method is called, destroyed when it returns</span>
+
+<span class="w">        </span><span class="c1">// ── BLOCK SCOPE ──────────────────────────────────────</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">grade</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">90</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">honor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Dean&#39;s List&quot;</span><span class="p">;</span><span class="w">     </span><span class="c1">// block scope — only visible inside this if</span>
+<span class="w">            </span><span class="n">gpa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4.0</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="c1">// System.out.println(honor);         // ✘ COMPILE ERROR — &#39;honor&#39; out of scope</span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">gpa</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="lifespan-storage-scope-the-three-categories">
+<h3>Lifespan / Storage Scope — The Three Categories<a class="headerlink" href="#lifespan-storage-scope-the-three-categories" title="Link to this heading">¶</a></h3>
+<section id="local-variables-shortest-life">
+<h4>1. Local Variables — shortest life<a class="headerlink" href="#local-variables-shortest-life" title="Link to this heading">¶</a></h4>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">calculate</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w">      </span><span class="c1">// created when method is called</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w">      </span><span class="c1">// created when method is called</span>
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="p">}</span><span class="w">                    </span><span class="c1">// x and y are DESTROYED here — eligible for garbage collection</span>
+<span class="c1">// x and y no longer exist in memory</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>⚠️ <strong>Exam Trap:</strong> Local variables are <strong>NOT initialized automatically</strong>. Using one before assignment is a compile error.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span><span class="p">);</span><span class="w">   </span><span class="c1">// ✘ COMPILE ERROR: variable x might not have been initialized</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="instance-variables-medium-life">
+<h4>2. Instance Variables — medium life<a class="headerlink" href="#instance-variables-medium-life" title="Link to this heading">¶</a></h4>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Counter</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="p">;</span><span class="w">    </span><span class="c1">// auto-initialized to 0 (instance vars get default values)</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">increment</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">count</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getCount</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">count</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">Counter</span><span class="w"> </span><span class="n">c1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Counter</span><span class="p">();</span><span class="w">   </span><span class="c1">// c1.count created in heap</span>
+<span class="n">Counter</span><span class="w"> </span><span class="n">c2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Counter</span><span class="p">();</span><span class="w">   </span><span class="c1">// c2.count created in heap — SEPARATE from c1.count</span>
+<span class="n">c1</span><span class="p">.</span><span class="na">increment</span><span class="p">();</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">c1</span><span class="p">.</span><span class="na">getCount</span><span class="p">());</span><span class="w"> </span><span class="c1">// 1</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">c2</span><span class="p">.</span><span class="na">getCount</span><span class="p">());</span><span class="w"> </span><span class="c1">// 0 — independent</span>
+<span class="c1">// When c1 and c2 go out of scope and GC runs, their count fields are destroyed</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>✅ Instance variables <strong>are</strong> automatically initialized:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">long</span></code>, <code class="docutils literal notranslate"><span class="pre">short</span></code>, <code class="docutils literal notranslate"><span class="pre">byte</span></code> → <code class="docutils literal notranslate"><span class="pre">0</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">double</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code> → <code class="docutils literal notranslate"><span class="pre">0.0</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">boolean</span></code> → <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">char</span></code> → <code class="docutils literal notranslate"><span class="pre">'\u0000'</span></code></p></li>
+<li><p>Object references → <code class="docutils literal notranslate"><span class="pre">null</span></code></p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="static-variables-longest-life">
+<h4>3. Static Variables — longest life<a class="headerlink" href="#static-variables-longest-life" title="Link to this heading">¶</a></h4>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Counter</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">totalCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">    </span><span class="c1">// ONE copy shared by ALL Counter objects</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">myCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">              </span><span class="c1">// one copy PER object</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">increment</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">myCount</span><span class="o">++</span><span class="p">;</span><span class="w">        </span><span class="c1">// only this object&#39;s counter</span>
+<span class="w">        </span><span class="n">totalCount</span><span class="o">++</span><span class="p">;</span><span class="w">     </span><span class="c1">// shared counter — ALL objects see the same value</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getTotalCount</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">totalCount</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getMyCount</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">myCount</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">Counter</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Counter</span><span class="p">();</span>
+<span class="n">Counter</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Counter</span><span class="p">();</span>
+<span class="n">a</span><span class="p">.</span><span class="na">increment</span><span class="p">();</span>
+<span class="n">a</span><span class="p">.</span><span class="na">increment</span><span class="p">();</span>
+<span class="n">b</span><span class="p">.</span><span class="na">increment</span><span class="p">();</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="na">getMyCount</span><span class="p">());</span><span class="w">          </span><span class="c1">// 2</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">b</span><span class="p">.</span><span class="na">getMyCount</span><span class="p">());</span><span class="w">          </span><span class="c1">// 1</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Counter</span><span class="p">.</span><span class="na">getTotalCount</span><span class="p">());</span><span class="w"> </span><span class="c1">// 3 — sum of all increments ever</span>
+<span class="c1">// Static variable lives until the program ends</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="variable-shadowing-the-common-bug">
+<h3>Variable Shadowing — The Common Bug<a class="headerlink" href="#variable-shadowing-the-common-bug" title="Link to this heading">¶</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Shadowing</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w">    </span><span class="c1">// instance variable</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">demonstrate</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">200</span><span class="p">;</span><span class="w">        </span><span class="c1">// local variable SHADOWS the instance variable</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">value</span><span class="p">);</span><span class="w">        </span><span class="c1">// 200 — local wins</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">value</span><span class="p">);</span><span class="w">   </span><span class="c1">// 100 — this. accesses instance variable</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">shadowStatic</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">studentCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">99</span><span class="p">;</span><span class="w">  </span><span class="c1">// local shadows the static field</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">studentCount</span><span class="p">);</span><span class="w">            </span><span class="c1">// 99 — local</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">ScopeDemo</span><span class="p">.</span><span class="na">studentCount</span><span class="p">);</span><span class="w">  </span><span class="c1">// actual static (if accessible)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="loop-variable-scope-exam-trap">
+<h3>Loop Variable Scope — Exam Trap<a class="headerlink" href="#loop-variable-scope-exam-trap" title="Link to this heading">¶</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// for-loop variable is scoped to the loop</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">// System.out.println(i);   // ✘ COMPILE ERROR — i doesn&#39;t exist here</span>
+
+<span class="c1">// while-loop variable declared outside = accessible after</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">j</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">j</span><span class="p">);</span><span class="w">   </span><span class="c1">// ✔ prints 5 — j still in scope</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="curriculum-integration-summary">
+<h2>CURRICULUM INTEGRATION SUMMARY<a class="headerlink" href="#curriculum-integration-summary" title="Link to this heading">¶</a></h2>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Topic</p></th>
+<th class="head"><p>Primary Placement</p></th>
+<th class="head"><p>Secondary Placement</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>JVM &amp; JRE architecture</p></td>
+<td><p>Unit 1, Week 1</p></td>
+<td><p>Revisit with File I/O (Unit 4, Wk 25)</p></td>
+</tr>
+<tr class="row-odd"><td><p>String pool (JVM memory)</p></td>
+<td><p>Unit 1, Week 5 (Strings)</p></td>
+<td><p>Unit 2, Week 8 (Comparing Objects)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">this</span></code> disambiguation</p></td>
+<td><p>Unit 3, Week 12 (Constructors)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">this()</span></code> constructor chaining</p></td>
+<td><p>Unit 3, Week 12 (Constructors)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">this</span></code> vs <code class="docutils literal notranslate"><span class="pre">super</span></code></p></td>
+<td><p>Inheritance, Week 17</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>OOP — Encapsulation</p></td>
+<td><p>Unit 3, Week 12</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>OOP — Inheritance &amp; Polymorphism</p></td>
+<td><p>Inheritance, Weeks 16–18</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Packages &amp; import</p></td>
+<td><p>Unit 1, Week 2</p></td>
+<td><p>Unit 3, Week 12</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">java.lang</span></code> auto-import</p></td>
+<td><p>Unit 1, Week 2</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Access modifiers (public/private)</p></td>
+<td><p>Unit 3, Week 12</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>Access modifiers (protected/default)</p></td>
+<td><p>Inheritance, Week 16</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Throwable hierarchy</p></td>
+<td><p>Unit 2, Week 10</p></td>
+<td><p>Unit 4, Week 25 (checked I/O exceptions)</p></td>
+</tr>
+<tr class="row-even"><td><p>Checked vs unchecked exceptions</p></td>
+<td><p>Unit 2, Week 10</p></td>
+<td><p>Unit 4, Week 25</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">finally</span></code> always runs</p></td>
+<td><p>Unit 2, Week 10</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>Catch order (specific → general)</p></td>
+<td><p>Unit 2, Week 10</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Swallowing / empty catch</p></td>
+<td><p>Unit 2, Week 10</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">==</span></code> vs <code class="docutils literal notranslate"><span class="pre">.equals()</span></code></p></td>
+<td><p>Unit 1, Week 2 (primitives) → Unit 2, Week 8 (objects)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">.compareTo()</span></code></p></td>
+<td><p>Unit 2, Week 8</p></td>
+<td><p>Unit 4 (sorting, Week 26)</p></td>
+</tr>
+<tr class="row-even"><td><p>Integer caching trap (127)</p></td>
+<td><p>Unit 2, Week 8</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>null safety when comparing</p></td>
+<td><p>Unit 2, Week 8</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>Visibility scope (block/method/class)</p></td>
+<td><p>Unit 3, Week 14 (3.8)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Lifespan scope (local/instance/static)</p></td>
+<td><p>Unit 3, Week 14 (3.8)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>Variable shadowing</p></td>
+<td><p>Unit 3, Week 14 (3.8)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Default initialization values</p></td>
+<td><p>Unit 3, Week 12</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>Loop variable scope</p></td>
+<td><p>Unit 2, Week 9 (for loops)</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<p><em>Oracle 1Z0-811 Exam Details: education.oracle.com/java-foundations/pexam_1Z0-811</em>
+<em>Sample questions sourced from: enthuware.com/oca-ocp-java-certification-resources/270-java-foundations-exam-sample-questions</em></p>
 <p><strong>Project</strong> Header</p>
 <p>Place this at the top of the main Class file containing your program’s main() method, place an `external’ block comment containing the following content.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/*=============================================================================</span>
@@ -269,6 +1567,7 @@
 <span class="cm"> *===========================================================================*/</span>
 </pre></div>
 </div>
+</section>
 </section>
 
         </article>
