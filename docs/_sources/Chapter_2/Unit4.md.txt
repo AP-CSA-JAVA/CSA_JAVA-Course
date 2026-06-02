@@ -1,5 +1,5 @@
 # Unit 4 - Data Collections
-*AP Exam Weighting: 30–40% | Suggested Pacing: ~50–52 Class Periods*
+*AP Exam Weighting: 30–40%*
 
 ---
 
