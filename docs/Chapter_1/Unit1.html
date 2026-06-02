@@ -1180,8 +1180,8 @@ Total Sales: $64.3
 </section>
 </section>
 <hr class="docutils" />
-<section id="background">
-<h2>Background<a class="headerlink" href="#background" title="Link to this heading">¶</a></h2>
+<section id="packages-apis">
+<h2>Packages &amp; APIs<a class="headerlink" href="#packages-apis" title="Link to this heading">¶</a></h2>
 <p>When you write a Java program, you do not have to build everything from scratch. Java provides thousands of pre-built classes organized into <strong>packages</strong>. A <strong>package</strong> is a folder of related classes. Together, all of these packages make up the Java <strong>standard library</strong>.</p>
 <p>An <strong>Application Programming Interface (API)</strong> is the set of rules and definitions that describes how you interact with a library — what classes are available, what methods they have, what parameters they take, and what they return. Think of the API documentation as the instruction manual for the library.</p>
 <p>To use a class from a package that is not automatically included, you must <strong>import</strong> it:</p>
@@ -1190,10 +1190,12 @@ Total Sales: $64.3
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">java.lang</span></code> (which contains <code class="docutils literal notranslate"><span class="pre">String</span></code>, <code class="docutils literal notranslate"><span class="pre">Math</span></code>, <code class="docutils literal notranslate"><span class="pre">Integer</span></code>, etc.) is imported <strong>automatically</strong> — you never need to import it manually.</p>
+</section>
 <hr class="docutils" />
+<section id="assignment-1-7-1a-api-investigation">
+<h2>Assignment 1.7.1a — API Investigation<a class="headerlink" href="#assignment-1-7-1a-api-investigation" title="Link to this heading">¶</a></h2>
 <blockquote>
-<div><p class="rubric" id="assignment-1-7-1a-api-investigation">Assignment 1.7.1a — API Investigation</p>
-<p>Using the Java 8 API documentation at <strong>https://docs.oracle.com/javase/8/docs/api/</strong>, answer the following questions in a comment block at the top of your <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> file or in a separate text document submitted alongside your code.</p>
+<div><p>Using the Java 8 API documentation at <strong>https://docs.oracle.com/javase/8/docs/api/</strong>, answer the following questions in a comment block at the top of your <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> file or in a separate text document submitted alongside your code.</p>
 <p class="rubric" id="section-a-packages-and-classes">Section A — Packages and Classes</p>
 <ol class="arabic simple">
 <li><p>What is the full package path for the <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> class?</p></li>
@@ -1218,9 +1220,13 @@ Total Sales: $64.3
 <li><p>What is the difference between <code class="docutils literal notranslate"><span class="pre">nextInt()</span></code> and <code class="docutils literal notranslate"><span class="pre">nextDouble()</span></code>?</p></li>
 <li><p>Why might a program produce the same “random” sequence every time if you pass a fixed value to the <code class="docutils literal notranslate"><span class="pre">Random</span></code> constructor (e.g., <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Random(42)</span></code>)?</p></li>
 </ol>
+</div></blockquote>
+</section>
 <hr class="docutils" />
-<p class="rubric" id="assignment-1-7-2-magic-8-ball-program">Assignment 1.7.2 — Magic 8-Ball Program</p>
-<p class="rubric" id="program-description">Program Description</p>
+<section id="assignment-1-7-2-magic-8-ball-program">
+<h2>Assignment 1.7.2 — Magic 8-Ball Program<a class="headerlink" href="#assignment-1-7-2-magic-8-ball-program" title="Link to this heading">¶</a></h2>
+<blockquote>
+<div><p class="rubric" id="program-description">Program Description</p>
 <p>Build a Magic 8-Ball program that:</p>
 <ul class="simple">
 <li><p>Asks the user to enter a yes/no question</p></li>
@@ -1573,7 +1579,7 @@ The Magic 8-Ball has spoken. Goodbye!
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Decompose a larger problem into smaller methods, each responsible for one task</p></li>
 </ul>
 <hr class="docutils" />
-<p class="rubric" id="id2">Background</p>
+<p class="rubric" id="background">Background</p>
 <p>A <strong>class method</strong> (declared with the keyword <code class="docutils literal notranslate"><span class="pre">static</span></code>) belongs to the <strong>class itself</strong> — not to any specific object. You call it using the class name, not an object reference:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Calling a static method from the Math class — no object needed</span>
 <span class="kt">double</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">sqrt</span><span class="p">(</span><span class="mi">144</span><span class="p">);</span><span class="w">     </span><span class="c1">// returns 12.0</span>
@@ -1670,7 +1676,7 @@ The Magic 8-Ball has spoken. Goodbye!
 </ol>
 <hr class="docutils" />
 <p class="rubric" id="part-2-mission-control-program">Part 2 — Mission Control Program</p>
-<p class="rubric" id="id3">Program Description</p>
+<p class="rubric" id="id2">Program Description</p>
 <p>You are writing the launch software for Mission Control. Your program will:</p>
 <ul class="simple">
 <li><p>Accept rocket launch parameters from the user via <code class="docutils literal notranslate"><span class="pre">Scanner</span></code></p></li>
@@ -1678,7 +1684,7 @@ The Magic 8-Ball has spoken. Goodbye!
 <li><p>Warn the crew if any value falls outside safe limits</p></li>
 <li><p>Print a formatted launch report</p></li>
 </ul>
-<p class="rubric" id="id4">Requirements Checklist</p>
+<p class="rubric" id="id3">Requirements Checklist</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Include the required block comment header in <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> (all fields completed)</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Write and call <strong>at least four</strong> static methods of your own (see specifications below)</p></li>
@@ -1728,7 +1734,7 @@ The Magic 8-Ball has spoken. Goodbye!
 <li><p>Prints a safety status message based on the <code class="docutils literal notranslate"><span class="pre">boolean</span></code> parameter</p></li>
 </ul>
 <hr class="docutils" />
-<p class="rubric" id="id5">Starter Code</p>
+<p class="rubric" id="id4">Starter Code</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
 
 <span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span>
@@ -1795,7 +1801,7 @@ The Magic 8-Ball has spoken. Goodbye!
 </pre></div>
 </div>
 <hr class="docutils" />
-<p class="rubric" id="id6">Sample Output</p>
+<p class="rubric" id="id5">Sample Output</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>=== MISSION CONTROL LAUNCH SYSTEM ===
 Enter rocket name: Falcon Alpha
 Enter fuel amount (liters): 5000
@@ -1833,7 +1839,7 @@ LAUNCH STATUS:     ✗ UNSAFE — ABORT LAUNCH
 </pre></div>
 </div>
 <hr class="docutils" />
-<p class="rubric" id="id7">Extension Challenges</p>
+<p class="rubric" id="id6">Extension Challenges</p>
 <p>Completed early? Try one or more of the following:</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Add a fifth method</strong> <code class="docutils literal notranslate"><span class="pre">calculateMaxAltitude(double</span> <span class="pre">thrustKn,</span> <span class="pre">double</span> <span class="pre">massKg)</span></code> that returns an estimated max altitude using <code class="docutils literal notranslate"><span class="pre">Math.pow()</span></code> and <code class="docutils literal notranslate"><span class="pre">Math.sqrt()</span></code> in the formula</p></li>
@@ -1842,14 +1848,14 @@ LAUNCH STATUS:     ✗ UNSAFE — ABORT LAUNCH
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Unit conversion</strong> — add a static method that converts <code class="docutils literal notranslate"><span class="pre">km/h</span></code> to <code class="docutils literal notranslate"><span class="pre">m/s</span></code> and display both speeds in the report</p></li>
 </ul>
 <hr class="docutils" />
-<p class="rubric" id="id8">Submission</p>
+<p class="rubric" id="id7">Submission</p>
 <p>Upload the following to the assignment:</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> — your completed program with block comment header</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Test Cases document — showing at least <strong>three</strong> runs with different rocket inputs, including one that triggers the unsafe launch warning</p></li>
 </ul>
 <hr class="docutils" />
-<p class="rubric" id="id9">Grading</p>
+<p class="rubric" id="id8">Grading</p>
 <p>This assignment is graded using the <strong>AP CSA Generic Assignment Rubric</strong> (5-point scale). Pay particular attention to:</p>
 <ul class="simple">
 <li><p>All four required static methods are present, correctly implemented, and called in <code class="docutils literal notranslate"><span class="pre">main</span></code></p></li>
@@ -2062,7 +2068,7 @@ LAUNCH STATUS:     ✗ UNSAFE — ABORT LAUNCH
 </table>
 </div>
 <hr class="docutils" />
-<p class="rubric" id="id10">Overview</p>
+<p class="rubric" id="id9">Overview</p>
 <p>In this activity you will apply what you have learned about the <code class="docutils literal notranslate"><span class="pre">Math</span></code> class, static methods, object instantiation, and <code class="docutils literal notranslate"><span class="pre">java.util.Random</span></code> to simulate a drag race between two cars. You will complete a partially written program by implementing the <code class="docutils literal notranslate"><span class="pre">computeTime</span></code> method in <code class="docutils literal notranslate"><span class="pre">Racecar.java</span></code> and filling in the guided comments in <code class="docutils literal notranslate"><span class="pre">Main.java</span></code>.</p>
 <p>By the end of this activity you will be able to:</p>
 <ul class="contains-task-list simple">
@@ -2073,7 +2079,7 @@ LAUNCH STATUS:     ✗ UNSAFE — ABORT LAUNCH
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Connect prior concepts — classes, constructors, <code class="docutils literal notranslate"><span class="pre">toString()</span></code>, and static methods — in a complete program</p></li>
 </ul>
 <hr class="docutils" />
-<p class="rubric" id="id11">Background</p>
+<p class="rubric" id="id10">Background</p>
 <p class="rubric" id="connecting-prior-activities">Connecting Prior Activities</p>
 <p>You have already used these concepts individually. This activity brings them together:</p>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -2220,7 +2226,7 @@ To get the range 20–50 (31 possible values), use <code class="docutils literal
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Print the finishing time for each car in the format shown below</p></li>
 </ul>
 <hr class="docutils" />
-<p class="rubric" id="id12">Sample Output</p>
+<p class="rubric" id="id11">Sample Output</p>
 <p>Because acceleration is random, your times will differ each run. The format must match exactly:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Racer</span> <span class="n">Tom</span><span class="s1">&#39;s car finished in 10.596 seconds.</span>
 <span class="n">Racer</span> <span class="n">Jerry</span><span class="s1">&#39;s car finished in 11.423 seconds.</span>
@@ -2244,7 +2250,7 @@ To get the range 20–50 (31 possible values), use <code class="docutils literal
 <li><p><code class="docutils literal notranslate"><span class="pre">toString()</span></code> is already written for you. When <code class="docutils literal notranslate"><span class="pre">System.out.println(car1</span> <span class="pre">+</span> <span class="pre">&quot;'s</span> <span class="pre">car</span> <span class="pre">finished</span> <span class="pre">in</span> <span class="pre">&quot;</span> <span class="pre">+</span> <span class="pre">time</span> <span class="pre">+</span> <span class="pre">&quot;</span> <span class="pre">seconds.&quot;)</span></code> runs, what triggers the call to <code class="docutils literal notranslate"><span class="pre">toString()</span></code>?</p></li>
 </ol>
 <hr class="docutils" />
-<p class="rubric" id="id13">Extension Challenges</p>
+<p class="rubric" id="id12">Extension Challenges</p>
 <p>Completed early? Try one or more of the following:</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>User input</strong> — use <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> to let the user enter driver names and/or the track length instead of hardcoding them</p></li>
@@ -2253,7 +2259,7 @@ To get the range 20–50 (31 possible values), use <code class="docutils literal
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Leaderboard</strong> — sort and print the cars from fastest to slowest finishing time</p></li>
 </ul>
 <hr class="docutils" />
-<p class="rubric" id="id14">Submission</p>
+<p class="rubric" id="id13">Submission</p>
 <p>Upload the following to the assignment:</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">Racecar.java</span></code> — with <code class="docutils literal notranslate"><span class="pre">computeTime</span></code> fully implemented</p></li>
@@ -2261,7 +2267,7 @@ To get the range 20–50 (31 possible values), use <code class="docutils literal
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Test Cases document — showing at least <strong>three</strong> runs of your program demonstrating different random acceleration values each time</p></li>
 </ul>
 <hr class="docutils" />
-<p class="rubric" id="id15">Grading</p>
+<p class="rubric" id="id14">Grading</p>
 <p>This assignment is graded using the <strong>AP CSA Generic Assignment Rubric</strong> (5-point scale). Pay particular attention to:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">computeTime</span></code> uses <code class="docutils literal notranslate"><span class="pre">Math.sqrt()</span></code> with the correct formula — not a hardcoded value</p></li>
@@ -3456,8 +3462,8 @@ Thunder Loop: NOT ELIGIBLE
 </ul>
 </section>
 <hr class="docutils" />
-<section id="id16">
-<h4>Part 3 — Main.java<a class="headerlink" href="#id16" title="Link to this heading">¶</a></h4>
+<section id="id15">
+<h4>Part 3 — Main.java<a class="headerlink" href="#id15" title="Link to this heading">¶</a></h4>
 <p>Your <code class="docutils literal notranslate"><span class="pre">main</span></code> method must:</p>
 <ol class="arabic simple">
 <li><p>Include the required block comment header (all fields completed)</p></li>
@@ -3797,7 +3803,9 @@ Available vehicles: 3
 <li><a class="reference internal" href="#overview">Overview</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#background">Background</a></li>
+<li><a class="reference internal" href="#packages-apis">Packages &amp; APIs</a></li>
+<li><a class="reference internal" href="#assignment-1-7-1a-api-investigation">Assignment 1.7.1a — API Investigation</a></li>
+<li><a class="reference internal" href="#assignment-1-7-2-magic-8-ball-program">Assignment 1.7.2 — Magic 8-Ball Program</a></li>
 <li><a class="reference internal" href="#documentation-with-comments">1.8 Documentation with Comments</a></li>
 <li><a class="reference internal" href="#method-signatures">1.9 Method Signatures</a></li>
 <li><a class="reference internal" href="#calling-class-methods">1.10 Calling Class Methods</a></li>
@@ -3842,7 +3850,7 @@ Available vehicles: 3
 <li><a class="reference internal" href="#option-b-car-dealership-inventory">Option B — Car Dealership Inventory</a><ul>
 <li><a class="reference internal" href="#part-1-car-java">Part 1 — Car.java</a></li>
 <li><a class="reference internal" href="#part-2-customer-java">Part 2 — Customer.java</a></li>
-<li><a class="reference internal" href="#id16">Part 3 — Main.java</a></li>
+<li><a class="reference internal" href="#id15">Part 3 — Main.java</a></li>
 <li><a class="reference internal" href="#sample-output-option-b">Sample Output — Option B</a></li>
 </ul>
 </li>
