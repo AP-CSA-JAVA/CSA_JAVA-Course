@@ -680,7 +680,7 @@ import java.util.ArrayList;
 
 ## Assignment 1.7.1 — Magic 8-Ball: Exploring APIs and Libraries
 
-### Overview
+**Overview**
 
 In this activity you will explore the Java API documentation to understand how libraries and packages work, then build a Magic 8-Ball program that imports and uses classes from the Java standard library.
 
@@ -1816,7 +1816,7 @@ class Box {
 }
 ```
 
-### toString() Method
+### 1.13a toString() Method
 
 The `toString()` method provides a meaningful String representation of an object. It is called automatically when you print an object.
 
@@ -2652,7 +2652,7 @@ Available vehicles: 3
 
 ---
 
-### Shared Rubric
+### Unit 1 - Project Rubric
 
 Each concept below is worth **1 point**. Credit is awarded when the concept is used correctly and meaningfully — not simply present in the code. Partial credit is not awarded per concept.
 
