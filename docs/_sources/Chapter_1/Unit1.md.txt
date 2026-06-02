@@ -1816,7 +1816,7 @@ class Box {
 }
 ```
 
-### 1.13a toString() Method
+## 1.13a toString() Method
 
 The `toString()` method provides a meaningful String representation of an object. It is called automatically when you print an object.
 
