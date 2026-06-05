@@ -172,6 +172,155 @@ public class Car {
 }
 ```
 
+### PROJECT - CARD DRAW SEQUENCES
+
+---
+
+#### Scenario
+
+A data scientist is studying sequences of values produced by repeatedly drawing a card from a standard shuffled deck. After each draw, the card is returned and the deck is reshuffled. Each draw produces a value in the range of 1 through 13, inclusive — representing Ace (1) through King (13). The data scientist is particularly interested in **streaks** of values. A streak occurs when two or more consecutive draws produce the same value. For example, in the following sequence of card draws, there are streaks starting at positions 1, 6, 12, and 14.
+
+| Index  | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 |
+|--------|---|---|---|---|---|---|---|---|---|---|----|----|----|----|----|----|----|-----|
+| Result | 1 | 5 | 5 | 4 | 3 | 1 | 2 | 2 | 2 | 2 |  6 |  1 |  3 |  3 |  5 |  5 |  5 |  5 |
+
+Out of the goodness of your heart, you have decided to write a program to help the data scientist examine these streaks. The thought of shuffling and drawing from a deck thousands of times by hand seems like a poor use of everyone's time.
+
+---
+
+#### Part 1 — The `CardDeck` Class
+
+While thinking about how convenient a class would be to simulate a card deck draw, you have decided to write a class as follows:
+
+> ***For testing purposes, use the identifier names given***
+
+**Class: `CardDeck`**
+
+| Member | Points | Description |
+|--------|--------|-------------|
+| Instance variable: `currentDraw` | (1 pt) | `/** the value of the most recent card draw (1–13) */` |
+| Constructor *(only a default constructor is required)* | (2 pts) | `/** gives an initial value to the current draw */` |
+| `drawCard()` | (2 pts) | `/** simulates drawing a card from a reshuffled deck, updates the instance variable, @return the value of the draw */` |
+
+---
+
+#### Part 2 — Static Methods in the Driver Class
+
+You now need a method that collects the results of several draws in a row, and a method that finds the longest streak in a sequence of draws. This collection and analysis logic does not belong in the `CardDeck` class. Therefore, you decide to create two static methods in the class that contains your `main` method.
+
+##### `collectDraws()`
+
+Takes a `CardDeck` and a number of draws as parameters. The method will return an array of the values produced by drawing from the deck the given number of times.
+
+##### `findLongestStreak()`
+
+Takes as its parameter an array of integer values representing a series of card draws. The method returns the starting index in the array of a streak of maximum length. A streak is defined as the repeated occurrence of the same value in two or more consecutive positions in the array.
+
+For example, in the following array there are two streaks of length 4, one starting at index 6 and another starting at index 14. The method may return either of these starting indices.
+
+| Index  | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 |
+|--------|---|---|---|---|---|---|---|---|---|---|----|----|----|----|----|----|----|-----|
+| Result | 1 | 5 | 5 | 4 | 3 | 1 | 2 | 2 | 2 | 2 |  6 |  1 |  3 |  3 |  5 |  5 |  5 |  5 |
+
+If there are no streaks of any value, the method returns `-1`.
+
+**In computer science speak, we have:**
+
+| Method | Points | Javadoc |
+|--------|--------|---------|
+| `collectDraws()` | (5 pts) | `/** Returns an array of the values obtained by drawing from a card deck numDraws times.` <br> `* @param deck a CardDeck` <br> `* @param numDraws the number of draws to be recorded` <br> `* Precondition: numDraws > 0` <br> `* @return an array of numDraws values */` |
+| `findLongestStreak()` | (8 pts) | `/** Returns the starting index of a longest streak of two or more consecutive repeated values in the array values.` <br> `* @param values an array of integer values representing a series of card draws` <br> `* Precondition: values.length > 0` <br> `* @return the starting index of a streak of maximum length; -1 if there is no streak */` |
+
+---
+
+#### Part 3 — Additional Scoring Guidelines
+
+##### 1. Algorithm Design for `collectDraws()` and `findLongestStreak()` — (4 pts)
+
+> *"We don't plan to fail. We fail to plan."*
+
+Before writing any code, write out a pseudocode or flowchart algorithm for both methods.
+
+##### 2. `main` Method Integration — (5 pts)
+
+After you have **tested** (yes, tested) all of the above from your `main` method, put your `main` method together as follows:
+
+| Step | Points | Task |
+|------|--------|------|
+| A | (1 pt) | Instantiate (create) a `CardDeck` object named `deck`. |
+| B | (1 pt) | Call (invoke) the `collectDraws()` method with 50 draws. Store the array that is returned into the array `myDraws`. |
+| C | (2 pts) | Output the contents of `myDraws`. Output both the **index** and the **element** to make it easier to verify the next method. |
+| D | (1 pt) | Call the `findLongestStreak()` method. Output the return value in a clearly labeled manner. |
+
+---
+
+#### Some Tips / Suggestions
+
+#### Testing `collectDraws()`
+- Store the returned array into another array and output the values.
+- Outputting the index of each element will be helpful for checking the next method.
+- A small number of draws is fine for initial testing.
+
+#### Testing `findLongestStreak()`
+- Create a small array where **no two values are the same** and call the method
+- Create an array where **all values are the same** and call the method
+- Create an array where there is **only one longest streak** and call the method
+- Create an array where there are **multiple streaks but only one longest** and call the method
+- Create an array where there are **multiple longest streaks** and call the method
+- Create an array where there are **multiple streaks of the same value** and call the method
+
+---
+
+### Rubric
+
+**Total Points: 25**
+
+| Criterion | Points | AP CSA Standard |
+|-----------|--------|-----------------|
+| **`CardDeck` — Instance variable `currentDraw` declared correctly** | 1 | MOD-1.A — Represents data using instance variables |
+| **`CardDeck` — Default constructor initializes `currentDraw`** | 2 | MOD-2.B — Constructors initialize the attributes of an object |
+| **`CardDeck` — `drawCard()` updates `currentDraw` using `Random` and returns the value** | 2 | MOD-1.F — Methods use `return` to pass values back; CON-1.B — `Random` used for simulation |
+| **Algorithm pseudocode/flowchart for both static methods is present and logical** | 4 | MOD-1.E — Program design precedes implementation; AAP-2.A — Algorithm design |
+| **`collectDraws()` — Correctly creates and fills an int array of `numDraws` values** | 5 | VAR-2.C — Traverse and modify arrays; AAP-2.O — Array creation and population |
+| **`main` A — `CardDeck` object `deck` instantiated correctly** | 1 | MOD-2.C — Objects are created using `new` with a constructor |
+| **`main` B — `collectDraws()` called with 50; result stored in `myDraws`** | 1 | MOD-1.D — Calling methods with parameters and capturing return values |
+| **`main` C — `myDraws` printed with index and element on each line** | 2 | VAR-2.C — Array traversal using index; I/O formatting |
+| **`findLongestStreak()` — Correctly traverses array and tracks longest streak start index** | 8 | AAP-2.O — Array traversal algorithms; AAP-2.P — Identifying repeated patterns |
+| **`main` D — `findLongestStreak()` called and result printed with a label** | 1 | MOD-1.D — Calling methods and interpreting return values |
+
+> **AP CSA Standard Codes used above:**
+> - **MOD-1** — Using Objects and Methods
+> - **MOD-2** — Writing Classes
+> - **VAR-2** — Using Arrays
+> - **AAP-2** — Algorithms and Programming
+> - **CON-1** — Control and Simulation
+
+---
+
+## Recommended Placement in the AP CSA Curriculum
+
+This activity is best placed **mid-Unit 3 (Class Creation)**, immediately after students have:
+
+1. Written their first full class with instance variables, a constructor, and methods
+2. Been introduced to `Random` for the first time
+3. Completed basic array traversal in early Unit 4 preview or as an introduction
+
+
+**Oracle 1Z0-811 connection:** This activity also touches `Random`, array declaration/population, method return types, and static vs. instance context — all of which appear on the Oracle Java Foundations exam.
+
+---
+
+### Extension: Data Science
+
+The data scientist's real question is: *does a reshuffled deck produce truly random sequences, or do streaks appear more (or less) often than probability predicts?*
+
+Once your program is working, consider this challenge:
+
+- Run `collectDraws()` with 1000 draws
+- Count how many streaks exist and how long they are on average
+- A truly random sequence of values 1–13 has a **1-in-13 chance** of any two consecutive draws matching
+- Does your data match that expectation?
+
 ### Activity 2.1.1
 ### Activity 2.1.2 Not another Cake
 ### Activity 2.1.3 Dog Pizza java
@@ -529,3 +678,5 @@ Here is what needs to work:
 Extra:
 - Ignore case, use `.equalsIgnoreCase()`
 - Allow the user to iterate through the program to pick the correct Suspect, Weapon and Room
+
+This extension is a part of Unit 3 method writing and leads into Unit 4 array traversal algorithms.
