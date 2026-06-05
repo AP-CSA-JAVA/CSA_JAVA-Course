@@ -46,11 +46,11 @@ A class is a blueprint for the objects of that class. A class contains variables
 **AP CSA Topics:** 3.1 (Classes), 3.2 (Constructors), 3.3 (Instance Variables and toString())
 **Oracle Domain:** 4, 6
 
-#### Objective
+**Objective**
 
 Write a complete Java class representing a professional athlete. This is your first independently-designed class — you choose the sport, the player, and the data you want to track.
 
-#### Requirements
+**Requirements**
 
 - [ ] Create a class related to a professional sport of your choice (Football, Soccer, Basketball, Baseball, etc.)
 - [ ] Declare at least **five instance variables** appropriate to your sport (e.g., name, team, position, number, stats)
@@ -59,7 +59,7 @@ Write a complete Java class representing a professional athlete. This is your fi
 - [ ] Create a `toString()` method that returns a formatted, multi-line string describing the object
 - [ ] Take a screenshot of your `Main` class, your player class, and your output
 
-#### Example Output
+**Example Output**
 
 ```
 Name: Marcelo Vieira da Silva Jr.
@@ -70,7 +70,7 @@ Goals: 0
 Starting: true
 ```
 
-#### Starter Code — Main.java
+**Starter Code — Main.java**
 
 ```java
 public class Main
@@ -234,11 +234,11 @@ public class Car {
 **AP CSA Topics:** 3.2 (Constructors), 3.3 (Writing Methods), 3.4 (Constructor Overloading)
 **Oracle Domain:** 6 (Constructor overloading)
 
-#### Objective
+**Objective**
 
 Study the `Cake.java` reference program to understand **constructor overloading** — writing multiple constructors for the same class, each accepting different parameter types. Then create your own class (not a Cake) that demonstrates the same concept.
 
-#### Part A — Explore the Reference Program
+**Part A — Explore the Reference Program**
 
 Read `Cake.java` and `Main.java` carefully. Then in `Main.java`:
 
@@ -249,7 +249,7 @@ Read `Cake.java` and `Main.java` carefully. Then in `Main.java`:
 - [ ] Declare a variable `emptyCake` and initialize it to `null`
 - [ ] Print `emptyCake`
 
-#### Cake.java — Reference Program
+**Cake.java — Reference Program**
 
 ```java
 public class Cake
@@ -279,7 +279,7 @@ public class Cake
 }
 ```
 
-#### Main.java — Starter Code
+**Main.java — Starter Code**
 
 ```java
 public class Main
@@ -307,7 +307,7 @@ public class Main
 }
 ```
 
-#### Sample Output
+**Sample Output**
 
 ```
         ,,,
@@ -345,8 +345,7 @@ yourCake=Cake@6d06d69c
 ourCake=Cake@7852e922
 emptyCake=null
 ```
-
-#### Part B — Your Own Class (Submission)
+**Part B — Your Own Class (Submission)**
 
 Create a **unique class of your choice** (not a Cake). Requirements:
 
@@ -365,11 +364,12 @@ Create a **unique class of your choice** (not a Cake). Requirements:
 **AP CSA Topics:** 3.1 (Class Design), 3.2 (Constructors), 3.3 (toString())
 **Oracle Domain:** 4, 6
 
-#### Objective
+
+**Objective**
 
 Practice working with **two classes in the same program**. You will complete a provided `Dog` class, then design a `Pizza` class entirely from scratch.
 
-#### Part A — Complete Dog.java
+**Part A — Complete Dog.java**
 
 Fill in the missing instance variables and constructor so the provided `toString()` method works correctly without modification.
 
@@ -390,7 +390,7 @@ public class Dog
 }
 ```
 
-#### Part B — Create Pizza.java from Scratch
+**Part B — Create Pizza.java from Scratch**
 
 Design a `Pizza` class with the following instance variables:
 - `size` (int) — diameter in inches
@@ -402,7 +402,8 @@ Requirements:
 - [ ] Write a constructor that takes all three as parameters
 - [ ] Write a `toString()` that returns a formatted description
 
-#### Main.java — Starter Code
+
+**Main.java — Starter Code**
 
 ```java
 class Main
@@ -421,7 +422,7 @@ class Main
 }
 ```
 
-#### Expected Output
+**Expected Output**
 
 ```
 Sammy is a Golden Retriever
@@ -434,16 +435,16 @@ Sammy is a Golden Retriever
 
 ---
 
-### Activity 3.4.3 — Bicycle Revisited
+**Activity 3.4.3 — Bicycle Revisited**
 
 **AP CSA Topics:** 3.2 (Constructor overloading), 3.4 (Constructors)
 **Oracle Domain:** 6 (Method overloading, constructors)
 
-#### Objective
+**Objective**
 
 Practice writing **multiple constructors** for a single class. Each constructor should handle a different set of parameters, with reasonable default values for anything not provided.
 
-#### Requirements
+**Requirements**
 
 Create a `Bike` class with the following instance variables:
 
@@ -470,7 +471,7 @@ public void pedal()
 
 And a `toString()` that produces output matching the sample below.
 
-#### Sample Output
+**Sample Output**
 
 ```
 My bicycle has 1 gear and is painted white!
@@ -490,11 +491,11 @@ Pedaling to accelerate.
 **AP CSA Topics:** 3.2 (Constructor overloading), 3.1 (Class design), 3.3 (toString())
 **Oracle Domain:** 6 (Constructors and encapsulation)
 
-#### Objective
+**Objective**
 
 Design a `Student` class from scratch using all the constructor techniques from Activities 3.1.1–3.4.3. This is a synthesis activity.
 
-#### Student.java
+**Student.java**
 
 Create a class called `Student` with the following instance variables:
 
@@ -516,12 +517,12 @@ Write a `toString()` method that returns:
 Student{name='Alice', age=16, gpa=3.5}
 ```
 
-#### Main.java
+**Main.java**
 
 - [ ] Create at least one `Student` object using each constructor
 - [ ] Print each object using `System.out.println()`
 
-#### Expected Output
+**Expected Output**
 
 ```
 Student{name='Unknown', age=0, gpa=0.0}
@@ -850,11 +851,11 @@ In the table above, streaks start at positions 1, 6, 12, and 14.
 
 ### Part 2 — Static Methods in the Driver Class
 
-#### `collectDraws()`
+**`collectDraws()`**
 
 Takes a `CardDeck` and a number of draws as parameters. Returns an array of the values produced by drawing from the deck the given number of times.
 
-#### `findLongestStreak()`
+**`findLongestStreak()`**
 
 Takes an array of integer values. Returns the starting index of a streak of maximum length. Returns `-1` if no streak exists.
 
