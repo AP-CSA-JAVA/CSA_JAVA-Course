@@ -201,7 +201,8 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Unit1.html">Unit 1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Unit2.html">Unit 2</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Unit 3</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Unit 3 — Class Creation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#try-catch-finally">Try / Catch / Finally</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Chapter 2:</span></p>
 <ul>
@@ -1042,8 +1043,8 @@ Pedaling to accelerate.
 </ul>
 </section>
 <hr class="docutils" />
-<section id="exceptions-oracle-foundations-1z0-811">
-<h2>Exceptions — <em>Oracle Foundations 1Z0-811</em><a class="headerlink" href="#exceptions-oracle-foundations-1z0-811" title="Link to this heading">¶</a></h2>
+<section id="oracle-exception-handling">
+<h2>Oracle Exception Handling<a class="headerlink" href="#oracle-exception-handling" title="Link to this heading">¶</a></h2>
 <blockquote>
 <div><p><strong>Oracle Exam Note:</strong> Exception handling is tested on the Oracle Java Foundations exam (1Z0-811) but is <strong>not</strong> on the AP CSA exam.</p>
 </div></blockquote>
@@ -1076,6 +1077,260 @@ Pedaling to accelerate.
 </table>
 </div>
 <p><strong>try-catch-finally:</strong></p>
+</section>
+</section>
+<section id="try-catch-finally">
+<h1>Try / Catch / Finally<a class="headerlink" href="#try-catch-finally" title="Link to this heading">¶</a></h1>
+<p><strong>AP CSA + Oracle 1Z0-811 Exception Handling Reference</strong></p>
+<hr class="docutils" />
+<hr class="docutils" />
+<section id="keyword-definitions">
+<h2>Keyword Definitions<a class="headerlink" href="#keyword-definitions" title="Link to this heading">¶</a></h2>
+<section id="try">
+<h3><code class="docutils literal notranslate"><span class="pre">try</span></code><a class="headerlink" href="#try" title="Link to this heading">¶</a></h3>
+<p>Defines a <strong>guarded block</strong> — code that might throw an exception. If any statement inside throws, control immediately jumps out of the block (remaining lines are skipped) and Java searches for a matching <code class="docutils literal notranslate"><span class="pre">catch</span></code> clause.</p>
+<p><strong>Rules:</strong></p>
+<ul class="simple">
+<li><p>Must be followed by at least one <code class="docutils literal notranslate"><span class="pre">catch</span></code>, one <code class="docutils literal notranslate"><span class="pre">finally</span></code>, or both.</p></li>
+<li><p>Remaining lines are skipped the moment an exception is thrown.</p></li>
+<li><p>Can be nested inside other <code class="docutils literal notranslate"><span class="pre">try</span></code> blocks.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="catch-exceptiontype-e">
+<h3><code class="docutils literal notranslate"><span class="pre">catch</span> <span class="pre">(ExceptionType</span> <span class="pre">e)</span></code><a class="headerlink" href="#catch-exceptiontype-e" title="Link to this heading">¶</a></h3>
+<p>Handles a specific exception type. The parameter <code class="docutils literal notranslate"><span class="pre">e</span></code> is the actual exception object — you can call <code class="docutils literal notranslate"><span class="pre">e.getMessage()</span></code>, <code class="docutils literal notranslate"><span class="pre">e.printStackTrace()</span></code>, or rethrow with <code class="docutils literal notranslate"><span class="pre">throw</span> <span class="pre">e</span></code>. Multiple <code class="docutils literal notranslate"><span class="pre">catch</span></code> blocks are allowed; Java checks them <strong>top-down and runs the first match only</strong>.</p>
+<p><strong>Rules:</strong></p>
+<ul class="simple">
+<li><p>Order matters: more specific types must come <strong>before</strong> broader ones (e.g., <code class="docutils literal notranslate"><span class="pre">IOException</span></code> before <code class="docutils literal notranslate"><span class="pre">Exception</span></code>).</p></li>
+<li><p>Placing <code class="docutils literal notranslate"><span class="pre">Exception</span></code> before a subclass is an <strong>unreachable catch block — compile error</strong>.</p></li>
+<li><p>The exception variable (<code class="docutils literal notranslate"><span class="pre">e</span></code>) is only in scope inside that <code class="docutils literal notranslate"><span class="pre">catch</span></code> block.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="finally">
+<h3><code class="docutils literal notranslate"><span class="pre">finally</span></code><a class="headerlink" href="#finally" title="Link to this heading">¶</a></h3>
+<p>The <strong>cleanup block</strong>. Runs <em>regardless</em> of whether an exception was thrown or caught. Classic uses: closing file/DB connections, releasing locks, logging.</p>
+<p><strong>Rules:</strong></p>
+<ul class="simple">
+<li><p>Runs even if there is a <code class="docutils literal notranslate"><span class="pre">return</span></code> statement in <code class="docutils literal notranslate"><span class="pre">try</span></code> or <code class="docutils literal notranslate"><span class="pre">catch</span></code>.</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">finally</span></code> itself contains a <code class="docutils literal notranslate"><span class="pre">return</span></code>, it <strong>overrides</strong> the return value from <code class="docutils literal notranslate"><span class="pre">try</span></code>/<code class="docutils literal notranslate"><span class="pre">catch</span></code>.</p></li>
+<li><p><strong>Does NOT run</strong> if <code class="docutils literal notranslate"><span class="pre">System.exit()</span></code> is called or the JVM crashes.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="throw">
+<h3><code class="docutils literal notranslate"><span class="pre">throw</span></code><a class="headerlink" href="#throw" title="Link to this heading">¶</a></h3>
+<p>A <strong>statement</strong> that manually launches an exception object. Must be followed by a <code class="docutils literal notranslate"><span class="pre">Throwable</span></code> instance:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&quot;Invalid input&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Control immediately leaves the current method and unwinds the call stack looking for a handler.</p>
+<p><strong>Rules:</strong></p>
+<ul class="simple">
+<li><p>Requires a <code class="docutils literal notranslate"><span class="pre">Throwable</span></code> (or subclass) object.</p></li>
+<li><p>No lines after <code class="docutils literal notranslate"><span class="pre">throw</span></code> in that method execute.</p></li>
+<li><p>Unchecked exceptions (<code class="docutils literal notranslate"><span class="pre">RuntimeException</span></code> subtypes) can be thrown without declaring them.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="throws-method-signature">
+<h3><code class="docutils literal notranslate"><span class="pre">throws</span></code> <em>(method signature)</em><a class="headerlink" href="#throws-method-signature" title="Link to this heading">¶</a></h3>
+<p>Declares that a method might throw a checked exception and is <strong>not</strong> handling it internally — callers must handle it.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">readFile</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">path</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Rules:</strong></p>
+<ul class="simple">
+<li><p>Only required for <strong>checked exceptions</strong> (not <code class="docutils literal notranslate"><span class="pre">RuntimeException</span></code> subtypes).</p></li>
+<li><p>Multiple exceptions: <code class="docutils literal notranslate"><span class="pre">throws</span> <span class="pre">IOException,</span> <span class="pre">SQLException</span></code></p></li>
+<li><p>Does <em>not</em> mean the exception will be thrown — only that it might be.</p></li>
+</ul>
+<blockquote>
+<div><p><strong>Oracle Exam Note:</strong> <code class="docutils literal notranslate"><span class="pre">throw</span></code> vs <code class="docutils literal notranslate"><span class="pre">throws</span></code> — one is a statement inside a method body, the other is a keyword in the method signature. Mixing them up is a common exam trap.</p>
+</div></blockquote>
+</section>
+</section>
+<hr class="docutils" />
+<section id="full-syntax-template">
+<h2>Full Syntax Template<a class="headerlink" href="#full-syntax-template" title="Link to this heading">¶</a></h2>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// risky code — may throw an exception</span>
+<span class="w">    </span><span class="n">doSomethingRisky</span><span class="p">();</span>
+
+<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SpecificException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// handle the specific type first (most specific → least specific)</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+
+<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// broader catch — catches anything Exception and below</span>
+
+<span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// ALWAYS runs — cleanup code goes here</span>
+<span class="w">    </span><span class="n">closeFile</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="execution-order-by-scenario">
+<h2>Execution Order by Scenario<a class="headerlink" href="#execution-order-by-scenario" title="Link to this heading">¶</a></h2>
+<section id="scenario-1-no-exception-thrown">
+<h3>Scenario 1 — No exception thrown ✅<a class="headerlink" href="#scenario-1-no-exception-thrown" title="Link to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>try     │ int x = 10 / 2;          → executes normally
+try     │ System.out.println(x);   → prints 5
+skip    │ catch block              → skipped, no exception
+finally │ finally block            → always runs
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="scenario-2-exception-thrown-and-caught">
+<h3>Scenario 2 — Exception thrown and caught ✅<a class="headerlink" href="#scenario-2-exception-thrown-and-caught" title="Link to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>try     │ int x = 10 / 0;                        → throws ArithmeticException
+skip    │ System.out.println(x);                 → skipped
+catch   │ catch (ArithmeticException e)           → matches!
+catch   │ System.out.println(&quot;caught: &quot; + e...); → runs
+finally │ finally block                           → always runs
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="scenario-3-exception-not-caught">
+<h3>Scenario 3 — Exception not caught ⚠️<a class="headerlink" href="#scenario-3-exception-not-caught" title="Link to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>try       │ int x = 10 / 0;                 → throws ArithmeticException
+check     │ catch (NullPointerException e)  → no match
+finally   │ finally block                   → still runs first
+↑ propagate │ ArithmeticException           → propagates to caller
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="scenario-4-multiple-catch-blocks-order-matters">
+<h3>Scenario 4 — Multiple catch blocks (order matters) ✅<a class="headerlink" href="#scenario-4-multiple-catch-blocks-order-matters" title="Link to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>try     │ throw new FileNotFoundException(&quot;bad path&quot;);
+check   │ catch (IOException e)    → FileNotFoundException IS-A IOException → matches
+skip    │ catch (Exception e)      → never reached
+finally │ finally block            → always runs
+⚠ exam  │ If IOException came AFTER FileNotFoundException — OK.
+         │ If IOException came BEFORE FileNotFoundException — ALSO OK.
+         │ If Exception came BEFORE IOException — COMPILE ERROR.
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="scenario-5-return-inside-try">
+<h3>Scenario 5 — <code class="docutils literal notranslate"><span class="pre">return</span></code> inside <code class="docutils literal notranslate"><span class="pre">try</span></code> ⚠️<a class="headerlink" href="#scenario-5-return-inside-try" title="Link to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>try     │ return 42;     → Java queues this return value
+finally │ finally block  → runs BEFORE method actually returns
+return  │ method returns 42  (unless finally has its own return)
+⚠ trap  │ A return inside finally overrides the try return value.
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="scenario-6-throw-inside-finally">
+<h3>Scenario 6 — <code class="docutils literal notranslate"><span class="pre">throw</span></code> inside <code class="docutils literal notranslate"><span class="pre">finally</span></code> 🚫<a class="headerlink" href="#scenario-6-throw-inside-finally" title="Link to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>try       │ throw new RuntimeException(&quot;original&quot;);
+finally   │ throw new IllegalStateException(&quot;new!&quot;);
+⚠ lost    │ &quot;original&quot; exception is silently discarded
+caller    │ only sees IllegalStateException
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="oracle-1z0-811-rules-checklist">
+<h2>Oracle 1Z0-811 Rules Checklist<a class="headerlink" href="#oracle-1z0-811-rules-checklist" title="Link to this heading">¶</a></h2>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>#</p></th>
+<th class="head"><p>Rule</p></th>
+<th class="head"><p>Verdict</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>A <code class="docutils literal notranslate"><span class="pre">try</span></code> block must be followed by at least one <code class="docutils literal notranslate"><span class="pre">catch</span></code> or <code class="docutils literal notranslate"><span class="pre">finally</span></code></p></td>
+<td><p>compile error if missing</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>Catch order: specific subclass <strong>before</strong> parent class</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Exception</span></code> before <code class="docutils literal notranslate"><span class="pre">IOException</span></code> = compile error</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">finally</span></code> always runs — even with <code class="docutils literal notranslate"><span class="pre">return</span></code> or uncaught <code class="docutils literal notranslate"><span class="pre">throw</span></code></p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">return</span></code> in <code class="docutils literal notranslate"><span class="pre">finally</span></code> overrides <code class="docutils literal notranslate"><span class="pre">return</span></code> in <code class="docutils literal notranslate"><span class="pre">try</span></code>/<code class="docutils literal notranslate"><span class="pre">catch</span></code></p></td>
+<td><p>⚠️ tricky</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">throw</span></code> in <code class="docutils literal notranslate"><span class="pre">finally</span></code> discards the original exception</p></td>
+<td><p>🚫 silent bug</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">System.exit()</span></code> is the only way to bypass <code class="docutils literal notranslate"><span class="pre">finally</span></code></p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>Checked exceptions must use <code class="docutils literal notranslate"><span class="pre">throws</span></code> in signature or be caught</p></td>
+<td><p>compile error if missing</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>Unchecked (<code class="docutils literal notranslate"><span class="pre">RuntimeException</span></code>) need no declaration</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>Multi-catch: <code class="docutils literal notranslate"><span class="pre">catch</span> <span class="pre">(IOException</span> <span class="pre">|</span> <span class="pre">SQLException</span> <span class="pre">e)</span></code> — types must not be in parent-child relationship</p></td>
+<td><p>Java 7+</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>Try-with-resources: <code class="docutils literal notranslate"><span class="pre">try</span> <span class="pre">(Scanner</span> <span class="pre">sc</span> <span class="pre">=</span> <span class="pre">new</span> <span class="pre">Scanner(f))</span></code> — auto-closes <code class="docutils literal notranslate"><span class="pre">AutoCloseable</span></code></p></td>
+<td><p>Java 7+</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="exception-hierarchy-quick-reference">
+<h2>Exception Hierarchy Quick Reference<a class="headerlink" href="#exception-hierarchy-quick-reference" title="Link to this heading">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Throwable
+├── Error                  (JVM-level, do NOT catch)
+│   ├── OutOfMemoryError
+│   └── StackOverflowError
+└── Exception              ← checked (must handle)
+    ├── IOException
+    │   └── FileNotFoundException
+    ├── SQLException
+    └── RuntimeException   ← unchecked (optional to handle)
+        ├── ArithmeticException
+        ├── NullPointerException
+        ├── ArrayIndexOutOfBoundsException
+        ├── ClassCastException
+        └── IllegalArgumentException
+</pre></div>
+</div>
+<blockquote>
+<div><p><strong>Oracle Exam Note:</strong> Know which exceptions are <strong>checked</strong> (must be caught or declared) vs <strong>unchecked</strong> (optional). <code class="docutils literal notranslate"><span class="pre">RuntimeException</span></code> and its subclasses are unchecked. Everything else that extends <code class="docutils literal notranslate"><span class="pre">Exception</span></code> is checked. <code class="docutils literal notranslate"><span class="pre">Error</span></code> classes are never caught in normal code.</p>
+</div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="common-student-mistakes">
+<h2>Common Student Mistakes<a class="headerlink" href="#common-student-mistakes" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Assuming <code class="docutils literal notranslate"><span class="pre">catch</span></code> runs when there’s no exception</strong> — it doesn’t. <code class="docutils literal notranslate"><span class="pre">catch</span></code> is skipped if <code class="docutils literal notranslate"><span class="pre">try</span></code> completes normally.</p></li>
+<li><p><strong>Assuming <code class="docutils literal notranslate"><span class="pre">finally</span></code> is optional</strong> — it runs even without an explicit <code class="docutils literal notranslate"><span class="pre">finally</span></code> block… wait, no: you have to write it. But once written, it <em>always</em> runs.</p></li>
+<li><p><strong>Putting broad <code class="docutils literal notranslate"><span class="pre">catch</span></code> first</strong> — <code class="docutils literal notranslate"><span class="pre">catch</span> <span class="pre">(Exception</span> <span class="pre">e)</span></code> before <code class="docutils literal notranslate"><span class="pre">catch</span> <span class="pre">(IOException</span> <span class="pre">e)</span></code> is a compile error.</p></li>
+<li><p><strong>Confusing <code class="docutils literal notranslate"><span class="pre">throw</span></code> and <code class="docutils literal notranslate"><span class="pre">throws</span></code></strong> — <code class="docutils literal notranslate"><span class="pre">throw</span></code> launches an exception; <code class="docutils literal notranslate"><span class="pre">throws</span></code> declares that a method might produce one.</p></li>
+<li><p><strong>Thinking <code class="docutils literal notranslate"><span class="pre">return</span></code> exits immediately</strong> — <code class="docutils literal notranslate"><span class="pre">finally</span></code> still runs after a <code class="docutils literal notranslate"><span class="pre">return</span></code> in <code class="docutils literal notranslate"><span class="pre">try</span></code>.</p></li>
+<li><p><strong>Throwing from <code class="docutils literal notranslate"><span class="pre">finally</span></code></strong> — silently swallows the original exception. Avoid in production code.</p></li>
+</ol>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ArithmeticException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -1489,7 +1744,31 @@ Pedaling to accelerate.
 <li><a class="reference internal" href="#class-variables-and-methods">3.7 Class Variables and Methods</a></li>
 <li><a class="reference internal" href="#scope-and-access">3.8 Scope and Access</a></li>
 <li><a class="reference internal" href="#this-keyword">3.9 this Keyword</a></li>
-<li><a class="reference internal" href="#exceptions-oracle-foundations-1z0-811">Exceptions — <em>Oracle Foundations 1Z0-811</em></a><ul>
+<li><a class="reference internal" href="#oracle-exception-handling">Oracle Exception Handling</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#try-catch-finally">Try / Catch / Finally</a><ul>
+<li><a class="reference internal" href="#keyword-definitions">Keyword Definitions</a><ul>
+<li><a class="reference internal" href="#try"><code class="docutils literal notranslate"><span class="pre">try</span></code></a></li>
+<li><a class="reference internal" href="#catch-exceptiontype-e"><code class="docutils literal notranslate"><span class="pre">catch</span> <span class="pre">(ExceptionType</span> <span class="pre">e)</span></code></a></li>
+<li><a class="reference internal" href="#finally"><code class="docutils literal notranslate"><span class="pre">finally</span></code></a></li>
+<li><a class="reference internal" href="#throw"><code class="docutils literal notranslate"><span class="pre">throw</span></code></a></li>
+<li><a class="reference internal" href="#throws-method-signature"><code class="docutils literal notranslate"><span class="pre">throws</span></code> <em>(method signature)</em></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#full-syntax-template">Full Syntax Template</a></li>
+<li><a class="reference internal" href="#execution-order-by-scenario">Execution Order by Scenario</a><ul>
+<li><a class="reference internal" href="#scenario-1-no-exception-thrown">Scenario 1 — No exception thrown ✅</a></li>
+<li><a class="reference internal" href="#scenario-2-exception-thrown-and-caught">Scenario 2 — Exception thrown and caught ✅</a></li>
+<li><a class="reference internal" href="#scenario-3-exception-not-caught">Scenario 3 — Exception not caught ⚠️</a></li>
+<li><a class="reference internal" href="#scenario-4-multiple-catch-blocks-order-matters">Scenario 4 — Multiple catch blocks (order matters) ✅</a></li>
+<li><a class="reference internal" href="#scenario-5-return-inside-try">Scenario 5 — <code class="docutils literal notranslate"><span class="pre">return</span></code> inside <code class="docutils literal notranslate"><span class="pre">try</span></code> ⚠️</a></li>
+<li><a class="reference internal" href="#scenario-6-throw-inside-finally">Scenario 6 — <code class="docutils literal notranslate"><span class="pre">throw</span></code> inside <code class="docutils literal notranslate"><span class="pre">finally</span></code> 🚫</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#oracle-1z0-811-rules-checklist">Oracle 1Z0-811 Rules Checklist</a></li>
+<li><a class="reference internal" href="#exception-hierarchy-quick-reference">Exception Hierarchy Quick Reference</a></li>
+<li><a class="reference internal" href="#common-student-mistakes">Common Student Mistakes</a><ul>
 <li><a class="reference internal" href="#activity-3-e-1-exception-handling-practice">Activity 3.E.1 — Exception Handling Practice</a></li>
 </ul>
 </li>

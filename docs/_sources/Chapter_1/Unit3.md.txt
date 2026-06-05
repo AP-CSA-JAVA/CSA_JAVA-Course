@@ -730,7 +730,7 @@ public class Main {
 
 ---
 
-## Exceptions — *Oracle Foundations 1Z0-811*
+## Oracle Exception Handling
 
 > **Oracle Exam Note:** Exception handling is tested on the Oracle Java Foundations exam (1Z0-811) but is **not** on the AP CSA exam.
 
@@ -747,6 +747,219 @@ An **exception** is an event that disrupts the normal flow of a program at runti
 | `IllegalArgumentException` | Illegal argument passed to a constructor or method |
 
 **try-catch-finally:**
+
+# Try / Catch / Finally
+**AP CSA + Oracle 1Z0-811 Exception Handling Reference**
+
+---
+
+
+
+---
+
+## Keyword Definitions
+
+### `try`
+Defines a **guarded block** — code that might throw an exception. If any statement inside throws, control immediately jumps out of the block (remaining lines are skipped) and Java searches for a matching `catch` clause.
+
+**Rules:**
+- Must be followed by at least one `catch`, one `finally`, or both.
+- Remaining lines are skipped the moment an exception is thrown.
+- Can be nested inside other `try` blocks.
+
+---
+
+### `catch (ExceptionType e)`
+Handles a specific exception type. The parameter `e` is the actual exception object — you can call `e.getMessage()`, `e.printStackTrace()`, or rethrow with `throw e`. Multiple `catch` blocks are allowed; Java checks them **top-down and runs the first match only**.
+
+**Rules:**
+- Order matters: more specific types must come **before** broader ones (e.g., `IOException` before `Exception`).
+- Placing `Exception` before a subclass is an **unreachable catch block — compile error**.
+- The exception variable (`e`) is only in scope inside that `catch` block.
+
+---
+
+### `finally`
+The **cleanup block**. Runs *regardless* of whether an exception was thrown or caught. Classic uses: closing file/DB connections, releasing locks, logging.
+
+**Rules:**
+- Runs even if there is a `return` statement in `try` or `catch`.
+- If `finally` itself contains a `return`, it **overrides** the return value from `try`/`catch`.
+- **Does NOT run** if `System.exit()` is called or the JVM crashes.
+
+---
+
+### `throw`
+A **statement** that manually launches an exception object. Must be followed by a `Throwable` instance:
+
+```java
+throw new IllegalArgumentException("Invalid input");
+```
+
+Control immediately leaves the current method and unwinds the call stack looking for a handler.
+
+**Rules:**
+- Requires a `Throwable` (or subclass) object.
+- No lines after `throw` in that method execute.
+- Unchecked exceptions (`RuntimeException` subtypes) can be thrown without declaring them.
+
+---
+
+### `throws` *(method signature)*
+Declares that a method might throw a checked exception and is **not** handling it internally — callers must handle it.
+
+```java
+public void readFile(String path) throws IOException {
+    // ...
+}
+```
+
+**Rules:**
+- Only required for **checked exceptions** (not `RuntimeException` subtypes).
+- Multiple exceptions: `throws IOException, SQLException`
+- Does *not* mean the exception will be thrown — only that it might be.
+
+> **Oracle Exam Note:** `throw` vs `throws` — one is a statement inside a method body, the other is a keyword in the method signature. Mixing them up is a common exam trap.
+
+---
+
+## Full Syntax Template
+
+```java
+try {
+    // risky code — may throw an exception
+    doSomethingRisky();
+
+} catch (SpecificException e) {
+    // handle the specific type first (most specific → least specific)
+    System.out.println(e.getMessage());
+
+} catch (Exception e) {
+    // broader catch — catches anything Exception and below
+
+} finally {
+    // ALWAYS runs — cleanup code goes here
+    closeFile();
+}
+```
+
+---
+
+## Execution Order by Scenario
+
+### Scenario 1 — No exception thrown ✅
+```
+try     │ int x = 10 / 2;          → executes normally
+try     │ System.out.println(x);   → prints 5
+skip    │ catch block              → skipped, no exception
+finally │ finally block            → always runs
+```
+
+---
+
+### Scenario 2 — Exception thrown and caught ✅
+```
+try     │ int x = 10 / 0;                        → throws ArithmeticException
+skip    │ System.out.println(x);                 → skipped
+catch   │ catch (ArithmeticException e)           → matches!
+catch   │ System.out.println("caught: " + e...); → runs
+finally │ finally block                           → always runs
+```
+
+---
+
+### Scenario 3 — Exception not caught ⚠️
+```
+try       │ int x = 10 / 0;                 → throws ArithmeticException
+check     │ catch (NullPointerException e)  → no match
+finally   │ finally block                   → still runs first
+↑ propagate │ ArithmeticException           → propagates to caller
+```
+
+---
+
+### Scenario 4 — Multiple catch blocks (order matters) ✅
+```
+try     │ throw new FileNotFoundException("bad path");
+check   │ catch (IOException e)    → FileNotFoundException IS-A IOException → matches
+skip    │ catch (Exception e)      → never reached
+finally │ finally block            → always runs
+⚠ exam  │ If IOException came AFTER FileNotFoundException — OK.
+         │ If IOException came BEFORE FileNotFoundException — ALSO OK.
+         │ If Exception came BEFORE IOException — COMPILE ERROR.
+```
+
+---
+
+### Scenario 5 — `return` inside `try` ⚠️
+```
+try     │ return 42;     → Java queues this return value
+finally │ finally block  → runs BEFORE method actually returns
+return  │ method returns 42  (unless finally has its own return)
+⚠ trap  │ A return inside finally overrides the try return value.
+```
+
+---
+
+### Scenario 6 — `throw` inside `finally` 🚫
+```
+try       │ throw new RuntimeException("original");
+finally   │ throw new IllegalStateException("new!");
+⚠ lost    │ "original" exception is silently discarded
+caller    │ only sees IllegalStateException
+```
+
+---
+
+## Oracle 1Z0-811 Rules Checklist
+
+| # | Rule | Verdict |
+|---|------|---------|
+| 1 | A `try` block must be followed by at least one `catch` or `finally` | compile error if missing |
+| 2 | Catch order: specific subclass **before** parent class | `Exception` before `IOException` = compile error |
+| 3 | `finally` always runs — even with `return` or uncaught `throw` | ✅ |
+| 4 | `return` in `finally` overrides `return` in `try`/`catch` | ⚠️ tricky |
+| 5 | `throw` in `finally` discards the original exception | 🚫 silent bug |
+| 6 | `System.exit()` is the only way to bypass `finally` | ✅ |
+| 7 | Checked exceptions must use `throws` in signature or be caught | compile error if missing |
+| 8 | Unchecked (`RuntimeException`) need no declaration | ✅ |
+| 9 | Multi-catch: `catch (IOException \| SQLException e)` — types must not be in parent-child relationship | Java 7+ |
+| 10 | Try-with-resources: `try (Scanner sc = new Scanner(f))` — auto-closes `AutoCloseable` | Java 7+ |
+
+---
+
+## Exception Hierarchy Quick Reference
+
+```
+Throwable
+├── Error                  (JVM-level, do NOT catch)
+│   ├── OutOfMemoryError
+│   └── StackOverflowError
+└── Exception              ← checked (must handle)
+    ├── IOException
+    │   └── FileNotFoundException
+    ├── SQLException
+    └── RuntimeException   ← unchecked (optional to handle)
+        ├── ArithmeticException
+        ├── NullPointerException
+        ├── ArrayIndexOutOfBoundsException
+        ├── ClassCastException
+        └── IllegalArgumentException
+```
+
+> **Oracle Exam Note:** Know which exceptions are **checked** (must be caught or declared) vs **unchecked** (optional). `RuntimeException` and its subclasses are unchecked. Everything else that extends `Exception` is checked. `Error` classes are never caught in normal code.
+
+---
+
+## Common Student Mistakes
+
+1. **Assuming `catch` runs when there's no exception** — it doesn't. `catch` is skipped if `try` completes normally.
+2. **Assuming `finally` is optional** — it runs even without an explicit `finally` block... wait, no: you have to write it. But once written, it *always* runs.
+3. **Putting broad `catch` first** — `catch (Exception e)` before `catch (IOException e)` is a compile error.
+4. **Confusing `throw` and `throws`** — `throw` launches an exception; `throws` declares that a method might produce one.
+5. **Thinking `return` exits immediately** — `finally` still runs after a `return` in `try`.
+6. **Throwing from `finally`** — silently swallows the original exception. Avoid in production code.
+
 
 ```java
 try {
