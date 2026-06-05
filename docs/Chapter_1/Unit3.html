@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="Unit 4" href="../Chapter_2/Unit4.html"><link rel="prev" title="Unit 2 - Selection and Iteration" href="Unit2.html">
 
     <!-- Generated with Sphinx 8.1.3 and Furo 2025.12.19 -->
-        <title>Unit 3 - Class Creation - CSA JAVA Course</title>
+        <title>Unit 3 — Class Creation - CSA JAVA Course</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=8dab3a3b" />
@@ -246,8 +246,55 @@
         </div>
         <article role="main" id="furo-main-content">
           <section id="unit-3-class-creation">
-<h1>Unit 3 - Class Creation<a class="headerlink" href="#unit-3-class-creation" title="Link to this heading">¶</a></h1>
+<h1>Unit 3 — Class Creation<a class="headerlink" href="#unit-3-class-creation" title="Link to this heading">¶</a></h1>
 <p><em>AP Exam Weighting: 10–18%</em></p>
+<details>
+<summary>📌 Standards — Unit 3</summary>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Standard</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>AP CSA MOD-2.A</strong></p></td>
+<td><p>Describe the purpose of a class and its relationship to objects</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>AP CSA MOD-2.B</strong></p></td>
+<td><p>Constructors initialize the attributes of an object</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>AP CSA MOD-2.C</strong></p></td>
+<td><p>Objects are created using <code class="docutils literal notranslate"><span class="pre">new</span></code> with a constructor call</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>AP CSA MOD-2.D</strong></p></td>
+<td><p>Instance variables store object state</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>AP CSA MOD-1.F</strong></p></td>
+<td><p>Methods use <code class="docutils literal notranslate"><span class="pre">return</span></code> to pass values back to the calling code</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>AP CSA VAR-1.E</strong></p></td>
+<td><p>Declare variables of the correct type</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Oracle 1Z0-811 — Domain 4</strong></p></td>
+<td><p>Working with Java Data Types: primitive and reference types</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Oracle 1Z0-811 — Domain 6</strong></p></td>
+<td><p>Working with Methods and Encapsulation: constructors, method overloading</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>CTE ICT 5.8</strong></p></td>
+<td><p>Create and use algorithms</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>CTE CRP 2</strong></p></td>
+<td><p>Communicate clearly, effectively, and with reason</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>CTE CRP 5</strong></p></td>
+<td><p>Utilize critical thinking to make sense of problems</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
 <hr class="docutils" />
 <section id="abstraction-and-program-design">
 <h2>3.1 Abstraction and Program Design<a class="headerlink" href="#abstraction-and-program-design" title="Link to this heading">¶</a></h2>
@@ -257,7 +304,7 @@
 <li><p>Use a non-programming methodology to design code.</p></li>
 <li><p>Create a roadmap for the next activities.</p></li>
 </ul>
-<p>A class is a blueprint for the objects of that class. A class contains variables and methods to store and manipulate information. To create a class, you first state whether you want it to be public or private, use the class keyword, and name the class.</p>
+<p>A class is a blueprint for the objects of that class. A class contains variables and methods to store and manipulate information. To create a class, you first state whether you want it to be public or private, use the <code class="docutils literal notranslate"><span class="pre">class</span></code> keyword, and name the class.</p>
 <p><strong>Design Principles of a Class:</strong></p>
 <ul class="simple">
 <li><p><mark>Encapsulation</mark>: Use access modifiers (<code class="docutils literal notranslate"><span class="pre">private</span></code>, <code class="docutils literal notranslate"><span class="pre">public</span></code>, <code class="docutils literal notranslate"><span class="pre">protected</span></code>) to encapsulate attributes, allowing controlled access through getter and setter methods.</p></li>
@@ -266,6 +313,54 @@
 <li><p><mark>Single Responsibility Principle (SRP)</mark>: A class should only deal with managing one responsibility.</p></li>
 <li><p><mark>Information Hiding</mark>: Making attributes <code class="docutils literal notranslate"><span class="pre">private</span></code> so external code can only interact through well-defined methods.</p></li>
 </ul>
+<hr class="docutils" />
+<section id="activity-3-1-1-sports-class">
+<h3>Activity 3.1.1 — Sports Class<a class="headerlink" href="#activity-3-1-1-sports-class" title="Link to this heading">¶</a></h3>
+<p><strong>AP CSA Topics:</strong> 3.1 (Classes), 3.2 (Constructors), 3.3 (Instance Variables and toString())
+<strong>Oracle Domain:</strong> 4, 6</p>
+<section id="objective">
+<h4>Objective<a class="headerlink" href="#objective" title="Link to this heading">¶</a></h4>
+<p>Write a complete Java class representing a professional athlete. This is your first independently-designed class — you choose the sport, the player, and the data you want to track.</p>
+</section>
+<section id="requirements">
+<h4>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">¶</a></h4>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create a class related to a professional sport of your choice (Football, Soccer, Basketball, Baseball, etc.)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Declare at least <strong>five instance variables</strong> appropriate to your sport (e.g., name, team, position, number, stats)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create a <strong>constructor</strong> that accepts parameters for all instance variables</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create an <strong>instance</strong> of the class in <code class="docutils literal notranslate"><span class="pre">Main.java</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create a <code class="docutils literal notranslate"><span class="pre">toString()</span></code> method that returns a formatted, multi-line string describing the object</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Take a screenshot of your <code class="docutils literal notranslate"><span class="pre">Main</span></code> class, your player class, and your output</p></li>
+</ul>
+</section>
+<section id="example-output">
+<h4>Example Output<a class="headerlink" href="#example-output" title="Link to this heading">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Name</span><span class="p">:</span> <span class="n">Marcelo</span> <span class="n">Vieira</span> <span class="n">da</span> <span class="n">Silva</span> <span class="n">Jr</span><span class="o">.</span>
+<span class="n">Team</span><span class="p">:</span> <span class="n">Real</span> <span class="n">Madrid</span>
+<span class="n">Position</span><span class="p">:</span> <span class="n">left</span><span class="o">-</span><span class="n">back</span>
+<span class="n">Number</span><span class="p">:</span> <span class="mi">12</span>
+<span class="n">Goals</span><span class="p">:</span> <span class="mi">0</span>
+<span class="n">Starting</span><span class="p">:</span> <span class="n">true</span>
+</pre></div>
+</div>
+</section>
+<section id="starter-code-main-java">
+<h4>Starter Code — Main.java<a class="headerlink" href="#starter-code-main-java" title="Link to this heading">¶</a></h4>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Create an instance of your athlete class here</span>
+<span class="w">        </span><span class="c1">// Print it using System.out.println()</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p><strong>Oracle Exam Note:</strong> The Oracle 1Z0-811 exam tests your understanding of reference types, constructors, and how <code class="docutils literal notranslate"><span class="pre">new</span></code> allocates an object on the heap. When you write <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Athlete(...)</span></code>, Java allocates memory and calls the constructor. The variable holds a <em>reference</em> (memory address), not the object itself.</p>
+</div></blockquote>
+</section>
+</section>
 </section>
 <hr class="docutils" />
 <section id="impact-of-program-design">
@@ -296,7 +391,7 @@
 <h2>3.3 Anatomy of a Class<a class="headerlink" href="#anatomy-of-a-class" title="Link to this heading">¶</a></h2>
 <p><strong>Goals</strong></p>
 <ul class="simple">
-<li><p>Understand the design principles of a class.</p></li>
+<li><p>Understand the structure and components of a Java class.</p></li>
 </ul>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Class definition</span>
 <span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Student</span><span class="w"> </span><span class="p">{</span>
@@ -336,7 +431,6 @@
 <span class="w">        </span><span class="n">student1</span><span class="p">.</span><span class="na">displayInfo</span><span class="p">();</span>
 
 <span class="w">        </span><span class="n">student1</span><span class="p">.</span><span class="na">setName</span><span class="p">(</span><span class="s">&quot;Roy Kent&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="n">student1</span><span class="p">.</span><span class="na">setAge</span><span class="p">(</span><span class="mi">35</span><span class="p">);</span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\nUpdated Information:&quot;</span><span class="p">);</span>
 <span class="w">        </span><span class="n">student1</span><span class="p">.</span><span class="na">displayInfo</span><span class="p">();</span>
 <span class="w">    </span><span class="p">}</span>
@@ -351,13 +445,9 @@
 <ul class="simple">
 <li><p>Understand the concept of class constructors.</p></li>
 <li><p>Write your own class constructors.</p></li>
-<li><p>Examine call by value and reference with regard to class constructors.</p>
-<ul>
-<li><p>I will be able to write a program that utilizes constructors</p></li>
+<li><p>Examine call by value and reference with regard to class constructors.</p></li>
 </ul>
-</li>
-</ul>
-<p>A <strong>constructor</strong> in Java is a special method that is used to initialize objects. The constructor is called when an object of a class is created. It can be used to set the initial values for object attributes.</p>
+<p>A <strong>constructor</strong> in Java is a special method used to initialize objects. The constructor is called when an object of a class is created. It can be used to set the initial values for object attributes.</p>
 <p>Java is a <em>pass-by-value</em> language. If we pass a primitive value, we are passing a copy of that value. However, if we are passing a reference type, we are passing a reference to the data location.</p>
 <p><strong>Constructor Overloading:</strong> It is possible to write two or more constructors within a program. The difference between the constructors are the <em>parameters</em> defined within each constructor.</p>
 <p>The <strong>default constructor</strong> is the constructor with no parameters. If an overloaded constructor is missing a parameter, the value will default to the default constructor.</p>
@@ -409,350 +499,352 @@
 </pre></div>
 </div>
 </section>
-<section id="project-card-draw-sequences">
-<h3>PROJECT - CARD DRAW SEQUENCES<a class="headerlink" href="#project-card-draw-sequences" title="Link to this heading">¶</a></h3>
 <hr class="docutils" />
-<section id="scenario">
-<h4>Scenario<a class="headerlink" href="#scenario" title="Link to this heading">¶</a></h4>
-<p>A data scientist is studying sequences of values produced by repeatedly drawing a card from a standard shuffled deck. After each draw, the card is returned and the deck is reshuffled. Each draw produces a value in the range of 1 through 13, inclusive — representing Ace (1) through King (13). The data scientist is particularly interested in <strong>streaks</strong> of values. A streak occurs when two or more consecutive draws produce the same value. For example, in the following sequence of card draws, there are streaks starting at positions 1, 6, 12, and 14.</p>
-<div class="table-wrapper colwidths-auto docutils container">
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Index</p></th>
-<th class="head"><p>0</p></th>
-<th class="head"><p>1</p></th>
-<th class="head"><p>2</p></th>
-<th class="head"><p>3</p></th>
-<th class="head"><p>4</p></th>
-<th class="head"><p>5</p></th>
-<th class="head"><p>6</p></th>
-<th class="head"><p>7</p></th>
-<th class="head"><p>8</p></th>
-<th class="head"><p>9</p></th>
-<th class="head"><p>10</p></th>
-<th class="head"><p>11</p></th>
-<th class="head"><p>12</p></th>
-<th class="head"><p>13</p></th>
-<th class="head"><p>14</p></th>
-<th class="head"><p>15</p></th>
-<th class="head"><p>16</p></th>
-<th class="head"><p>17</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Result</p></td>
-<td><p>1</p></td>
-<td><p>5</p></td>
-<td><p>5</p></td>
-<td><p>4</p></td>
-<td><p>3</p></td>
-<td><p>1</p></td>
-<td><p>2</p></td>
-<td><p>2</p></td>
-<td><p>2</p></td>
-<td><p>2</p></td>
-<td><p>6</p></td>
-<td><p>1</p></td>
-<td><p>3</p></td>
-<td><p>3</p></td>
-<td><p>5</p></td>
-<td><p>5</p></td>
-<td><p>5</p></td>
-<td><p>5</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Out of the goodness of your heart, you have decided to write a program to help the data scientist examine these streaks. The thought of shuffling and drawing from a deck thousands of times by hand seems like a poor use of everyone’s time.</p>
+<section id="activity-3-4-1-not-another-cake">
+<h3>Activity 3.4.1 — Not Another Cake<a class="headerlink" href="#activity-3-4-1-not-another-cake" title="Link to this heading">¶</a></h3>
+<p><strong>AP CSA Topics:</strong> 3.2 (Constructors), 3.3 (Writing Methods), 3.4 (Constructor Overloading)
+<strong>Oracle Domain:</strong> 6 (Constructor overloading)</p>
+<section id="id1">
+<h4>Objective<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h4>
+<p>Study the <code class="docutils literal notranslate"><span class="pre">Cake.java</span></code> reference program to understand <strong>constructor overloading</strong> — writing multiple constructors for the same class, each accepting different parameter types. Then create your own class (not a Cake) that demonstrates the same concept.</p>
 </section>
-<hr class="docutils" />
-<section id="part-1-the-carddeck-class">
-<h4>Part 1 — The <code class="docutils literal notranslate"><span class="pre">CardDeck</span></code> Class<a class="headerlink" href="#part-1-the-carddeck-class" title="Link to this heading">¶</a></h4>
-<p>While thinking about how convenient a class would be to simulate a card deck draw, you have decided to write a class as follows:</p>
-<blockquote>
-<div><p><em><strong>For testing purposes, use the identifier names given</strong></em></p>
-</div></blockquote>
-<p><strong>Class: <code class="docutils literal notranslate"><span class="pre">CardDeck</span></code></strong></p>
-<div class="table-wrapper colwidths-auto docutils container">
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Member</p></th>
-<th class="head"><p>Points</p></th>
-<th class="head"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Instance variable: <code class="docutils literal notranslate"><span class="pre">currentDraw</span></code></p></td>
-<td><p>(1 pt)</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">/**</span> <span class="pre">the</span> <span class="pre">value</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">most</span> <span class="pre">recent</span> <span class="pre">card</span> <span class="pre">draw</span> <span class="pre">(1–13)</span> <span class="pre">*/</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p>Constructor <em>(only a default constructor is required)</em></p></td>
-<td><p>(2 pts)</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">/**</span> <span class="pre">gives</span> <span class="pre">an</span> <span class="pre">initial</span> <span class="pre">value</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">current</span> <span class="pre">draw</span> <span class="pre">*/</span></code></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">drawCard()</span></code></p></td>
-<td><p>(2 pts)</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">/**</span> <span class="pre">simulates</span> <span class="pre">drawing</span> <span class="pre">a</span> <span class="pre">card</span> <span class="pre">from</span> <span class="pre">a</span> <span class="pre">reshuffled</span> <span class="pre">deck,</span> <span class="pre">updates</span> <span class="pre">the</span> <span class="pre">instance</span> <span class="pre">variable,</span> <span class="pre">&#64;return</span> <span class="pre">the</span> <span class="pre">value</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">draw</span> <span class="pre">*/</span></code></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-<hr class="docutils" />
-<section id="part-2-static-methods-in-the-driver-class">
-<h4>Part 2 — Static Methods in the Driver Class<a class="headerlink" href="#part-2-static-methods-in-the-driver-class" title="Link to this heading">¶</a></h4>
-<p>You now need a method that collects the results of several draws in a row, and a method that finds the longest streak in a sequence of draws. This collection and analysis logic does not belong in the <code class="docutils literal notranslate"><span class="pre">CardDeck</span></code> class. Therefore, you decide to create two static methods in the class that contains your <code class="docutils literal notranslate"><span class="pre">main</span></code> method.</p>
-<section id="collectdraws">
-<h5><code class="docutils literal notranslate"><span class="pre">collectDraws()</span></code><a class="headerlink" href="#collectdraws" title="Link to this heading">¶</a></h5>
-<p>Takes a <code class="docutils literal notranslate"><span class="pre">CardDeck</span></code> and a number of draws as parameters. The method will return an array of the values produced by drawing from the deck the given number of times.</p>
-</section>
-<section id="findlongeststreak">
-<h5><code class="docutils literal notranslate"><span class="pre">findLongestStreak()</span></code><a class="headerlink" href="#findlongeststreak" title="Link to this heading">¶</a></h5>
-<p>Takes as its parameter an array of integer values representing a series of card draws. The method returns the starting index in the array of a streak of maximum length. A streak is defined as the repeated occurrence of the same value in two or more consecutive positions in the array.</p>
-<p>For example, in the following array there are two streaks of length 4, one starting at index 6 and another starting at index 14. The method may return either of these starting indices.</p>
-<div class="table-wrapper colwidths-auto docutils container">
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Index</p></th>
-<th class="head"><p>0</p></th>
-<th class="head"><p>1</p></th>
-<th class="head"><p>2</p></th>
-<th class="head"><p>3</p></th>
-<th class="head"><p>4</p></th>
-<th class="head"><p>5</p></th>
-<th class="head"><p>6</p></th>
-<th class="head"><p>7</p></th>
-<th class="head"><p>8</p></th>
-<th class="head"><p>9</p></th>
-<th class="head"><p>10</p></th>
-<th class="head"><p>11</p></th>
-<th class="head"><p>12</p></th>
-<th class="head"><p>13</p></th>
-<th class="head"><p>14</p></th>
-<th class="head"><p>15</p></th>
-<th class="head"><p>16</p></th>
-<th class="head"><p>17</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Result</p></td>
-<td><p>1</p></td>
-<td><p>5</p></td>
-<td><p>5</p></td>
-<td><p>4</p></td>
-<td><p>3</p></td>
-<td><p>1</p></td>
-<td><p>2</p></td>
-<td><p>2</p></td>
-<td><p>2</p></td>
-<td><p>2</p></td>
-<td><p>6</p></td>
-<td><p>1</p></td>
-<td><p>3</p></td>
-<td><p>3</p></td>
-<td><p>5</p></td>
-<td><p>5</p></td>
-<td><p>5</p></td>
-<td><p>5</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>If there are no streaks of any value, the method returns <code class="docutils literal notranslate"><span class="pre">-1</span></code>.</p>
-<p><strong>In computer science speak, we have:</strong></p>
-<div class="table-wrapper colwidths-auto docutils container">
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Method</p></th>
-<th class="head"><p>Points</p></th>
-<th class="head"><p>Javadoc</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">collectDraws()</span></code></p></td>
-<td><p>(5 pts)</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">/**</span> <span class="pre">Returns</span> <span class="pre">an</span> <span class="pre">array</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">values</span> <span class="pre">obtained</span> <span class="pre">by</span> <span class="pre">drawing</span> <span class="pre">from</span> <span class="pre">a</span> <span class="pre">card</span> <span class="pre">deck</span> <span class="pre">numDraws</span> <span class="pre">times.</span></code> <br> <code class="docutils literal notranslate"><span class="pre">*</span> <span class="pre">&#64;param</span> <span class="pre">deck</span> <span class="pre">a</span> <span class="pre">CardDeck</span></code> <br> <code class="docutils literal notranslate"><span class="pre">*</span> <span class="pre">&#64;param</span> <span class="pre">numDraws</span> <span class="pre">the</span> <span class="pre">number</span> <span class="pre">of</span> <span class="pre">draws</span> <span class="pre">to</span> <span class="pre">be</span> <span class="pre">recorded</span></code> <br> <code class="docutils literal notranslate"><span class="pre">*</span> <span class="pre">Precondition:</span> <span class="pre">numDraws</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> <br> <code class="docutils literal notranslate"><span class="pre">*</span> <span class="pre">&#64;return</span> <span class="pre">an</span> <span class="pre">array</span> <span class="pre">of</span> <span class="pre">numDraws</span> <span class="pre">values</span> <span class="pre">*/</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">findLongestStreak()</span></code></p></td>
-<td><p>(8 pts)</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">/**</span> <span class="pre">Returns</span> <span class="pre">the</span> <span class="pre">starting</span> <span class="pre">index</span> <span class="pre">of</span> <span class="pre">a</span> <span class="pre">longest</span> <span class="pre">streak</span> <span class="pre">of</span> <span class="pre">two</span> <span class="pre">or</span> <span class="pre">more</span> <span class="pre">consecutive</span> <span class="pre">repeated</span> <span class="pre">values</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">array</span> <span class="pre">values.</span></code> <br> <code class="docutils literal notranslate"><span class="pre">*</span> <span class="pre">&#64;param</span> <span class="pre">values</span> <span class="pre">an</span> <span class="pre">array</span> <span class="pre">of</span> <span class="pre">integer</span> <span class="pre">values</span> <span class="pre">representing</span> <span class="pre">a</span> <span class="pre">series</span> <span class="pre">of</span> <span class="pre">card</span> <span class="pre">draws</span></code> <br> <code class="docutils literal notranslate"><span class="pre">*</span> <span class="pre">Precondition:</span> <span class="pre">values.length</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> <br> <code class="docutils literal notranslate"><span class="pre">*</span> <span class="pre">&#64;return</span> <span class="pre">the</span> <span class="pre">starting</span> <span class="pre">index</span> <span class="pre">of</span> <span class="pre">a</span> <span class="pre">streak</span> <span class="pre">of</span> <span class="pre">maximum</span> <span class="pre">length;</span> <span class="pre">-1</span> <span class="pre">if</span> <span class="pre">there</span> <span class="pre">is</span> <span class="pre">no</span> <span class="pre">streak</span> <span class="pre">*/</span></code></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-</section>
-<hr class="docutils" />
-<section id="part-3-additional-scoring-guidelines">
-<h4>Part 3 — Additional Scoring Guidelines<a class="headerlink" href="#part-3-additional-scoring-guidelines" title="Link to this heading">¶</a></h4>
-<section id="algorithm-design-for-collectdraws-and-findlongeststreak-4-pts">
-<h5>1. Algorithm Design for <code class="docutils literal notranslate"><span class="pre">collectDraws()</span></code> and <code class="docutils literal notranslate"><span class="pre">findLongestStreak()</span></code> — (4 pts)<a class="headerlink" href="#algorithm-design-for-collectdraws-and-findlongeststreak-4-pts" title="Link to this heading">¶</a></h5>
-<blockquote>
-<div><p><em>“We don’t plan to fail. We fail to plan.”</em></p>
-</div></blockquote>
-<p>Before writing any code, write out a pseudocode or flowchart algorithm for both methods.</p>
-</section>
-<section id="main-method-integration-5-pts">
-<h5>2. <code class="docutils literal notranslate"><span class="pre">main</span></code> Method Integration — (5 pts)<a class="headerlink" href="#main-method-integration-5-pts" title="Link to this heading">¶</a></h5>
-<p>After you have <strong>tested</strong> (yes, tested) all of the above from your <code class="docutils literal notranslate"><span class="pre">main</span></code> method, put your <code class="docutils literal notranslate"><span class="pre">main</span></code> method together as follows:</p>
-<div class="table-wrapper colwidths-auto docutils container">
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Step</p></th>
-<th class="head"><p>Points</p></th>
-<th class="head"><p>Task</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>A</p></td>
-<td><p>(1 pt)</p></td>
-<td><p>Instantiate (create) a <code class="docutils literal notranslate"><span class="pre">CardDeck</span></code> object named <code class="docutils literal notranslate"><span class="pre">deck</span></code>.</p></td>
-</tr>
-<tr class="row-odd"><td><p>B</p></td>
-<td><p>(1 pt)</p></td>
-<td><p>Call (invoke) the <code class="docutils literal notranslate"><span class="pre">collectDraws()</span></code> method with 50 draws. Store the array that is returned into the array <code class="docutils literal notranslate"><span class="pre">myDraws</span></code>.</p></td>
-</tr>
-<tr class="row-even"><td><p>C</p></td>
-<td><p>(2 pts)</p></td>
-<td><p>Output the contents of <code class="docutils literal notranslate"><span class="pre">myDraws</span></code>. Output both the <strong>index</strong> and the <strong>element</strong> to make it easier to verify the next method.</p></td>
-</tr>
-<tr class="row-odd"><td><p>D</p></td>
-<td><p>(1 pt)</p></td>
-<td><p>Call the <code class="docutils literal notranslate"><span class="pre">findLongestStreak()</span></code> method. Output the return value in a clearly labeled manner.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-</section>
-<hr class="docutils" />
-<section id="some-tips-suggestions">
-<h4>Some Tips / Suggestions<a class="headerlink" href="#some-tips-suggestions" title="Link to this heading">¶</a></h4>
-</section>
-<section id="testing-collectdraws">
-<h4>Testing <code class="docutils literal notranslate"><span class="pre">collectDraws()</span></code><a class="headerlink" href="#testing-collectdraws" title="Link to this heading">¶</a></h4>
-<ul class="simple">
-<li><p>Store the returned array into another array and output the values.</p></li>
-<li><p>Outputting the index of each element will be helpful for checking the next method.</p></li>
-<li><p>A small number of draws is fine for initial testing.</p></li>
+<section id="part-a-explore-the-reference-program">
+<h4>Part A — Explore the Reference Program<a class="headerlink" href="#part-a-explore-the-reference-program" title="Link to this heading">¶</a></h4>
+<p>Read <code class="docutils literal notranslate"><span class="pre">Cake.java</span></code> and <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> carefully. Then in <code class="docutils literal notranslate"><span class="pre">Main.java</span></code>:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Declare a <code class="docutils literal notranslate"><span class="pre">double</span></code> variable named <code class="docutils literal notranslate"><span class="pre">t</span></code> and assign it the value <code class="docutils literal notranslate"><span class="pre">3.0</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create a <code class="docutils literal notranslate"><span class="pre">Cake</span></code> object reference named <code class="docutils literal notranslate"><span class="pre">myCake</span></code> using <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Cake(t)</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create two more <code class="docutils literal notranslate"><span class="pre">Cake</span></code> object references named <code class="docutils literal notranslate"><span class="pre">yourCake</span></code> and <code class="docutils literal notranslate"><span class="pre">ourCake</span></code> using the other constructors</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Print out all three <code class="docutils literal notranslate"><span class="pre">Cake</span></code> object reference variables</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Declare a variable <code class="docutils literal notranslate"><span class="pre">emptyCake</span></code> and initialize it to <code class="docutils literal notranslate"><span class="pre">null</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Print <code class="docutils literal notranslate"><span class="pre">emptyCake</span></code></p></li>
 </ul>
 </section>
-<section id="testing-findlongeststreak">
-<h4>Testing <code class="docutils literal notranslate"><span class="pre">findLongestStreak()</span></code><a class="headerlink" href="#testing-findlongeststreak" title="Link to this heading">¶</a></h4>
-<ul class="simple">
-<li><p>Create a small array where <strong>no two values are the same</strong> and call the method</p></li>
-<li><p>Create an array where <strong>all values are the same</strong> and call the method</p></li>
-<li><p>Create an array where there is <strong>only one longest streak</strong> and call the method</p></li>
-<li><p>Create an array where there are <strong>multiple streaks but only one longest</strong> and call the method</p></li>
-<li><p>Create an array where there are <strong>multiple longest streaks</strong> and call the method</p></li>
-<li><p>Create an array where there are <strong>multiple streaks of the same value</strong> and call the method</p></li>
-</ul>
-</section>
-</section>
-<hr class="docutils" />
-<section id="rubric">
-<h3>Rubric<a class="headerlink" href="#rubric" title="Link to this heading">¶</a></h3>
-<p><strong>Total Points: 25</strong></p>
-<div class="table-wrapper colwidths-auto docutils container">
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Criterion</p></th>
-<th class="head"><p>Points</p></th>
-<th class="head"><p>AP CSA Standard</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><strong><code class="docutils literal notranslate"><span class="pre">CardDeck</span></code> — Instance variable <code class="docutils literal notranslate"><span class="pre">currentDraw</span></code> declared correctly</strong></p></td>
-<td><p>1</p></td>
-<td><p>MOD-1.A — Represents data using instance variables</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong><code class="docutils literal notranslate"><span class="pre">CardDeck</span></code> — Default constructor initializes <code class="docutils literal notranslate"><span class="pre">currentDraw</span></code></strong></p></td>
-<td><p>2</p></td>
-<td><p>MOD-2.B — Constructors initialize the attributes of an object</p></td>
-</tr>
-<tr class="row-even"><td><p><strong><code class="docutils literal notranslate"><span class="pre">CardDeck</span></code> — <code class="docutils literal notranslate"><span class="pre">drawCard()</span></code> updates <code class="docutils literal notranslate"><span class="pre">currentDraw</span></code> using <code class="docutils literal notranslate"><span class="pre">Random</span></code> and returns the value</strong></p></td>
-<td><p>2</p></td>
-<td><p>MOD-1.F — Methods use <code class="docutils literal notranslate"><span class="pre">return</span></code> to pass values back; CON-1.B — <code class="docutils literal notranslate"><span class="pre">Random</span></code> used for simulation</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>Algorithm pseudocode/flowchart for both static methods is present and logical</strong></p></td>
-<td><p>4</p></td>
-<td><p>MOD-1.E — Program design precedes implementation; AAP-2.A — Algorithm design</p></td>
-</tr>
-<tr class="row-even"><td><p><strong><code class="docutils literal notranslate"><span class="pre">collectDraws()</span></code> — Correctly creates and fills an int array of <code class="docutils literal notranslate"><span class="pre">numDraws</span></code> values</strong></p></td>
-<td><p>5</p></td>
-<td><p>VAR-2.C — Traverse and modify arrays; AAP-2.O — Array creation and population</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong><code class="docutils literal notranslate"><span class="pre">main</span></code> A — <code class="docutils literal notranslate"><span class="pre">CardDeck</span></code> object <code class="docutils literal notranslate"><span class="pre">deck</span></code> instantiated correctly</strong></p></td>
-<td><p>1</p></td>
-<td><p>MOD-2.C — Objects are created using <code class="docutils literal notranslate"><span class="pre">new</span></code> with a constructor</p></td>
-</tr>
-<tr class="row-even"><td><p><strong><code class="docutils literal notranslate"><span class="pre">main</span></code> B — <code class="docutils literal notranslate"><span class="pre">collectDraws()</span></code> called with 50; result stored in <code class="docutils literal notranslate"><span class="pre">myDraws</span></code></strong></p></td>
-<td><p>1</p></td>
-<td><p>MOD-1.D — Calling methods with parameters and capturing return values</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong><code class="docutils literal notranslate"><span class="pre">main</span></code> C — <code class="docutils literal notranslate"><span class="pre">myDraws</span></code> printed with index and element on each line</strong></p></td>
-<td><p>2</p></td>
-<td><p>VAR-2.C — Array traversal using index; I/O formatting</p></td>
-</tr>
-<tr class="row-even"><td><p><strong><code class="docutils literal notranslate"><span class="pre">findLongestStreak()</span></code> — Correctly traverses array and tracks longest streak start index</strong></p></td>
-<td><p>8</p></td>
-<td><p>AAP-2.O — Array traversal algorithms; AAP-2.P — Identifying repeated patterns</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong><code class="docutils literal notranslate"><span class="pre">main</span></code> D — <code class="docutils literal notranslate"><span class="pre">findLongestStreak()</span></code> called and result printed with a label</strong></p></td>
-<td><p>1</p></td>
-<td><p>MOD-1.D — Calling methods and interpreting return values</p></td>
-</tr>
-</tbody>
-</table>
+<section id="cake-java-reference-program">
+<h4>Cake.java — Reference Program<a class="headerlink" href="#cake-java-reference-program" title="Link to this heading">¶</a></h4>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Cake</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">tiers</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Cake</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">tiers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;   ,,,\n   |||\n(~~~~~~~)\n(       )\n(~~~~~~~)\n&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Cake</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">tiers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="p">;</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;      ,,,\n      |||\n  (**********)\n  (*        *)\n  (*        *)&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;(**************)\n(*            *)\n(*            *)\n(**************)\n&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Cake</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">t</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">tiers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">t</span><span class="p">;</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;        ,,,\n        |||\n    (**********)\n    (*        *)\n    (*        *)&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;  (**************)\n  (*            *)\n  (*            *)&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;(******************)\n(*                *)\n(*                *)\n(******************)\n&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
 </div>
-<blockquote>
-<div><p><strong>AP CSA Standard Codes used above:</strong></p>
-<ul class="simple">
-<li><p><strong>MOD-1</strong> — Using Objects and Methods</p></li>
-<li><p><strong>MOD-2</strong> — Writing Classes</p></li>
-<li><p><strong>VAR-2</strong> — Using Arrays</p></li>
-<li><p><strong>AAP-2</strong> — Algorithms and Programming</p></li>
-<li><p><strong>CON-1</strong> — Control and Simulation</p></li>
+</section>
+<section id="main-java-starter-code">
+<h4>Main.java — Starter Code<a class="headerlink" href="#main-java-starter-code" title="Link to this heading">¶</a></h4>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Declare a double variable named &#39;t&#39; and assign 3.0</span>
+
+
+<span class="w">        </span><span class="c1">// Create myCake using new Cake(t)</span>
+
+
+<span class="w">        </span><span class="c1">// Create yourCake and ourCake using the other two constructors</span>
+
+
+<span class="w">        </span><span class="c1">// Print all three Cake reference variables</span>
+
+
+<span class="w">        </span><span class="c1">// Declare emptyCake and set it to null</span>
+
+
+<span class="w">        </span><span class="c1">// Print emptyCake</span>
+
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="sample-output">
+<h4>Sample Output<a class="headerlink" href="#sample-output" title="Link to this heading">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>        <span class="p">,,,</span>
+        <span class="o">|||</span>
+    <span class="p">(</span><span class="o">**********</span><span class="p">)</span>
+    <span class="p">(</span><span class="o">*</span>        <span class="o">*</span><span class="p">)</span>
+    <span class="p">(</span><span class="o">*</span>        <span class="o">*</span><span class="p">)</span>
+  <span class="p">(</span><span class="o">**************</span><span class="p">)</span>
+  <span class="p">(</span><span class="o">*</span>            <span class="o">*</span><span class="p">)</span>
+  <span class="p">(</span><span class="o">*</span>            <span class="o">*</span><span class="p">)</span>
+<span class="p">(</span><span class="o">******************</span><span class="p">)</span>
+<span class="p">(</span><span class="o">*</span>                <span class="o">*</span><span class="p">)</span>
+<span class="p">(</span><span class="o">*</span>                <span class="o">*</span><span class="p">)</span>
+<span class="p">(</span><span class="o">******************</span><span class="p">)</span>
+
+
+   <span class="p">,,,</span>
+   <span class="o">|||</span>
+<span class="p">(</span><span class="o">~~~~~~~</span><span class="p">)</span>
+<span class="p">(</span>       <span class="p">)</span>
+<span class="p">(</span><span class="o">~~~~~~~</span><span class="p">)</span>
+
+      <span class="p">,,,</span>
+      <span class="o">|||</span>
+  <span class="p">(</span><span class="o">**********</span><span class="p">)</span>
+  <span class="p">(</span><span class="o">*</span>        <span class="o">*</span><span class="p">)</span>
+  <span class="p">(</span><span class="o">*</span>        <span class="o">*</span><span class="p">)</span>
+<span class="p">(</span><span class="o">**************</span><span class="p">)</span>
+<span class="p">(</span><span class="o">*</span>            <span class="o">*</span><span class="p">)</span>
+<span class="p">(</span><span class="o">*</span>            <span class="o">*</span><span class="p">)</span>
+<span class="p">(</span><span class="o">**************</span><span class="p">)</span>
+
+<span class="n">myCake</span><span class="o">=</span><span class="n">Cake</span><span class="o">@</span><span class="mi">15</span><span class="n">db9742</span>
+<span class="n">yourCake</span><span class="o">=</span><span class="n">Cake</span><span class="o">@</span><span class="mi">6</span><span class="n">d06d69c</span>
+<span class="n">ourCake</span><span class="o">=</span><span class="n">Cake</span><span class="o">@</span><span class="mf">7852e922</span>
+<span class="n">emptyCake</span><span class="o">=</span><span class="n">null</span>
+</pre></div>
+</div>
+</section>
+<section id="part-b-your-own-class-submission">
+<h4>Part B — Your Own Class (Submission)<a class="headerlink" href="#part-b-your-own-class-submission" title="Link to this heading">¶</a></h4>
+<p>Create a <strong>unique class of your choice</strong> (not a Cake). Requirements:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Four constructors: no-arg, 1-parameter, 2-parameter, 3-parameter</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> A <code class="docutils literal notranslate"><span class="pre">toString()</span></code> method that returns a formatted string</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Appropriate comments throughout</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> A <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> that creates one object per constructor and prints each</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Submit all <code class="docutils literal notranslate"><span class="pre">.java</span></code> files</p></li>
 </ul>
+<blockquote>
+<div><p><strong>Oracle Exam Note:</strong> Constructor overloading is a key topic on the Oracle 1Z0-811 exam. Java selects the correct constructor based on the <strong>number and type</strong> of arguments passed — this is called <em>method signature matching</em>.</p>
 </div></blockquote>
 </section>
 </section>
 <hr class="docutils" />
-<section id="recommended-placement-in-the-ap-csa-curriculum">
-<h2>Recommended Placement in the AP CSA Curriculum<a class="headerlink" href="#recommended-placement-in-the-ap-csa-curriculum" title="Link to this heading">¶</a></h2>
-<p>This activity is best placed <strong>mid-Unit 3 (Class Creation)</strong>, immediately after students have:</p>
-<ol class="arabic simple">
-<li><p>Written their first full class with instance variables, a constructor, and methods</p></li>
-<li><p>Been introduced to <code class="docutils literal notranslate"><span class="pre">Random</span></code> for the first time</p></li>
-<li><p>Completed basic array traversal in early Unit 4 preview or as an introduction</p></li>
-</ol>
-<p><strong>Oracle 1Z0-811 connection:</strong> This activity also touches <code class="docutils literal notranslate"><span class="pre">Random</span></code>, array declaration/population, method return types, and static vs. instance context — all of which appear on the Oracle Java Foundations exam.</p>
-<hr class="docutils" />
-<section id="extension-data-science">
-<h3>Extension: Data Science<a class="headerlink" href="#extension-data-science" title="Link to this heading">¶</a></h3>
-<p>The data scientist’s real question is: <em>does a reshuffled deck produce truly random sequences, or do streaks appear more (or less) often than probability predicts?</em></p>
-<p>Once your program is working, consider this challenge:</p>
+<section id="activity-3-4-2-dog-pizza">
+<h3>Activity 3.4.2 — Dog Pizza<a class="headerlink" href="#activity-3-4-2-dog-pizza" title="Link to this heading">¶</a></h3>
+<p><strong>AP CSA Topics:</strong> 3.1 (Class Design), 3.2 (Constructors), 3.3 (toString())
+<strong>Oracle Domain:</strong> 4, 6</p>
+<section id="id2">
+<h4>Objective<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h4>
+<p>Practice working with <strong>two classes in the same program</strong>. You will complete a provided <code class="docutils literal notranslate"><span class="pre">Dog</span></code> class, then design a <code class="docutils literal notranslate"><span class="pre">Pizza</span></code> class entirely from scratch.</p>
+</section>
+<section id="part-a-complete-dog-java">
+<h4>Part A — Complete Dog.java<a class="headerlink" href="#part-a-complete-dog-java" title="Link to this heading">¶</a></h4>
+<p>Fill in the missing instance variables and constructor so the provided <code class="docutils literal notranslate"><span class="pre">toString()</span></code> method works correctly without modification.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Dog</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// Add instance variables: breed (String) and name (String)</span>
+
+
+<span class="w">    </span><span class="c1">// Add a constructor that takes breed and name as parameters</span>
+
+
+<span class="w">    </span><span class="c1">// DO NOT modify this method</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; is a &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">breed</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="part-b-create-pizza-java-from-scratch">
+<h4>Part B — Create Pizza.java from Scratch<a class="headerlink" href="#part-b-create-pizza-java-from-scratch" title="Link to this heading">¶</a></h4>
+<p>Design a <code class="docutils literal notranslate"><span class="pre">Pizza</span></code> class with the following instance variables:</p>
 <ul class="simple">
-<li><p>Run <code class="docutils literal notranslate"><span class="pre">collectDraws()</span></code> with 1000 draws</p></li>
-<li><p>Count how many streaks exist and how long they are on average</p></li>
-<li><p>A truly random sequence of values 1–13 has a <strong>1-in-13 chance</strong> of any two consecutive draws matching</p></li>
-<li><p>Does your data match that expectation?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (int) — diameter in inches</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (String) — pizza style (Veggie, Cheese, Meat, etc.)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">toppings</span></code> (String) — comma-separated list of toppings</p></li>
+</ul>
+<p>Requirements:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Declare all three instance variables</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Write a constructor that takes all three as parameters</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Write a <code class="docutils literal notranslate"><span class="pre">toString()</span></code> that returns a formatted description</p></li>
 </ul>
 </section>
-<section id="activity-2-1-1">
-<h3>Activity 2.1.1<a class="headerlink" href="#activity-2-1-1" title="Link to this heading">¶</a></h3>
+<section id="id3">
+<h4>Main.java — Starter Code<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h4>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Main</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Dog</span><span class="w"> </span><span class="n">golden</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">(</span><span class="s">&quot;Golden Retriever&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Sammy&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">golden</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Instantiate 3 pizzas and print them out:</span>
+<span class="w">        </span><span class="c1">// 12 inch Veggie pizza with Tomatoes, onions, olives</span>
+<span class="w">        </span><span class="c1">// 15 inch Cheese pizza with Cheese</span>
+<span class="w">        </span><span class="c1">// 20 inch Meat pizza with Pepperoni, sausage, bacon</span>
+
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </section>
-<section id="activity-2-1-2-not-another-cake">
-<h3>Activity 2.1.2 Not another Cake<a class="headerlink" href="#activity-2-1-2-not-another-cake" title="Link to this heading">¶</a></h3>
+<section id="expected-output">
+<h4>Expected Output<a class="headerlink" href="#expected-output" title="Link to this heading">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Sammy</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">Golden</span> <span class="n">Retriever</span>
+<span class="mi">12</span> <span class="n">inch</span> <span class="n">Veggie</span> <span class="n">pizza</span> <span class="k">with</span> <span class="n">Tomatoes</span><span class="p">,</span> <span class="n">onions</span><span class="p">,</span> <span class="n">olives</span>
+<span class="mi">15</span> <span class="n">inch</span> <span class="n">Cheese</span> <span class="n">pizza</span> <span class="k">with</span> <span class="n">Cheese</span>
+<span class="mi">20</span> <span class="n">inch</span> <span class="n">Meat</span> <span class="n">pizza</span> <span class="k">with</span> <span class="n">Pepperoni</span><span class="p">,</span> <span class="n">sausage</span><span class="p">,</span> <span class="n">bacon</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p><strong>Oracle Exam Note:</strong> Each class you write should be stored in its own <code class="docutils literal notranslate"><span class="pre">.java</span></code> file with a matching filename (<code class="docutils literal notranslate"><span class="pre">Dog.java</span></code>, <code class="docutils literal notranslate"><span class="pre">Pizza.java</span></code>). The Oracle exam tests whether you understand that a public class name must match its filename — a compile-time rule enforced by the Java compiler.</p>
+</div></blockquote>
 </section>
-<section id="activity-2-1-3-dog-pizza-java">
-<h3>Activity 2.1.3 Dog Pizza java<a class="headerlink" href="#activity-2-1-3-dog-pizza-java" title="Link to this heading">¶</a></h3>
 </section>
-<section id="activity-2-1-4-bicycle-revisited">
-<h3>Activity 2.1.4 - Bicycle Revisited<a class="headerlink" href="#activity-2-1-4-bicycle-revisited" title="Link to this heading">¶</a></h3>
+<hr class="docutils" />
+<section id="activity-3-4-3-bicycle-revisited">
+<h3>Activity 3.4.3 — Bicycle Revisited<a class="headerlink" href="#activity-3-4-3-bicycle-revisited" title="Link to this heading">¶</a></h3>
+<p><strong>AP CSA Topics:</strong> 3.2 (Constructor overloading), 3.4 (Constructors)
+<strong>Oracle Domain:</strong> 6 (Method overloading, constructors)</p>
+<section id="id4">
+<h4>Objective<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h4>
+<p>Practice writing <strong>multiple constructors</strong> for a single class. Each constructor should handle a different set of parameters, with reasonable default values for anything not provided.</p>
 </section>
-<section id="activity-2-1-5-constructor-practice">
-<h3>Activity 2.1.5 Constructor Practice<a class="headerlink" href="#activity-2-1-5-constructor-practice" title="Link to this heading">¶</a></h3>
+<section id="id5">
+<h4>Requirements<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h4>
+<p>Create a <code class="docutils literal notranslate"><span class="pre">Bike</span></code> class with the following instance variables:</p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Sample Values</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">kind</span></code></p></td>
+<td><p>String</p></td>
+<td><p>Cruiser, road bike, tricycle, hybrid</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">gear</span></code></p></td>
+<td><p>int</p></td>
+<td><p>1, 3, 10, 30</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">size</span></code></p></td>
+<td><p>int</p></td>
+<td><p>20, 22, 26, 28</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">cost</span></code></p></td>
+<td><p>double</p></td>
+<td><p>175.99, 300.00, 1049.00, 1500.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Write the following constructors:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>No-argument constructor</strong> — defaults: <code class="docutils literal notranslate"><span class="pre">&quot;Cruiser&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">26</span></code>, <code class="docutils literal notranslate"><span class="pre">175.99</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Two-parameter constructor</strong> — takes <code class="docutils literal notranslate"><span class="pre">kind</span></code> and <code class="docutils literal notranslate"><span class="pre">size</span></code> only</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Four-parameter constructor</strong> — takes all four values</p></li>
+</ul>
+<p>Also include a method:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">pedal</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Pedaling to accelerate.&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>And a <code class="docutils literal notranslate"><span class="pre">toString()</span></code> that produces output matching the sample below.</p>
+</section>
+<section id="id6">
+<h4>Sample Output<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>My bicycle has 1 gear and is painted white!
+Pedaling to accelerate!
+My cruiser has 10 gears costs $150.
+Pedaling to accelerate.
+My tricycle has 3 gears costs $300.
+Pedaling to accelerate.
+</pre></div>
+</div>
+<blockquote>
+<div><p><strong>Oracle Exam Note:</strong> Constructor overloading and default values are tested directly on the Oracle 1Z0-811 exam. Pay attention to how Java uses <strong>method signatures</strong> (parameter count and type) to decide which constructor to call when <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Bike()</span></code>, <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Bike(&quot;Cruiser&quot;,</span> <span class="pre">26)</span></code>, and <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Bike(&quot;Cruiser&quot;,</span> <span class="pre">1,</span> <span class="pre">26,</span> <span class="pre">175.99)</span></code> are each written.</p>
+</div></blockquote>
+</section>
+</section>
+<hr class="docutils" />
+<section id="activity-3-4-4-constructor-practice">
+<h3>Activity 3.4.4 — Constructor Practice<a class="headerlink" href="#activity-3-4-4-constructor-practice" title="Link to this heading">¶</a></h3>
+<p><strong>AP CSA Topics:</strong> 3.2 (Constructor overloading), 3.1 (Class design), 3.3 (toString())
+<strong>Oracle Domain:</strong> 6 (Constructors and encapsulation)</p>
+<section id="id7">
+<h4>Objective<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h4>
+<p>Design a <code class="docutils literal notranslate"><span class="pre">Student</span></code> class from scratch using all the constructor techniques from Activities 3.1.1–3.4.3. This is a synthesis activity.</p>
+</section>
+<section id="student-java">
+<h4>Student.java<a class="headerlink" href="#student-java" title="Link to this heading">¶</a></h4>
+<p>Create a class called <code class="docutils literal notranslate"><span class="pre">Student</span></code> with the following instance variables:</p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Default</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">name</span></code></p></td>
+<td><p>String</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;Unknown&quot;</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">age</span></code></p></td>
+<td><p>int</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">gpa</span></code></p></td>
+<td><p>double</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0.0</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Write <strong>at least four constructors</strong>:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> No-argument constructor — sets all fields to defaults</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Constructor that takes only <code class="docutils literal notranslate"><span class="pre">name</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Constructor that takes <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">age</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Constructor that takes all three: <code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">age</span></code>, <code class="docutils literal notranslate"><span class="pre">gpa</span></code></p></li>
+</ul>
+<p>Write a <code class="docutils literal notranslate"><span class="pre">toString()</span></code> method that returns:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Student</span><span class="p">{</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">gpa</span><span class="o">=</span><span class="mf">3.5</span><span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="main-java">
+<h4>Main.java<a class="headerlink" href="#main-java" title="Link to this heading">¶</a></h4>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create at least one <code class="docutils literal notranslate"><span class="pre">Student</span></code> object using each constructor</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Print each object using <code class="docutils literal notranslate"><span class="pre">System.out.println()</span></code></p></li>
+</ul>
+</section>
+<section id="id8">
+<h4>Expected Output<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Student</span><span class="p">{</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Unknown&#39;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">gpa</span><span class="o">=</span><span class="mf">0.0</span><span class="p">}</span>
+<span class="n">Student</span><span class="p">{</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">gpa</span><span class="o">=</span><span class="mf">0.0</span><span class="p">}</span>
+<span class="n">Student</span><span class="p">{</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">17</span><span class="p">,</span> <span class="n">gpa</span><span class="o">=</span><span class="mf">0.0</span><span class="p">}</span>
+<span class="n">Student</span><span class="p">{</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Charlie&#39;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span> <span class="n">gpa</span><span class="o">=</span><span class="mf">3.7</span><span class="p">}</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p><strong>Oracle Exam Note:</strong> The Oracle 1Z0-811 exam includes questions on constructor chaining using <code class="docutils literal notranslate"><span class="pre">this()</span></code>. As an extension challenge, refactor your constructors so each shorter one calls the next using <code class="docutils literal notranslate"><span class="pre">this(...)</span></code> — for example, the no-arg constructor calls <code class="docutils literal notranslate"><span class="pre">this(&quot;Unknown&quot;)</span></code>, which calls <code class="docutils literal notranslate"><span class="pre">this(&quot;Unknown&quot;,</span> <span class="pre">0)</span></code>, and so on.</p>
+</div></blockquote>
+</section>
 </section>
 </section>
 <hr class="docutils" />
@@ -971,7 +1063,7 @@
 <ul class="simple">
 <li><p>Evaluate object reference expressions that use the keyword <code class="docutils literal notranslate"><span class="pre">this</span></code>.</p></li>
 </ul>
-<p><code class="docutils literal notranslate"><span class="pre">this</span></code> keyword refers to the current object in a method. It is useful when attribute and parameter names are the same:</p>
+<p><code class="docutils literal notranslate"><span class="pre">this</span></code> refers to the current object in a method. It is useful when attribute and parameter names are the same:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
 
@@ -999,7 +1091,7 @@
 <section id="exceptions-oracle-foundations-1z0-811">
 <h2>Exceptions — <em>Oracle Foundations 1Z0-811</em><a class="headerlink" href="#exceptions-oracle-foundations-1z0-811" title="Link to this heading">¶</a></h2>
 <blockquote>
-<div><p><strong>Oracle Exam Note:</strong> Exception handling is tested on the Oracle Java Foundations exam (1Z0-811).</p>
+<div><p><strong>Oracle Exam Note:</strong> Exception handling is tested on the Oracle Java Foundations exam (1Z0-811) but is <strong>not</strong> on the AP CSA exam.</p>
 </div></blockquote>
 <p>An <strong>exception</strong> is an event that disrupts the normal flow of a program at runtime. Java uses exception handling to manage errors gracefully.</p>
 <p><strong>Common Java Exceptions:</strong></p>
@@ -1031,13 +1123,10 @@
 </div>
 <p><strong>try-catch-finally:</strong></p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Code that might throw an exception</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ArithmeticException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Handle the specific exception</span>
 <span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Error: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
 <span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Always executes, whether or not an exception occurred</span>
 <span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;This always runs.&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
@@ -1063,8 +1152,8 @@
 </pre></div>
 </div>
 <section id="activity-3-e-1-exception-handling-practice">
-<h3>Activity 3.E.1 - Exception Handling Practice<a class="headerlink" href="#activity-3-e-1-exception-handling-practice" title="Link to this heading">¶</a></h3>
-<p>Write a program that prompts the user for an integer. Use a <code class="docutils literal notranslate"><span class="pre">try-catch</span></code> block to handle <code class="docutils literal notranslate"><span class="pre">NumberFormatException</span></code> if the user enters non-numeric input, and <code class="docutils literal notranslate"><span class="pre">ArithmeticException</span></code> if the user enters 0 for a division operation.</p>
+<h3>Activity 3.E.1 — Exception Handling Practice<a class="headerlink" href="#activity-3-e-1-exception-handling-practice" title="Link to this heading">¶</a></h3>
+<p>Write a program that prompts the user for an integer. Use a <code class="docutils literal notranslate"><span class="pre">try-catch</span></code> block to handle <code class="docutils literal notranslate"><span class="pre">NumberFormatException</span></code> if the user enters non-numeric input, and <code class="docutils literal notranslate"><span class="pre">ArithmeticException</span></code> if the user enters <code class="docutils literal notranslate"><span class="pre">0</span></code> for a division operation.</p>
 </section>
 </section>
 <hr class="docutils" />
@@ -1074,19 +1163,7 @@
 <div><p><strong>Oracle Exam Note:</strong> Lambda expressions are tested on the Oracle Java Foundations exam (1Z0-811) but are <strong>not</strong> on the AP CSA exam.</p>
 </div></blockquote>
 <p>A <strong>lambda expression</strong> is a short block of code that takes in parameters and returns a value. Lambda expressions are similar to anonymous methods (methods without a name).</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Syntax: (parameters) -&gt; expression</span>
-<span class="c1">// OR:     (parameters) -&gt; { statements; }</span>
-
-<span class="c1">// Traditional approach</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Collections</span><span class="p">;</span>
-
-<span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-<span class="n">names</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Charlie&quot;</span><span class="p">);</span>
-<span class="n">names</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Alice&quot;</span><span class="p">);</span>
-<span class="n">names</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Bob&quot;</span><span class="p">);</span>
-
-<span class="c1">// Traditional sort using Comparator</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Traditional sort using Comparator</span>
 <span class="n">Collections</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">names</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">util</span><span class="p">.</span><span class="na">Comparator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">compare</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="na">compareTo</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>
@@ -1095,77 +1172,292 @@
 
 <span class="c1">// Lambda expression (much more concise)</span>
 <span class="n">Collections</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">names</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="na">compareTo</span><span class="p">(</span><span class="n">b</span><span class="p">));</span>
-</pre></div>
-</div>
-<p><strong>Lambda with forEach:</strong></p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Print each name</span>
+
+<span class="c1">// Lambda with forEach</span>
 <span class="n">names</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">name</span><span class="p">));</span>
 
-<span class="c1">// Or even shorter using method reference</span>
-<span class="n">names</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">::</span><span class="n">println</span><span class="p">);</span>
-</pre></div>
-</div>
-<p><strong>Lambda with filtering (streams):</strong></p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.stream.Collectors</span><span class="p">;</span>
-
+<span class="c1">// Lambda with filtering (streams)</span>
 <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">longNames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">names</span><span class="p">.</span><span class="na">stream</span><span class="p">()</span>
 <span class="w">    </span><span class="p">.</span><span class="na">filter</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">name</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span>
 <span class="w">    </span><span class="p">.</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">toList</span><span class="p">());</span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">longNames</span><span class="p">);</span>
 </pre></div>
 </div>
 <section id="activity-3-l-1-lambda-sorting">
-<h3>Activity 3.L.1 - Lambda Sorting<a class="headerlink" href="#activity-3-l-1-lambda-sorting" title="Link to this heading">¶</a></h3>
-<p>Create an ArrayList of student objects. Use a lambda expression to sort them by GPA in descending order, then print the sorted list.</p>
+<h3>Activity 3.L.1 — Lambda Sorting<a class="headerlink" href="#activity-3-l-1-lambda-sorting" title="Link to this heading">¶</a></h3>
+<p>Create an <code class="docutils literal notranslate"><span class="pre">ArrayList</span></code> of <code class="docutils literal notranslate"><span class="pre">Student</span></code> objects. Use a lambda expression to sort them by GPA in descending order, then print the sorted list.</p>
 </section>
 </section>
 <hr class="docutils" />
-<section id="class-design-project">
-<h2>Class Design Project<a class="headerlink" href="#class-design-project" title="Link to this heading">¶</a></h2>
+<section id="unit-3-project-card-draw-sequences">
+<h2>Unit 3 Project — Card Draw Sequences<a class="headerlink" href="#unit-3-project-card-draw-sequences" title="Link to this heading">¶</a></h2>
+<p><strong>AP CSA Topics:</strong> 3.1–3.4 (Class design, constructors, methods)
+<strong>Oracle Domain:</strong> 4, 6</p>
+<section id="scenario">
+<h3>Scenario<a class="headerlink" href="#scenario" title="Link to this heading">¶</a></h3>
+<p>A data scientist is studying sequences of values produced by repeatedly drawing a card from a standard shuffled deck. After each draw, the card is returned and the deck is reshuffled. Each draw produces a value in the range of 1 through 13, inclusive — representing Ace (1) through King (13). The data scientist is particularly interested in <strong>streaks</strong> of values. A streak occurs when two or more consecutive draws produce the same value.</p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Index</p></th>
+<th class="head"><p>0</p></th>
+<th class="head"><p>1</p></th>
+<th class="head"><p>2</p></th>
+<th class="head"><p>3</p></th>
+<th class="head"><p>4</p></th>
+<th class="head"><p>5</p></th>
+<th class="head"><p>6</p></th>
+<th class="head"><p>7</p></th>
+<th class="head"><p>8</p></th>
+<th class="head"><p>9</p></th>
+<th class="head"><p>10</p></th>
+<th class="head"><p>11</p></th>
+<th class="head"><p>12</p></th>
+<th class="head"><p>13</p></th>
+<th class="head"><p>14</p></th>
+<th class="head"><p>15</p></th>
+<th class="head"><p>16</p></th>
+<th class="head"><p>17</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Result</p></td>
+<td><p>1</p></td>
+<td><p>5</p></td>
+<td><p>5</p></td>
+<td><p>4</p></td>
+<td><p>3</p></td>
+<td><p>1</p></td>
+<td><p>2</p></td>
+<td><p>2</p></td>
+<td><p>2</p></td>
+<td><p>2</p></td>
+<td><p>6</p></td>
+<td><p>1</p></td>
+<td><p>3</p></td>
+<td><p>3</p></td>
+<td><p>5</p></td>
+<td><p>5</p></td>
+<td><p>5</p></td>
+<td><p>5</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>In the table above, streaks start at positions 1, 6, 12, and 14.</p>
+</section>
+<hr class="docutils" />
+<section id="part-1-the-carddeck-class">
+<h3>Part 1 — The <code class="docutils literal notranslate"><span class="pre">CardDeck</span></code> Class<a class="headerlink" href="#part-1-the-carddeck-class" title="Link to this heading">¶</a></h3>
+<blockquote>
+<div><p><em><strong>For testing purposes, use the identifier names given</strong></em></p>
+</div></blockquote>
+<p><strong>Class: <code class="docutils literal notranslate"><span class="pre">CardDeck</span></code></strong></p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Member</p></th>
+<th class="head"><p>Points</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Instance variable: <code class="docutils literal notranslate"><span class="pre">currentDraw</span></code></p></td>
+<td><p>(1 pt)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">/**</span> <span class="pre">the</span> <span class="pre">value</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">most</span> <span class="pre">recent</span> <span class="pre">card</span> <span class="pre">draw</span> <span class="pre">(1–13)</span> <span class="pre">*/</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Constructor <em>(default only)</em></p></td>
+<td><p>(2 pts)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">/**</span> <span class="pre">gives</span> <span class="pre">an</span> <span class="pre">initial</span> <span class="pre">value</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">current</span> <span class="pre">draw</span> <span class="pre">*/</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">drawCard()</span></code></p></td>
+<td><p>(2 pts)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">/**</span> <span class="pre">simulates</span> <span class="pre">drawing</span> <span class="pre">a</span> <span class="pre">card,</span> <span class="pre">updates</span> <span class="pre">the</span> <span class="pre">instance</span> <span class="pre">variable,</span> <span class="pre">&#64;return</span> <span class="pre">the</span> <span class="pre">value</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">draw</span> <span class="pre">*/</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="part-2-static-methods-in-the-driver-class">
+<h3>Part 2 — Static Methods in the Driver Class<a class="headerlink" href="#part-2-static-methods-in-the-driver-class" title="Link to this heading">¶</a></h3>
+<section id="collectdraws">
+<h4><code class="docutils literal notranslate"><span class="pre">collectDraws()</span></code><a class="headerlink" href="#collectdraws" title="Link to this heading">¶</a></h4>
+<p>Takes a <code class="docutils literal notranslate"><span class="pre">CardDeck</span></code> and a number of draws as parameters. Returns an array of the values produced by drawing from the deck the given number of times.</p>
+</section>
+<section id="findlongeststreak">
+<h4><code class="docutils literal notranslate"><span class="pre">findLongestStreak()</span></code><a class="headerlink" href="#findlongeststreak" title="Link to this heading">¶</a></h4>
+<p>Takes an array of integer values. Returns the starting index of a streak of maximum length. Returns <code class="docutils literal notranslate"><span class="pre">-1</span></code> if no streak exists.</p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Method</p></th>
+<th class="head"><p>Points</p></th>
+<th class="head"><p>Javadoc</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">collectDraws()</span></code></p></td>
+<td><p>(5 pts)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">/**</span> <span class="pre">&#64;param</span> <span class="pre">deck</span> <span class="pre">a</span> <span class="pre">CardDeck</span></code> <br> <code class="docutils literal notranslate"><span class="pre">*</span> <span class="pre">&#64;param</span> <span class="pre">numDraws</span> <span class="pre">the</span> <span class="pre">number</span> <span class="pre">of</span> <span class="pre">draws</span></code> <br> <code class="docutils literal notranslate"><span class="pre">*</span> <span class="pre">Precondition:</span> <span class="pre">numDraws</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> <br> <code class="docutils literal notranslate"><span class="pre">*</span> <span class="pre">&#64;return</span> <span class="pre">an</span> <span class="pre">array</span> <span class="pre">of</span> <span class="pre">numDraws</span> <span class="pre">values</span> <span class="pre">*/</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">findLongestStreak()</span></code></p></td>
+<td><p>(8 pts)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">/**</span> <span class="pre">&#64;param</span> <span class="pre">values</span> <span class="pre">an</span> <span class="pre">array</span> <span class="pre">of</span> <span class="pre">integer</span> <span class="pre">values</span></code> <br> <code class="docutils literal notranslate"><span class="pre">*</span> <span class="pre">Precondition:</span> <span class="pre">values.length</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> <br> <code class="docutils literal notranslate"><span class="pre">*</span> <span class="pre">&#64;return</span> <span class="pre">starting</span> <span class="pre">index</span> <span class="pre">of</span> <span class="pre">longest</span> <span class="pre">streak;</span> <span class="pre">-1</span> <span class="pre">if</span> <span class="pre">none</span> <span class="pre">*/</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="part-3-algorithm-design-and-main-integration">
+<h3>Part 3 — Algorithm Design and main() Integration<a class="headerlink" href="#part-3-algorithm-design-and-main-integration" title="Link to this heading">¶</a></h3>
+<p><strong>Algorithm Design — (4 pts)</strong></p>
+<blockquote>
+<div><p><em>“We don’t plan to fail. We fail to plan.”</em></p>
+</div></blockquote>
+<p>Before writing any code, write pseudocode or a flowchart for both methods.</p>
+<p><strong>main() Integration — (5 pts)</strong></p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Step</p></th>
+<th class="head"><p>Points</p></th>
+<th class="head"><p>Task</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>A</p></td>
+<td><p>(1 pt)</p></td>
+<td><p>Instantiate a <code class="docutils literal notranslate"><span class="pre">CardDeck</span></code> object named <code class="docutils literal notranslate"><span class="pre">deck</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>B</p></td>
+<td><p>(1 pt)</p></td>
+<td><p>Call <code class="docutils literal notranslate"><span class="pre">collectDraws()</span></code> with 50 draws; store result in <code class="docutils literal notranslate"><span class="pre">myDraws</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>C</p></td>
+<td><p>(2 pts)</p></td>
+<td><p>Print <code class="docutils literal notranslate"><span class="pre">myDraws</span></code> showing both index and element on each line</p></td>
+</tr>
+<tr class="row-odd"><td><p>D</p></td>
+<td><p>(1 pt)</p></td>
+<td><p>Call <code class="docutils literal notranslate"><span class="pre">findLongestStreak()</span></code> and print the result with a label</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="rubric-card-draw-sequences-25-pts">
+<h3>Rubric — Card Draw Sequences (25 pts)<a class="headerlink" href="#rubric-card-draw-sequences-25-pts" title="Link to this heading">¶</a></h3>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Criterion</p></th>
+<th class="head"><p>Points</p></th>
+<th class="head"><p>AP CSA Standard</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">currentDraw</span></code> declared correctly</p></td>
+<td><p>1</p></td>
+<td><p>MOD-1.A</p></td>
+</tr>
+<tr class="row-odd"><td><p>Default constructor initializes <code class="docutils literal notranslate"><span class="pre">currentDraw</span></code></p></td>
+<td><p>2</p></td>
+<td><p>MOD-2.B</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">drawCard()</span></code> updates <code class="docutils literal notranslate"><span class="pre">currentDraw</span></code> using <code class="docutils literal notranslate"><span class="pre">Random</span></code> and returns value</p></td>
+<td><p>2</p></td>
+<td><p>MOD-1.F, CON-1.B</p></td>
+</tr>
+<tr class="row-odd"><td><p>Algorithm pseudocode/flowchart present and logical</p></td>
+<td><p>4</p></td>
+<td><p>MOD-1.E, AAP-2.A</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">collectDraws()</span></code> creates and fills int array correctly</p></td>
+<td><p>5</p></td>
+<td><p>VAR-2.C, AAP-2.O</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">main</span></code> A — <code class="docutils literal notranslate"><span class="pre">CardDeck</span></code> object instantiated correctly</p></td>
+<td><p>1</p></td>
+<td><p>MOD-2.C</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">main</span></code> B — <code class="docutils literal notranslate"><span class="pre">collectDraws()</span></code> called with 50; stored in <code class="docutils literal notranslate"><span class="pre">myDraws</span></code></p></td>
+<td><p>1</p></td>
+<td><p>MOD-1.D</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">main</span></code> C — <code class="docutils literal notranslate"><span class="pre">myDraws</span></code> printed with index and element</p></td>
+<td><p>2</p></td>
+<td><p>VAR-2.C</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">findLongestStreak()</span></code> traverses and tracks longest streak</p></td>
+<td><p>8</p></td>
+<td><p>AAP-2.O, AAP-2.P</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">main</span></code> D — <code class="docutils literal notranslate"><span class="pre">findLongestStreak()</span></code> called and result printed</p></td>
+<td><p>1</p></td>
+<td><p>MOD-1.D</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="extension-data-science-connection">
+<h3>Extension: Data Science Connection<a class="headerlink" href="#extension-data-science-connection" title="Link to this heading">¶</a></h3>
+<p>The data scientist’s real question is: <em>does a reshuffled deck produce truly random sequences, or do streaks appear more or less often than probability predicts?</em></p>
+<ul class="simple">
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">collectDraws()</span></code> with 1000 draws</p></li>
+<li><p>Count how many streaks exist and their average length</p></li>
+<li><p>A truly random sequence of values 1–13 has a <strong>1-in-13 chance</strong> of any two consecutive draws matching</p></li>
+<li><p>Does your data match that expectation?</p></li>
+</ul>
+<p>This extension deepens Unit 3 method writing and naturally connects to Unit 4 array traversal algorithms.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="unit-3-class-design-project-clue">
+<h2>Unit 3 Class Design Project — Clue<a class="headerlink" href="#unit-3-class-design-project-clue" title="Link to this heading">¶</a></h2>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/*=============================================================================</span>
 <span class="cm"> |   Assignment:  Project 3.7.1 - Clue</span>
 <span class="cm"> |       Author:  [Your First and Last Name (Your E-mail Address)]</span>
 <span class="cm"> |</span>
 <span class="cm"> |  Course Name:  AP Computer Science A</span>
-<span class="cm"> |   Instructor:  John Smith</span>
+<span class="cm"> |   Instructor:  [Instructor Name]</span>
 <span class="cm"> |     Due Date:  [Due Date and Time]</span>
 <span class="cm"> |</span>
 <span class="cm"> |  Description:  [Describe the program&#39;s goal, IN DETAIL.]</span>
 <span class="cm"> |</span>
-<span class="cm"> |     Language:  [java]</span>
+<span class="cm"> |     Language:  Java</span>
 <span class="cm"> |</span>
-<span class="cm"> | Deficiencies:  [If you know of any problems with the code, provide</span>
-<span class="cm"> |                details here, otherwise clearly state that you know</span>
-<span class="cm"> |                of no unsatisfied requirements and no logic errors.]</span>
+<span class="cm"> | Deficiencies:  [Known problems, or state none.]</span>
 <span class="cm"> *===========================================================================*/</span>
 </pre></div>
 </div>
-<p><strong>Project 3.7.1 - Clue</strong></p>
-<p><a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/10015355/137Clue.zip">137Clue.zip</a></p>
-<p><strong>Directions</strong> Review the current program. Look at “what works” and “what needs work”. Make the necessary changes so it produces the intended outcome.</p>
-<p>This program simulates Clue.</p>
-<p>Here is what works:</p>
+<p><strong><a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/10015355/137Clue.zip">137Clue.zip</a></strong></p>
+<p><strong>Directions:</strong> Review the current program. Look at “what works” and “what needs work.” Make the necessary changes so it produces the intended outcome.</p>
+<p><strong>What works:</strong></p>
 <ul class="simple">
-<li><p>the program randomly generates a final murderer, weapon, and room</p></li>
-<li><p>prints out choices for the user</p></li>
-<li><p>asks user for final guess</p></li>
+<li><p>The program randomly generates a final murderer, weapon, and room</p></li>
+<li><p>Prints out choices for the user</p></li>
+<li><p>Asks user for final guess</p></li>
 </ul>
-<p>Here is what needs to work:</p>
+<p><strong>What needs to work:</strong></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">equals()</span></code> comparison is incorrect</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">check()</span></code> should only get called if our guess isn’t 100% correct</p></li>
-<li><p>The table of Suspect, Weapon and Room should be aligned — use <code class="docutils literal notranslate"><span class="pre">\t</span></code></p></li>
-<li><p>Should print “You have the correct murderer.” if correct.</p></li>
-<li><p>Should print “You have the correct weapon.” if correct.</p></li>
-<li><p>Should print “You have the correct room.” if correct.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">check()</span></code> should only get called if the guess isn’t 100% correct</p></li>
+<li><p>The table of Suspect, Weapon, and Room should be aligned using <code class="docutils literal notranslate"><span class="pre">\t</span></code></p></li>
+<li><p>Should print <code class="docutils literal notranslate"><span class="pre">&quot;You</span> <span class="pre">have</span> <span class="pre">the</span> <span class="pre">correct</span> <span class="pre">murderer.&quot;</span></code> if correct</p></li>
+<li><p>Should print <code class="docutils literal notranslate"><span class="pre">&quot;You</span> <span class="pre">have</span> <span class="pre">the</span> <span class="pre">correct</span> <span class="pre">weapon.&quot;</span></code> if correct</p></li>
+<li><p>Should print <code class="docutils literal notranslate"><span class="pre">&quot;You</span> <span class="pre">have</span> <span class="pre">the</span> <span class="pre">correct</span> <span class="pre">room.&quot;</span></code> if correct</p></li>
 </ul>
-<p>Extra:</p>
+<p><strong>Extra Credit:</strong></p>
 <ul class="simple">
-<li><p>Ignore case, use <code class="docutils literal notranslate"><span class="pre">.equalsIgnoreCase()</span></code></p></li>
-<li><p>Allow the user to iterate through the program to pick the correct Suspect, Weapon and Room</p></li>
+<li><p>Ignore case using <code class="docutils literal notranslate"><span class="pre">.equalsIgnoreCase()</span></code></p></li>
+<li><p>Allow the user to iterate through the program to pick the correct Suspect, Weapon, and Room</p></li>
 </ul>
-<p>This extension is a part of Unit 3 method writing and leads into Unit 4 array traversal algorithms.</p>
+<hr class="docutils" />
 </section>
 </section>
 
@@ -1224,40 +1516,51 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Unit 3 - Class Creation</a><ul>
-<li><a class="reference internal" href="#abstraction-and-program-design">3.1 Abstraction and Program Design</a></li>
+<li><a class="reference internal" href="#">Unit 3 — Class Creation</a><ul>
+<li><a class="reference internal" href="#abstraction-and-program-design">3.1 Abstraction and Program Design</a><ul>
+<li><a class="reference internal" href="#activity-3-1-1-sports-class">Activity 3.1.1 — Sports Class</a><ul>
+<li><a class="reference internal" href="#objective">Objective</a></li>
+<li><a class="reference internal" href="#requirements">Requirements</a></li>
+<li><a class="reference internal" href="#example-output">Example Output</a></li>
+<li><a class="reference internal" href="#starter-code-main-java">Starter Code — Main.java</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a class="reference internal" href="#impact-of-program-design">3.2 Impact of Program Design</a></li>
 <li><a class="reference internal" href="#anatomy-of-a-class">3.3 Anatomy of a Class</a></li>
 <li><a class="reference internal" href="#constructors">3.4 Constructors</a><ul>
 <li><a class="reference internal" href="#tostring-method">toString() Method</a></li>
-<li><a class="reference internal" href="#project-card-draw-sequences">PROJECT - CARD DRAW SEQUENCES</a><ul>
-<li><a class="reference internal" href="#scenario">Scenario</a></li>
-<li><a class="reference internal" href="#part-1-the-carddeck-class">Part 1 — The <code class="docutils literal notranslate"><span class="pre">CardDeck</span></code> Class</a></li>
-<li><a class="reference internal" href="#part-2-static-methods-in-the-driver-class">Part 2 — Static Methods in the Driver Class</a><ul>
-<li><a class="reference internal" href="#collectdraws"><code class="docutils literal notranslate"><span class="pre">collectDraws()</span></code></a></li>
-<li><a class="reference internal" href="#findlongeststreak"><code class="docutils literal notranslate"><span class="pre">findLongestStreak()</span></code></a></li>
+<li><a class="reference internal" href="#activity-3-4-1-not-another-cake">Activity 3.4.1 — Not Another Cake</a><ul>
+<li><a class="reference internal" href="#id1">Objective</a></li>
+<li><a class="reference internal" href="#part-a-explore-the-reference-program">Part A — Explore the Reference Program</a></li>
+<li><a class="reference internal" href="#cake-java-reference-program">Cake.java — Reference Program</a></li>
+<li><a class="reference internal" href="#main-java-starter-code">Main.java — Starter Code</a></li>
+<li><a class="reference internal" href="#sample-output">Sample Output</a></li>
+<li><a class="reference internal" href="#part-b-your-own-class-submission">Part B — Your Own Class (Submission)</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#part-3-additional-scoring-guidelines">Part 3 — Additional Scoring Guidelines</a><ul>
-<li><a class="reference internal" href="#algorithm-design-for-collectdraws-and-findlongeststreak-4-pts">1. Algorithm Design for <code class="docutils literal notranslate"><span class="pre">collectDraws()</span></code> and <code class="docutils literal notranslate"><span class="pre">findLongestStreak()</span></code> — (4 pts)</a></li>
-<li><a class="reference internal" href="#main-method-integration-5-pts">2. <code class="docutils literal notranslate"><span class="pre">main</span></code> Method Integration — (5 pts)</a></li>
+<li><a class="reference internal" href="#activity-3-4-2-dog-pizza">Activity 3.4.2 — Dog Pizza</a><ul>
+<li><a class="reference internal" href="#id2">Objective</a></li>
+<li><a class="reference internal" href="#part-a-complete-dog-java">Part A — Complete Dog.java</a></li>
+<li><a class="reference internal" href="#part-b-create-pizza-java-from-scratch">Part B — Create Pizza.java from Scratch</a></li>
+<li><a class="reference internal" href="#id3">Main.java — Starter Code</a></li>
+<li><a class="reference internal" href="#expected-output">Expected Output</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#some-tips-suggestions">Some Tips / Suggestions</a></li>
-<li><a class="reference internal" href="#testing-collectdraws">Testing <code class="docutils literal notranslate"><span class="pre">collectDraws()</span></code></a></li>
-<li><a class="reference internal" href="#testing-findlongeststreak">Testing <code class="docutils literal notranslate"><span class="pre">findLongestStreak()</span></code></a></li>
+<li><a class="reference internal" href="#activity-3-4-3-bicycle-revisited">Activity 3.4.3 — Bicycle Revisited</a><ul>
+<li><a class="reference internal" href="#id4">Objective</a></li>
+<li><a class="reference internal" href="#id5">Requirements</a></li>
+<li><a class="reference internal" href="#id6">Sample Output</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#rubric">Rubric</a></li>
+<li><a class="reference internal" href="#activity-3-4-4-constructor-practice">Activity 3.4.4 — Constructor Practice</a><ul>
+<li><a class="reference internal" href="#id7">Objective</a></li>
+<li><a class="reference internal" href="#student-java">Student.java</a></li>
+<li><a class="reference internal" href="#main-java">Main.java</a></li>
+<li><a class="reference internal" href="#id8">Expected Output</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#recommended-placement-in-the-ap-csa-curriculum">Recommended Placement in the AP CSA Curriculum</a><ul>
-<li><a class="reference internal" href="#extension-data-science">Extension: Data Science</a></li>
-<li><a class="reference internal" href="#activity-2-1-1">Activity 2.1.1</a></li>
-<li><a class="reference internal" href="#activity-2-1-2-not-another-cake">Activity 2.1.2 Not another Cake</a></li>
-<li><a class="reference internal" href="#activity-2-1-3-dog-pizza-java">Activity 2.1.3 Dog Pizza java</a></li>
-<li><a class="reference internal" href="#activity-2-1-4-bicycle-revisited">Activity 2.1.4 - Bicycle Revisited</a></li>
-<li><a class="reference internal" href="#activity-2-1-5-constructor-practice">Activity 2.1.5 Constructor Practice</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#methods-how-to-write-them">3.5 Methods: How to Write Them</a><ul>
@@ -1270,14 +1573,27 @@
 <li><a class="reference internal" href="#scope-and-access">3.8 Scope and Access</a></li>
 <li><a class="reference internal" href="#this-keyword">3.9 this Keyword</a></li>
 <li><a class="reference internal" href="#exceptions-oracle-foundations-1z0-811">Exceptions — <em>Oracle Foundations 1Z0-811</em></a><ul>
-<li><a class="reference internal" href="#activity-3-e-1-exception-handling-practice">Activity 3.E.1 - Exception Handling Practice</a></li>
+<li><a class="reference internal" href="#activity-3-e-1-exception-handling-practice">Activity 3.E.1 — Exception Handling Practice</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#lambda-expressions-oracle-foundations-1z0-811">Lambda Expressions — <em>Oracle Foundations 1Z0-811</em></a><ul>
-<li><a class="reference internal" href="#activity-3-l-1-lambda-sorting">Activity 3.L.1 - Lambda Sorting</a></li>
+<li><a class="reference internal" href="#activity-3-l-1-lambda-sorting">Activity 3.L.1 — Lambda Sorting</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#class-design-project">Class Design Project</a></li>
+<li><a class="reference internal" href="#unit-3-project-card-draw-sequences">Unit 3 Project — Card Draw Sequences</a><ul>
+<li><a class="reference internal" href="#scenario">Scenario</a></li>
+<li><a class="reference internal" href="#part-1-the-carddeck-class">Part 1 — The <code class="docutils literal notranslate"><span class="pre">CardDeck</span></code> Class</a></li>
+<li><a class="reference internal" href="#part-2-static-methods-in-the-driver-class">Part 2 — Static Methods in the Driver Class</a><ul>
+<li><a class="reference internal" href="#collectdraws"><code class="docutils literal notranslate"><span class="pre">collectDraws()</span></code></a></li>
+<li><a class="reference internal" href="#findlongeststreak"><code class="docutils literal notranslate"><span class="pre">findLongestStreak()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#part-3-algorithm-design-and-main-integration">Part 3 — Algorithm Design and main() Integration</a></li>
+<li><a class="reference internal" href="#rubric-card-draw-sequences-25-pts">Rubric — Card Draw Sequences (25 pts)</a></li>
+<li><a class="reference internal" href="#extension-data-science-connection">Extension: Data Science Connection</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#unit-3-class-design-project-clue">Unit 3 Class Design Project — Clue</a></li>
 </ul>
 </li>
 </ul>
