@@ -753,7 +753,7 @@ An **exception** is an event that disrupts the normal flow of a program at runti
 
 ---
 
-
+<img width="387" height="540" alt="Image" src="https://github.com/user-attachments/assets/9f2f1c0b-1729-4aa3-aed7-336e39973669" />
 
 ---
 
