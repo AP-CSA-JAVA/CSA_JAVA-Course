@@ -44,7 +44,9 @@ A class is a blueprint for the objects of that class. A class contains variables
 ### Activity 3.1.1 — Sports Class
 
 **AP CSA Topics:** 3.1 (Classes), 3.2 (Constructors), 3.3 (Instance Variables and toString())
+
 **Oracle Domain:** 4, 6
+
 
 **Objective**
 
