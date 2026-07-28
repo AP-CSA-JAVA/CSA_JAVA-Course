@@ -359,6 +359,50 @@ for (int i = 0; i < 5; i++) { ... }
 
 ---
 
+## 2.8a Comparing Loops — *Oracle Foundations 1Z0-811*
+
+> **Oracle Exam Note:** "Compare and contrast the for, while, and do-while loops" is a direct objective on the Oracle 1Z0-811 exam. You've now seen all three individually (2.7, 2.7a, 2.8) — this section puts them side by side.
+
+All three loops accomplish the same basic goal — repeating code — but differ in **when the condition is checked** and **when you'd choose one over another**.
+
+| | `while` | `do-while` | `for` |
+| --- | --- | --- | --- |
+| **Condition checked** | Before each iteration | After each iteration | Before each iteration |
+| **Guarantees at least 1 run?** | No — condition could be false immediately | **Yes** — body always runs at least once | No |
+| **Best used when...** | The number of iterations is unknown and depends on a condition | You need the body to run at least once (menus, input validation) | The number of iterations is known or counter-based |
+| **Syntax includes counter?** | Counter declared/updated separately | Counter declared/updated separately | Counter declared, checked, and updated in one line |
+| **Semicolon after condition?** | No | **Yes** — `while (condition);` | No |
+
+```java
+// while — condition checked FIRST; may run zero times
+int i = 10;
+while (i < 5) {
+    System.out.println(i);   // never runs — i starts at 10
+}
+
+// do-while — condition checked LAST; runs at least once
+int j = 10;
+do {
+    System.out.println(j);   // runs once, prints 10
+} while (j < 5);
+
+// for — best when you know exactly how many times to repeat
+for (int k = 0; k < 5; k++) {
+    System.out.println(k);   // runs exactly 5 times
+}
+```
+
+> **Oracle Exam Note:** A common exam trap: given a `do-while` loop whose condition is false from the start, students assume the body never runs. Remember — `do-while` always executes the body **at least once**, no matter what the condition is.
+
+### Activity 2.8a.1 — Which Loop?
+For each scenario below, identify which loop (`for`, `while`, or `do-while`) is the best fit and explain why in one sentence:
+1. Printing the numbers 1 through 20.
+2. Repeatedly asking the user for a password until they enter the correct one.
+3. Reading lines from a file until there are no more lines to read.
+4. Displaying a menu at least once, then repeating it if the user enters an invalid choice.
+
+---
+
 ## 2.9 Implementing Selection and Iteration Algorithms
 
 **Goals**
