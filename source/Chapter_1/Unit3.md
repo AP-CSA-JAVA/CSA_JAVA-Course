@@ -748,7 +748,7 @@ An **exception** is an event that disrupts the normal flow of a program at runti
 
 **try-catch-finally:**
 
-# Try / Catch / Finally
+### Try / Catch / Finally
 **AP CSA + Oracle 1Z0-811 Exception Handling Reference**
 
 ---
@@ -757,9 +757,9 @@ An **exception** is an event that disrupts the normal flow of a program at runti
 
 ---
 
-## Keyword Definitions
+### Keyword Definitions
 
-### `try`
+**`try`**
 Defines a **guarded block** — code that might throw an exception. If any statement inside throws, control immediately jumps out of the block (remaining lines are skipped) and Java searches for a matching `catch` clause.
 
 **Rules:**
@@ -769,7 +769,7 @@ Defines a **guarded block** — code that might throw an exception. If any state
 
 ---
 
-### `catch (ExceptionType e)`
+**`catch (ExceptionType e)`**
 Handles a specific exception type. The parameter `e` is the actual exception object — you can call `e.getMessage()`, `e.printStackTrace()`, or rethrow with `throw e`. Multiple `catch` blocks are allowed; Java checks them **top-down and runs the first match only**.
 
 **Rules:**
@@ -779,7 +779,7 @@ Handles a specific exception type. The parameter `e` is the actual exception obj
 
 ---
 
-### `finally`
+**`finally`**
 The **cleanup block**. Runs *regardless* of whether an exception was thrown or caught. Classic uses: closing file/DB connections, releasing locks, logging.
 
 **Rules:**
@@ -789,7 +789,7 @@ The **cleanup block**. Runs *regardless* of whether an exception was thrown or c
 
 ---
 
-### `throw`
+**`throw`**
 A **statement** that manually launches an exception object. Must be followed by a `Throwable` instance:
 
 ```java
@@ -805,7 +805,7 @@ Control immediately leaves the current method and unwinds the call stack looking
 
 ---
 
-### `throws` *(method signature)*
+**`throws` *(method signature)***
 Declares that a method might throw a checked exception and is **not** handling it internally — callers must handle it.
 
 ```java
@@ -823,7 +823,7 @@ public void readFile(String path) throws IOException {
 
 ---
 
-## Full Syntax Template
+### Full Syntax Template
 
 ```java
 try {
