@@ -8,7 +8,7 @@
 
 
 <details>
-<summaryAssignment Header></summary>
+<summary>Assignment Header</summary>
 
 All submitted documents and `.java` files must include the header below. This mirrors the block comment required in `Main.java` and follows the standard used by university CS departments.
 
