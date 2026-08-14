@@ -1,3 +1,5 @@
+August 14, 2026
+
 #### Before today, how much programming experience have you had? (None · A little on my own · A class before this one · A lot)
 
 
@@ -13,3 +15,5 @@
 #### What's one thing outside of school (a game, an app, a hobby) where you've had to problem-solve or troubleshoot something on your own? (Great way to surface transferable skills they don't think of as "coding-related.")
 
 #### What's your biggest hope or biggest worry about this class?
+
+
