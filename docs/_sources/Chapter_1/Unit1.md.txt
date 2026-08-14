@@ -68,8 +68,11 @@ The following are considered academic integrity violations in this course:
 - Submitting another student's code as your own
 - Copying code from the internet without citation and modification
 - Allowing another student to copy your code
-- Using AI-generated code and submitting it as your own work without instructor approval
 - Sharing your source files with another student outside of an approved partner assignment
+- **AI & External Source Use**
+  - AI tools may be used for *idea generation, debugging assistance, and understanding small parts of code* — not to generate complete solutions.
+  - If you use any external source (websites, LLM/AI tools, friends), **cite it in your code comments** — indicate where you got help and whether any code sections came from that source.
+  - Submitting AI-generated code as your own work — whether a whole solution or an unattributed snippet — is an **academic integrity violation**. Violations receive **no credit** and are referred for disciplinary action in accordance with school policy.
 
 **Approved Collaboration:** Discussing concepts, approaches, and debugging strategies with classmates is encouraged. Writing or sharing actual code is not permitted unless the assignment is explicitly designated as a partner assignment.
 
