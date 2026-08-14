@@ -1,8 +1,8 @@
 # AP Computer Science A — Pacing Guide 2025–26
-**Aug 19, 2024 – Apr 2, 2025 · 33 Calendar Weeks · 28 Instructional Weeks**
+**Aug 17, 2026 – Apr 2, 2027 · 33 Calendar Weeks · 28 Instructional Weeks**
 
 
-*Aligned to the 2025–26 College Board Course Exam Description(CED) (4-Unit Revision) and Oracle Java Foundations (1Z0-811)*
+*Aligned to the 2026–27 College Board Course Exam Description(CED) (4-Unit Revision) and Oracle Java Foundations (1Z0-811)*
 
 ---
 
@@ -10,19 +10,19 @@
 
 | Break | Dates | Weeks Lost |
 |-------|-------|------------|
-| Thanksgiving | Nov 25 – Nov 29 | Week 15 |
-| Winter Break | Dec 23 – Jan 8 | Weeks 19–21 |
-| Spring Recess | Mar 31 – Apr 2 | Week 33 (partial) |
+| Thanksgiving | Nov 23 – Nov 27 | Week 15 |
+| Winter Break | Dec 21 – Jan 8 | Weeks 19–21 |
+| Spring Recess | Mar 29 – Apr 5 | Week 33 |
 
 > **28 instructional weeks total.** Exams and projects are embedded within each unit block — no dedicated review weeks are counted separately.
 
 ---
 
-## Course Overview
+## Course Overview -- <mark>Dates need to be revised</mark>
 
 | Unit | Title | Exam Weight | Instructional Weeks | Calendar Span |
 |------|-------|-------------|---------------------|---------------|
-| Unit 1 | Using Objects and Methods | 15–25% | 5 | Aug 19 – Sep 20 |
+| Unit 1 | Using Objects and Methods | 15–25% | 5 | Aug 17 – Sep 20 |
 | Unit 2 | Selection and Iteration | 25–35% | 6 | Sep 30 – Nov 8 |
 | Unit 3 | Class Creation | 10–18% | 4 | Nov 11 – Dec 13 |
 | Inheritance | Inheritance *(Oracle + AP supplement)* | —* | 3 | Dec 16 – Jan 24 |
