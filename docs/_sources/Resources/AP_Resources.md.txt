@@ -2,7 +2,7 @@
 **Aug 19, 2024 – Apr 2, 2025 · 33 Calendar Weeks · 28 Instructional Weeks**
 
 
-*Aligned to the 2025–26 College Board CED (4-Unit Revision) and Oracle Java Foundations (1Z0-811)*
+*Aligned to the 2025–26 College Board Course Exam Description(CED) (4-Unit Revision) and Oracle Java Foundations (1Z0-811)*
 
 ---
 
