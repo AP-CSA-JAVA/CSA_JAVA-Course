@@ -1,4 +1,4 @@
-# AP Computer Science A — Pacing Guide 2025–26
+# AP Computer Science A — Pacing Guide 2026–27
 **Aug 17, 2026 – Apr 2, 2027 · 33 Calendar Weeks · 28 Instructional Weeks**
 
 
@@ -18,7 +18,7 @@
 
 ---
 
-## Course Overview -- <mark>Dates need to be revised</mark>
+## Course Overview -- Dates need to be revised
 
 | Unit | Title | Exam Weight | Instructional Weeks | Calendar Span |
 |------|-------|-------------|---------------------|---------------|
@@ -170,3 +170,150 @@
 
 *AP CSA 2025–26 CED: [apcentral.collegeboard.org/courses/ap-computer-science-a](https://apcentral.collegeboard.org/courses/ap-computer-science-a)*
 *Oracle 1Z0-811 Exam: [education.oracle.com/java-foundations/pexam_1Z0-811](https://education.oracle.com/java-foundations/pexam_1Z0-811)*
+
+
+## Getting Started: VS Code for AP Computer Science A (Windows 11)
+
+This guide gets your machine ready to write, run, and organize Java programs for this course. Follow it top to bottom the first time — after that, you'll only ever need the "Starting a New Assignment" section.
+
+---
+
+### 1. Install VS Code
+
+- [ ] Go to [code.visualstudio.com](https://code.visualstudio.com) and download the **Windows** installer (it detects Windows 11 automatically).
+- [ ] Run the installer. On the **"Select Additional Tasks"** screen, check these — they save you time later:
+  - **Add "Open with Code" action to Windows Explorer file context menu**
+  - **Add "Open with Code" action to Windows Explorer directory context menu**
+  - **Register Code as an editor for supported file types**
+  - **Add to PATH**
+- [ ] Finish the install and launch VS Code.
+
+> 📌 **Personal laptop vs. school laptop:** If you're using a CAMS-provided laptop, check with your instructor first — VS Code may already be installed, or installing new software may require permission.
+
+---
+
+### 2. Install a Java Development Kit (JDK)
+
+VS Code is just an editor — it doesn't compile or run Java on its own. You need a JDK installed separately.
+
+- [ ] Go to [adoptium.net](https://adoptium.net) (Eclipse Temurin — a free, widely-used JDK build).
+- [ ] Download the latest **LTS** release for Windows (x64), **.msi installer**. Do not install Java 8 — that's outdated; use the current LTS version.
+- [ ] Run the installer. On the **"Custom Setup"** screen, make sure these are all enabled (they may be off by default):
+  - **Add to PATH**
+  - **Set JAVA_HOME variable**
+  - **JavaSoft (Oracle) registry keys**
+- [ ] Finish the install.
+- [ ] Confirm it worked: open **Command Prompt** (search "cmd" in the Start menu) and type:
+
+```
+java -version
+javac -version
+```
+
+Both commands should print a version number. If either says "not recognized," restart your computer (PATH changes need a restart to take effect) and try again.
+
+---
+
+### 3. Install the Java Extension Pack in VS Code
+
+- [ ] Open VS Code.
+- [ ] Open the Extensions panel: `Ctrl + Shift + X`.
+- [ ] Search for **"Extension Pack for Java"** (publisher: **Microsoft**) and click **Install**.
+
+This one install pulls in everything you need:
+
+| Included Extension | What It Does |
+| --- | --- |
+| Language Support for Java(TM) by Red Hat | Core language features — autocomplete, error checking, navigation |
+| Debugger for Java | Lets you set breakpoints and step through code line by line |
+| Test Runner for Java | Runs JUnit tests (not needed often in this course, but included) |
+| Maven for Java | Build tool support (you won't use this for class assignments) |
+| Project Manager for Java | Powers the "Run" ▷ button above `main()` |
+| Visual Studio IntelliCode | AI-assisted autocomplete suggestions — fine for suggestions, but remember the Academic Honesty Policy: complete AI-generated solutions are not allowed |
+
+- [ ] Restart VS Code after installing (it will prompt you to).
+
+---
+
+### 4. Verify Everything Works — Hello World
+
+- [ ] Create a folder anywhere (Desktop is fine for this test) called `HelloTest`.
+- [ ] Open it in VS Code: **File → Open Folder** → select `HelloTest`.
+- [ ] Create a new file named exactly `Main.java` and paste in:
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello, World");
+    }
+}
+```
+
+- [ ] Save the file (`Ctrl + S`).
+- [ ] You should see a **▷ Run** link appear directly above `public static void main`. Click it, or press `Ctrl + F5`.
+- [ ] A terminal panel opens at the bottom and prints `Hello, World`.
+
+If you don't see the Run link, close and reopen the folder — the Java extension sometimes needs a moment to index a brand-new workspace.
+
+> ⚠️ **File name must match class name.** If your class is `public class WeightOnJupiter`, the file must be named `WeightOnJupiter.java` — not `Main.java`. This is a compile-time error in Java, not just a style suggestion.
+
+---
+
+### 5. Organizing Your Coursework
+
+Set this up once, at the start of the year.
+
+- [ ] Create one parent folder for the entire course — for example, on your Desktop or in Documents:
+
+```
+AP-CSA-JAVA/
+├── Unit1-UsingObjectsAndMethods/
+│   ├── 1.2.1-Allowance/
+│   │   └── Main.java
+│   ├── 1.2.2-ScannerClass/
+│   │   └── Main.java
+│   ├── 1.3.1-WeightOnJupiter/
+│   │   └── Main.java
+│   ├── 1.7.2-Magic8Ball/
+│   │   └── Main.java
+│   ├── 1.10.1-MissionControl/
+│   │   └── Main.java
+│   └── FinalProject-ThemePark/
+│       ├── Main.java
+│       ├── Ride.java
+│       └── Guest.java
+├── Unit2-SelectionAndIteration/
+│   └── ...
+├── Unit3-ClassCreation/
+│   └── ...
+└── Unit4-DataCollections/
+    └── ...
+```
+
+- One subfolder per unit, one subfolder per assignment, named with the assignment number so it sorts and matches the syllabus (`1.3.1-WeightOnJupiter`, not `weight` or `hw3`).
+- Keep every file for one assignment — `Main.java`, any supporting classes, your Test Cases document — together in that assignment's folder.
+
+> ⚠️ **The one real gotcha: don't open the whole `AP-CSA-JAVA` folder as your workspace.** VS Code's Java extension treats everything inside an open folder as one big project. Since almost every assignment uses `public class Main`, having a dozen `Main.java` files under one open workspace will cause "duplicate class" errors that have nothing to do with your code.
+>
+> **Instead:** each time you sit down to work on an assignment, use **File → Open Folder** and open *only that assignment's folder* (e.g., just `1.3.1-WeightOnJupiter`, not `Unit1-UsingObjectsAndMethods` and not `AP-CSA-JAVA`). VS Code remembers your recent folders under **File → Open Recent**, so switching between assignments is one click, not a re-navigation every time.
+
+---
+
+### 6. Recommended Settings (Optional but Worth It)
+
+Open Settings with `Ctrl + ,`, then search for and enable:
+
+- [ ] **Files: Auto Save** → set to `afterDelay` — stops losing work if you forget to save before running.
+- [ ] **Editor: Format On Save** → auto-cleans indentation to match the course's style guidelines (4 spaces, brace placement) every time you save.
+
+---
+
+### 7. Common First-Day Problems
+
+| Problem | Fix |
+| --- | --- |
+| `java`/`javac` "not recognized" in terminal | Restart the computer — PATH changes need a fresh session |
+| No "▷ Run" link above `main()` | Make sure the file is saved with a `.java` extension and the folder was opened with File → Open Folder (not just a loose file) |
+| "Duplicate class Main" error | You opened a parent folder containing more than one `Main.java` — open just the single assignment folder instead (see §5) |
+| Class name / filename mismatch error | The `public class` name must exactly match the file name, including capitalization |
+| Extension won't install (school network) | Some school networks block the VS Code Marketplace — ask your instructor about offline `.vsix` installation or a personal hotspot for this one-time setup |

@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="SCRUM" href="SCRUM.html"><link rel="prev" title="Oracle Resources" href="Resources.html">
 
     <!-- Generated with Sphinx 8.1.3 and Furo 2025.12.19 -->
-        <title>AP Computer Science A — Pacing Guide 2025–26 - CSA JAVA Course</title>
+        <title>AP Computer Science A — Pacing Guide 2026–27 - CSA JAVA Course</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=8dab3a3b" />
@@ -245,8 +245,8 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="ap-computer-science-a-pacing-guide-202526">
-<h1>AP Computer Science A — Pacing Guide 2025–26<a class="headerlink" href="#ap-computer-science-a-pacing-guide-202526" title="Link to this heading">¶</a></h1>
+          <section id="ap-computer-science-a-pacing-guide-202627">
+<h1>AP Computer Science A — Pacing Guide 2026–27<a class="headerlink" href="#ap-computer-science-a-pacing-guide-202627" title="Link to this heading">¶</a></h1>
 <p><strong>Aug 17, 2026 – Apr 2, 2027 · 33 Calendar Weeks · 28 Instructional Weeks</strong></p>
 <p><em>Aligned to the 2026–27 College Board Course Exam Description(CED) (4-Unit Revision) and Oracle Java Foundations (1Z0-811)</em></p>
 <hr class="docutils" />
@@ -282,7 +282,7 @@
 </section>
 <hr class="docutils" />
 <section id="course-overview-dates-need-to-be-revised">
-<h2>Course Overview – <mark>Dates need to be revised</mark><a class="headerlink" href="#course-overview-dates-need-to-be-revised" title="Link to this heading">¶</a></h2>
+<h2>Course Overview – Dates need to be revised<a class="headerlink" href="#course-overview-dates-need-to-be-revised" title="Link to this heading">¶</a></h2>
 <div class="table-wrapper colwidths-auto docutils container">
 <table class="docutils align-default">
 <thead>
@@ -819,6 +819,198 @@ While removed from the AP CSA exam, it reinforces Unit 3 class design skills.</p
 <p><em>AP CSA 2025–26 CED: <a class="reference external" href="https://apcentral.collegeboard.org/courses/ap-computer-science-a">apcentral.collegeboard.org/courses/ap-computer-science-a</a></em>
 <em>Oracle 1Z0-811 Exam: <a class="reference external" href="https://education.oracle.com/java-foundations/pexam_1Z0-811">education.oracle.com/java-foundations/pexam_1Z0-811</a></em></p>
 </section>
+<section id="getting-started-vs-code-for-ap-computer-science-a-windows-11">
+<h2>Getting Started: VS Code for AP Computer Science A (Windows 11)<a class="headerlink" href="#getting-started-vs-code-for-ap-computer-science-a-windows-11" title="Link to this heading">¶</a></h2>
+<p>This guide gets your machine ready to write, run, and organize Java programs for this course. Follow it top to bottom the first time — after that, you’ll only ever need the “Starting a New Assignment” section.</p>
+<hr class="docutils" />
+<section id="install-vs-code">
+<h3>1. Install VS Code<a class="headerlink" href="#install-vs-code" title="Link to this heading">¶</a></h3>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Go to <a class="reference external" href="https://code.visualstudio.com">code.visualstudio.com</a> and download the <strong>Windows</strong> installer (it detects Windows 11 automatically).</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Run the installer. On the <strong>“Select Additional Tasks”</strong> screen, check these — they save you time later:</p>
+<ul>
+<li><p><strong>Add “Open with Code” action to Windows Explorer file context menu</strong></p></li>
+<li><p><strong>Add “Open with Code” action to Windows Explorer directory context menu</strong></p></li>
+<li><p><strong>Register Code as an editor for supported file types</strong></p></li>
+<li><p><strong>Add to PATH</strong></p></li>
+</ul>
+</li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Finish the install and launch VS Code.</p></li>
+</ul>
+<blockquote>
+<div><p>📌 <strong>Personal laptop vs. school laptop:</strong> If you’re using a CAMS-provided laptop, check with your instructor first — VS Code may already be installed, or installing new software may require permission.</p>
+</div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="install-a-java-development-kit-jdk">
+<h3>2. Install a Java Development Kit (JDK)<a class="headerlink" href="#install-a-java-development-kit-jdk" title="Link to this heading">¶</a></h3>
+<p>VS Code is just an editor — it doesn’t compile or run Java on its own. You need a JDK installed separately.</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Go to <a class="reference external" href="https://adoptium.net">adoptium.net</a> (Eclipse Temurin — a free, widely-used JDK build).</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Download the latest <strong>LTS</strong> release for Windows (x64), <strong>.msi installer</strong>. Do not install Java 8 — that’s outdated; use the current LTS version.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Run the installer. On the <strong>“Custom Setup”</strong> screen, make sure these are all enabled (they may be off by default):</p>
+<ul>
+<li><p><strong>Add to PATH</strong></p></li>
+<li><p><strong>Set JAVA_HOME variable</strong></p></li>
+<li><p><strong>JavaSoft (Oracle) registry keys</strong></p></li>
+</ul>
+</li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Finish the install.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Confirm it worked: open <strong>Command Prompt</strong> (search “cmd” in the Start menu) and type:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">version</span>
+<span class="n">javac</span> <span class="o">-</span><span class="n">version</span>
+</pre></div>
+</div>
+<p>Both commands should print a version number. If either says “not recognized,” restart your computer (PATH changes need a restart to take effect) and try again.</p>
+</section>
+<hr class="docutils" />
+<section id="install-the-java-extension-pack-in-vs-code">
+<h3>3. Install the Java Extension Pack in VS Code<a class="headerlink" href="#install-the-java-extension-pack-in-vs-code" title="Link to this heading">¶</a></h3>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Open VS Code.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Open the Extensions panel: <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">X</span></code>.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Search for <strong>“Extension Pack for Java”</strong> (publisher: <strong>Microsoft</strong>) and click <strong>Install</strong>.</p></li>
+</ul>
+<p>This one install pulls in everything you need:</p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Included Extension</p></th>
+<th class="head"><p>What It Does</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Language Support for Java(TM) by Red Hat</p></td>
+<td><p>Core language features — autocomplete, error checking, navigation</p></td>
+</tr>
+<tr class="row-odd"><td><p>Debugger for Java</p></td>
+<td><p>Lets you set breakpoints and step through code line by line</p></td>
+</tr>
+<tr class="row-even"><td><p>Test Runner for Java</p></td>
+<td><p>Runs JUnit tests (not needed often in this course, but included)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Maven for Java</p></td>
+<td><p>Build tool support (you won’t use this for class assignments)</p></td>
+</tr>
+<tr class="row-even"><td><p>Project Manager for Java</p></td>
+<td><p>Powers the “Run” ▷ button above <code class="docutils literal notranslate"><span class="pre">main()</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Visual Studio IntelliCode</p></td>
+<td><p>AI-assisted autocomplete suggestions — fine for suggestions, but remember the Academic Honesty Policy: complete AI-generated solutions are not allowed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Restart VS Code after installing (it will prompt you to).</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="verify-everything-works-hello-world">
+<h3>4. Verify Everything Works — Hello World<a class="headerlink" href="#verify-everything-works-hello-world" title="Link to this heading">¶</a></h3>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create a folder anywhere (Desktop is fine for this test) called <code class="docutils literal notranslate"><span class="pre">HelloTest</span></code>.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Open it in VS Code: <strong>File → Open Folder</strong> → select <code class="docutils literal notranslate"><span class="pre">HelloTest</span></code>.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create a new file named exactly <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> and paste in:</p></li>
+</ul>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hello, World&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Save the file (<code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">S</span></code>).</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> You should see a <strong>▷ Run</strong> link appear directly above <code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">static</span> <span class="pre">void</span> <span class="pre">main</span></code>. Click it, or press <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">F5</span></code>.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> A terminal panel opens at the bottom and prints <code class="docutils literal notranslate"><span class="pre">Hello,</span> <span class="pre">World</span></code>.</p></li>
+</ul>
+<p>If you don’t see the Run link, close and reopen the folder — the Java extension sometimes needs a moment to index a brand-new workspace.</p>
+<blockquote>
+<div><p>⚠️ <strong>File name must match class name.</strong> If your class is <code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">class</span> <span class="pre">WeightOnJupiter</span></code>, the file must be named <code class="docutils literal notranslate"><span class="pre">WeightOnJupiter.java</span></code> — not <code class="docutils literal notranslate"><span class="pre">Main.java</span></code>. This is a compile-time error in Java, not just a style suggestion.</p>
+</div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="organizing-your-coursework">
+<h3>5. Organizing Your Coursework<a class="headerlink" href="#organizing-your-coursework" title="Link to this heading">¶</a></h3>
+<p>Set this up once, at the start of the year.</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create one parent folder for the entire course — for example, on your Desktop or in Documents:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>AP-CSA-JAVA/
+├── Unit1-UsingObjectsAndMethods/
+│   ├── 1.2.1-Allowance/
+│   │   └── Main.java
+│   ├── 1.2.2-ScannerClass/
+│   │   └── Main.java
+│   ├── 1.3.1-WeightOnJupiter/
+│   │   └── Main.java
+│   ├── 1.7.2-Magic8Ball/
+│   │   └── Main.java
+│   ├── 1.10.1-MissionControl/
+│   │   └── Main.java
+│   └── FinalProject-ThemePark/
+│       ├── Main.java
+│       ├── Ride.java
+│       └── Guest.java
+├── Unit2-SelectionAndIteration/
+│   └── ...
+├── Unit3-ClassCreation/
+│   └── ...
+└── Unit4-DataCollections/
+    └── ...
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>One subfolder per unit, one subfolder per assignment, named with the assignment number so it sorts and matches the syllabus (<code class="docutils literal notranslate"><span class="pre">1.3.1-WeightOnJupiter</span></code>, not <code class="docutils literal notranslate"><span class="pre">weight</span></code> or <code class="docutils literal notranslate"><span class="pre">hw3</span></code>).</p></li>
+<li><p>Keep every file for one assignment — <code class="docutils literal notranslate"><span class="pre">Main.java</span></code>, any supporting classes, your Test Cases document — together in that assignment’s folder.</p></li>
+</ul>
+<blockquote>
+<div><p>⚠️ <strong>The one real gotcha: don’t open the whole <code class="docutils literal notranslate"><span class="pre">AP-CSA-JAVA</span></code> folder as your workspace.</strong> VS Code’s Java extension treats everything inside an open folder as one big project. Since almost every assignment uses <code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">class</span> <span class="pre">Main</span></code>, having a dozen <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> files under one open workspace will cause “duplicate class” errors that have nothing to do with your code.</p>
+<p><strong>Instead:</strong> each time you sit down to work on an assignment, use <strong>File → Open Folder</strong> and open <em>only that assignment’s folder</em> (e.g., just <code class="docutils literal notranslate"><span class="pre">1.3.1-WeightOnJupiter</span></code>, not <code class="docutils literal notranslate"><span class="pre">Unit1-UsingObjectsAndMethods</span></code> and not <code class="docutils literal notranslate"><span class="pre">AP-CSA-JAVA</span></code>). VS Code remembers your recent folders under <strong>File → Open Recent</strong>, so switching between assignments is one click, not a re-navigation every time.</p>
+</div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="recommended-settings-optional-but-worth-it">
+<h3>6. Recommended Settings (Optional but Worth It)<a class="headerlink" href="#recommended-settings-optional-but-worth-it" title="Link to this heading">¶</a></h3>
+<p>Open Settings with <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">,</span></code>, then search for and enable:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Files: Auto Save</strong> → set to <code class="docutils literal notranslate"><span class="pre">afterDelay</span></code> — stops losing work if you forget to save before running.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Editor: Format On Save</strong> → auto-cleans indentation to match the course’s style guidelines (4 spaces, brace placement) every time you save.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="common-first-day-problems">
+<h3>7. Common First-Day Problems<a class="headerlink" href="#common-first-day-problems" title="Link to this heading">¶</a></h3>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Problem</p></th>
+<th class="head"><p>Fix</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">java</span></code>/<code class="docutils literal notranslate"><span class="pre">javac</span></code> “not recognized” in terminal</p></td>
+<td><p>Restart the computer — PATH changes need a fresh session</p></td>
+</tr>
+<tr class="row-odd"><td><p>No “▷ Run” link above <code class="docutils literal notranslate"><span class="pre">main()</span></code></p></td>
+<td><p>Make sure the file is saved with a <code class="docutils literal notranslate"><span class="pre">.java</span></code> extension and the folder was opened with File → Open Folder (not just a loose file)</p></td>
+</tr>
+<tr class="row-even"><td><p>“Duplicate class Main” error</p></td>
+<td><p>You opened a parent folder containing more than one <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> — open just the single assignment folder instead (see §5)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Class name / filename mismatch error</p></td>
+<td><p>The <code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">class</span></code> name must exactly match the file name, including capitalization</p></td>
+</tr>
+<tr class="row-even"><td><p>Extension won’t install (school network)</p></td>
+<td><p>Some school networks block the VS Code Marketplace — ask your instructor about offline <code class="docutils literal notranslate"><span class="pre">.vsix</span></code> installation or a personal hotspot for this one-time setup</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
 </section>
 
         </article>
@@ -876,9 +1068,9 @@ While removed from the AP CSA exam, it reinforces Unit 3 class design skills.</p
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">AP Computer Science A — Pacing Guide 2025–26</a><ul>
+<li><a class="reference internal" href="#">AP Computer Science A — Pacing Guide 2026–27</a><ul>
 <li><a class="reference internal" href="#instructional-calendar-snapshot">Instructional Calendar Snapshot</a></li>
-<li><a class="reference internal" href="#course-overview-dates-need-to-be-revised">Course Overview – <mark>Dates need to be revised</mark></a></li>
+<li><a class="reference internal" href="#course-overview-dates-need-to-be-revised">Course Overview – Dates need to be revised</a></li>
 <li><a class="reference internal" href="#unit-1-using-objects-and-methods">UNIT 1 — Using Objects and Methods</a></li>
 <li><a class="reference internal" href="#unit-2-selection-and-iteration">UNIT 2 — Selection and Iteration</a></li>
 <li><a class="reference internal" href="#unit-3-class-creation">UNIT 3 — Class Creation</a></li>
@@ -887,6 +1079,16 @@ While removed from the AP CSA exam, it reinforces Unit 3 class design skills.</p
 <li><a class="reference internal" href="#final-project-white-tower">Final Project — White Tower</a></li>
 <li><a class="reference internal" href="#oracle-java-foundations-1z0-811-complete-topic-coverage-map">Oracle Java Foundations (1Z0-811) — Complete Topic Coverage Map</a></li>
 <li><a class="reference internal" href="#assessment-calendar">Assessment Calendar</a></li>
+<li><a class="reference internal" href="#getting-started-vs-code-for-ap-computer-science-a-windows-11">Getting Started: VS Code for AP Computer Science A (Windows 11)</a><ul>
+<li><a class="reference internal" href="#install-vs-code">1. Install VS Code</a></li>
+<li><a class="reference internal" href="#install-a-java-development-kit-jdk">2. Install a Java Development Kit (JDK)</a></li>
+<li><a class="reference internal" href="#install-the-java-extension-pack-in-vs-code">3. Install the Java Extension Pack in VS Code</a></li>
+<li><a class="reference internal" href="#verify-everything-works-hello-world">4. Verify Everything Works — Hello World</a></li>
+<li><a class="reference internal" href="#organizing-your-coursework">5. Organizing Your Coursework</a></li>
+<li><a class="reference internal" href="#recommended-settings-optional-but-worth-it">6. Recommended Settings (Optional but Worth It)</a></li>
+<li><a class="reference internal" href="#common-first-day-problems">7. Common First-Day Problems</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
