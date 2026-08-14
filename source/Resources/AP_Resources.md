@@ -31,7 +31,12 @@
 
 > \* Inheritance was removed from the 2025–26 AP CSA CED exam but is retained here for Oracle Java Foundations (1Z0-811) alignment and deeper OOP understanding.
 
-> **Key 2025–26 AP CED Changes:** 10 units consolidated into 4 · Inheritance (old Unit 9) removed from AP exam · File I/O with Scanner added (Unit 4) · Exam fully digital via Bluebook · 42 MCQ / 4 FRQ
+> **Key 2025–26 AP CED Changes:**
+>   10 units consolidated into 4
+>   Inheritance (old Unit 9) removed from AP exam
+>   File I/O with Scanner added (Unit 4)
+>   Exam fully digital via Bluebook · 42 MCQ / 4 FRQ
+> 
 
 ---
 
@@ -82,7 +87,8 @@
 ## INHERITANCE — Superclasses, Subclasses & Polymorphism
 **Oracle Required · AP Supplemental · Instructional Weeks 16–18 (Jan 13 – Jan 31)**
 
-> Inheritance is retained to satisfy Oracle Java Foundations (1Z0-811) requirements and provides valuable OOP depth. While removed from the AP CSA exam, it reinforces Unit 3 class design skills.
+> Inheritance is retained to satisfy Oracle Java Foundations (1Z0-811) requirements and provides valuable OOP depth.
+> While removed from the AP CSA exam, it reinforces Unit 3 class design skills.
 
 | Week | Dates | Topics | Oracle 1Z0-811 Alignment | Project |
 |------|-------|--------|--------------------------|:-------:|
