@@ -156,7 +156,7 @@ It is crucial that students consistently attend class. Most classes consist of h
 
 - [ ] **Handouts** will be placed in a makeup folder labeled with the student's name. It is the student's responsibility to check this folder when returning before consulting the instructor.
 
-- [ ] **Late work** submitted after the due date without prior notification will receive a maximum score of 3/5. Work more than one week late will receive a maximum of 1/5. Projects follow their own rubric timelines.
+- [ ] **Late work:**  Most work is done in class, so the late work policy is not applicable.  For any ***assigned homework*** assignment, you have 1 week after the given due date to turn it in.  Otherwise, you will receive a maximum of 50% for late work.  With regards to Projects, you will have daily progress checks that will count for your overall grade.  Failure to complete a daily progress check will lower your grade.
 
 ---
 
