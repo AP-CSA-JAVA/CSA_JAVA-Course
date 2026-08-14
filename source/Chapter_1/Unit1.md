@@ -79,7 +79,7 @@ The following are considered academic integrity violations in this course:
 
 **Late Work Policy**
 
-Late assignments are graded using the same rubric above with no grade penalty. Submit your best work regardless of when it is turned in.
+Most work is done in class, so the late work policy is not applicable.  For any ***assigned*** homework assignment, you have 1 week after the given due date to turn it in.  Otherwise, you will receive a maximum of 50% for late work.  With regards to Projects, you will have daily progress checks that will count for your overall grade.  Failure to complete a daily progress check will lower your grade.
 
 ---
 
