@@ -1048,8 +1048,9 @@ Place this at the top of the main Class file containing your program's main() me
 
 ```java
 /*=============================================================================
- |   Assignment:  Program #[n]:  [Assignment Title]
- |       Author:  [Your Name (Your E-mail Address)]
+ |   Project:  Program #[n]:  [Assignment Title]
+ |       Name:  [First, Last]
+ |    Partner:  [First, Last]
  |
  |       Course:  Computer Science A
  |   Instructor:  [title, first-initial of the given name, Surname (Ex. Dr. J. Smith) ] 
