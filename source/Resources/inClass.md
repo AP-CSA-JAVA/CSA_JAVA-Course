@@ -1,3 +1,4 @@
+# In Class Participation
 August 14, 2026
 
 #### Before today, how much programming experience have you had? (None · A little on my own · A class before this one · A lot)
