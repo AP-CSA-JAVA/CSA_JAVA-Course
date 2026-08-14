@@ -65,7 +65,10 @@ This course also prepares students to sit for the **Oracle Java Foundations Cert
 
 - [x] Students may work with a peer and discuss general problem-solving strategies, ideas, and algorithms. However, **all code must be your own**. Every line of code must originate from your own thinking.
 
-- [x] If you use external sources (websites, LLM/AI tools, friends), **cite them in your code comments** — indicate where you got help and whether any code sections came from that source. AI tools may be used for idea generation, debugging assistance, and understanding small parts of code — **not to generate complete solutions.**
+- [x] **AI & External Source Use**
+    - [ ] AI tools may be used for **idea generation, debugging assistance, and understanding small parts of code** — not to generate complete solutions.
+    - [ ] - If you use any external source (websites, LLM/AI tools, friends), **cite it in your code comments** — indicate where you got help and whether any code sections came from that source.
+    - [ ] - Submitting AI-generated code as your own work — whether a whole solution or an unattributed snippet — is an **academic integrity violation**. Violations receive **no credit** and are referred for disciplinary action in accordance with school policy.
 
 - [x] **Team/group assignments** must include every team member's name in the block header comment. All other assignments require individual submission — work cannot be a copy of a peer's submission. A submitted file bearing another student's name but not your own will be treated as cheating and subject to the district's plagiarism/cheating policy.
 
