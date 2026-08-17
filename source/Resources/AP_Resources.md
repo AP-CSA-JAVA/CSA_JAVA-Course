@@ -181,13 +181,15 @@ This guide gets your machine ready to write, run, and organize Java programs for
 ### 1. Install VS Code
 
 - [ ] Go to [code.visualstudio.com](https://code.visualstudio.com) and download the **Windows** installer (it detects Windows 11 automatically).
-- [ ] Run the installer. On the **"Select Additional Tasks"** screen, check these — they save you time later:
-  - **Add "Open with Code" action to Windows Explorer file context menu**
-  - **Add "Open with Code" action to Windows Explorer directory context menu**
-  - **Register Code as an editor for supported file types**
-  - **Add to PATH**
-- [ ] Finish the install and launch VS Code.
 
+- [ ] Run the installer. On the **"Select Additional Tasks"** screen, check these — they save you time later:
+  * **Add "Open with Code" action to Windows Explorer file context menu**
+  * **Add "Open with Code" action to Windows Explorer directory context menu**
+  * **Register Code as an editor for supported file types**
+  * **Add to PATH**
+> 🛡️ **Windows may show a blue "Windows protected your PC" screen** when you run the installer — this is normal for new installers, not a sign anything is wrong. Click **More info**, then **Run anyway**.
+
+- [ ] Finish the install and launch VS Code.
 > 📌 **Personal laptop vs. school laptop:** If you're using a CAMS-provided laptop, check with your instructor first — VS Code may already be installed, or installing new software may require permission.
 
 ---
@@ -197,12 +199,24 @@ This guide gets your machine ready to write, run, and organize Java programs for
 VS Code is just an editor — it doesn't compile or run Java on its own. You need a JDK installed separately.
 
 - [ ] Go to [adoptium.net](https://adoptium.net) (Eclipse Temurin — a free, widely-used JDK build).
-- [ ] Download the latest **LTS** release for Windows (x64), **.msi installer**. Do not install Java 8 — that's outdated; use the current LTS version.
-- [ ] Run the installer. On the **"Custom Setup"** screen, make sure these are all enabled (they may be off by default):
-  - **Add to PATH**
-  - **Set JAVA_HOME variable**
-  - **JavaSoft (Oracle) registry keys**
+
+- [ ] Adoptium doesn't auto-detect your system — you'll pick four things manually. Set them to:
+  * **Operating System:** Windows
+  * **Architecture:** x64
+  * **Package Type:** JDK
+  * **Version:** the current **LTS** release (the highest-numbered version marked *LTS* — do **not** pick Java 8, it's outdated)
+
+- [ ] Click the big **Latest Release** download button. This downloads the `.msi` installer.
+
+- [ ] Run the installer. You may see the same **"Windows protected your PC"** SmartScreen warning as before — click **More info → Run anyway**.
+
+- [ ] On the **"Custom Setup"** screen, make sure these are all enabled (they may be off by default):
+  * **Add to PATH**
+  * **Set JAVA_HOME variable**
+  * **JavaSoft (Oracle) registry keys**
+
 - [ ] Finish the install.
+
 - [ ] Confirm it worked: open **Command Prompt** (search "cmd" in the Start menu) and type:
 
 ```
@@ -217,31 +231,36 @@ Both commands should print a version number. If either says "not recognized," re
 ### 3. Install the Java Extension Pack in VS Code
 
 - [ ] Open VS Code.
+
 - [ ] Open the Extensions panel: `Ctrl + Shift + X`.
+
 - [ ] Search for **"Extension Pack for Java"** (publisher: **Microsoft**) and click **Install**.
 
 This one install pulls in everything you need:
 
-| Included Extension | What It Does |
-| --- | --- |
-| Language Support for Java(TM) by Red Hat | Core language features — autocomplete, error checking, navigation |
-| Debugger for Java | Lets you set breakpoints and step through code line by line |
-| Test Runner for Java | Runs JUnit tests (not needed often in this course, but included) |
-| Maven for Java | Build tool support (you won't use this for class assignments) |
-| Project Manager for Java | Powers the "Run" ▷ button above `main()` |
-| Visual Studio IntelliCode | AI-assisted autocomplete suggestions — fine for suggestions, but remember the Academic Honesty Policy: complete AI-generated solutions are not allowed |
+| Included Extension                       | What It Does                                                                                                                                           |
+| ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Language Support for Java(TM) by Red Hat  | Core language features — autocomplete, error checking, navigation                                                                                      |
+| Debugger for Java                         | Lets you set breakpoints and step through code line by line                                                                                            |
+| Test Runner for Java                      | Runs JUnit tests (not needed often in this course, but included)                                                                                       |
+| Maven for Java                            | Build tool support (you won't use this for class assignments)                                                                                          |
+| Project Manager for Java                  | Powers the "Run" ▷ button above `main()`                                                                                                                |
+| Visual Studio IntelliCode                 | AI-assisted autocomplete suggestions — fine for suggestions, but remember the Academic Honesty Policy: complete AI-generated solutions are not allowed |
 
 - [ ] Restart VS Code after installing (it will prompt you to).
+> ⚠️ **If VS Code still doesn't recognize Java after restarting** (no error, but also no Run link, or a "No Java Runtime" message): open the Command Palette (`Ctrl+Shift+P`), type **Java: Configure Java Runtime**, and confirm your installed JDK shows up and is selected. This is a common gap even when `JAVA_HOME` was set correctly during install — VS Code's extension sometimes needs a manual nudge to find it.
 
 ---
 
 ### 4. Verify Everything Works — Hello World
 
 - [ ] Create a folder anywhere (Desktop is fine for this test) called `HelloTest`.
+
 - [ ] Open it in VS Code: **File → Open Folder** → select `HelloTest`.
+
 - [ ] Create a new file named exactly `Main.java` and paste in:
 
-```java
+```
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello, World");
@@ -250,11 +269,12 @@ public class Main {
 ```
 
 - [ ] Save the file (`Ctrl + S`).
+
 - [ ] You should see a **▷ Run** link appear directly above `public static void main`. Click it, or press `Ctrl + F5`.
+
 - [ ] A terminal panel opens at the bottom and prints `Hello, World`.
 
 If you don't see the Run link, close and reopen the folder — the Java extension sometimes needs a moment to index a brand-new workspace.
-
 > ⚠️ **File name must match class name.** If your class is `public class WeightOnJupiter`, the file must be named `WeightOnJupiter.java` — not `Main.java`. This is a compile-time error in Java, not just a style suggestion.
 
 ---
@@ -291,8 +311,8 @@ AP-CSA-JAVA/
 ```
 
 - One subfolder per unit, one subfolder per assignment, named with the assignment number so it sorts and matches the syllabus (`1.3.1-WeightOnJupiter`, not `weight` or `hw3`).
-- Keep every file for one assignment — `Main.java`, any supporting classes, your Test Cases document — together in that assignment's folder.
 
+- Keep every file for one assignment — `Main.java`, any supporting classes, your Test Cases document — together in that assignment's folder.
 > ⚠️ **The one real gotcha: don't open the whole `AP-CSA-JAVA` folder as your workspace.** VS Code's Java extension treats everything inside an open folder as one big project. Since almost every assignment uses `public class Main`, having a dozen `Main.java` files under one open workspace will cause "duplicate class" errors that have nothing to do with your code.
 >
 > **Instead:** each time you sit down to work on an assignment, use **File → Open Folder** and open *only that assignment's folder* (e.g., just `1.3.1-WeightOnJupiter`, not `Unit1-UsingObjectsAndMethods` and not `AP-CSA-JAVA`). VS Code remembers your recent folders under **File → Open Recent**, so switching between assignments is one click, not a re-navigation every time.
@@ -304,16 +324,19 @@ AP-CSA-JAVA/
 Open Settings with `Ctrl + ,`, then search for and enable:
 
 - [ ] **Files: Auto Save** → set to `afterDelay` — stops losing work if you forget to save before running.
+
 - [ ] **Editor: Format On Save** → auto-cleans indentation to match the course's style guidelines (4 spaces, brace placement) every time you save.
 
 ---
 
 ### 7. Common First-Day Problems
 
-| Problem | Fix |
-| --- | --- |
-| `java`/`javac` "not recognized" in terminal | Restart the computer — PATH changes need a fresh session |
-| No "▷ Run" link above `main()` | Make sure the file is saved with a `.java` extension and the folder was opened with File → Open Folder (not just a loose file) |
-| "Duplicate class Main" error | You opened a parent folder containing more than one `Main.java` — open just the single assignment folder instead (see §5) |
-| Class name / filename mismatch error | The `public class` name must exactly match the file name, including capitalization |
-| Extension won't install (school network) | Some school networks block the VS Code Marketplace — ask your instructor about offline `.vsix` installation or a personal hotspot for this one-time setup |
+| Problem                                     | Fix                                                                                                                                                          |
+| -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| "Windows protected your PC" warning on install | This is normal SmartScreen behavior for new installers, not a sign of a problem — click **More info → Run anyway**                                       |
+| `java`/`javac` "not recognized" in terminal | Restart the computer — PATH changes need a fresh session                                                                                                    |
+| No "▷ Run" link above `main()`              | Make sure the file is saved with a `.java` extension and the folder was opened with File → Open Folder (not just a loose file)                              |
+| Extension installed but Java still not detected | Open the Command Palette (`Ctrl+Shift+P`) → **Java: Configure Java Runtime** and confirm your JDK is selected                                            |
+| "Duplicate class Main" error                | You opened a parent folder containing more than one `Main.java` — open just the single assignment folder instead (see §5)                                  |
+| Class name / filename mismatch error        | The `public class` name must exactly match the file name, including capitalization                                                                          |
+| Extension won't install (school network)    | Some school networks block the VS Code Marketplace — ask your instructor about offline `.vsix` installation or a personal hotspot for this one-time setup   |
