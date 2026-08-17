@@ -2,7 +2,8 @@
 August 17, 2026
 
 
-1. [Unit1_Lessons.pptx](https://github.com/user-attachments/files/31147962/Unit1_Lessons.pptx) : Lessons 1.1, 1.1a, 1.2, and 1.3
+1. [VS Code Install Instructions](https://ap-csa-java.github.io/CSA_JAVA-Course/Resources/AP_Resources.html#getting-started-vs-code-for-ap-computer-science-a-windows-11)
+2. [Unit1_Lessons.pptx](https://github.com/user-attachments/files/31147962/Unit1_Lessons.pptx) : Lessons 1.1, 1.1a, 1.2, and 1.3
 3. Exit Ticket - Paper
 
 ---
