@@ -835,6 +835,11 @@ While removed from the AP CSA exam, it reinforces Unit 3 class design skills.</p
 <li><p><strong>Add to PATH</strong></p></li>
 </ul>
 </li>
+</ul>
+<blockquote>
+<div><p>🛡️ <strong>Windows may show a blue “Windows protected your PC” screen</strong> when you run the installer — this is normal for new installers, not a sign anything is wrong. Click <strong>More info</strong>, then <strong>Run anyway</strong>.</p>
+</div></blockquote>
+<ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Finish the install and launch VS Code.</p></li>
 </ul>
 <blockquote>
@@ -847,8 +852,17 @@ While removed from the AP CSA exam, it reinforces Unit 3 class design skills.</p
 <p>VS Code is just an editor — it doesn’t compile or run Java on its own. You need a JDK installed separately.</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Go to <a class="reference external" href="https://adoptium.net">adoptium.net</a> (Eclipse Temurin — a free, widely-used JDK build).</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Download the latest <strong>LTS</strong> release for Windows (x64), <strong>.msi installer</strong>. Do not install Java 8 — that’s outdated; use the current LTS version.</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Run the installer. On the <strong>“Custom Setup”</strong> screen, make sure these are all enabled (they may be off by default):</p>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Adoptium doesn’t auto-detect your system — you’ll pick four things manually. Set them to:</p>
+<ul>
+<li><p><strong>Operating System:</strong> Windows</p></li>
+<li><p><strong>Architecture:</strong> x64</p></li>
+<li><p><strong>Package Type:</strong> JDK</p></li>
+<li><p><strong>Version:</strong> the current <strong>LTS</strong> release (the highest-numbered version marked <em>LTS</em> — do <strong>not</strong> pick Java 8, it’s outdated)</p></li>
+</ul>
+</li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Click the big <strong>Latest Release</strong> download button. This downloads the <code class="docutils literal notranslate"><span class="pre">.msi</span></code> installer.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Run the installer. You may see the same <strong>“Windows protected your PC”</strong> SmartScreen warning as before — click <strong>More info → Run anyway</strong>.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> On the <strong>“Custom Setup”</strong> screen, make sure these are all enabled (they may be off by default):</p>
 <ul>
 <li><p><strong>Add to PATH</strong></p></li>
 <li><p><strong>Set JAVA_HOME variable</strong></p></li>
@@ -905,6 +919,9 @@ While removed from the AP CSA exam, it reinforces Unit 3 class design skills.</p
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Restart VS Code after installing (it will prompt you to).</p></li>
 </ul>
+<blockquote>
+<div><p>⚠️ <strong>If VS Code still doesn’t recognize Java after restarting</strong> (no error, but also no Run link, or a “No Java Runtime” message): open the Command Palette (<code class="docutils literal notranslate"><span class="pre">Ctrl+Shift+P</span></code>), type <strong>Java: Configure Java Runtime</strong>, and confirm your installed JDK shows up and is selected. This is a common gap even when <code class="docutils literal notranslate"><span class="pre">JAVA_HOME</span></code> was set correctly during install — VS Code’s extension sometimes needs a manual nudge to find it.</p>
+</div></blockquote>
 </section>
 <hr class="docutils" />
 <section id="verify-everything-works-hello-world">
@@ -914,10 +931,10 @@ While removed from the AP CSA exam, it reinforces Unit 3 class design skills.</p
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Open it in VS Code: <strong>File → Open Folder</strong> → select <code class="docutils literal notranslate"><span class="pre">HelloTest</span></code>.</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create a new file named exactly <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> and paste in:</p></li>
 </ul>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Hello, World"</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="k">class</span><span class="w"> </span><span class="nc">Main</span> <span class="p">{</span>
+    <span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">"Hello, World"</span><span class="p">);</span>
+    <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -991,11 +1008,17 @@ While removed from the AP CSA exam, it reinforces Unit 3 class design skills.</p
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">java</span></code>/<code class="docutils literal notranslate"><span class="pre">javac</span></code> “not recognized” in terminal</p></td>
+<tr class="row-even"><td><p>“Windows protected your PC” warning on install</p></td>
+<td><p>This is normal SmartScreen behavior for new installers, not a sign of a problem — click <strong>More info → Run anyway</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">java</span></code>/<code class="docutils literal notranslate"><span class="pre">javac</span></code> “not recognized” in terminal</p></td>
 <td><p>Restart the computer — PATH changes need a fresh session</p></td>
 </tr>
-<tr class="row-odd"><td><p>No “▷ Run” link above <code class="docutils literal notranslate"><span class="pre">main()</span></code></p></td>
+<tr class="row-even"><td><p>No “▷ Run” link above <code class="docutils literal notranslate"><span class="pre">main()</span></code></p></td>
 <td><p>Make sure the file is saved with a <code class="docutils literal notranslate"><span class="pre">.java</span></code> extension and the folder was opened with File → Open Folder (not just a loose file)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Extension installed but Java still not detected</p></td>
+<td><p>Open the Command Palette (<code class="docutils literal notranslate"><span class="pre">Ctrl+Shift+P</span></code>) → <strong>Java: Configure Java Runtime</strong> and confirm your JDK is selected</p></td>
 </tr>
 <tr class="row-even"><td><p>“Duplicate class Main” error</p></td>
 <td><p>You opened a parent folder containing more than one <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> — open just the single assignment folder instead (see §5)</p></td>
