@@ -1,4 +1,12 @@
 # In Class Participation
+August 17, 2026
+
+
+1. Unit 1: Lessons 1.1, 1.1a, 1.2, and 1.3
+2. Exit Ticket
+
+---
+
 August 14, 2026
 
 
