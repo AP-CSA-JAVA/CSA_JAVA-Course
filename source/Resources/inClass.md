@@ -2,8 +2,8 @@
 August 17, 2026
 
 
-1. Unit 1: Lessons 1.1, 1.1a, 1.2, and 1.3
-2. Exit Ticket
+1. [Unit1_Lessons.pptx](https://github.com/user-attachments/files/31147962/Unit1_Lessons.pptx) : Lessons 1.1, 1.1a, 1.2, and 1.3
+3. Exit Ticket - Paper
 
 ---
 
