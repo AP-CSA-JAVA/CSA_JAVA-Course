@@ -411,19 +411,19 @@
 
 <span class="w">    </span><span class="c1">// Method to display student information</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">displayInfo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Name: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="p">);</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Age: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">age</span><span class="p">);</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Student ID: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">studentId</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Name: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Age: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">age</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Student ID: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">studentId</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 
 <span class="w">    </span><span class="c1">// Main method to test the Student class</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Student</span><span class="w"> </span><span class="n">student1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Student</span><span class="p">(</span><span class="s">&quot;Ted Lasso&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">45</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;12345&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Initial Information:&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Student</span><span class="w"> </span><span class="n">student1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Student</span><span class="p">(</span><span class="s">"Ted Lasso"</span><span class="p">,</span><span class="w"> </span><span class="mi">45</span><span class="p">,</span><span class="w"> </span><span class="s">"12345"</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Initial Information:"</span><span class="p">);</span>
 <span class="w">        </span><span class="n">student1</span><span class="p">.</span><span class="na">displayInfo</span><span class="p">();</span>
 
-<span class="w">        </span><span class="n">student1</span><span class="p">.</span><span class="na">setName</span><span class="p">(</span><span class="s">&quot;Roy Kent&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\nUpdated Information:&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">student1</span><span class="p">.</span><span class="na">setName</span><span class="p">(</span><span class="s">"Roy Kent"</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"\nUpdated Information:"</span><span class="p">);</span>
 <span class="w">        </span><span class="n">student1</span><span class="p">.</span><span class="na">displayInfo</span><span class="p">();</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
@@ -479,11 +479,11 @@
 
 <span class="w">    </span><span class="nd">@Override</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Car: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; (&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">year</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;)&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">"Car: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" ("</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">year</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">")"</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Car</span><span class="w"> </span><span class="n">car1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Car</span><span class="p">(</span><span class="s">&quot;Toyota&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Camry&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2022</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Car</span><span class="w"> </span><span class="n">car1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Car</span><span class="p">(</span><span class="s">"Toyota"</span><span class="p">,</span><span class="w"> </span><span class="s">"Camry"</span><span class="p">,</span><span class="w"> </span><span class="mi">2022</span><span class="p">);</span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">car1</span><span class="p">);</span><span class="w">  </span><span class="c1">// Calls toString() automatically</span>
 <span class="w">        </span><span class="c1">// Output: Car: Toyota Camry (2022)</span>
 <span class="w">    </span><span class="p">}</span>
@@ -516,22 +516,22 @@
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Cake</span><span class="p">()</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">        </span><span class="n">tiers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;   ,,,\n   |||\n(~~~~~~~)\n(       )\n(~~~~~~~)\n&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"   ,,,\n   |||\n(~~~~~~~)\n(       )\n(~~~~~~~)\n"</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Cake</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">        </span><span class="n">tiers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="p">;</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;      ,,,\n      |||\n  (**********)\n  (*        *)\n  (*        *)&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;(**************)\n(*            *)\n(*            *)\n(**************)\n&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"      ,,,\n      |||\n  (**********)\n  (*        *)\n  (*        *)"</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"(**************)\n(*            *)\n(*            *)\n(**************)\n"</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Cake</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">t</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">        </span><span class="n">tiers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">t</span><span class="p">;</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;        ,,,\n        |||\n    (**********)\n    (*        *)\n    (*        *)&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;  (**************)\n  (*            *)\n  (*            *)&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;(******************)\n(*                *)\n(*                *)\n(******************)\n&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"        ,,,\n        |||\n    (**********)\n    (*        *)\n    (*        *)"</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"  (**************)\n  (*            *)\n  (*            *)"</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"(******************)\n(*                *)\n(*                *)\n(******************)\n"</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -541,7 +541,7 @@
 <span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">// Declare a double variable named &#39;t&#39; and assign 3.0</span>
+<span class="w">        </span><span class="c1">// Declare a double variable named 't' and assign 3.0</span>
 
 
 <span class="w">        </span><span class="c1">// Create myCake using new Cake(t)</span>
@@ -632,7 +632,7 @@
 <span class="w">    </span><span class="c1">// DO NOT modify this method</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; is a &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">breed</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" is a "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">breed</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -655,7 +655,7 @@
 <span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Dog</span><span class="w"> </span><span class="n">golden</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">(</span><span class="s">&quot;Golden Retriever&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Sammy&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Dog</span><span class="w"> </span><span class="n">golden</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">(</span><span class="s">"Golden Retriever"</span><span class="p">,</span><span class="w"> </span><span class="s">"Sammy"</span><span class="p">);</span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">golden</span><span class="p">);</span>
 
 <span class="w">        </span><span class="c1">// Instantiate 3 pizzas and print them out:</span>
@@ -722,7 +722,7 @@
 <p>Also include a method:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">pedal</span><span class="p">()</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Pedaling to accelerate.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Pedaling to accelerate."</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -781,7 +781,7 @@ Pedaling to accelerate.
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Constructor that takes all three: <code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">age</span></code>, <code class="docutils literal notranslate"><span class="pre">gpa</span></code></p></li>
 </ul>
 <p>Write a <code class="docutils literal notranslate"><span class="pre">toString()</span></code> method that returns:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Student</span><span class="p">{</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">gpa</span><span class="o">=</span><span class="mf">3.5</span><span class="p">}</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Student</span><span class="p">{</span><span class="n">name</span><span class="o">=</span><span class="s1">'Alice'</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">gpa</span><span class="o">=</span><span class="mf">3.5</span><span class="p">}</span>
 </pre></div>
 </div>
 <p><strong>Main.java</strong></p>
@@ -790,10 +790,10 @@ Pedaling to accelerate.
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Print each object using <code class="docutils literal notranslate"><span class="pre">System.out.println()</span></code></p></li>
 </ul>
 <p><strong>Expected Output</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Student</span><span class="p">{</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Unknown&#39;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">gpa</span><span class="o">=</span><span class="mf">0.0</span><span class="p">}</span>
-<span class="n">Student</span><span class="p">{</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">gpa</span><span class="o">=</span><span class="mf">0.0</span><span class="p">}</span>
-<span class="n">Student</span><span class="p">{</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">17</span><span class="p">,</span> <span class="n">gpa</span><span class="o">=</span><span class="mf">0.0</span><span class="p">}</span>
-<span class="n">Student</span><span class="p">{</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Charlie&#39;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span> <span class="n">gpa</span><span class="o">=</span><span class="mf">3.7</span><span class="p">}</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Student</span><span class="p">{</span><span class="n">name</span><span class="o">=</span><span class="s1">'Unknown'</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">gpa</span><span class="o">=</span><span class="mf">0.0</span><span class="p">}</span>
+<span class="n">Student</span><span class="p">{</span><span class="n">name</span><span class="o">=</span><span class="s1">'Alice'</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">gpa</span><span class="o">=</span><span class="mf">0.0</span><span class="p">}</span>
+<span class="n">Student</span><span class="p">{</span><span class="n">name</span><span class="o">=</span><span class="s1">'Bob'</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">17</span><span class="p">,</span> <span class="n">gpa</span><span class="o">=</span><span class="mf">0.0</span><span class="p">}</span>
+<span class="n">Student</span><span class="p">{</span><span class="n">name</span><span class="o">=</span><span class="s1">'Charlie'</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span> <span class="n">gpa</span><span class="o">=</span><span class="mf">3.7</span><span class="p">}</span>
 </pre></div>
 </div>
 <blockquote>
@@ -822,17 +822,17 @@ Pedaling to accelerate.
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">deposit</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">amount</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">amount</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="n">balance</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">amount</span><span class="p">;</span>
-<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Deposit successful. New balance: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">balance</span><span class="p">);</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Deposit successful. New balance: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">balance</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Invalid deposit amount.&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Invalid deposit amount."</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">balance</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 
 <span class="w">    </span><span class="c1">// Void method: displays account info</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">displayInfo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Account Number: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">accountNumber</span><span class="p">);</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Balance: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">balance</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Account Number: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">accountNumber</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Balance: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">balance</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -953,7 +953,7 @@ Pedaling to accelerate.
 </table>
 </div>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ScopeExample</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">instanceVar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;instance&quot;</span><span class="p">;</span><span class="w">      </span><span class="c1">// instance variable</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">instanceVar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"instance"</span><span class="p">;</span><span class="w">      </span><span class="c1">// instance variable</span>
 <span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">staticVar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w">            </span><span class="c1">// static variable</span>
 
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">exampleMethod</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -1022,12 +1022,12 @@ Pedaling to accelerate.
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
 
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w">  </span><span class="c1">// &quot;this.x&quot; is the instance variable; &quot;x&quot; is the parameter</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w">  </span><span class="c1">// "this.x" is the instance variable; "x" is the parameter</span>
 <span class="w">    </span><span class="p">}</span>
 
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">Main</span><span class="w"> </span><span class="n">numObj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Main</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;The instantiated value of x is &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">numObj</span><span class="p">.</span><span class="na">x</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The instantiated value of x is "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">numObj</span><span class="p">.</span><span class="na">x</span><span class="p">);</span>
 <span class="w">        </span><span class="c1">// Output: The instantiated value of x is 5</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
@@ -1114,7 +1114,7 @@ The <strong>cleanup block</strong>. Runs <em>regardless</em> of whether an excep
 <hr class="docutils" />
 <p><strong><code class="docutils literal notranslate"><span class="pre">throw</span></code></strong>
 A <strong>statement</strong> that manually launches an exception object. Must be followed by a <code class="docutils literal notranslate"><span class="pre">Throwable</span></code> instance:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&quot;Invalid input&quot;</span><span class="p">);</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">"Invalid input"</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Control immediately leaves the current method and unwinds the call stack looking for a handler.</p>
@@ -1182,7 +1182,7 @@ finally │ finally block            → always runs
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>try     │ int x = 10 / 0;                        → throws ArithmeticException
 skip    │ System.out.println(x);                 → skipped
 catch   │ catch (ArithmeticException e)           → matches!
-catch   │ System.out.println(&quot;caught: &quot; + e...); → runs
+catch   │ System.out.println("caught: " + e...); → runs
 finally │ finally block                           → always runs
 </pre></div>
 </div>
@@ -1200,7 +1200,7 @@ finally   │ finally block                   → still runs first
 <hr class="docutils" />
 <section id="scenario-4-multiple-catch-blocks-order-matters">
 <h3>Scenario 4 — Multiple catch blocks (order matters) ✅<a class="headerlink" href="#scenario-4-multiple-catch-blocks-order-matters" title="Link to this heading">¶</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>try     │ throw new FileNotFoundException(&quot;bad path&quot;);
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>try     │ throw new FileNotFoundException("bad path");
 check   │ catch (IOException e)    → FileNotFoundException IS-A IOException → matches
 skip    │ catch (Exception e)      → never reached
 finally │ finally block            → always runs
@@ -1223,9 +1223,9 @@ return  │ method returns 42  (unless finally has its own return)
 <hr class="docutils" />
 <section id="scenario-6-throw-inside-finally">
 <h3>Scenario 6 — <code class="docutils literal notranslate"><span class="pre">throw</span></code> inside <code class="docutils literal notranslate"><span class="pre">finally</span></code> 🚫<a class="headerlink" href="#scenario-6-throw-inside-finally" title="Link to this heading">¶</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>try       │ throw new RuntimeException(&quot;original&quot;);
-finally   │ throw new IllegalStateException(&quot;new!&quot;);
-⚠ lost    │ &quot;original&quot; exception is silently discarded
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>try       │ throw new RuntimeException("original");
+finally   │ throw new IllegalStateException("new!");
+⚠ lost    │ "original" exception is silently discarded
 caller    │ only sees IllegalStateException
 </pre></div>
 </div>
@@ -1324,9 +1324,9 @@ caller    │ only sees IllegalStateException
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ArithmeticException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Error: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Error: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
 <span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;This always runs.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"This always runs."</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -1335,16 +1335,16 @@ caller    │ only sees IllegalStateException
 <span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
 <span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="na">length</span><span class="p">());</span>
 <span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">NullPointerException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Null pointer: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Null pointer: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
 <span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;General error: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"General error: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p><strong>Throwing exceptions:</strong></p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setAge</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">age</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">150</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&quot;Invalid age: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">age</span><span class="p">);</span>
+<span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">"Invalid age: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">age</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
 <span class="p">}</span>
@@ -1622,7 +1622,7 @@ caller    │ only sees IllegalStateException
 <span class="cm"> |   Instructor:  [Instructor Name]</span>
 <span class="cm"> |     Due Date:  [Due Date and Time]</span>
 <span class="cm"> |</span>
-<span class="cm"> |  Description:  [Describe the program&#39;s goal, IN DETAIL.]</span>
+<span class="cm"> |  Description:  [Describe the program's goal, IN DETAIL.]</span>
 <span class="cm"> |</span>
 <span class="cm"> |     Language:  Java</span>
 <span class="cm"> |</span>

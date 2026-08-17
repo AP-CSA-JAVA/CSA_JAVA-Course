@@ -317,7 +317,7 @@
 The <code class="docutils literal notranslate"><span class="pre">.class</span></code> bytecode is platform-neutral. The JVM is platform-specific (there is a different JVM for Windows, Mac, Linux). The JVM is what makes Java portable, not the source code.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// HelloWorld.java compiles to HelloWorld.class (same on ALL platforms)</span>
 <span class="c1">// The JVM on Windows reads that .class file differently than the JVM on Linux</span>
-<span class="c1">// BUT the bytecode itself never changes — that&#39;s the portability</span>
+<span class="c1">// BUT the bytecode itself never changes — that's the portability</span>
 </pre></div>
 </div>
 <p><strong>2. JRE contains the JVM — the JDK contains the JRE</strong></p>
@@ -335,9 +335,9 @@ The exam tests: “Does Java allow direct memory management (like C++ pointers)?
 <div><p><strong>No.</strong> Memory is managed entirely by the JVM’s garbage collector. Programmers cannot access memory addresses directly.</p>
 </div></blockquote>
 <p><strong>4. The String Pool lives in JVM memory</strong></p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;hello&quot;</span><span class="p">;</span><span class="w">           </span><span class="c1">// JVM checks pool → creates 1 object in pool</span>
-<span class="n">String</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;hello&quot;</span><span class="p">;</span><span class="w">           </span><span class="c1">// JVM finds &quot;hello&quot; in pool → NO new object created</span>
-<span class="n">String</span><span class="w"> </span><span class="n">s3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="s">&quot;hello&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Forces NEW object in heap (bypasses pool)</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"hello"</span><span class="p">;</span><span class="w">           </span><span class="c1">// JVM checks pool → creates 1 object in pool</span>
+<span class="n">String</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"hello"</span><span class="p">;</span><span class="w">           </span><span class="c1">// JVM finds "hello" in pool → NO new object created</span>
+<span class="n">String</span><span class="w"> </span><span class="n">s3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="s">"hello"</span><span class="p">);</span><span class="w"> </span><span class="c1">// Forces NEW object in heap (bypasses pool)</span>
 
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">s2</span><span class="p">);</span><span class="w">  </span><span class="c1">// true  (same pool reference)</span>
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">s3</span><span class="p">);</span><span class="w">  </span><span class="c1">// false (s3 is a different heap object)</span>
@@ -366,7 +366,7 @@ HelloWorld.class  ← bytecode, not native code
    Can you run HelloWorld.class on a Mac?
 
 A: Yes — IF a JRE (or JDK) is installed on the Mac. The .class bytecode is
-   platform-neutral. The Mac&#39;s JVM translates it to Mac native code at runtime.
+   platform-neutral. The Mac's JVM translates it to Mac native code at runtime.
 </pre></div>
 </div>
 </section>
@@ -429,7 +429,7 @@ A: Yes — IF a JRE (or JDK) is installed on the Mac. The .class bytecode is
 
 <span class="w">    </span><span class="c1">// Delegates to full constructor — avoids duplicating logic</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Rectangle</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">this</span><span class="p">(</span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;black&quot;</span><span class="p">);</span><span class="w">   </span><span class="c1">// ← this() calls another constructor</span>
+<span class="w">        </span><span class="k">this</span><span class="p">(</span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="s">"black"</span><span class="p">);</span><span class="w">   </span><span class="c1">// ← this() calls another constructor</span>
 <span class="w">    </span><span class="p">}</span>
 
 <span class="w">    </span><span class="c1">// Single-arg delegates too</span>
@@ -442,7 +442,7 @@ A: Yes — IF a JRE (or JDK) is installed on the Mac. The .class bytecode is
 <blockquote>
 <div><p>⚠️ <strong>Exam Trap #1:</strong> <code class="docutils literal notranslate"><span class="pre">this()</span></code> must be the <strong>first statement</strong> in a constructor. The following will NOT compile:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="nf">Rectangle</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Creating square&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// ← COMPILE ERROR — this() must be first</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Creating square"</span><span class="p">);</span><span class="w"> </span><span class="c1">// ← COMPILE ERROR — this() must be first</span>
 <span class="w">    </span><span class="k">this</span><span class="p">(</span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
@@ -451,7 +451,7 @@ A: Yes — IF a JRE (or JDK) is installed on the Mac. The .class bytecode is
 <blockquote>
 <div><p>⚠️ <strong>Exam Trap #2:</strong> <code class="docutils literal notranslate"><span class="pre">this()</span></code> cannot be used in a regular method — ONLY in constructors.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">reset</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">this</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;black&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// ← COMPILE ERROR — not a constructor</span>
+<span class="w">    </span><span class="k">this</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s">"black"</span><span class="p">);</span><span class="w">  </span><span class="c1">// ← COMPILE ERROR — not a constructor</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -547,7 +547,7 @@ A: Yes — IF a JRE (or JDK) is installed on the Mac. The .class bytecode is
 
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">withdraw</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">amount</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">amount</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">amount</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">balance</span><span class="p">)</span><span class="w"> </span><span class="n">balance</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">amount</span><span class="p">;</span>
-<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Insufficient funds&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Insufficient funds"</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 
@@ -577,7 +577,7 @@ A: Yes — IF a JRE (or JDK) is installed on the Mac. The .class bytecode is
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getName</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">speak</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;...&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">"..."</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 
@@ -592,16 +592,16 @@ A: Yes — IF a JRE (or JDK) is installed on the Mac. The .class bytecode is
 
 <span class="w">    </span><span class="nd">@Override</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">speak</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Woof!&quot;</span><span class="p">;</span><span class="w">        </span><span class="c1">// ← overrides Animal&#39;s speak()</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">"Woof!"</span><span class="p">;</span><span class="w">        </span><span class="c1">// ← overrides Animal's speak()</span>
 <span class="w">    </span><span class="p">}</span>
 
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getBreed</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">breed</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 <span class="p">}</span>
 
 <span class="c1">// Usage</span>
-<span class="n">Animal</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">(</span><span class="s">&quot;Rex&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Lab&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// polymorphism — Animal reference, Dog object</span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="na">speak</span><span class="p">());</span><span class="w">     </span><span class="c1">// &quot;Woof!&quot; — Dog&#39;s version called (dynamic dispatch)</span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span><span class="w">   </span><span class="c1">// &quot;Rex&quot; — inherited from Animal</span>
+<span class="n">Animal</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">(</span><span class="s">"Rex"</span><span class="p">,</span><span class="w"> </span><span class="s">"Lab"</span><span class="p">);</span><span class="w">  </span><span class="c1">// polymorphism — Animal reference, Dog object</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="na">speak</span><span class="p">());</span><span class="w">     </span><span class="c1">// "Woof!" — Dog's version called (dynamic dispatch)</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span><span class="w">   </span><span class="c1">// "Rex" — inherited from Animal</span>
 </pre></div>
 </div>
 <blockquote>
@@ -615,13 +615,13 @@ A: Yes — IF a JRE (or JDK) is installed on the Mac. The .class bytecode is
 <div><p>“One interface, many forms — the correct method is chosen at runtime.”</p>
 </div></blockquote>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Animal</span><span class="o">[]</span><span class="w"> </span><span class="n">zoo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">(</span><span class="s">&quot;Rex&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Lab&quot;</span><span class="p">),</span>
-<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">Cat</span><span class="p">(</span><span class="s">&quot;Whiskers&quot;</span><span class="p">),</span>
-<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">Animal</span><span class="p">(</span><span class="s">&quot;Generic&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">(</span><span class="s">"Rex"</span><span class="p">,</span><span class="w"> </span><span class="s">"Lab"</span><span class="p">),</span>
+<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">Cat</span><span class="p">(</span><span class="s">"Whiskers"</span><span class="p">),</span>
+<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">Animal</span><span class="p">(</span><span class="s">"Generic"</span><span class="p">)</span>
 <span class="p">};</span>
 
 <span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Animal</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">zoo</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; says: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="na">speak</span><span class="p">());</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" says: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="na">speak</span><span class="p">());</span>
 <span class="w">    </span><span class="c1">// Output depends on the ACTUAL type at runtime, not the declared type</span>
 <span class="p">}</span>
 <span class="c1">// Rex says: Woof!</span>
@@ -630,12 +630,12 @@ A: Yes — IF a JRE (or JDK) is installed on the Mac. The .class bytecode is
 </pre></div>
 </div>
 <p><strong>Compile-time vs Runtime type:</strong></p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Animal</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">(</span><span class="s">&quot;Rex&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Lab&quot;</span><span class="p">);</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Animal</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">(</span><span class="s">"Rex"</span><span class="p">,</span><span class="w"> </span><span class="s">"Lab"</span><span class="p">);</span>
 <span class="c1">// Compile-time type: Animal  (what the compiler sees)</span>
 <span class="c1">// Runtime type:      Dog     (what actually runs)</span>
 
 <span class="n">a</span><span class="p">.</span><span class="na">speak</span><span class="p">();</span><span class="w">       </span><span class="c1">// ✔ calls Dog.speak() — runtime type wins for OVERRIDDEN methods</span>
-<span class="n">a</span><span class="p">.</span><span class="na">getBreed</span><span class="p">();</span><span class="w">    </span><span class="c1">// ✘ COMPILE ERROR — Animal doesn&#39;t know about getBreed()</span>
+<span class="n">a</span><span class="p">.</span><span class="na">getBreed</span><span class="p">();</span><span class="w">    </span><span class="c1">// ✘ COMPILE ERROR — Animal doesn't know about getBreed()</span>
 <span class="w">                 </span><span class="c1">//   must cast: ((Dog) a).getBreed()</span>
 </pre></div>
 </div>
@@ -647,9 +647,9 @@ A: Yes — IF a JRE (or JDK) is installed on the Mac. The .class bytecode is
 <div><p>“Expose what an object does, not how it does it.”</p>
 </div></blockquote>
 <p>This is enforced through <code class="docutils literal notranslate"><span class="pre">private</span></code> fields + public methods (encapsulation) and through abstract classes/interfaces (beyond AP CSA scope but on Oracle exam).</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Users of BankAccount don&#39;t need to know HOW balance is stored</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Users of BankAccount don't need to know HOW balance is stored</span>
 <span class="c1">// They just know: deposit(), withdraw(), getBalance() exist</span>
-<span class="c1">// That&#39;s abstraction in practice</span>
+<span class="c1">// That's abstraction in practice</span>
 </pre></div>
 </div>
 </section>
@@ -698,16 +698,16 @@ A: Yes — IF a JRE (or JDK) is installed on the Mac. The .class bytecode is
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Three ways to use a class from another package:</span>
 
 <span class="c1">// Option 1 — fully qualified name (no import needed, but verbose)</span>
-<span class="n">com</span><span class="p">.</span><span class="na">school</span><span class="p">.</span><span class="na">Student</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">com</span><span class="p">.</span><span class="na">school</span><span class="p">.</span><span class="na">Student</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">);</span>
+<span class="n">com</span><span class="p">.</span><span class="na">school</span><span class="p">.</span><span class="na">Student</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">com</span><span class="p">.</span><span class="na">school</span><span class="p">.</span><span class="na">Student</span><span class="p">(</span><span class="s">"Ana"</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">);</span>
 
 <span class="c1">// Option 2 — import specific class</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">com.school.Student</span><span class="p">;</span>
-<span class="n">Student</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Student</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">);</span>
+<span class="n">Student</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Student</span><span class="p">(</span><span class="s">"Ana"</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">);</span>
 
 <span class="c1">// Option 3 — import entire package (wildcard)</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">com.school.*</span><span class="p">;</span>
-<span class="n">Student</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Student</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">);</span>
-<span class="n">Teacher</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Teacher</span><span class="p">(</span><span class="s">&quot;Ms. Smith&quot;</span><span class="p">);</span>
+<span class="n">Student</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Student</span><span class="p">(</span><span class="s">"Ana"</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">);</span>
+<span class="n">Teacher</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Teacher</span><span class="p">(</span><span class="s">"Ms. Smith"</span><span class="p">);</span>
 </pre></div>
 </div>
 <blockquote>
@@ -818,9 +818,9 @@ A: Yes — IF a JRE (or JDK) is installed on the Mac. The .class bytecode is
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">package</span><span class="w"> </span><span class="nn">com.school</span><span class="p">;</span>
 
 <span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Student</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">public</span><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">schoolName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Lincoln High&quot;</span><span class="p">;</span><span class="w">  </span><span class="c1">// anyone can access</span>
-<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">studentId</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;S-1042&quot;</span><span class="p">;</span><span class="w">        </span><span class="c1">// subclasses + same package</span>
-<span class="w">              </span><span class="n">String</span><span class="w"> </span><span class="n">nickname</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Ace&quot;</span><span class="p">;</span><span class="w">           </span><span class="c1">// default: same package only</span>
+<span class="w">    </span><span class="kd">public</span><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">schoolName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Lincoln High"</span><span class="p">;</span><span class="w">  </span><span class="c1">// anyone can access</span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">studentId</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s">"S-1042"</span><span class="p">;</span><span class="w">        </span><span class="c1">// subclasses + same package</span>
+<span class="w">              </span><span class="n">String</span><span class="w"> </span><span class="n">nickname</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s">"Ace"</span><span class="p">;</span><span class="w">           </span><span class="c1">// default: same package only</span>
 <span class="w">    </span><span class="kd">private</span><span class="w">   </span><span class="kt">double</span><span class="w"> </span><span class="n">gpa</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mf">3.8</span><span class="p">;</span><span class="w">             </span><span class="c1">// this class ONLY</span>
 
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getGpa</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">gpa</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w">          </span><span class="c1">// public getter for private field</span>
@@ -896,12 +896,12 @@ A: Yes — IF a JRE (or JDK) is installed on the Mac. The .class bytecode is
     ├── IOException               ← CHECKED (must declare or catch)
     │   └── FileNotFoundException
     ├── SQLException              ← CHECKED
-    ├── RuntimeException          ← UNCHECKED (don&#39;t have to catch)
+    ├── RuntimeException          ← UNCHECKED (don't have to catch)
     │   ├── ArithmeticException       (divide by zero)
     │   ├── NullPointerException      (null reference)
     │   ├── ArrayIndexOutOfBoundsException
     │   ├── ClassCastException
-    │   ├── NumberFormatException     (Integer.parseInt(&quot;abc&quot;))
+    │   ├── NumberFormatException     (Integer.parseInt("abc"))
     │   └── IllegalArgumentException
     └── ...
 </pre></div>
@@ -943,7 +943,7 @@ A: Yes — IF a JRE (or JDK) is installed on the Mac. The .class bytecode is
 <span class="c1">// CHECKED — FileNotFoundException — MUST handle or declare</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span>
 <span class="c1">// This will NOT compile without try/catch or throws declaration:</span>
-<span class="n">FileReader</span><span class="w"> </span><span class="n">fr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileReader</span><span class="p">(</span><span class="s">&quot;data.txt&quot;</span><span class="p">);</span><span class="w">   </span><span class="c1">// ← checked exception!</span>
+<span class="n">FileReader</span><span class="w"> </span><span class="n">fr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileReader</span><span class="p">(</span><span class="s">"data.txt"</span><span class="p">);</span><span class="w">   </span><span class="c1">// ← checked exception!</span>
 </pre></div>
 </div>
 </section>
@@ -953,21 +953,21 @@ A: Yes — IF a JRE (or JDK) is installed on the Mac. The .class bytecode is
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;1 - try starts&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"1 - try starts"</span><span class="p">);</span>
 <span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">                           </span><span class="c1">// ArithmeticException thrown here</span>
-<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;2 - never reached&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"2 - never reached"</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">        </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ArithmeticException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;3 - caught ArithmeticException: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"3 - caught ArithmeticException: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">        </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">RuntimeException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;4 - never reached — ArithmeticException caught above&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"4 - never reached — ArithmeticException caught above"</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">        </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;5 - finally ALWAYS runs&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"5 - finally ALWAYS runs"</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span>
 
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;6 - after try/catch/finally&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"6 - after try/catch/finally"</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 <span class="c1">// Output:</span>
@@ -990,7 +990,7 @@ A: Yes — IF a JRE (or JDK) is installed on the Mac. The .class bytecode is
 <blockquote>
 <div><p>⚠️ <strong>Exam Trap #3:</strong> <code class="docutils literal notranslate"><span class="pre">throws</span></code> in a method signature = declaration (checked exceptions).  <code class="docutils literal notranslate"><span class="pre">throw</span></code> in a method body = actually throwing an exception.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">readFile</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">path</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span><span class="w">   </span><span class="c1">// declaration</span>
-<span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IOException</span><span class="p">(</span><span class="s">&quot;File not found&quot;</span><span class="p">);</span><span class="w">             </span><span class="c1">// throwing</span>
+<span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IOException</span><span class="p">(</span><span class="s">"File not found"</span><span class="p">);</span><span class="w">             </span><span class="c1">// throwing</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -1002,8 +1002,8 @@ A: Yes — IF a JRE (or JDK) is installed on the Mac. The .class bytecode is
 <span class="w">    </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span><span class="p">;</span>
 <span class="w">    </span><span class="n">arr</span><span class="o">[</span><span class="mi">10</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
 <span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ArrayIndexOutOfBoundsException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span><span class="w">      </span><span class="c1">// &quot;Index 10 out of bounds for length 3&quot;</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span><span class="w">         </span><span class="c1">// &quot;java.lang.ArrayIndexOutOfBoundsException: Index 10...&quot;</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span><span class="w">      </span><span class="c1">// "Index 10 out of bounds for length 3"</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span><span class="w">         </span><span class="c1">// "java.lang.ArrayIndexOutOfBoundsException: Index 10..."</span>
 <span class="w">    </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span><span class="w">                      </span><span class="c1">// full stack trace to stderr</span>
 <span class="p">}</span>
 </pre></div>
@@ -1025,7 +1025,7 @@ A: Yes — IF a JRE (or JDK) is installed on the Mac. The .class bytecode is
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">userInput</span><span class="p">);</span>
 <span class="w">    </span><span class="n">process</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
 <span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">NumberFormatException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// nothing here — exception is &quot;swallowed&quot;</span>
+<span class="w">    </span><span class="c1">// nothing here — exception is "swallowed"</span>
 <span class="p">}</span>
 <span class="c1">// Program continues, result was never set — silent corruption</span>
 </pre></div>
@@ -1044,8 +1044,8 @@ A: Yes — IF a JRE (or JDK) is installed on the Mac. The .class bytecode is
 <span class="p">}</span>
 
 <span class="c1">// Called with:</span>
-<span class="kt">double</span><span class="w"> </span><span class="n">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parseGrade</span><span class="p">(</span><span class="s">&quot;A+&quot;</span><span class="p">);</span><span class="w">   </span><span class="c1">// should throw, instead silently returns 0.0</span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Grade: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">grade</span><span class="p">);</span><span class="w">   </span><span class="c1">// Grade: 0.0 — bug invisible to user</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parseGrade</span><span class="p">(</span><span class="s">"A+"</span><span class="p">);</span><span class="w">   </span><span class="c1">// should throw, instead silently returns 0.0</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Grade: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">grade</span><span class="p">);</span><span class="w">   </span><span class="c1">// Grade: 0.0 — bug invisible to user</span>
 </pre></div>
 </div>
 </section>
@@ -1053,21 +1053,21 @@ A: Yes — IF a JRE (or JDK) is installed on the Mac. The .class bytecode is
 <h3>What to Do Instead<a class="headerlink" href="#what-to-do-instead" title="Link to this heading">¶</a></h3>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// ✔ Option 1 — Log the error</span>
 <span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">NumberFormatException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Invalid input: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Invalid input: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
 <span class="p">}</span>
 
 <span class="c1">// ✔ Option 2 — Rethrow as a different exception</span>
 <span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">NumberFormatException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&quot;Grade must be a number, got: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">input</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="p">);</span>
+<span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">"Grade must be a number, got: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">input</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="c1">// ✔ Option 3 — Handle with a default + notification</span>
 <span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">NumberFormatException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Could not parse &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39;, defaulting to 0.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Could not parse '"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"', defaulting to 0."</span><span class="p">);</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="c1">// ✔ Option 4 — Add a comment explaining WHY it&#39;s intentionally empty (very rare)</span>
+<span class="c1">// ✔ Option 4 — Add a comment explaining WHY it's intentionally empty (very rare)</span>
 <span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">InterruptedException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">// Restore interrupt status — intentional; see Thread.currentThread().interrupt()</span>
 <span class="w">    </span><span class="n">Thread</span><span class="p">.</span><span class="na">currentThread</span><span class="p">().</span><span class="na">interrupt</span><span class="p">();</span>
@@ -1082,22 +1082,22 @@ A: Yes — IF a JRE (or JDK) is installed on the Mac. The .class bytecode is
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;1&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"1"</span><span class="p">);</span>
 <span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">k</span><span class="p">;</span><span class="w">               </span><span class="c1">// ArithmeticException thrown</span>
-<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;2&quot;</span><span class="p">);</span><span class="w">     </span><span class="c1">// never reached</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"2"</span><span class="p">);</span><span class="w">     </span><span class="c1">// never reached</span>
 <span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ArithmeticException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;3&quot;</span><span class="p">);</span><span class="w">     </span><span class="c1">// caught here — empty block version below</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"3"</span><span class="p">);</span><span class="w">     </span><span class="c1">// caught here — empty block version below</span>
 <span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">RuntimeException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;4&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"4"</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;5&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"5"</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;6&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"6"</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 <span class="c1">// Output: 1, 3, 5, 6</span>
 <span class="c1">// If catch (ArithmeticException e) were EMPTY (swallowed): output would be 1, 5, 6</span>
-<span class="c1">// — the exception is silently gone but &quot;2&quot; was still skipped</span>
+<span class="c1">// — the exception is silently gone but "2" was still skipped</span>
 </pre></div>
 </div>
 </section>
@@ -1153,8 +1153,8 @@ A: Yes — IF a JRE (or JDK) is installed on the Mac. The .class bytecode is
 <hr class="docutils" />
 <section id="comparing-objects-tests-reference-not-content">
 <h3>Comparing Objects — <code class="docutils literal notranslate"><span class="pre">==</span></code> tests REFERENCE, not content<a class="headerlink" href="#comparing-objects-tests-reference-not-content" title="Link to this heading">¶</a></h3>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="s">&quot;hello&quot;</span><span class="p">);</span>
-<span class="n">String</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="s">&quot;hello&quot;</span><span class="p">);</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="s">"hello"</span><span class="p">);</span>
+<span class="n">String</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="s">"hello"</span><span class="p">);</span>
 
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">s2</span><span class="p">);</span><span class="w">       </span><span class="c1">// FALSE — different objects in heap</span>
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s1</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">s2</span><span class="p">));</span><span class="w">  </span><span class="c1">// TRUE — same content</span>
@@ -1165,15 +1165,15 @@ A: Yes — IF a JRE (or JDK) is installed on the Mac. The .class bytecode is
   s2 ──→ [hello]   ← object at address 0x200
 
   s1 == s2 asks: is 0x100 == 0x200? → false
-  s1.equals(s2) asks: is &quot;hello&quot; == &quot;hello&quot;? → true
+  s1.equals(s2) asks: is "hello" == "hello"? → true
 </pre></div>
 </div>
 </section>
 <section id="string-pool-trap-from-the-exam">
 <h3>String Pool Trap (from the Exam)<a class="headerlink" href="#string-pool-trap-from-the-exam" title="Link to this heading">¶</a></h3>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;hello&quot;</span><span class="p">;</span><span class="w">               </span><span class="c1">// interned in pool</span>
-<span class="n">String</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;hello&quot;</span><span class="p">;</span><span class="w">               </span><span class="c1">// reuses same pool object</span>
-<span class="n">String</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="s">&quot;hello&quot;</span><span class="p">);</span><span class="w">   </span><span class="c1">// NEW heap object (bypasses pool)</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"hello"</span><span class="p">;</span><span class="w">               </span><span class="c1">// interned in pool</span>
+<span class="n">String</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"hello"</span><span class="p">;</span><span class="w">               </span><span class="c1">// reuses same pool object</span>
+<span class="n">String</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="s">"hello"</span><span class="p">);</span><span class="w">   </span><span class="c1">// NEW heap object (bypasses pool)</span>
 
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">       </span><span class="c1">// TRUE  — both point to pool object</span>
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">c</span><span class="p">);</span><span class="w">       </span><span class="c1">// FALSE — c is a different heap object</span>
@@ -1191,9 +1191,9 @@ A: Yes — IF a JRE (or JDK) is installed on the Mac. The .class bytecode is
 <span class="c1">//           0         if this == other</span>
 <span class="c1">//           positive  if this &gt; other</span>
 
-<span class="n">String</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;apple&quot;</span><span class="p">;</span>
-<span class="n">String</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;banana&quot;</span><span class="p">;</span>
-<span class="n">String</span><span class="w"> </span><span class="n">s3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;apple&quot;</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"apple"</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"banana"</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">s3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"apple"</span><span class="p">;</span>
 
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s1</span><span class="p">.</span><span class="na">compareTo</span><span class="p">(</span><span class="n">s2</span><span class="p">));</span><span class="w">   </span><span class="c1">// negative (a &lt; b alphabetically)</span>
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s2</span><span class="p">.</span><span class="na">compareTo</span><span class="p">(</span><span class="n">s1</span><span class="p">));</span><span class="w">   </span><span class="c1">// positive</span>
@@ -1211,14 +1211,14 @@ A: Yes — IF a JRE (or JDK) is installed on the Mac. The .class bytecode is
 <h3>Comparing <code class="docutils literal notranslate"><span class="pre">null</span></code> — A Common Bug<a class="headerlink" href="#comparing-null-a-common-bug" title="Link to this heading">¶</a></h3>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
 
-<span class="c1">// ❌ NullPointerException — s is null, can&#39;t call a method on null</span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;hello&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
+<span class="c1">// ❌ NullPointerException — s is null, can't call a method on null</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">"hello"</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
 
 <span class="c1">// ✔ Safe — null check first</span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;hello&quot;</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">s</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span><span class="w">   </span><span class="c1">// &quot;hello&quot; is never null</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="s">"hello"</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">s</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span><span class="w">   </span><span class="c1">// "hello" is never null</span>
 
 <span class="c1">// ✔ Also safe</span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;hello&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">"hello"</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
 </pre></div>
 </div>
 </section>
@@ -1284,8 +1284,8 @@ A: Yes — IF a JRE (or JDK) is installed on the Mac. The .class bytecode is
 <span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">grade</span><span class="p">;</span><span class="w">                        </span><span class="c1">//   lifespan: from new() until garbage collected</span>
 
 <span class="w">    </span><span class="c1">// ── METHOD / PARAMETER SCOPE ─────────────────────────────</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setGrade</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">grade</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">         </span><span class="c1">// parameter &#39;grade&#39; — method scope</span>
-<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">grade</span><span class="p">;</span><span class="w">                   </span><span class="c1">// &#39;this.grade&#39; = instance var, &#39;grade&#39; = param</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setGrade</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">grade</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">         </span><span class="c1">// parameter 'grade' — method scope</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">grade</span><span class="p">;</span><span class="w">                   </span><span class="c1">// 'this.grade' = instance var, 'grade' = param</span>
 <span class="w">    </span><span class="p">}</span>
 
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">calculateGpa</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -1294,10 +1294,10 @@ A: Yes — IF a JRE (or JDK) is installed on the Mac. The .class bytecode is
 
 <span class="w">        </span><span class="c1">// ── BLOCK SCOPE ──────────────────────────────────────</span>
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">grade</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">90</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">honor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Dean&#39;s List&quot;</span><span class="p">;</span><span class="w">     </span><span class="c1">// block scope — only visible inside this if</span>
+<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">honor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Dean's List"</span><span class="p">;</span><span class="w">     </span><span class="c1">// block scope — only visible inside this if</span>
 <span class="w">            </span><span class="n">gpa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4.0</span><span class="p">;</span>
 <span class="w">        </span><span class="p">}</span>
-<span class="w">        </span><span class="c1">// System.out.println(honor);         // ✘ COMPILE ERROR — &#39;honor&#39; out of scope</span>
+<span class="w">        </span><span class="c1">// System.out.println(honor);         // ✘ COMPILE ERROR — 'honor' out of scope</span>
 
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">gpa</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
@@ -1361,7 +1361,7 @@ A: Yes — IF a JRE (or JDK) is installed on the Mac. The .class bytecode is
 <span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">myCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">              </span><span class="c1">// one copy PER object</span>
 
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">increment</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">myCount</span><span class="o">++</span><span class="p">;</span><span class="w">        </span><span class="c1">// only this object&#39;s counter</span>
+<span class="w">        </span><span class="n">myCount</span><span class="o">++</span><span class="p">;</span><span class="w">        </span><span class="c1">// only this object's counter</span>
 <span class="w">        </span><span class="n">totalCount</span><span class="o">++</span><span class="p">;</span><span class="w">     </span><span class="c1">// shared counter — ALL objects see the same value</span>
 <span class="w">    </span><span class="p">}</span>
 
@@ -1411,7 +1411,7 @@ A: Yes — IF a JRE (or JDK) is installed on the Mac. The .class bytecode is
 <span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
 <span class="p">}</span>
-<span class="c1">// System.out.println(i);   // ✘ COMPILE ERROR — i doesn&#39;t exist here</span>
+<span class="c1">// System.out.println(i);   // ✘ COMPILE ERROR — i doesn't exist here</span>
 
 <span class="c1">// while-loop variable declared outside = accessible after</span>
 <span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
@@ -1552,7 +1552,7 @@ A: Yes — IF a JRE (or JDK) is installed on the Mac. The .class bytecode is
 <span class="cm"> |   Instructor:  [title, first-initial of the given name, Surname (Ex. Dr. J. Smith) ] </span>
 <span class="cm"> |     Due Date:  [Due Date and Time]</span>
 <span class="cm"> |</span>
-<span class="cm"> |  Description:  [Describe the program&#39;s goal, IN DETAIL.]</span>
+<span class="cm"> |  Description:  [Describe the program's goal, IN DETAIL.]</span>
 <span class="cm"> |</span>
 <span class="cm"> |     Language:  Java version 8</span>
 <span class="cm"> | Ex. Packages:  [List names and sources of all external packages</span>
