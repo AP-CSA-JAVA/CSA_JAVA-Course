@@ -1030,86 +1030,86 @@ For this course we will primarily use <code class="docutils literal notranslate"
 </div></blockquote>
 <details>
 <summary>Starter Code</summary>
-<p>/*
-// Name:          [Your Full Name]
-// Partner:       [Partner’s Full Name, or “None”]
-// Course:        AP Computer Science A
-// Instructor:    [Instructor Name]
-// Assignment:    [Assignment Number — Assignment Title]
-// Due Date:      [Month Day, Year]</p>
-<p>public class Allowance {</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>public static void main(String[] args) {
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Name:          [Your Full Name]</span>
+<span class="c1">// Partner:       [Partner's Full Name, or "None"]</span>
+<span class="c1">// Course:        AP Computer Science A</span>
+<span class="c1">// Instructor:    [Instructor Name]</span>
+<span class="c1">// Assignment:    [Assignment Number — Assignment Title]</span>
+<span class="c1">// Due Date:      [Month Day, Year]</span>
 
-    // ---------------------------------------------------
-    // STEP 1: Declare the allowance amount
-    // ---------------------------------------------------
-    // This is money, so it needs a decimal type, not int.
-    // Hint: the type for decimal numbers is "double"
-    double weeklyAllowance = 0 ; //TODO: insert the weekly allowance value
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Allowance</span><span class="w"> </span><span class="p">{</span>
 
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 
-    // ---------------------------------------------------
-    // STEP 2: Declare each person's age as an int
-    // ---------------------------------------------------
-    // Jon and Ed are done for you as examples.
-    // You need to figure out Michael's age yourself —
-    // re-read the rules above carefully.
-
-    int jonAge = 16;
-    int edAge = 12;
-    int michaelAge = 0;   // TODO: replace 0 with the correct value
+<span class="w">        </span><span class="c1">// ---------------------------------------------------</span>
+<span class="w">        </span><span class="c1">// STEP 1: Declare the allowance amount</span>
+<span class="w">        </span><span class="c1">// ---------------------------------------------------</span>
+<span class="w">        </span><span class="c1">// This is money, so it needs a decimal type, not int.</span>
+<span class="w">        </span><span class="c1">// Hint: the type for decimal numbers is "double"</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">weeklyAllowance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="c1">//TODO: insert the weekly allowance value</span>
 
 
-    // ---------------------------------------------------
-    // STEP 3: Declare a boolean for each person
-    // ---------------------------------------------------
-    // A boolean can only be true or false.
-    // "Teenager" means the age is between 13 and 19 (inclusive).
-    //
-    // Jon's is done for you as an example of the pattern.
-    // You need to write the boolean expression for Ed and Michael.
+<span class="w">        </span><span class="c1">// ---------------------------------------------------</span>
+<span class="w">        </span><span class="c1">// STEP 2: Declare each person's age as an int</span>
+<span class="w">        </span><span class="c1">// ---------------------------------------------------</span>
+<span class="w">        </span><span class="c1">// Jon and Ed are done for you as examples.</span>
+<span class="w">        </span><span class="c1">// You need to figure out Michael's age yourself —</span>
+<span class="w">        </span><span class="c1">// re-read the rules above carefully.</span>
 
-    boolean jonIsTeenager = (jonAge &gt;= 13 &amp;&amp; jonAge &lt;= 19);
-    boolean edIsTeenager = false;      // TODO: replace with a real expression
-    boolean michaelIsTeenager = false; // TODO: replace with a real expression
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">jonAge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">16</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">edAge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">michaelAge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">   </span><span class="c1">// TODO: replace 0 with the correct value</span>
 
 
-    // ---------------------------------------------------
-    // STEP 4: Print the result for each person
-    // ---------------------------------------------------
-    // Use an if/else with each person's boolean to decide
-    // what gets printed. Jon's is done as an example —
-    // do the same thing for Ed and Michael below it.
+<span class="w">        </span><span class="c1">// ---------------------------------------------------</span>
+<span class="w">        </span><span class="c1">// STEP 3: Declare a boolean for each person</span>
+<span class="w">        </span><span class="c1">// ---------------------------------------------------</span>
+<span class="w">        </span><span class="c1">// A boolean can only be true or false.</span>
+<span class="w">        </span><span class="c1">// "Teenager" means the age is between 13 and 19 (inclusive).</span>
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="c1">// Jon's is done for you as an example of the pattern.</span>
+<span class="w">        </span><span class="c1">// You need to write the boolean expression for Ed and Michael.</span>
 
-    if (jonIsTeenager) {
-        System.out.println("Jon (" + jonAge + ") receives an allowance of $" + weeklyAllowance);
-    } else {
-        System.out.println("Jon (" + jonAge + ") does NOT receive an allowance.");
-    }
-
-    // TODO: write the if/else for Ed, following the same pattern
+<span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">jonIsTeenager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">jonAge</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">13</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">jonAge</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">19</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">edIsTeenager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w">      </span><span class="c1">// TODO: replace with a real expression</span>
+<span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">michaelIsTeenager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// TODO: replace with a real expression</span>
 
 
-    // TODO: write the if/else for Michael, following the same pattern
+<span class="w">        </span><span class="c1">// ---------------------------------------------------</span>
+<span class="w">        </span><span class="c1">// STEP 4: Print the result for each person</span>
+<span class="w">        </span><span class="c1">// ---------------------------------------------------</span>
+<span class="w">        </span><span class="c1">// Use an if/else with each person's boolean to decide</span>
+<span class="w">        </span><span class="c1">// what gets printed. Jon's is done as an example —</span>
+<span class="w">        </span><span class="c1">// do the same thing for Ed and Michael below it.</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">jonIsTeenager</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Jon ("</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">jonAge</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">") receives an allowance of $"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">weeklyAllowance</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Jon ("</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">jonAge</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">") does NOT receive an allowance."</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// TODO: write the if/else for Ed, following the same pattern</span>
 
 
-    // ---------------------------------------------------
-    // STEP 5: Test cases
-    // ---------------------------------------------------
-    // Below main(), explain (as a comment) what
-    // output you EXPECTED for each person, and confirm
-    // whether the program's actual output matched it.
-    //
-    // Example:
-    // Expected: Jon (16) receives an allowance of $30.00  -&gt; MATCHES actual output
-    // Expected: Ed (12) does NOT receive an allowance.   -&gt; MATCHES actual output
-    // Expected: Michael (??) does NOT receive an allowance. -&gt; TODO: fill in once you find his age
+<span class="w">        </span><span class="c1">// TODO: write the if/else for Michael, following the same pattern</span>
 
-}
+
+<span class="w">        </span><span class="c1">// ---------------------------------------------------</span>
+<span class="w">        </span><span class="c1">// STEP 5: Test cases</span>
+<span class="w">        </span><span class="c1">// ---------------------------------------------------</span>
+<span class="w">        </span><span class="c1">// Below main(), explain (as a comment) what</span>
+<span class="w">        </span><span class="c1">// output you EXPECTED for each person, and confirm</span>
+<span class="w">        </span><span class="c1">// whether the program's actual output matched it.</span>
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="c1">// Example:</span>
+<span class="w">        </span><span class="c1">// Expected: Jon (16) receives an allowance of $30.00  -&gt; MATCHES actual output</span>
+<span class="w">        </span><span class="c1">// Expected: Ed (12) does NOT receive an allowance.   -&gt; MATCHES actual output</span>
+<span class="w">        </span><span class="c1">// Expected: Michael (??) does NOT receive an allowance. -&gt; TODO: fill in once you find his age</span>
+
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
-<p>}
-*/</p>
 </details>
 ---
 <blockquote>
