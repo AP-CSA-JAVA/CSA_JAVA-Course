@@ -235,7 +235,7 @@ These three acronyms are easy to confuse. Think of them as three nested layers, 
 | **JDK** | Java Development Kit | The JRE **plus** the tools needed to **write and compile** Java code (`javac`, debuggers, etc.). | Programmers — this is what you installed to write code for this class. |
 
 ```
-JDK  ⊃  JRE  ⊃  JVM
+JDK  >  JRE  >  JVM
 (write)  (run)   (execute bytecode)
 ```
 
@@ -261,17 +261,15 @@ Main.java  --(javac)-->  Main.class (bytecode)  --(java)-->  JVM executes it  --
 | **Runtime Error** | While the JVM is executing the program | `NullPointerException`, `ArrayIndexOutOfBoundsException` |
 | **Logic Error** | While the JVM is executing — program runs, but output is wrong | Off-by-one loop, wrong comparison operator |
 
-> **Oracle Exam Note:** Oracle's exam often asks you to "compile and execute a Java program" from the command line: `javac Main.java` followed by `java Main` (no `.class` extension on the second command). This two-step process is exactly what your IDE is doing behind the scenes every time you click Run.
+> **Oracle Exam Note:** Oracle's exam often asks you to "compile and execute a Java program" from the command line: `javac Main.java` followed by `java Main` (no `.class` extension on the second command).
+> This two-step process is exactly what your IDE is doing behind the scenes every time you click Run.
+> [Review: java_infographic](https://github.com/user-attachments/files/31231474/java_1-1a_infographic.html)
 
 ---
 
-[java_infographic](https://github.com/user-attachments/files/31231474/java_1-1a_infographic.html)
-
----
 
 
-
-### 1.1a — Understanding Java: Certification-Style Practice Questions
+### Understanding Java: Certification-Style Practice Questions
 
 > **Purpose:** These mirror the style of the Oracle 1Z0-811 exam — multiple choice, snippet-driven, testing *why* Java behaves a certain way rather than just vocabulary recall.
 > Two parts: **Part A** on the compile → bytecode → JVM sequence.
