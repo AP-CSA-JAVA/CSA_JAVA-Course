@@ -898,7 +898,8 @@ public class GalaxyWeight{
 > - [ ] Create a program that will ask the user for two distinct integers
 > - [ ] Use the Scanner class to receive input from the user
 > - [ ] Store those values and perform addition, subtraction, multiplication, division, and modulo
-> - [ ] No Starter Code for this assignment 
+> - [ ] No Starter Code for this assignment
+> - [ ] Submit your .java code and test cases (as either a comment or as a png)
 > 
 
 ---
@@ -948,53 +949,90 @@ System.out.println("b = " + b++);  // b = 5 (post-increment: original returned f
 > ### Assignment 1.4.1 — Compound Operators
 > 
 > ```java
-> 
 > public class CompoundOperators
 > {
 >   public static void main(String[] args)
-> {
->     int numPeople = 0;  
+>   {
+>     // TODO 1) Add at least three other people to your program below,
+>     //         such as siblings, friends, or neighbors.
+>     // TODO 2) Use people that are in different grades, to validate that
+>     //         your program works for different school grades.
+>     // TODO 3) For each person's years in school, use a value that shows
+>     //         they will soon be halfway through their current school
+>     //         year — the same way "years" is set up below.
+> 
+>     int numPeople = 0;
 >     double totalYears = 0;
 > 
 >     double years = 11.5;  // I will soon be halfway through my junior year.
 > 
+>     // Rewrite these two statements using compound assignment
+>     // and/or increment/decrement operators.
 >     totalYears = totalYears + years;
 >     numPeople = numPeople + 1;
+> 
+>     // Repeat the pattern above for each additional person you add.
+> 
+> 
+>     // TODO 4) Calculate the average years you and your friends, siblings,
+>     //         and neighbors have been in school.
+>     double averageYears;
+> 
+> 
+>     // TODO 5) Calculate the total days you have all been in school,
+>     //         assuming 180 days per year in school.
+>     double totalDays;
+> 
+> 
+>     // TODO 6) Calculate the average days you have all spent in school.
+>     double averageDays;
+> 
+> 
+>     // Summary output — do not edit below this line.
+>     System.out.printf("Number of people: %d%n", numPeople);
+>     System.out.printf("Total years in school: %.1f%n", totalYears);
+>     System.out.printf("Average years in school: %.2f%n", averageYears);
+>     System.out.printf("Total days in school: %.1f%n", totalDays);
+>     System.out.printf("Average days in school: %.2f%n", averageDays);
 >   }
 > }
-> 
-> ```
-> - [ ] Rewrite the statements of the program above to use the compound assignment and/or the increment/decrement operators.
-> - [ ] TODO 1) Add at least three other people to your program, such as siblings, friends, or neighbors.
-> - [ ] TODO 2) Use people that are in different grades to validate your program can work for different school grades.
-> - [ ] TODO 3) For their years in school, use values that indicate they will soon be halfway through their current school year, as shown in the provided code.
-> - [ ] TODO 4)The average years you and your friends, siblings, neighbors have been in school.
-> - [ ] TODO 5) The total days you have all been in school, assuming you spend 180 days per year in school.
-> - [ ] TODO 6) The average days you have all spent in school.
-> 
-> ```
-> **Sample Output:**
-> I have 11.5 years in school and 0.5 years to graduate.
-> Total people: 1, total years: 11.5
-> My best friend has 10.5 years in school and 1.5 years to graduate.
-> Total people: 2, total years: 22.0
-> My sister has 8.5 years in school and 3.5 years to graduate.
-> Total people: 3, total years: 30.5
-> My neighbor has 5.5 years in school and 6.5 years to graduate.
-> Total people: 4, total years: 36.0
-> 
-> Average years in school: 9.0
-> Total days in school: 6480.0
-> Average days per person: 1620.0 
 > ```
 
+---
+
+### Format String using - printf
+
+**Explanation of `printf` for students:**
+
+`System.out.printf` works like `System.out.println`, but it lets you control exactly how a value is formatted using a *format string* with placeholders.
+
+- The first argument is a string containing **format specifiers** — placeholders that start with `%` and tell Java where to insert a value and how to display it.
+- Each specifier is matched, in order, to one of the arguments listed after the format string.
+- `%n` inserts a new line (preferred over `\n` because it adapts to the operating system).
+
+Common specifiers used above:
+
+| Specifier | Meaning | Example |
+|---|---|---|
+| `%d` | integer (decimal) | `%d` → `4` |
+| `%f` | floating-point number | `%f` → `11.500000` |
+| `%.1f` | floating-point, rounded to 1 decimal place | `%.1f` → `11.5` |
+| `%.2f` | floating-point, rounded to 2 decimal places | `%.2f` → `11.50` |
+
+So this line:
+```java
+System.out.printf("Average years in school: %.2f%n", averageYears);
+```
+takes the value stored in `averageYears`, formats it as a decimal rounded to two places, inserts it in place of `%.2f`, and then moves to a new line.
+
+One thing worth pointing out to students: `%d` **only** works with integer types (`int`, `long`) — using it with a `double` throws an `IllegalFormatConversionException`. That's a useful error for them to hit and debug once, since it reinforces why `numPeople` is an `int` while the others are `double`.
 
 ---
 
 >
 > ### Assignment 1.4.2 — Average Test Score / Cashier Totals
 > 
-> Directions: Write two programs that will do the following:
+> **Directions:** No starter code will be provided for the program below.  Write two programs that will do the following:
 > 
 > **Average Test Score**
 > - [ ] ask the user for four test scores
@@ -1096,6 +1134,13 @@ You will need to be familiar with some terms:
 - [ ] **narrowing** — converting from a larger data type to a smaller: `double` → `float` → `long` → `int` → `char` → `short` → `byte`
 
 In this instance, we 'narrowed' the value of temp.  There is another term that you need to be familiar with and it is called **casting**.  Casting is converting from one data type to another, such as from a *double* to an *int*, potentially losing data. 
+
+Let's take a deeper look!  Take a look at the two images below.
+
+Distance between the two points: about 87 km (54 miles). That comes from converting 33°46'12.4"N, 118°11'37.3"W to decimal (33.7701°N, 118.1937°W) and comparing it to the plain 33°N, 118°W point — roughly 85.5 km of that is north-south drift and about 18 km is east-west drift.
+Why widening = precision: a whole-degree coordinate like 33, 118 isn't just "less exact" it's genuinely ambiguous. One degree of latitude spans about 111 km, and one degree of longitude at that latitude spans about 93 km, so 33°N, 118°W alone could mean any point inside an ~87 km-wide circle — the shaded area in the first image. Nothing is lost by writing it that way, because nothing more precise was ever captured.
+Adding minutes and seconds doesn't discard anything, it actually adds more information on top of what's already there: 33° is still 33°, you're just specifying where within that degree you are, down to about 30 meters per arcsecond. That's exactly why  `int` → `double` is a widening conversion in Java: every int value is already a perfectly valid `double`, and widening just gives it room to carry more fractional detail. No cast is required because you can't lose information by gaining precision — only by throwing it away, which is what (`int`) latitude does going the other direction.
+
 
 Take a look at this program:
 
