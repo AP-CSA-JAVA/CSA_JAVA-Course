@@ -261,9 +261,10 @@ Main.java  --(javac)-->  Main.class (bytecode)  --(java)-->  JVM executes it  --
 | **Runtime Error** | While the JVM is executing the program | `NullPointerException`, `ArrayIndexOutOfBoundsException` |
 | **Logic Error** | While the JVM is executing — program runs, but output is wrong | Off-by-one loop, wrong comparison operator |
 
-> **Oracle Exam Note:** Oracle's exam often asks you to "compile and execute a Java program" from the command line: `javac Main.java` followed by `java Main` (no `.class` extension on the second command).
-> This two-step process is exactly what your IDE is doing behind the scenes every time you click Run.
-> [Review: java_infographic](https://github.com/user-attachments/files/31231474/java_1-1a_infographic.html)
+> **Oracle Exam Note:** Oracle's exam often asks you to "compile and execute a Java program" from the command line: `javac Main.java` followed by `java Main` (no `.class` extension on the second command).  This two-step process is exactly what your IDE is doing behind the scenes every time you click Run.
+> 
+> [Review with this java_infographic!](https://github.com/user-attachments/files/31231474/java_1-1a_infographic.html)
+> 
 
 ---
 
