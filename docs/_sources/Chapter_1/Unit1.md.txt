@@ -609,6 +609,91 @@ Once you have declared the variable type, you **do not need to do it again** to 
 > - [ ] Submit your program as a `.java` file and include test cases that your program worked as intended
 >
 
+<details>
+<summary>Starter Code</summary>
+
+
+// Name:          [Your Full Name]
+// Partner:       [Partner's Full Name, or "None"]
+// Course:        AP Computer Science A
+// Instructor:    [Instructor Name]
+// Assignment:    [Assignment Number — Assignment Title]
+// Due Date:      [Month Day, Year]
+
+public class Allowance {
+
+    public static void main(String[] args) {
+
+        // ---------------------------------------------------
+        // STEP 1: Declare the allowance amount
+        // ---------------------------------------------------
+        // This is money, so it needs a decimal type, not int.
+        // Hint: the type for decimal numbers is "double"
+        double weeklyAllowance = 0 ; //TODO: insert the weekly allowance value
+
+
+        // ---------------------------------------------------
+        // STEP 2: Declare each person's age as an int
+        // ---------------------------------------------------
+        // Jon and Ed are done for you as examples.
+        // You need to figure out Michael's age yourself —
+        // re-read the rules above carefully.
+
+        int jonAge = 16;
+        int edAge = 12;
+        int michaelAge = 0;   // TODO: replace 0 with the correct value
+
+
+        // ---------------------------------------------------
+        // STEP 3: Declare a boolean for each person
+        // ---------------------------------------------------
+        // A boolean can only be true or false.
+        // "Teenager" means the age is between 13 and 19 (inclusive).
+        //
+        // Jon's is done for you as an example of the pattern.
+        // You need to write the boolean expression for Ed and Michael.
+
+        boolean jonIsTeenager = (jonAge >= 13 && jonAge <= 19);
+        boolean edIsTeenager = false;      // TODO: replace with a real expression
+        boolean michaelIsTeenager = false; // TODO: replace with a real expression
+
+
+        // ---------------------------------------------------
+        // STEP 4: Print the result for each person
+        // ---------------------------------------------------
+        // Use an if/else with each person's boolean to decide
+        // what gets printed. Jon's is done as an example —
+        // do the same thing for Ed and Michael below it.
+
+        if (jonIsTeenager) {
+            System.out.println("Jon (" + jonAge + ") receives an allowance of $" + weeklyAllowance);
+        } else {
+            System.out.println("Jon (" + jonAge + ") does NOT receive an allowance.");
+        }
+
+        // TODO: write the if/else for Ed, following the same pattern
+
+
+        // TODO: write the if/else for Michael, following the same pattern
+
+
+        // ---------------------------------------------------
+        // STEP 5: Test cases
+        // ---------------------------------------------------
+        // Below main(), explain (as a comment) what
+        // output you EXPECTED for each person, and confirm
+        // whether the program's actual output matched it.
+        //
+        // Example:
+        // Expected: Jon (16) receives an allowance of $30.00  -> MATCHES actual output
+        // Expected: Ed (12) does NOT receive an allowance.   -> MATCHES actual output
+        // Expected: Michael (??) does NOT receive an allowance. -> TODO: fill in once you find his age
+
+    }
+}
+
+
+</details>
 ---
 
 >
