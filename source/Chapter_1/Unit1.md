@@ -612,7 +612,7 @@ Once you have declared the variable type, you **do not need to do it again** to 
 <details>
 <summary>Starter Code</summary>
 
-/*
+```java
 // Name:          [Your Full Name]
 // Partner:       [Partner's Full Name, or "None"]
 // Course:        AP Computer Science A
@@ -691,7 +691,7 @@ public class Allowance {
 
     }
 }
-*/
+```
 
 </details>
 ---
