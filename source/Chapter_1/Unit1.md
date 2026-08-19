@@ -1135,10 +1135,19 @@ You will need to be familiar with some terms:
 
 In this instance, we 'narrowed' the value of temp.  There is another term that you need to be familiar with and it is called **casting**.  Casting is converting from one data type to another, such as from a *double* to an *int*, potentially losing data. 
 
-Let's take a deeper look!  Take a look at the two images below.
+---
 
-Distance between the two points: about 87 km (54 miles). That comes from converting 33°46'12.4"N, 118°11'37.3"W to decimal (33.7701°N, 118.1937°W) and comparing it to the plain 33°N, 118°W point — roughly 85.5 km of that is north-south drift and about 18 km is east-west drift.
-Why widening = precision: a whole-degree coordinate like 33, 118 isn't just "less exact" it's genuinely ambiguous. One degree of latitude spans about 111 km, and one degree of longitude at that latitude spans about 93 km, so 33°N, 118°W alone could mean any point inside an ~87 km-wide circle — the shaded area in the first image. Nothing is lost by writing it that way, because nothing more precise was ever captured.
+Let's take a deeper look!  Take a look at the two images below. Take a look at the two images below.  The first image is just latitude and longitude.  The second image includes minutes and seconds.
+
+
+<img width="2720" height="1680" alt="Image" src="https://github.com/user-attachments/assets/046d6516-5a0e-4b82-9d10-4dac8cf1d9f2" />
+
+<img width="2720" height="1680" alt="Image" src="https://github.com/user-attachments/assets/76801b37-c18d-4526-8ee7-1756fa2217bf" />
+
+The distance between the two points is approximately 87 km (54 miles). That comes from converting 33°46'12.4"N, 118°11'37.3"W to decimal (33.7701°N, 118.1937°W) and comparing it to the plain 33°N, 118°W point — roughly 85.5 km of that is north-south drift and about 18 km is east-west drift.
+
+Why widening = precision: a whole-degree coordinate like 33, 118 isn't just "less exact" it is genuinely ambiguous. One degree of latitude spans about 111 km, and one degree of longitude at that latitude spans about 93 km, so 33°N, 118°W alone could mean any point inside an ~87 km-wide circle — the shaded area in the first image. Nothing is lost by writing it that way, because nothing more precise was ever captured.
+
 Adding minutes and seconds doesn't discard anything, it actually adds more information on top of what's already there: 33° is still 33°, you're just specifying where within that degree you are, down to about 30 meters per arcsecond. That's exactly why  `int` → `double` is a widening conversion in Java: every int value is already a perfectly valid `double`, and widening just gives it room to carry more fractional detail. No cast is required because you can't lose information by gaining precision — only by throwing it away, which is what (`int`) latitude does going the other direction.
 
 
@@ -1223,7 +1232,7 @@ We know that we don't have 0 eggs.  We can rewrite our program to show how many 
 >  Saturn: 11.813728535388819 hours
 > Total travel time:19.59838263477574
 > 
-> Average travel time: approximatley 4 hours.
+> Average travel time: approximately 4 hours.
 > ```
 
 Your output should look similar to the example above. You will write a **widening algorithm** that shows the travel time to and from all planets using casting. The one rule is that you must use the provided code and **not change any provided data types**.
