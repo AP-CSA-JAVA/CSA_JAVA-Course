@@ -674,7 +674,185 @@ Due Date:      [Month Day, Year]
 <blockquote>
 <div><p><strong>Oracle Exam Note:</strong> Oracle’s exam often asks you to “compile and execute a Java program” from the command line: <code class="docutils literal notranslate"><span class="pre">javac</span> <span class="pre">Main.java</span></code> followed by <code class="docutils literal notranslate"><span class="pre">java</span> <span class="pre">Main</span></code> (no <code class="docutils literal notranslate"><span class="pre">.class</span></code> extension on the second command). This two-step process is exactly what your IDE is doing behind the scenes every time you click Run.</p>
 </div></blockquote>
+<hr class="docutils" />
+<p><a class="reference external" href="https://github.com/user-attachments/files/31231474/java_1-1a_infographic.html">java_infographic</a></p>
 </section>
+<hr class="docutils" />
+<section id="a-understanding-java-certification-style-practice-questions">
+<h3>1.1a — Understanding Java: Certification-Style Practice Questions<a class="headerlink" href="#a-understanding-java-certification-style-practice-questions" title="Link to this heading">¶</a></h3>
+<blockquote>
+<div><p><strong>Purpose:</strong> These mirror the style of the Oracle 1Z0-811 exam — multiple choice, snippet-driven, testing <em>why</em> Java behaves a certain way rather than just vocabulary recall.
+Two parts: <strong>Part A</strong> on the compile → bytecode → JVM sequence.
+<strong>Part B</strong> on identifying which language feature explains a given code snippet’s behavior. Answers and explanations are in the collapsible dropdowns.</p>
+</div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="part-a-the-compile-bytecode-jvm-sequence">
+<h3>Part A — The Compile → Bytecode → JVM Sequence<a class="headerlink" href="#part-a-the-compile-bytecode-jvm-sequence" title="Link to this heading">¶</a></h3>
+<section id="a1-multiple-choice">
+<h4>A1. Multiple Choice<a class="headerlink" href="#a1-multiple-choice" title="Link to this heading">¶</a></h4>
+<p>What is produced when <code class="docutils literal notranslate"><span class="pre">javac</span> <span class="pre">Hello.java</span></code> is run successfully?</p>
+<ul class="simple">
+<li><p>A. A platform-specific executable file (e.g. <code class="docutils literal notranslate"><span class="pre">Hello.exe</span></code>)</p></li>
+<li><p>B. <code class="docutils literal notranslate"><span class="pre">Hello.class</span></code>, a file of platform-independent bytecode</p></li>
+<li><p>C. A running instance of the program in memory</p></li>
+<li><p>D. Machine code specific to the compiling computer’s CPU</p></li>
+</ul>
+<details>
+<summary>Show answer</summary>
+<p><strong>Answer: B</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">javac</span></code> is the Java compiler. It never produces a directly-executable machine file — it produces a <code class="docutils literal notranslate"><span class="pre">.class</span></code> file containing <strong>bytecode</strong>, an intermediate, platform-neutral instruction set. That bytecode is what gets handed to a JVM later, on possibly a completely different machine, to actually run.</p>
+</details>
+</section>
+<hr class="docutils" />
+<section id="a2-multiple-choice">
+<h4>A2. Multiple Choice<a class="headerlink" href="#a2-multiple-choice" title="Link to this heading">¶</a></h4>
+<p>A student compiles <code class="docutils literal notranslate"><span class="pre">Hello.java</span></code> on a Windows laptop, then emails <code class="docutils literal notranslate"><span class="pre">Hello.class</span></code> to a friend running macOS. What must be true for the friend to run the program?</p>
+<ul class="simple">
+<li><p>A. The friend must recompile the source code on their own machine</p></li>
+<li><p>B. The <code class="docutils literal notranslate"><span class="pre">.class</span></code> file must be converted to a <code class="docutils literal notranslate"><span class="pre">.dll</span></code> first</p></li>
+<li><p>C. The friend needs a JVM installed for macOS — nothing else</p></li>
+<li><p>D. It cannot run; bytecode is tied to the OS that compiled it</p></li>
+</ul>
+<details>
+<summary>Show answer</summary>
+<p><strong>Answer: C</strong></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">.class</span></code> file’s bytecode is identical no matter what OS compiled it — it was never tied to Windows in the first place. All the macOS friend needs is a JVM built for macOS, which knows how to translate that same bytecode into instructions their machine understands. This is Write Once, Run Anywhere in action: the <em>bytecode</em> travels unchanged; the <em>JVM</em> is what’s platform-specific.</p>
+</details>
+</section>
+<hr class="docutils" />
+<section id="a3-multiple-choice">
+<h4>A3. Multiple Choice<a class="headerlink" href="#a3-multiple-choice" title="Link to this heading">¶</a></h4>
+<p>Which best describes the role of the JVM once it has loaded a <code class="docutils literal notranslate"><span class="pre">.class</span></code> file?</p>
+<ul class="simple">
+<li><p>A. It re-compiles the bytecode back into Java source code</p></li>
+<li><p>B. It translates and executes the bytecode, instruction by instruction, for the host machine</p></li>
+<li><p>C. It stores the bytecode permanently without running it</p></li>
+<li><p>D. It converts the bytecode into a different <code class="docutils literal notranslate"><span class="pre">.class</span></code> file for the next run</p></li>
+</ul>
+<details>
+<summary>Show answer</summary>
+<p><strong>Answer: B</strong></p>
+<p>The JVM is an <strong>interpreter</strong> (often paired with a Just-In-Time compiler for speed) that reads bytecode and carries out the equivalent operations on the real hardware/OS underneath it. It doesn’t reverse-engineer source code, and it doesn’t just archive the bytecode — its whole job is to <em>execute</em> it.</p>
+</details>
+</section>
+<hr class="docutils" />
+<section id="a4-short-answer">
+<h4>A4. Short Answer<a class="headerlink" href="#a4-short-answer" title="Link to this heading">¶</a></h4>
+<p>Put these four items in the correct order for how a Java program goes from source code to a running program: <strong>JVM interprets bytecode</strong>, <strong><code class="docutils literal notranslate"><span class="pre">.java</span></code> source file written</strong>, <strong><code class="docutils literal notranslate"><span class="pre">javac</span></code> compiles source</strong>, <strong><code class="docutils literal notranslate"><span class="pre">.class</span></code> bytecode file created</strong>.</p>
+<details>
+<summary>Show answer</summary>
+<p><strong>Answer:</strong></p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">.java</span></code> source file written</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">javac</span></code> compiles source</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.class</span></code> bytecode file created</p></li>
+<li><p>JVM interprets bytecode</p></li>
+</ol>
+<p><strong>Why it matters:</strong> Steps 1–3 happen once, at development time, and produce something portable. Step 4 happens every time the program is run, and is the only step that’s different depending on the machine.</p>
+</details>
+</section>
+<hr class="docutils" />
+<section id="a5-multiple-choice">
+<h4>A5. Multiple Choice<a class="headerlink" href="#a5-multiple-choice" title="Link to this heading">¶</a></h4>
+<p>Why does each operating system need its <strong>own</strong> version of the JVM, if bytecode itself is platform-independent?</p>
+<ul class="simple">
+<li><p>A. Bytecode is actually different on every OS, so each JVM reads a different format</p></li>
+<li><p>B. The JVM has to translate the same bytecode into real instructions for that OS’s specific hardware and system calls</p></li>
+<li><p>C. Licensing requires a separate JVM per OS for legal reasons only</p></li>
+<li><p>D. Without a separate JVM, <code class="docutils literal notranslate"><span class="pre">.class</span></code> files would be too large to run</p></li>
+</ul>
+<details>
+<summary>Show answer</summary>
+<p><strong>Answer: B</strong></p>
+<p>Bytecode itself never changes between platforms — that’s the whole point. What <em>does</em> need to change is the piece that turns bytecode into real, executed instructions, because Windows, macOS, and Linux each have different low-level system calls and hardware interaction. The JVM absorbs all of that platform-specific complexity so the bytecode above it never has to know about it.</p>
+</details>
+</section>
+</section>
+<hr class="docutils" />
+<section id="part-b-identifying-the-feature-behind-the-behavior">
+<h3>Part B — Identifying the Feature Behind the Behavior<a class="headerlink" href="#part-b-identifying-the-feature-behind-the-behavior" title="Link to this heading">¶</a></h3>
+<p>Identify <strong>which Java feature</strong> (Platform Independence, Compiled + Interpreted, Object-Oriented, Static/Strong Typing, Automatic Memory Management, Robust/Secure) best explains the behavior described.</p>
+<section id="b1">
+<h4>B1.<a class="headerlink" href="#b1" title="Link to this heading">¶</a></h4>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"42"</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>This line fails to compile, with an error before the program ever runs.</p>
+<details>
+<summary>Show answer</summary>
+<p><strong>Feature: Static / Strong Typing</strong></p>
+<p>Java checks variable types at <strong>compile time</strong>. Assigning a <code class="docutils literal notranslate"><span class="pre">String</span></code> to an <code class="docutils literal notranslate"><span class="pre">int</span></code> variable violates the declared type, so <code class="docutils literal notranslate"><span class="pre">javac</span></code> rejects it immediately — the mismatch never has a chance to become a runtime problem, because the program never gets to run at all.</p>
+</details>
+</section>
+<hr class="docutils" />
+<section id="b2">
+<h4>B2.<a class="headerlink" href="#b2" title="Link to this heading">¶</a></h4>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Car</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">speed</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">accelerate</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">speed</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SportsCar</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Car</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">accelerate</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">speed</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">SportsCar</span></code> reuses <code class="docutils literal notranslate"><span class="pre">Car</span></code>’s structure but customizes how <code class="docutils literal notranslate"><span class="pre">accelerate()</span></code> behaves.</p>
+<details>
+<summary>Show answer</summary>
+<p><strong>Feature: Object-Oriented (Inheritance + Polymorphism)</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">SportsCar</span></code> <strong>inherits</strong> from <code class="docutils literal notranslate"><span class="pre">Car</span></code>, reusing its fields and methods, and then <strong>overrides</strong> <code class="docutils literal notranslate"><span class="pre">accelerate()</span></code> to provide its own behavior — a form of polymorphism. This kind of code reuse and specialization only works because Java organizes programs around classes and objects with inheritance relationships.</p>
+</details>
+</section>
+<hr class="docutils" />
+<section id="b3">
+<h4>B3.<a class="headerlink" href="#b3" title="Link to this heading">¶</a></h4>
+<p>A student writes a method that creates thousands of temporary <code class="docutils literal notranslate"><span class="pre">String</span></code> objects inside a loop. The student never writes any code to delete or free those objects, yet the program’s memory usage doesn’t grow without bound.</p>
+<details>
+<summary>Show answer</summary>
+<p><strong>Feature: Automatic Memory Management (Garbage Collection)</strong></p>
+<p>Once those temporary <code class="docutils literal notranslate"><span class="pre">String</span></code> objects are no longer referenced by anything the program can reach, Java’s garbage collector automatically identifies them as unreachable and reclaims their memory — without the programmer ever writing a <code class="docutils literal notranslate"><span class="pre">free()</span></code> or <code class="docutils literal notranslate"><span class="pre">delete</span></code> call.</p>
+</details>
+</section>
+<hr class="docutils" />
+<section id="b4">
+<h4>B4.<a class="headerlink" href="#b4" title="Link to this heading">¶</a></h4>
+<p>The exact same <code class="docutils literal notranslate"><span class="pre">.class</span></code> file, compiled once on a school’s Windows lab computer, runs correctly on a student’s Chromebook and a teacher’s MacBook without being recompiled.</p>
+<details>
+<summary>Show answer</summary>
+<p><strong>Feature: Platform Independence</strong></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">.class</span></code> file contains bytecode, not machine code — it isn’t tied to Windows. Each device (Chromebook, MacBook) supplies its own JVM, which translates that identical bytecode into instructions appropriate for its own OS and hardware. This is Write Once, Run Anywhere.</p>
+</details>
+</section>
+<hr class="docutils" />
+<section id="b5">
+<h4>B5.<a class="headerlink" href="#b5" title="Link to this heading">¶</a></h4>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">};</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">numbers</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This code compiles successfully, but throws an <code class="docutils literal notranslate"><span class="pre">ArrayIndexOutOfBoundsException</span></code> when run, instead of silently corrupting memory or crashing the whole system.</p>
+<details>
+<summary>Show answer</summary>
+<p><strong>Feature: Robust / Secure</strong></p>
+<p>Java checks array bounds at runtime and throws a catchable exception rather than allowing the program to read or write memory it shouldn’t touch. This is part of why Java is described as robust and secure — it fails safely, with a specific, handleable error, instead of causing undefined behavior.</p>
+</details>
+</section>
+<hr class="docutils" />
+<section id="b6">
+<h4>B6.<a class="headerlink" href="#b6" title="Link to this heading">¶</a></h4>
+<p>The program’s source file compiles in under a second, but the compiled file cannot actually be run directly by double-clicking it on any operating system — a separate program has to be launched first to read it.</p>
+<details>
+<summary>Show answer</summary>
+<p><strong>Feature: Compiled + Interpreted (two-step execution)</strong></p>
+<p>Compilation (<code class="docutils literal notranslate"><span class="pre">javac</span></code>) only gets you to bytecode — an intermediate form, not a native executable. Running it still requires the <strong>interpretation</strong> step, where the JVM reads that bytecode and carries it out. Neither step alone produces a runnable program on its own; Java needs both.</p>
+</details>
+</section>
+</section>
+<hr class="docutils" />
 <section id="anatomy-of-a-basic-java-program">
 <h3>Anatomy of a Basic Java Program<a class="headerlink" href="#anatomy-of-a-basic-java-program" title="Link to this heading">¶</a></h3>
 <p>Every Java program follows the same basic structure. Here’s each part labeled:</p>
@@ -4137,6 +4315,24 @@ Available vehicles: 3
 <li><a class="reference internal" href="#features-of-java">Features of Java</a></li>
 <li><a class="reference internal" href="#jdk-vs-jre-vs-jvm">JDK vs. JRE vs. JVM</a></li>
 <li><a class="reference internal" href="#how-a-java-program-compiles-and-executes">How a Java Program Compiles and Executes</a></li>
+<li><a class="reference internal" href="#a-understanding-java-certification-style-practice-questions">1.1a — Understanding Java: Certification-Style Practice Questions</a></li>
+<li><a class="reference internal" href="#part-a-the-compile-bytecode-jvm-sequence">Part A — The Compile → Bytecode → JVM Sequence</a><ul>
+<li><a class="reference internal" href="#a1-multiple-choice">A1. Multiple Choice</a></li>
+<li><a class="reference internal" href="#a2-multiple-choice">A2. Multiple Choice</a></li>
+<li><a class="reference internal" href="#a3-multiple-choice">A3. Multiple Choice</a></li>
+<li><a class="reference internal" href="#a4-short-answer">A4. Short Answer</a></li>
+<li><a class="reference internal" href="#a5-multiple-choice">A5. Multiple Choice</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#part-b-identifying-the-feature-behind-the-behavior">Part B — Identifying the Feature Behind the Behavior</a><ul>
+<li><a class="reference internal" href="#b1">B1.</a></li>
+<li><a class="reference internal" href="#b2">B2.</a></li>
+<li><a class="reference internal" href="#b3">B3.</a></li>
+<li><a class="reference internal" href="#b4">B4.</a></li>
+<li><a class="reference internal" href="#b5">B5.</a></li>
+<li><a class="reference internal" href="#b6">B6.</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#anatomy-of-a-basic-java-program">Anatomy of a Basic Java Program</a></li>
 <li><a class="reference internal" href="#the-java-lang-package">The <code class="docutils literal notranslate"><span class="pre">java.lang</span></code> Package</a></li>
 <li><a class="reference internal" href="#real-world-applications-of-java">Real-World Applications of Java</a></li>

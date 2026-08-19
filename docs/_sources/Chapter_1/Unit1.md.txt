@@ -263,6 +263,240 @@ Main.java  --(javac)-->  Main.class (bytecode)  --(java)-->  JVM executes it  --
 
 > **Oracle Exam Note:** Oracle's exam often asks you to "compile and execute a Java program" from the command line: `javac Main.java` followed by `java Main` (no `.class` extension on the second command). This two-step process is exactly what your IDE is doing behind the scenes every time you click Run.
 
+---
+
+[java_infographic](https://github.com/user-attachments/files/31231474/java_1-1a_infographic.html)
+
+---
+
+
+
+### 1.1a — Understanding Java: Certification-Style Practice Questions
+
+> **Purpose:** These mirror the style of the Oracle 1Z0-811 exam — multiple choice, snippet-driven, testing *why* Java behaves a certain way rather than just vocabulary recall.
+> Two parts: **Part A** on the compile → bytecode → JVM sequence.
+> **Part B** on identifying which language feature explains a given code snippet's behavior. Answers and explanations are in the collapsible dropdowns.
+---
+
+
+### Part A — The Compile → Bytecode → JVM Sequence
+
+#### A1. Multiple Choice
+
+What is produced when `javac Hello.java` is run successfully?
+
+- A. A platform-specific executable file (e.g. `Hello.exe`)
+- B. `Hello.class`, a file of platform-independent bytecode
+- C. A running instance of the program in memory
+- D. Machine code specific to the compiling computer's CPU
+
+<details>
+<summary>Show answer</summary>
+
+**Answer: B**
+
+`javac` is the Java compiler. It never produces a directly-executable machine file — it produces a `.class` file containing **bytecode**, an intermediate, platform-neutral instruction set. That bytecode is what gets handed to a JVM later, on possibly a completely different machine, to actually run.
+
+</details>
+
+---
+
+#### A2. Multiple Choice
+
+A student compiles `Hello.java` on a Windows laptop, then emails `Hello.class` to a friend running macOS. What must be true for the friend to run the program?
+
+- A. The friend must recompile the source code on their own machine
+- B. The `.class` file must be converted to a `.dll` first
+- C. The friend needs a JVM installed for macOS — nothing else
+- D. It cannot run; bytecode is tied to the OS that compiled it
+
+<details>
+<summary>Show answer</summary>
+
+**Answer: C**
+
+The `.class` file's bytecode is identical no matter what OS compiled it — it was never tied to Windows in the first place. All the macOS friend needs is a JVM built for macOS, which knows how to translate that same bytecode into instructions their machine understands. This is Write Once, Run Anywhere in action: the *bytecode* travels unchanged; the *JVM* is what's platform-specific.
+
+</details>
+
+---
+
+#### A3. Multiple Choice
+
+Which best describes the role of the JVM once it has loaded a `.class` file?
+
+- A. It re-compiles the bytecode back into Java source code
+- B. It translates and executes the bytecode, instruction by instruction, for the host machine
+- C. It stores the bytecode permanently without running it
+- D. It converts the bytecode into a different `.class` file for the next run
+
+<details>
+<summary>Show answer</summary>
+
+**Answer: B**
+
+The JVM is an **interpreter** (often paired with a Just-In-Time compiler for speed) that reads bytecode and carries out the equivalent operations on the real hardware/OS underneath it. It doesn't reverse-engineer source code, and it doesn't just archive the bytecode — its whole job is to *execute* it.
+
+</details>
+
+---
+
+#### A4. Short Answer
+
+Put these four items in the correct order for how a Java program goes from source code to a running program: **JVM interprets bytecode**, **`.java` source file written**, **`javac` compiles source**, **`.class` bytecode file created**.
+
+<details>
+<summary>Show answer</summary>
+
+**Answer:**
+1. `.java` source file written
+2. `javac` compiles source
+3. `.class` bytecode file created
+4. JVM interprets bytecode
+
+**Why it matters:** Steps 1–3 happen once, at development time, and produce something portable. Step 4 happens every time the program is run, and is the only step that's different depending on the machine.
+
+</details>
+
+---
+
+#### A5. Multiple Choice
+
+Why does each operating system need its **own** version of the JVM, if bytecode itself is platform-independent?
+
+- A. Bytecode is actually different on every OS, so each JVM reads a different format
+- B. The JVM has to translate the same bytecode into real instructions for that OS's specific hardware and system calls
+- C. Licensing requires a separate JVM per OS for legal reasons only
+- D. Without a separate JVM, `.class` files would be too large to run
+
+<details>
+<summary>Show answer</summary>
+
+**Answer: B**
+
+Bytecode itself never changes between platforms — that's the whole point. What *does* need to change is the piece that turns bytecode into real, executed instructions, because Windows, macOS, and Linux each have different low-level system calls and hardware interaction. The JVM absorbs all of that platform-specific complexity so the bytecode above it never has to know about it.
+
+</details>
+
+---
+
+### Part B — Identifying the Feature Behind the Behavior
+
+Identify **which Java feature** (Platform Independence, Compiled + Interpreted, Object-Oriented, Static/Strong Typing, Automatic Memory Management, Robust/Secure) best explains the behavior described.
+
+#### B1.
+
+```java
+int total = "42";
+```
+
+This line fails to compile, with an error before the program ever runs.
+
+<details>
+<summary>Show answer</summary>
+
+**Feature: Static / Strong Typing**
+
+Java checks variable types at **compile time**. Assigning a `String` to an `int` variable violates the declared type, so `javac` rejects it immediately — the mismatch never has a chance to become a runtime problem, because the program never gets to run at all.
+
+</details>
+
+---
+
+#### B2.
+
+```java
+public class Car {
+    private int speed;
+    public void accelerate() { speed += 10; }
+}
+
+public class SportsCar extends Car {
+    public void accelerate() { speed += 25; }
+}
+```
+
+`SportsCar` reuses `Car`'s structure but customizes how `accelerate()` behaves.
+
+<details>
+<summary>Show answer</summary>
+
+**Feature: Object-Oriented (Inheritance + Polymorphism)**
+
+`SportsCar` **inherits** from `Car`, reusing its fields and methods, and then **overrides** `accelerate()` to provide its own behavior — a form of polymorphism. This kind of code reuse and specialization only works because Java organizes programs around classes and objects with inheritance relationships.
+
+</details>
+
+---
+
+#### B3.
+
+A student writes a method that creates thousands of temporary `String` objects inside a loop. The student never writes any code to delete or free those objects, yet the program's memory usage doesn't grow without bound.
+
+<details>
+<summary>Show answer</summary>
+
+**Feature: Automatic Memory Management (Garbage Collection)**
+
+Once those temporary `String` objects are no longer referenced by anything the program can reach, Java's garbage collector automatically identifies them as unreachable and reclaims their memory — without the programmer ever writing a `free()` or `delete` call.
+
+</details>
+
+---
+
+#### B4.
+
+The exact same `.class` file, compiled once on a school's Windows lab computer, runs correctly on a student's Chromebook and a teacher's MacBook without being recompiled.
+
+<details>
+<summary>Show answer</summary>
+
+**Feature: Platform Independence**
+
+The `.class` file contains bytecode, not machine code — it isn't tied to Windows. Each device (Chromebook, MacBook) supplies its own JVM, which translates that identical bytecode into instructions appropriate for its own OS and hardware. This is Write Once, Run Anywhere.
+
+</details>
+
+---
+
+#### B5.
+
+```java
+public static void main(String[] args) {
+    int[] numbers = {1, 2, 3};
+    System.out.println(numbers[5]);
+}
+```
+
+This code compiles successfully, but throws an `ArrayIndexOutOfBoundsException` when run, instead of silently corrupting memory or crashing the whole system.
+
+<details>
+<summary>Show answer</summary>
+
+**Feature: Robust / Secure**
+
+Java checks array bounds at runtime and throws a catchable exception rather than allowing the program to read or write memory it shouldn't touch. This is part of why Java is described as robust and secure — it fails safely, with a specific, handleable error, instead of causing undefined behavior.
+
+</details>
+
+---
+
+#### B6.
+
+The program's source file compiles in under a second, but the compiled file cannot actually be run directly by double-clicking it on any operating system — a separate program has to be launched first to read it.
+
+<details>
+<summary>Show answer</summary>
+
+**Feature: Compiled + Interpreted (two-step execution)**
+
+Compilation (`javac`) only gets you to bytecode — an intermediate form, not a native executable. Running it still requires the **interpretation** step, where the JVM reads that bytecode and carries it out. Neither step alone produces a runnable program on its own; Java needs both.
+
+</details>
+
+---
+
+
 ### Anatomy of a Basic Java Program
 
 Every Java program follows the same basic structure. Here's each part labeled:
