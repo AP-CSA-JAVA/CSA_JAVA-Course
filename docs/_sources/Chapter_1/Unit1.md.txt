@@ -708,6 +708,97 @@ public class Allowance {
 > - [ ] Submit your program as a `.java` file and include test cases that your program worked as intended
 > 
 
+<details>
+<Summary>Starter Code</Summary>
+
+```java
+// Name:          [Your Full Name]
+// Partner:       [Partner's Full Name, or "None"]
+// Course:        AP Computer Science A
+// Instructor:    [Instructor Name]
+// Assignment:    1.2.2 — Scanner Class
+// Due Date:      [Month Day, Year]
+
+/* ============================================================
+ * GOAL
+ * Use the Scanner class to ask the user four questions and
+ * read their input as four different data types:
+ *   - String
+ *   - int
+ *   - double
+ *   - boolean
+ *
+ * REMINDERS FROM THE ASSIGNMENT
+ *   - Scanner lives in the java.util package — you must import it.
+ *   - To create a Scanner, pass System.in to it.
+ *   - To read a data type, use next<DataType>()  e.g. nextInt()
+ *   - To read a String, use nextLine()
+ *
+ * A NOTE BEFORE YOU START
+ * Mixing nextLine() with nextInt(), nextDouble(), or
+ * nextBoolean() in the same program can cause an input to
+ * get silently skipped. If that happens to you, that's a real
+ * and common Scanner bug — figure out why before asking for
+ * help. What does nextInt() leave behind in the input that
+ * nextLine() then picks up?
+ * ============================================================ */
+
+import java.util.Scanner;
+
+
+public class ScannerDemo {
+
+    public static void main(String[] args) {
+
+        // ---------------------------------------------------
+        // Example: creating the Scanner object
+        // ---------------------------------------------------
+        Scanner scanner = new Scanner(System.in);
+
+
+        // ---------------------------------------------------
+        // Example: one full question, start to finish
+        // (String input, read, and print)
+        // ---------------------------------------------------
+        System.out.println("What is your name?");
+        String name = scanner.nextLine();
+        System.out.println("Hello, " + name + "!");
+
+
+        // ---------------------------------------------------
+        // Your turn — follow the same pattern above for each
+        // of the remaining data types.
+        // ---------------------------------------------------
+
+        // TODO: ask the user a question that expects an int answer,
+        //       then read, store, and print it
+
+
+        // TODO: ask the user a question that expects a double answer,
+        //       then read, store, and print it
+
+
+        // TODO: ask the user a question that expects a boolean answer,
+        //       then read, store, and print it
+
+
+    }
+}
+
+/* ============================================================
+ * TEST CASES
+ * ------------------------------------------------------------
+ * Run your program at least twice with different inputs.
+ * For each run, record what you TYPED and what the program
+ * PRINTED BACK, and note whether it matched what you expected.
+ *
+ * ============================================================ */
+```
+
+
+</details>
+
+
 ---
 
 ## 1.3 Expressions and Output
@@ -727,6 +818,7 @@ public class Allowance {
 | CRP 5 | Utilize critical thinking to make sense of problems |
 
 </details>
+
 
 - [ ] Describe the functionality of a program using a single-line comment.
 - [ ] Use operators to construct compound expressions.
@@ -750,7 +842,8 @@ public class Allowance {
 > Using the equation below, calculate what your weight would be on different planets:
 >
 > `weightOnPlanet = (weightOnEarth / earthGravity) × planetGravity`
-> 
+>  Add 3 more planets that you will travel to.
+>
 > | Planet | Acceleration Due to Gravity (m/sec²) |
 > | :---: | :---: |
 > | Earth | 9.81 |
@@ -762,30 +855,39 @@ public class Allowance {
 > | Uranus | 10.67 |
 > | Neptune | 11.15 |
 >
-> ```java
-> 
-> // Starter Code.  Add 3 more planets that you will travel to.
-> 
-> public class GalaxyWeight
-> {
-> 	public static void main(String[] args) 
-> 	{
->     // declare and initialize weightOnEarth, earthGravity, and jupiterGravity 
->     int weightOnEarth = 177;
->     double earthGravity = 9.81;
->     double jupiterGravity = 24.79;
->     
->     // calculate weight
->     double weightOnJupiter = weightOnEarth * jupiterGravity / earthGravity;
->     
->     // show results
->     System.out.print("Your weight on Jupiter is ");
->     System.out.print(weightOnJupiter);
->     System.out.println(" lbs.");
->   }
-> }
-> ```
->
+
+
+<details>
+<Summary>Starter Code</Summary>
+
+```java
+
+// Name:          [Your Full Name]
+// Partner:       [Partner's Full Name, or "None"]
+// Course:        AP Computer Science A
+// Instructor:    [Instructor Name]
+// Assignment:    [Assignment Number — Assignment Title]
+// Due Date:      [Month Day, Year]
+
+public class GalaxyWeight{
+ 	public static void main(String[] args) 
+ 	{
+     // declare and initialize weightOnEarth, earthGravity, and jupiterGravity 
+     int weightOnEarth = 177;
+     double earthGravity = 9.81;
+     double jupiterGravity = 24.79;
+     
+     // calculate weight
+     double weightOnJupiter = weightOnEarth * jupiterGravity / earthGravity;
+     
+     // show results
+     System.out.print("Your weight on Jupiter is ");
+     System.out.print(weightOnJupiter);
+     System.out.println(" lbs.");
+  }
+}
+ ```
+</details>
 
 ---
 
