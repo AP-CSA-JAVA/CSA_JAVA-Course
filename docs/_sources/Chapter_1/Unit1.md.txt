@@ -842,6 +842,7 @@ public class ScannerDemo {
 > Using the equation below, calculate what your weight would be on different planets:
 >
 > `weightOnPlanet = (weightOnEarth / earthGravity) × planetGravity`
+>
 >  Add 3 more planets that you will travel to.
 >
 > | Planet | Acceleration Due to Gravity (m/sec²) |
@@ -897,6 +898,7 @@ public class GalaxyWeight{
 > - [ ] Create a program that will ask the user for two distinct integers
 > - [ ] Use the Scanner class to receive input from the user
 > - [ ] Store those values and perform addition, subtraction, multiplication, division, and modulo
+> - [ ] No Starter Code for this assignment 
 > 
 
 ---
