@@ -1,7 +1,7 @@
 # In Class Participation
 
 
-August 24, 2026
+**August 24, 2026**
 
 1.  Activity 1.4.2 Average Test/ Cashier Totals
 2.  1.7 Application Program Interface (API) and Libraries
