@@ -1545,21 +1545,25 @@ For this course we will primarily use <code class="docutils literal notranslate"
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> ask the user for four test scores</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> calculate and show the result</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use <code class="docutils literal notranslate"><span class="pre">printf</span></code> and round the output of the test scores to two decimal places</p></li>
 </ul>
 <p><strong>Cashier Totals</strong></p>
-<ul class="contains-task-list simple">
+<ul class="contains-task-list">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> ask the user for the number of burgers sold and how much each one costs</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> ask the user for the number of fries sold and how much each costs</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> display the total items sold</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> display the total sales</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use <code class="docutils literal notranslate"><span class="pre">printf</span></code> and round the output of the total sales to two decimal places &amp; include the dollar sign.</p>
+<p>Submit your program <code class="docutils literal notranslate"><span class="pre">.java</span></code> file and your test cases for each each program.</p>
+</li>
 </ul>
 <p><strong>Sample Output:</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Enter the first test score:
 95
 Enter the second test score:
-87
+87.5
 Enter the third test score:
-74
+73.2
 Enter the forth test score:
 75
 
@@ -1575,7 +1579,7 @@ Price of fries:
 1.95
 
 Total Items Sold: 14
-Total Sales: $64.3
+Total Sales: $64.30
 </pre></div>
 </div>
 </div></blockquote>
@@ -1669,11 +1673,11 @@ Total Sales: $64.3
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CastingEggs</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">args</span><span class="o">[]</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">eggs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">dozen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span><span class="c1">// the variable dozen will not change</span>
+<span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">dozen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span><span class="c1">// the variable dozen will not change</span>
 
 <span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Total eggs = "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">eggs</span><span class="o">/</span><span class="n">dozen</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" dozen"</span><span class="p">);</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Total eggs = "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">eggs</span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="n">dozen</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" dozen"</span><span class="p">);</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Total eggs = "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="n">eggs</span><span class="o">/</span><span class="w"> </span><span class="n">dozen</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" dozen"</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Total eggs = "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">eggs</span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="n">dozen</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" dozen"</span><span class="p">);</span><span class="w"> </span><span class="o">&lt;--</span><span class="w"> </span><span class="n">On</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">AP</span><span class="w"> </span><span class="n">Exam</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Total eggs = "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="n">eggs</span><span class="o">/</span><span class="w"> </span><span class="n">dozen</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" dozen"</span><span class="p">);</span><span class="w"> </span><span class="o">&lt;--</span><span class="w"> </span><span class="n">On</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">AP</span><span class="w"> </span><span class="n">Exam</span>
 
 <span class="c1">// Example output:</span>
 <span class="c1">// Total eggs = 0 dozen</span>
@@ -1739,7 +1743,7 @@ Total Sales: $64.3
 </pre></div>
 </div>
 </div></blockquote>
-<p>Your output should look similar to the example above. You will write a <strong>widening algorithm</strong> that shows the travel time to and from all planets using casting. The one rule is that you must use the provided code and <strong>not change any provided data types</strong>.</p>
+<p>Your output should look similar to the example above. You will write a <strong>widening algorithm</strong> that shows the travel time to and from all planets using casting. Use <code class="docutils literal notranslate"><span class="pre">printf</span></code> to widen the the time to 10 decimal places.  The one rule is that <em>you must use the provided code</em> and <em><strong>not change any provided data types</strong></em>.</p>
 </section>
 <hr class="docutils" />
 <section id="compound-assignment-operators">
@@ -1793,31 +1797,77 @@ Total Sales: $64.3
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Explain where objects are stored in memory when created with <code class="docutils literal notranslate"><span class="pre">new</span></code>.</p></li>
 </ul>
 <p>Java’s standard library (API) provides pre-built classes and methods organized into packages:</p>
+<p>Pick one Java library or API from the list below (or propose your own with instructor approval). Research it and write a short “scouting report” answering the four questions in the table.</p>
 <div class="table-wrapper colwidths-auto docutils container">
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>Package</p></th>
-<th class="head"><p>Purpose</p></th>
+<tr class="row-odd"><th class="head"><p>Where to look</p></th>
+<th class="head"><p>What you’ll find there</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">java.util</span></code></p></td>
-<td><p>Scanner, ArrayList, Random, etc.</p></td>
+<tr class="row-even"><td><p>Oracle Java SE API Docs</p></td>
+<td><p>Official documentation for every built-in package (java.util, java.time, java.nio, etc.)</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">java.lang</span></code></p></td>
-<td><p>String, Math, Integer, Double (automatically imported)</p></td>
+<tr class="row-odd"><td><p>Maven Central</p></td>
+<td><p>Searchable repository of third-party Java libraries</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">java.time</span></code></p></td>
-<td><p>LocalDate, LocalTime, DateTimeFormatter</p></td>
+<tr class="row-even"><td><p>GitHub</p></td>
+<td><p>Source code, README files, and real usage examples for open-source Java projects</p></td>
+</tr>
+<tr class="row-odd"><td><p>Baeldung</p></td>
+<td><p>Tutorials and comparisons of popular Java libraries</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>You import packages using the <code class="docutils literal notranslate"><span class="pre">import</span></code> statement:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
-</pre></div>
+<p><strong>Suggested APIs/libraries to scout</strong> (mix of built-in and third-party, so students see both):</p>
+<ul class="simple">
+<li><p>java.time (dates/times) vs. the older java.util.Date</p></li>
+<li><p>java.util.regex (pattern matching)</p></li>
+<li><p>Apache Commons Lang</p></li>
+<li><p>Gson or Jackson (JSON parsing)</p></li>
+<li><p>JUnit (testing)</p></li>
+<li><p>java.awt / Swing or JavaFX (GUI)</p></li>
+</ul>
+<p><strong>Scouting Report Questions (slideshow)</strong>:</p>
+<ul class="simple">
+<li><p>What does it do? Summarize the library’s purpose in your own words.</p></li>
+<li><p>Where did you find it, and how do you know it’s trustworthy? (Official docs? Star count/activity on GitHub? Widely cited in tutorials?)</p></li>
+<li><p>Why use this instead of writing the code yourself? Consider time, reliability, and whether you’d realistically get it right on the first try.</p></li>
+<li><p>How would it improve a program’s outcome? Think in terms of: fewer bugs, more readable code, faster development, handling edge cases you hadn’t considered.</p></li>
+</ul>
+<details> <summary>Rubric</summary>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Criteria</p></th>
+<th class="head"><p>Points</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>student(s) 2-minute “pitch” to the class</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>Accurately explains what the library does</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>Formats &amp; cites a credible, specific source (not just “I googled it”)</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>Gives a concrete reason for using it over hand-rolled code</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>Connects the library to a real outcome (fewer bugs, readability, speed)</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Total</strong></p></td>
+<td><p>5</p></td>
+</tr>
+</tbody>
+</table>
 </div>
+</details>
 </section>
 <hr class="docutils" />
 <section id="where-do-objects-live-heap-memory">
