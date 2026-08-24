@@ -1037,21 +1037,26 @@ One thing worth pointing out to students: `%d` **only** works with integer types
 > **Average Test Score**
 > - [ ] ask the user for four test scores
 > - [ ] calculate and show the result
+> - [ ] Use `printf` and round the output of the test scores to two decimal places
 > 
 > **Cashier Totals**
 > - [ ] ask the user for the number of burgers sold and how much each one costs
 > - [ ] ask the user for the number of fries sold and how much each costs
 > - [ ] display the total items sold
 > - [ ] display the total sales
-> 
+> - [ ] Use `printf` and round the output of the total sales to two decimal places & include the dollar sign.
+>
+>	Submit your program `.java` file and your test cases for each each program.
+>
+>
 > **Sample Output:**
 > ```
 > Enter the first test score:
 > 95
 > Enter the second test score:
-> 87
+> 87.5
 > Enter the third test score:
-> 74
+> 73.2
 > Enter the forth test score:
 > 75
 > 
@@ -1067,7 +1072,7 @@ One thing worth pointing out to students: `%d` **only** works with integer types
 > 1.95
 > 
 > Total Items Sold: 14
-> Total Sales: $64.3
+> Total Sales: $64.30
 > ```
 
 
@@ -1157,11 +1162,11 @@ Take a look at this program:
 public class CastingEggs {
   public static void main(String args[]) {
     int eggs = 9;
-    int dozen = 12;// the variable dozen will not change
+    final int dozen = 12;// the variable dozen will not change
 
     System.out.println("Total eggs = " + eggs/dozen + " dozen");
-    System.out.println("Total eggs = " + eggs/ (double)dozen + " dozen");
-    System.out.println("Total eggs = " + (double)eggs/ dozen + " dozen");
+    System.out.println("Total eggs = " + eggs/ (double)dozen + " dozen"); <-- On the AP Exam
+    System.out.println("Total eggs = " + (double)eggs/ dozen + " dozen"); <-- On the AP Exam
 
 // Example output:
 // Total eggs = 0 dozen
@@ -1235,7 +1240,7 @@ We know that we don't have 0 eggs.  We can rewrite our program to show how many 
 > Average travel time: approximately 4 hours.
 > ```
 
-Your output should look similar to the example above. You will write a **widening algorithm** that shows the travel time to and from all planets using casting. The one rule is that you must use the provided code and **not change any provided data types**.
+Your output should look similar to the example above. You will write a **widening algorithm** that shows the travel time to and from all planets using casting. Use `printf` to widen the the time to 10 decimal places.  The one rule is that *you must use the provided code* and ***not change any provided data types***.
 
 ---
 
@@ -1269,18 +1274,46 @@ Your output should look similar to the example above. You will write a **widenin
 
 Java's standard library (API) provides pre-built classes and methods organized into packages:
 
-| Package | Purpose |
-| ------- | ------- |
-| `java.util` | Scanner, ArrayList, Random, etc. |
-| `java.lang` | String, Math, Integer, Double (automatically imported) |
-| `java.time` | LocalDate, LocalTime, DateTimeFormatter |
+Pick one Java library or API from the list below (or propose your own with instructor approval). Research it and write a short "scouting report" answering the four questions in the table.
 
-You import packages using the `import` statement:
+| Where to look | What you'll find there |
+| ------------- | ---------------------- |
+| Oracle Java SE API Docs |	Official documentation for every built-in package (java.util, java.time, java.nio, etc.) |
+| Maven Central | Searchable repository of third-party Java libraries |
+| GitHub | Source code, README files, and real usage examples for open-source Java projects |
+| Baeldung | Tutorials and comparisons of popular Java libraries |
 
-```java
-import java.util.Scanner;
-import java.util.ArrayList;
-```
+**Suggested APIs/libraries to scout** (mix of built-in and third-party, so students see both):
+
+- java.time (dates/times) vs. the older java.util.Date
+- java.util.regex (pattern matching)
+- Apache Commons Lang
+- Gson or Jackson (JSON parsing)
+- JUnit (testing)
+- java.awt / Swing or JavaFX (GUI)
+
+**Scouting Report Questions (slideshow)**:
+
+- What does it do? Summarize the library's purpose in your own words.
+- Where did you find it, and how do you know it's trustworthy? (Official docs? Star count/activity on GitHub? Widely cited in tutorials?)
+- Why use this instead of writing the code yourself? Consider time, reliability, and whether you'd realistically get it right on the first try.
+- How would it improve a program's outcome? Think in terms of: fewer bugs, more readable code, faster development, handling edge cases you hadn't considered.
+
+<details> <summary>Rubric</summary>
+	
+| Criteria | Points |
+| -------- | ------ |
+| student(s) 2-minute "pitch" to the class | 1 |
+| Accurately explains what the library does | 1 |
+| Formats & cites a credible, specific source (not just "I googled it") |	1 |
+| Gives a concrete reason for using it over hand-rolled code | 1 |
+| Connects the library to a real outcome (fewer bugs, readability, speed) |	1 |
+|**Total** | 5 |
+
+
+</details>
+
+
 
 ---
 
