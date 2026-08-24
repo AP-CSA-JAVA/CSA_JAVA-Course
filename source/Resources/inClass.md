@@ -1,6 +1,32 @@
 # In Class Participation
-August 17, 2026
 
+
+August 24, 2026
+
+1.  Activity 1.4.2 Average Test/ Cashier Totals
+2.  1.7 Application Program Interface (API) and Libraries
+3.  Exit Ticket
+
+---
+
+August 21, 2026
+
+**I opened some of the assignments that were due on Wednesday, so you can upload your work.**
+1. Activity 1.1.4 Compound Assignment Operators
+
+---
+
+August 19, 2026
+
+1. Activity 1.1.3 Galaxy Weight
+2. Activity 1.2.1 Allowance.java
+3. Activity 1.2.2 Scanner_Input
+4. Activity 1.1.1 Why Programming? Why Java?
+  - Extra credit
+
+---
+
+August 17, 2026
 
 1. [VS Code Install Instructions](https://ap-csa-java.github.io/CSA_JAVA-Course/Resources/AP_Resources.html#getting-started-vs-code-for-ap-computer-science-a-windows-11)
 2. [Unit1_Lessons.pptx](https://github.com/user-attachments/files/31147962/Unit1_Lessons.pptx) : Lessons 1.1, 1.1a, 1.2, and 1.3
@@ -9,7 +35,6 @@ August 17, 2026
 ---
 
 August 14, 2026
-
 
 1. Before today, how much programming experience have you had? (None · A little on my own · A class before this one · A lot)
 
