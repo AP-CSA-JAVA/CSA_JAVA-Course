@@ -5,7 +5,8 @@
 
 1.  Activity 1.4.2 Average Test/ Cashier Totals
 2.  1.7 Application Program Interface (API) and Libraries
-3.  Exit Ticket
+3.  Distributed [Java Quick Reference](https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-java-quick-reference.pdf)
+4.  Exit Ticket
 
 ---
 
