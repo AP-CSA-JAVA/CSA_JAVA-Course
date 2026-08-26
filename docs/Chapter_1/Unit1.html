@@ -248,9 +248,7 @@
           <section id="unit-1-using-objects-and-methods">
 <h1>Unit 1 - Using Objects and Methods<a class="headerlink" href="#unit-1-using-objects-and-methods" title="Link to this heading">¶</a></h1>
 <p><em>AP Exam Weighting: 15–25%</em></p>
-<section id="ap-computer-science-a-assignment-rubric">
-<h2>AP Computer Science A — Assignment Rubric<a class="headerlink" href="#ap-computer-science-a-assignment-rubric" title="Link to this heading">¶</a></h2>
-<hr class="docutils" />
+<p><strong>AP Computer Science A — Assignment Rubric</strong></p>
 <details>
 <summary>Assignment Header</summary> 
 <p>All submitted documents and <code class="docutils literal notranslate"><span class="pre">.java</span></code> files must include the header below. This mirrors the block comment required in <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> and follows the standard used by university CS departments.</p>
@@ -449,7 +447,6 @@ Due Date:      [Month Day, Year]
 </table>
 </div>
 </details>
-</section>
 <hr class="docutils" />
 <section id="introduction-to-algorithms-programming-and-compilers">
 <h2>1.1 Introduction to Algorithms, Programming, and Compilers<a class="headerlink" href="#introduction-to-algorithms-programming-and-compilers" title="Link to this heading">¶</a></h2>
@@ -1568,7 +1565,7 @@ Enter the forth test score:
 75
 
 Average test score: 82.75%
----------------------------------
+*************************************
 Enter the number of burgers ordered:
 10
 Price of a burger:
@@ -1686,9 +1683,10 @@ Total Sales: $64.30
 </pre></div>
 </div>
 <p>We know that we don’t have 0 eggs.  We can rewrite our program to show how many eggs we have in decimal form.</p>
+<section id="assignment-1-5-1-fiveplanettravel">
+<h3>Assignment 1.5.1 — FivePlanetTravel<a class="headerlink" href="#assignment-1-5-1-fiveplanettravel" title="Link to this heading">¶</a></h3>
 <blockquote>
-<div><p class="rubric" id="assignment-1-5-1-fiveplanettravel">Assignment 1.5.1 — FivePlanetTravel</p>
-<p>You will explore the PlanetTravel program called <strong>FivePlanetTravel</strong>. The program is set up to plan a five-planet tour!</p>
+<div><p>You will explore the PlanetTravel program called <strong>FivePlanetTravel</strong>. The program is set up to plan a five-planet tour!</p>
 <p><strong>Starter Code:</strong></p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">FivePlanetTravel</span>
 <span class="p">{</span>
@@ -1744,6 +1742,7 @@ Total Sales: $64.30
 </div>
 </div></blockquote>
 <p>Your output should look similar to the example above. You will write a <strong>widening algorithm</strong> that shows the travel time to and from all planets using casting. Use <code class="docutils literal notranslate"><span class="pre">printf</span></code> to widen the the time to 10 decimal places.  The one rule is that <em>you must use the provided code</em> and <em><strong>not change any provided data types</strong></em>.</p>
+</section>
 </section>
 <hr class="docutils" />
 <section id="compound-assignment-operators">
@@ -1972,10 +1971,223 @@ Total Sales: $64.30
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">java.lang</span></code> (which contains <code class="docutils literal notranslate"><span class="pre">String</span></code>, <code class="docutils literal notranslate"><span class="pre">Math</span></code>, <code class="docutils literal notranslate"><span class="pre">Integer</span></code>, etc.) is imported <strong>automatically</strong> — you never need to import it manually.</p>
+<hr class="docutils" />
+<section id="assignment-1-7-1-heap-detective-tracing-references-and-memory">
+<h3>Assignment 1.7.1 — Heap Detective: Tracing References and Memory<a class="headerlink" href="#assignment-1-7-1-heap-detective-tracing-references-and-memory" title="Link to this heading">¶</a></h3>
+<details>
+<summary>📌 Standards — 1.7.3</summary>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Standard</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ICT 5.4</p></td>
+<td><p>Interpret information and draw conclusions to make informed decisions</p></td>
+</tr>
+<tr class="row-odd"><td><p>ICT 5.8</p></td>
+<td><p>Create and use algorithms to solve problems</p></td>
+</tr>
+<tr class="row-even"><td><p>ICT 5.9</p></td>
+<td><p>Deconstruct large problems into smaller components</p></td>
+</tr>
+<tr class="row-odd"><td><p>ICT 5.10</p></td>
+<td><p>Use multiple layers of abstraction</p></td>
+</tr>
+<tr class="row-even"><td><p>ICT 10.1</p></td>
+<td><p>Interpret and explain ICT-specific terminology</p></td>
+</tr>
+<tr class="row-odd"><td><p>C4.5</p></td>
+<td><p>Demonstrate awareness of the OOP paradigm</p></td>
+</tr>
+<tr class="row-even"><td><p>C4.7</p></td>
+<td><p>Use various data structures including objects</p></td>
+</tr>
+<tr class="row-odd"><td><p>C4.9</p></td>
+<td><p>Create programs using control structures, procedures, and variables</p></td>
+</tr>
+<tr class="row-even"><td><p>CRP 1</p></td>
+<td><p>Apply appropriate technical skills and academic knowledge</p></td>
+</tr>
+<tr class="row-odd"><td><p>CRP 5</p></td>
+<td><p>Utilize critical thinking to make sense of problems</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<blockquote>
+<div><p>🧰 <strong>Supplies Needed</strong></p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Computer with VS Code / Coding Rooms set up (for Parts A and C)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Printed or blank paper</strong> for Part B — one sheet per student (memory diagrams are hand-drawn, not typed)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Pencil or pen (not a computer) for Part B — sketching stack/heap boxes by hand is the point</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Ruler or straightedge (optional, but helps students draw clean boxes/arrows for the stack and heap regions)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> This assignment handout (printed or displayed) — Part A must be attempted <strong>before</strong> running any code</p></li>
+</ul>
+<p>By the end of this activity you will be able to:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Predict how a program will behave when two variables reference the same object</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Distinguish reference (aliasing) behavior from primitive copy behavior</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Draw an accurate stack/heap diagram for a short code snippet</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Explain, in your own words, when an object becomes eligible for garbage collection</p></li>
+</ul>
+<p><strong>Part A — Predict the Output</strong></p>
+<p><strong>Do this section on paper first. Do not run any code until every prediction is written down.</strong></p>
+<p>For each snippet below: (1) write your predicted output, (2) run it, (3) if you were wrong, write one sentence explaining what you misunderstood.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Snippet 1 — aliasing</span>
+<span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">};</span>
+<span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr1</span><span class="p">;</span>
+<span class="n">arr2</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">99</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">arr1</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span><span class="w">   </span><span class="c1">// predict, then explain WHY</span>
+</pre></div>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Snippet 2 — primitives don't alias</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span><span class="p">);</span><span class="w">         </span><span class="c1">// predict, then explain WHY this differs from Snippet 1</span>
+</pre></div>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Snippet 3 — null trap</span>
+<span class="n">Scanner</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"caught it"</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">s</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span><span class="w">               </span><span class="c1">// would this crash if the if weren't there?</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Snippet 4 — String pool</span>
+<span class="n">String</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"cat"</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"cat"</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="s">"cat"</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">c</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">c</span><span class="p">));</span>
+</pre></div>
+</div>
+<p><strong>Part B — Draw the Memory Diagram</strong></p>
+<p><strong>On paper.</strong> Draw two labeled boxes: <strong>Stack</strong> and <strong>Heap</strong>. For the code below, place every variable and object correctly, with arrows showing which variable points to which object in the heap.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="w">    </span><span class="n">Backpack</span><span class="w"> </span><span class="n">myBag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Backpack</span><span class="p">();</span>
+<span class="w">    </span><span class="n">Backpack</span><span class="w"> </span><span class="n">sameBag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myBag</span><span class="p">;</span>
+<span class="w">    </span><span class="n">Backpack</span><span class="w"> </span><span class="n">differentBag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Backpack</span><span class="p">();</span>
+
+<span class="w">    </span><span class="n">sameBag</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"pencil"</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Your diagram must show:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">total</span></code> as a value directly on the Stack (not an arrow)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">myBag</span></code>, <code class="docutils literal notranslate"><span class="pre">sameBag</span></code>, and <code class="docutils literal notranslate"><span class="pre">differentBag</span></code> as address labels on the Stack</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Exactly <strong>two</strong> <code class="docutils literal notranslate"><span class="pre">Backpack</span></code> objects drawn in the Heap (not three)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Arrows from <code class="docutils literal notranslate"><span class="pre">myBag</span></code> <strong>and</strong> <code class="docutils literal notranslate"><span class="pre">sameBag</span></code> pointing to the <em>same</em> heap object</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> An arrow from <code class="docutils literal notranslate"><span class="pre">differentBag</span></code> pointing to its own, separate heap object</p></li>
+</ul>
+<p><strong>Part C — Alias Detective (Coding Task)</strong></p>
+<p>Using the <code class="docutils literal notranslate"><span class="pre">Backpack</span></code> class below, write a <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> program that demonstrates aliasing behavior through actual printed output — not just comments.</p>
+<p><strong>Backpack.java — provided, do not modify:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Backpack</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">item</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">addItem</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">newItem</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newItem</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getItem</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">item</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Note:</strong> This class has no <code class="docutils literal notranslate"><span class="pre">toString()</span></code> — you haven’t covered that yet, and you don’t need it. When you print a <code class="docutils literal notranslate"><span class="pre">Backpack</span></code> object directly (e.g. <code class="docutils literal notranslate"><span class="pre">System.out.println(myBag)</span></code>), Java shows its default form: something like <code class="docutils literal notranslate"><span class="pre">Backpack&#64;15db9742</span></code>. That’s actually useful here — it’s the same kind of output you saw with the <code class="docutils literal notranslate"><span class="pre">Cake</span></code> object in 1.13. Two variables pointing to the <em>same</em> object will print the exact same address-looking text; a separate object will print a different one. That’s a second, independent way to prove aliasing, on top of comparing the contents with <code class="docutils literal notranslate"><span class="pre">getItem()</span></code>.</p>
+<p><strong>Requirements Checklist</strong></p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create two <code class="docutils literal notranslate"><span class="pre">Backpack</span></code> variables where one is assigned to the other (<code class="docutils literal notranslate"><span class="pre">myBag</span></code>, <code class="docutils literal notranslate"><span class="pre">sameBag</span></code>)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Add an item through <code class="docutils literal notranslate"><span class="pre">sameBag</span></code>, then print <code class="docutils literal notranslate"><span class="pre">myBag.getItem()</span></code> and <code class="docutils literal notranslate"><span class="pre">sameBag.getItem()</span></code> — prove they show the same content</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Also print <code class="docutils literal notranslate"><span class="pre">myBag</span></code> and <code class="docutils literal notranslate"><span class="pre">sameBag</span></code> directly (no method call) — prove they show the same object reference/address</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create a third, independently-<code class="docutils literal notranslate"><span class="pre">new</span></code>’d <code class="docutils literal notranslate"><span class="pre">Backpack</span></code> (<code class="docutils literal notranslate"><span class="pre">differentBag</span></code>) — add a <strong>different</strong> item to it, then print its content and its raw reference, proving both are different from the other two</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Label each variable in an inline comment as either “stack reference” or explain what heap object it points to</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> End your block comment header with a 2–3 sentence explanation of why <code class="docutils literal notranslate"><span class="pre">sameBag</span></code> and <code class="docutils literal notranslate"><span class="pre">myBag</span></code> behaved differently from <code class="docutils literal notranslate"><span class="pre">differentBag</span></code></p></li>
+</ul>
+<p><strong>Starter Code — Main.java:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Name:          [Your Full Name]</span>
+<span class="c1">// Partner:       [Partner's Full Name, or "None"]</span>
+<span class="c1">// Course:        AP Computer Science A</span>
+<span class="c1">// Instructor:    [Instructor Name]</span>
+<span class="c1">// Assignment:    1.7.3 — Heap Detective: Tracing References and Memory</span>
+<span class="c1">// Due Date:      [Month Day, Year]</span>
+<span class="c1">//</span>
+<span class="c1">// Explanation: [TODO — after finishing the program, explain in 2-3</span>
+<span class="c1">//               sentences why sameBag and myBag behaved differently</span>
+<span class="c1">//               from differentBag]</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="c1">// TODO 1: Create myBag — a new Backpack</span>
+
+<span class="w">        </span><span class="c1">// TODO 2: Create sameBag — assigned to myBag (NOT a new Backpack)</span>
+
+<span class="w">        </span><span class="c1">// TODO 3: Add an item to sameBag</span>
+
+<span class="w">        </span><span class="c1">// TODO 4: Print myBag.getItem() and sameBag.getItem() — both</span>
+<span class="w">        </span><span class="c1">//         should show the same item</span>
+
+<span class="w">        </span><span class="c1">// TODO 5: Print myBag and sameBag directly (no method call) —</span>
+<span class="w">        </span><span class="c1">//         both should show the same object reference/address</span>
+
+<span class="w">        </span><span class="c1">// TODO 6: Create differentBag — a separate, new Backpack</span>
+
+<span class="w">        </span><span class="c1">// TODO 7: Add a DIFFERENT item to differentBag</span>
+
+<span class="w">        </span><span class="c1">// TODO 8: Print differentBag's content and its raw reference —</span>
+<span class="w">        </span><span class="c1">//         neither should match myBag/sameBag</span>
+
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Sample Output</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">myBag</span> <span class="n">content</span><span class="p">:</span>        <span class="n">pencil</span>
+<span class="n">sameBag</span> <span class="n">content</span><span class="p">:</span>      <span class="n">pencil</span>
+<span class="n">differentBag</span> <span class="n">content</span><span class="p">:</span> <span class="n">notebook</span>
+
+<span class="n">myBag</span> <span class="n">reference</span><span class="p">:</span>        <span class="n">Backpack</span><span class="o">@</span><span class="mi">15</span><span class="n">db9742</span>
+<span class="n">sameBag</span> <span class="n">reference</span><span class="p">:</span>       <span class="n">Backpack</span><span class="o">@</span><span class="mi">15</span><span class="n">db9742</span>
+<span class="n">differentBag</span> <span class="n">reference</span><span class="p">:</span>  <span class="n">Backpack</span><span class="o">@</span><span class="mi">2</span><span class="n">f92e0f4</span>
+</pre></div>
+</div>
+<p><strong>Part D — Reflection</strong></p>
+<p>Answer in your block comment or a short paragraph submitted with your code:</p>
+<p>Why does Java’s garbage collector matter here? What would have to be true about <code class="docutils literal notranslate"><span class="pre">myBag</span></code> and <code class="docutils literal notranslate"><span class="pre">sameBag</span></code> for the <code class="docutils literal notranslate"><span class="pre">Backpack</span></code> object they both point to become eligible for garbage collection?</p>
+<p><strong>Submission</strong></p>
+<p>Upload the following to the assignment:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Part A — predictions and corrections (photo, scan, or typed document)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Part B — memory diagram (photo or scan of your hand-drawn diagram)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> — completed Part C program with block comment header</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Part D reflection (can be included in the block comment header)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Test Cases document showing your program’s actual output</p></li>
+</ul>
+<p><strong>Grading</strong></p>
+<p>This assignment is graded using the <strong>AP CSA Generic Assignment Rubric</strong> (5-point scale). Pay particular attention to:</p>
+<ul class="simple">
+<li><p>Part A predictions were made <strong>before</strong> running the code, with honest self-corrections written for any wrong guesses</p></li>
+<li><p>Part B diagram correctly shows exactly two heap objects (not three) with accurate arrows</p></li>
+<li><p>Part C program compiles, runs, and produces output proving all three aliasing behaviors — not just comments claiming it does</p></li>
+<li><p>Part D reflection accurately connects reference sharing to garbage collection eligibility, in the student’s own words</p></li>
+</ul>
+</div></blockquote>
 </section>
 <hr class="docutils" />
-<section id="assignment-1-7-1-magic-8-ball-exploring-apis-and-libraries">
-<h2>Assignment 1.7.1 — Magic 8-Ball: Exploring APIs and Libraries<a class="headerlink" href="#assignment-1-7-1-magic-8-ball-exploring-apis-and-libraries" title="Link to this heading">¶</a></h2>
+<section id="assignment-1-7-2-magic-8-ball-exploring-apis-and-libraries">
+<h3>Assignment 1.7.2 — Magic 8-Ball: Exploring APIs and Libraries<a class="headerlink" href="#assignment-1-7-2-magic-8-ball-exploring-apis-and-libraries" title="Link to this heading">¶</a></h3>
 <p><strong>Overview</strong></p>
 <p>In this activity you will explore the Java API documentation to understand how libraries and packages work, then build a Magic 8-Ball program that imports and uses classes from the Java standard library.</p>
 <p>By the end of this activity you will be able to:</p>
@@ -1986,51 +2198,8 @@ Total Sales: $64.30
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use an <code class="docutils literal notranslate"><span class="pre">import</span></code> statement to include a package in your program</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Call methods from <code class="docutils literal notranslate"><span class="pre">java.util.Scanner</span></code> and <code class="docutils literal notranslate"><span class="pre">java.util.Random</span></code> meaningfully in a program</p></li>
 </ul>
-</section>
-<hr class="docutils" />
-<section id="assignment-1-7-1a-api-investigation">
-<h2>Assignment 1.7.1a — API Investigation<a class="headerlink" href="#assignment-1-7-1a-api-investigation" title="Link to this heading">¶</a></h2>
 <blockquote>
-<div><p>Using the Java 8 API documentation at <strong>https://docs.oracle.com/javase/8/docs/api/</strong>, answer the following questions in a comment block at the top of your <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> file or in a separate text document submitted alongside your code.</p>
-<p class="rubric" id="section-a-packages-and-classes">Section A — Packages and Classes</p>
-<ol class="arabic simple">
-<li><p>What is the full package path for the <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> class?</p></li>
-<li><p>What is the full package path for the <code class="docutils literal notranslate"><span class="pre">Random</span></code> class?</p></li>
-<li><p>Name <strong>two other classes</strong> found in the <code class="docutils literal notranslate"><span class="pre">java.util</span></code> package.</p></li>
-<li><p>Name <strong>one class</strong> found in the <code class="docutils literal notranslate"><span class="pre">java.time</span></code> package and describe what it does in one sentence.</p></li>
-<li><p>In your own words, what is the difference between a <strong>package</strong> and a <strong>class</strong>?</p></li>
-</ol>
-<p class="rubric" id="section-b-scanner-class">Section B — Scanner Class</p>
-<p>Navigate to the <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> class in the documentation.</p>
-<ol class="arabic simple" start="6">
-<li><p>What does the <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> constructor <code class="docutils literal notranslate"><span class="pre">Scanner(InputStream</span> <span class="pre">source)</span></code> do?</p></li>
-<li><p>What method would you use to read a full line of text entered by the user? What does it return?</p></li>
-<li><p>What method would you use to read a single <code class="docutils literal notranslate"><span class="pre">int</span></code> entered by the user?</p></li>
-<li><p>Why is it important to call <code class="docutils literal notranslate"><span class="pre">scanner.close()</span></code> when you are done using a Scanner?</p></li>
-</ol>
-<p class="rubric" id="section-c-random-class">Section C — Random Class</p>
-<p>Navigate to the <code class="docutils literal notranslate"><span class="pre">Random</span></code> class in the documentation.</p>
-<ol class="arabic simple" start="10">
-<li><p>What does <code class="docutils literal notranslate"><span class="pre">nextInt(int</span> <span class="pre">bound)</span></code> return? What is the range of values it can produce?</p></li>
-<li><p>How would you use <code class="docutils literal notranslate"><span class="pre">nextInt()</span></code> to generate a random number between <strong>1 and 8 inclusive</strong>? Write the expression.</p></li>
-<li><p>What is the difference between <code class="docutils literal notranslate"><span class="pre">nextInt()</span></code> and <code class="docutils literal notranslate"><span class="pre">nextDouble()</span></code>?</p></li>
-<li><p>Why might a program produce the same “random” sequence every time if you pass a fixed value to the <code class="docutils literal notranslate"><span class="pre">Random</span></code> constructor (e.g., <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Random(42)</span></code>)?</p></li>
-</ol>
-<p class="rubric" id="section-d-memory-the-heap-oracle-1z0-811">Section D — Memory &amp; the Heap <em>(Oracle 1Z0-811)</em></p>
-<ol class="arabic simple" start="14">
-<li><p>In your own words, what is the <strong>heap</strong> and what gets stored there?</p></li>
-<li><p>When you write <code class="docutils literal notranslate"><span class="pre">Scanner</span> <span class="pre">input</span> <span class="pre">=</span> <span class="pre">new</span> <span class="pre">Scanner(System.in);</span></code>, what does the variable <code class="docutils literal notranslate"><span class="pre">input</span></code> actually hold — the object itself, or something else? Explain.</p></li>
-<li><p>What is <code class="docutils literal notranslate"><span class="pre">null</span></code>, and what happens at runtime if you try to call a method on a <code class="docutils literal notranslate"><span class="pre">null</span></code> variable?</p></li>
-<li><p>What is the <strong>String pool</strong>, and why does <code class="docutils literal notranslate"><span class="pre">==</span></code> sometimes return <code class="docutils literal notranslate"><span class="pre">true</span></code> when comparing two String variables that were never explicitly set equal to each other?</p></li>
-<li><p>What is the <strong>garbage collector</strong> and why is it considered a safety feature of Java?</p></li>
-</ol>
-</div></blockquote>
-</section>
-<hr class="docutils" />
-<section id="assignment-1-7-2-magic-8-ball-program">
-<h2>Assignment 1.7.2 — Magic 8-Ball Program<a class="headerlink" href="#assignment-1-7-2-magic-8-ball-program" title="Link to this heading">¶</a></h2>
-<blockquote>
-<div><p class="rubric" id="program-description">Program Description</p>
+<div><p><strong>Program Description</strong></p>
 <p>Build a Magic 8-Ball program that:</p>
 <ul class="simple">
 <li><p>Asks the user to enter a yes/no question</p></li>
@@ -2038,7 +2207,7 @@ Total Sales: $64.30
 <li><p>Displays the response in a formatted output</p></li>
 <li><p>Asks the user if they want to ask another question and loops until they choose to quit</p></li>
 </ul>
-<p class="rubric" id="requirements-checklist">Requirements Checklist</p>
+<p><strong>Requirements Checklist</strong></p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Include the required block comment header in <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> (all fields completed)</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Import <code class="docutils literal notranslate"><span class="pre">java.util.Scanner</span></code> and <code class="docutils literal notranslate"><span class="pre">java.util.Random</span></code></p></li>
@@ -2051,7 +2220,7 @@ Total Sales: $64.30
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Include meaningful inline comments throughout</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> In your block comment header, add <strong>one sentence</strong> explaining where the <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> and <code class="docutils literal notranslate"><span class="pre">Random</span></code> objects live in memory when your program runs</p></li>
 </ul>
-<p class="rubric" id="the-eight-responses">The Eight Responses</p>
+<p><strong>The Eight Responses</strong></p>
 <p>Your program must include <strong>all eight</strong> of the following responses:</p>
 <div class="table-wrapper colwidths-auto docutils container">
 <table class="docutils align-default">
@@ -2088,8 +2257,7 @@ Total Sales: $64.30
 </tbody>
 </table>
 </div>
-<hr class="docutils" />
-<p class="rubric" id="starter-code">Starter Code</p>
+<p><strong>Starter Code</strong></p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Import the required packages</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Random</span><span class="p">;</span>
@@ -2134,7 +2302,7 @@ Total Sales: $64.30
 <span class="p">}</span>
 </pre></div>
 </div>
-<p class="rubric" id="sample-output">Sample Output</p>
+<p><strong>Sample Output</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Welcome to the Magic 8-Ball!
 ============================
 Ask your yes/no question: Will I ace my CS test?
@@ -2155,7 +2323,7 @@ The Magic 8-Ball has spoken. Goodbye!
 </pre></div>
 </div>
 <hr class="docutils" />
-<p class="rubric" id="extension-challenges">Extension Challenges</p>
+<p><strong>Extension Challenges</strong></p>
 <p>Completed early? Try one or more of the following:</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Expand the responses</strong> — add at least four more responses of your own for a total of twelve</p></li>
@@ -2164,15 +2332,15 @@ The Magic 8-Ball has spoken. Goodbye!
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Seeded Random</strong> — let the user enter a “lucky number” that seeds the Random object. Investigate what happens when they use the same number twice. <em>(Hint: this connects to how the JVM initializes objects in the heap)</em></p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Null guard</strong> — add a check so that if the user enters a blank question, the program prints a warning instead of sending an empty question to the 8-Ball. Think about what <code class="docutils literal notranslate"><span class="pre">null</span></code> and empty strings mean in the heap.</p></li>
 </ul>
-<hr class="docutils" />
-<p class="rubric" id="submission">Submission</p>
+<p>============================</p>
+<p><strong>Submission</strong></p>
 <p>Upload the following to the assignment:</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> — your completed program with block comment header</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Test Cases document — showing at least <strong>three</strong> runs of your program with different questions and the responses generated</p></li>
 </ul>
-<hr class="docutils" />
-<p class="rubric" id="grading">Grading</p>
+<p>============================</p>
+<p><strong>Grading</strong></p>
 <p>This assignment is graded using the <strong>AP CSA Generic Assignment Rubric</strong> (5-point scale). Pay particular attention to:</p>
 <ul class="simple">
 <li><p>Import statements are present and used (not just written)</p></li>
@@ -2182,6 +2350,7 @@ The Magic 8-Ball has spoken. Goodbye!
 <li><p>Section D memory questions are answered accurately and in the student’s own words</p></li>
 </ul>
 </div></blockquote>
+</section>
 </section>
 <hr class="docutils" />
 <section id="documentation-with-comments">
@@ -2485,7 +2654,7 @@ The Magic 8-Ball has spoken. Goodbye!
 </ol>
 <hr class="docutils" />
 <p class="rubric" id="part-2-mission-control-program">Part 2 — Mission Control Program</p>
-<p class="rubric" id="id1">Program Description</p>
+<p class="rubric" id="program-description">Program Description</p>
 <p>You are writing the launch software for Mission Control. Your program will:</p>
 <ul class="simple">
 <li><p>Accept rocket launch parameters from the user via <code class="docutils literal notranslate"><span class="pre">Scanner</span></code></p></li>
@@ -2493,7 +2662,7 @@ The Magic 8-Ball has spoken. Goodbye!
 <li><p>Warn the crew if any value falls outside safe limits</p></li>
 <li><p>Print a formatted launch report</p></li>
 </ul>
-<p class="rubric" id="id2">Requirements Checklist</p>
+<p class="rubric" id="requirements-checklist">Requirements Checklist</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Include the required block comment header in <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> (all fields completed)</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Write and call <strong>at least four</strong> static methods of your own (see specifications below)</p></li>
@@ -2543,7 +2712,7 @@ The Magic 8-Ball has spoken. Goodbye!
 <li><p>Prints a safety status message based on the <code class="docutils literal notranslate"><span class="pre">boolean</span></code> parameter</p></li>
 </ul>
 <hr class="docutils" />
-<p class="rubric" id="id3">Starter Code</p>
+<p class="rubric" id="starter-code">Starter Code</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
 
 <span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span>
@@ -2610,7 +2779,7 @@ The Magic 8-Ball has spoken. Goodbye!
 </pre></div>
 </div>
 <hr class="docutils" />
-<p class="rubric" id="id4">Sample Output</p>
+<p class="rubric" id="sample-output">Sample Output</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>=== MISSION CONTROL LAUNCH SYSTEM ===
 Enter rocket name: Falcon Alpha
 Enter fuel amount (liters): 5000
@@ -2648,7 +2817,7 @@ LAUNCH STATUS:     ✗ UNSAFE — ABORT LAUNCH
 </pre></div>
 </div>
 <hr class="docutils" />
-<p class="rubric" id="id5">Extension Challenges</p>
+<p class="rubric" id="extension-challenges">Extension Challenges</p>
 <p>Completed early? Try one or more of the following:</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Add a fifth method</strong> <code class="docutils literal notranslate"><span class="pre">calculateMaxAltitude(double</span> <span class="pre">thrustKn,</span> <span class="pre">double</span> <span class="pre">massKg)</span></code> that returns an estimated max altitude using <code class="docutils literal notranslate"><span class="pre">Math.pow()</span></code> and <code class="docutils literal notranslate"><span class="pre">Math.sqrt()</span></code> in the formula</p></li>
@@ -2657,14 +2826,14 @@ LAUNCH STATUS:     ✗ UNSAFE — ABORT LAUNCH
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Unit conversion</strong> — add a static method that converts <code class="docutils literal notranslate"><span class="pre">km/h</span></code> to <code class="docutils literal notranslate"><span class="pre">m/s</span></code> and display both speeds in the report</p></li>
 </ul>
 <hr class="docutils" />
-<p class="rubric" id="id6">Submission</p>
+<p class="rubric" id="submission">Submission</p>
 <p>Upload the following to the assignment:</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> — your completed program with block comment header</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Test Cases document — showing at least <strong>three</strong> runs with different rocket inputs, including one that triggers the unsafe launch warning</p></li>
 </ul>
 <hr class="docutils" />
-<p class="rubric" id="id7">Grading</p>
+<p class="rubric" id="grading">Grading</p>
 <p>This assignment is graded using the <strong>AP CSA Generic Assignment Rubric</strong> (5-point scale). Pay particular attention to:</p>
 <ul class="simple">
 <li><p>All four required static methods are present, correctly implemented, and called in <code class="docutils literal notranslate"><span class="pre">main</span></code></p></li>
@@ -2877,7 +3046,7 @@ LAUNCH STATUS:     ✗ UNSAFE — ABORT LAUNCH
 </table>
 </div>
 <hr class="docutils" />
-<p class="rubric" id="id8">Overview</p>
+<p class="rubric" id="id1">Overview</p>
 <p>In this activity you will apply what you have learned about the <code class="docutils literal notranslate"><span class="pre">Math</span></code> class, static methods, object instantiation, and <code class="docutils literal notranslate"><span class="pre">java.util.Random</span></code> to simulate a drag race between two cars. You will complete a partially written program by implementing the <code class="docutils literal notranslate"><span class="pre">computeTime</span></code> method in <code class="docutils literal notranslate"><span class="pre">Racecar.java</span></code> and filling in the guided comments in <code class="docutils literal notranslate"><span class="pre">Main.java</span></code>.</p>
 <p>By the end of this activity you will be able to:</p>
 <ul class="contains-task-list simple">
@@ -2888,7 +3057,7 @@ LAUNCH STATUS:     ✗ UNSAFE — ABORT LAUNCH
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Connect prior concepts — classes, constructors, <code class="docutils literal notranslate"><span class="pre">toString()</span></code>, and static methods — in a complete program</p></li>
 </ul>
 <hr class="docutils" />
-<p class="rubric" id="id9">Background</p>
+<p class="rubric" id="id2">Background</p>
 <p class="rubric" id="connecting-prior-activities">Connecting Prior Activities</p>
 <p>You have already used these concepts individually. This activity brings them together:</p>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -3035,7 +3204,7 @@ To get the range 20–50 (31 possible values), use <code class="docutils literal
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Print the finishing time for each car in the format shown below</p></li>
 </ul>
 <hr class="docutils" />
-<p class="rubric" id="id10">Sample Output</p>
+<p class="rubric" id="id3">Sample Output</p>
 <p>Because acceleration is random, your times will differ each run. The format must match exactly:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Racer</span> <span class="n">Tom</span><span class="s1">'s car finished in 10.596 seconds.</span>
 <span class="n">Racer</span> <span class="n">Jerry</span><span class="s1">'s car finished in 11.423 seconds.</span>
@@ -3059,7 +3228,7 @@ To get the range 20–50 (31 possible values), use <code class="docutils literal
 <li><p><code class="docutils literal notranslate"><span class="pre">toString()</span></code> is already written for you. When <code class="docutils literal notranslate"><span class="pre">System.out.println(car1</span> <span class="pre">+</span> <span class="pre">&quot;'s</span> <span class="pre">car</span> <span class="pre">finished</span> <span class="pre">in</span> <span class="pre">&quot;</span> <span class="pre">+</span> <span class="pre">time</span> <span class="pre">+</span> <span class="pre">&quot;</span> <span class="pre">seconds.&quot;)</span></code> runs, what triggers the call to <code class="docutils literal notranslate"><span class="pre">toString()</span></code>?</p></li>
 </ol>
 <hr class="docutils" />
-<p class="rubric" id="id11">Extension Challenges</p>
+<p class="rubric" id="id4">Extension Challenges</p>
 <p>Completed early? Try one or more of the following:</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>User input</strong> — use <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> to let the user enter driver names and/or the track length instead of hardcoding them</p></li>
@@ -3068,7 +3237,7 @@ To get the range 20–50 (31 possible values), use <code class="docutils literal
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Leaderboard</strong> — sort and print the cars from fastest to slowest finishing time</p></li>
 </ul>
 <hr class="docutils" />
-<p class="rubric" id="id12">Submission</p>
+<p class="rubric" id="id5">Submission</p>
 <p>Upload the following to the assignment:</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">Racecar.java</span></code> — with <code class="docutils literal notranslate"><span class="pre">computeTime</span></code> fully implemented</p></li>
@@ -3076,7 +3245,7 @@ To get the range 20–50 (31 possible values), use <code class="docutils literal
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Test Cases document — showing at least <strong>three</strong> runs of your program demonstrating different random acceleration values each time</p></li>
 </ul>
 <hr class="docutils" />
-<p class="rubric" id="id13">Grading</p>
+<p class="rubric" id="id6">Grading</p>
 <p>This assignment is graded using the <strong>AP CSA Generic Assignment Rubric</strong> (5-point scale). Pay particular attention to:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">computeTime</span></code> uses <code class="docutils literal notranslate"><span class="pre">Math.sqrt()</span></code> with the correct formula — not a hardcoded value</p></li>
@@ -4271,8 +4440,8 @@ Thunder Loop: NOT ELIGIBLE
 </ul>
 </section>
 <hr class="docutils" />
-<section id="id14">
-<h4>Part 3 — Main.java<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h4>
+<section id="id7">
+<h4>Part 3 — Main.java<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h4>
 <p>Your <code class="docutils literal notranslate"><span class="pre">main</span></code> method must:</p>
 <ol class="arabic simple">
 <li><p>Include the required block comment header (all fields completed)</p></li>
@@ -4600,7 +4769,6 @@ Available vehicles: 3
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Unit 1 - Using Objects and Methods</a><ul>
-<li><a class="reference internal" href="#ap-computer-science-a-assignment-rubric">AP Computer Science A — Assignment Rubric</a></li>
 <li><a class="reference internal" href="#introduction-to-algorithms-programming-and-compilers">1.1 Introduction to Algorithms, Programming, and Compilers</a></li>
 <li><a class="reference internal" href="#a-understanding-java-oracle-foundations-1z0-811">1.1a Understanding Java — <em>Oracle Foundations 1Z0-811</em></a><ul>
 <li><a class="reference internal" href="#features-of-java">Features of Java</a></li>
@@ -4635,7 +4803,10 @@ Available vehicles: 3
 <li><a class="reference internal" href="#format-string-using-printf">Format String using - printf</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#casting-and-range-of-variables">1.5 Casting and Range of Variables</a></li>
+<li><a class="reference internal" href="#casting-and-range-of-variables">1.5 Casting and Range of Variables</a><ul>
+<li><a class="reference internal" href="#assignment-1-5-1-fiveplanettravel">Assignment 1.5.1 — FivePlanetTravel</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#compound-assignment-operators">1.6 Compound Assignment Operators</a></li>
 <li><a class="reference internal" href="#application-program-interface-api-and-libraries">1.7 Application Program Interface (API) and Libraries</a></li>
 <li><a class="reference internal" href="#where-do-objects-live-heap-memory">Where Do Objects Live? — Heap Memory</a><ul>
@@ -4644,10 +4815,11 @@ Available vehicles: 3
 <li><a class="reference internal" href="#the-string-pool-a-special-section-of-the-heap">The String Pool — A Special Section of the Heap</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#packages-apis">Packages &amp; APIs</a></li>
-<li><a class="reference internal" href="#assignment-1-7-1-magic-8-ball-exploring-apis-and-libraries">Assignment 1.7.1 — Magic 8-Ball: Exploring APIs and Libraries</a></li>
-<li><a class="reference internal" href="#assignment-1-7-1a-api-investigation">Assignment 1.7.1a — API Investigation</a></li>
-<li><a class="reference internal" href="#assignment-1-7-2-magic-8-ball-program">Assignment 1.7.2 — Magic 8-Ball Program</a></li>
+<li><a class="reference internal" href="#packages-apis">Packages &amp; APIs</a><ul>
+<li><a class="reference internal" href="#assignment-1-7-1-heap-detective-tracing-references-and-memory">Assignment 1.7.1 — Heap Detective: Tracing References and Memory</a></li>
+<li><a class="reference internal" href="#assignment-1-7-2-magic-8-ball-exploring-apis-and-libraries">Assignment 1.7.2 — Magic 8-Ball: Exploring APIs and Libraries</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#documentation-with-comments">1.8 Documentation with Comments</a></li>
 <li><a class="reference internal" href="#method-signatures">1.9 Method Signatures</a></li>
 <li><a class="reference internal" href="#calling-class-methods">1.10 Calling Class Methods</a></li>
@@ -4690,7 +4862,7 @@ Available vehicles: 3
 <li><a class="reference internal" href="#option-b-car-dealership-inventory">Option B — Car Dealership Inventory</a><ul>
 <li><a class="reference internal" href="#part-1-car-java">Part 1 — Car.java</a></li>
 <li><a class="reference internal" href="#part-2-customer-java">Part 2 — Customer.java</a></li>
-<li><a class="reference internal" href="#id14">Part 3 — Main.java</a></li>
+<li><a class="reference internal" href="#id7">Part 3 — Main.java</a></li>
 <li><a class="reference internal" href="#sample-output-option-b">Sample Output — Option B</a></li>
 </ul>
 </li>
