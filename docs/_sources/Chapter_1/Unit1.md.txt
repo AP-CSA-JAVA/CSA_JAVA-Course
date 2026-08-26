@@ -1434,7 +1434,10 @@ import java.util.Random;    // imports the Random class from the java.util packa
 
 </details>
 
-<center>===============================================</center>
+
+===============================================
+
+
 > 
 > 
 >  🧰 **Supplies Needed**

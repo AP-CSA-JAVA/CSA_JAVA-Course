@@ -2018,212 +2018,173 @@ Total Sales: $64.30
 </table>
 </div>
 </details>
-<center>===============================================</center>
-> 
-> 
->  🧰 **Supplies Needed**
-> 
-> - [ ] Computer with VS Code / Coding Rooms set up (for Parts A and C)
-> - [ ] **Printed or blank paper** for Part B — one sheet per student (memory diagrams are hand-drawn, not typed)
-> - [ ] Pencil or pen (not a computer) for Part B — sketching stack/heap boxes by hand is the point
-> - [ ] Ruler or straightedge (optional, but helps students draw clean boxes/arrows for the stack and heap regions)
-> - [ ] This assignment handout (printed or displayed) — Part A must be attempted **before** running any code
-> 
-> 
-> 
-> By the end of this activity you will be able to:
-> 
-> - [ ] Predict how a program will behave when two variables reference the same object
-> - [ ] Distinguish reference (aliasing) behavior from primitive copy behavior
-> - [ ] Draw an accurate stack/heap diagram for a short code snippet
-> - [ ] Explain, in your own words, when an object becomes eligible for garbage collection
-> 
-> 
-> 
-> **Part A — Predict the Output**
-> 
-> **Do this section on paper first. Do not run any code until every prediction is written down.**
-> 
-> For each snippet below: (1) write your predicted output, (2) run it, (3) if you were wrong, write one sentence explaining what you misunderstood.
-> 
-> ```java
-> // Snippet 1 — aliasing
-> int[] arr1 = {1, 2, 3};
-> int[] arr2 = arr1;
-> arr2[0] = 99;
-> System.out.println(arr1[0]);   // predict, then explain WHY
-> ```
-> 
-> ```java
-> // Snippet 2 — primitives don't alias
-> int x = 5;
-> int y = x;
-> y = 10;
-> System.out.println(x);         // predict, then explain WHY this differs from Snippet 1
-> ```
-> 
-> ```java
-> // Snippet 3 — null trap
-> Scanner s = null;
-> if (s == null) {
->     System.out.println("caught it");
-> } else {
->     s.nextLine();               // would this crash if the if weren't there?
-> }
-> ```
-> 
-> ```java
-> // Snippet 4 — String pool
-> String a = "cat";
-> String b = "cat";
-> String c = new String("cat");
-> System.out.println(a == b);
-> System.out.println(a == c);
-> System.out.println(a.equals(c));
-> ```
-> 
-> 
-> 
-> **Part B — Draw the Memory Diagram**
-> 
-> **On paper.** Draw two labeled boxes: **Stack** and **Heap**. For the code below, place every variable and object correctly, with arrows showing which variable points to which object in the heap.
-> 
-> ```java
-> public static void main(String[] args) {
->     int total = 10;
->     Backpack myBag = new Backpack();
->     Backpack sameBag = myBag;
->     Backpack differentBag = new Backpack();
-> 
->     sameBag.addItem("pencil");
-> }
-> ```
-> 
-> Your diagram must show:
-> - [ ] `total` as a value directly on the Stack (not an arrow)
-> - [ ] `myBag`, `sameBag`, and `differentBag` as address labels on the Stack
-> - [ ] Exactly **two** `Backpack` objects drawn in the Heap (not three)
-> - [ ] Arrows from `myBag` **and** `sameBag` pointing to the *same* heap object
-> - [ ] An arrow from `differentBag` pointing to its own, separate heap object
-> 
-> 
-> 
-> **Part C — Alias Detective (Coding Task)**
-> 
-> Using the `Backpack` class below, write a `Main.java` program that demonstrates aliasing behavior through actual printed output — not just comments.
-> 
-> **Backpack.java — provided, do not modify:**
-> 
-> ```java
-> public class Backpack {
->     private String item;
-> 
->     public void addItem(String newItem) {
->         item = newItem;
->     }
-> 
->     public String getItem() {
->         return item;
->     }
-> }
-> ```
-> 
-> **Note:** This class has no `toString()` — you haven't covered that yet, and you don't need it. When you print a `Backpack` object directly (e.g. `System.out.println(myBag)`), Java shows its default form: something like `Backpack@15db9742`. That's actually useful here — it's the same kind of output you saw with the `Cake` object in 1.13. Two variables pointing to the *same* object will print the exact same address-looking text; a separate object will print a different one. That's a second, independent way to prove aliasing, on top of comparing the contents with `getItem()`.
-> 
-> **Requirements Checklist**
-> 
-> - [ ] Create two `Backpack` variables where one is assigned to the other (`myBag`, `sameBag`)
-> - [ ] Add an item through `sameBag`, then print `myBag.getItem()` and `sameBag.getItem()` — prove they show the same content
-> - [ ] Also print `myBag` and `sameBag` directly (no method call) — prove they show the same object reference/address
-> - [ ] Create a third, independently-`new`'d `Backpack` (`differentBag`) — add a **different** item to it, then print its content and its raw reference, proving both are different from the other two
-> - [ ] Label each variable in an inline comment as either "stack reference" or explain what heap object it points to
-> - [ ] End your block comment header with a 2–3 sentence explanation of why `sameBag` and `myBag` behaved differently from `differentBag`
-> 
-> **Starter Code — Main.java:**
-> 
-> ```java
-> // Name:          [Your Full Name]
-> // Partner:       [Partner's Full Name, or "None"]
-> // Course:        AP Computer Science A
-> // Instructor:    [Instructor Name]
-> // Assignment:    1.7.3 — Heap Detective: Tracing References and Memory
-> // Due Date:      [Month Day, Year]
-> //
-> // Explanation: [TODO — after finishing the program, explain in 2-3
-> //               sentences why sameBag and myBag behaved differently
-> //               from differentBag]
-> 
-> public class Main {
->     public static void main(String[] args) {
-> 
->         // TODO 1: Create myBag — a new Backpack
-> 
->         // TODO 2: Create sameBag — assigned to myBag (NOT a new Backpack)
-> 
->         // TODO 3: Add an item to sameBag
-> 
->         // TODO 4: Print myBag.getItem() and sameBag.getItem() — both
->         //         should show the same item
-> 
->         // TODO 5: Print myBag and sameBag directly (no method call) —
->         //         both should show the same object reference/address
-> 
->         // TODO 6: Create differentBag — a separate, new Backpack
-> 
->         // TODO 7: Add a DIFFERENT item to differentBag
-> 
->         // TODO 8: Print differentBag's content and its raw reference —
->         //         neither should match myBag/sameBag
-> 
->     }
-> }
-> ```
-> 
-> **Sample Output**
-> 
-> ```
-> myBag content:        pencil
-> sameBag content:      pencil
-> differentBag content: notebook
-> 
-> myBag reference:        Backpack@15db9742
-> sameBag reference:       Backpack@15db9742
-> differentBag reference:  Backpack@2f92e0f4
-> ```
-> 
-> 
-> 
-> **Part D — Reflection**
-> 
-> Answer in your block comment or a short paragraph submitted with your code:
-> 
-> Why does Java's garbage collector matter here? What would have to be true about `myBag` and `sameBag` for the `Backpack` object they both point to become eligible for garbage collection?
-> 
-> 
-> 
-> **Submission**
-> 
-> Upload the following to the assignment:
-> 
-> - [ ] Part A — predictions and corrections (photo, scan, or typed document)
-> - [ ] Part B — memory diagram (photo or scan of your hand-drawn diagram)
-> - [ ] `Main.java` — completed Part C program with block comment header
-> - [ ] Part D reflection (can be included in the block comment header)
-> - [ ] Test Cases document showing your program's actual output
-> 
-> 
-> 
-> **Grading**
-> 
-> This assignment is graded using the **AP CSA Generic Assignment Rubric** (5-point scale). Pay particular attention to:
-> 
-> - Part A predictions were made **before** running the code, with honest self-corrections written for any wrong guesses
-> - Part B diagram correctly shows exactly two heap objects (not three) with accurate arrows
-> - Part C program compiles, runs, and produces output proving all three aliasing behaviors — not just comments claiming it does
-> - Part D reflection accurately connects reference sharing to garbage collection eligibility, in the student's own words
-> 
-> 
-> 
+<p>===============================================</p>
+<blockquote>
+<div><p>🧰 <strong>Supplies Needed</strong></p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Computer with VS Code / Coding Rooms set up (for Parts A and C)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Printed or blank paper</strong> for Part B — one sheet per student (memory diagrams are hand-drawn, not typed)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Pencil or pen (not a computer) for Part B — sketching stack/heap boxes by hand is the point</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Ruler or straightedge (optional, but helps students draw clean boxes/arrows for the stack and heap regions)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> This assignment handout (printed or displayed) — Part A must be attempted <strong>before</strong> running any code</p></li>
+</ul>
+<p>By the end of this activity you will be able to:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Predict how a program will behave when two variables reference the same object</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Distinguish reference (aliasing) behavior from primitive copy behavior</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Draw an accurate stack/heap diagram for a short code snippet</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Explain, in your own words, when an object becomes eligible for garbage collection</p></li>
+</ul>
+<p><strong>Part A — Predict the Output</strong></p>
+<p><strong>Do this section on paper first. Do not run any code until every prediction is written down.</strong></p>
+<p>For each snippet below: (1) write your predicted output, (2) run it, (3) if you were wrong, write one sentence explaining what you misunderstood.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Snippet 1 — aliasing</span>
+<span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">};</span>
+<span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr1</span><span class="p">;</span>
+<span class="n">arr2</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">99</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">arr1</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span><span class="w">   </span><span class="c1">// predict, then explain WHY</span>
+</pre></div>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Snippet 2 — primitives don't alias</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span><span class="p">);</span><span class="w">         </span><span class="c1">// predict, then explain WHY this differs from Snippet 1</span>
+</pre></div>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Snippet 3 — null trap</span>
+<span class="n">Scanner</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"caught it"</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">s</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span><span class="w">               </span><span class="c1">// would this crash if the if weren't there?</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Snippet 4 — String pool</span>
+<span class="n">String</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"cat"</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"cat"</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="s">"cat"</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">c</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">c</span><span class="p">));</span>
+</pre></div>
+</div>
+<p><strong>Part B — Draw the Memory Diagram</strong></p>
+<p><strong>On paper.</strong> Draw two labeled boxes: <strong>Stack</strong> and <strong>Heap</strong>. For the code below, place every variable and object correctly, with arrows showing which variable points to which object in the heap.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="w">    </span><span class="n">Backpack</span><span class="w"> </span><span class="n">myBag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Backpack</span><span class="p">();</span>
+<span class="w">    </span><span class="n">Backpack</span><span class="w"> </span><span class="n">sameBag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myBag</span><span class="p">;</span>
+<span class="w">    </span><span class="n">Backpack</span><span class="w"> </span><span class="n">differentBag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Backpack</span><span class="p">();</span>
+
+<span class="w">    </span><span class="n">sameBag</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"pencil"</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Your diagram must show:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">total</span></code> as a value directly on the Stack (not an arrow)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">myBag</span></code>, <code class="docutils literal notranslate"><span class="pre">sameBag</span></code>, and <code class="docutils literal notranslate"><span class="pre">differentBag</span></code> as address labels on the Stack</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Exactly <strong>two</strong> <code class="docutils literal notranslate"><span class="pre">Backpack</span></code> objects drawn in the Heap (not three)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Arrows from <code class="docutils literal notranslate"><span class="pre">myBag</span></code> <strong>and</strong> <code class="docutils literal notranslate"><span class="pre">sameBag</span></code> pointing to the <em>same</em> heap object</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> An arrow from <code class="docutils literal notranslate"><span class="pre">differentBag</span></code> pointing to its own, separate heap object</p></li>
+</ul>
+<p><strong>Part C — Alias Detective (Coding Task)</strong></p>
+<p>Using the <code class="docutils literal notranslate"><span class="pre">Backpack</span></code> class below, write a <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> program that demonstrates aliasing behavior through actual printed output — not just comments.</p>
+<p><strong>Backpack.java — provided, do not modify:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Backpack</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">item</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">addItem</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">newItem</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newItem</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getItem</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">item</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Note:</strong> This class has no <code class="docutils literal notranslate"><span class="pre">toString()</span></code> — you haven’t covered that yet, and you don’t need it. When you print a <code class="docutils literal notranslate"><span class="pre">Backpack</span></code> object directly (e.g. <code class="docutils literal notranslate"><span class="pre">System.out.println(myBag)</span></code>), Java shows its default form: something like <code class="docutils literal notranslate"><span class="pre">Backpack&#64;15db9742</span></code>. That’s actually useful here — it’s the same kind of output you saw with the <code class="docutils literal notranslate"><span class="pre">Cake</span></code> object in 1.13. Two variables pointing to the <em>same</em> object will print the exact same address-looking text; a separate object will print a different one. That’s a second, independent way to prove aliasing, on top of comparing the contents with <code class="docutils literal notranslate"><span class="pre">getItem()</span></code>.</p>
+<p><strong>Requirements Checklist</strong></p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create two <code class="docutils literal notranslate"><span class="pre">Backpack</span></code> variables where one is assigned to the other (<code class="docutils literal notranslate"><span class="pre">myBag</span></code>, <code class="docutils literal notranslate"><span class="pre">sameBag</span></code>)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Add an item through <code class="docutils literal notranslate"><span class="pre">sameBag</span></code>, then print <code class="docutils literal notranslate"><span class="pre">myBag.getItem()</span></code> and <code class="docutils literal notranslate"><span class="pre">sameBag.getItem()</span></code> — prove they show the same content</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Also print <code class="docutils literal notranslate"><span class="pre">myBag</span></code> and <code class="docutils literal notranslate"><span class="pre">sameBag</span></code> directly (no method call) — prove they show the same object reference/address</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create a third, independently-<code class="docutils literal notranslate"><span class="pre">new</span></code>’d <code class="docutils literal notranslate"><span class="pre">Backpack</span></code> (<code class="docutils literal notranslate"><span class="pre">differentBag</span></code>) — add a <strong>different</strong> item to it, then print its content and its raw reference, proving both are different from the other two</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Label each variable in an inline comment as either “stack reference” or explain what heap object it points to</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> End your block comment header with a 2–3 sentence explanation of why <code class="docutils literal notranslate"><span class="pre">sameBag</span></code> and <code class="docutils literal notranslate"><span class="pre">myBag</span></code> behaved differently from <code class="docutils literal notranslate"><span class="pre">differentBag</span></code></p></li>
+</ul>
+<p><strong>Starter Code — Main.java:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Name:          [Your Full Name]</span>
+<span class="c1">// Partner:       [Partner's Full Name, or "None"]</span>
+<span class="c1">// Course:        AP Computer Science A</span>
+<span class="c1">// Instructor:    [Instructor Name]</span>
+<span class="c1">// Assignment:    1.7.3 — Heap Detective: Tracing References and Memory</span>
+<span class="c1">// Due Date:      [Month Day, Year]</span>
+<span class="c1">//</span>
+<span class="c1">// Explanation: [TODO — after finishing the program, explain in 2-3</span>
+<span class="c1">//               sentences why sameBag and myBag behaved differently</span>
+<span class="c1">//               from differentBag]</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="c1">// TODO 1: Create myBag — a new Backpack</span>
+
+<span class="w">        </span><span class="c1">// TODO 2: Create sameBag — assigned to myBag (NOT a new Backpack)</span>
+
+<span class="w">        </span><span class="c1">// TODO 3: Add an item to sameBag</span>
+
+<span class="w">        </span><span class="c1">// TODO 4: Print myBag.getItem() and sameBag.getItem() — both</span>
+<span class="w">        </span><span class="c1">//         should show the same item</span>
+
+<span class="w">        </span><span class="c1">// TODO 5: Print myBag and sameBag directly (no method call) —</span>
+<span class="w">        </span><span class="c1">//         both should show the same object reference/address</span>
+
+<span class="w">        </span><span class="c1">// TODO 6: Create differentBag — a separate, new Backpack</span>
+
+<span class="w">        </span><span class="c1">// TODO 7: Add a DIFFERENT item to differentBag</span>
+
+<span class="w">        </span><span class="c1">// TODO 8: Print differentBag's content and its raw reference —</span>
+<span class="w">        </span><span class="c1">//         neither should match myBag/sameBag</span>
+
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Sample Output</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">myBag</span> <span class="n">content</span><span class="p">:</span>        <span class="n">pencil</span>
+<span class="n">sameBag</span> <span class="n">content</span><span class="p">:</span>      <span class="n">pencil</span>
+<span class="n">differentBag</span> <span class="n">content</span><span class="p">:</span> <span class="n">notebook</span>
+
+<span class="n">myBag</span> <span class="n">reference</span><span class="p">:</span>        <span class="n">Backpack</span><span class="o">@</span><span class="mi">15</span><span class="n">db9742</span>
+<span class="n">sameBag</span> <span class="n">reference</span><span class="p">:</span>       <span class="n">Backpack</span><span class="o">@</span><span class="mi">15</span><span class="n">db9742</span>
+<span class="n">differentBag</span> <span class="n">reference</span><span class="p">:</span>  <span class="n">Backpack</span><span class="o">@</span><span class="mi">2</span><span class="n">f92e0f4</span>
+</pre></div>
+</div>
+<p><strong>Part D — Reflection</strong></p>
+<p>Answer in your block comment or a short paragraph submitted with your code:</p>
+<p>Why does Java’s garbage collector matter here? What would have to be true about <code class="docutils literal notranslate"><span class="pre">myBag</span></code> and <code class="docutils literal notranslate"><span class="pre">sameBag</span></code> for the <code class="docutils literal notranslate"><span class="pre">Backpack</span></code> object they both point to become eligible for garbage collection?</p>
+<p><strong>Submission</strong></p>
+<p>Upload the following to the assignment:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Part A — predictions and corrections (photo, scan, or typed document)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Part B — memory diagram (photo or scan of your hand-drawn diagram)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> — completed Part C program with block comment header</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Part D reflection (can be included in the block comment header)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Test Cases document showing your program’s actual output</p></li>
+</ul>
+<p><strong>Grading</strong></p>
+<p>This assignment is graded using the <strong>AP CSA Generic Assignment Rubric</strong> (5-point scale). Pay particular attention to:</p>
+<ul class="simple">
+<li><p>Part A predictions were made <strong>before</strong> running the code, with honest self-corrections written for any wrong guesses</p></li>
+<li><p>Part B diagram correctly shows exactly two heap objects (not three) with accurate arrows</p></li>
+<li><p>Part C program compiles, runs, and produces output proving all three aliasing behaviors — not just comments claiming it does</p></li>
+<li><p>Part D reflection accurately connects reference sharing to garbage collection eligibility, in the student’s own words</p></li>
+</ul>
+</div></blockquote>
 </section>
 <hr class="docutils" />
 <section id="assignment-1-7-2-magic-8-ball-exploring-apis-and-libraries">
