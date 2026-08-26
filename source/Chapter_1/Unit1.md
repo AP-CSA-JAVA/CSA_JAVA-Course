@@ -1058,7 +1058,7 @@ One thing worth pointing out to students: `%d` **only** works with integer types
 > 75
 > 
 > Average test score: 82.75%
-> ---------------------------------
+> *************************************
 > Enter the number of burgers ordered:
 > 10
 > Price of a burger:
@@ -1175,8 +1175,9 @@ We know that we don't have 0 eggs.  We can rewrite our program to show how many 
 
 
 
-> 
-> ### Assignment 1.5.1 — FivePlanetTravel
+
+### Assignment 1.5.1 — FivePlanetTravel
+
 > 
 > You will explore the PlanetTravel program called **FivePlanetTravel**. The program is set up to plan a five-planet tour!
 > 
@@ -1433,7 +1434,7 @@ import java.util.Random;    // imports the Random class from the java.util packa
 
 </details>
 
-> ---
+> 
 > 
 >  🧰 **Supplies Needed**
 > 
@@ -1443,7 +1444,7 @@ import java.util.Random;    // imports the Random class from the java.util packa
 > - [ ] Ruler or straightedge (optional, but helps students draw clean boxes/arrows for the stack and heap regions)
 > - [ ] This assignment handout (printed or displayed) — Part A must be attempted **before** running any code
 > 
-> ---
+> 
 > 
 > By the end of this activity you will be able to:
 > 
@@ -1452,7 +1453,7 @@ import java.util.Random;    // imports the Random class from the java.util packa
 > - [ ] Draw an accurate stack/heap diagram for a short code snippet
 > - [ ] Explain, in your own words, when an object becomes eligible for garbage collection
 > 
-> ---
+> 
 > 
 > **Part A — Predict the Output**
 > 
@@ -1496,7 +1497,7 @@ import java.util.Random;    // imports the Random class from the java.util packa
 > System.out.println(a.equals(c));
 > ```
 > 
-> ---
+> 
 > 
 > **Part B — Draw the Memory Diagram**
 > 
@@ -1520,7 +1521,7 @@ import java.util.Random;    // imports the Random class from the java.util packa
 > - [ ] Arrows from `myBag` **and** `sameBag` pointing to the *same* heap object
 > - [ ] An arrow from `differentBag` pointing to its own, separate heap object
 > 
-> ---
+> 
 > 
 > **Part C — Alias Detective (Coding Task)**
 > 
@@ -1605,7 +1606,7 @@ import java.util.Random;    // imports the Random class from the java.util packa
 > differentBag reference:  Backpack@2f92e0f4
 > ```
 > 
-> ---
+> 
 > 
 > **Part D — Reflection**
 > 
@@ -1613,7 +1614,7 @@ import java.util.Random;    // imports the Random class from the java.util packa
 > 
 > Why does Java's garbage collector matter here? What would have to be true about `myBag` and `sameBag` for the `Backpack` object they both point to become eligible for garbage collection?
 > 
-> ---
+> 
 > 
 > **Submission**
 > 
@@ -1625,7 +1626,7 @@ import java.util.Random;    // imports the Random class from the java.util packa
 > - [ ] Part D reflection (can be included in the block comment header)
 > - [ ] Test Cases document showing your program's actual output
 > 
-> ---
+> 
 > 
 > **Grading**
 > 
@@ -1655,7 +1656,7 @@ By the end of this activity you will be able to:
 - [ ] Use an `import` statement to include a package in your program
 - [ ] Call methods from `java.util.Scanner` and `java.util.Random` meaningfully in a program
 
-> ---
+> 
 >
 > **Program Description**
 >
@@ -1693,7 +1694,7 @@ By the end of this activity you will be able to:
 > | 7 | Outlook not so good. |
 > | 8 | Very doubtful. |
 >
-> ---
+> 
 >
 > **Starter Code**
 >
@@ -1779,7 +1780,7 @@ By the end of this activity you will be able to:
 > - [ ] **Seeded Random** — let the user enter a "lucky number" that seeds the Random object. Investigate what happens when they use the same number twice. *(Hint: this connects to how the JVM initializes objects in the heap)*
 > - [ ] **Null guard** — add a check so that if the user enters a blank question, the program prints a warning instead of sending an empty question to the 8-Ball. Think about what `null` and empty strings mean in the heap.
 >
-> ---
+> ============================
 >
 > **Submission**
 >
@@ -1788,7 +1789,7 @@ By the end of this activity you will be able to:
 > - [ ] `Main.java` — your completed program with block comment header
 > - [ ] Test Cases document — showing at least **three** runs of your program with different questions and the responses generated
 >
-> ---
+> ============================
 >
 > **Grading**
 >
