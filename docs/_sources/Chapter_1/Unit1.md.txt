@@ -1058,7 +1058,7 @@ One thing worth pointing out to students: `%d` **only** works with integer types
 > 75
 > 
 > Average test score: 82.75%
-> *************************************
+> ======================================
 > Enter the number of burgers ordered:
 > 10
 > Price of a burger:
@@ -1414,7 +1414,7 @@ import java.util.Random;    // imports the Random class from the java.util packa
 
 ---
 
-### Assignment 1.7.1 — Heap Detective: Tracing References and Memory
+### Assignment 1.7.1 — Heap Detective: Tracing References & Memory
 
 <details>
 <summary>📌 Standards — 1.7.3</summary>
@@ -1434,6 +1434,7 @@ import java.util.Random;    // imports the Random class from the java.util packa
 
 </details>
 
+<center>===============================================</center>
 > 
 > 
 >  🧰 **Supplies Needed**
