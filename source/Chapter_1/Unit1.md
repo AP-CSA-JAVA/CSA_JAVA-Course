@@ -1416,7 +1416,236 @@ import java.util.Random;    // imports the Random class from the java.util packa
 
 ---
 
-## Assignment 1.7.1 — Magic 8-Ball: Exploring APIs and Libraries
+### Assignment 1.7.1 — Heap Detective: Tracing References and Memory
+
+<details>
+<summary>📌 Standards — 1.7.3</summary>
+
+| Standard | Description                                                 |
+| -------- | ------------------------------------------------------------ |
+| ICT 5.4  | Interpret information and draw conclusions to make informed decisions |
+| ICT 5.8  | Create and use algorithms to solve problems                  |
+| ICT 5.9  | Deconstruct large problems into smaller components            |
+| ICT 5.10 | Use multiple layers of abstraction                            |
+| ICT 10.1 | Interpret and explain ICT-specific terminology                |
+| C4.5     | Demonstrate awareness of the OOP paradigm                     |
+| C4.7     | Use various data structures including objects                |
+| C4.9     | Create programs using control structures, procedures, and variables |
+| CRP 1    | Apply appropriate technical skills and academic knowledge     |
+| CRP 5    | Utilize critical thinking to make sense of problems           |
+
+</details>
+
+> ---
+> 
+>  🧰 **Supplies Needed**
+> 
+> - [ ] Computer with VS Code / Coding Rooms set up (for Parts A and C)
+> - [ ] **Printed or blank paper** for Part B — one sheet per student (memory diagrams are hand-drawn, not typed)
+> - [ ] Pencil or pen (not a computer) for Part B — sketching stack/heap boxes by hand is the point
+> - [ ] Ruler or straightedge (optional, but helps students draw clean boxes/arrows for the stack and heap regions)
+> - [ ] This assignment handout (printed or displayed) — Part A must be attempted **before** running any code
+> 
+> ---
+> 
+> By the end of this activity you will be able to:
+> 
+> - [ ] Predict how a program will behave when two variables reference the same object
+> - [ ] Distinguish reference (aliasing) behavior from primitive copy behavior
+> - [ ] Draw an accurate stack/heap diagram for a short code snippet
+> - [ ] Explain, in your own words, when an object becomes eligible for garbage collection
+> 
+> ---
+> 
+> **Part A — Predict the Output**
+> 
+> **Do this section on paper first. Do not run any code until every prediction is written down.**
+> 
+> For each snippet below: (1) write your predicted output, (2) run it, (3) if you were wrong, write one sentence explaining what you misunderstood.
+> 
+> ```java
+> // Snippet 1 — aliasing
+> int[] arr1 = {1, 2, 3};
+> int[] arr2 = arr1;
+> arr2[0] = 99;
+> System.out.println(arr1[0]);   // predict, then explain WHY
+> ```
+> 
+> ```java
+> // Snippet 2 — primitives don't alias
+> int x = 5;
+> int y = x;
+> y = 10;
+> System.out.println(x);         // predict, then explain WHY this differs from Snippet 1
+> ```
+> 
+> ```java
+> // Snippet 3 — null trap
+> Scanner s = null;
+> if (s == null) {
+>     System.out.println("caught it");
+> } else {
+>     s.nextLine();               // would this crash if the if weren't there?
+> }
+> ```
+> 
+> ```java
+> // Snippet 4 — String pool
+> String a = "cat";
+> String b = "cat";
+> String c = new String("cat");
+> System.out.println(a == b);
+> System.out.println(a == c);
+> System.out.println(a.equals(c));
+> ```
+> 
+> ---
+> 
+> **Part B — Draw the Memory Diagram**
+> 
+> **On paper.** Draw two labeled boxes: **Stack** and **Heap**. For the code below, place every variable and object correctly, with arrows showing which variable points to which object in the heap.
+> 
+> ```java
+> public static void main(String[] args) {
+>     int total = 10;
+>     Backpack myBag = new Backpack();
+>     Backpack sameBag = myBag;
+>     Backpack differentBag = new Backpack();
+> 
+>     sameBag.addItem("pencil");
+> }
+> ```
+> 
+> Your diagram must show:
+> - [ ] `total` as a value directly on the Stack (not an arrow)
+> - [ ] `myBag`, `sameBag`, and `differentBag` as address labels on the Stack
+> - [ ] Exactly **two** `Backpack` objects drawn in the Heap (not three)
+> - [ ] Arrows from `myBag` **and** `sameBag` pointing to the *same* heap object
+> - [ ] An arrow from `differentBag` pointing to its own, separate heap object
+> 
+> ---
+> 
+> **Part C — Alias Detective (Coding Task)**
+> 
+> Using the `Backpack` class below, write a `Main.java` program that demonstrates aliasing behavior through actual printed output — not just comments.
+> 
+> **Backpack.java — provided, do not modify:**
+> 
+> ```java
+> public class Backpack {
+>     private String item;
+> 
+>     public void addItem(String newItem) {
+>         item = newItem;
+>     }
+> 
+>     public String getItem() {
+>         return item;
+>     }
+> }
+> ```
+> 
+> **Note:** This class has no `toString()` — you haven't covered that yet, and you don't need it. When you print a `Backpack` object directly (e.g. `System.out.println(myBag)`), Java shows its default form: something like `Backpack@15db9742`. That's actually useful here — it's the same kind of output you saw with the `Cake` object in 1.13. Two variables pointing to the *same* object will print the exact same address-looking text; a separate object will print a different one. That's a second, independent way to prove aliasing, on top of comparing the contents with `getItem()`.
+> 
+> **Requirements Checklist**
+> 
+> - [ ] Create two `Backpack` variables where one is assigned to the other (`myBag`, `sameBag`)
+> - [ ] Add an item through `sameBag`, then print `myBag.getItem()` and `sameBag.getItem()` — prove they show the same content
+> - [ ] Also print `myBag` and `sameBag` directly (no method call) — prove they show the same object reference/address
+> - [ ] Create a third, independently-`new`'d `Backpack` (`differentBag`) — add a **different** item to it, then print its content and its raw reference, proving both are different from the other two
+> - [ ] Label each variable in an inline comment as either "stack reference" or explain what heap object it points to
+> - [ ] End your block comment header with a 2–3 sentence explanation of why `sameBag` and `myBag` behaved differently from `differentBag`
+> 
+> **Starter Code — Main.java:**
+> 
+> ```java
+> // Name:          [Your Full Name]
+> // Partner:       [Partner's Full Name, or "None"]
+> // Course:        AP Computer Science A
+> // Instructor:    [Instructor Name]
+> // Assignment:    1.7.3 — Heap Detective: Tracing References and Memory
+> // Due Date:      [Month Day, Year]
+> //
+> // Explanation: [TODO — after finishing the program, explain in 2-3
+> //               sentences why sameBag and myBag behaved differently
+> //               from differentBag]
+> 
+> public class Main {
+>     public static void main(String[] args) {
+> 
+>         // TODO 1: Create myBag — a new Backpack
+> 
+>         // TODO 2: Create sameBag — assigned to myBag (NOT a new Backpack)
+> 
+>         // TODO 3: Add an item to sameBag
+> 
+>         // TODO 4: Print myBag.getItem() and sameBag.getItem() — both
+>         //         should show the same item
+> 
+>         // TODO 5: Print myBag and sameBag directly (no method call) —
+>         //         both should show the same object reference/address
+> 
+>         // TODO 6: Create differentBag — a separate, new Backpack
+> 
+>         // TODO 7: Add a DIFFERENT item to differentBag
+> 
+>         // TODO 8: Print differentBag's content and its raw reference —
+>         //         neither should match myBag/sameBag
+> 
+>     }
+> }
+> ```
+> 
+> **Sample Output**
+> 
+> ```
+> myBag content:        pencil
+> sameBag content:      pencil
+> differentBag content: notebook
+> 
+> myBag reference:        Backpack@15db9742
+> sameBag reference:       Backpack@15db9742
+> differentBag reference:  Backpack@2f92e0f4
+> ```
+> 
+> ---
+> 
+> **Part D — Reflection**
+> 
+> Answer in your block comment or a short paragraph submitted with your code:
+> 
+> Why does Java's garbage collector matter here? What would have to be true about `myBag` and `sameBag` for the `Backpack` object they both point to become eligible for garbage collection?
+> 
+> ---
+> 
+> **Submission**
+> 
+> Upload the following to the assignment:
+> 
+> - [ ] Part A — predictions and corrections (photo, scan, or typed document)
+> - [ ] Part B — memory diagram (photo or scan of your hand-drawn diagram)
+> - [ ] `Main.java` — completed Part C program with block comment header
+> - [ ] Part D reflection (can be included in the block comment header)
+> - [ ] Test Cases document showing your program's actual output
+> 
+> ---
+> 
+> **Grading**
+> 
+> This assignment is graded using the **AP CSA Generic Assignment Rubric** (5-point scale). Pay particular attention to:
+> 
+> - Part A predictions were made **before** running the code, with honest self-corrections written for any wrong guesses
+> - Part B diagram correctly shows exactly two heap objects (not three) with accurate arrows
+> - Part C program compiles, runs, and produces output proving all three aliasing behaviors — not just comments claiming it does
+> - Part D reflection accurately connects reference sharing to garbage collection eligibility, in the student's own words
+> 
+> 
+> 
+
+---
+
+
+### Assignment 1.7.2 — Magic 8-Ball: Exploring APIs and Libraries
 
 **Overview**
 
@@ -1429,55 +1658,9 @@ By the end of this activity you will be able to:
 - [ ] Use an `import` statement to include a package in your program
 - [ ] Call methods from `java.util.Scanner` and `java.util.Random` meaningfully in a program
 
----
-
-## Assignment 1.7.1a — API Investigation
-
->
->
-> Using the Java 8 API documentation at **https://docs.oracle.com/javase/8/docs/api/**, answer the following questions in a comment block at the top of your `Main.java` file or in a separate text document submitted alongside your code.
->
-> ### Section A — Packages and Classes
->
-> 1. What is the full package path for the `Scanner` class?
-> 2. What is the full package path for the `Random` class?
-> 3. Name **two other classes** found in the `java.util` package.
-> 4. Name **one class** found in the `java.time` package and describe what it does in one sentence.
-> 5. In your own words, what is the difference between a **package** and a **class**?
->
-> ### Section B — Scanner Class
->
-> Navigate to the `Scanner` class in the documentation.
->
-> 6. What does the `Scanner` constructor `Scanner(InputStream source)` do?
-> 7. What method would you use to read a full line of text entered by the user? What does it return?
-> 8. What method would you use to read a single `int` entered by the user?
-> 9. Why is it important to call `scanner.close()` when you are done using a Scanner?
->
-> ### Section C — Random Class
->
-> Navigate to the `Random` class in the documentation.
->
-> 10. What does `nextInt(int bound)` return? What is the range of values it can produce?
-> 11. How would you use `nextInt()` to generate a random number between **1 and 8 inclusive**? Write the expression.
-> 12. What is the difference between `nextInt()` and `nextDouble()`?
-> 13. Why might a program produce the same "random" sequence every time if you pass a fixed value to the `Random` constructor (e.g., `new Random(42)`)?
->
-> ### Section D — Memory & the Heap *(Oracle 1Z0-811)*
->
-> 14. In your own words, what is the **heap** and what gets stored there?
-> 15. When you write `Scanner input = new Scanner(System.in);`, what does the variable `input` actually hold — the object itself, or something else? Explain.
-> 16. What is `null`, and what happens at runtime if you try to call a method on a `null` variable?
-> 17. What is the **String pool**, and why does `==` sometimes return `true` when comparing two String variables that were never explicitly set equal to each other?
-> 18. What is the **garbage collector** and why is it considered a safety feature of Java?
->
 > ---
-
-## Assignment 1.7.2 — Magic 8-Ball Program
-
 >
->
-> ### Program Description
+> **Program Description**
 >
 > Build a Magic 8-Ball program that:
 > - Asks the user to enter a yes/no question
@@ -1485,7 +1668,7 @@ By the end of this activity you will be able to:
 > - Displays the response in a formatted output
 > - Asks the user if they want to ask another question and loops until they choose to quit
 >
-> ### Requirements Checklist
+> **Requirements Checklist**
 >
 > - [ ] Include the required block comment header in `Main.java` (all fields completed)
 > - [ ] Import `java.util.Scanner` and `java.util.Random`
@@ -1498,7 +1681,7 @@ By the end of this activity you will be able to:
 > - [ ] Include meaningful inline comments throughout
 > - [ ] In your block comment header, add **one sentence** explaining where the `Scanner` and `Random` objects live in memory when your program runs
 >
-> ### The Eight Responses
+> **The Eight Responses**
 >
 > Your program must include **all eight** of the following responses:
 >
@@ -1515,7 +1698,7 @@ By the end of this activity you will be able to:
 >
 > ---
 >
-> ## Starter Code
+> **Starter Code**
 >
 > ```java
 > // Import the required packages
@@ -1565,7 +1748,7 @@ By the end of this activity you will be able to:
 >
 >
 >
-> ## Sample Output
+> **Sample Output**
 >
 > ```
 > Welcome to the Magic 8-Ball!
@@ -1589,7 +1772,7 @@ By the end of this activity you will be able to:
 >
 > ---
 >
-> ## Extension Challenges
+> **Extension Challenges**
 >
 > Completed early? Try one or more of the following:
 >
@@ -1601,7 +1784,7 @@ By the end of this activity you will be able to:
 >
 > ---
 >
-> ## Submission
+> **Submission**
 >
 > Upload the following to the assignment:
 >
@@ -1610,7 +1793,7 @@ By the end of this activity you will be able to:
 >
 > ---
 >
-> ## Grading
+> **Grading**
 >
 > This assignment is graded using the **AP CSA Generic Assignment Rubric** (5-point scale). Pay particular attention to:
 > - Import statements are present and used (not just written)
