@@ -1385,7 +1385,7 @@ The heap has one special region called the **String pool**. When you create a St
 
 ```java
 String s1 = "hello";              // JVM creates "hello" in the pool
-String s2 = "hello";              // JVM finds "hello" already in pool — reuses it
+String s2 = "hello";              // JVM gets the reference to the same pooled object `s1` points to
 String s3 = new String("hello");  // forces a brand-new object in the heap, bypasses pool
 
 System.out.println(s1 == s2);         // true  — same address in the pool
