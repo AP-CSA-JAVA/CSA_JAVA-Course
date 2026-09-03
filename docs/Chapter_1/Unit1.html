@@ -1580,9 +1580,9 @@ Total Sales: $64.30
 </pre></div>
 </div>
 </div></blockquote>
+<p>#############################################################################</p>
 </section>
 </section>
-<hr class="docutils" />
 <section id="casting-and-range-of-variables">
 <h2>1.5 Casting and Range of Variables<a class="headerlink" href="#casting-and-range-of-variables" title="Link to this heading">¶</a></h2>
 <details>
@@ -1683,6 +1683,7 @@ Total Sales: $64.30
 </pre></div>
 </div>
 <p>We know that we don’t have 0 eggs.  We can rewrite our program to show how many eggs we have in decimal form.</p>
+<p>#############################################################################</p>
 <section id="assignment-1-5-1-fiveplanettravel">
 <h3>Assignment 1.5.1 — FivePlanetTravel<a class="headerlink" href="#assignment-1-5-1-fiveplanettravel" title="Link to this heading">¶</a></h3>
 <blockquote>
@@ -1742,14 +1743,14 @@ Total Sales: $64.30
 </div>
 </div></blockquote>
 <p>Your output should look similar to the example above. You will write a <strong>widening algorithm</strong> that shows the travel time to and from all planets using casting. Use <code class="docutils literal notranslate"><span class="pre">printf</span></code> to widen the the time to 10 decimal places.  The one rule is that <em>you must use the provided code</em> and <em><strong>not change any provided data types</strong></em>.</p>
+<p>#############################################################################</p>
 </section>
 </section>
-<hr class="docutils" />
 <section id="compound-assignment-operators">
 <h2>1.6 Compound Assignment Operators<a class="headerlink" href="#compound-assignment-operators" title="Link to this heading">¶</a></h2>
 <p><em>(See section 1.4 — covered in depth with compound assignment operators and prefix/postfix increment/decrement.)</em></p>
+<p>#############################################################################</p>
 </section>
-<hr class="docutils" />
 <section id="application-program-interface-api-and-libraries">
 <h2>1.7 Application Program Interface (API) and Libraries<a class="headerlink" href="#application-program-interface-api-and-libraries" title="Link to this heading">¶</a></h2>
 <details>
@@ -1867,8 +1868,8 @@ Total Sales: $64.30
 </table>
 </div>
 </details>
+<p>#############################################################################</p>
 </section>
-<hr class="docutils" />
 <section id="a-where-do-objects-live-heap-memory">
 <h2>1.7a Where Do Objects Live? — Heap Memory<a class="headerlink" href="#a-where-do-objects-live-heap-memory" title="Link to this heading">¶</a></h2>
 <p>Every time your program uses <code class="docutils literal notranslate"><span class="pre">new</span></code> to create an object — a <code class="docutils literal notranslate"><span class="pre">Scanner</span></code>, a <code class="docutils literal notranslate"><span class="pre">Random</span></code>, a <code class="docutils literal notranslate"><span class="pre">String</span></code> — Java needs somewhere to store it. That somewhere is called the <strong>heap</strong>.</p>
@@ -1889,7 +1890,7 @@ Total Sales: $64.30
 </pre></div>
 </div>
 <p>When nothing holds that address anymore, Java’s <strong>garbage collector</strong> sweeps through the warehouse and clears out the unclaimed space automatically — unlike languages like C++ where you’d have to clean it up yourself. This is one of Java’s key safety features.</p>
-<hr class="docutils" />
+<p>#############################################################################</p>
 <section id="heap-vs-stack-the-quick-contrast">
 <h3>Heap vs. Stack — The Quick Contrast<a class="headerlink" href="#heap-vs-stack-the-quick-contrast" title="Link to this heading">¶</a></h3>
 <p>Java actually uses two memory areas your programs interact with constantly:</p>
@@ -1958,9 +1959,9 @@ Total Sales: $64.30
 <blockquote>
 <div><p>⚠️ <strong>Oracle Exam Note:</strong> Always use <code class="docutils literal notranslate"><span class="pre">.equals()</span></code> to compare String content — never <code class="docutils literal notranslate"><span class="pre">==</span></code>. The <code class="docutils literal notranslate"><span class="pre">==</span></code> operator compares <em>addresses</em>, not content, and the String pool makes its behavior unpredictable.</p>
 </div></blockquote>
+<p>#############################################################################</p>
 </section>
 </section>
-<hr class="docutils" />
 <section id="b-packages-apis">
 <h2>1.7b Packages &amp; APIs<a class="headerlink" href="#b-packages-apis" title="Link to this heading">¶</a></h2>
 <p>When you write a Java program, you do not have to build everything from scratch. Java provides thousands of pre-built classes organized into <strong>packages</strong>. A <strong>package</strong> is a folder of related classes. Together, all of these packages make up the Java <strong>standard library</strong>.</p>
@@ -1971,7 +1972,7 @@ Total Sales: $64.30
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">java.lang</span></code> (which contains <code class="docutils literal notranslate"><span class="pre">String</span></code>, <code class="docutils literal notranslate"><span class="pre">Math</span></code>, <code class="docutils literal notranslate"><span class="pre">Integer</span></code>, etc.) is imported <strong>automatically</strong> — you never need to import it manually.</p>
-<hr class="docutils" />
+<p>#############################################################################</p>
 <section id="assignment-1-7-1-heap-detective-tracing-references-memory">
 <h3>Assignment 1.7.1 — Heap Detective: Tracing References &amp; Memory<a class="headerlink" href="#assignment-1-7-1-heap-detective-tracing-references-memory" title="Link to this heading">¶</a></h3>
 <details>
@@ -2018,7 +2019,7 @@ Total Sales: $64.30
 </table>
 </div>
 </details>
-<p>===============================================</p>
+<p>#############################################################################</p>
 <blockquote>
 <div><p>🧰 <strong>Supplies Needed</strong></p>
 <ul class="contains-task-list simple">
@@ -2185,8 +2186,8 @@ Total Sales: $64.30
 <li><p>Part D reflection accurately connects reference sharing to garbage collection eligibility, in the student’s own words</p></li>
 </ul>
 </div></blockquote>
+<p>#############################################################################</p>
 </section>
-<hr class="docutils" />
 <section id="assignment-1-7-2-magic-8-ball-exploring-apis-and-libraries">
 <h3>Assignment 1.7.2 — Magic 8-Ball: Exploring APIs and Libraries<a class="headerlink" href="#assignment-1-7-2-magic-8-ball-exploring-apis-and-libraries" title="Link to this heading">¶</a></h3>
 <p><strong>Overview</strong></p>
@@ -2323,7 +2324,7 @@ Ask another question? (yes/no): no
 The Magic 8-Ball has spoken. Goodbye!
 </pre></div>
 </div>
-<hr class="docutils" />
+<p>#############################################################################</p>
 <p><strong>Extension Challenges</strong></p>
 <p>Completed early? Try one or more of the following:</p>
 <ul class="contains-task-list simple">
@@ -2333,14 +2334,14 @@ The Magic 8-Ball has spoken. Goodbye!
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Seeded Random</strong> — let the user enter a “lucky number” that seeds the Random object. Investigate what happens when they use the same number twice. <em>(Hint: this connects to how the JVM initializes objects in the heap)</em></p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Null guard</strong> — add a check so that if the user enters a blank question, the program prints a warning instead of sending an empty question to the 8-Ball. Think about what <code class="docutils literal notranslate"><span class="pre">null</span></code> and empty strings mean in the heap.</p></li>
 </ul>
-<p>============================</p>
+<p>#############################################################################</p>
 <p><strong>Submission</strong></p>
 <p>Upload the following to the assignment:</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> — your completed program with block comment header</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Test Cases document — showing at least <strong>three</strong> runs of your program with different questions and the responses generated</p></li>
 </ul>
-<p>============================</p>
+<p>#############################################################################</p>
 <p><strong>Grading</strong></p>
 <p>This assignment is graded using the <strong>AP CSA Generic Assignment Rubric</strong> (5-point scale). Pay particular attention to:</p>
 <ul class="simple">
@@ -2351,9 +2352,9 @@ The Magic 8-Ball has spoken. Goodbye!
 <li><p>Section D memory questions are answered accurately and in the student’s own words</p></li>
 </ul>
 </div></blockquote>
+<p>#############################################################################</p>
 </section>
 </section>
-<hr class="docutils" />
 <section id="documentation-with-comments">
 <h2>1.8 Documentation with Comments<a class="headerlink" href="#documentation-with-comments" title="Link to this heading">¶</a></h2>
 <details>
@@ -2500,8 +2501,8 @@ The Magic 8-Ball has spoken. Goodbye!
 </tbody>
 </table>
 </div>
+<p>#############################################################################</p>
 </section>
-<hr class="docutils" />
 <section id="calling-class-methods">
 <h2>1.10 Calling Class Methods<a class="headerlink" href="#calling-class-methods" title="Link to this heading">¶</a></h2>
 <details>
@@ -2545,7 +2546,7 @@ The Magic 8-Ball has spoken. Goodbye!
 <span class="kt">double</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">();</span><span class="w">      </span><span class="c1">// Returns 0.0 to &lt; 1.0</span>
 </pre></div>
 </div>
-<hr class="docutils" />
+<p>#############################################################################</p>
 <blockquote>
 <div><p class="rubric" id="assignment-1-10-1-mission-control-calling-class-methods">Assignment 1.10.1 — Mission Control: Calling Class Methods</p>
 <p class="rubric" id="overview">Overview</p>
@@ -2557,7 +2558,7 @@ The Magic 8-Ball has spoken. Goodbye!
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Write your own static methods and call them from <code class="docutils literal notranslate"><span class="pre">main</span></code></p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Decompose a larger problem into smaller methods, each responsible for one task</p></li>
 </ul>
-<hr class="docutils" />
+<p>#############################################################################</p>
 <p class="rubric" id="background">Background</p>
 <p>A <strong>class method</strong> (declared with the keyword <code class="docutils literal notranslate"><span class="pre">static</span></code>) belongs to the <strong>class itself</strong> — not to any specific object. You call it using the class name, not an object reference:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Calling a static method from the Math class — no object needed</span>
@@ -2620,7 +2621,7 @@ The Magic 8-Ball has spoken. Goodbye!
 </pre></div>
 </div>
 <p>A method that returns nothing uses <code class="docutils literal notranslate"><span class="pre">void</span></code> as its return type. A <code class="docutils literal notranslate"><span class="pre">void</span></code> method performs an action but does not hand a value back to the caller.</p>
-<hr class="docutils" />
+<p>#############################################################################</p>
 <p class="rubric" id="part-1-investigation">Part 1 — Investigation</p>
 <p>Answer the following questions in a comment block at the top of your <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> or in a separate document submitted alongside your code.</p>
 <p class="rubric" id="section-a-understanding-static-methods">Section A — Understanding Static Methods</p>
@@ -2653,7 +2654,7 @@ The Magic 8-Ball has spoken. Goodbye!
 <ol class="arabic simple" start="11">
 <li><p>Look at the following task: <em>“Calculate the fuel needed for a rocket launch, warn the crew if fuel is low, and print a launch report.”</em> Identify <strong>three</strong> static methods you could write to decompose this problem. For &gt; each, write the method signature only (no body needed).</p></li>
 </ol>
-<hr class="docutils" />
+<p>#############################################################################</p>
 <p class="rubric" id="part-2-mission-control-program">Part 2 — Mission Control Program</p>
 <p class="rubric" id="program-description">Program Description</p>
 <p>You are writing the launch software for Mission Control. Your program will:</p>
@@ -2676,7 +2677,7 @@ The Magic 8-Ball has spoken. Goodbye!
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use <code class="docutils literal notranslate"><span class="pre">String.format()</span></code> or <code class="docutils literal notranslate"><span class="pre">printf()</span></code> to produce the formatted launch report</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Include meaningful inline comments throughout</p></li>
 </ul>
-<hr class="docutils" />
+<p>#############################################################################</p>
 <p class="rubric" id="required-static-methods">Required Static Methods</p>
 <p>Implement the following four static methods in <code class="docutils literal notranslate"><span class="pre">Main.java</span></code>:</p>
 <p class="rubric" id="calculatefuelconsumption">1. <code class="docutils literal notranslate"><span class="pre">calculateFuelConsumption</span></code></p>
@@ -2712,7 +2713,7 @@ The Magic 8-Ball has spoken. Goodbye!
 <li><p>Uses <code class="docutils literal notranslate"><span class="pre">String.format()</span></code> or <code class="docutils literal notranslate"><span class="pre">printf()</span></code> for aligned output</p></li>
 <li><p>Prints a safety status message based on the <code class="docutils literal notranslate"><span class="pre">boolean</span></code> parameter</p></li>
 </ul>
-<hr class="docutils" />
+<p>#############################################################################</p>
 <p class="rubric" id="starter-code">Starter Code</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
 
@@ -2779,7 +2780,7 @@ The Magic 8-Ball has spoken. Goodbye!
 <span class="p">}</span>
 </pre></div>
 </div>
-<hr class="docutils" />
+<p>#############################################################################</p>
 <p class="rubric" id="sample-output">Sample Output</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>=== MISSION CONTROL LAUNCH SYSTEM ===
 Enter rocket name: Falcon Alpha
@@ -2817,7 +2818,7 @@ LAUNCH STATUS:     ✗ UNSAFE — ABORT LAUNCH
 ========================================
 </pre></div>
 </div>
-<hr class="docutils" />
+<p>#############################################################################</p>
 <p class="rubric" id="extension-challenges">Extension Challenges</p>
 <p>Completed early? Try one or more of the following:</p>
 <ul class="contains-task-list simple">
@@ -2826,14 +2827,14 @@ LAUNCH STATUS:     ✗ UNSAFE — ABORT LAUNCH
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Multiple rockets</strong> — use a loop in <code class="docutils literal notranslate"><span class="pre">main</span></code> to process three different rockets and report which one has the best thrust-to-weight ratio using <code class="docutils literal notranslate"><span class="pre">Math.max()</span></code></p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Unit conversion</strong> — add a static method that converts <code class="docutils literal notranslate"><span class="pre">km/h</span></code> to <code class="docutils literal notranslate"><span class="pre">m/s</span></code> and display both speeds in the report</p></li>
 </ul>
-<hr class="docutils" />
+<p>#############################################################################</p>
 <p class="rubric" id="submission">Submission</p>
 <p>Upload the following to the assignment:</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> — your completed program with block comment header</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Test Cases document — showing at least <strong>three</strong> runs with different rocket inputs, including one that triggers the unsafe launch warning</p></li>
 </ul>
-<hr class="docutils" />
+<p>#############################################################################</p>
 <p class="rubric" id="grading">Grading</p>
 <p>This assignment is graded using the <strong>AP CSA Generic Assignment Rubric</strong> (5-point scale). Pay particular attention to:</p>
 <ul class="simple">
@@ -2843,9 +2844,9 @@ LAUNCH STATUS:     ✗ UNSAFE — ABORT LAUNCH
 <li><p>Part 1 investigation questions are answered in your block comment or submitted document</p></li>
 <li><p>The launch report is formatted using <code class="docutils literal notranslate"><span class="pre">String.format()</span></code> or <code class="docutils literal notranslate"><span class="pre">printf()</span></code> — not plain <code class="docutils literal notranslate"><span class="pre">println</span></code> concatenation</p></li>
 </ul>
+<p>#############################################################################</p>
 </div></blockquote>
 </section>
-<hr class="docutils" />
 <section id="math-class">
 <h2>1.11 Math Class<a class="headerlink" href="#math-class" title="Link to this heading">¶</a></h2>
 <details>
@@ -2945,7 +2946,7 @@ LAUNCH STATUS:     ✗ UNSAFE — ABORT LAUNCH
 </ul>
 <p><strong>Key Functionalities:</strong></p>
 <img width="422" height="490" alt="Image" src="https://github.com/user-attachments/assets/5e02c085-c41f-4ab5-a17b-63a53ce3ce0f" />
-<hr class="docutils" />
+<p>#############################################################################</p>
 <p><strong>Example Output</strong></p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Welcome</span><span class="w"> </span><span class="kd">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Roller</span><span class="w"> </span><span class="n">Coaster</span><span class="w"> </span><span class="n">Simulator</span>
 <span class="n">Enter</span><span class="w"> </span><span class="n">hill</span><span class="w"> </span><span class="nf">height</span><span class="w"> </span><span class="p">(</span><span class="n">in</span><span class="w"> </span><span class="n">meters</span><span class="p">):</span><span class="w"> </span><span class="mi">50</span>
@@ -2964,7 +2965,7 @@ LAUNCH STATUS:     ✗ UNSAFE — ABORT LAUNCH
 <span class="n">Time</span><span class="w"> </span><span class="n">Rounded</span><span class="w"> </span><span class="n">Down</span><span class="p">:</span><span class="w"> </span><span class="mf">3.0</span><span class="w"> </span><span class="n">sec</span>
 </pre></div>
 </div>
-<hr class="docutils" />
+<p>#############################################################################</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">RollerCoasterSimulator</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">GRAVITY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">9.8</span><span class="p">;</span><span class="w"> </span><span class="c1">// m/s^2 // DO NOT CHANGE</span>
 
@@ -3013,7 +3014,7 @@ LAUNCH STATUS:     ✗ UNSAFE — ABORT LAUNCH
 </div>
 <p>Submit your java program code and your test cases that demonstrates your program works as intended.</p>
 </div></blockquote>
-<hr class="docutils" />
+<p>#############################################################################</p>
 <blockquote>
 <div><p class="rubric" id="activity-1-11-2-race-car-applying-the-math-class">Activity 1.11.2 — Race Car: Applying the Math Class</p>
 <p class="rubric" id="standards">Standards</p>
@@ -3046,7 +3047,7 @@ LAUNCH STATUS:     ✗ UNSAFE — ABORT LAUNCH
 </tbody>
 </table>
 </div>
-<hr class="docutils" />
+<p>#############################################################################</p>
 <p class="rubric" id="id1">Overview</p>
 <p>In this activity you will apply what you have learned about the <code class="docutils literal notranslate"><span class="pre">Math</span></code> class, static methods, object instantiation, and <code class="docutils literal notranslate"><span class="pre">java.util.Random</span></code> to simulate a drag race between two cars. You will complete a partially written program by implementing the <code class="docutils literal notranslate"><span class="pre">computeTime</span></code> method in <code class="docutils literal notranslate"><span class="pre">Racecar.java</span></code> and filling in the guided comments in <code class="docutils literal notranslate"><span class="pre">Main.java</span></code>.</p>
 <p>By the end of this activity you will be able to:</p>
@@ -3057,7 +3058,7 @@ LAUNCH STATUS:     ✗ UNSAFE — ABORT LAUNCH
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Instantiate objects and call instance methods on them</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Connect prior concepts — classes, constructors, <code class="docutils literal notranslate"><span class="pre">toString()</span></code>, and static methods — in a complete program</p></li>
 </ul>
-<hr class="docutils" />
+<p>#############################################################################</p>
 <p class="rubric" id="id2">Background</p>
 <p class="rubric" id="connecting-prior-activities">Connecting Prior Activities</p>
 <p>You have already used these concepts individually. This activity brings them together:</p>
@@ -3084,7 +3085,7 @@ LAUNCH STATUS:     ✗ UNSAFE — ABORT LAUNCH
 </tbody>
 </table>
 </div>
-<hr class="docutils" />
+<p>#############################################################################</p>
 <p class="rubric" id="the-physics-formula">The Physics Formula</p>
 <p>The time it takes a vehicle to travel a distance from a standing start under constant acceleration is:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>t = √( 2 × d / a )
@@ -3097,7 +3098,7 @@ LAUNCH STATUS:     ✗ UNSAFE — ABORT LAUNCH
 <li><p><code class="docutils literal notranslate"><span class="pre">a</span></code> = acceleration in m/s²</p></li>
 </ul>
 <p>You implemented a similar formula in <strong>Activity 1.11.1</strong> when calculating speed at the bottom of a roller coaster hill. Here you will apply the same <code class="docutils literal notranslate"><span class="pre">Math.sqrt()</span></code> approach inside an <strong>instance method</strong> instead of directly in <code class="docutils literal notranslate"><span class="pre">main</span></code>.</p>
-<hr class="docutils" />
+<p>#############################################################################</p>
 <p class="rubric" id="generating-a-bounded-random-integer">Generating a Bounded Random Integer</p>
 <p>In <strong>Activity 1.7.1</strong> you used <code class="docutils literal notranslate"><span class="pre">Random.nextInt(bound)</span></code> to pick a Magic 8-Ball response. Here you will use it to assign each car a random acceleration between <strong>20 and 50 inclusive</strong>:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Random</span><span class="w"> </span><span class="n">rand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Random</span><span class="p">();</span>
@@ -3109,7 +3110,7 @@ LAUNCH STATUS:     ✗ UNSAFE — ABORT LAUNCH
 <code class="docutils literal notranslate"><span class="pre">nextInt(bound)</span></code> returns a value from <code class="docutils literal notranslate"><span class="pre">0</span></code> up to but <strong>not including</strong> <code class="docutils literal notranslate"><span class="pre">bound</span></code>.
 To get the range 20–50 (31 possible values), use <code class="docutils literal notranslate"><span class="pre">nextInt(31)</span></code> then add 20.</p>
 </div></blockquote>
-<hr class="docutils" />
+<p>#############################################################################</p>
 <p class="rubric" id="rounding-to-three-decimal-places">Rounding to Three Decimal Places</p>
 <p><code class="docutils literal notranslate"><span class="pre">Math.round()</span></code> rounds to the nearest whole number. To round to three decimal places, scale up, round, then scale back down:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10.5963847</span><span class="p">;</span>
@@ -3117,7 +3118,7 @@ To get the range 20–50 (31 possible values), use <code class="docutils literal
 </pre></div>
 </div>
 <p>You used <code class="docutils literal notranslate"><span class="pre">Math.round()</span></code> in <strong>Activity 1.10.1</strong> to clean up fuel consumption values. Apply the same technique here inside <code class="docutils literal notranslate"><span class="pre">computeTime</span></code>.</p>
-<hr class="docutils" />
+<p>#############################################################################</p>
 <p class="rubric" id="starter-files">Starter Files</p>
 <p class="rubric" id="racecar-java">Racecar.java</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Racecar</span>
@@ -3152,7 +3153,7 @@ To get the range 20–50 (31 possible values), use <code class="docutils literal
 <span class="p">}</span>
 </pre></div>
 </div>
-<hr class="docutils" />
+<p>#############################################################################</p>
 <p class="rubric" id="main-java">Main.java</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Random</span><span class="p">;</span>
 
@@ -3189,7 +3190,7 @@ To get the range 20–50 (31 possible values), use <code class="docutils literal
 <span class="p">}</span>
 </pre></div>
 </div>
-<hr class="docutils" />
+<p>#############################################################################</p>
 <p class="rubric" id="what-you-need-to-complete">What You Need to Complete</p>
 <p class="rubric" id="in-racecar-java">In Racecar.java</p>
 <ul class="contains-task-list simple">
@@ -3204,7 +3205,7 @@ To get the range 20–50 (31 possible values), use <code class="docutils literal
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Call <code class="docutils literal notranslate"><span class="pre">computeTime(distance)</span></code> on each car and store the result</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Print the finishing time for each car in the format shown below</p></li>
 </ul>
-<hr class="docutils" />
+<p>#############################################################################</p>
 <p class="rubric" id="id3">Sample Output</p>
 <p>Because acceleration is random, your times will differ each run. The format must match exactly:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Racer</span> <span class="n">Tom</span><span class="s1">'s car finished in 10.596 seconds.</span>
@@ -3228,7 +3229,7 @@ To get the range 20–50 (31 possible values), use <code class="docutils literal
 <li><p>What would happen if you used <code class="docutils literal notranslate"><span class="pre">rand.nextInt(50)</span></code> instead of <code class="docutils literal notranslate"><span class="pre">rand.nextInt(31)</span> <span class="pre">+</span> <span class="pre">20</span></code>? What range would that produce?</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">toString()</span></code> is already written for you. When <code class="docutils literal notranslate"><span class="pre">System.out.println(car1</span> <span class="pre">+</span> <span class="pre">&quot;'s</span> <span class="pre">car</span> <span class="pre">finished</span> <span class="pre">in</span> <span class="pre">&quot;</span> <span class="pre">+</span> <span class="pre">time</span> <span class="pre">+</span> <span class="pre">&quot;</span> <span class="pre">seconds.&quot;)</span></code> runs, what triggers the call to <code class="docutils literal notranslate"><span class="pre">toString()</span></code>?</p></li>
 </ol>
-<hr class="docutils" />
+<p>#############################################################################</p>
 <p class="rubric" id="id4">Extension Challenges</p>
 <p>Completed early? Try one or more of the following:</p>
 <ul class="contains-task-list simple">
@@ -3237,7 +3238,7 @@ To get the range 20–50 (31 possible values), use <code class="docutils literal
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>More cars</strong> — add a third and fourth <code class="docutils literal notranslate"><span class="pre">Racecar</span></code> object and report all four finishing times</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Leaderboard</strong> — sort and print the cars from fastest to slowest finishing time</p></li>
 </ul>
-<hr class="docutils" />
+<p>#############################################################################</p>
 <p class="rubric" id="id5">Submission</p>
 <p>Upload the following to the assignment:</p>
 <ul class="contains-task-list simple">
@@ -3245,7 +3246,7 @@ To get the range 20–50 (31 possible values), use <code class="docutils literal
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> — with all comments completed and all code filled in, including the block comment header</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Test Cases document — showing at least <strong>three</strong> runs of your program demonstrating different random acceleration values each time</p></li>
 </ul>
-<hr class="docutils" />
+<p>#############################################################################</p>
 <p class="rubric" id="id6">Grading</p>
 <p>This assignment is graded using the <strong>AP CSA Generic Assignment Rubric</strong> (5-point scale). Pay particular attention to:</p>
 <ul class="simple">
@@ -3256,8 +3257,8 @@ To get the range 20–50 (31 possible values), use <code class="docutils literal
 <li><p>Output format matches the sample exactly, including the apostrophe-s and the word “seconds”</p></li>
 </ul>
 </div></blockquote>
+<p>#############################################################################</p>
 </section>
-<hr class="docutils" />
 <section id="objects-instances-of-classes">
 <h2>1.12 Objects: Instances of Classes<a class="headerlink" href="#objects-instances-of-classes" title="Link to this heading">¶</a></h2>
 <details>
@@ -3323,8 +3324,8 @@ Visually demonstrate the properties of inheritance by creating a subclass(es) of
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> A class is like a blueprint or a recipe.</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> A class is used to create an instance of a class, called an object.</p></li>
 </ul>
+<p>#############################################################################</p>
 </section>
-<hr class="docutils" />
 <section id="object-creation-and-storage-instantiation">
 <h2>1.13 Object Creation and Storage (Instantiation)<a class="headerlink" href="#object-creation-and-storage-instantiation" title="Link to this heading">¶</a></h2>
 <details>
@@ -3483,7 +3484,7 @@ Visually demonstrate the properties of inheritance by creating a subclass(es) of
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">greeting</span><span class="p">);</span><span class="w">       </span><span class="c1">// void: performs an action</span>
 </pre></div>
 </div>
-<hr class="docutils" />
+<p>#############################################################################</p>
 <section id="assignment-1-14-1-sports-class">
 <h3>Assignment 1.14.1 — Sports Class<a class="headerlink" href="#assignment-1-14-1-sports-class" title="Link to this heading">¶</a></h3>
 <blockquote>
@@ -3505,7 +3506,7 @@ Visually demonstrate the properties of inheritance by creating a subclass(es) of
 </pre></div>
 </div>
 </div></blockquote>
-<p>########################################################################################</p>
+<p>#############################################################################</p>
 </section>
 <section id="assignment-1-14-2-not-another-cake">
 <h3>Assignment 1.14.2 — Not Another Cake<a class="headerlink" href="#assignment-1-14-2-not-another-cake" title="Link to this heading">¶</a></h3>
@@ -3673,7 +3674,7 @@ Visually demonstrate the properties of inheritance by creating a subclass(es) of
 </pre></div>
 </div>
 </div></blockquote>
-<p>########################################################################################</p>
+<p>#############################################################################</p>
 </section>
 <section id="assignment-1-14-3-dog-pizza">
 <h3>Assignment 1.14.3 — Dog Pizza<a class="headerlink" href="#assignment-1-14-3-dog-pizza" title="Link to this heading">¶</a></h3>
@@ -3733,7 +3734,7 @@ Visually demonstrate the properties of inheritance by creating a subclass(es) of
 </pre></div>
 </div>
 </div></blockquote>
-<p>########################################################################################</p>
+<p>#############################################################################</p>
 </section>
 <section id="assignment-1-14-4-bicycle">
 <h3>Assignment 1.14.4 — Bicycle<a class="headerlink" href="#assignment-1-14-4-bicycle" title="Link to this heading">¶</a></h3>
@@ -3762,7 +3763,7 @@ Pedaling to accelerate.
 </pre></div>
 </div>
 </div></blockquote>
-<p>########################################################################################</p>
+<p>#############################################################################</p>
 </section>
 <section id="assignment-1-14-5-constructor-practice">
 <h3>Assignment 1.14.5 — Constructor Practice<a class="headerlink" href="#assignment-1-14-5-constructor-practice" title="Link to this heading">¶</a></h3>
@@ -3803,7 +3804,7 @@ Pedaling to accelerate.
 </pre></div>
 </div>
 </div></blockquote>
-<p>########################################################################################</p>
+<p>#############################################################################</p>
 </section>
 </section>
 <section id="string-manipulation">
@@ -3896,16 +3897,45 @@ Pedaling to accelerate.
 </div>
 <p><strong>Important: Object Equality with Strings</strong></p>
 <p><code class="docutils literal notranslate"><span class="pre">==</span></code> compares object references (memory locations), while <code class="docutils literal notranslate"><span class="pre">.equals()</span></code> compares the actual content of strings:</p>
+<p>Here’s a predict-the-output question in the same style as your existing “Show answer” dropdowns (like the B1–B6 series in 1.1a) — it forces students to trace reference vs. object creation instead of just reciting the rule.</p>
+<hr class="docutils" />
+<section id="question-reference-copying-vs-object-creation">
+<h3>Question — Reference Copying vs. Object Creation<a class="headerlink" href="#question-reference-copying-vs-object-creation" title="Link to this heading">¶</a></h3>
+<p><strong>Directions:</strong> Predict the output of each <code class="docutils literal notranslate"><span class="pre">println</span></code> line, then explain <em>why</em> in one sentence.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="s">"HELLO"</span><span class="p">);</span>
 <span class="n">String</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="s">"HELLO"</span><span class="p">);</span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">s2</span><span class="p">);</span><span class="w">      </span><span class="c1">// false (different memory locations)</span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s1</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">s2</span><span class="p">));</span><span class="w"> </span><span class="c1">// true  (same content)</span>
+<span class="n">String</span><span class="w"> </span><span class="n">s3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Hello"</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">s4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s1</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">s2</span><span class="p">);</span><span class="w">      </span><span class="c1">// predict: ____</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">s4</span><span class="p">);</span><span class="w">      </span><span class="c1">// predict: ____</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">s3</span><span class="p">);</span><span class="w">      </span><span class="c1">// predict: ____</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s1</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">s3</span><span class="p">));</span><span class="w"> </span><span class="c1">// predict: ____</span>
 </pre></div>
 </div>
+<p><strong><mark>How many separate <code class="docutils literal notranslate"><span class="pre">String</span></code> objects does this code actually create in the heap? List them.</mark></strong></p>
+<details>
+<summary>Show answer</summary>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>s1 == s2       → false
+s1 == s4       → true
+s1 == s3       → false
+s1.equals(s3)  → true
+</pre></div>
+</div>
+<p><strong>Objects created: 2</strong> —</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">String(&quot;HELLO&quot;)</span></code> assigned to <code class="docutils literal notranslate"><span class="pre">s1</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">String(&quot;HELLO&quot;)</span></code> assigned to <code class="docutils literal notranslate"><span class="pre">s2</span></code></p></li>
+</ol>
+<p><code class="docutils literal notranslate"><span class="pre">s3</span> <span class="pre">=</span> <span class="pre">&quot;Hello&quot;</span></code> does <strong>not</strong> create a new object — it points to the existing pooled literal. <code class="docutils literal notranslate"><span class="pre">s4</span> <span class="pre">=</span> <span class="pre">s1</span></code> does <strong>not</strong> create a new object either — it copies <code class="docutils literal notranslate"><span class="pre">s1</span></code>’s <em>address</em>, not the object it points to. That’s why <code class="docutils literal notranslate"><span class="pre">s1</span> <span class="pre">==</span> <span class="pre">s4</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>: they are two variable names for the same single object. This is called <strong>aliasing</strong>.</p>
+</details>
 <p><strong>Aliasing:</strong> When <code class="docutils literal notranslate"><span class="pre">shape3</span> <span class="pre">=</span> <span class="pre">shape1</span></code>, both point to the same memory address. Any change to one changes the other. In Java, this is known as <strong>aliasing</strong>.</p>
+<p>#############################################################################</p>
+</section>
 <section id="activity-1-15-1-wordplay">
 <h3>Activity 1.15.1 — Wordplay<a class="headerlink" href="#activity-1-15-1-wordplay" title="Link to this heading">¶</a></h3>
-<p>Starter Files: <a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/13031419/WordPlay.zip">WordPlay.zip</a></p>
+<blockquote>
+<div><p>Starter Files: <a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/13031419/WordPlay.zip">WordPlay.zip</a></p>
 <p>You will write a program that asks the user to enter their first name and their last name,
 separated by a space. Then it asks the user to enter a phrase. You will write and call the following:</p>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -3950,11 +3980,14 @@ separated by a space. Then it asks the user to enter a phrase. You will write an
 <span class="n">Give</span><span class="w"> </span><span class="n">papa</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">proper</span><span class="w"> </span><span class="n">bup</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">boffee</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">bopper</span><span class="w"> </span><span class="n">boffee</span><span class="w"> </span><span class="n">bup</span><span class="p">.</span>
 </pre></div>
 </div>
-<p>Submit your program code as a java file and test cases as 1 pdf.</p>
+<p>Submit your program code as a java file. Upload your test cases as 1 pdf.</p>
+</div></blockquote>
+<p>#############################################################################</p>
 </section>
 <section id="assignment-1-15-2-speaking">
 <h3>Assignment 1.15.2 — Speaking<a class="headerlink" href="#assignment-1-15-2-speaking" title="Link to this heading">¶</a></h3>
-<p>Starter files: <a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/13031428/127-Speaking.zip">Speaking.zip</a></p>
+<blockquote>
+<div><p>Starter files: <a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/13031428/127-Speaking.zip">Speaking.zip</a></p>
 <p>Create a program that will ask the user for their name and their partners name. Create the following:</p>
 <div class="table-wrapper colwidths-auto docutils container">
 <table class="docutils align-default">
@@ -3989,13 +4022,20 @@ separated by a space. Then it asks the user to enter a phrase. You will write an
 <span class="n">Whispering</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">partner</span><span class="err">'</span><span class="n">s</span><span class="w"> </span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="n">russell</span>
 <span class="n">Your</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">Pig</span><span class="w"> </span><span class="n">Latin</span><span class="p">:</span><span class="w"> </span><span class="n">amanthaSay</span>
 <span class="n">Your</span><span class="w"> </span><span class="n">partner</span><span class="err">'</span><span class="n">s</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">Pig</span><span class="w"> </span><span class="n">Latin</span><span class="p">:</span><span class="w"> </span><span class="n">ussellray</span>
-<span class="n">Your</span><span class="w"> </span><span class="n">team</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">Samaell</span>
 </pre></div>
 </div>
-<p>Submit your program code as a java file and test cases as 1 pdf.</p>
+</div></blockquote>
+<p>Your team name is Samaell</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="n">Submit</span> <span class="n">your</span> <span class="n">program</span> <span class="n">code</span> <span class="k">as</span> <span class="n">a</span> <span class="n">java</span> <span class="n">file</span> <span class="ow">and</span> <span class="n">test</span> <span class="n">cases</span> <span class="k">as</span> <span class="mi">1</span> <span class="n">pdf</span><span class="o">.</span>
+
+</pre></div>
+</div>
+</div></blockquote>
+<p>#############################################################################</p>
 </section>
 </section>
-<hr class="docutils" />
 <section id="formatting-and-stringbuilder-oracle-foundations-1z0-811">
 <h2>1.16 Formatting and StringBuilder — <em>Oracle Foundations 1Z0-811</em><a class="headerlink" href="#formatting-and-stringbuilder-oracle-foundations-1z0-811" title="Link to this heading">¶</a></h2>
 <details>
@@ -4041,7 +4081,8 @@ separated by a space. Then it asks the user to enter a phrase. You will write an
 </div></blockquote>
 <section id="string-formatting">
 <h3>String Formatting<a class="headerlink" href="#string-formatting" title="Link to this heading">¶</a></h3>
-<p>Java provides two main ways to format output:</p>
+<blockquote>
+<div><p>Java provides two main ways to format output:</p>
 <p><strong><code class="docutils literal notranslate"><span class="pre">System.out.printf()</span></code></strong> — formatted printing:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">9.99</span><span class="p">;</span>
 <span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Widget"</span><span class="p">;</span>
@@ -4087,6 +4128,7 @@ separated by a space. Then it asks the user to enter a phrase. You will write an
 </tbody>
 </table>
 </div>
+</div></blockquote>
 </section>
 <section id="stringbuilder">
 <h3>StringBuilder<a class="headerlink" href="#stringbuilder" title="Link to this heading">¶</a></h3>
@@ -4143,14 +4185,144 @@ separated by a space. Then it asks the user to enter a phrase. You will write an
 </section>
 <section id="assignment-1-16-1-formatted-report">
 <h3>Assignment 1.16.1 — Formatted Report<a class="headerlink" href="#assignment-1-16-1-formatted-report" title="Link to this heading">¶</a></h3>
-<p>Create a formatted student report card that displays names, scores, and letter grades in aligned columns using <code class="docutils literal notranslate"><span class="pre">String.format()</span></code>.</p>
-</section>
-<section id="assignment-1-16-2-stringbuilder-reverse">
-<h3>Assignment 1.16.2 — StringBuilder Reverse<a class="headerlink" href="#assignment-1-16-2-stringbuilder-reverse" title="Link to this heading">¶</a></h3>
-<p>Use <code class="docutils literal notranslate"><span class="pre">StringBuilder</span></code> to write a program that checks whether a given word is a palindrome.</p>
-</section>
+<p>Checked this one too — same situation as StringBuilder. Per the same College Board Java Subset appendix, under <strong>Input/Output</strong>, <code class="docutils literal notranslate"><span class="pre">System.out.printf</span></code> and formatted output are explicitly listed as <strong>“Not tested in the AP CS A Exam, but potentially relevant/useful.”</strong> So <code class="docutils literal notranslate"><span class="pre">String.format()</span></code> (which works the same way under the hood) is safe to teach freely — no exam-alignment tension, just genuinely useful skill-building.</p>
+<p>Here’s the rebuilt version — a real report card with a letter-grade calculation baked in, so the formatting has actual data worth aligning instead of being the whole point of the exercise.</p>
 </section>
 <hr class="docutils" />
+<section id="assignment-1-16-1-formatted-report-card">
+<h3>Assignment 1.16.1 — Formatted Report Card<a class="headerlink" href="#assignment-1-16-1-formatted-report-card" title="Link to this heading">¶</a></h3>
+<blockquote>
+<div><p><strong>Oracle Exam Note (1Z0-811):</strong> <code class="docutils literal notranslate"><span class="pre">String.format()</span></code> and <code class="docutils literal notranslate"><span class="pre">System.out.printf</span></code> are not tested on the AP CS A Exam — you won’t find them on the Quick Reference sheet you get during that test. But unlike AP, the Oracle Java Foundations exam tests this directly — expect to see <code class="docutils literal notranslate"><span class="pre">%d</span></code>, <code class="docutils literal notranslate"><span class="pre">%s</span></code>, <code class="docutils literal notranslate"><span class="pre">%n</span></code>, and <code class="docutils literal notranslate"><span class="pre">%f</span></code>-style format specifiers on the 1Z0-811. Know this one well for your Oracle cert, even though it’s optional for AP.</p>
+<p><strong>Overview</strong></p>
+<p>A raw <code class="docutils literal notranslate"><span class="pre">System.out.println</span></code> of student data is hard to read once you have more than two or three students — names of different lengths push everything out of alignment, and decimals with different numbers of digits look messy side by side. <code class="docutils literal notranslate"><span class="pre">String.format()</span></code> fixes this by giving you precise control over column width, alignment, and decimal precision — the same kind of formatting real gradebooks, invoices, and spreadsheets rely on.</p>
+<p>By the end of this activity you will be able to:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use <code class="docutils literal notranslate"><span class="pre">String.format()</span></code> with width specifiers to align text into columns</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use precision specifiers (<code class="docutils literal notranslate"><span class="pre">%.1f</span></code>, <code class="docutils literal notranslate"><span class="pre">%.2f</span></code>) to control decimal places</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use left-align (<code class="docutils literal notranslate"><span class="pre">%-10s</span></code>) vs. right-align (<code class="docutils literal notranslate"><span class="pre">%10s</span></code>) and explain when each is appropriate</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Convert a numeric score into a letter grade using <code class="docutils literal notranslate"><span class="pre">if</span></code>/<code class="docutils literal notranslate"><span class="pre">else</span> <span class="pre">if</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Combine formatted numeric and String data into a single aligned report</p></li>
+</ul>
+<p><strong>Program Description</strong></p>
+<p>Build a <code class="docutils literal notranslate"><span class="pre">ReportCard.java</span></code> that:</p>
+<ul class="simple">
+<li><p>Stores at least <strong>5 students</strong>, each with a name (<code class="docutils literal notranslate"><span class="pre">String</span></code>) and a numeric score (<code class="docutils literal notranslate"><span class="pre">double</span></code>), using parallel arrays or a simple loop — whichever you’re comfortable with at this point in the course</p></li>
+<li><p>Calculates a <strong>letter grade</strong> for each student based on their score (standard 90/80/70/60 cutoffs, or your own school’s scale — note which you used)</p></li>
+<li><p>Prints a report card with <strong>aligned columns</strong>: Name, Score, Letter Grade</p></li>
+<li><p>Prints a header row with the same column widths as the data rows, so the header lines up with the data below it</p></li>
+<li><p>Uses <code class="docutils literal notranslate"><span class="pre">String.format()</span></code> (not just <code class="docutils literal notranslate"><span class="pre">println</span></code> with manually-counted spaces) to guarantee alignment even when names are different lengths</p></li>
+</ul>
+<p><strong>Requirements Checklist</strong></p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> At least one name that’s noticeably shorter and one that’s noticeably longer than the others, specifically to prove your columns still line up (e.g., <code class="docutils literal notranslate"><span class="pre">&quot;Al&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;Christopher&quot;</span></code>)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Name column <strong>left-aligned</strong> (<code class="docutils literal notranslate"><span class="pre">%-15s</span></code> or similar) — explain in a comment why text usually looks better left-aligned</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Score column <strong>right-aligned</strong> with exactly <strong>one decimal place</strong> (<code class="docutils literal notranslate"><span class="pre">%6.1f</span></code> or similar) — explain in a comment why numbers usually look better right-aligned</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Letter grade column, single character, consistently spaced</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Header row using the <strong>same width specifiers</strong> as the data rows, so <code class="docutils literal notranslate"><span class="pre">Name</span></code>, <code class="docutils literal notranslate"><span class="pre">Score</span></code>, <code class="docutils literal notranslate"><span class="pre">Grade</span></code> line up with the columns below them</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> A separator line (dashes or similar) between the header and the data</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> At least one score that lands right on a grade boundary (e.g., exactly 90.0 or 89.9) to prove your grade logic handles edges correctly</p></li>
+</ul>
+<p><strong>Sample Output</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Name</span><span class="w">             </span><span class="n">Score</span><span class="w">  </span><span class="n">Grade</span>
+<span class="o">----------------</span><span class="w"> </span><span class="o">------</span><span class="w"> </span><span class="o">-----</span>
+<span class="n">Al</span><span class="w">                </span><span class="mf">92.5</span><span class="w">    </span><span class="n">A</span>
+<span class="n">Christopher</span><span class="w">       </span><span class="mf">78.3</span><span class="w">    </span><span class="n">C</span>
+<span class="n">Beatrix</span><span class="w">           </span><span class="mf">89.9</span><span class="w">    </span><span class="n">B</span>
+<span class="n">Sam</span><span class="w">               </span><span class="mf">60.0</span><span class="w">    </span><span class="n">D</span>
+<span class="n">Priya</span><span class="w">             </span><span class="mf">95.0</span><span class="w">    </span><span class="n">A</span>
+</pre></div>
+</div>
+<p><strong>Reflection Questions (submit as a <code class="docutils literal notranslate"><span class="pre">.txt</span></code> file)</strong></p>
+<ol class="arabic simple">
+<li><p>What went wrong (or would have gone wrong) if you tried to align these columns using <code class="docutils literal notranslate"><span class="pre">println</span></code> and manually counted spaces/tabs instead of <code class="docutils literal notranslate"><span class="pre">String.format()</span></code>? Be specific about what breaks with names of different lengths.</p></li>
+<li><p>What’s the difference between <code class="docutils literal notranslate"><span class="pre">%-15s</span></code> and <code class="docutils literal notranslate"><span class="pre">%15s</span></code>? Show what happens to a short name under each, in your own words or with a small example.</p></li>
+<li><p>Why did you choose right-alignment for the Score column but left-alignment for the Name column? What’s the general rule for when to use each?</p></li>
+<li><p>You tested a score right on a grade boundary. Walk through your <code class="docutils literal notranslate"><span class="pre">if</span></code>/<code class="docutils literal notranslate"><span class="pre">else</span> <span class="pre">if</span></code> logic for that exact score — which condition fired, and why did you write the comparison the way you did (<code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> vs <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>)?</p></li>
+</ol>
+<p><strong>Submission</strong></p>
+</div></blockquote>
+<blockquote>
+<div><ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">ReportCard.java</span></code> — completed program with inline comments</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Reflection <code class="docutils literal notranslate"><span class="pre">.txt</span></code> file</p></li>
+</ul>
+<p><strong>Grading</strong></p>
+<p>Graded on the <strong>AP CSA Generic Assignment Rubric</strong> (5-point scale). Pay particular attention to:</p>
+<ul class="simple">
+<li><p>Columns actually stay aligned with names of very different lengths — this is the whole point of the assignment, not a nice-to-have</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">String.format()</span></code> is used for alignment, not hardcoded spaces or tabs</p></li>
+<li><p>Header row width specifiers match the data row width specifiers exactly</p></li>
+<li><p>Grade boundary logic is correct and was actually tested at the edge, not just with comfortably-mid-range scores</p></li>
+</ul>
+</div></blockquote>
+<p>#############################################################################</p>
+</section>
+<section id="assignment-1-16-2-palindrome-checker">
+<h3>Assignment 1.16.2 — Palindrome Checker<a class="headerlink" href="#assignment-1-16-2-palindrome-checker" title="Link to this heading">¶</a></h3>
+<blockquote>
+<div><p><strong>Oracle Exam Note (1Z0-811)</strong>: StringBuilder is not tested on the AP CS A Exam — it doesn’t appear on the Java Quick Reference sheet you get during that test. But the Oracle Java Foundations exam tests StringBuilder directly as its own exam objective — the constructor, <code class="docutils literal notranslate"><span class="pre">.append()</span></code>, <code class="docutils literal notranslate"><span class="pre">.reverse()</span></code>, and <code class="docutils literal notranslate"><span class="pre">.toString()</span></code> are all fair game on the 1Z0-811. It is useful and shows up constantly in real Java programs, and reinforces concepts that are AP-tested, like object references and mutability vs. immutability.</p>
+<p><strong>Overview</strong></p>
+<p>A palindrome is a word or phrase that reads the same forwards and backwards (<code class="docutils literal notranslate"><span class="pre">&quot;racecar&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;level&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;noon&quot;</span></code>). Checking this by hand with plain <code class="docutils literal notranslate"><span class="pre">String</span></code> methods is clunky — Strings are immutable, so “reversing” one means building a brand-new String character by character. <code class="docutils literal notranslate"><span class="pre">StringBuilder</span></code> exists for exactly this kind of job: it’s mutable, and it has a built-in <code class="docutils literal notranslate"><span class="pre">.reverse()</span></code> method that does the hard part for you.</p>
+<p>By the end of this activity you will be able to:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Explain why <code class="docutils literal notranslate"><span class="pre">StringBuilder</span></code> is used instead of <code class="docutils literal notranslate"><span class="pre">String</span></code> when a value needs to change repeatedly</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use the <code class="docutils literal notranslate"><span class="pre">StringBuilder</span></code> constructor to wrap a <code class="docutils literal notranslate"><span class="pre">String</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use <code class="docutils literal notranslate"><span class="pre">.reverse()</span></code>, <code class="docutils literal notranslate"><span class="pre">.toString()</span></code>, and <code class="docutils literal notranslate"><span class="pre">.append()</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Compare two Strings for equality using the correct method (not <code class="docutils literal notranslate"><span class="pre">==</span></code>)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Handle case sensitivity and whitespace/punctuation as part of a real-world palindrome check</p></li>
+</ul>
+<p><strong>Program Description</strong></p>
+<p>Build a <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> that:</p>
+<ul class="simple">
+<li><p>Asks the user (or, if you’re not using <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> yet, tests against a hardcoded list of words/phrases) to check whether a word is a palindrome</p></li>
+<li><p>Uses a <code class="docutils literal notranslate"><span class="pre">StringBuilder</span></code> to reverse the input</p></li>
+<li><p>Compares the original to the reversed version using <code class="docutils literal notranslate"><span class="pre">.equals()</span></code> — <strong>not</strong> <code class="docutils literal notranslate"><span class="pre">==</span></code>, and explain in a comment why <code class="docutils literal notranslate"><span class="pre">==</span></code> would be wrong here</p></li>
+<li><p>Correctly identifies simple palindromes (<code class="docutils literal notranslate"><span class="pre">&quot;racecar&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;level&quot;</span></code>) <strong>and</strong> correctly rejects non-palindromes (<code class="docutils literal notranslate"><span class="pre">&quot;hello&quot;</span></code>)</p></li>
+<li><p>Handles <strong>case sensitivity</strong>: <code class="docutils literal notranslate"><span class="pre">&quot;Racecar&quot;</span></code> should still count as a palindrome even though <code class="docutils literal notranslate"><span class="pre">'R'</span></code> ≠ <code class="docutils literal notranslate"><span class="pre">'r'</span></code></p></li>
+<li><p>(Extension) Handles <strong>phrases with spaces and punctuation</strong>: <code class="docutils literal notranslate"><span class="pre">&quot;A</span> <span class="pre">man,</span> <span class="pre">a</span> <span class="pre">plan,</span> <span class="pre">a</span> <span class="pre">canal:</span> <span class="pre">Panama&quot;</span></code> should be recognized as a palindrome once spaces, commas, colons, and capitalization are stripped out</p></li>
+</ul>
+<p><strong>Requirements Checklist</strong></p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> At least 5 test cases, including at least one true palindrome, one non-palindrome, one with mixed case, and one that is a near-miss (looks close but isn’t — e.g. <code class="docutils literal notranslate"><span class="pre">&quot;hello&quot;</span></code> reversed is <code class="docutils literal notranslate"><span class="pre">&quot;olleh&quot;</span></code>, clearly not equal, but pick a trickier near-miss like <code class="docutils literal notranslate"><span class="pre">&quot;race</span> <span class="pre">Car&quot;</span></code>)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">StringBuilder</span></code> constructed from the original <code class="docutils literal notranslate"><span class="pre">String</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">.reverse()</span></code> used to reverse it</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">.toString()</span></code> used when converting the reversed <code class="docutils literal notranslate"><span class="pre">StringBuilder</span></code> back into a <code class="docutils literal notranslate"><span class="pre">String</span></code> for comparison</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">.equals()</span></code> (or <code class="docutils literal notranslate"><span class="pre">.equalsIgnoreCase()</span></code>) used for comparison — no <code class="docutils literal notranslate"><span class="pre">==</span></code> on the final result</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> A comment explaining, in your own words, why <code class="docutils literal notranslate"><span class="pre">StringBuilder</span></code> was needed here instead of just building a reversed <code class="docutils literal notranslate"><span class="pre">String</span></code> manually with a loop</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Extension only: punctuation and spaces stripped and case normalized <strong>before</strong> reversing, using <code class="docutils literal notranslate"><span class="pre">String</span></code> methods you already know (<code class="docutils literal notranslate"><span class="pre">replaceAll</span></code>, <code class="docutils literal notranslate"><span class="pre">toLowerCase</span></code>, etc.)</p></li>
+</ul>
+<p><strong>Sample Output</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="nl">Checking</span><span class="p">:</span><span class="w"> </span><span class="s">"racecar"</span><span class="w">       </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Palindrome</span>
+<span class="nl">Checking</span><span class="p">:</span><span class="w"> </span><span class="s">"hello"</span><span class="w">         </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Not</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">palindrome</span>
+<span class="nl">Checking</span><span class="p">:</span><span class="w"> </span><span class="s">"Level"</span><span class="w">         </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Palindrome</span><span class="w"> </span><span class="p">(</span><span class="k">case</span><span class="o">-</span><span class="n">insensitive</span><span class="p">)</span>
+<span class="nl">Checking</span><span class="p">:</span><span class="w"> </span><span class="s">"race Car"</span><span class="w">      </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Not</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">palindrome</span>
+<span class="nl">Checking</span><span class="p">:</span><span class="w"> </span><span class="s">"A man, a plan, a canal: Panama"</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Palindrome</span><span class="w"> </span><span class="p">(</span><span class="n">ignoring</span><span class="w"> </span><span class="n">spaces</span><span class="o">/</span><span class="n">punctuation</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Reflection Questions (submit as a <code class="docutils literal notranslate"><span class="pre">.txt</span></code> file)</strong></p>
+<ol class="arabic simple">
+<li><p>Before using <code class="docutils literal notranslate"><span class="pre">StringBuilder</span></code>, could you have solved this with just <code class="docutils literal notranslate"><span class="pre">String</span></code> methods and a loop? Sketch (in words, not code) how you’d have done it. Why is the <code class="docutils literal notranslate"><span class="pre">StringBuilder</span></code> version shorter?</p></li>
+<li><p>Why does comparing the reversed and original values with <code class="docutils literal notranslate"><span class="pre">==</span></code> give the wrong answer here, even when the two Strings clearly have the same characters?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;race</span> <span class="pre">Car&quot;</span></code> is a great trap case — walk through why it fails a <em>simple</em> reversal-and-compare check, and what would need to change to make it pass (hint: think about what “ignoring case” really means character by character).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">StringBuilder</span></code> is not on the AP exam’s Java Quick Reference sheet. Does that mean you don’t need to understand <em>why</em> Strings are immutable and <code class="docutils literal notranslate"><span class="pre">StringBuilder</span></code> objects are mutable? Explain your reasoning — is that underlying concept tested even if the specific class isn’t?</p></li>
+</ol>
+<p><strong>Submission</strong></p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> — completed program with inline comments</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Reflection <code class="docutils literal notranslate"><span class="pre">.txt</span></code> file</p></li>
+</ul>
+<p><strong>Grading</strong></p>
+<p>Graded on the <strong>AP CSA Generic Assignment Rubric</strong> (5-point scale). Pay particular attention to:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">StringBuilder</span></code>’s <code class="docutils literal notranslate"><span class="pre">.reverse()</span></code> is actually used — not a hand-rolled loop pretending to be the “StringBuilder version”</p></li>
+<li><p>Comparison uses <code class="docutils literal notranslate"><span class="pre">.equals()</span></code>/<code class="docutils literal notranslate"><span class="pre">.equalsIgnoreCase()</span></code>, never <code class="docutils literal notranslate"><span class="pre">==</span></code>, on the final palindrome check</p></li>
+<li><p>At least one genuinely tricky test case (mixed case or the extension) is included, not just the easy <code class="docutils literal notranslate"><span class="pre">&quot;racecar&quot;</span></code> example</p></li>
+<li><p>Reflection question 3 shows the student actually traced through <em>why</em> the trap case fails, not just that it does</p></li>
+</ul>
+</div></blockquote>
+<p>#############################################################################</p>
+</section>
+</section>
 <section id="wrapper-classes-integer-and-double">
 <h2>1.17 Wrapper Classes — Integer and Double<a class="headerlink" href="#wrapper-classes-integer-and-double" title="Link to this heading">¶</a></h2>
 <details>
@@ -4233,40 +4405,89 @@ separated by a space. Then it asks the user to enter a phrase. You will write an
 <span class="kt">double</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Double</span><span class="p">.</span><span class="na">parseDouble</span><span class="p">(</span><span class="s">"3.14"</span><span class="p">);</span>
 </pre></div>
 </div>
-<section id="assignment-1-17-1-wrapper-classes">
-<h3>Assignment 1.17.1 — Wrapper Classes<a class="headerlink" href="#assignment-1-17-1-wrapper-classes" title="Link to this heading">¶</a></h3>
-<p>Directions: Create a class called WrapperExamples that will demonstrate each of the following:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Integer Constructor: Create an Integer object from a primitive int.
+<p>#############################################################################</p>
+<section id="assignment-1-17-1-high-score-tracker">
+<h3>Assignment 1.17.1 — High Score Tracker<a class="headerlink" href="#assignment-1-17-1-high-score-tracker" title="Link to this heading">¶</a></h3>
+<blockquote>
+<div><p><strong>Overview</strong></p>
+<p>Your school’s arcade club wants a program that tracks high scores for a group of players. The twist: not every player has played yet, so some scores are <strong>missing</strong> rather than zero — and “missing” and “zero” need to be treated differently. This is exactly the kind of situation where primitives (<code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">double</span></code>) fall short, because primitives can never be <code class="docutils literal notranslate"><span class="pre">null</span></code>. Wrapper classes can.</p>
+<p>By the end of this activity you will be able to:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Explain why a primitive <code class="docutils literal notranslate"><span class="pre">int</span></code> cannot represent “no value yet,” but an <code class="docutils literal notranslate"><span class="pre">Integer</span></code> can</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Construct <code class="docutils literal notranslate"><span class="pre">Integer</span></code> and <code class="docutils literal notranslate"><span class="pre">Double</span></code> objects using their constructors, and retrieve primitive values with <code class="docutils literal notranslate"><span class="pre">intValue()</span></code> / <code class="docutils literal notranslate"><span class="pre">doubleValue()</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use autoboxing and unboxing without writing explicit conversion code</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use <code class="docutils literal notranslate"><span class="pre">Integer.MAX_VALUE</span></code> / <code class="docutils literal notranslate"><span class="pre">MIN_VALUE</span></code> and <code class="docutils literal notranslate"><span class="pre">Double.MAX_VALUE</span></code> / <code class="docutils literal notranslate"><span class="pre">MIN_VALUE</span></code> in a real comparison, not just printed in isolation</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Explain what happens when you try to unbox a <code class="docutils literal notranslate"><span class="pre">null</span></code> wrapper object, and how to guard against it</p></li>
+</ul>
+<p><strong>Note on <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Integer()</span></code> / <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Double()</span></code>:</strong> These constructors are part of the <strong>AP CSA Java Quick Reference sheet</strong> — they’re fair game on the exam, and you’re required to use them below. If your IDE shows a strikethrough or a “deprecated” warning on them, that’s expected and not a mistake: the AP CSA Exam is written against Java 7, which allows these constructors. In Java 9 and later, the officially recommended approach is <code class="docutils literal notranslate"><span class="pre">Integer.valueOf(x)</span></code> or simply relying on autoboxing instead. Both are worth knowing — the constructor because it’s testable on the exam, and the modern alternative because it’s what you’d actually write in a real codebase today.</p>
+<p><strong>Program Description</strong></p>
+<p>Build a <code class="docutils literal notranslate"><span class="pre">HSTracker.java</span></code> that:</p>
+<ul class="simple">
+<li><p>Stores each player’s score as an <code class="docutils literal notranslate"><span class="pre">Integer[]</span></code> array (not <code class="docutils literal notranslate"><span class="pre">int[]</span></code>) — this is what allows a missing score to be represented as <code class="docutils literal notranslate"><span class="pre">null</span></code> instead of a fake <code class="docutils literal notranslate"><span class="pre">0</span></code></p></li>
+<li><p>Populates <strong>at least one</strong> element of the array using the explicit <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Integer(score)</span></code> constructor, with a comment noting this is exam-tested syntax</p></li>
+<li><p>Populates the <strong>rest</strong> of the array using <strong>autoboxing</strong> — plain <code class="docutils literal notranslate"><span class="pre">int</span></code> literals assigned directly, letting Java convert them automatically</p></li>
+<li><p>Loops through the array and, for each player:</p>
+<ul>
+<li><p>Skips players whose score is <code class="docutils literal notranslate"><span class="pre">null</span></code> (print <code class="docutils literal notranslate"><span class="pre">&quot;[Name]</span> <span class="pre">has</span> <span class="pre">not</span> <span class="pre">played</span> <span class="pre">yet.&quot;</span></code>)</p></li>
+<li><p><strong>Unboxes</strong> the <code class="docutils literal notranslate"><span class="pre">Integer</span></code> back to an <code class="docutils literal notranslate"><span class="pre">int</span></code> to use in a calculation — do this at least once using the explicit <code class="docutils literal notranslate"><span class="pre">.intValue()</span></code> method, and at least once using &gt; implicit unboxing (e.g., using the <code class="docutils literal notranslate"><span class="pre">Integer</span></code> directly in a math expression)</p></li>
+</ul>
+</li>
+<li><p>Tracks the highest score seen so far, initializing your “highest so far” variable to <code class="docutils literal notranslate"><span class="pre">Integer.MIN_VALUE</span></code> (not <code class="docutils literal notranslate"><span class="pre">0</span></code>) — ask yourself why <code class="docutils literal notranslate"><span class="pre">0</span></code> would be the wrong choice here</p></li>
+<li><p>Calculates the <strong>average score</strong> as a <code class="docutils literal notranslate"><span class="pre">double</span></code>, using a <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Double(...)</span></code> constructor at least once to store an intermediate result, with a comment explaining what it’s storing</p></li>
+<li><p>Deliberately triggers and then fixes a <code class="docutils literal notranslate"><span class="pre">NullPointerException</span></code>: first write the loop <em>without</em> a null check and run it to see the crash, then add the null check and re-run to show it working</p></li>
+</ul>
+<p><strong>Requirements Checklist</strong></p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">Integer[]</span></code> array of at least 5 players, with <strong>at least one <code class="docutils literal notranslate"><span class="pre">null</span></code></strong> score</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> At least one element created with the explicit <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Integer(...)</span></code> constructor</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> At least one element populated via autoboxing (plain <code class="docutils literal notranslate"><span class="pre">int</span></code> literal, no explicit constructor or <code class="docutils literal notranslate"><span class="pre">valueOf()</span></code>)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">intValue()</span></code> called explicitly at least once, with a comment explaining what it’s doing</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> At least one implicit unboxing example (using an <code class="docutils literal notranslate"><span class="pre">Integer</span></code> directly in arithmetic), with a comment identifying it as implicit unboxing</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Double(...)</span></code> used at least once, with a comment explaining what value it holds</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">Integer.MIN_VALUE</span></code> used to initialize your “highest score” tracker, with a comment explaining why <code class="docutils literal notranslate"><span class="pre">0</span></code> would be a buggy choice</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">Double.MAX_VALUE</span></code> printed and explained in a comment</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> A <code class="docutils literal notranslate"><span class="pre">toString()</span></code>-based or <code class="docutils literal notranslate"><span class="pre">printf</span></code>-based summary at the end showing each player’s score (or “no score yet”) and the class average</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Screenshot showing the program <strong>crashing</strong> with a <code class="docutils literal notranslate"><span class="pre">NullPointerException</span></code> before you added your null check (for the reflection questions)</p></li>
+</ul>
+<p><strong>Sample Output</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Player</span><span class="w"> </span><span class="n">scores</span><span class="p">:</span>
+<span class="nl">Amara</span><span class="p">:</span><span class="w"> </span><span class="mi">87</span>
+<span class="nl">Devon</span><span class="p">:</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="n">yet</span>
+<span class="nl">Priya</span><span class="p">:</span><span class="w"> </span><span class="mi">95</span>
+<span class="nl">Kai</span><span class="p">:</span><span class="w"> </span><span class="mi">72</span>
+<span class="nl">Lena</span><span class="p">:</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="n">yet</span>
 
-intValue() Method: Retrieve the primitive int value from the Integer object.
-
-Double Constructor: Create a Double object from a primitive double.
-
-doubleValue() Method: Retrieve the primitive double value from the Double object.
-
-Maximum Double Value: Display the maximum value for a double.
-
-Minimum Double Value: Display the minimum value for a double.
-
-Autoboxing: Automatically converting a primitive int to an Integer object.
-
-Unboxing: Automatically converting an Integer object back to a primitive int.
+<span class="n">Highest</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="n">so</span><span class="w"> </span><span class="n">far</span><span class="p">:</span><span class="w"> </span><span class="mi">95</span><span class="w"> </span><span class="p">(</span><span class="n">Priya</span><span class="p">)</span>
+<span class="n">Class</span><span class="w"> </span><span class="nf">average</span><span class="w"> </span><span class="p">(</span><span class="n">players</span><span class="w"> </span><span class="n">who</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">played</span><span class="p">):</span><span class="w"> </span><span class="mf">84.67</span>
 </pre></div>
 </div>
-<p>Answer the following questions as a .txt file.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>What happens if you try to unbox a null Integer? Why?
-
-How can you handle situations where a wrapper class might be null before performing unboxing?
-
-Can you think of a situation where autoboxing might cause performance issues? Explain.
-
-What happens when you try to change the value of MAX_VALUE and MIN_VALUE?
-</pre></div>
-</div>
-<p>Submit your java &amp; txt files. Add in-line comments to describe each example. Provide a screenshot of your executed program.</p>
+<p><strong>Reflection Questions (submit as a <code class="docutils literal notranslate"><span class="pre">.txt</span></code> file)</strong></p>
+<ol class="arabic simple">
+<li><p>What happened when you unboxed a <code class="docutils literal notranslate"><span class="pre">null</span></code> Integer before adding your null check? Paste the exact error message and explain, in your own words, what Java was trying to do when it crashed.</p></li>
+<li><p>How did adding a null check fix the crash? Where exactly does the check need to go?</p></li>
+<li><p>Why did you initialize the “highest score” tracker to <code class="docutils literal notranslate"><span class="pre">Integer.MIN_VALUE</span></code> instead of <code class="docutils literal notranslate"><span class="pre">0</span></code>? Describe a scenario where using <code class="docutils literal notranslate"><span class="pre">0</span></code> would produce a wrong answer.</p></li>
+<li><p>You used both <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Integer(x)</span></code> and plain autoboxing (<code class="docutils literal notranslate"><span class="pre">Integer</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">x;</span></code>) in this program. Both work, but they behave slightly differently under the hood. Look up why <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Integer(x)</span> <span class="pre">==</span> <span class="pre">new</span> <span class="pre">Integer(x)</span></code> is always <code class="docutils literal notranslate"><span class="pre">false</span></code>, while small autoboxed values can sometimes be <code class="docutils literal notranslate"><span class="pre">==</span></code> to each other. Explain what you found in your own words.</p></li>
+<li><p>Autoboxing happens automatically, which is convenient — but describe a situation (e.g., inside a large loop) where autoboxing repeatedly could cause a &gt; performance problem compared to using primitives directly.</p></li>
+</ol>
+<p><strong>Submission</strong></p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> — completed program with inline comments explaining each wrapper-class concept where it’s used</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Reflection <code class="docutils literal notranslate"><span class="pre">.txt</span></code> file</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Screenshot of the <code class="docutils literal notranslate"><span class="pre">NullPointerException</span></code> crash (before the fix)</p></li>
+</ul>
+<p><strong>Grading</strong></p>
+<p>Graded on the <strong>AP CSA Generic Assignment Rubric</strong> (5-point scale). Pay particular attention to:</p>
+<ul class="simple">
+<li><p>Array is genuinely <code class="docutils literal notranslate"><span class="pre">Integer[]</span></code>, not <code class="docutils literal notranslate"><span class="pre">int[]</span></code> — the whole assignment depends on this distinction</p></li>
+<li><p>Both the explicit constructor (<code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Integer(...)</span></code>) and autoboxing are present and correctly labeled in comments</p></li>
+<li><p>The null-check crash is real (not just described) and the screenshot proves it happened</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MIN_VALUE</span></code>/<code class="docutils literal notranslate"><span class="pre">MAX_VALUE</span></code> are used in an actual comparison or initialization, not just printed standalone</p></li>
+<li><p>Reflection answers connect to what the student actually observed, not generic textbook definitions</p></li>
+</ul>
+</div></blockquote>
+<p>#############################################################################</p>
 </section>
 </section>
-<hr class="docutils" />
 <section id="unit-1-final-project">
 <h2>Unit 1 Final Project<a class="headerlink" href="#unit-1-final-project" title="Link to this heading">¶</a></h2>
 <details>
@@ -4904,6 +5125,7 @@ Available vehicles: 3
 </ul>
 </li>
 <li><a class="reference internal" href="#string-manipulation">1.15 String Manipulation</a><ul>
+<li><a class="reference internal" href="#question-reference-copying-vs-object-creation">Question — Reference Copying vs. Object Creation</a></li>
 <li><a class="reference internal" href="#activity-1-15-1-wordplay">Activity 1.15.1 — Wordplay</a></li>
 <li><a class="reference internal" href="#assignment-1-15-2-speaking">Assignment 1.15.2 — Speaking</a></li>
 </ul>
@@ -4912,11 +5134,12 @@ Available vehicles: 3
 <li><a class="reference internal" href="#string-formatting">String Formatting</a></li>
 <li><a class="reference internal" href="#stringbuilder">StringBuilder</a></li>
 <li><a class="reference internal" href="#assignment-1-16-1-formatted-report">Assignment 1.16.1 — Formatted Report</a></li>
-<li><a class="reference internal" href="#assignment-1-16-2-stringbuilder-reverse">Assignment 1.16.2 — StringBuilder Reverse</a></li>
+<li><a class="reference internal" href="#assignment-1-16-1-formatted-report-card">Assignment 1.16.1 — Formatted Report Card</a></li>
+<li><a class="reference internal" href="#assignment-1-16-2-palindrome-checker">Assignment 1.16.2 — Palindrome Checker</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#wrapper-classes-integer-and-double">1.17 Wrapper Classes — Integer and Double</a><ul>
-<li><a class="reference internal" href="#assignment-1-17-1-wrapper-classes">Assignment 1.17.1 — Wrapper Classes</a></li>
+<li><a class="reference internal" href="#assignment-1-17-1-high-score-tracker">Assignment 1.17.1 — High Score Tracker</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#unit-1-final-project">Unit 1 Final Project</a><ul>

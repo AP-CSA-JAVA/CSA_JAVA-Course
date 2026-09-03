@@ -1073,7 +1073,7 @@ One thing worth pointing out to students: `%d` **only** works with integer types
 > ```
 
 
----
+#############################################################################
 
 
 ## 1.5 Casting and Range of Variables
@@ -1174,7 +1174,7 @@ public class CastingEggs {
 We know that we don't have 0 eggs.  We can rewrite our program to show how many eggs we have in decimal form.
 
 
-
+#############################################################################
 
 ### Assignment 1.5.1 — FivePlanetTravel
 
@@ -1240,13 +1240,13 @@ We know that we don't have 0 eggs.  We can rewrite our program to show how many 
 
 Your output should look similar to the example above. You will write a **widening algorithm** that shows the travel time to and from all planets using casting. Use `printf` to widen the the time to 10 decimal places.  The one rule is that *you must use the provided code* and ***not change any provided data types***.
 
----
+#############################################################################
 
 ## 1.6 Compound Assignment Operators
 
 *(See section 1.4 — covered in depth with compound assignment operators and prefix/postfix increment/decrement.)*
 
----
+#############################################################################
 
 ## 1.7 Application Program Interface (API) and Libraries
 
@@ -1313,7 +1313,7 @@ Pick one Java library or API from the list below (or propose your own with instr
 
 
 
----
+#############################################################################
 
 ## 1.7a Where Do Objects Live? — Heap Memory
 
@@ -1340,7 +1340,7 @@ Scanner b = a;             // b gets a COPY of the address, not a copy of the Sc
 
 When nothing holds that address anymore, Java's **garbage collector** sweeps through the warehouse and clears out the unclaimed space automatically — unlike languages like C++ where you'd have to clean it up yourself. This is one of Java's key safety features.
 
----
+#############################################################################
 
 ### Heap vs. Stack — The Quick Contrast
 
@@ -1395,7 +1395,7 @@ System.out.println(s1.equals(s3));    // true  — same content
 
 > ⚠️ **Oracle Exam Note:** Always use `.equals()` to compare String content — never `==`. The `==` operator compares *addresses*, not content, and the String pool makes its behavior unpredictable.
 
----
+#############################################################################
 
 ## 1.7b Packages & APIs
 
@@ -1412,7 +1412,8 @@ import java.util.Random;    // imports the Random class from the java.util packa
 
 `java.lang` (which contains `String`, `Math`, `Integer`, etc.) is imported **automatically** — you never need to import it manually.
 
----
+
+#############################################################################
 
 ### Assignment 1.7.1 — Heap Detective: Tracing References & Memory
 
@@ -1435,7 +1436,7 @@ import java.util.Random;    // imports the Random class from the java.util packa
 </details>
 
 
-===============================================
+#############################################################################
 
 
 > 
@@ -1644,7 +1645,7 @@ import java.util.Random;    // imports the Random class from the java.util packa
 > 
 > 
 
----
+#############################################################################
 
 
 ### Assignment 1.7.2 — Magic 8-Ball: Exploring APIs and Libraries
@@ -1772,7 +1773,8 @@ By the end of this activity you will be able to:
 > The Magic 8-Ball has spoken. Goodbye!
 > ```
 >
-> ---
+> #############################################################################
+> 
 >
 > **Extension Challenges**
 >
@@ -1784,7 +1786,7 @@ By the end of this activity you will be able to:
 > - [ ] **Seeded Random** — let the user enter a "lucky number" that seeds the Random object. Investigate what happens when they use the same number twice. *(Hint: this connects to how the JVM initializes objects in the heap)*
 > - [ ] **Null guard** — add a check so that if the user enters a blank question, the program prints a warning instead of sending an empty question to the 8-Ball. Think about what `null` and empty strings mean in the heap.
 >
-> ============================
+> #############################################################################
 >
 > **Submission**
 >
@@ -1793,7 +1795,7 @@ By the end of this activity you will be able to:
 > - [ ] `Main.java` — your completed program with block comment header
 > - [ ] Test Cases document — showing at least **three** runs of your program with different questions and the responses generated
 >
-> ============================
+> #############################################################################
 >
 > **Grading**
 >
@@ -1805,7 +1807,7 @@ By the end of this activity you will be able to:
 > - Section D memory questions are answered accurately and in the student's own words
 
 
----
+#############################################################################
 
 
 ## 1.8 Documentation with Comments
@@ -1900,7 +1902,7 @@ public void printName(String s) // signature: name=printName, params=String, ret
 | Accessing members | Can only access static data members and static methods. | Can access static and non-static members. |
 | Overriding | Cannot be overridden (compile-time binding). | Can be overridden (runtime/dynamic binding). |
 
----
+#############################################################################
 
 ## 1.10 Calling Class Methods
 
@@ -1928,7 +1930,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 ```
 
 
----
+#############################################################################
 
 
 >
@@ -1945,7 +1947,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > - [ ] Write your own static methods and call them from `main`
 > - [ ] Decompose a larger problem into smaller methods, each responsible for one task
 > 
-> ---
+> #############################################################################
 > 
 > ## Background
 > 
@@ -1994,7 +1996,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > 
 > A method that returns nothing uses `void` as its return type. A `void` method performs an action but does not hand a value back to the caller.
 > 
-> ---
+> #############################################################################
 > 
 > ## Part 1 — Investigation
 > 
@@ -2031,7 +2033,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > 
 > 11. Look at the following task: *"Calculate the fuel needed for a rocket launch, warn the crew if fuel is low, and print a launch report."* Identify **three** static methods you could write to decompose this problem. For > each, write the method signature only (no body needed).
 > 
-> ---
+> #############################################################################
 > 
 > ## Part 2 — Mission Control Program
 > 
@@ -2056,7 +2058,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > - [ ] Use `String.format()` or `printf()` to produce the formatted launch report
 > - [ ] Include meaningful inline comments throughout
 > 
-> ---
+> #############################################################################
 > 
 > ### Required Static Methods
 > 
@@ -2091,7 +2093,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > - Uses `String.format()` or `printf()` for aligned output
 > - Prints a safety status message based on the `boolean` parameter
 > 
-> ---
+> #############################################################################
 > 
 > ## Starter Code
 > 
@@ -2161,7 +2163,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > }
 > ```
 > 
-> ---
+> #############################################################################
 > 
 > ## Sample Output
 > 
@@ -2203,7 +2205,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > ========================================
 > ```
 > 
-> ---
+> #############################################################################
 > 
 > ## Extension Challenges
 > 
@@ -2214,7 +2216,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > - [ ] **Multiple rockets** — use a loop in `main` to process three different rockets and report which one has the best thrust-to-weight ratio using `Math.max()`
 > - [ ] **Unit conversion** — add a static method that converts `km/h` to `m/s` and display both speeds in the report
 > 
-> ---
+> #############################################################################
 > 
 > ## Submission
 > 
@@ -2223,7 +2225,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > - [ ] `Main.java` — your completed program with block comment header
 > - [ ] Test Cases document — showing at least **three** runs with different rocket inputs, including one that triggers the unsafe launch warning
 > 
-> ---
+> #############################################################################
 > 
 > ## Grading
 > 
@@ -2235,7 +2237,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > - Part 1 investigation questions are answered in your block comment or submitted document
 > - The launch report is formatted using `String.format()` or `printf()` — not plain `println` concatenation
 > 
-> ---
+> #############################################################################
 >
 
 
@@ -2295,7 +2297,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > <img width="422" height="490" alt="Image" src="https://github.com/user-attachments/assets/5e02c085-c41f-4ab5-a17b-63a53ce3ce0f" />
 > 
 > 
-> ---
+> #############################################################################
 > 
 > **Example Output**
 > 
@@ -2317,7 +2319,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > Time Rounded Down: 3.0 sec
 > ```
 > 
-> ---
+> #############################################################################
 > 
 > 
 > ```java
@@ -2370,7 +2372,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > 
 
 
----
+#############################################################################
 
 
 >
@@ -2387,7 +2389,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > | CRP 1 | Apply appropriate technical skills and academic knowledge |
 > | CRP 5 | Utilize critical thinking to make sense of problems |
 > 
-> ---
+> #############################################################################
 > 
 > ## Overview
 > 
@@ -2400,7 +2402,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > - [ ] Instantiate objects and call instance methods on them
 > - [ ] Connect prior concepts — classes, constructors, `toString()`, and static methods — in a complete program
 > 
-> ---
+> #############################################################################
 > 
 > ## Background
 > 
@@ -2415,7 +2417,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > | 1.11.1 Roller Coaster Simulator | `Math.sqrt()`, physics formulas, `Math.round()` |
 > | 1.13 Object Creation | Constructors, instance variables, `toString()` |
 > 
-> ---
+> #############################################################################
 > 
 > ### The Physics Formula
 > 
@@ -2432,7 +2434,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > 
 > You implemented a similar formula in **Activity 1.11.1** when calculating speed at the bottom of a roller coaster hill. Here you will apply the same `Math.sqrt()` approach inside an **instance method** instead of directly in `main`.
 > 
-> ---
+> #############################################################################
 > 
 > ### Generating a Bounded Random Integer
 > 
@@ -2447,7 +2449,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > > `nextInt(bound)` returns a value from `0` up to but **not including** `bound`.
 > > To get the range 20–50 (31 possible values), use `nextInt(31)` then add 20.
 > 
-> ---
+> #############################################################################
 > 
 > ### Rounding to Three Decimal Places
 > 
@@ -2460,7 +2462,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > 
 > You used `Math.round()` in **Activity 1.10.1** to clean up fuel consumption values. Apply the same technique here inside `computeTime`.
 > 
-> ---
+> #############################################################################
 > 
 > ## Starter Files
 > 
@@ -2499,7 +2501,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > }
 > ```
 > 
-> ---
+> #############################################################################
 > 
 > ### Main.java
 > 
@@ -2540,7 +2542,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > }
 > ```
 > 
-> ---
+> #############################################################################
 > 
 > ## What You Need to Complete
 > 
@@ -2555,7 +2557,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > - [ ] Call `computeTime(distance)` on each car and store the result
 > - [ ] Print the finishing time for each car in the format shown below
 > 
-> ---
+> #############################################################################
 > 
 > ## Sample Output
 > 
@@ -2585,7 +2587,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > 4. What would happen if you used `rand.nextInt(50)` instead of `rand.nextInt(31) + 20`? What range would that produce?
 > 5. `toString()` is already written for you. When `System.out.println(car1 + "'s car finished in " + time + " seconds.")` runs, what triggers the call to `toString()`?
 > 
-> ---
+> #############################################################################
 > 
 > ## Extension Challenges
 > 
@@ -2596,7 +2598,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > - [ ] **More cars** — add a third and fourth `Racecar` object and report all four finishing times
 > - [ ] **Leaderboard** — sort and print the cars from fastest to slowest finishing time
 > 
-> ---
+> #############################################################################
 > 
 > ## Submission
 > 
@@ -2606,7 +2608,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > - [ ] `Main.java` — with all comments completed and all code filled in, including the block comment header
 > - [ ] Test Cases document — showing at least **three** runs of your program demonstrating different random acceleration values each time
 > 
-> ---
+> #############################################################################
 > 
 > ## Grading
 > 
@@ -2619,7 +2621,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > - Output format matches the sample exactly, including the apostrophe-s and the word "seconds"
 >
 
----
+#############################################################################
 
 ## 1.12 Objects: Instances of Classes
 
@@ -2665,7 +2667,7 @@ We can also create a *method* that will call the attributes within a class. **NO
 - [ ] A class is like a blueprint or a recipe.
 - [ ] A class is used to create an instance of a class, called an object.
 
----
+#############################################################################
 
 ## 1.13 Object Creation and Storage (Instantiation)
 
@@ -2790,7 +2792,7 @@ int len = greeting.length();        // non-void: returns a value
 System.out.println(greeting);       // void: performs an action
 ```
 
----
+#############################################################################
 
 ### Assignment 1.14.1 — Sports Class
 
@@ -2814,7 +2816,7 @@ System.out.println(greeting);       // void: performs an action
 > ```
 >
 
-########################################################################################
+#############################################################################
 
 ### Assignment 1.14.2 — Not Another Cake
 
@@ -2984,7 +2986,7 @@ System.out.println(greeting);       // void: performs an action
 > ```
 >
 
-########################################################################################
+#############################################################################
 
 ### Assignment 1.14.3 — Dog Pizza
 
@@ -3043,7 +3045,7 @@ System.out.println(greeting);       // void: performs an action
 > ```
 >
 
-########################################################################################
+#############################################################################
 
 ### Assignment 1.14.4 — Bicycle 
 
@@ -3070,7 +3072,7 @@ System.out.println(greeting);       // void: performs an action
 > ```
 >
 
-########################################################################################
+#############################################################################
 
 ### Assignment 1.14.5 — Constructor Practice
 
@@ -3105,7 +3107,7 @@ System.out.println(greeting);       // void: performs an action
 > ```
 >
 
-########################################################################################
+#############################################################################
 
 ## 1.15 String Manipulation
 
@@ -3153,87 +3155,127 @@ System.out.println("Hello, " + name + "!");  // Hello, World!
 
 `==` compares object references (memory locations), while `.equals()` compares the actual content of strings:
 
+Here's a predict-the-output question in the same style as your existing "Show answer" dropdowns (like the B1–B6 series in 1.1a) — it forces students to trace reference vs. object creation instead of just reciting the rule.
+
+---
+
+### Question — Reference Copying vs. Object Creation
+
+**Directions:** Predict the output of each `println` line, then explain *why* in one sentence. 
+
 ```java
 String s1 = new String("HELLO");
 String s2 = new String("HELLO");
-System.out.println(s1 == s2);      // false (different memory locations)
-System.out.println(s1.equals(s2)); // true  (same content)
+String s3 = "Hello";
+String s4 = s1;
+
+System.out.println(s1 == s2);      // predict: ____
+System.out.println(s1 == s4);      // predict: ____
+System.out.println(s1 == s3);      // predict: ____
+System.out.println(s1.equals(s3)); // predict: ____
 ```
+
+**<mark>How many separate `String` objects does this code actually create in the heap? List them.</mark>**
+
+
+<details>
+<summary>Show answer</summary>
+
+```
+s1 == s2       → false
+s1 == s4       → true
+s1 == s3       → false
+s1.equals(s3)  → true
+```
+
+**Objects created: 2** —
+
+1. `new String("HELLO")` assigned to `s1`
+2. `new String("HELLO")` assigned to `s2`
+
+`s3 = "Hello"` does **not** create a new object — it points to the existing pooled literal. `s4 = s1` does **not** create a new object either — it copies `s1`'s *address*, not the object it points to. That's why `s1 == s4` is `true`: they are two variable names for the same single object. This is called **aliasing**.
+
+</details>
+
 
 **Aliasing:** When `shape3 = shape1`, both point to the same memory address. Any change to one changes the other. In Java, this is known as **aliasing**.
 
+#############################################################################
+
 ### Activity 1.15.1 — Wordplay
 
-Starter Files: [WordPlay.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/13031419/WordPlay.zip)
+> Starter Files: [WordPlay.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/13031419/WordPlay.zip)
+> 
+> 
+> You will write a program that asks the user to enter their first name and their last name, 
+> separated by a space. Then it asks the user to enter a phrase. You will write and call the following:
+> 
+> | Methods |  |
+> | --------- | --------- |
+> | getFirstName() | returns the first name from the full name of user |
+> | getLastName() | returns the last name from the full name of user |
+> | getInitials() | returns the initials from the full name of user |
+> | makePassword() | returns a password created by the following: length of first name + first half of first name + last name + last half of last name + length of last name |
+> | ceeBee() | returns the phrase with all the c's replaced by b's |
+> 
+> **Hint:** You may want to use API documentation to understand: `split()`, `charAt()`, `substring()`, `replace()`
+> 
+> **Sample Output:**
+> 
+> ```java
+> Enter your first name and last name, separated by a space: 
+> Bernard Heally
+> Enter a phrase: 
+> Give papa a proper cup of coffee in a copper coffee cup.
+> 
+> Your first name is Bernard
+> Your last name is Heally
+> Your initials are BH
+> 
+> Your new password: 8BernHeallylly5
+> 
+> Give papa a proper bup of boffee in a bopper boffee bup.
+> ```
+> 
+> Submit your program code as a java file. Upload your test cases as 1 pdf.
+> 
 
-
-You will write a program that asks the user to enter their first name and their last name, 
-separated by a space. Then it asks the user to enter a phrase. You will write and call the following:
-
-| Methods |  |
-| --------- | --------- |
-| getFirstName() | returns the first name from the full name of user |
-| getLastName() | returns the last name from the full name of user |
-| getInitials() | returns the initials from the full name of user |
-| makePassword() | returns a password created by the following: length of first name + first half of first name + last name + last half of last name + length of last name |
-| ceeBee() | returns the phrase with all the c's replaced by b's |
-
-**Hint:** You may want to use API documentation to understand: `split()`, `charAt()`, `substring()`, `replace()`
-
-**Sample Output:**
-
-```java
-Enter your first name and last name, separated by a space: 
-Bernard Heally
-Enter a phrase: 
-Give papa a proper cup of coffee in a copper coffee cup.
-
-Your first name is Bernard
-Your last name is Heally
-Your initials are BH
-
-Your new password: 8BernHeallylly5
-
-Give papa a proper bup of boffee in a bopper boffee bup.
-```
-
-Submit your program code as a java file and test cases as 1 pdf.
-
+#############################################################################
 
 ### Assignment 1.15.2 — Speaking
 
-
-Starter files: [Speaking.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/13031428/127-Speaking.zip)
-
-Create a program that will ask the user for their name and their partners name. Create the following:
-
-| Methods |  |
-| ------- | ---- |
-| yelling() | returns a name in all caps |
-| whisper() | returns a name in all lower case |
-| pigLatin() | takes a word and take the first letter and put it at the end of the word and add the letters “ay” to the end. For example, “pig” becomes “igpay” |
-| nameJoin() | takes two parameters, name1 and name2, and combines them by taking the first half of name1 and second half of name2 and combine them |
-
-
-**Sample Output**
-```java
-Enter your first name:
- Samantha
-Enter your partner's name:
- Russell
-
-Yelling your name: SAMANTHA
-Whispering your partner's name: russell
-Your name in Pig Latin: amanthaSay
-Your partner's name in Pig Latin: ussellray
+> 
+> Starter files: [Speaking.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/13031428/127-Speaking.zip)
+> 
+> Create a program that will ask the user for their name and their partners name. Create the following:
+> 
+> | Methods |  |
+> | ------- | ---- |
+> | yelling() | returns a name in all caps |
+> | whisper() | returns a name in all lower case |
+> | pigLatin() | takes a word and take the first letter and put it at the end of the word and add the letters “ay” to the end. For example, “pig” becomes “igpay” |
+> | nameJoin() | takes two parameters, name1 and name2, and combines them by taking the first half of name1 and second half of name2 and combine them |
+> 
+> 
+> **Sample Output**
+> ```java
+> Enter your first name:
+>  Samantha
+> Enter your partner's name:
+>  Russell
+> 
+> Yelling your name: SAMANTHA
+> Whispering your partner's name: russell
+> Your name in Pig Latin: amanthaSay
+> Your partner's name in Pig Latin: ussellray
 Your team name is Samaell
-```
+> ```
+> 
+> Submit your program code as a java file and test cases as 1 pdf.
+> 
 
-Submit your program code as a java file and test cases as 1 pdf.
+#############################################################################
 
-
-
----
 
 ## 1.16 Formatting and StringBuilder — *Oracle Foundations 1Z0-811*
 
@@ -3257,34 +3299,35 @@ Submit your program code as a java file and test cases as 1 pdf.
 
 ### String Formatting
 
-Java provides two main ways to format output:
-
-**`System.out.printf()`** — formatted printing:
-
-```java
-double price = 9.99;
-String name = "Widget";
-System.out.printf("%-15s $%.2f%n", name, price);
-// Output: Widget          $9.99
-```
-
-**`String.format()`** — returns a formatted String:
-
-```java
-String result = String.format("Name: %s, Age: %d, GPA: %.1f", "Alex", 17, 3.85);
-System.out.println(result);
-// Output: Name: Alex, Age: 17, GPA: 3.9
-```
-
-| Format Specifier | Meaning |
-| :---: | ------- |
-| `%d` | Integer |
-| `%f` | Floating-point (default 6 decimal places) |
-| `%.2f` | Float with 2 decimal places |
-| `%s` | String |
-| `%n` | Newline |
-| `%-10s` | Left-align in 10-char field |
-| `%10s` | Right-align in 10-char field |
+> Java provides two main ways to format output:
+> 
+> **`System.out.printf()`** — formatted printing:
+> 
+> ```java
+> double price = 9.99;
+> String name = "Widget";
+> System.out.printf("%-15s $%.2f%n", name, price);
+> // Output: Widget          $9.99
+> ```
+> 
+> **`String.format()`** — returns a formatted String:
+> 
+> ```java
+> String result = String.format("Name: %s, Age: %d, GPA: %.1f", "Alex", 17, 3.85);
+> System.out.println(result);
+> // Output: Name: Alex, Age: 17, GPA: 3.9
+> ```
+> 
+> | Format Specifier | Meaning |
+> | :---: | ------- |
+> | `%d` | Integer |
+> | `%f` | Floating-point (default 6 decimal places) |
+> | `%.2f` | Float with 2 decimal places |
+> | `%s` | String |
+> | `%n` | Newline |
+> | `%-10s` | Left-align in 10-char field |
+> | `%10s` | Right-align in 10-char field |
+>
 
 ### StringBuilder
 
@@ -3323,12 +3366,154 @@ System.out.print(table.toString());
 ```
 
 ### Assignment 1.16.1 — Formatted Report
-Create a formatted student report card that displays names, scores, and letter grades in aligned columns using `String.format()`.
 
-### Assignment 1.16.2 — StringBuilder Reverse
-Use `StringBuilder` to write a program that checks whether a given word is a palindrome.
+Checked this one too — same situation as StringBuilder. Per the same College Board Java Subset appendix, under **Input/Output**, `System.out.printf` and formatted output are explicitly listed as **"Not tested in the AP CS A Exam, but potentially relevant/useful."** So `String.format()` (which works the same way under the hood) is safe to teach freely — no exam-alignment tension, just genuinely useful skill-building.
+
+Here's the rebuilt version — a real report card with a letter-grade calculation baked in, so the formatting has actual data worth aligning instead of being the whole point of the exercise.
 
 ---
+
+### Assignment 1.16.1 — Formatted Report Card
+
+
+> **Oracle Exam Note (1Z0-811):** `String.format()` and `System.out.printf` are not tested on the AP CS A Exam — you won't find them on the Quick Reference sheet you get during that test. But unlike AP, the Oracle Java Foundations exam tests this directly — expect to see `%d`, `%s`, `%n`, and `%f`-style format specifiers on the 1Z0-811. Know this one well for your Oracle cert, even though it's optional for AP.
+> 
+> **Overview**
+> 
+> A raw `System.out.println` of student data is hard to read once you have more than two or three students — names of different lengths push everything out of alignment, and decimals with different numbers of digits look messy side by side. `String.format()` fixes this by giving you precise control over column width, alignment, and decimal precision — the same kind of formatting real gradebooks, invoices, and spreadsheets rely on.
+> 
+> By the end of this activity you will be able to:
+> - [ ] Use `String.format()` with width specifiers to align text into columns
+> - [ ] Use precision specifiers (`%.1f`, `%.2f`) to control decimal places
+> - [ ] Use left-align (`%-10s`) vs. right-align (`%10s`) and explain when each is appropriate
+> - [ ] Convert a numeric score into a letter grade using `if`/`else if`
+> - [ ] Combine formatted numeric and String data into a single aligned report
+> 
+> **Program Description**
+> 
+> Build a `ReportCard.java` that:
+> 
+> - Stores at least **5 students**, each with a name (`String`) and a numeric score (`double`), using parallel arrays or a simple loop — whichever you're comfortable with at this point in the course
+> - Calculates a **letter grade** for each student based on their score (standard 90/80/70/60 cutoffs, or your own school's scale — note which you used)
+> - Prints a report card with **aligned columns**: Name, Score, Letter Grade
+> - Prints a header row with the same column widths as the data rows, so the header lines up with the data below it
+> - Uses `String.format()` (not just `println` with manually-counted spaces) to guarantee alignment even when names are different lengths
+> 
+> **Requirements Checklist**
+> 
+> - [ ] At least one name that's noticeably shorter and one that's noticeably longer than the others, specifically to prove your columns still line up (e.g., `"Al"` and `"Christopher"`)
+> - [ ] Name column **left-aligned** (`%-15s` or similar) — explain in a comment why text usually looks better left-aligned
+> - [ ] Score column **right-aligned** with exactly **one decimal place** (`%6.1f` or similar) — explain in a comment why numbers usually look better right-aligned
+> - [ ] Letter grade column, single character, consistently spaced
+> - [ ] Header row using the **same width specifiers** as the data rows, so `Name`, `Score`, `Grade` line up with the columns below them
+> - [ ] A separator line (dashes or similar) between the header and the data
+> - [ ] At least one score that lands right on a grade boundary (e.g., exactly 90.0 or 89.9) to prove your grade logic handles edges correctly
+> 
+> **Sample Output**
+> 
+> ```java
+> Name             Score  Grade
+> ---------------- ------ -----
+> Al                92.5    A
+> Christopher       78.3    C
+> Beatrix           89.9    B
+> Sam               60.0    D
+> Priya             95.0    A
+> ```
+> 
+> **Reflection Questions (submit as a `.txt` file)**
+> 
+> 1. What went wrong (or would have gone wrong) if you tried to align these columns using `println` and manually counted spaces/tabs instead of `String.format()`? Be specific about what breaks with names of different lengths.
+> 2. What's the difference between `%-15s` and `%15s`? Show what happens to a short name under each, in your own words or with a small example.
+> 3. Why did you choose right-alignment for the Score column but left-alignment for the Name column? What's the general rule for when to use each?
+> 4. You tested a score right on a grade boundary. Walk through your `if`/`else if` logic for that exact score — which condition fired, and why did you write the comparison the way you did (`>=` vs `>`)?
+> 
+> **Submission**
+
+> - [ ] `ReportCard.java` — completed program with inline comments
+> - [ ] Reflection `.txt` file
+> 
+> **Grading**
+> 
+> Graded on the **AP CSA Generic Assignment Rubric** (5-point scale). Pay particular attention to:
+> - Columns actually stay aligned with names of very different lengths — this is the whole point of the assignment, not a nice-to-have
+> - `String.format()` is used for alignment, not hardcoded spaces or tabs
+> - Header row width specifiers match the data row width specifiers exactly
+> - Grade boundary logic is correct and was actually tested at the edge, not just with comfortably-mid-range scores
+> 
+
+#############################################################################
+
+
+### Assignment 1.16.2 — Palindrome Checker
+
+> **Oracle Exam Note (1Z0-811)**: StringBuilder is not tested on the AP CS A Exam — it doesn't appear on the Java Quick Reference sheet you get during that test. But the Oracle Java Foundations exam tests StringBuilder directly as its own exam objective — the constructor, `.append()`, `.reverse()`, and `.toString()` are all fair game on the 1Z0-811. It is useful and shows up constantly in real Java programs, and reinforces concepts that are AP-tested, like object references and mutability vs. immutability.
+>
+> 
+> **Overview**
+> 
+> A palindrome is a word or phrase that reads the same forwards and backwards (`"racecar"`, `"level"`, `"noon"`). Checking this by hand with plain `String` methods is clunky — Strings are immutable, so "reversing" one means building a brand-new String character by character. `StringBuilder` exists for exactly this kind of job: it's mutable, and it has a built-in `.reverse()` method that does the hard part for you.
+> 
+> By the end of this activity you will be able to:
+> - [ ] Explain why `StringBuilder` is used instead of `String` when a value needs to change repeatedly
+> - [ ] Use the `StringBuilder` constructor to wrap a `String`
+> - [ ] Use `.reverse()`, `.toString()`, and `.append()`
+> - [ ] Compare two Strings for equality using the correct method (not `==`)
+> - [ ] Handle case sensitivity and whitespace/punctuation as part of a real-world palindrome check
+> 
+> **Program Description**
+> 
+> Build a `Main.java` that:
+> 
+> - Asks the user (or, if you're not using `Scanner` yet, tests against a hardcoded list of words/phrases) to check whether a word is a palindrome
+> - Uses a `StringBuilder` to reverse the input
+> - Compares the original to the reversed version using `.equals()` — **not** `==`, and explain in a comment why `==` would be wrong here
+> - Correctly identifies simple palindromes (`"racecar"`, `"level"`) **and** correctly rejects non-palindromes (`"hello"`)
+> - Handles **case sensitivity**: `"Racecar"` should still count as a palindrome even though `'R'` ≠ `'r'`
+> - (Extension) Handles **phrases with spaces and punctuation**: `"A man, a plan, a canal: Panama"` should be recognized as a palindrome once spaces, commas, colons, and capitalization are stripped out
+> 
+> **Requirements Checklist**
+> 
+> - [ ] At least 5 test cases, including at least one true palindrome, one non-palindrome, one with mixed case, and one that is a near-miss (looks close but isn't — e.g. `"hello"` reversed is `"olleh"`, clearly not equal, but pick a trickier near-miss like `"race Car"`)
+> - [ ] `StringBuilder` constructed from the original `String`
+> - [ ] `.reverse()` used to reverse it
+> - [ ] `.toString()` used when converting the reversed `StringBuilder` back into a `String` for comparison
+> - [ ] `.equals()` (or `.equalsIgnoreCase()`) used for comparison — no `==` on the final result
+> - [ ] A comment explaining, in your own words, why `StringBuilder` was needed here instead of just building a reversed `String` manually with a loop
+> - [ ] Extension only: punctuation and spaces stripped and case normalized **before** reversing, using `String` methods you already know (`replaceAll`, `toLowerCase`, etc.)
+> 
+> **Sample Output**
+> 
+> ```java 
+> Checking: "racecar"       -> Palindrome
+> Checking: "hello"         -> Not a palindrome
+> Checking: "Level"         -> Palindrome (case-insensitive)
+> Checking: "race Car"      -> Not a palindrome
+> Checking: "A man, a plan, a canal: Panama" -> Palindrome (ignoring spaces/punctuation)
+> ```
+> 
+> **Reflection Questions (submit as a `.txt` file)**
+> 
+> 1. Before using `StringBuilder`, could you have solved this with just `String` methods and a loop? Sketch (in words, not code) how you'd have done it. Why is the `StringBuilder` version shorter?
+> 2. Why does comparing the reversed and original values with `==` give the wrong answer here, even when the two Strings clearly have the same characters?
+> 3. `"race Car"` is a great trap case — walk through why it fails a *simple* reversal-and-compare check, and what would need to change to make it pass (hint: think about what "ignoring case" really means character by character).
+> 4. `StringBuilder` is not on the AP exam's Java Quick Reference sheet. Does that mean you don't need to understand *why* Strings are immutable and `StringBuilder` objects are mutable? Explain your reasoning — is that underlying concept tested even if the specific class isn't?
+> 
+> **Submission**
+> 
+> - [ ] `Main.java` — completed program with inline comments
+> - [ ] Reflection `.txt` file
+> 
+> **Grading**
+> 
+> Graded on the **AP CSA Generic Assignment Rubric** (5-point scale). Pay particular attention to:
+> - `StringBuilder`'s `.reverse()` is actually used — not a hand-rolled loop pretending to be the "StringBuilder version"
+> - Comparison uses `.equals()`/`.equalsIgnoreCase()`, never `==`, on the final palindrome check
+> - At least one genuinely tricky test case (mixed case or the extension) is included, not just the easy `"racecar"` example
+> - Reflection question 3 shows the student actually traced through *why* the trap case fails, not just that it does
+>
+
+#############################################################################
 
 ## 1.17 Wrapper Classes — Integer and Double
 
@@ -3372,39 +3557,93 @@ int num = Integer.parseInt(numStr);
 double d = Double.parseDouble("3.14");
 ```
 
-### Assignment 1.17.1 — Wrapper Classes
 
-Directions: Create a class called WrapperExamples that will demonstrate each of the following:
+#############################################################################
 
-    Integer Constructor: Create an Integer object from a primitive int.
+### Assignment 1.17.1 — High Score Tracker
 
-    intValue() Method: Retrieve the primitive int value from the Integer object.
+> 
+> **Overview**
+> 
+> Your school's arcade club wants a program that tracks high scores for a group of players. The twist: not every player has played yet, so some scores are **missing** rather than zero — and "missing" and "zero" need to be treated differently. This is exactly the kind of situation where primitives (`int`, `double`) fall short, because primitives can never be `null`. Wrapper classes can.
+> 
+> By the end of this activity you will be able to:
+> - [ ] Explain why a primitive `int` cannot represent "no value yet," but an `Integer` can
+> - [ ] Construct `Integer` and `Double` objects using their constructors, and retrieve primitive values with `intValue()` / `doubleValue()`
+> - [ ] Use autoboxing and unboxing without writing explicit conversion code
+> - [ ] Use `Integer.MAX_VALUE` / `MIN_VALUE` and `Double.MAX_VALUE` / `MIN_VALUE` in a real comparison, not just printed in isolation
+> - [ ] Explain what happens when you try to unbox a `null` wrapper object, and how to guard against it
+>
+> 
+> **Note on `new Integer()` / `new Double()`:** These constructors are part of the **AP CSA Java Quick Reference sheet** — they're fair game on the exam, and you're required to use them below. If your IDE shows a strikethrough or a "deprecated" warning on them, that's expected and not a mistake: the AP CSA Exam is written against Java 7, which allows these constructors. In Java 9 and later, the officially recommended approach is `Integer.valueOf(x)` or simply relying on autoboxing instead. Both are worth knowing — the constructor because it's testable on the exam, and the modern alternative because it's what you'd actually write in a real codebase today.
+>
+> 
+> **Program Description**
+> 
+> Build a `HSTracker.java` that:
+> 
+> - Stores each player's score as an `Integer[]` array (not `int[]`) — this is what allows a missing score to be represented as `null` instead of a fake `0`
+> - Populates **at least one** element of the array using the explicit `new Integer(score)` constructor, with a comment noting this is exam-tested syntax
+> - Populates the **rest** of the array using **autoboxing** — plain `int` literals assigned directly, letting Java convert them automatically
+> - Loops through the array and, for each player:
+>   - Skips players whose score is `null` (print `"[Name] has not played yet."`)
+>   - **Unboxes** the `Integer` back to an `int` to use in a calculation — do this at least once using the explicit `.intValue()` method, and at least once using > implicit unboxing (e.g., using the `Integer` directly in a math expression)
+> - Tracks the highest score seen so far, initializing your "highest so far" variable to `Integer.MIN_VALUE` (not `0`) — ask yourself why `0` would be the wrong choice here
+> - Calculates the **average score** as a `double`, using a `new Double(...)` constructor at least once to store an intermediate result, with a comment explaining what it's storing
+> - Deliberately triggers and then fixes a `NullPointerException`: first write the loop *without* a null check and run it to see the crash, then add the null check and re-run to show it working
+> 
+> **Requirements Checklist**
+> 
+> - [ ] `Integer[]` array of at least 5 players, with **at least one `null`** score
+> - [ ] At least one element created with the explicit `new Integer(...)` constructor
+> - [ ] At least one element populated via autoboxing (plain `int` literal, no explicit constructor or `valueOf()`)
+> - [ ] `intValue()` called explicitly at least once, with a comment explaining what it's doing
+> - [ ] At least one implicit unboxing example (using an `Integer` directly in arithmetic), with a comment identifying it as implicit unboxing
+> - [ ] `new Double(...)` used at least once, with a comment explaining what value it holds
+> - [ ] `Integer.MIN_VALUE` used to initialize your "highest score" tracker, with a comment explaining why `0` would be a buggy choice
+> - [ ] `Double.MAX_VALUE` printed and explained in a comment
+> - [ ] A `toString()`-based or `printf`-based summary at the end showing each player's score (or "no score yet") and the class average
+> - [ ] Screenshot showing the program **crashing** with a `NullPointerException` before you added your null check (for the reflection questions)
+> 
+> **Sample Output**
+> 
+> ```java
+> Player scores:
+> Amara: 87
+> Devon: no score yet
+> Priya: 95
+> Kai: 72
+> Lena: no score yet
+> 
+> Highest score so far: 95 (Priya)
+> Class average (players who have played): 84.67
+> ```
+> 
+> **Reflection Questions (submit as a `.txt` file)**
+> 
+> 1. What happened when you unboxed a `null` Integer before adding your null check? Paste the exact error message and explain, in your own words, what Java was trying to do when it crashed.
+> 2. How did adding a null check fix the crash? Where exactly does the check need to go?
+> 3. Why did you initialize the "highest score" tracker to `Integer.MIN_VALUE` instead of `0`? Describe a scenario where using `0` would produce a wrong answer.
+> 4. You used both `new Integer(x)` and plain autoboxing (`Integer y = x;`) in this program. Both work, but they behave slightly differently under the hood. Look up why `new Integer(x) == new Integer(x)` is always `false`, while small autoboxed values can sometimes be `==` to each other. Explain what you found in your own words.
+> 5. Autoboxing happens automatically, which is convenient — but describe a situation (e.g., inside a large loop) where autoboxing repeatedly could cause a > performance problem compared to using primitives directly.
+> 
+> **Submission**
+> 
+> - [ ] `Main.java` — completed program with inline comments explaining each wrapper-class concept where it's used
+> - [ ] Reflection `.txt` file
+> - [ ] Screenshot of the `NullPointerException` crash (before the fix)
+> 
+> **Grading**
+> 
+> Graded on the **AP CSA Generic Assignment Rubric** (5-point scale). Pay particular attention to:
+> - Array is genuinely `Integer[]`, not `int[]` — the whole assignment depends on this distinction
+> - Both the explicit constructor (`new Integer(...)`) and autoboxing are present and correctly labeled in comments
+> - The null-check crash is real (not just described) and the screenshot proves it happened
+> - `MIN_VALUE`/`MAX_VALUE` are used in an actual comparison or initialization, not just printed standalone
+> - Reflection answers connect to what the student actually observed, not generic textbook definitions
+>
 
-    Double Constructor: Create a Double object from a primitive double.
-
-    doubleValue() Method: Retrieve the primitive double value from the Double object.
-
-    Maximum Double Value: Display the maximum value for a double.
-
-    Minimum Double Value: Display the minimum value for a double.
-
-    Autoboxing: Automatically converting a primitive int to an Integer object.
-
-    Unboxing: Automatically converting an Integer object back to a primitive int.
-
-Answer the following questions as a .txt file.
-
-    What happens if you try to unbox a null Integer? Why?
-
-    How can you handle situations where a wrapper class might be null before performing unboxing?
-
-    Can you think of a situation where autoboxing might cause performance issues? Explain.
-
-    What happens when you try to change the value of MAX_VALUE and MIN_VALUE?
-
-Submit your java & txt files. Add in-line comments to describe each example. Provide a screenshot of your executed program.
-
----
+#############################################################################
 
 ## Unit 1 Final Project
 
