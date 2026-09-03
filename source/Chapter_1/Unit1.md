@@ -1315,7 +1315,7 @@ Pick one Java library or API from the list below (or propose your own with instr
 
 ---
 
-## Where Do Objects Live? — Heap Memory
+## 1.7a Where Do Objects Live? — Heap Memory
 
 Every time your program uses `new` to create an object — a `Scanner`, a `Random`, a `String` — Java needs somewhere to store it. That somewhere is called the **heap**.
 
@@ -1397,7 +1397,7 @@ System.out.println(s1.equals(s3));    // true  — same content
 
 ---
 
-## Packages & APIs
+## 1.7b Packages & APIs
 
 When you write a Java program, you do not have to build everything from scratch. Java provides thousands of pre-built classes organized into **packages**. A **package** is a folder of related classes. Together, all of these packages make up the Java **standard library**.
 
@@ -2792,254 +2792,320 @@ System.out.println(greeting);       // void: performs an action
 
 ---
 
-### Assignment 2.1.1 — Sports Class
+### Assignment 1.14.1 — Sports Class
 
-Write a class related to a professional sport (Football, soccer, basketball, etc.)
+> 
+> Write a class related to a professional sport (Football, soccer, basketball, etc.)
+> 
+> - Create a class related to a professional sport of your choice
+> - Create attributes/instance variables for the class
+> - Create a constructor for your class
+> - Create an instance of the class
+> - Create a `toString()` method to print out the object
+> 
+> **Example Output:**
+> ```
+> Name: Marcelo Vieira da Silva Jr.
+> Team: Real Madrid
+> Position: left-back
+> Number: 12
+> Goals: 0
+> Starting: True
+> ```
+>
 
-- Create a class related to a professional sport of your choice
-- Create attributes/instance variables for the class
-- Create a constructor for your class
-- Create an instance of the class
-- Create a `toString()` method to print out the object
+########################################################################################
 
-**Example Output:**
-```
-Name: Marcelo Vieira da Silva Jr.
-Team: Real Madrid
-Position: left-back
-Number: 12
-Goals: 0
-Starting: True
-```
+### Assignment 1.14.2 — Not Another Cake
 
----
+> 
+> **Directions:** Look at the `Cake.java` program below. Create a 1-tier cake, 2-tier cake, and a 3-tier cake. Print out the reference location of the constructor. A solution is provided if you get stuck.
+> 
+> **Submission Requirements:**
+> - Create a **unique program of your choice** (not another Cake)
+> - Create four constructors:
+>   - default constructor (no parameters)
+>   - constructor with 1 parameter
+>   - constructor with 2 parameters
+>   - constructor with 3 parameters
+> - Use appropriate comments throughout your program
+> - Use `toString()` method to display all objects
+> - Submit all program files as `.java` files (Main.java, YourClass.java, etc.)
+> 
+> **Cake.java — Reference Program:**
+> 
+> ```java
+> public class Cake
+> {
+>     private int tiers;
+>     private String flavor;
+>     private String frosting;
+> 
+>     // Constructor 1: no parameters (default constructor)
+>     // Creates a basic 1-tier cake with default flavor/frosting
+>     public Cake()
+>     {
+>         tiers = 1;
+>         flavor = "Vanilla";
+>         frosting = "Buttercream";
+>         drawCake();
+>     }
+> 
+>     // Constructor 2: one parameter
+>     // Lets the caller choose the number of tiers
+>     public Cake(int numTiers)
+>     {
+>         tiers = numTiers;
+>         flavor = "Vanilla";
+>         frosting = "Buttercream";
+>         drawCake();
+>     }
+> 
+>     // Constructor 3: two parameters
+>     // Lets the caller choose tiers and flavor
+>     public Cake(int numTiers, String cakeFlavor)
+>     {
+>         tiers = numTiers;
+>         flavor = cakeFlavor;
+>         frosting = "Buttercream";
+>         drawCake();
+>     }
+> 
+>     // Constructor 4: three parameters
+>     // Lets the caller choose tiers, flavor, and frosting
+>     public Cake(int numTiers, String cakeFlavor, String cakeFrosting)
+>     {
+>         tiers = numTiers;
+>         flavor = cakeFlavor;
+>         frosting = cakeFrosting;
+>         drawCake();
+>     }
+> 
+>   // Draws a cake with a number of layers equal to `tiers`.
+> 	// Each layer gets wider going down, and narrower layers are
+>   // centered above the wider ones — this is what creates the
+>   // tiered wedding-cake look instead of a stack of flush-left boxes.
+> 
+> private void drawCake()
+> {
+>     System.out.println("   ,,,");
+>     System.out.println("   |||");
+> 
+>     int maxWidth = 10 + 4 * (tiers - 1);   // width of the bottom (widest) tier
+> 
+>     for (int layer = 1; layer <= tiers; layer++)
+>     {
+>         int width = 10 + 4 * (layer - 1);       // this tier's width
+>         int indent = (maxWidth - width) / 2;    // spaces needed to center it
+> 
+>        String spacer = " ".repeat(indent);
+>         String top = "(" + "*".repeat(width) + ")";
+>         String side = "(*" + " ".repeat(width - 2) + "*)";
+> 
+>         System.out.println(spacer + top);
+>         System.out.println(spacer + side);
+>         System.out.println(spacer + side);
+>     }
+>     System.out.println("Flavor: " + flavor + " | Frosting: " + frosting);
+>     System.out.println();
+> }
+> 
+>     // NOTE: No toString() override on purpose.
+>     // When you print a Cake object directly (e.g. System.out.println(myCake)),
+>     // Java shows the DEFAULT representation: Cake@<hashcode>.
+>     // That's what the assignment means by "print the reference location" —
+>     // it's proof that each object lives at its own separate address in the heap.
+> }
+> 
+> **Main.java — Starter Code:**
+> 
+> ```java
+> public class Main
+> {
+>   public static void main(String[] args)
+>   {
+>     // create a double variable named 't' and assign a value of 3.
+> 
+> 
+>     // create a variable that can store the object reference myCake created with new Cake(t)
+> 
+> 
+>     // Create two more object references using yourCake and ourCake constructors
+> 
+> 
+>     // Print out all three Cake object reference variables
+> 
+> 
+>     // Initialize the emptyCake variable with a value of null
+> 
+> 
+>   }
+> }
+> ```
+>
+> 
+> **Sample Output:**
+> 
+> ```
+>         ,,,
+>         |||
+>     (**********)
+>     (*        *)
+>     (*        *)
+>   (**************)
+>   (*            *)
+>   (*            *)
+> (******************)
+> (*                *)
+> (*                *)
+> (******************)
+> 
+> 
+>    ,,,
+>    |||
+> (~~~~~~~)
+> (       )
+> (~~~~~~~)
+> 
+>       ,,,
+>       |||
+>   (**********)
+>   (*        *)
+>   (*        *)
+> (**************)
+> (*            *)
+> (*            *)
+> (**************)
+> 
+> myCake=Cake@15db9742
+> yourCake=Cake@6d06d69c
+> ourCake=Cake@7852e922
+> emptyCake=null
+> ```
+>
 
-### Assignment 2.1.2 — Not Another Cake
+########################################################################################
 
-**Directions:** Look at the `Cake.java` program below. Create a 1-tier cake, 2-tier cake, and a 3-tier cake. Print out the reference location of the constructor. A solution is provided if you get stuck.
+### Assignment 1.14.3 — Dog Pizza
 
-**Submission Requirements:**
-- Create a **unique program of your choice** (not another Cake)
-- Create four constructors:
-  - default constructor (no parameters)
-  - constructor with 1 parameter
-  - constructor with 2 parameters
-  - constructor with 3 parameters
-- Use appropriate comments throughout your program
-- Use `toString()` method to display all objects
-- Submit all program files as `.java` files (Main.java, YourClass.java, etc.)
+> 
+> - Complete `Dog.java` by filling in the attributes and creating the constructor
+> - Instantiate 3 pizzas and print them out by:
+>   - Creating a `Pizza` class
+>   - Filling out the attributes
+>   - Creating the constructor
+>   - Creating 3 pizza objects and printing them out
+>   - Use the `toString()` method to print the pizza size, type, and toppings:
+>     - 12 inch Veggie pizza with Tomatoes, onions, olives
+>     - 15 inch Cheese pizza with Cheese
+>     - 20 inch Meat pizza with Pepperoni, sausage, bacon
+> 
+> **Main.java — Starter Code:**
+> 
+> ```java
+> class Main 
+> {
+>     public static void main(String[] args) 
+>     {
+>         Dog golden = new Dog("Golden Retriever", "Sammy");
+>         System.out.println(golden);
+>         
+>         // instantiate 3 pizzas below and print them out
+> 
+> 
+>     }
+> }
+> ```
+> 
+> **Dog.java — Starter Code:**
+> 
+> ```java
+> public class Dog 
+> {
+>     // attributes
+> 
+>     // constructor
+> 
+>     // This method should work after you add the
+>     // new instance variable and update the constructor.
+>     // DO NOT modify this method.
+>     public String toString()
+>     {
+>         return name + " is a " + breed;
+>     }
+> }
+> ```
+> 
+> **Pizza.java — Starter Code:**
+> 
+> ```java
+> // Your code here
+> ```
+>
 
-**Cake.java — Reference Program:**
+########################################################################################
 
-```java
-public class Cake
-{    
-  int tiers;
+### Assignment 1.14.4 — Bicycle 
 
-  public Cake()
-  {
-    tiers = 1;
-    System.out.println("   ,,,\n   |||\n(~~~~~~~)\n(       )\n(~~~~~~~)\n");
-  }
-  
-  public Cake(int t) 
-  {
-    tiers = t;
-    System.out.println("      ,,,\n      |||\n  (**********)\n  (*        *)\n  (*        *)");
-    System.out.println("(**************)\n(*            *)\n(*            *)\n(**************)\n");        
-  }
-  
-  public Cake(double t)
-  { 
-    tiers = (int) t;
-    System.out.println("        ,,,\n        |||\n    (**********)\n    (*        *)\n    (*        *)");
-    System.out.println("  (**************)\n  (*            *)\n  (*            *)");
-    System.out.println("(******************)\n(*                *)\n(*                *)\n(******************)\n");
-  }
-}
-```
+> 
+> 1. Create a `Bike` class with the following attributes:
+>    - `kind` (Cruiser, road bike, tricycle, hybrid)
+>    - `gear` (single, three-speed, 10 speed, 30 speed)
+>    - `size` (20, 22, 26, 28)
+>    - `cost` (175.99, 300.00, 1049.00, 1500.00)
+> 2. Create a no-argument constructor. Default values are: Cruiser, 26, and 175.99
+> 3. Create a constructor that takes only `kind` and `size` as parameters
+> 4. Create a constructor that takes all four parameters
+> 5. Create two more objects to match the sample output
+> 
+> **Sample Output:**
+> 
+> ```
+> My bicycle has 1 gear and is painted white!
+> Pedaling to accelerate!
+> My cruiser has 10 gears costs $150.
+> Pedaling to accelerate.
+> My tricycle has 3 gears costs $300.
+> Pedaling to accelerate.
+> ```
+>
 
-**Main.java — Starter Code:**
+########################################################################################
 
-```java
-public class Main
-{
-  public static void main(String[] args)
-  {
-    // create a double variable named 't' and assign a value of 3.
+### Assignment 1.14.5 — Constructor Practice
 
+> 
+> 1. Create a class called `Student` with the following instance variables:
+>    - `name` (String)
+>    - `age` (int)
+>    - `gpa` (double)
+> 
+> 2. Write **at least four constructors**:
+>    - A no-argument constructor that sets all values to defaults (`"Unknown"`, `0`, `0.0`)
+>    - A constructor that takes only a name
+>    - A constructor that takes a name and age
+>    - A constructor that takes all three values (name, age, gpa)
+> 
+> 3. Write a `toString()` method that returns the student information as a single string:
+>    ```
+>    Student{name='Alice', age=16, gpa=3.5}
+>    ```
+> 
+> 4. Create a `Main` class with a `main` method. In `main`:
+>    - Create at least one `Student` object using each constructor
+>    - Print each object
+> 
+> **Example Output:**
+> 
+> ```
+> Student{name='Unknown', age=0, gpa=0.0}
+> Student{name='Alice', age=0, gpa=0.0}
+> Student{name='Bob', age=17, gpa=0.0}
+> Student{name='Charlie', age=18, gpa=3.7}
+> ```
+>
 
-    // create a variable that can store the object reference myCake created with new Cake(t)
-
-
-    // Create two more object references using yourCake and ourCake constructors
-
-
-    // Print out all three Cake object reference variables
-
-
-    // Initialize the emptyCake variable with a value of null
-
-
-  }
-}
-```
-
-**Sample Output:**
-
-```
-        ,,,
-        |||
-    (**********)
-    (*        *)
-    (*        *)
-  (**************)
-  (*            *)
-  (*            *)
-(******************)
-(*                *)
-(*                *)
-(******************)
-
-
-   ,,,
-   |||
-(~~~~~~~)
-(       )
-(~~~~~~~)
-
-      ,,,
-      |||
-  (**********)
-  (*        *)
-  (*        *)
-(**************)
-(*            *)
-(*            *)
-(**************)
-
-myCake=Cake@15db9742
-yourCake=Cake@6d06d69c
-ourCake=Cake@7852e922
-emptyCake=null
-```
-
----
-
-### Assignment 2.1.3 — Dog Pizza
-
-- Complete `Dog.java` by filling in the attributes and creating the constructor
-- Instantiate 3 pizzas and print them out by:
-  - Creating a `Pizza` class
-  - Filling out the attributes
-  - Creating the constructor
-  - Creating 3 pizza objects and printing them out
-  - Use the `toString()` method to print the pizza size, type, and toppings:
-    - 12 inch Veggie pizza with Tomatoes, onions, olives
-    - 15 inch Cheese pizza with Cheese
-    - 20 inch Meat pizza with Pepperoni, sausage, bacon
-
-**Main.java — Starter Code:**
-
-```java
-class Main 
-{
-    public static void main(String[] args) 
-    {
-        Dog golden = new Dog("Golden Retriever", "Sammy");
-        System.out.println(golden);
-        
-        // instantiate 3 pizzas below and print them out
-
-
-    }
-}
-```
-
-**Dog.java — Starter Code:**
-
-```java
-public class Dog 
-{
-    // attributes
-
-    // constructor
-
-    // This method should work after you add the
-    // new instance variable and update the constructor.
-    // DO NOT modify this method.
-    public String toString()
-    {
-        return name + " is a " + breed;
-    }
-}
-```
-
-**Pizza.java — Starter Code:**
-
-```java
-// Your code here
-```
-
----
-
-### Assignment 2.1.4 — Bicycle Revisited
-
-1. Create a `Bike` class with the following attributes:
-   - `kind` (Cruiser, road bike, tricycle, hybrid)
-   - `gear` (single, three-speed, 10 speed, 30 speed)
-   - `size` (20, 22, 26, 28)
-   - `cost` (175.99, 300.00, 1049.00, 1500.00)
-2. Create a no-argument constructor. Default values are: Cruiser, 26, and 175.99
-3. Create a constructor that takes only `kind` and `size` as parameters
-4. Create a constructor that takes all four parameters
-5. Create two more objects to match the sample output
-
-**Sample Output:**
-
-```
-My bicycle has 1 gear and is painted white!
-Pedaling to accelerate!
-My cruiser has 10 gears costs $150.
-Pedaling to accelerate.
-My tricycle has 3 gears costs $300.
-Pedaling to accelerate.
-```
-
----
-
-### Assignment 2.1.5 — Constructor Practice
-
-1. Create a class called `Student` with the following instance variables:
-   - `name` (String)
-   - `age` (int)
-   - `gpa` (double)
-
-2. Write **at least four constructors**:
-   - A no-argument constructor that sets all values to defaults (`"Unknown"`, `0`, `0.0`)
-   - A constructor that takes only a name
-   - A constructor that takes a name and age
-   - A constructor that takes all three values (name, age, gpa)
-
-3. Write a `toString()` method that returns the student information as a single string:
-   ```
-   Student{name='Alice', age=16, gpa=3.5}
-   ```
-
-4. Create a `Main` class with a `main` method. In `main`:
-   - Create at least one `Student` object using each constructor
-   - Print each object
-
-**Example Output:**
-
-```
-Student{name='Unknown', age=0, gpa=0.0}
-Student{name='Alice', age=0, gpa=0.0}
-Student{name='Bob', age=17, gpa=0.0}
-Student{name='Charlie', age=18, gpa=3.7}
-```
-
----
+########################################################################################
 
 ## 1.15 String Manipulation
 
@@ -3096,7 +3162,7 @@ System.out.println(s1.equals(s2)); // true  (same content)
 
 **Aliasing:** When `shape3 = shape1`, both point to the same memory address. Any change to one changes the other. In Java, this is known as **aliasing**.
 
-### Activity 2.7.1 — Wordplay
+### Activity 1.15.1 — Wordplay
 
 Starter Files: [WordPlay.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/13031419/WordPlay.zip)
 
@@ -3134,7 +3200,7 @@ Give papa a proper bup of boffee in a bopper boffee bup.
 Submit your program code as a java file and test cases as 1 pdf.
 
 
-### Assignment 2.7.2 — Speaking
+### Assignment 1.15.2 — Speaking
 
 
 Starter files: [Speaking.zip](https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/13031428/127-Speaking.zip)
