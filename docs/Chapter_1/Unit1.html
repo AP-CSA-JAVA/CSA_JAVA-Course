@@ -1869,8 +1869,8 @@ Total Sales: $64.30
 </details>
 </section>
 <hr class="docutils" />
-<section id="where-do-objects-live-heap-memory">
-<h2>Where Do Objects Live? — Heap Memory<a class="headerlink" href="#where-do-objects-live-heap-memory" title="Link to this heading">¶</a></h2>
+<section id="a-where-do-objects-live-heap-memory">
+<h2>1.7a Where Do Objects Live? — Heap Memory<a class="headerlink" href="#a-where-do-objects-live-heap-memory" title="Link to this heading">¶</a></h2>
 <p>Every time your program uses <code class="docutils literal notranslate"><span class="pre">new</span></code> to create an object — a <code class="docutils literal notranslate"><span class="pre">Scanner</span></code>, a <code class="docutils literal notranslate"><span class="pre">Random</span></code>, a <code class="docutils literal notranslate"><span class="pre">String</span></code> — Java needs somewhere to store it. That somewhere is called the <strong>heap</strong>.</p>
 <p>The <strong>heap</strong> is the part of your computer’s memory where Java stores <strong>objects</strong> — anything created with the <code class="docutils literal notranslate"><span class="pre">new</span></code> keyword. Think of it like a <strong>giant storage warehouse</strong>. Every time your program runs <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Scanner(System.in)</span></code> or <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Random()</span></code>, Java rents out a chunk of space in that warehouse, puts the object in it, and hands you back an <strong>address</strong> (called a <strong>reference</strong>) so you can find it later.</p>
 <blockquote>
@@ -1961,8 +1961,8 @@ Total Sales: $64.30
 </section>
 </section>
 <hr class="docutils" />
-<section id="packages-apis">
-<h2>Packages &amp; APIs<a class="headerlink" href="#packages-apis" title="Link to this heading">¶</a></h2>
+<section id="b-packages-apis">
+<h2>1.7b Packages &amp; APIs<a class="headerlink" href="#b-packages-apis" title="Link to this heading">¶</a></h2>
 <p>When you write a Java program, you do not have to build everything from scratch. Java provides thousands of pre-built classes organized into <strong>packages</strong>. A <strong>package</strong> is a folder of related classes. Together, all of these packages make up the Java <strong>standard library</strong>.</p>
 <p>An <strong>Application Programming Interface (API)</strong> is the set of rules and definitions that describes how you interact with a library — what classes are available, what methods they have, what parameters they take, and what they return. Think of the API documentation as the instruction manual for the library.</p>
 <p>To use a class from a package that is not automatically included, you must <strong>import</strong> it:</p>
@@ -3484,9 +3484,10 @@ Visually demonstrate the properties of inheritance by creating a subclass(es) of
 </pre></div>
 </div>
 <hr class="docutils" />
-<section id="assignment-2-1-1-sports-class">
-<h3>Assignment 2.1.1 — Sports Class<a class="headerlink" href="#assignment-2-1-1-sports-class" title="Link to this heading">¶</a></h3>
-<p>Write a class related to a professional sport (Football, soccer, basketball, etc.)</p>
+<section id="assignment-1-14-1-sports-class">
+<h3>Assignment 1.14.1 — Sports Class<a class="headerlink" href="#assignment-1-14-1-sports-class" title="Link to this heading">¶</a></h3>
+<blockquote>
+<div><p>Write a class related to a professional sport (Football, soccer, basketball, etc.)</p>
 <ul class="simple">
 <li><p>Create a class related to a professional sport of your choice</p></li>
 <li><p>Create attributes/instance variables for the class</p></li>
@@ -3503,11 +3504,13 @@ Visually demonstrate the properties of inheritance by creating a subclass(es) of
 <span class="n">Starting</span><span class="p">:</span> <span class="kc">True</span>
 </pre></div>
 </div>
+</div></blockquote>
+<p>########################################################################################</p>
 </section>
-<hr class="docutils" />
-<section id="assignment-2-1-2-not-another-cake">
-<h3>Assignment 2.1.2 — Not Another Cake<a class="headerlink" href="#assignment-2-1-2-not-another-cake" title="Link to this heading">¶</a></h3>
-<p><strong>Directions:</strong> Look at the <code class="docutils literal notranslate"><span class="pre">Cake.java</span></code> program below. Create a 1-tier cake, 2-tier cake, and a 3-tier cake. Print out the reference location of the constructor. A solution is provided if you get stuck.</p>
+<section id="assignment-1-14-2-not-another-cake">
+<h3>Assignment 1.14.2 — Not Another Cake<a class="headerlink" href="#assignment-1-14-2-not-another-cake" title="Link to this heading">¶</a></h3>
+<blockquote>
+<div><p><strong>Directions:</strong> Look at the <code class="docutils literal notranslate"><span class="pre">Cake.java</span></code> program below. Create a 1-tier cake, 2-tier cake, and a 3-tier cake. Print out the reference location of the constructor. A solution is provided if you get stuck.</p>
 <p><strong>Submission Requirements:</strong></p>
 <ul class="simple">
 <li><p>Create a <strong>unique program of your choice</strong> (not another Cake)</p></li>
@@ -3525,34 +3528,91 @@ Visually demonstrate the properties of inheritance by creating a subclass(es) of
 </ul>
 <p><strong>Cake.java — Reference Program:</strong></p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Cake</span>
-<span class="p">{</span><span class="w">    </span>
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">tiers</span><span class="p">;</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">tiers</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">flavor</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">frosting</span><span class="p">;</span>
 
-<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="nf">Cake</span><span class="p">()</span>
-<span class="w">  </span><span class="p">{</span>
-<span class="w">    </span><span class="n">tiers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"   ,,,\n   |||\n(~~~~~~~)\n(       )\n(~~~~~~~)\n"</span><span class="p">);</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="w">  </span>
-<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="nf">Cake</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span>
-<span class="w">  </span><span class="p">{</span>
-<span class="w">    </span><span class="n">tiers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="p">;</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"      ,,,\n      |||\n  (**********)\n  (*        *)\n  (*        *)"</span><span class="p">);</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"(**************)\n(*            *)\n(*            *)\n(**************)\n"</span><span class="p">);</span><span class="w">        </span>
-<span class="w">  </span><span class="p">}</span>
-<span class="w">  </span>
-<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="nf">Cake</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">t</span><span class="p">)</span>
-<span class="w">  </span><span class="p">{</span><span class="w"> </span>
-<span class="w">    </span><span class="n">tiers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">t</span><span class="p">;</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"        ,,,\n        |||\n    (**********)\n    (*        *)\n    (*        *)"</span><span class="p">);</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"  (**************)\n  (*            *)\n  (*            *)"</span><span class="p">);</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"(******************)\n(*                *)\n(*                *)\n(******************)\n"</span><span class="p">);</span>
-<span class="w">  </span><span class="p">}</span>
+<span class="w">    </span><span class="c1">// Constructor 1: no parameters (default constructor)</span>
+<span class="w">    </span><span class="c1">// Creates a basic 1-tier cake with default flavor/frosting</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Cake</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">tiers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="n">flavor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Vanilla"</span><span class="p">;</span>
+<span class="w">        </span><span class="n">frosting</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Buttercream"</span><span class="p">;</span>
+<span class="w">        </span><span class="n">drawCake</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Constructor 2: one parameter</span>
+<span class="w">    </span><span class="c1">// Lets the caller choose the number of tiers</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Cake</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">numTiers</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">tiers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numTiers</span><span class="p">;</span>
+<span class="w">        </span><span class="n">flavor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Vanilla"</span><span class="p">;</span>
+<span class="w">        </span><span class="n">frosting</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Buttercream"</span><span class="p">;</span>
+<span class="w">        </span><span class="n">drawCake</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Constructor 3: two parameters</span>
+<span class="w">    </span><span class="c1">// Lets the caller choose tiers and flavor</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Cake</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">numTiers</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">cakeFlavor</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">tiers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numTiers</span><span class="p">;</span>
+<span class="w">        </span><span class="n">flavor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cakeFlavor</span><span class="p">;</span>
+<span class="w">        </span><span class="n">frosting</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Buttercream"</span><span class="p">;</span>
+<span class="w">        </span><span class="n">drawCake</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Constructor 4: three parameters</span>
+<span class="w">    </span><span class="c1">// Lets the caller choose tiers, flavor, and frosting</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Cake</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">numTiers</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">cakeFlavor</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">cakeFrosting</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">tiers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numTiers</span><span class="p">;</span>
+<span class="w">        </span><span class="n">flavor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cakeFlavor</span><span class="p">;</span>
+<span class="w">        </span><span class="n">frosting</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cakeFrosting</span><span class="p">;</span>
+<span class="w">        </span><span class="n">drawCake</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// Draws a cake with a number of layers equal to `tiers`.</span>
+<span class="w">	</span><span class="c1">// Each layer gets wider going down, and narrower layers are</span>
+<span class="w">  </span><span class="c1">// centered above the wider ones — this is what creates the</span>
+<span class="w">  </span><span class="c1">// tiered wedding-cake look instead of a stack of flush-left boxes.</span>
+
+<span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">drawCake</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"   ,,,"</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"   |||"</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">maxWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">tiers</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w">   </span><span class="c1">// width of the bottom (widest) tier</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">layer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">layer</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">tiers</span><span class="p">;</span><span class="w"> </span><span class="n">layer</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">layer</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w">       </span><span class="c1">// this tier's width</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">indent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">maxWidth</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">width</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">    </span><span class="c1">// spaces needed to center it</span>
+
+<span class="w">       </span><span class="n">String</span><span class="w"> </span><span class="n">spacer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">" "</span><span class="p">.</span><span class="na">repeat</span><span class="p">(</span><span class="n">indent</span><span class="p">);</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">top</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"("</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"*"</span><span class="p">.</span><span class="na">repeat</span><span class="p">(</span><span class="n">width</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">")"</span><span class="p">;</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">side</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"(*"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" "</span><span class="p">.</span><span class="na">repeat</span><span class="p">(</span><span class="n">width</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"*)"</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">spacer</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">top</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">spacer</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">side</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">spacer</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">side</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Flavor: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">flavor</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" | Frosting: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">frosting</span><span class="p">);</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
 <span class="p">}</span>
-</pre></div>
-</div>
-<p><strong>Main.java — Starter Code:</strong></p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span>
+
+<span class="w">    </span><span class="c1">// NOTE: No toString() override on purpose.</span>
+<span class="w">    </span><span class="c1">// When you print a Cake object directly (e.g. System.out.println(myCake)),</span>
+<span class="w">    </span><span class="c1">// Java shows the DEFAULT representation: Cake@&lt;hashcode&gt;.</span>
+<span class="w">    </span><span class="c1">// That's what the assignment means by "print the reference location" —</span>
+<span class="w">    </span><span class="c1">// it's proof that each object lives at its own separate address in the heap.</span>
+<span class="p">}</span>
+
+<span class="o">**</span><span class="n">Main</span><span class="p">.</span><span class="na">java</span><span class="w"> </span><span class="err">—</span><span class="w"> </span><span class="n">Starter</span><span class="w"> </span><span class="n">Code</span><span class="p">:</span><span class="o">**</span>
+
+<span class="err">```</span><span class="n">java</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span>
 <span class="p">{</span>
 <span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
 <span class="w">  </span><span class="p">{</span>
@@ -3612,11 +3672,13 @@ Visually demonstrate the properties of inheritance by creating a subclass(es) of
 <span class="n">emptyCake</span><span class="o">=</span><span class="n">null</span>
 </pre></div>
 </div>
+</div></blockquote>
+<p>########################################################################################</p>
 </section>
-<hr class="docutils" />
-<section id="assignment-2-1-3-dog-pizza">
-<h3>Assignment 2.1.3 — Dog Pizza<a class="headerlink" href="#assignment-2-1-3-dog-pizza" title="Link to this heading">¶</a></h3>
-<ul class="simple">
+<section id="assignment-1-14-3-dog-pizza">
+<h3>Assignment 1.14.3 — Dog Pizza<a class="headerlink" href="#assignment-1-14-3-dog-pizza" title="Link to this heading">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
 <li><p>Complete <code class="docutils literal notranslate"><span class="pre">Dog.java</span></code> by filling in the attributes and creating the constructor</p></li>
 <li><p>Instantiate 3 pizzas and print them out by:</p>
 <ul>
@@ -3670,11 +3732,13 @@ Visually demonstrate the properties of inheritance by creating a subclass(es) of
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Your code here</span>
 </pre></div>
 </div>
+</div></blockquote>
+<p>########################################################################################</p>
 </section>
-<hr class="docutils" />
-<section id="assignment-2-1-4-bicycle-revisited">
-<h3>Assignment 2.1.4 — Bicycle Revisited<a class="headerlink" href="#assignment-2-1-4-bicycle-revisited" title="Link to this heading">¶</a></h3>
-<ol class="arabic simple">
+<section id="assignment-1-14-4-bicycle">
+<h3>Assignment 1.14.4 — Bicycle<a class="headerlink" href="#assignment-1-14-4-bicycle" title="Link to this heading">¶</a></h3>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>Create a <code class="docutils literal notranslate"><span class="pre">Bike</span></code> class with the following attributes:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">kind</span></code> (Cruiser, road bike, tricycle, hybrid)</p></li>
@@ -3697,11 +3761,13 @@ My tricycle has 3 gears costs $300.
 Pedaling to accelerate.
 </pre></div>
 </div>
+</div></blockquote>
+<p>########################################################################################</p>
 </section>
-<hr class="docutils" />
-<section id="assignment-2-1-5-constructor-practice">
-<h3>Assignment 2.1.5 — Constructor Practice<a class="headerlink" href="#assignment-2-1-5-constructor-practice" title="Link to this heading">¶</a></h3>
-<ol class="arabic">
+<section id="assignment-1-14-5-constructor-practice">
+<h3>Assignment 1.14.5 — Constructor Practice<a class="headerlink" href="#assignment-1-14-5-constructor-practice" title="Link to this heading">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
 <li><p>Create a class called <code class="docutils literal notranslate"><span class="pre">Student</span></code> with the following instance variables:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (String)</p></li>
@@ -3736,9 +3802,10 @@ Pedaling to accelerate.
 <span class="n">Student</span><span class="p">{</span><span class="n">name</span><span class="o">=</span><span class="s1">'Charlie'</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span> <span class="n">gpa</span><span class="o">=</span><span class="mf">3.7</span><span class="p">}</span>
 </pre></div>
 </div>
+</div></blockquote>
+<p>########################################################################################</p>
 </section>
 </section>
-<hr class="docutils" />
 <section id="string-manipulation">
 <h2>1.15 String Manipulation<a class="headerlink" href="#string-manipulation" title="Link to this heading">¶</a></h2>
 <details>
@@ -3836,8 +3903,8 @@ Pedaling to accelerate.
 </pre></div>
 </div>
 <p><strong>Aliasing:</strong> When <code class="docutils literal notranslate"><span class="pre">shape3</span> <span class="pre">=</span> <span class="pre">shape1</span></code>, both point to the same memory address. Any change to one changes the other. In Java, this is known as <strong>aliasing</strong>.</p>
-<section id="activity-2-7-1-wordplay">
-<h3>Activity 2.7.1 — Wordplay<a class="headerlink" href="#activity-2-7-1-wordplay" title="Link to this heading">¶</a></h3>
+<section id="activity-1-15-1-wordplay">
+<h3>Activity 1.15.1 — Wordplay<a class="headerlink" href="#activity-1-15-1-wordplay" title="Link to this heading">¶</a></h3>
 <p>Starter Files: <a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/13031419/WordPlay.zip">WordPlay.zip</a></p>
 <p>You will write a program that asks the user to enter their first name and their last name,
 separated by a space. Then it asks the user to enter a phrase. You will write and call the following:</p>
@@ -3885,8 +3952,8 @@ separated by a space. Then it asks the user to enter a phrase. You will write an
 </div>
 <p>Submit your program code as a java file and test cases as 1 pdf.</p>
 </section>
-<section id="assignment-2-7-2-speaking">
-<h3>Assignment 2.7.2 — Speaking<a class="headerlink" href="#assignment-2-7-2-speaking" title="Link to this heading">¶</a></h3>
+<section id="assignment-1-15-2-speaking">
+<h3>Assignment 1.15.2 — Speaking<a class="headerlink" href="#assignment-1-15-2-speaking" title="Link to this heading">¶</a></h3>
 <p>Starter files: <a class="reference external" href="https://github.com/AP-CSA-JAVA/CSA_JAVA-Course/files/13031428/127-Speaking.zip">Speaking.zip</a></p>
 <p>Create a program that will ask the user for their name and their partners name. Create the following:</p>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -4810,13 +4877,13 @@ Available vehicles: 3
 </li>
 <li><a class="reference internal" href="#compound-assignment-operators">1.6 Compound Assignment Operators</a></li>
 <li><a class="reference internal" href="#application-program-interface-api-and-libraries">1.7 Application Program Interface (API) and Libraries</a></li>
-<li><a class="reference internal" href="#where-do-objects-live-heap-memory">Where Do Objects Live? — Heap Memory</a><ul>
+<li><a class="reference internal" href="#a-where-do-objects-live-heap-memory">1.7a Where Do Objects Live? — Heap Memory</a><ul>
 <li><a class="reference internal" href="#heap-vs-stack-the-quick-contrast">Heap vs. Stack — The Quick Contrast</a></li>
 <li><a class="reference internal" href="#null-an-address-that-points-to-nothing"><code class="docutils literal notranslate"><span class="pre">null</span></code> — An Address That Points to Nothing</a></li>
 <li><a class="reference internal" href="#the-string-pool-a-special-section-of-the-heap">The String Pool — A Special Section of the Heap</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#packages-apis">Packages &amp; APIs</a><ul>
+<li><a class="reference internal" href="#b-packages-apis">1.7b Packages &amp; APIs</a><ul>
 <li><a class="reference internal" href="#assignment-1-7-1-heap-detective-tracing-references-memory">Assignment 1.7.1 — Heap Detective: Tracing References &amp; Memory</a></li>
 <li><a class="reference internal" href="#assignment-1-7-2-magic-8-ball-exploring-apis-and-libraries">Assignment 1.7.2 — Magic 8-Ball: Exploring APIs and Libraries</a></li>
 </ul>
@@ -4829,16 +4896,16 @@ Available vehicles: 3
 <li><a class="reference internal" href="#object-creation-and-storage-instantiation">1.13 Object Creation and Storage (Instantiation)</a></li>
 <li><a class="reference internal" href="#a-tostring-method">1.13a toString() Method</a></li>
 <li><a class="reference internal" href="#calling-instance-methods">1.14 Calling Instance Methods</a><ul>
-<li><a class="reference internal" href="#assignment-2-1-1-sports-class">Assignment 2.1.1 — Sports Class</a></li>
-<li><a class="reference internal" href="#assignment-2-1-2-not-another-cake">Assignment 2.1.2 — Not Another Cake</a></li>
-<li><a class="reference internal" href="#assignment-2-1-3-dog-pizza">Assignment 2.1.3 — Dog Pizza</a></li>
-<li><a class="reference internal" href="#assignment-2-1-4-bicycle-revisited">Assignment 2.1.4 — Bicycle Revisited</a></li>
-<li><a class="reference internal" href="#assignment-2-1-5-constructor-practice">Assignment 2.1.5 — Constructor Practice</a></li>
+<li><a class="reference internal" href="#assignment-1-14-1-sports-class">Assignment 1.14.1 — Sports Class</a></li>
+<li><a class="reference internal" href="#assignment-1-14-2-not-another-cake">Assignment 1.14.2 — Not Another Cake</a></li>
+<li><a class="reference internal" href="#assignment-1-14-3-dog-pizza">Assignment 1.14.3 — Dog Pizza</a></li>
+<li><a class="reference internal" href="#assignment-1-14-4-bicycle">Assignment 1.14.4 — Bicycle</a></li>
+<li><a class="reference internal" href="#assignment-1-14-5-constructor-practice">Assignment 1.14.5 — Constructor Practice</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#string-manipulation">1.15 String Manipulation</a><ul>
-<li><a class="reference internal" href="#activity-2-7-1-wordplay">Activity 2.7.1 — Wordplay</a></li>
-<li><a class="reference internal" href="#assignment-2-7-2-speaking">Assignment 2.7.2 — Speaking</a></li>
+<li><a class="reference internal" href="#activity-1-15-1-wordplay">Activity 1.15.1 — Wordplay</a></li>
+<li><a class="reference internal" href="#assignment-1-15-2-speaking">Assignment 1.15.2 — Speaking</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#formatting-and-stringbuilder-oracle-foundations-1z0-811">1.16 Formatting and StringBuilder — <em>Oracle Foundations 1Z0-811</em></a><ul>
