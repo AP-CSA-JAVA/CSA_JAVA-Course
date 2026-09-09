@@ -1,10 +1,44 @@
 # Unit 2 - Selection and Iteration
 *AP Exam Weighting: 25–35%*
 
+---
+
+**📋 Unit 2 Standards Alignment**
+
+| Standard | Description                                                            |
+| -------- | ---------------------------------------------------------------------- |
+| ICT 1.0  | Academics — apply academic standards across content areas              |
+| ICT 2.0  | Communications — communicate clearly in written and electronic formats |
+| ICT 4.1  | Use electronic reference materials to gather information               |
+| ICT 5.4  | Interpret information and draw conclusions to make informed decisions  |
+| ICT 5.8  | Create and use algorithms to solve problems                            |
+| ICT 5.9  | Deconstruct large problems into smaller components                     |
+| ICT 7.5  | Apply high-quality techniques to product design and development        |
+| ICT 10.1 | Interpret and explain ICT-specific terminology                         |
+| C4.4     | Identify and apply data types and encoding                             |
+| C4.6     | Use proper programming language syntax                                 |
+| C4.9     | Create programs using control structures, procedures, and variables    |
+| C4.11    | Document development work using comments                               |
+| CRP 1    | Apply appropriate technical skills and academic knowledge              |
+| CRP 2    | Communicate clearly, effectively, and with reason                      |
+| CRP 4    | Apply technology to enhance productivity                               |
+| CRP 5    | Utilize critical thinking to make sense of problems                    |
+| CRP 7    | Act as a responsible and contributing citizen and employee             |
 
 ---
 
 ## 2.1 Algorithms with Selection and Repetition
+
+**📌 Standards — 2.1**
+
+| Standard | Description                                               |
+| -------- | ----------------------------------------------------------- |
+| ICT 5.8  | Create and use algorithms and solve problems               |
+| ICT 5.9  | Deconstruct large problems into components                 |
+| C4.6     | Use proper programming language syntax                     |
+| C4.9     | Create programs using control structures and variables     |
+| CRP 1    | Apply appropriate technical skills and academic knowledge  |
+| CRP 5    | Utilize critical thinking to make sense of problems         |
 
 **Goals**
 - Understand how algorithms can use selection (if/else) and repetition (loops) to solve problems.
@@ -17,6 +51,17 @@ An **algorithm** is a step-by-step set of instructions to solve a problem. In Ja
 ---
 
 ## 2.2 Boolean Expressions
+
+**📌 Standards — 2.2**
+
+| Standard | Description                                               |
+| -------- | ----------------------------------------------------------- |
+| ICT 5.4  | Interpret information and draw conclusions to make informed decisions |
+| ICT 5.8  | Create and use algorithms and solve problems               |
+| C4.6     | Use proper programming language syntax                     |
+| C4.9     | Create programs using control structures and variables     |
+| CRP 1    | Apply appropriate technical skills and academic knowledge  |
+| CRP 5    | Utilize critical thinking to make sense of problems         |
 
 **Goals**
 -   Understand Boolean expressions.
@@ -98,6 +143,16 @@ System.out.println(s1.equals(s2)); // true  – same content
 
 ## 2.3 if Statements
 
+**📌 Standards — 2.3**
+
+| Standard | Description                                               |
+| -------- | ----------------------------------------------------------- |
+| ICT 5.8  | Create and use algorithms and solve problems               |
+| C4.6     | Use proper programming language syntax                     |
+| C4.9     | Create programs using control structures and variables     |
+| CRP 1    | Apply appropriate technical skills and academic knowledge  |
+| CRP 5    | Utilize critical thinking to make sense of problems         |
+
 **Goals**
 - Write `if` statements to control the flow of a program.
 - I will be able to write a program that uses if/else statements.
@@ -114,6 +169,17 @@ if (condition) {
 ---
 
 ## 2.4 Nested if Statements
+
+**📌 Standards — 2.4**
+
+| Standard | Description                                               |
+| -------- | ----------------------------------------------------------- |
+| ICT 5.8  | Create and use algorithms and solve problems               |
+| ICT 5.9  | Deconstruct large problems into components                 |
+| C4.6     | Use proper programming language syntax                     |
+| C4.9     | Create programs using control structures and variables     |
+| CRP 1    | Apply appropriate technical skills and academic knowledge  |
+| CRP 5    | Utilize critical thinking to make sense of problems         |
 
 **Goals**
 - Write nested `if/else if/else` statements for multi-branch logic.
@@ -137,6 +203,16 @@ if (score >= 90) {
 ---
 
 ## 2.4.1 Switch Statements — *Oracle Foundations 1Z0-811*
+
+**📌 Standards — 2.4.1**
+
+| Standard | Description                                               |
+| -------- | ----------------------------------------------------------- |
+| ICT 5.8  | Create and use algorithms and solve problems               |
+| C4.6     | Use proper programming language syntax                     |
+| C4.9     | Create programs using control structures and variables     |
+| CRP 1    | Apply appropriate technical skills and academic knowledge  |
+| CRP 5    | Utilize critical thinking to make sense of problems         |
 
 > **Oracle Exam Note:** `switch` statements and the ternary operator are tested on the Oracle Java Foundations exam (1Z0-811).
 
@@ -210,6 +286,17 @@ Write a Java program that:
 
 ## 2.5 Compound Boolean Expressions
 
+**📌 Standards — 2.5**
+
+| Standard | Description                                               |
+| -------- | ----------------------------------------------------------- |
+| ICT 5.4  | Interpret information and draw conclusions to make informed decisions |
+| ICT 5.8  | Create and use algorithms and solve problems               |
+| C4.6     | Use proper programming language syntax                     |
+| C4.9     | Create programs using control structures and variables     |
+| CRP 1    | Apply appropriate technical skills and academic knowledge  |
+| CRP 5    | Utilize critical thinking to make sense of problems         |
+
 **Goals**
 - Combine multiple conditions using `&&`, `||`, and `!`.
 
@@ -233,6 +320,17 @@ if (score < 0 || score > 100) {
 
 ## 2.6 Comparing Boolean Expressions
 
+**📌 Standards — 2.6**
+
+| Standard | Description                                               |
+| -------- | ----------------------------------------------------------- |
+| ICT 5.4  | Interpret information and draw conclusions to make informed decisions |
+| ICT 5.8  | Create and use algorithms and solve problems               |
+| ICT 10.1 | Interpret and explain ICT-specific terminology              |
+| C4.6     | Use proper programming language syntax                     |
+| CRP 1    | Apply appropriate technical skills and academic knowledge  |
+| CRP 5    | Utilize critical thinking to make sense of problems         |
+
 **Goals**
 - Understand equivalent Boolean expressions.
 - Apply De Morgan's Laws.
@@ -249,6 +347,16 @@ if (score < 0 || score > 100) {
 ---
 
 ## 2.7 while Loops
+
+**📌 Standards — 2.7**
+
+| Standard | Description                                               |
+| -------- | ----------------------------------------------------------- |
+| ICT 5.8  | Create and use algorithms and solve problems               |
+| C4.6     | Use proper programming language syntax                     |
+| C4.9     | Create programs using control structures and variables     |
+| CRP 1    | Apply appropriate technical skills and academic knowledge  |
+| CRP 5    | Utilize critical thinking to make sense of problems         |
 
 **Goals**
 - Write `while` loops to repeat code while a condition is true.
@@ -271,6 +379,16 @@ while (i <= 5) {
 ---
 
 ## 2.7a do-while Loops — *Oracle Foundations 1Z0-811*
+
+**📌 Standards — 2.7a**
+
+| Standard | Description                                               |
+| -------- | ----------------------------------------------------------- |
+| ICT 5.8  | Create and use algorithms and solve problems               |
+| C4.6     | Use proper programming language syntax                     |
+| C4.9     | Create programs using control structures and variables     |
+| CRP 1    | Apply appropriate technical skills and academic knowledge  |
+| CRP 5    | Utilize critical thinking to make sense of problems         |
 
 > **Oracle Exam Note:** `do-while` loops are tested on the Oracle Java Foundations exam (1Z0-811) but are **not** assessed on the AP CSA exam.
 
@@ -309,6 +427,8 @@ Write a java program that asks the user to pick a number between 1 - 100. Use a 
 
 ### Break and Continue Keywords — *Oracle Foundations 1Z0-811*
 
+> **Oracle Exam Note:** `break` and `continue` are tested on both the Oracle Java Foundations exam (1Z0-811) and the AP CSA exam.
+
 `break` immediately exits a loop. `continue` skips the rest of the current iteration and moves to the next.
 
 ```java
@@ -332,6 +452,16 @@ for (int i = 1; i <= 10; i++) {
 ---
 
 ## 2.8 for Loops
+
+**📌 Standards — 2.8**
+
+| Standard | Description                                               |
+| -------- | ----------------------------------------------------------- |
+| ICT 5.8  | Create and use algorithms and solve problems               |
+| C4.6     | Use proper programming language syntax                     |
+| C4.9     | Create programs using control structures and variables     |
+| CRP 1    | Apply appropriate technical skills and academic knowledge  |
+| CRP 5    | Utilize critical thinking to make sense of problems         |
 
 **Goals**
 - Write `for` loops for counter-controlled repetition.
@@ -360,6 +490,18 @@ for (int i = 0; i < 5; i++) { ... }
 ---
 
 ## 2.8a Comparing Loops — *Oracle Foundations 1Z0-811*
+
+**📌 Standards — 2.8a**
+
+| Standard | Description                                               |
+| -------- | ----------------------------------------------------------- |
+| ICT 5.4  | Interpret information and draw conclusions to make informed decisions |
+| ICT 5.8  | Create and use algorithms and solve problems               |
+| ICT 10.1 | Interpret and explain ICT-specific terminology              |
+| C4.6     | Use proper programming language syntax                     |
+| C4.9     | Create programs using control structures and variables     |
+| CRP 1    | Apply appropriate technical skills and academic knowledge  |
+| CRP 5    | Utilize critical thinking to make sense of problems         |
 
 > **Oracle Exam Note:** "Compare and contrast the for, while, and do-while loops" is a direct objective on the Oracle 1Z0-811 exam. You've now seen all three individually (2.7, 2.7a, 2.8) — this section puts them side by side.
 
@@ -405,6 +547,19 @@ For each scenario below, identify which loop (`for`, `while`, or `do-while`) is 
 
 ## 2.9 Implementing Selection and Iteration Algorithms
 
+**📌 Standards — 2.9**
+
+| Standard | Description                                               |
+| -------- | ----------------------------------------------------------- |
+| ICT 5.8  | Create and use algorithms and solve problems               |
+| ICT 5.9  | Deconstruct large problems into components                 |
+| ICT 7.5  | Apply high-quality techniques to product design and development |
+| C4.6     | Use proper programming language syntax                     |
+| C4.9     | Create programs using control structures and variables     |
+| CRP 1    | Apply appropriate technical skills and academic knowledge  |
+| CRP 2    | Communicate clearly, effectively, and with reason           |
+| CRP 5    | Utilize critical thinking to make sense of problems         |
+
 **Goals**
 - Combine `if/else` and loops to implement common algorithms.
 
@@ -415,6 +570,17 @@ Apply all you've learned about conditionals and loops to create an interactive M
 ---
 
 ## 2.10 Implementing String Algorithms
+
+**📌 Standards — 2.10**
+
+| Standard | Description                                               |
+| -------- | ----------------------------------------------------------- |
+| ICT 5.8  | Create and use algorithms and solve problems               |
+| ICT 5.9  | Deconstruct large problems into components                 |
+| C4.6     | Use proper programming language syntax                     |
+| C4.9     | Create programs using control structures and variables     |
+| CRP 1    | Apply appropriate technical skills and academic knowledge  |
+| CRP 5    | Utilize critical thinking to make sense of problems         |
 
 **Goals**
 - Use String methods combined with loops to process text.
@@ -439,6 +605,17 @@ System.out.println("Vowels: " + vowelCount);
 
 ## 2.11 Nested Iteration
 
+**📌 Standards — 2.11**
+
+| Standard | Description                                               |
+| -------- | ----------------------------------------------------------- |
+| ICT 5.8  | Create and use algorithms and solve problems               |
+| ICT 5.9  | Deconstruct large problems into components                 |
+| C4.6     | Use proper programming language syntax                     |
+| C4.9     | Create programs using control structures and variables     |
+| CRP 1    | Apply appropriate technical skills and academic knowledge  |
+| CRP 5    | Utilize critical thinking to make sense of problems         |
+
 **Goals**
 - Write nested loops (a loop inside another loop).
 - Determine how many times nested loops execute.
@@ -458,6 +635,18 @@ for (int i = 1; i <= 3; i++) {
 ---
 
 ## 2.12 Informal Run-Time Analysis
+
+**📌 Standards — 2.12**
+
+| Standard | Description                                               |
+| -------- | ----------------------------------------------------------- |
+| ICT 5.4  | Interpret information and draw conclusions to make informed decisions |
+| ICT 5.9  | Deconstruct large problems into components                 |
+| ICT 10.1 | Interpret and explain ICT-specific terminology              |
+| C4.6     | Use proper programming language syntax                     |
+| C4.9     | Create programs using control structures and variables     |
+| CRP 1    | Apply appropriate technical skills and academic knowledge  |
+| CRP 5    | Utilize critical thinking to make sense of problems         |
 
 **Goal**
 - Determine the number of times a code segment will execute.
@@ -488,6 +677,21 @@ Informal code analysis involves reviewing and reasoning about code without execu
 
 ## Project 2 — Choose Your Own Adventure
 
+**📌 Standards — Project 2**
+
+| Standard | Description                                               |
+| -------- | ----------------------------------------------------------- |
+| ICT 5.8  | Create and use algorithms and solve problems               |
+| ICT 5.9  | Deconstruct large problems into components                 |
+| ICT 7.5  | Apply high-quality techniques to product design and development |
+| C4.6     | Use proper programming language syntax                     |
+| C4.9     | Create programs using control structures and variables     |
+| C4.11    | Document development work using comments                   |
+| CRP 1    | Apply appropriate technical skills and academic knowledge  |
+| CRP 2    | Communicate clearly, effectively, and with reason           |
+| CRP 5    | Utilize critical thinking to make sense of problems         |
+| CRP 7    | Act as a responsible and contributing citizen and employee  |
+
 **Goals**
 -  Apply all you've learned about conditionals to create a "Choose Your Own Adventure" game.
 -  Apply the development process to create a project.
@@ -508,6 +712,18 @@ Informal code analysis involves reviewing and reasoning about code without execu
 ---
 
 ## Java Time API — *Oracle Foundations 1Z0-811*
+
+**📌 Standards — Java Time API**
+
+| Standard | Description                                               |
+| -------- | ----------------------------------------------------------- |
+| ICT 4.1  | Use electronic reference materials to gather information   |
+| ICT 5.8  | Create and use algorithms and solve problems               |
+| C4.6     | Use proper programming language syntax                     |
+| C4.9     | Create programs using control structures and variables     |
+| CRP 1    | Apply appropriate technical skills and academic knowledge  |
+| CRP 4    | Apply technology to enhance productivity                    |
+| CRP 5    | Utilize critical thinking to make sense of problems         |
 
 > **Oracle Exam Note:** The `java.time` package (Calendar data) is tested on the Oracle Java Foundations exam (1Z0-811).
 
