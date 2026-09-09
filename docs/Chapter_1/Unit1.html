@@ -2502,6 +2502,95 @@ The Magic 8-Ball has spoken. Goodbye!
 </table>
 </div>
 <p>#############################################################################</p>
+<section id="method-signatures-practice-questions">
+<h3>Method Signatures — Practice Questions<a class="reference internal" href="#method-signatures-practice-questions"><span class="xref myst">¶</span></a><a class="headerlink" href="#method-signatures-practice-questions" title="Link to this heading">¶</a></h3>
+<blockquote>
+<div><p><strong>Purpose:</strong> Check your understanding of what a method signature is made of — access modifier, return type, method name, and parameter list — and how to read one correctly.</p>
+</div></blockquote>
+<hr class="docutils" />
+<section id="multiple-choice">
+<h4>1. Multiple Choice<a class="reference internal" href="#1-multiple-choice"><span class="xref myst">¶</span></a><a class="headerlink" href="#multiple-choice" title="Link to this heading">¶</a></h4>
+<p>Given the method signature below, what is its <strong>return type</strong>?</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">String</span> <span class="n">getName</span><span class="p">(</span><span class="nb">int</span> <span class="nb">id</span><span class="p">,</span> <span class="n">boolean</span> <span class="n">active</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>A. <code class="docutils literal notranslate"><span class="pre">String</span></code></p></li>
+<li><p>B. <code class="docutils literal notranslate"><span class="pre">int</span></code></p></li>
+<li><p>C. <code class="docutils literal notranslate"><span class="pre">boolean</span></code></p></li>
+<li><p>D. <code class="docutils literal notranslate"><span class="pre">void</span></code></p></li>
+</ul>
+<p><strong>Show answer</strong></p>
+<p><strong>Answer: A</strong></p>
+<p>The return type is the word that comes right before the method name — here, <code class="docutils literal notranslate"><span class="pre">String</span></code>. <code class="docutils literal notranslate"><span class="pre">int</span></code> and <code class="docutils literal notranslate"><span class="pre">boolean</span></code> are the <em>parameter</em> types (<code class="docutils literal notranslate"><span class="pre">id</span></code> and <code class="docutils literal notranslate"><span class="pre">active</span></code>), not the return type, and <code class="docutils literal notranslate"><span class="pre">void</span></code> isn’t used at all in this signature since the method does return a value.</p>
+</section>
+<hr class="docutils" />
+<section id="id1">
+<h4>2. Multiple Choice<a class="reference internal" href="#2-multiple-choice"><span class="xref myst">¶</span></a><a class="headerlink" href="#id1" title="Link to this heading">¶</a></h4>
+<p>Which of the following is a <strong>valid</strong> signature for a method that takes <strong>no parameters</strong> and <strong>returns nothing</strong>?</p>
+<ul class="simple">
+<li><p>A. <code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">String</span> <span class="pre">process()</span></code></p></li>
+<li><p>B. <code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">void</span> <span class="pre">process(int</span> <span class="pre">x)</span></code></p></li>
+<li><p>C. <code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">void</span> <span class="pre">process()</span></code></p></li>
+<li><p>D. <code class="docutils literal notranslate"><span class="pre">private</span> <span class="pre">int</span> <span class="pre">process()</span></code></p></li>
+</ul>
+<p><strong>Show answer</strong></p>
+<p><strong>Answer: C</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">void</span></code> means the method returns nothing, and empty parentheses <code class="docutils literal notranslate"><span class="pre">()</span></code> mean it takes no parameters — C matches both requirements. A returns a <code class="docutils literal notranslate"><span class="pre">String</span></code>, so it isn’t “returns nothing.” B is <code class="docutils literal notranslate"><span class="pre">void</span></code> (correct for “returns nothing”) but takes a parameter <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">x</span></code>, so it fails the “no parameters” part. D both returns an <code class="docutils literal notranslate"><span class="pre">int</span></code> and is <code class="docutils literal notranslate"><span class="pre">private</span></code>, neither of which was asked for.</p>
+</section>
+<hr class="docutils" />
+<section id="id2">
+<h4>3. Multiple Choice<a class="reference internal" href="#3-multiple-choice"><span class="xref myst">¶</span></a><a class="headerlink" href="#id2" title="Link to this heading">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">private</span> <span class="n">double</span> <span class="n">calculateArea</span><span class="p">(</span><span class="n">double</span> <span class="n">radius</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>How many <strong>parameters</strong> does this method accept?</p>
+<ul class="simple">
+<li><p>A. 3</p></li>
+<li><p>B. 0</p></li>
+<li><p>C. 2</p></li>
+<li><p>D. 1</p></li>
+</ul>
+<p><strong>Show answer</strong></p>
+<p><strong>Answer: D</strong></p>
+<p>There is exactly one parameter listed inside the parentheses: <code class="docutils literal notranslate"><span class="pre">double</span> <span class="pre">radius</span></code>. A, B, and C all miscount what’s between the parentheses — remember, the return type (<code class="docutils literal notranslate"><span class="pre">double</span></code>, appearing before the method name) is not a parameter, and neither is the access modifier <code class="docutils literal notranslate"><span class="pre">private</span></code>.</p>
+</section>
+<hr class="docutils" />
+<section id="id3">
+<h4>4. Multiple Choice<a class="reference internal" href="#4-multiple-choice"><span class="xref myst">¶</span></a><a class="headerlink" href="#id3" title="Link to this heading">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">printReport</span><span class="p">(</span><span class="n">String</span> <span class="n">title</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Which part of this signature tells you the method belongs to the <strong>class itself</strong>, not to an object instance?</p>
+<ul class="simple">
+<li><p>A. <code class="docutils literal notranslate"><span class="pre">public</span></code></p></li>
+<li><p>B. <code class="docutils literal notranslate"><span class="pre">static</span></code></p></li>
+<li><p>C. <code class="docutils literal notranslate"><span class="pre">void</span></code></p></li>
+<li><p>D. <code class="docutils literal notranslate"><span class="pre">String</span></code></p></li>
+</ul>
+<p><strong>Show answer</strong></p>
+<p><strong>Answer: B</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">static</span></code> is what makes a method belong to the class rather than to an instance — it’s why static methods can be called using the class name (<code class="docutils literal notranslate"><span class="pre">ClassName.method()</span></code>) without ever creating an object. <code class="docutils literal notranslate"><span class="pre">public</span></code> only controls <em>who</em> can access it, <code class="docutils literal notranslate"><span class="pre">void</span></code> describes the return type, and <code class="docutils literal notranslate"><span class="pre">String</span></code> is the parameter’s data type — none of the three say anything about static vs. instance.</p>
+</section>
+<hr class="docutils" />
+<section id="id4">
+<h4>5. Multiple Choice<a class="reference internal" href="#5-multiple-choice"><span class="xref myst">¶</span></a><a class="headerlink" href="#id4" title="Link to this heading">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="nb">int</span> <span class="n">add</span><span class="p">(</span><span class="nb">int</span> <span class="n">a</span><span class="p">,</span> <span class="nb">int</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This method is called as <code class="docutils literal notranslate"><span class="pre">add(3,</span> <span class="pre">4)</span></code> and the result is stored in a variable. Which statement is <strong>true</strong>?</p>
+<ul class="simple">
+<li><p>A. This is valid — <code class="docutils literal notranslate"><span class="pre">add</span></code> returns an <code class="docutils literal notranslate"><span class="pre">int</span></code>, which matches a variable of type <code class="docutils literal notranslate"><span class="pre">int</span></code>.</p></li>
+<li><p>B. This is invalid — <code class="docutils literal notranslate"><span class="pre">void</span></code> methods cannot return values.</p></li>
+<li><p>C. This is invalid — the method must be <code class="docutils literal notranslate"><span class="pre">static</span></code> to be called this way.</p></li>
+<li><p>D. This is invalid — two parameters cannot both be <code class="docutils literal notranslate"><span class="pre">int</span></code>.</p></li>
+</ul>
+<p><strong>Show answer</strong></p>
+<p><strong>Answer: A</strong></p>
+<p>The signature declares a return type of <code class="docutils literal notranslate"><span class="pre">int</span></code>, so storing the result in an <code class="docutils literal notranslate"><span class="pre">int</span></code> variable is exactly correct. B is wrong because this method isn’t <code class="docutils literal notranslate"><span class="pre">void</span></code> at all — it explicitly returns <code class="docutils literal notranslate"><span class="pre">int</span></code>. C confuses <em>calling</em> a method with <em>how</em> it’s declared; whether it needs an object or not depends on <code class="docutils literal notranslate"><span class="pre">static</span></code>, which wasn’t part of the question. D is simply false — parameters can share the same type freely, as <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> do here.</p>
+<p>#############################################################################</p>
+</section>
+</section>
 </section>
 <section id="calling-class-methods">
 <h2>1.10 Calling Class Methods<a class="headerlink" href="#calling-class-methods" title="Link to this heading">¶</a></h2>
@@ -3048,7 +3137,7 @@ LAUNCH STATUS:     ✗ UNSAFE — ABORT LAUNCH
 </table>
 </div>
 <p>##########################################################################</p>
-<p class="rubric" id="id1">Overview</p>
+<p class="rubric" id="id5">Overview</p>
 <p>In this activity you will apply what you have learned about the <code class="docutils literal notranslate"><span class="pre">Math</span></code> class, static methods, object instantiation, and <code class="docutils literal notranslate"><span class="pre">java.util.Random</span></code> to simulate a drag race between two cars. You will complete a partially written program by implementing the <code class="docutils literal notranslate"><span class="pre">computeTime</span></code> method in <code class="docutils literal notranslate"><span class="pre">Racecar.java</span></code> and filling in the guided comments in <code class="docutils literal notranslate"><span class="pre">Main.java</span></code>.</p>
 <p>By the end of this activity you will be able to:</p>
 <ul class="contains-task-list simple">
@@ -3059,7 +3148,7 @@ LAUNCH STATUS:     ✗ UNSAFE — ABORT LAUNCH
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Connect prior concepts — classes, constructors, <code class="docutils literal notranslate"><span class="pre">toString()</span></code>, and static methods — in a complete program</p></li>
 </ul>
 <p>##########################################################################</p>
-<p class="rubric" id="id2">Background</p>
+<p class="rubric" id="id6">Background</p>
 <p class="rubric" id="connecting-prior-activities">Connecting Prior Activities</p>
 <p>You have already used these concepts individually. This activity brings them together:</p>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -3206,7 +3295,7 @@ To get the range 20–50 (31 possible values), use <code class="docutils literal
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Print the finishing time for each car in the format shown below</p></li>
 </ul>
 <p>##########################################################################</p>
-<p class="rubric" id="id3">Sample Output</p>
+<p class="rubric" id="id7">Sample Output</p>
 <p>Because acceleration is random, your times will differ each run. The format must match exactly:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Racer</span> <span class="n">Tom</span><span class="s1">'s car finished in 10.596 seconds.</span>
 <span class="n">Racer</span> <span class="n">Jerry</span><span class="s1">'s car finished in 11.423 seconds.</span>
@@ -3230,7 +3319,7 @@ To get the range 20–50 (31 possible values), use <code class="docutils literal
 <li><p><code class="docutils literal notranslate"><span class="pre">toString()</span></code> is already written for you. When <code class="docutils literal notranslate"><span class="pre">System.out.println(car1</span> <span class="pre">+</span> <span class="pre">&quot;'s</span> <span class="pre">car</span> <span class="pre">finished</span> <span class="pre">in</span> <span class="pre">&quot;</span> <span class="pre">+</span> <span class="pre">time</span> <span class="pre">+</span> <span class="pre">&quot;</span> <span class="pre">seconds.&quot;)</span></code> runs, what triggers the call to <code class="docutils literal notranslate"><span class="pre">toString()</span></code>?</p></li>
 </ol>
 <p>##########################################################################</p>
-<p class="rubric" id="id4">Extension Challenges</p>
+<p class="rubric" id="id8">Extension Challenges</p>
 <p>Completed early? Try one or more of the following:</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>User input</strong> — use <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> to let the user enter driver names and/or the track length instead of hardcoding them</p></li>
@@ -3239,7 +3328,7 @@ To get the range 20–50 (31 possible values), use <code class="docutils literal
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Leaderboard</strong> — sort and print the cars from fastest to slowest finishing time</p></li>
 </ul>
 <p>##########################################################################</p>
-<p class="rubric" id="id5">Submission</p>
+<p class="rubric" id="id9">Submission</p>
 <p>Upload the following to the assignment:</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">Racecar.java</span></code> — with <code class="docutils literal notranslate"><span class="pre">computeTime</span></code> fully implemented</p></li>
@@ -3247,7 +3336,7 @@ To get the range 20–50 (31 possible values), use <code class="docutils literal
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Test Cases document — showing at least <strong>three</strong> runs of your program demonstrating different random acceleration values each time</p></li>
 </ul>
 <p>##########################################################################</p>
-<p class="rubric" id="id6">Grading</p>
+<p class="rubric" id="id10">Grading</p>
 <p>This assignment is graded using the <strong>AP CSA Generic Assignment Rubric</strong> (5-point scale). Pay particular attention to:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">computeTime</span></code> uses <code class="docutils literal notranslate"><span class="pre">Math.sqrt()</span></code> with the correct formula — not a hardcoded value</p></li>
@@ -4729,8 +4818,8 @@ Thunder Loop: NOT ELIGIBLE
 </ul>
 </section>
 <hr class="docutils" />
-<section id="id7">
-<h4>Part 3 — Main.java<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h4>
+<section id="id11">
+<h4>Part 3 — Main.java<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h4>
 <p>Your <code class="docutils literal notranslate"><span class="pre">main</span></code> method must:</p>
 <ol class="arabic simple">
 <li><p>Include the required block comment header (all fields completed)</p></li>
@@ -5110,7 +5199,17 @@ Available vehicles: 3
 </ul>
 </li>
 <li><a class="reference internal" href="#documentation-with-comments">1.8 Documentation with Comments</a></li>
-<li><a class="reference internal" href="#method-signatures">1.9 Method Signatures</a></li>
+<li><a class="reference internal" href="#method-signatures">1.9 Method Signatures</a><ul>
+<li><a class="reference internal" href="#method-signatures-practice-questions">Method Signatures — Practice Questions<span class="xref myst">¶</span></a><ul>
+<li><a class="reference internal" href="#multiple-choice">1. Multiple Choice<span class="xref myst">¶</span></a></li>
+<li><a class="reference internal" href="#id1">2. Multiple Choice<span class="xref myst">¶</span></a></li>
+<li><a class="reference internal" href="#id2">3. Multiple Choice<span class="xref myst">¶</span></a></li>
+<li><a class="reference internal" href="#id3">4. Multiple Choice<span class="xref myst">¶</span></a></li>
+<li><a class="reference internal" href="#id4">5. Multiple Choice<span class="xref myst">¶</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a class="reference internal" href="#calling-class-methods">1.10 Calling Class Methods</a></li>
 <li><a class="reference internal" href="#math-class">1.11 Math Class</a></li>
 <li><a class="reference internal" href="#objects-instances-of-classes">1.12 Objects: Instances of Classes</a></li>
@@ -5153,7 +5252,7 @@ Available vehicles: 3
 <li><a class="reference internal" href="#option-b-car-dealership-inventory">Option B — Car Dealership Inventory</a><ul>
 <li><a class="reference internal" href="#part-1-car-java">Part 1 — Car.java</a></li>
 <li><a class="reference internal" href="#part-2-customer-java">Part 2 — Customer.java</a></li>
-<li><a class="reference internal" href="#id7">Part 3 — Main.java</a></li>
+<li><a class="reference internal" href="#id11">Part 3 — Main.java</a></li>
 <li><a class="reference internal" href="#sample-output-option-b">Sample Output — Option B</a></li>
 </ul>
 </li>

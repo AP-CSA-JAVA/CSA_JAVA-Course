@@ -1902,6 +1902,116 @@ public void printName(String s) // signature: name=printName, params=String, ret
 | Accessing members | Can only access static data members and static methods. | Can access static and non-static members. |
 | Overriding | Cannot be overridden (compile-time binding). | Can be overridden (runtime/dynamic binding). |
 
+
+#############################################################################
+
+
+### Method Signatures — Practice Questions[¶](#method-signatures-practice-questions)
+> **Purpose:** Check your understanding of what a method signature is made of — access modifier, return type, method name, and parameter list — and how to read one correctly.
+
+---
+
+#### 1. Multiple Choice[¶](#1-multiple-choice)
+
+Given the method signature below, what is its **return type**?
+
+```
+public String getName(int id, boolean active)
+```
+
+- A. `String`
+- B. `int`
+- C. `boolean`
+- D. `void`
+
+**Show answer**
+
+**Answer: A**
+
+The return type is the word that comes right before the method name — here, `String`. `int` and `boolean` are the *parameter* types (`id` and `active`), not the return type, and `void` isn't used at all in this signature since the method does return a value.
+
+---
+
+#### 2. Multiple Choice[¶](#2-multiple-choice)
+
+Which of the following is a **valid** signature for a method that takes **no parameters** and **returns nothing**?
+
+- A. `public String process()`
+- B. `public void process(int x)`
+- C. `public void process()`
+- D. `private int process()`
+
+**Show answer**
+
+**Answer: C**
+
+`void` means the method returns nothing, and empty parentheses `()` mean it takes no parameters — C matches both requirements. A returns a `String`, so it isn't "returns nothing." B is `void` (correct for "returns nothing") but takes a parameter `int x`, so it fails the "no parameters" part. D both returns an `int` and is `private`, neither of which was asked for.
+
+---
+
+#### 3. Multiple Choice[¶](#3-multiple-choice)
+
+```
+private double calculateArea(double radius)
+```
+
+How many **parameters** does this method accept?
+
+- A. 3
+- B. 0
+- C. 2
+- D. 1
+
+**Show answer**
+
+**Answer: D**
+
+There is exactly one parameter listed inside the parentheses: `double radius`. A, B, and C all miscount what's between the parentheses — remember, the return type (`double`, appearing before the method name) is not a parameter, and neither is the access modifier `private`.
+
+---
+
+#### 4. Multiple Choice[¶](#4-multiple-choice)
+
+```
+public static void printReport(String title)
+```
+
+Which part of this signature tells you the method belongs to the **class itself**, not to an object instance?
+
+- A. `public`
+- B. `static`
+- C. `void`
+- D. `String`
+
+**Show answer**
+
+**Answer: B**
+
+`static` is what makes a method belong to the class rather than to an instance — it's why static methods can be called using the class name (`ClassName.method()`) without ever creating an object. `public` only controls *who* can access it, `void` describes the return type, and `String` is the parameter's data type — none of the three say anything about static vs. instance.
+
+---
+
+#### 5. Multiple Choice[¶](#5-multiple-choice)
+
+```
+public int add(int a, int b)
+```
+
+This method is called as `add(3, 4)` and the result is stored in a variable. Which statement is **true**?
+
+- A. This is valid — `add` returns an `int`, which matches a variable of type `int`.
+- B. This is invalid — `void` methods cannot return values.
+- C. This is invalid — the method must be `static` to be called this way.
+- D. This is invalid — two parameters cannot both be `int`.
+
+**Show answer**
+
+**Answer: A**
+
+The signature declares a return type of `int`, so storing the result in an `int` variable is exactly correct. B is wrong because this method isn't `void` at all — it explicitly returns `int`. C confuses *calling* a method with *how* it's declared; whether it needs an object or not depends on `static`, which wasn't part of the question. D is simply false — parameters can share the same type freely, as `a` and `b` do here.
+
+
+
 #############################################################################
 
 ## 1.10 Calling Class Methods
