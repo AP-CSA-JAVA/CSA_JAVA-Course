@@ -3409,34 +3409,32 @@ Your team name is Samaell
 
 ### String Formatting
 
-> Java provides two main ways to format output:
-> 
-> **`System.out.printf()`** — formatted printing:
-> 
+> You already learned the core of formatted output back in §1.4 — `printf()` and the `%d`, `%f`, `%.2f`, and `%n` specifiers. Two things are new here: `String.format()` (same formatting rules, but it *returns* a String instead of printing one) and the width/alignment specifiers you'll need to line values up into columns.
+>
+> **`printf()` with alignment** — the same `printf()` from §1.4, now with a width specifier added:
+>
 > ```java
 > double price = 9.99;
 > String name = "Widget";
 > System.out.printf("%-15s $%.2f%n", name, price);
 > // Output: Widget          $9.99
 > ```
-> 
-> **`String.format()`** — returns a formatted String:
-> 
+>
+> **`String.format()`** — returns a formatted String instead of printing it directly:
+>
 > ```java
 > String result = String.format("Name: %s, Age: %d, GPA: %.1f", "Alex", 17, 3.85);
 > System.out.println(result);
 > // Output: Name: Alex, Age: 17, GPA: 3.9
 > ```
-> 
-> | Format Specifier | Meaning |
+>
+> | New Format Specifier | Meaning |
 > | :---: | ------- |
-> | `%d` | Integer |
-> | `%f` | Floating-point (default 6 decimal places) |
-> | `%.2f` | Float with 2 decimal places |
 > | `%s` | String |
-> | `%n` | Newline |
 > | `%-10s` | Left-align in 10-char field |
 > | `%10s` | Right-align in 10-char field |
+>
+> `%d`, `%f`, `%.2f`, and `%n` still work exactly the way they did in §1.4 — `String.format()` just hands you the result as a String instead of sending it straight to the console.
 >
 
 ### StringBuilder
@@ -4031,6 +4029,4 @@ Each concept below is worth **1 point**. Credit is awarded when the concept is u
 - `null` reference point: program must declare a null object AND print a message — a `NullPointerException` crash does not earn the point.
 - Constructor overloading point: both constructors must have different signatures AND both must be called in `Main`.
 
-
-
-
+#############################################################################
