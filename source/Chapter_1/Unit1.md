@@ -1773,7 +1773,7 @@ By the end of this activity you will be able to:
 > The Magic 8-Ball has spoken. Goodbye!
 > ```
 >
-> #############################################################################
+> ##########################################################################
 > 
 >
 > **Extension Challenges**
@@ -1786,7 +1786,7 @@ By the end of this activity you will be able to:
 > - [ ] **Seeded Random** — let the user enter a "lucky number" that seeds the Random object. Investigate what happens when they use the same number twice. *(Hint: this connects to how the JVM initializes objects in the heap)*
 > - [ ] **Null guard** — add a check so that if the user enters a blank question, the program prints a warning instead of sending an empty question to the 8-Ball. Think about what `null` and empty strings mean in the heap.
 >
-> #############################################################################
+> ##########################################################################
 >
 > **Submission**
 >
@@ -1795,7 +1795,7 @@ By the end of this activity you will be able to:
 > - [ ] `Main.java` — your completed program with block comment header
 > - [ ] Test Cases document — showing at least **three** runs of your program with different questions and the responses generated
 >
-> #############################################################################
+> ##########################################################################
 >
 > **Grading**
 >
@@ -1947,7 +1947,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > - [ ] Write your own static methods and call them from `main`
 > - [ ] Decompose a larger problem into smaller methods, each responsible for one task
 > 
-> #############################################################################
+> ##########################################################################
 > 
 > ## Background
 > 
@@ -1996,7 +1996,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > 
 > A method that returns nothing uses `void` as its return type. A `void` method performs an action but does not hand a value back to the caller.
 > 
-> #############################################################################
+> ##########################################################################
 > 
 > ## Part 1 — Investigation
 > 
@@ -2033,7 +2033,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > 
 > 11. Look at the following task: *"Calculate the fuel needed for a rocket launch, warn the crew if fuel is low, and print a launch report."* Identify **three** static methods you could write to decompose this problem. For > each, write the method signature only (no body needed).
 > 
-> #############################################################################
+> ##########################################################################
 > 
 > ## Part 2 — Mission Control Program
 > 
@@ -2058,7 +2058,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > - [ ] Use `String.format()` or `printf()` to produce the formatted launch report
 > - [ ] Include meaningful inline comments throughout
 > 
-> #############################################################################
+> ##########################################################################
 > 
 > ### Required Static Methods
 > 
@@ -2093,7 +2093,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > - Uses `String.format()` or `printf()` for aligned output
 > - Prints a safety status message based on the `boolean` parameter
 > 
-> #############################################################################
+> ##########################################################################
 > 
 > ## Starter Code
 > 
@@ -2163,7 +2163,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > }
 > ```
 > 
-> #############################################################################
+> ##########################################################################
 > 
 > ## Sample Output
 > 
@@ -2205,7 +2205,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > ========================================
 > ```
 > 
-> #############################################################################
+> ##########################################################################
 > 
 > ## Extension Challenges
 > 
@@ -2216,7 +2216,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > - [ ] **Multiple rockets** — use a loop in `main` to process three different rockets and report which one has the best thrust-to-weight ratio using `Math.max()`
 > - [ ] **Unit conversion** — add a static method that converts `km/h` to `m/s` and display both speeds in the report
 > 
-> #############################################################################
+> ##########################################################################
 > 
 > ## Submission
 > 
@@ -2225,7 +2225,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > - [ ] `Main.java` — your completed program with block comment header
 > - [ ] Test Cases document — showing at least **three** runs with different rocket inputs, including one that triggers the unsafe launch warning
 > 
-> #############################################################################
+> ##########################################################################
 > 
 > ## Grading
 > 
@@ -2237,7 +2237,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > - Part 1 investigation questions are answered in your block comment or submitted document
 > - The launch report is formatted using `String.format()` or `printf()` — not plain `println` concatenation
 > 
-> #############################################################################
+> ##########################################################################
 >
 
 
@@ -2297,7 +2297,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > <img width="422" height="490" alt="Image" src="https://github.com/user-attachments/assets/5e02c085-c41f-4ab5-a17b-63a53ce3ce0f" />
 > 
 > 
-> #############################################################################
+> ##########################################################################
 > 
 > **Example Output**
 > 
@@ -2319,7 +2319,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > Time Rounded Down: 3.0 sec
 > ```
 > 
-> #############################################################################
+> ##########################################################################
 > 
 > 
 > ```java
@@ -2389,7 +2389,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > | CRP 1 | Apply appropriate technical skills and academic knowledge |
 > | CRP 5 | Utilize critical thinking to make sense of problems |
 > 
-> #############################################################################
+> ##########################################################################
 > 
 > ## Overview
 > 
@@ -2402,7 +2402,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > - [ ] Instantiate objects and call instance methods on them
 > - [ ] Connect prior concepts — classes, constructors, `toString()`, and static methods — in a complete program
 > 
-> #############################################################################
+> ##########################################################################
 > 
 > ## Background
 > 
@@ -2417,7 +2417,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > | 1.11.1 Roller Coaster Simulator | `Math.sqrt()`, physics formulas, `Math.round()` |
 > | 1.13 Object Creation | Constructors, instance variables, `toString()` |
 > 
-> #############################################################################
+> ##########################################################################
 > 
 > ### The Physics Formula
 > 
@@ -2434,7 +2434,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > 
 > You implemented a similar formula in **Activity 1.11.1** when calculating speed at the bottom of a roller coaster hill. Here you will apply the same `Math.sqrt()` approach inside an **instance method** instead of directly in `main`.
 > 
-> #############################################################################
+> ##########################################################################
 > 
 > ### Generating a Bounded Random Integer
 > 
@@ -2449,7 +2449,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > > `nextInt(bound)` returns a value from `0` up to but **not including** `bound`.
 > > To get the range 20–50 (31 possible values), use `nextInt(31)` then add 20.
 > 
-> #############################################################################
+> ##########################################################################
 > 
 > ### Rounding to Three Decimal Places
 > 
@@ -2462,7 +2462,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > 
 > You used `Math.round()` in **Activity 1.10.1** to clean up fuel consumption values. Apply the same technique here inside `computeTime`.
 > 
-> #############################################################################
+> ##########################################################################
 > 
 > ## Starter Files
 > 
@@ -2501,7 +2501,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > }
 > ```
 > 
-> #############################################################################
+> ##########################################################################
 > 
 > ### Main.java
 > 
@@ -2542,7 +2542,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > }
 > ```
 > 
-> #############################################################################
+> ##########################################################################
 > 
 > ## What You Need to Complete
 > 
@@ -2557,7 +2557,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > - [ ] Call `computeTime(distance)` on each car and store the result
 > - [ ] Print the finishing time for each car in the format shown below
 > 
-> #############################################################################
+> ##########################################################################
 > 
 > ## Sample Output
 > 
@@ -2587,7 +2587,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > 4. What would happen if you used `rand.nextInt(50)` instead of `rand.nextInt(31) + 20`? What range would that produce?
 > 5. `toString()` is already written for you. When `System.out.println(car1 + "'s car finished in " + time + " seconds.")` runs, what triggers the call to `toString()`?
 > 
-> #############################################################################
+> ##########################################################################
 > 
 > ## Extension Challenges
 > 
@@ -2598,7 +2598,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > - [ ] **More cars** — add a third and fourth `Racecar` object and report all four finishing times
 > - [ ] **Leaderboard** — sort and print the cars from fastest to slowest finishing time
 > 
-> #############################################################################
+> ##########################################################################
 > 
 > ## Submission
 > 
@@ -2608,7 +2608,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > - [ ] `Main.java` — with all comments completed and all code filled in, including the block comment header
 > - [ ] Test Cases document — showing at least **three** runs of your program demonstrating different random acceleration values each time
 > 
-> #############################################################################
+> ##########################################################################
 > 
 > ## Grading
 > 
