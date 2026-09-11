@@ -3028,18 +3028,18 @@ LAUNCH STATUS:     ✗ UNSAFE — ABORT LAUNCH
 <div><p><strong>Oracle Exam Note:</strong> <code class="docutils literal notranslate"><span class="pre">Math.ceil()</span></code> and <code class="docutils literal notranslate"><span class="pre">Math.floor()</span></code> both return a <strong><code class="docutils literal notranslate"><span class="pre">double</span></code></strong> — even when the result looks like a whole number (<code class="docutils literal notranslate"><span class="pre">4.0</span></code>, not <code class="docutils literal notranslate"><span class="pre">4</span></code>). This is a common exam trap because <code class="docutils literal notranslate"><span class="pre">Math.round()</span></code> looks like it belongs in the same family but actually returns a <code class="docutils literal notranslate"><span class="pre">long</span></code>. If you need an <code class="docutils literal notranslate"><span class="pre">int</span></code>, you must cast the result yourself: <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">rounded</span> <span class="pre">=</span> <span class="pre">(int)</span> <span class="pre">Math.ceil(3.2);</span></code></p>
 </div></blockquote>
 <blockquote>
-<div><p class="rubric" id="project-1-11-1-roller-coaster-simulator">Project 1.11.1 — Roller Coaster Simulator</p>
+<div><p>Project 1.11.1 — Roller Coaster Simulator</p>
 <p><strong>Project Overview:</strong></p>
-<p>Students will write a program that helps a theme park design safe roller coasters based on physics-related math. Use <code class="docutils literal notranslate"><span class="pre">Math.random()</span></code> and <code class="docutils literal notranslate"><span class="pre">Math.round()</span></code> to simulate the experience of riding a roller coaster, generating random values for speed, height, and rating.  The user (acting as an engineer) inputs the parameters of a coaster hill, and the program will:</p>
+<p>Students will write a program that helps a theme park design safe roller coasters based on physics-related math. Use <code class="docutils literal notranslate"><span class="pre">Math.random()</span></code> and <code class="docutils literal notranslate"><span class="pre">Math.round()</span></code> to simulate the experience of riding a roller coaster, generating random values for speed, height, and rating. The user (acting as an engineer) inputs the parameters of a coaster hill, and the program will:</p>
 <ul class="simple">
 <li><p>Calculate speed at the bottom of the hill</p></li>
-<li><p>Estimate time to fall using height</p></li>
+<li><p>Estimate time to descend the incline, using slope angle</p></li>
 <li><p>Warn if g-forces exceed safety limits</p></li>
 <li><p>Round values for display</p></li>
 </ul>
 <p><strong>Concepts Covered:</strong></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">Math</span></code> class: <code class="docutils literal notranslate"><span class="pre">Math.pow</span></code>, <code class="docutils literal notranslate"><span class="pre">Math.sqrt</span></code>, <code class="docutils literal notranslate"><span class="pre">Math.abs</span></code>, <code class="docutils literal notranslate"><span class="pre">Math.max</span></code>, <code class="docutils literal notranslate"><span class="pre">Math.min</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Math</span></code> class: <code class="docutils literal notranslate"><span class="pre">Math.pow</span></code>, <code class="docutils literal notranslate"><span class="pre">Math.sqrt</span></code>, <code class="docutils literal notranslate"><span class="pre">Math.abs</span></code>, <code class="docutils literal notranslate"><span class="pre">Math.max</span></code>, <code class="docutils literal notranslate"><span class="pre">Math.min</span></code>, <code class="docutils literal notranslate"><span class="pre">Math.toRadians</span></code>, <code class="docutils literal notranslate"><span class="pre">Math.sin</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Scanner</span></code> for input</p></li>
 <li><p>Decision-making and problem-solving</p></li>
 <li><p>Realistic application of physics/math concepts</p></li>
@@ -3056,98 +3056,107 @@ LAUNCH STATUS:     ✗ UNSAFE — ABORT LAUNCH
 <ol class="arabic simple" start="2">
 <li><p><strong>Calculations:</strong></p></li>
 </ol>
-<ul>
-<li><p><strong>Speed at bottom:</strong></p>
-<p>Using conservation of energy:</p>
-<div class="math-wrapper docutils container">
-<div class="math notranslate nohighlight">
-\[v = \sqrt{2 \cdot g \cdot h}\]</div>
-</div>
-<p>where <code class="docutils literal notranslate"><span class="pre">g</span> <span class="pre">=</span> <span class="pre">9.8</span> <span class="pre">m/s²</span></code></p>
-</li>
-<li><p><strong>Time to fall (approximate straight drop):</strong></p>
-<div class="math-wrapper docutils container">
-<div class="math notranslate nohighlight">
-\[t = \sqrt{\frac{2h}{g}}\]</div>
-</div>
-</li>
-<li><p><strong>G-force estimation:</strong></p>
+<ul class="simple">
+<li><p><strong>Speed at bottom:</strong></p></li>
+</ul>
+<p>Using conservation of energy (this depends only on height, not angle):</p>
+<p>[v = \sqrt{2 \cdot g \cdot h}]
+where <code class="docutils literal notranslate"><span class="pre">g</span> <span class="pre">=</span> <span class="pre">9.8</span> <span class="pre">m/s²</span></code></p>
+<ul class="simple">
+<li><p><strong>Time to descend the incline:</strong></p></li>
+</ul>
+<p>Unlike a straight vertical drop, a coaster travels <em>along</em> the slope. For a track length <code class="docutils literal notranslate"><span class="pre">L</span></code> at slope angle <code class="docutils literal notranslate"><span class="pre">θ</span></code>, the component of gravity accelerating the car down the incline is <code class="docutils literal notranslate"><span class="pre">g</span> <span class="pre">·</span> <span class="pre">sin(θ)</span></code>, so:</p>
+<p>[t = \sqrt{\dfrac{2 \cdot L}{g \cdot \sin(\theta)}}]</p>
+<p><strong>This is the step where slope angle is actually used</strong> — convert the input angle from degrees to radians with <code class="docutils literal notranslate"><span class="pre">Math.toRadians()</span></code> before passing it to <code class="docutils literal notranslate"><span class="pre">Math.sin()</span></code>.</p>
+<ul class="simple">
+<li><p><strong>G-force estimation:</strong></p></li>
+</ul>
 <p>Simulate g-force during curve:</p>
-<div class="math-wrapper docutils container">
-<div class="math notranslate nohighlight">
-\[G = \frac{v^2}{r \cdot g}\]</div>
-</div>
-<p>Assume <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">=</span> <span class="pre">10</span></code> (constant curve radius). Warn if <code class="docutils literal notranslate"><span class="pre">G</span> <span class="pre">&gt;</span> <span class="pre">5</span></code>.</p>
-</li>
+<p>[G = \frac{v^2}{r \cdot g}]
+Assume <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">=</span> <span class="pre">10</span></code> (constant curve radius). Warn if <code class="docutils literal notranslate"><span class="pre">G</span> <span class="pre">&gt;</span> <span class="pre">5</span></code>.</p>
+<ul class="simple">
 <li><p>Round values with <code class="docutils literal notranslate"><span class="pre">Math.round</span></code>, <code class="docutils literal notranslate"><span class="pre">Math.ceil</span></code>, or <code class="docutils literal notranslate"><span class="pre">Math.floor</span></code></p></li>
 </ul>
 <p>##########################################################################</p>
+<p><strong>Requirements Checklist</strong></p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Include the required block comment header in <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> (all fields completed)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Accept hill height, slope angle, and track length as user input via <code class="docutils literal notranslate"><span class="pre">Scanner</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Convert slope angle from degrees to radians using <code class="docutils literal notranslate"><span class="pre">Math.toRadians()</span></code> <strong>before</strong> using it in <code class="docutils literal notranslate"><span class="pre">Math.sin()</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Calculate speed at the bottom of the hill using <code class="docutils literal notranslate"><span class="pre">Math.sqrt()</span></code> — must depend on height only</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Calculate time to descend the incline using the slope-angle formula — must change when slope angle changes (not just height or track length)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Calculate g-force using the given formula with <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">=</span> <span class="pre">10</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Warn if g-force exceeds the safety limit (<code class="docutils literal notranslate"><span class="pre">G</span> <span class="pre">&gt;</span> <span class="pre">5</span></code>)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Round displayed speed up and displayed time down, using the appropriate <code class="docutils literal notranslate"><span class="pre">Math</span></code> rounding method for each</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Include meaningful inline comments throughout, especially around the angle conversion step</p></li>
+</ul>
+<p>##########################################################################</p>
 <p><strong>Example Output</strong></p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Welcome</span><span class="w"> </span><span class="kd">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Roller</span><span class="w"> </span><span class="n">Coaster</span><span class="w"> </span><span class="n">Simulator</span>
-<span class="n">Enter</span><span class="w"> </span><span class="n">hill</span><span class="w"> </span><span class="nf">height</span><span class="w"> </span><span class="p">(</span><span class="n">in</span><span class="w"> </span><span class="n">meters</span><span class="p">):</span><span class="w"> </span><span class="mi">50</span>
-<span class="n">Enter</span><span class="w"> </span><span class="n">slope</span><span class="w"> </span><span class="nf">angle</span><span class="w"> </span><span class="p">(</span><span class="n">in</span><span class="w"> </span><span class="n">degrees</span><span class="p">):</span><span class="w"> </span><span class="mi">40</span>
-<span class="n">Enter</span><span class="w"> </span><span class="n">track</span><span class="w"> </span><span class="nf">length</span><span class="w"> </span><span class="p">(</span><span class="n">in</span><span class="w"> </span><span class="n">meters</span><span class="p">):</span><span class="w"> </span><span class="mi">100</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Welcome to the Roller Coaster Simulator
+Enter hill height (in meters): 50
+Enter slope angle (in degrees): 40
+Enter track length (in meters): 100
 
-<span class="o">---</span><span class="w"> </span><span class="n">Results</span><span class="w"> </span><span class="o">---</span>
-<span class="n">Estimated</span><span class="w"> </span><span class="n">Speed</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">Bottom</span><span class="p">:</span><span class="w"> </span><span class="mf">31.30</span><span class="w"> </span><span class="n">m</span><span class="o">/</span><span class="n">s</span>
-<span class="n">Time</span><span class="w"> </span><span class="kd">to</span><span class="w"> </span><span class="n">Fall</span><span class="p">:</span><span class="w"> </span><span class="mf">3.19</span><span class="w"> </span><span class="n">seconds</span>
-<span class="n">Estimated</span><span class="w"> </span><span class="n">G</span><span class="o">-</span><span class="n">force</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">curve</span><span class="p">:</span><span class="w"> </span><span class="mf">10.0</span><span class="w"> </span><span class="n">Gs</span><span class="w"> </span><span class="n">TOO</span><span class="w"> </span><span class="n">DANGEROUS</span><span class="o">!</span>
+--- Results ---
+Estimated Speed at Bottom: 31.30 m/s
+Time to Descend Incline: 5.63 seconds
+Estimated G-force in curve: 10.0 Gs TOO DANGEROUS!
 
-<span class="nl">Recommendation</span><span class="p">:</span><span class="w"> </span><span class="n">Reduce</span><span class="w"> </span><span class="n">hill</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">increase</span><span class="w"> </span><span class="n">curve</span><span class="w"> </span><span class="n">radius</span><span class="p">.</span>
+Recommendation: Reduce hill height or increase curve radius.
 
-<span class="o">---</span><span class="w"> </span><span class="n">Rounded</span><span class="w"> </span><span class="n">Data</span><span class="w"> </span><span class="o">---</span>
-<span class="n">Speed</span><span class="w"> </span><span class="n">Rounded</span><span class="w"> </span><span class="n">Up</span><span class="p">:</span><span class="w"> </span><span class="mf">32.0</span><span class="w"> </span><span class="n">m</span><span class="o">/</span><span class="n">s</span>
-<span class="n">Time</span><span class="w"> </span><span class="n">Rounded</span><span class="w"> </span><span class="n">Down</span><span class="p">:</span><span class="w"> </span><span class="mf">3.0</span><span class="w"> </span><span class="n">sec</span>
+--- Rounded Data ---
+Speed Rounded Up: 32.0 m/s
+Time Rounded Down: 5.0 sec
 </pre></div>
 </div>
 <p>##########################################################################</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">RollerCoasterSimulator</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">GRAVITY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">9.8</span><span class="p">;</span><span class="w"> </span><span class="c1">// m/s^2 // DO NOT CHANGE</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>public class RollerCoasterSimulator {
+private static final double GRAVITY = 9.8; // m/s^2 // DO NOT CHANGE
 
-<span class="w">	</span><span class="c1">// Attributes (height, speed, time, gForce, angle, trackLength)</span>
+// Attributes (height, speed, time, gForce, angle, trackLength)
 
-<span class="w">  </span><span class="c1">// Constructor</span>
+// Constructor
 
-<span class="w">  </span><span class="c1">// Perform all calculations</span>
+// Perform all calculations
+// Reminder: convert angle to radians with Math.toRadians() before
+// using it in Math.sin() — Java's trig methods expect radians, not degrees.
 
-<span class="w">  </span><span class="c1">// Return calculated results to main</span>
+// Return calculated results to main
 
-<span class="w">   </span><span class="c1">// Helper method for safety</span>
+// Helper method for safety
 
-<span class="p">}</span>
+}
 
-
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-
-<span class="w">		</span><span class="c1">// Use Scanner to get inputs for Speed, time and GForce</span>
-
-<span class="w">     </span><span class="c1">// Get user inputs</span>
-
-<span class="w">     </span><span class="c1">// Create an instance of RollerCoasterSimulator</span>
-
-<span class="w">        </span><span class="c1">// Get and display results</span>
-<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">speed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sim</span><span class="p">.</span><span class="na">getSpeed</span><span class="p">();</span>
-<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sim</span><span class="p">.</span><span class="na">getTime</span><span class="p">();</span>
-<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">gForce</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sim</span><span class="p">.</span><span class="na">getGForce</span><span class="p">();</span>
-
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">sim</span><span class="p">.</span><span class="na">isSafe</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="c1">// if speed Gforce is too excessive print "TOO DANGEROUS!"</span>
-<span class="w">			</span><span class="c1">// Recommend that the user make changes to height or curve</span>
-<span class="w">			</span><span class="c1">// else print "Safe for riders!"</span>
-
-<span class="w">		</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"\n--- Rounded Data ---"</span><span class="p">);</span>
-<span class="w">		</span><span class="c1">// Round speed up</span>
-<span class="w">		</span><span class="c1">// Round time down </span>
-
-<span class="w">        </span><span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
+// This is a separate file 
 </pre></div>
 </div>
-<p>Submit your java program code and your test cases that demonstrates your program works as intended.</p>
+</div></blockquote>
+<blockquote>
+<div><p>import java.util.Scanner;</p>
+<p>public class Main {
+public static void main(String[] args) {</p>
+<p>// Use Scanner to get inputs for height, angle, and track length</p>
+<p>// Get user inputs</p>
+<p>// Create an instance of RollerCoasterSimulator</p>
+<p>// Get and display results
+double speed = sim.getSpeed();
+double time = sim.getTime();
+double gForce = sim.getGForce();</p>
+<p>if (!sim.isSafe()) {
+// if speed Gforce is too excessive print “TOO DANGEROUS!”
+// Recommend that the user make changes to height or curve
+// else print “Safe for riders!”</p>
+<p>System.out.println(“\n— Rounded Data —“);
+// Round speed up
+// Round time down</p>
+<p>input.close();
+}
+}</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="n">Submit</span> <span class="n">your</span> <span class="n">java</span> <span class="n">program</span> <span class="n">code</span> <span class="ow">and</span> <span class="n">your</span> <span class="n">test</span> <span class="n">cases</span> <span class="n">that</span> <span class="n">demonstrates</span> <span class="n">your</span> <span class="n">program</span> <span class="n">works</span> <span class="k">as</span> <span class="n">intended</span><span class="o">.</span>
+
+</pre></div>
+</div>
 </div></blockquote>
 <p>#############################################################################</p>
 <blockquote>
@@ -5313,7 +5322,5 @@ Available vehicles: 3
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/furo.js?v=46bd48cc"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </body>
 </html>
