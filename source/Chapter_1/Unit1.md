@@ -2386,130 +2386,151 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 
 
 > 
-> ### Project 1.11.1 — Roller Coaster Simulator
-> 
+> Project 1.11.1 — Roller Coaster Simulator
+>
 > **Project Overview:**
-> 
-> Students will write a program that helps a theme park design safe roller coasters based on physics-related math. Use `Math.random()` and `Math.round()` to simulate the experience of riding a roller coaster, generating random values for speed, height, and rating.  The user (acting as an engineer) inputs the parameters of a coaster hill, and the program will:
-> 
-> * Calculate speed at the bottom of the hill
-> * Estimate time to fall using height
-> * Warn if g-forces exceed safety limits
-> * Round values for display
-> 
-> 
+>
+> Students will write a program that helps a theme park design safe roller coasters based on physics-related math. Use `Math.random()` and `Math.round()` to simulate the experience of riding a roller coaster, generating random values for speed, height, and rating. The user (acting as an engineer) inputs the parameters of a coaster hill, and the program will:
+>
+> - Calculate speed at the bottom of the hill
+>
+> - Estimate time to descend the incline, using slope angle
+>
+> - Warn if g-forces exceed safety limits
+>
+> - Round values for display
+>
 > **Concepts Covered:**
-> 
-> * `Math` class: `Math.pow`, `Math.sqrt`, `Math.abs`, `Math.max`, `Math.min`
-> * `Scanner` for input
-> * Decision-making and problem-solving
-> * Realistic application of physics/math concepts
-> 
-> 
+>
+> - `Math` class: `Math.pow`, `Math.sqrt`, `Math.abs`, `Math.max`, `Math.min`, `Math.toRadians`, `Math.sin`
+>
+> - `Scanner` for input
+>
+> - Decision-making and problem-solving
+> - Realistic application of physics/math concepts
+>
 > **Key Functionalities:**
+>
 > 1. **User Inputs:**
->   - Hill height (meters)
->   - Slope angle (degrees)
->   - Track length (meters)
+>
+> - Hill height (meters)
+> - Slope angle (degrees)
+> - Track length (meters)
 >
 > 2. **Calculations:**
 >
->   - **Speed at bottom:**
+> - **Speed at bottom:**
 >
->     Using conservation of energy:
+> Using conservation of energy (this depends only on height, not angle):
 >
->     $$v = \sqrt{2 \cdot g \cdot h}$$
+> \[v = \sqrt{2 \cdot g \cdot h}\]
+> where `g = 9.8 m/s²`
 >
->     where `g = 9.8 m/s²`
+> - **Time to descend the incline:**
 >
->   - **Time to fall (approximate straight drop):**
+> Unlike a straight vertical drop, a coaster travels *along* the slope. For a track length `L` at slope angle `θ`, the component of gravity accelerating the car down the incline is `g · sin(θ)`, so:
 >
->     $$t = \sqrt{\frac{2h}{g}}$$
+> \[t = \sqrt{\dfrac{2 \cdot L}{g \cdot \sin(\theta)}}\]
 >
->   - **G-force estimation:**
+> **This is the step where slope angle is actually used** — convert the input angle from degrees to radians with `Math.toRadians()` before passing it to `Math.sin()`.
 >
->     Simulate g-force during curve:
+> - **G-force estimation:**
 >
->     $$G = \frac{v^2}{r \cdot g}$$
+> Simulate g-force during curve:
 >
->     Assume `r = 10` (constant curve radius). Warn if `G > 5`.
+> \[G = \frac{v^2}{r \cdot g}\]
+> Assume `r = 10` (constant curve radius). Warn if `G > 5`.
 >
->   - Round values with `Math.round`, `Math.ceil`, or `Math.floor`
+> - Round values with `Math.round`, `Math.ceil`, or `Math.floor`
 >
-> 
-> 
-> 
 > ##########################################################################
-> 
+>
+> **Requirements Checklist**
+>
+> - [ ] Include the required block comment header in `Main.java` (all fields completed)
+> - [ ] Accept hill height, slope angle, and track length as user input via `Scanner`
+> - [ ] Convert slope angle from degrees to radians using `Math.toRadians()` **before** using it in `Math.sin()`
+> - [ ] Calculate speed at the bottom of the hill using `Math.sqrt()` — must depend on height only
+> - [ ] Calculate time to descend the incline using the slope-angle formula — must change when slope angle changes (not just height or track length)
+> - [ ] Calculate g-force using the given formula with `r = 10`
+> - [ ] Warn if g-force exceeds the safety limit (`G > 5`)
+> - [ ] Round displayed speed up and displayed time down, using the appropriate `Math` rounding method for each
+> - [ ] Include meaningful inline comments throughout, especially around the angle conversion step
+>
+> ##########################################################################
+>
 > **Example Output**
-> 
-> ```java
+>
+> ```
 > Welcome to the Roller Coaster Simulator
 > Enter hill height (in meters): 50
 > Enter slope angle (in degrees): 40
 > Enter track length (in meters): 100
-> 
+>
 > --- Results ---
 > Estimated Speed at Bottom: 31.30 m/s
-> Time to Fall: 3.19 seconds
+> Time to Descend Incline: 5.63 seconds
 > Estimated G-force in curve: 10.0 Gs TOO DANGEROUS!
-> 
+>
 > Recommendation: Reduce hill height or increase curve radius.
-> 
+>
 > --- Rounded Data ---
 > Speed Rounded Up: 32.0 m/s
-> Time Rounded Down: 3.0 sec
+> Time Rounded Down: 5.0 sec
 > ```
-> 
+>
 > ##########################################################################
-> 
-> 
-> ```java
+>
+> ```
 > public class RollerCoasterSimulator {
->     private static final double GRAVITY = 9.8; // m/s^2 // DO NOT CHANGE
-> 
-> 	// Attributes (height, speed, time, gForce, angle, trackLength)
-> 
->   // Constructor
-> 
->   // Perform all calculations
-> 
->   // Return calculated results to main
-> 
->    // Helper method for safety
-> 
+> private static final double GRAVITY = 9.8; // m/s^2 // DO NOT CHANGE
+>
+> // Attributes (height, speed, time, gForce, angle, trackLength)
+>
+> // Constructor
+>
+> // Perform all calculations
+> // Reminder: convert angle to radians with Math.toRadians() before
+> // using it in Math.sin() — Java's trig methods expect radians, not degrees.
+>
+> // Return calculated results to main
+>
+> // Helper method for safety
+>
 > }
-> 
-> 
+>
+> // This is a separate file 
+ 
 > import java.util.Scanner;
-> 
+>
 > public class Main {
->     public static void main(String[] args) {
-> 
-> 		// Use Scanner to get inputs for Speed, time and GForce
-> 
->      // Get user inputs
-> 
->      // Create an instance of RollerCoasterSimulator
-> 
->         // Get and display results
->         double speed = sim.getSpeed();
->         double time = sim.getTime();
->         double gForce = sim.getGForce();
-> 
->         if (!sim.isSafe()) {
->             // if speed Gforce is too excessive print "TOO DANGEROUS!"
-> 			// Recommend that the user make changes to height or curve
-> 			// else print "Safe for riders!"
-> 
-> 		System.out.println("\n--- Rounded Data ---");
-> 		// Round speed up
-> 		// Round time down 
-> 
->         input.close();
->     }
+> public static void main(String[] args) {
+>
+> // Use Scanner to get inputs for height, angle, and track length
+>
+> // Get user inputs
+>
+> // Create an instance of RollerCoasterSimulator
+>
+> // Get and display results
+> double speed = sim.getSpeed();
+> double time = sim.getTime();
+> double gForce = sim.getGForce();
+>
+> if (!sim.isSafe()) {
+> // if speed Gforce is too excessive print "TOO DANGEROUS!"
+> // Recommend that the user make changes to height or curve
+> // else print "Safe for riders!"
+>
+> System.out.println("\n--- Rounded Data ---");
+> // Round speed up
+> // Round time down
+>
+> input.close();
+> }
 > }
 > ```
+>
 > Submit your java program code and your test cases that demonstrates your program works as intended.
 > 
 
