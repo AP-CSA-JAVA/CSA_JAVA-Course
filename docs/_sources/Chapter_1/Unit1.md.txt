@@ -2644,7 +2644,6 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > ### Main.java
 > 
 > ```java
-> 
 > import java.util.Random;
 > 
 > public class Main
@@ -2656,26 +2655,26 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 >         // Length of the track in meters
 >         double distance = 2414; // ~1.5 miles
 > 
->         // Generate a random acceleration (integer) for each car
+>         // TODO: Generate a random acceleration (integer) for each car
 >         // from 20 to 50 (inclusive) using rand.nextInt()
 >         // Hint: review Activity 1.7.1 — how did you restrict nextInt() to a range?
 > 
-> 
->         // Create two Racecar objects — one named "Tom", one named "Jerry"
+>         // TODO: Create two Racecar objects — one named "Tom", one named "Jerry"
 >         // Pass each car its random acceleration (cast to double) and driver name
 >         // Hint: review Activity 1.13 — how did you instantiate objects?
 > 
-> 
->         // Compute the finishing time for both cars
+>         // TODO: Compute the finishing time for both cars
 >         // Call computeTime(distance) on each Racecar object and store the result
->         // Hint: review Activity 1.10.1 — how did you store a method's return value?
 > 
-> 
->         // Print the finishing time for each car
->         // Use the toString() method of Racecar — it is called automatically when
->         // you concatenate a Racecar object with a String
->         // Expected format:  Racer Tom's car finished in 10.596 seconds.
-> 
+>         // Print statement is given below — you haven't been taught toString()
+>         // overriding yet, so this part is provided for you.
+>         //
+>         // NOTE: When you concatenate an object with a String using +, Java
+>         // automatically calls that object's toString() method to convert it
+>         // to text. That's why tom + "'s car..." works even though you never
+>         // call tom.toString() yourself — println does it for you.
+>         System.out.println(tom + "'s car finished in " + timeTom + " seconds."); // tom and timeTom are variables
+>         System.out.println(jerry + "'s car finished in " + timeJerry + " seconds."); //jerry and timeJerry are variables
 >     }
 > }
 > ```
@@ -2717,15 +2716,22 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > 
 > ## Connecting the Concepts
 > 
-> Before you begin coding, trace through these questions to make sure you understand what each part of the program does. You may answer these in your block comment or a separate document.
+> Before you begin coding, read through these questions to make sure you understand what each part of the program does. 
 > 
-> 1. In `computeTime`, why do you use `accel` directly instead of passing acceleration as a parameter?
-> 2. Why must `computeTime` be an **instance method** rather than a **static method**?
-> 3. In `Main`, why do you cast the random acceleration to `double` when passing it to the `Racecar` constructor?
-> 4. What would happen if you used `rand.nextInt(50)` instead of `rand.nextInt(31) + 20`? What range would that produce?
-> 5. `toString()` is already written for you. When `System.out.println(car1 + "'s car finished in " + time + " seconds.")` runs, what triggers the call to `toString()`?
+> **1. In `computeTime`, why do you use `accel` directly instead of passing acceleration as a parameter?**
+> *`accel` is an instance variable — each `Racecar` object already stores its own acceleration (set in the constructor). Since `computeTime` is called on a specific object (`tom.computeTime(distance)`), it automatically has access to that object's own `accel`. Passing it in again as a parameter would be redundant — the object already "knows" it.*
+> **2. Why must `computeTime` be an **instance method** rather than a **static method**?**
+> *Because it reads `accel`, an instance variable belonging to a specific object. A static method belongs to the class itself, not to any object, so it has no this and can't access instance variables — it wouldn't know which car's acceleration to use.*
+> **3. In `Main`, why do you cast the random acceleration to `double` when passing it to the `Racecar` constructor?**
+> *`rand.nextInt()` returns an `int`, but the constructor's parameter is `double`. The cast converts the type to match. It also matters for `computeTime`'s math: the formula divides distance by `accel`, and having `accel` stored as a double ensures that division produces a decimal result instead of getting truncated by integer division.*
+> **4. What would happen if you used `rand.nextInt(50)` instead of `rand.nextInt(31) + 20`? What range would that produce?**
+> *`nextInt(50)` returns integers from 0 up to but not including 50 — a range of 0–49. That's the wrong range entirely: it includes low/unrealistic accelerations (including 0, which would cause a divide-by-zero in `computeTime`) and doesn't reach up to 50. The `nextInt(31) + 20` pattern first gets 0–30 (31 possible values), then shifts the whole range up by 20, landing on 20–50 inclusive.*
+> **5. What triggers the call to `toString()`?**
+> *The `+` operator, when one operand is a `String` and the other is an object, triggers Java to automatically call that object's `toString()` method to get a text representation before concatenating. So `car1 + "'s car..."` silently calls `car1.toString()` behind the scenes — that's why `println` prints `"Racer Tom"` instead of something like `Racecar@1b6d3586`.*
+>
 > 
 > ##########################################################################
+>
 > 
 > ## Extension Challenges
 > 
