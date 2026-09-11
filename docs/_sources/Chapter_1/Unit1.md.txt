@@ -2464,7 +2464,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > public class RollerCoasterSimulator {
 >     private static final double GRAVITY = 9.8; // m/s^2 // DO NOT CHANGE
 > 
-> 	// Attributes (height, speen, time, gForce, angle, trackLength)
+> 	// Attributes (height, speed, time, gForce, angle, trackLength)
 > 
 >   // Constructor
 > 
