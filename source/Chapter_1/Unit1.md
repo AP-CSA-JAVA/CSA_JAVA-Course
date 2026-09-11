@@ -2370,15 +2370,19 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 
 - [ ] Use the `Math` class to perform common mathematical operations.
 
-| Method | Description | Example |
-| ------ | ----------- | ------- |
-| `Math.abs(x)` | Absolute value | `Math.abs(-3)` → `3` |
-| `Math.pow(a, b)` | a raised to power b | `Math.pow(2, 3)` → `8.0` |
-| `Math.sqrt(x)` | Square root | `Math.sqrt(16)` → `4.0` |
-| `Math.random()` | Random double [0.0, 1.0) | `Math.random()` |
-| `Math.round(x)` | Round to nearest long | `Math.round(3.7)` → `4` |
-| `Math.min(a, b)` | Smaller of two values | `Math.min(5, 3)` → `3` |
-| `Math.max(a, b)` | Larger of two values | `Math.max(5, 3)` → `5` |
+| Method            | Description                        | Example                    |
+| ----------------- | ----------------------------------- | --------------------------- |
+| `Math.abs(x)`     | Absolute value                      | `Math.abs(-3)` → `3`        |
+| `Math.pow(a, b)`  | a raised to power b                 | `Math.pow(2, 3)` → `8.0`    |
+| `Math.sqrt(x)`    | Square root                         | `Math.sqrt(16)` → `4.0`     |
+| `Math.random()`   | Random double [0.0, 1.0)            | `Math.random()`             |
+| `Math.round(x)`   | Round to nearest long               | `Math.round(3.7)` → `4`     |
+| `Math.ceil(x)`    | Round **up** to nearest whole (as a `double`)  | `Math.ceil(3.2)` → `4.0`  |
+| `Math.floor(x)`   | Round **down** to nearest whole (as a `double`) | `Math.floor(3.8)` → `3.0` |
+| `Math.min(a, b)`  | Smaller of two values               | `Math.min(5, 3)` → `3`      |
+| `Math.max(a, b)`  | Larger of two values                | `Math.max(5, 3)` → `5`      |
+
+> **Oracle Exam Note:** `Math.ceil()` and `Math.floor()` both return a **`double`** — even when the result looks like a whole number (`4.0`, not `4`). This is a common exam trap because `Math.round()` looks like it belongs in the same family but actually returns a `long`. If you need an `int`, you must cast the result yourself: `int rounded = (int) Math.ceil(3.2);`
 
 
 > 
