@@ -2393,19 +2393,14 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > Students will write a program that helps a theme park design safe roller coasters based on physics-related math. Use `Math.random()` and `Math.round()` to simulate the experience of riding a roller coaster, generating random values for speed, height, and rating. The user (acting as an engineer) inputs the parameters of a coaster hill, and the program will:
 >
 > - Calculate speed at the bottom of the hill
->
 > - Estimate time to descend the incline, using slope angle
->
 > - Warn if g-forces exceed safety limits
->
 > - Round values for display
 >
 > **Concepts Covered:**
 >
 > - `Math` class: `Math.pow`, `Math.sqrt`, `Math.abs`, `Math.max`, `Math.min`, `Math.toRadians`, `Math.sin`
->
 > - `Scanner` for input
->
 > - Decision-making and problem-solving
 > - Realistic application of physics/math concepts
 >
@@ -2499,8 +2494,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 >
 > }
 >
-> // This is a separate file 
-> 
+>
 > import java.util.Scanner;
 >
 > public class Main {
@@ -2532,6 +2526,7 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > ```
 >
 > Submit your java program code and your test cases that demonstrates your program works as intended.
+>
 > 
 
 
