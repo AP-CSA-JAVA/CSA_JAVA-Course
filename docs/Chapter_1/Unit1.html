@@ -3005,6 +3005,14 @@ LAUNCH STATUS:     ✗ UNSAFE — ABORT LAUNCH
 <td><p>Round to nearest long</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">Math.round(3.7)</span></code> → <code class="docutils literal notranslate"><span class="pre">4</span></code></p></td>
 </tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Math.ceil(x)</span></code></p></td>
+<td><p>Round <strong>up</strong> to nearest whole (as a <code class="docutils literal notranslate"><span class="pre">double</span></code>)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Math.ceil(3.2)</span></code> → <code class="docutils literal notranslate"><span class="pre">4.0</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Math.floor(x)</span></code></p></td>
+<td><p>Round <strong>down</strong> to nearest whole (as a <code class="docutils literal notranslate"><span class="pre">double</span></code>)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Math.floor(3.8)</span></code> → <code class="docutils literal notranslate"><span class="pre">3.0</span></code></p></td>
+</tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Math.min(a,</span> <span class="pre">b)</span></code></p></td>
 <td><p>Smaller of two values</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">Math.min(5,</span> <span class="pre">3)</span></code> → <code class="docutils literal notranslate"><span class="pre">3</span></code></p></td>
@@ -3016,6 +3024,9 @@ LAUNCH STATUS:     ✗ UNSAFE — ABORT LAUNCH
 </tbody>
 </table>
 </div>
+<blockquote>
+<div><p><strong>Oracle Exam Note:</strong> <code class="docutils literal notranslate"><span class="pre">Math.ceil()</span></code> and <code class="docutils literal notranslate"><span class="pre">Math.floor()</span></code> both return a <strong><code class="docutils literal notranslate"><span class="pre">double</span></code></strong> — even when the result looks like a whole number (<code class="docutils literal notranslate"><span class="pre">4.0</span></code>, not <code class="docutils literal notranslate"><span class="pre">4</span></code>). This is a common exam trap because <code class="docutils literal notranslate"><span class="pre">Math.round()</span></code> looks like it belongs in the same family but actually returns a <code class="docutils literal notranslate"><span class="pre">long</span></code>. If you need an <code class="docutils literal notranslate"><span class="pre">int</span></code>, you must cast the result yourself: <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">rounded</span> <span class="pre">=</span> <span class="pre">(int)</span> <span class="pre">Math.ceil(3.2);</span></code></p>
+</div></blockquote>
 <blockquote>
 <div><p class="rubric" id="project-1-11-1-roller-coaster-simulator">Project 1.11.1 — Roller Coaster Simulator</p>
 <p><strong>Project Overview:</strong></p>
