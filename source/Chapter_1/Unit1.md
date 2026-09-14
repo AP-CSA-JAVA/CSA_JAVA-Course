@@ -2744,7 +2744,7 @@ public class Main
 > 
 > > It is possible (but unlikely) for both cars to receive the same random acceleration and finish in the same time. This is expected behavior — your program does not need to handle a tie specially.
 > 
-> ---
+> 
 > 
 > ## Connecting the Concepts
 > 
