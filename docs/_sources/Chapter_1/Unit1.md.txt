@@ -2752,12 +2752,16 @@ public class Main
 > 
 > **1. In `computeTime`, why do you use `accel` directly instead of passing acceleration as a parameter?**
 > *`accel` is an instance variable — each `Racecar` object already stores its own acceleration (set in the constructor). Since `computeTime` is called on a specific object (`tom.computeTime(distance)`), it automatically has access to that object's own `accel`. Passing it in again as a parameter would be redundant — the object already "knows" it.*
+> 
 > **2. Why must `computeTime` be an **instance method** rather than a **static method**?**
 > *Because it reads `accel`, an instance variable belonging to a specific object. A static method belongs to the class itself, not to any object, so it has no this and can't access instance variables — it wouldn't know which car's acceleration to use.*
+> 
 > **3. In `Main`, why do you cast the random acceleration to `double` when passing it to the `Racecar` constructor?**
 > *`rand.nextInt()` returns an `int`, but the constructor's parameter is `double`. The cast converts the type to match. It also matters for `computeTime`'s math: the formula divides distance by `accel`, and having `accel` stored as a double ensures that division produces a decimal result instead of getting truncated by integer division.*
+> 
 > **4. What would happen if you used `rand.nextInt(50)` instead of `rand.nextInt(31) + 20`? What range would that produce?**
 > *`nextInt(50)` returns integers from 0 up to but not including 50 — a range of 0–49. That's the wrong range entirely: it includes low/unrealistic accelerations (including 0, which would cause a divide-by-zero in `computeTime`) and doesn't reach up to 50. The `nextInt(31) + 20` pattern first gets 0–30 (31 possible values), then shifts the whole range up by 20, landing on 20–50 inclusive.*
+> 
 > **5. What triggers the call to `toString()`?**
 > *The `+` operator, when one operand is a `String` and the other is an object, triggers Java to automatically call that object's `toString()` method to get a text representation before concatenating. So `car1 + "'s car..."` silently calls `car1.toString()` behind the scenes — that's why `println` prints `"Racer Tom"` instead of something like `Racecar@1b6d3586`.*
 >
