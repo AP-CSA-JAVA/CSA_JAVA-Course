@@ -37,6 +37,7 @@ extensions = [
 
 myst_enable_extensions = [
     'tasklist',
+    'amsmath',
     'dollarmath'
 ]
 
