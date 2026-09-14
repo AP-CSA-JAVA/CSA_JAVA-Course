@@ -3060,20 +3060,35 @@ LAUNCH STATUS:     ✗ UNSAFE — ABORT LAUNCH
 <li><p><strong>Speed at bottom:</strong></p></li>
 </ul>
 <p>Using conservation of energy (this depends only on height, not angle):</p>
-<p>[v = \sqrt{2 \cdot g \cdot h}]
-where <code class="docutils literal notranslate"><span class="pre">g</span> <span class="pre">=</span> <span class="pre">9.8</span> <span class="pre">m/s²</span></code></p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[
+v = \sqrt{2 \cdot g \cdot h}
+\]</div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">g</span> <span class="pre">=</span> <span class="pre">9.8</span> <span class="pre">m/s²</span></code></p>
 <ul class="simple">
 <li><p><strong>Time to descend the incline:</strong></p></li>
 </ul>
 <p>Unlike a straight vertical drop, a coaster travels <em>along</em> the slope. For a track length <code class="docutils literal notranslate"><span class="pre">L</span></code> at slope angle <code class="docutils literal notranslate"><span class="pre">θ</span></code>, the component of gravity accelerating the car down the incline is <code class="docutils literal notranslate"><span class="pre">g</span> <span class="pre">·</span> <span class="pre">sin(θ)</span></code>, so:</p>
-<p>[t = \sqrt{\dfrac{2 \cdot L}{g \cdot \sin(\theta)}}]</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[
+t = \sqrt{\dfrac{2 \cdot L}{g \cdot \sin(\theta)}}
+\]</div>
+</div>
 <p><strong>This is the step where slope angle is actually used</strong> — convert the input angle from degrees to radians with <code class="docutils literal notranslate"><span class="pre">Math.toRadians()</span></code> before passing it to <code class="docutils literal notranslate"><span class="pre">Math.sin()</span></code>.</p>
 <ul class="simple">
 <li><p><strong>G-force estimation:</strong></p></li>
 </ul>
 <p>Simulate g-force during curve:</p>
-<p>[G = \frac{v^2}{r \cdot g}]
-Assume <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">=</span> <span class="pre">10</span></code> (constant curve radius). Warn if <code class="docutils literal notranslate"><span class="pre">G</span> <span class="pre">&gt;</span> <span class="pre">5</span></code>.</p>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[
+G = \frac{v^2}{r \cdot g}
+\]</div>
+</div>
+<p>Assume <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">=</span> <span class="pre">10</span></code> (constant curve radius). Warn if <code class="docutils literal notranslate"><span class="pre">G</span> <span class="pre">&gt;</span> <span class="pre">5</span></code>.</p>
 <ul class="simple">
 <li><p>Round values with <code class="docutils literal notranslate"><span class="pre">Math.round</span></code>, <code class="docutils literal notranslate"><span class="pre">Math.ceil</span></code>, or <code class="docutils literal notranslate"><span class="pre">Math.floor</span></code></p></li>
 </ul>
@@ -5863,5 +5878,7 @@ Available vehicles: 3
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/furo.js?v=46bd48cc"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </body>
 </html>
