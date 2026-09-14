@@ -2417,14 +2417,19 @@ Students will write a program that helps a theme park design safe roller coaster
 
 Using conservation of energy (this depends only on height, not angle):
 
-\[v = \sqrt{2 \cdot g \cdot h}\]
+$$
+v = \sqrt{2 \cdot g \cdot h}
+$$
+
 where `g = 9.8 m/s²`
 
 - **Time to descend the incline:**
 
 Unlike a straight vertical drop, a coaster travels *along* the slope. For a track length `L` at slope angle `θ`, the component of gravity accelerating the car down the incline is `g · sin(θ)`, so:
 
-\[t = \sqrt{\dfrac{2 \cdot L}{g \cdot \sin(\theta)}}\]
+$$
+t = \sqrt{\dfrac{2 \cdot L}{g \cdot \sin(\theta)}}
+$$
 
 **This is the step where slope angle is actually used** — convert the input angle from degrees to radians with `Math.toRadians()` before passing it to `Math.sin()`.
 
@@ -2432,7 +2437,10 @@ Unlike a straight vertical drop, a coaster travels *along* the slope. For a trac
 
 Simulate g-force during curve:
 
-\[G = \frac{v^2}{r \cdot g}\]
+$$
+G = \frac{v^2}{r \cdot g}
+$$
+
 Assume `r = 10` (constant curve radius). Warn if `G > 5`.
 
 - Round values with `Math.round`, `Math.ceil`, or `Math.floor`
