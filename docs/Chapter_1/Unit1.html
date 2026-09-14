@@ -3027,8 +3027,8 @@ LAUNCH STATUS:     ✗ UNSAFE — ABORT LAUNCH
 <blockquote>
 <div><p><strong>Oracle Exam Note:</strong> <code class="docutils literal notranslate"><span class="pre">Math.ceil()</span></code> and <code class="docutils literal notranslate"><span class="pre">Math.floor()</span></code> both return a <strong><code class="docutils literal notranslate"><span class="pre">double</span></code></strong> — even when the result looks like a whole number (<code class="docutils literal notranslate"><span class="pre">4.0</span></code>, not <code class="docutils literal notranslate"><span class="pre">4</span></code>). This is a common exam trap because <code class="docutils literal notranslate"><span class="pre">Math.round()</span></code> looks like it belongs in the same family but actually returns a <code class="docutils literal notranslate"><span class="pre">long</span></code>. If you need an <code class="docutils literal notranslate"><span class="pre">int</span></code>, you must cast the result yourself: <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">rounded</span> <span class="pre">=</span> <span class="pre">(int)</span> <span class="pre">Math.ceil(3.2);</span></code></p>
 </div></blockquote>
-<blockquote>
-<div><p>Project 1.11.1 — Roller Coaster Simulator</p>
+<section id="project-1-11-1-roller-coaster-simulator">
+<h3>Project 1.11.1 — Roller Coaster Simulator<a class="headerlink" href="#project-1-11-1-roller-coaster-simulator" title="Link to this heading">¶</a></h3>
 <p><strong>Project Overview:</strong></p>
 <p>Students will write a program that helps a theme park design safe roller coasters based on physics-related math. Use <code class="docutils literal notranslate"><span class="pre">Math.random()</span></code> and <code class="docutils literal notranslate"><span class="pre">Math.round()</span></code> to simulate the experience of riding a roller coaster, generating random values for speed, height, and rating. The user (acting as an engineer) inputs the parameters of a coaster hill, and the program will:</p>
 <ul class="simple">
@@ -3092,78 +3092,99 @@ Assume <code class="docutils literal notranslate"><span class="pre">r</span> <sp
 </ul>
 <p>##########################################################################</p>
 <p><strong>Example Output</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Welcome to the Roller Coaster Simulator
-Enter hill height (in meters): 50
-Enter slope angle (in degrees): 40
-Enter track length (in meters): 100
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Welcome</span><span class="w"> </span><span class="kd">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Roller</span><span class="w"> </span><span class="n">Coaster</span><span class="w"> </span><span class="n">Simulator</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">hill</span><span class="w"> </span><span class="nf">height</span><span class="w"> </span><span class="p">(</span><span class="n">in</span><span class="w"> </span><span class="n">meters</span><span class="p">):</span><span class="w"> </span><span class="mi">50</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">slope</span><span class="w"> </span><span class="nf">angle</span><span class="w"> </span><span class="p">(</span><span class="n">in</span><span class="w"> </span><span class="n">degrees</span><span class="p">):</span><span class="w"> </span><span class="mi">40</span>
+<span class="n">Enter</span><span class="w"> </span><span class="n">track</span><span class="w"> </span><span class="nf">length</span><span class="w"> </span><span class="p">(</span><span class="n">in</span><span class="w"> </span><span class="n">meters</span><span class="p">):</span><span class="w"> </span><span class="mi">100</span>
 
---- Results ---
-Estimated Speed at Bottom: 31.30 m/s
-Time to Descend Incline: 5.63 seconds
-Estimated G-force in curve: 10.0 Gs TOO DANGEROUS!
+<span class="o">---</span><span class="w"> </span><span class="n">Results</span><span class="w"> </span><span class="o">---</span>
+<span class="n">Estimated</span><span class="w"> </span><span class="n">Speed</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">Bottom</span><span class="p">:</span><span class="w"> </span><span class="mf">31.30</span><span class="w"> </span><span class="n">m</span><span class="o">/</span><span class="n">s</span>
+<span class="n">Time</span><span class="w"> </span><span class="kd">to</span><span class="w"> </span><span class="n">Descend</span><span class="w"> </span><span class="n">Incline</span><span class="p">:</span><span class="w"> </span><span class="mf">5.63</span><span class="w"> </span><span class="n">seconds</span>
+<span class="n">Estimated</span><span class="w"> </span><span class="n">G</span><span class="o">-</span><span class="n">force</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">curve</span><span class="p">:</span><span class="w"> </span><span class="mf">10.0</span><span class="w"> </span><span class="n">Gs</span><span class="w"> </span><span class="n">TOO</span><span class="w"> </span><span class="n">DANGEROUS</span><span class="o">!</span>
 
-Recommendation: Reduce hill height or increase curve radius.
+<span class="nl">Recommendation</span><span class="p">:</span><span class="w"> </span><span class="n">Reduce</span><span class="w"> </span><span class="n">hill</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">increase</span><span class="w"> </span><span class="n">curve</span><span class="w"> </span><span class="n">radius</span><span class="p">.</span>
 
---- Rounded Data ---
-Speed Rounded Up: 32.0 m/s
-Time Rounded Down: 5.0 sec
+<span class="o">---</span><span class="w"> </span><span class="n">Rounded</span><span class="w"> </span><span class="n">Data</span><span class="w"> </span><span class="o">---</span>
+<span class="n">Speed</span><span class="w"> </span><span class="n">Rounded</span><span class="w"> </span><span class="n">Up</span><span class="p">:</span><span class="w"> </span><span class="mf">32.0</span><span class="w"> </span><span class="n">m</span><span class="o">/</span><span class="n">s</span>
+<span class="n">Time</span><span class="w"> </span><span class="n">Rounded</span><span class="w"> </span><span class="n">Down</span><span class="p">:</span><span class="w"> </span><span class="mf">5.0</span><span class="w"> </span><span class="n">sec</span>
 </pre></div>
 </div>
 <p>##########################################################################</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>public class RollerCoasterSimulator {
-private static final double GRAVITY = 9.8; // m/s^2 // DO NOT CHANGE
+<blockquote>
+<div><p><strong>Note:</strong> The constructor below is provided for you. You are not expected to know how to write one yet — you’ll learn how constructors work, and write your own from scratch, in Unit 1.13 (Object Creation).</p>
+</div></blockquote>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">RollerCoasterSimulator</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">GRAVITY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">9.8</span><span class="p">;</span><span class="w"> </span><span class="c1">// m/s^2 // DO NOT CHANGE</span>
 
-// Attributes (height, speed, time, gForce, angle, trackLength)
+<span class="w">    </span><span class="c1">// Attributes</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">height</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">angle</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">trackLength</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">speed</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">time</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">gForce</span><span class="p">;</span>
 
-// Constructor
+<span class="w">    </span><span class="c1">// Constructor — provided for you (see Unit 1.13 to learn how this works)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">RollerCoasterSimulator</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">angle</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">trackLength</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">height</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">angle</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">trackLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">trackLength</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
 
-// Perform all calculations
-// Reminder: convert angle to radians with Math.toRadians() before
-// using it in Math.sin() — Java's trig methods expect radians, not degrees.
+<span class="w">    </span><span class="c1">// Perform all calculations</span>
+<span class="w">    </span><span class="c1">// Reminder: convert angle to radians with Math.toRadians() before</span>
+<span class="w">    </span><span class="c1">// using it in Math.sin() — Java's trig methods expect radians, not degrees.</span>
 
-// Return calculated results to main
+<span class="w">    </span><span class="c1">// Return calculated results to main</span>
 
-// Helper method for safety
+<span class="w">    </span><span class="c1">// Helper method for safety</span>
 
-}
+<span class="p">}</span>
 
+<span class="c1">// This is a separate file</span>
 
-import java.util.Scanner;
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
 
-public class Main {
-public static void main(String[] args) {
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 
-// Use Scanner to get inputs for height, angle, and track length
+<span class="w">        </span><span class="c1">// Use Scanner to get inputs for height, angle, and track length</span>
 
-// Get user inputs
+<span class="w">        </span><span class="c1">// Get user inputs</span>
 
-// Create an instance of RollerCoasterSimulator
+<span class="w">        </span><span class="c1">// Create an instance of RollerCoasterSimulator</span>
 
-// Get and display results
-double speed = sim.getSpeed();
-double time = sim.getTime();
-double gForce = sim.getGForce();
+<span class="w">        </span><span class="c1">// Get and display results</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">speed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sim</span><span class="p">.</span><span class="na">getSpeed</span><span class="p">();</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sim</span><span class="p">.</span><span class="na">getTime</span><span class="p">();</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">gForce</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sim</span><span class="p">.</span><span class="na">getGForce</span><span class="p">();</span>
 
-if (!sim.isSafe()) {
-// if speed Gforce is too excessive print "TOO DANGEROUS!"
-// Recommend that the user make changes to height or curve
-// else print "Safe for riders!"
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">sim</span><span class="p">.</span><span class="na">isSafe</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// if speed Gforce is too excessive print "TOO DANGEROUS!"</span>
+<span class="w">            </span><span class="c1">// Recommend that the user make changes to height or curve</span>
+<span class="w">            </span><span class="c1">// else print "Safe for riders!"</span>
 
-System.out.println("\n--- Rounded Data ---");
-// Round speed up
-// Round time down
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"\n--- Rounded Data ---"</span><span class="p">);</span>
+<span class="w">            </span><span class="c1">// Round speed up</span>
+<span class="w">            </span><span class="c1">// Round time down</span>
 
-input.close();
-}
-}
+<span class="w">            </span><span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
-<p>Submit your java program code and your test cases that demonstrates your program works as intended.</p>
+<blockquote>
+<div><p>Submit your java program code and your test cases that demonstrates your program works as intended.</p>
 </div></blockquote>
 <p>#############################################################################</p>
-<blockquote>
-<div><p class="rubric" id="activity-1-11-2-race-car-applying-the-math-class">Activity 1.11.2 — Race Car: Applying the Math Class</p>
-<p class="rubric" id="standards">Standards</p>
+</section>
+<section id="activity-1-11-2-race-car-applying-the-math-class">
+<h3>Activity 1.11.2 — Race Car: Applying the Math Class<a class="headerlink" href="#activity-1-11-2-race-car-applying-the-math-class" title="Link to this heading">¶</a></h3>
+</section>
+</section>
+<section id="standards">
+<h2>Standards<a class="headerlink" href="#standards" title="Link to this heading">¶</a></h2>
 <div class="table-wrapper colwidths-auto docutils container">
 <table class="docutils align-default">
 <thead>
@@ -3194,7 +3215,9 @@ input.close();
 </table>
 </div>
 <p>##########################################################################</p>
-<p class="rubric" id="id5">Overview</p>
+</section>
+<section id="id5">
+<h2>Overview<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h2>
 <p>In this activity you will apply what you have learned about the <code class="docutils literal notranslate"><span class="pre">Math</span></code> class, static methods, object instantiation, and <code class="docutils literal notranslate"><span class="pre">java.util.Random</span></code> to simulate a drag race between two cars. You will complete a partially written program by implementing the <code class="docutils literal notranslate"><span class="pre">computeTime</span></code> method in <code class="docutils literal notranslate"><span class="pre">Racecar.java</span></code> and filling in the guided comments in <code class="docutils literal notranslate"><span class="pre">Main.java</span></code>.</p>
 <p>By the end of this activity you will be able to:</p>
 <ul class="contains-task-list simple">
@@ -3205,8 +3228,11 @@ input.close();
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Connect prior concepts — classes, constructors, <code class="docutils literal notranslate"><span class="pre">toString()</span></code>, and static methods — in a complete program</p></li>
 </ul>
 <p>##########################################################################</p>
-<p class="rubric" id="id6">Background</p>
-<p class="rubric" id="connecting-prior-activities">Connecting Prior Activities</p>
+</section>
+<section id="id6">
+<h2>Background<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h2>
+<section id="connecting-prior-activities">
+<h3>Connecting Prior Activities<a class="headerlink" href="#connecting-prior-activities" title="Link to this heading">¶</a></h3>
 <p>You have already used these concepts individually. This activity brings them together:</p>
 <div class="table-wrapper colwidths-auto docutils container">
 <table class="docutils align-default">
@@ -3232,7 +3258,9 @@ input.close();
 </table>
 </div>
 <p>##########################################################################</p>
-<p class="rubric" id="the-physics-formula">The Physics Formula</p>
+</section>
+<section id="the-physics-formula">
+<h3>The Physics Formula<a class="headerlink" href="#the-physics-formula" title="Link to this heading">¶</a></h3>
 <p>The time it takes a vehicle to travel a distance from a standing start under constant acceleration is:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>t = √( 2 × d / a )
 </pre></div>
@@ -3245,7 +3273,9 @@ input.close();
 </ul>
 <p>You implemented a similar formula in <strong>Activity 1.11.1</strong> when calculating speed at the bottom of a roller coaster hill. Here you will apply the same <code class="docutils literal notranslate"><span class="pre">Math.sqrt()</span></code> approach inside an <strong>instance method</strong> instead of directly in <code class="docutils literal notranslate"><span class="pre">main</span></code>.</p>
 <p>##########################################################################</p>
-<p class="rubric" id="generating-a-bounded-random-integer">Generating a Bounded Random Integer</p>
+</section>
+<section id="generating-a-bounded-random-integer">
+<h3>Generating a Bounded Random Integer<a class="headerlink" href="#generating-a-bounded-random-integer" title="Link to this heading">¶</a></h3>
 <p>In <strong>Activity 1.7.1</strong> you used <code class="docutils literal notranslate"><span class="pre">Random.nextInt(bound)</span></code> to pick a Magic 8-Ball response. Here you will use it to assign each car a random acceleration between <strong>20 and 50 inclusive</strong>:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Random</span><span class="w"> </span><span class="n">rand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Random</span><span class="p">();</span>
 <span class="kt">int</span><span class="w"> </span><span class="n">accel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rand</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="mi">31</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w">  </span><span class="c1">// produces 0–30, shifted to 20–50</span>
@@ -3257,7 +3287,9 @@ input.close();
 To get the range 20–50 (31 possible values), use <code class="docutils literal notranslate"><span class="pre">nextInt(31)</span></code> then add 20.</p>
 </div></blockquote>
 <p>##########################################################################</p>
-<p class="rubric" id="rounding-to-three-decimal-places">Rounding to Three Decimal Places</p>
+</section>
+<section id="rounding-to-three-decimal-places">
+<h3>Rounding to Three Decimal Places<a class="headerlink" href="#rounding-to-three-decimal-places" title="Link to this heading">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">Math.round()</span></code> rounds to the nearest whole number. To round to three decimal places, scale up, round, then scale back down:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10.5963847</span><span class="p">;</span>
 <span class="kt">double</span><span class="w"> </span><span class="n">rounded</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">round</span><span class="p">(</span><span class="n">time</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1000.0</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">1000.0</span><span class="p">;</span><span class="w">  </span><span class="c1">// 10.596</span>
@@ -3265,79 +3297,84 @@ To get the range 20–50 (31 possible values), use <code class="docutils literal
 </div>
 <p>You used <code class="docutils literal notranslate"><span class="pre">Math.round()</span></code> in <strong>Activity 1.10.1</strong> to clean up fuel consumption values. Apply the same technique here inside <code class="docutils literal notranslate"><span class="pre">computeTime</span></code>.</p>
 <p>##########################################################################</p>
-<p class="rubric" id="starter-files">Starter Files</p>
-<p class="rubric" id="racecar-java">Racecar.java</p>
+</section>
+</section>
+<section id="starter-files">
+<h2>Starter Files<a class="headerlink" href="#starter-files" title="Link to this heading">¶</a></h2>
+<section id="racecar-java">
+<h3>Racecar.java<a class="headerlink" href="#racecar-java" title="Link to this heading">¶</a></h3>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Racecar</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">accel</span><span class="p">;</span><span class="w"> </span><span class="c1">// acceleration in m/s²</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w">  </span><span class="c1">// name of the driver</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Racecar</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">acceleration</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">driver</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">accel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">acceleration</span><span class="p">;</span>
-<span class="w">        </span><span class="n">name</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">driver</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="c1">// Returns the time it takes the racecar to complete</span>
-<span class="w">    </span><span class="c1">// the track rounded to three decimal places.</span>
-<span class="w">    </span><span class="c1">// Formula: t = √(2 × d / a)</span>
-<span class="w">    </span><span class="c1">// where t = time (seconds), d = distance (meters), a = acceleration (m/s²)</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">computeTime</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">distance</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">// Step 1: Calculate time using the formula above and Math.sqrt()</span>
-
-<span class="w">        </span><span class="c1">// Step 2: Round to three decimal places using Math.round()</span>
-
-<span class="w">        </span><span class="c1">// Step 3: Return the rounded time</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// replace this</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">"Racer "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
+<span class="w">     </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">accel</span><span class="p">;</span><span class="w"> </span><span class="c1">// acceleration in m/s²</span>
+<span class="w">     </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w">  </span><span class="c1">// name of the driver</span>
+<span class="w"> </span>
+<span class="w">     </span><span class="kd">public</span><span class="w"> </span><span class="nf">Racecar</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">acceleration</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">driver</span><span class="p">)</span>
+<span class="w">     </span><span class="p">{</span>
+<span class="w">         </span><span class="n">accel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">acceleration</span><span class="p">;</span>
+<span class="w">         </span><span class="n">name</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">driver</span><span class="p">;</span>
+<span class="w">     </span><span class="p">}</span>
+<span class="w"> </span>
+<span class="w">     </span><span class="c1">// Returns the time it takes the racecar to complete</span>
+<span class="w">     </span><span class="c1">// the track rounded to three decimal places.</span>
+<span class="w">     </span><span class="c1">// Formula: t = √(2 × d / a)</span>
+<span class="w">     </span><span class="c1">// where t = time (seconds), d = distance (meters), a = acceleration (m/s²)</span>
+<span class="w">     </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">computeTime</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">distance</span><span class="p">)</span>
+<span class="w">     </span><span class="p">{</span>
+<span class="w">         </span><span class="c1">// Step 1: Calculate time using the formula above and Math.sqrt()</span>
+<span class="w"> </span>
+<span class="w">         </span><span class="c1">// Step 2: Round to three decimal places using Math.round()</span>
+<span class="w"> </span>
+<span class="w">         </span><span class="c1">// Step 3: Return the rounded time</span>
+<span class="w">         </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// replace this</span>
+<span class="w">     </span><span class="p">}</span>
+<span class="w"> </span>
+<span class="w">     </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span>
+<span class="w">     </span><span class="p">{</span>
+<span class="w">         </span><span class="k">return</span><span class="w"> </span><span class="s">"Racer "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">     </span><span class="p">}</span>
+<span class="w"> </span><span class="p">}</span>
 </pre></div>
 </div>
 <p>##########################################################################</p>
-<p class="rubric" id="main-java">Main.java</p>
+<p><strong>Main.java</strong></p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Random</span><span class="p">;</span>
 
 <span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Random</span><span class="w"> </span><span class="n">rand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Random</span><span class="p">();</span>
+<span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">   </span><span class="p">{</span>
+<span class="w">       </span><span class="n">Random</span><span class="w"> </span><span class="n">rand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Random</span><span class="p">();</span>
 
-<span class="w">        </span><span class="c1">// Length of the track in meters</span>
-<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">distance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2414</span><span class="p">;</span><span class="w"> </span><span class="c1">// ~1.5 miles</span>
+<span class="w">       </span><span class="c1">// Length of the track in meters</span>
+<span class="w">       </span><span class="kt">double</span><span class="w"> </span><span class="n">distance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2414</span><span class="p">;</span><span class="w"> </span><span class="c1">// ~1.5 miles</span>
 
-<span class="w">        </span><span class="c1">// TODO: Generate a random acceleration (integer) for each car</span>
-<span class="w">        </span><span class="c1">// from 20 to 50 (inclusive) using rand.nextInt()</span>
-<span class="w">        </span><span class="c1">// Hint: review Activity 1.7.1 — how did you restrict nextInt() to a range?</span>
+<span class="w">       </span><span class="c1">// TODO: Generate a random acceleration (integer) for each car</span>
+<span class="w">       </span><span class="c1">// from 20 to 50 (inclusive) using rand.nextInt()</span>
+<span class="w">       </span><span class="c1">// Hint: review Activity 1.7.1 — how did you restrict nextInt() to a range?</span>
 
-<span class="w">        </span><span class="c1">// TODO: Create two Racecar objects — one named "Tom", one named "Jerry"</span>
-<span class="w">        </span><span class="c1">// Pass each car its random acceleration (cast to double) and driver name</span>
-<span class="w">        </span><span class="c1">// Hint: review Activity 1.13 — how did you instantiate objects?</span>
+<span class="w">       </span><span class="c1">// TODO: Create two Racecar objects — one named "Tom", one named "Jerry"</span>
+<span class="w">       </span><span class="c1">// Pass each car its random acceleration (cast to double) and driver name</span>
+<span class="w">       </span><span class="c1">// Hint: review Activity 1.13 — how did you instantiate objects?</span>
 
-<span class="w">        </span><span class="c1">// TODO: Compute the finishing time for both cars</span>
-<span class="w">        </span><span class="c1">// Call computeTime(distance) on each Racecar object and store the result</span>
+<span class="w">       </span><span class="c1">// TODO: Compute the finishing time for both cars</span>
+<span class="w">       </span><span class="c1">// Call computeTime(distance) on each Racecar object and store the result</span>
 
-<span class="w">        </span><span class="c1">// Print statement is given below — you haven't been taught toString()</span>
-<span class="w">        </span><span class="c1">// overriding yet, so this part is provided for you.</span>
-<span class="w">        </span><span class="c1">//</span>
-<span class="w">        </span><span class="c1">// NOTE: When you concatenate an object with a String using +, Java</span>
-<span class="w">        </span><span class="c1">// automatically calls that object's toString() method to convert it</span>
-<span class="w">        </span><span class="c1">// to text. That's why tom + "'s car..." works even though you never</span>
-<span class="w">        </span><span class="c1">// call tom.toString() yourself — println does it for you.</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">tom</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"'s car finished in "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">timeTom</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" seconds."</span><span class="p">);</span><span class="w"> </span><span class="c1">// tom and timeTom are variables</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">jerry</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"'s car finished in "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">timeJerry</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" seconds."</span><span class="p">);</span><span class="w"> </span><span class="c1">//jerry and timeJerry are variables</span>
-<span class="w">    </span><span class="p">}</span>
+<span class="w">       </span><span class="c1">// Print statement is given below — you haven't been taught toString()</span>
+<span class="w">       </span><span class="c1">// overriding yet, so this part is provided for you.</span>
+<span class="w">       </span><span class="c1">//</span>
+<span class="w">       </span><span class="c1">// NOTE: When you concatenate an object with a String using +, Java</span>
+<span class="w">       </span><span class="c1">// automatically calls that object's toString() method to convert it</span>
+<span class="w">       </span><span class="c1">// to text. That's why tom + "'s car..." works even though you never</span>
+<span class="w">       </span><span class="c1">// call tom.toString() yourself — println does it for you.</span>
+<span class="w">       </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">tom</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"'s car finished in "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">timeTom</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" seconds."</span><span class="p">);</span><span class="w"> </span><span class="c1">// tom and timeTom are variables</span>
+<span class="w">       </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">jerry</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"'s car finished in "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">timeJerry</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" seconds."</span><span class="p">);</span><span class="w"> </span><span class="c1">//jerry and timeJerry are variables</span>
+<span class="w">   </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>##########################################################################</p>
-<p class="rubric" id="what-you-need-to-complete">What You Need to Complete</p>
+<blockquote>
+<div><p><strong>What You Need to Complete</strong></p>
 <p class="rubric" id="in-racecar-java">In Racecar.java</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Implement <code class="docutils literal notranslate"><span class="pre">computeTime(double</span> <span class="pre">distance)</span></code> using <code class="docutils literal notranslate"><span class="pre">Math.sqrt()</span></code> and the formula <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">√(2</span> <span class="pre">×</span> <span class="pre">d</span> <span class="pre">/</span> <span class="pre">a)</span></code></p></li>
@@ -3408,160 +3445,320 @@ To get the range 20–50 (31 possible values), use <code class="docutils literal
 </div></blockquote>
 <p>#############################################################################</p>
 </section>
-<section id="objects-instances-of-classes">
-<h2>1.12 Objects: Instances of Classes<a class="headerlink" href="#objects-instances-of-classes" title="Link to this heading">¶</a></h2>
-<details>
-<summary>📌 Standards — 1.12</summary>
-<div class="table-wrapper colwidths-auto docutils container">
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Standard</p></th>
-<th class="head"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>ICT 5.9</p></td>
-<td><p>Deconstruct large problems into components to solve</p></td>
-</tr>
-<tr class="row-odd"><td><p>ICT 5.10</p></td>
-<td><p>Use multiple layers of abstraction</p></td>
-</tr>
-<tr class="row-even"><td><p>C4.5</p></td>
-<td><p>Demonstrate awareness of the OOP paradigm</p></td>
-</tr>
-<tr class="row-odd"><td><p>C4.8</p></td>
-<td><p>Use OOP concepts: properties, methods, and inheritance</p></td>
-</tr>
-<tr class="row-even"><td><p>CRP 1</p></td>
-<td><p>Apply appropriate technical skills and academic knowledge</p></td>
-</tr>
-<tr class="row-odd"><td><p>CRP 5</p></td>
-<td><p>Utilize critical thinking to make sense of problems</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</details>
-<ul class="contains-task-list simple">
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Explain the relationship between a class and an object</p>
-<ul class="contains-task-list">
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> I will be able to create a poster demonstrating classes and objects</p></li>
-</ul>
-</li>
-</ul>
-<p>A <em>class</em> is a blueprint of an object. An <em>object</em> is an instance of a class. What we define as a class determines what objects will be associated with the class and how things will operate within it.</p>
-<p>We can also create a <em>method</em> that will call the attributes within a class. <strong>NOTE:</strong> Method and behavior are interchangeable terms.</p>
-<p><strong>Mr Potato Head Activity:</strong></p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Split into pairs.
-Each pair will create:
-    a potato head character.
-    a list describing what it is, what characteristics it has, and what it can do (actions).
-        write PROPERTIES / characteristics
-        write METHODS / actions
-What are the object oriented concepts to your Mr. Potato Head?
-    Class:
-    Object:
-    Properties:
-    Methods:
-Visually demonstrate the properties of inheritance by creating a subclass(es) of your Superclass.
-</pre></div>
-</div>
-<p><strong>Things to Remember:</strong></p>
-<ul class="contains-task-list simple">
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Properties are the characteristics of your objects</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Methods are the actions that your object can take.</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> A class is like a blueprint or a recipe.</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> A class is used to create an instance of a class, called an object.</p></li>
-</ul>
-<p>#############################################################################</p>
 </section>
 <section id="object-creation-and-storage-instantiation">
-<h2>1.13 Object Creation and Storage (Instantiation)<a class="headerlink" href="#object-creation-and-storage-instantiation" title="Link to this heading">¶</a></h2>
-<details>
-<summary>📌 Standards — 1.13</summary>
-<div class="table-wrapper colwidths-auto docutils container">
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Standard</p></th>
-<th class="head"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>ICT 5.9</p></td>
-<td><p>Deconstruct large problems into components to solve</p></td>
-</tr>
-<tr class="row-odd"><td><p>ICT 5.10</p></td>
-<td><p>Use multiple layers of abstraction</p></td>
-</tr>
-<tr class="row-even"><td><p>C4.5</p></td>
-<td><p>Demonstrate awareness of the OOP paradigm</p></td>
-</tr>
-<tr class="row-odd"><td><p>C4.7</p></td>
-<td><p>Use various data structures including objects</p></td>
-</tr>
-<tr class="row-even"><td><p>C4.8</p></td>
-<td><p>Use OOP concepts: properties, methods, and inheritance</p></td>
-</tr>
-<tr class="row-odd"><td><p>C4.9</p></td>
-<td><p>Create programs using control structures and variables</p></td>
-</tr>
-<tr class="row-even"><td><p>CRP 1</p></td>
-<td><p>Apply appropriate technical skills and academic knowledge</p></td>
-</tr>
-<tr class="row-odd"><td><p>CRP 5</p></td>
-<td><p>Utilize critical thinking to make sense of problems</p></td>
-</tr>
-</tbody>
-</table>
-</div>
+<h2>1.12 Object Creation and Storage (Instantiation)<a class="headerlink" href="#object-creation-and-storage-instantiation" title="Link to this heading">¶</a></h2>
+<p><strong>📌 Standards — 1.13</strong></p>
+<details><Summary></Summary>Summary>
+| Standard | Description                                                         |
+| -------- | -------------------------------------------------------------------- |
+| ICT 5.8  | Create and use algorithms and solve problems                         |
+| ICT 5.9  | Deconstruct large problems into smaller components                   |
+| ICT 5.10 | Use multiple layers of abstraction                                   |
+| C4.5     | Demonstrate awareness of the OOP paradigm                            |
+| C4.7     | Use various data structures including objects                        |
+| C4.8     | Use OOP concepts: properties, methods, and inheritance                |
+| C4.9     | Create programs using control structures, procedures, and variables   |
+| CRP 1    | Apply appropriate technical skills and academic knowledge             |
+| CRP 5    | Utilize critical thinking to make sense of problems                   |
 </details>
+<p>#############################################################################</p>
+<blockquote>
+<div><p><strong>Oracle Exam Note:</strong> Constructors are tested directly on the Oracle Java Foundations exam (1Z0-811) — expect questions on default vs. parameterized constructors, constructor naming/signature rules, and what happens when no constructor is written explicitly. This overlaps heavily with AP CSA’s own object-creation content, so this section is dual-purpose.</p>
+</div></blockquote>
 <ul class="contains-task-list simple">
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Explain the relationship between a class and an object</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Identify different constructor signatures and create objects using them</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use variables to represent object references</p>
-<ul class="contains-task-list">
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> I will be able to write more complex programs using classes and objects</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Explain what a constructor is and why every class has one.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Distinguish between a default constructor and a parameterized constructor.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Write a constructor that initializes instance variables from parameters.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Write multiple constructors for the same class with different parameter lists (constructor overloading).</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use the <code class="docutils literal notranslate"><span class="pre">new</span></code> keyword to instantiate objects using different constructors.</p></li>
 </ul>
-</li>
+<section id="what-is-a-constructor">
+<h3>What Is a Constructor?<a class="reference internal" href="#what-is-a-constructor" title="Link to this heading">¶</a><a class="headerlink" href="#what-is-a-constructor" title="Link to this heading">¶</a></h3>
+<p>A <strong>constructor</strong> is a special method that runs automatically when you create an object with <code class="docutils literal notranslate"><span class="pre">new</span></code>. Its job is to set up — or <em>construct</em> — the object’s instance variables so it starts life in a valid state.</p>
+<p>A constructor always:</p>
+<ul class="simple">
+<li><p>Has the <strong>same name as the class</strong></p></li>
+<li><p>Has <strong>no return type</strong> — not even <code class="docutils literal notranslate"><span class="pre">void</span></code></p></li>
+<li><p>Runs exactly once per object, at the moment it’s created</p></li>
 </ul>
-<p>A <strong>constructor</strong> in Java is a special method that is used to initialize objects. The constructor is called when an object of a class is created.</p>
-<p><strong>Null Objects</strong></p>
-<p>Null is a reserved keyword in Java for literal values. It is a value that shows that the object is referring to nothing. This will create a <strong>NullPointerException</strong> error if called.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Car</span><span class="w"> </span><span class="n">emptyCar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
-<span class="n">Car</span><span class="w"> </span><span class="n">myCar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Car</span><span class="p">(</span><span class="mf">5.6</span><span class="p">);</span>
-<span class="n">Car</span><span class="w"> </span><span class="n">yourCar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Car</span><span class="p">();</span>
-<span class="n">Car</span><span class="w"> </span><span class="n">ourCar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Car</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>public class Cake {
+    private String flavor;
+    private int servings;
 
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"myCar="</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">myCar</span><span class="p">);</span><span class="w">       </span><span class="c1">// myCar=Car@6d06d69c</span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"emptyCar="</span><span class="w"> </span><span class="o">+</span><span class="n">emptyCar</span><span class="p">);</span><span class="w">  </span><span class="c1">// emptyCar=null</span>
+    // Constructor — same name as the class, no return type
+    public Cake(String flavor, int servings) {
+        this.flavor = flavor;
+        this.servings = servings;
+    }
+}
 </pre></div>
 </div>
-<p><img alt="Constructors_image" src="https://user-images.githubusercontent.com/12989939/195926575-c2a49adc-afdb-4ef0-91e1-c5d93fb54539.PNG" /></p>
-<p><strong>Constructor Overloading:</strong> It is possible to write two or more constructors within a program. The difference between the constructors are the <em>parameters</em> defined within each constructor.</p>
-<p>The <strong>default constructor</strong> is the constructor with no parameters. If an overloaded constructor is missing a parameter, the value will default to the default constructor.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Example of Overloading Constructors</span>
-<span class="kd">class</span> <span class="nc">Box</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">depth</span><span class="p">;</span>
-
-<span class="w">    </span><span class="c1">// constructor with no parameters specified</span>
-<span class="w">    </span><span class="n">Box</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">        </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">        </span><span class="n">depth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="c1">// constructor with three parameters specified</span>
-<span class="w">    </span><span class="n">Box</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">d</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">w</span><span class="p">;</span>
-<span class="w">        </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">h</span><span class="p">;</span>
-<span class="w">        </span><span class="n">depth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Cake birthdayCake = new Cake("Chocolate", 12);
+//        ↑                    ↑
+//   variable name      constructor runs here, sets flavor and servings
+</pre></div>
+</div>
+<blockquote>
+<div><p><strong>Oracle Exam Note:</strong> If a class has <strong>no</strong> constructor written at all, Java automatically supplies an invisible <strong>default constructor</strong> — one with no parameters that does nothing but create the object. The moment you write <strong>any</strong> constructor yourself, that automatic default constructor disappears. This is a frequent Oracle exam trap.</p>
+</div></blockquote>
+</section>
+<section id="the-this-keyword">
+<h3>The <code class="docutils literal notranslate"><span class="pre">this</span></code> Keyword<a class="reference internal" href="#the-this-keyword" title="Link to this heading">¶</a><a class="headerlink" href="#the-this-keyword" title="Link to this heading">¶</a></h3>
+<p>Notice <code class="docutils literal notranslate"><span class="pre">this.flavor</span> <span class="pre">=</span> <span class="pre">flavor;</span></code> above. When a parameter has the <strong>same name</strong> as an instance variable, <code class="docutils literal notranslate"><span class="pre">this</span></code> tells Java “I mean the instance variable that belongs to this object, not the parameter.” Without <code class="docutils literal notranslate"><span class="pre">this</span></code>, Java would just assign the parameter to itself and the instance variable would stay uninitialized.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">Cake</span><span class="p">(</span><span class="n">String</span> <span class="n">flavor</span><span class="p">,</span> <span class="nb">int</span> <span class="n">servings</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">this</span><span class="o">.</span><span class="n">flavor</span> <span class="o">=</span> <span class="n">flavor</span><span class="p">;</span>     <span class="o">//</span> <span class="n">this</span><span class="o">.</span><span class="n">flavor</span> <span class="o">=</span> <span class="n">the</span> <span class="nb">object</span><span class="s1">'s field; flavor = the parameter</span>
+    <span class="n">this</span><span class="o">.</span><span class="n">servings</span> <span class="o">=</span> <span class="n">servings</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 </section>
-<section id="a-tostring-method">
-<h2>1.13a toString() Method<a class="headerlink" href="#a-tostring-method" title="Link to this heading">¶</a></h2>
+<section id="constructor-overloading-multiple-constructors-different-parameters">
+<h3>Constructor Overloading — Multiple Constructors, Different Parameters<a class="reference internal" href="#constructor-overloading"><span class="xref myst">¶</span></a><a class="headerlink" href="#constructor-overloading-multiple-constructors-different-parameters" title="Link to this heading">¶</a></h3>
+<p>A class can have <strong>more than one constructor</strong>, as long as each one has a different parameter list (different number or types of parameters). This is called <strong>overloading</strong>, and it lets the same class be instantiated in different ways depending on what information you have available.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>public class Cake {
+    private String flavor;
+    private int servings;
+    private boolean hasFrosting;
+
+    // No-argument constructor — sets sensible defaults
+    public Cake() {
+        flavor = "Vanilla";
+        servings = 8;
+        hasFrosting = true;
+    }
+
+    // One-parameter constructor
+    public Cake(String flavor) {
+        this.flavor = flavor;
+        servings = 8;
+        hasFrosting = true;
+    }
+
+    // Two-parameter constructor
+    public Cake(String flavor, int servings) {
+        this.flavor = flavor;
+        this.servings = servings;
+        hasFrosting = true;
+    }
+
+    // Three-parameter constructor — full control
+    public Cake(String flavor, int servings, boolean hasFrosting) {
+        this.flavor = flavor;
+        this.servings = servings;
+        this.hasFrosting = hasFrosting;
+    }
+}
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Cake</span> <span class="n">c1</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Cake</span><span class="p">();</span>                          <span class="o">//</span> <span class="n">Vanilla</span><span class="p">,</span> <span class="mi">8</span> <span class="n">servings</span><span class="p">,</span> <span class="n">frosted</span>
+<span class="n">Cake</span> <span class="n">c2</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Cake</span><span class="p">(</span><span class="s2">"Red Velvet"</span><span class="p">);</span>              <span class="o">//</span> <span class="n">Red</span> <span class="n">Velvet</span><span class="p">,</span> <span class="mi">8</span> <span class="n">servings</span><span class="p">,</span> <span class="n">frosted</span>
+<span class="n">Cake</span> <span class="n">c3</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Cake</span><span class="p">(</span><span class="s2">"Lemon"</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span>               <span class="o">//</span> <span class="n">Lemon</span><span class="p">,</span> <span class="mi">20</span> <span class="n">servings</span><span class="p">,</span> <span class="n">frosted</span>
+<span class="n">Cake</span> <span class="n">c4</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Cake</span><span class="p">(</span><span class="s2">"Carrot"</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">false</span><span class="p">);</span>       <span class="o">//</span> <span class="n">Carrot</span><span class="p">,</span> <span class="mi">10</span> <span class="n">servings</span><span class="p">,</span> <span class="n">no</span> <span class="n">frosting</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>Java decides which constructor to run based on <strong>how many arguments you pass, and their types</strong> — this is the same matching rule Java uses for overloaded methods in general.</p>
+</div></blockquote>
+<p>#############################################################################</p>
+</section>
+<section id="assignment-1-12-1-bakery-order-system">
+<h3>Assignment 1.12.1 — Bakery Order System<a class="reference internal" href="#assignment-1-13-1-bakery-order-system"><span class="xref myst">¶</span></a><a class="headerlink" href="#assignment-1-12-1-bakery-order-system" title="Link to this heading">¶</a></h3>
+<p><strong>Overview</strong></p>
+<p>You will build an <code class="docutils literal notranslate"><span class="pre">Order</span></code> class for a bakery’s ordering system. Customers can place an order in several different ways — a walk-in customer who just wants “a cake,” someone who knows exactly what they want, or a full custom order with every detail specified. You’ll write <strong>four overloaded constructors</strong> to handle each scenario.</p>
+<p>By the end of this activity you will be able to:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Write a no-argument constructor that sets default values</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Write parameterized constructors with increasing levels of detail</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use <code class="docutils literal notranslate"><span class="pre">this</span></code> correctly to distinguish parameters from instance variables</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Instantiate objects using different constructors in the same program</p></li>
+</ul>
+<p><strong>Requirements Checklist</strong></p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Include the required block comment header in <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> (all fields completed)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create an <code class="docutils literal notranslate"><span class="pre">Order.java</span></code> file with the following <strong>private</strong> instance variables: <code class="docutils literal notranslate"><span class="pre">String</span> <span class="pre">itemName</span></code>, <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">quantity</span></code>, <code class="docutils literal notranslate"><span class="pre">String</span> <span class="pre">size</span></code>, <code class="docutils literal notranslate"><span class="pre">boolean</span> <span class="pre">isRush</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Write <strong>four constructors</strong>, each with a different parameter list:</p>
+<ol class="arabic simple">
+<li><p><strong>No-argument constructor</strong> — defaults to <code class="docutils literal notranslate"><span class="pre">itemName</span> <span class="pre">=</span> <span class="pre">&quot;Cake&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">quantity</span> <span class="pre">=</span> <span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">size</span> <span class="pre">=</span> <span class="pre">&quot;Medium&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">isRush</span> <span class="pre">=</span> <span class="pre">false</span></code></p></li>
+<li><p><strong>One-parameter constructor</strong> — takes <code class="docutils literal notranslate"><span class="pre">itemName</span></code> only; quantity, size, and isRush use the same defaults as above</p></li>
+<li><p><strong>Two-parameter constructor</strong> — takes <code class="docutils literal notranslate"><span class="pre">itemName</span></code> and <code class="docutils literal notranslate"><span class="pre">quantity</span></code>; size and isRush use the same defaults</p></li>
+<li><p><strong>Four-parameter constructor</strong> — takes all four values, giving the customer full control</p></li>
+</ol>
+</li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use <code class="docutils literal notranslate"><span class="pre">this</span></code> correctly in every constructor where a parameter name matches an instance variable name</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Write a <code class="docutils literal notranslate"><span class="pre">printOrder()</span></code> instance method that prints all four fields in a readable format</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> In <code class="docutils literal notranslate"><span class="pre">Main.java</span></code>, create <strong>one <code class="docutils literal notranslate"><span class="pre">Order</span></code> object using each of the four constructors</strong> (four objects total) and call <code class="docutils literal notranslate"><span class="pre">printOrder()</span></code> on each</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Include meaningful inline comments throughout</p></li>
+</ul>
+<p><strong>Starter Code — Order.java:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>public class Order {
+
+    // TODO: declare the four private instance variables described above
+
+    // TODO 1: no-argument constructor — set the default values
+    // TODO 2: one-parameter constructor (itemName)
+    // TODO 3: two-parameter constructor (itemName, quantity)
+    // TODO 4: four-parameter constructor (itemName, quantity, size, isRush)
+    // TODO 5: printOrder() — prints all four fields in a readable format
+
+}
+</pre></div>
+</div>
+<p><strong>Starter Code — Main.java:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>// Name:          [Your Full Name]
+// Partner:       [Partner's Full Name, or "None"]
+// Course:        AP Computer Science A
+// Instructor:    [Instructor Name]
+// Assignment:    1.13.1 — Bakery Order System: Building Multiple Constructors
+// Due Date:      [Month Day, Year]
+
+public class Main {
+    public static void main(String[] args) {
+
+        // TODO 1: create an Order using the no-argument constructor
+
+        // TODO 2: create an Order using the one-parameter constructor
+
+        // TODO 3: create an Order using the two-parameter constructor
+
+        // TODO 4: create an Order using the four-parameter constructor
+
+        // TODO 5: call printOrder() on all four objects
+
+    }
+}
+</pre></div>
+</div>
+<p><strong>Sample Output</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Order</span><span class="p">:</span> <span class="mi">1</span> <span class="n">Medium</span> <span class="n">Cake</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  <span class="o">|</span>  <span class="n">Rush</span><span class="p">:</span> <span class="n">false</span>
+<span class="n">Order</span><span class="p">:</span> <span class="mi">1</span> <span class="n">Medium</span> <span class="n">Birthday</span> <span class="n">Cake</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  <span class="o">|</span>  <span class="n">Rush</span><span class="p">:</span> <span class="n">false</span>
+<span class="n">Order</span><span class="p">:</span> <span class="mi">6</span> <span class="n">Medium</span> <span class="n">Cupcake</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  <span class="o">|</span>  <span class="n">Rush</span><span class="p">:</span> <span class="n">false</span>
+<span class="n">Order</span><span class="p">:</span> <span class="mi">3</span> <span class="n">Large</span> <span class="n">Wedding</span> <span class="n">Cake</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  <span class="o">|</span>  <span class="n">Rush</span><span class="p">:</span> <span class="n">true</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="practice-questions-constructors">
+<h3>Practice Questions — Constructors<a class="reference internal" href="#practice-questions-constructors"><span class="xref myst">¶</span></a><a class="headerlink" href="#practice-questions-constructors" title="Link to this heading">¶</a></h3>
+<blockquote>
+<div><p><strong>Purpose:</strong> Check your understanding of constructor syntax, default vs. parameterized constructors, and overloading — mirrors the style of Oracle 1Z0-811 questions on object creation.</p>
+</div></blockquote>
+<section id="id11">
+<h4>1. Multiple Choice<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h4>
+<p>Which of the following is a valid constructor for a class named <code class="docutils literal notranslate"><span class="pre">Dog</span></code>?</p>
+<ul class="simple">
+<li><p>A. <code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">void</span> <span class="pre">Dog()</span> <span class="pre">{</span> <span class="pre">}</span></code></p></li>
+<li><p>B. <code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">Dog()</span> <span class="pre">{</span> <span class="pre">}</span></code></p></li>
+<li><p>C. <code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">Dog(String</span> <span class="pre">name)</span> <span class="pre">{</span> <span class="pre">return</span> <span class="pre">name;</span> <span class="pre">}</span></code></p></li>
+<li><p>D. <code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">static</span> <span class="pre">Dog()</span> <span class="pre">{</span> <span class="pre">}</span></code></p></li>
+</ul>
+<details>
+<summary>Show answer</summary>
+<p><strong>Answer: B</strong></p>
+<p>A constructor has no return type at all — not even <code class="docutils literal notranslate"><span class="pre">void</span></code> — and must share the exact name of the class. A has a <code class="docutils literal notranslate"><span class="pre">void</span></code> return type, which makes it a regular method, not a constructor, even though it’s named <code class="docutils literal notranslate"><span class="pre">Dog()</span></code>. C tries to <code class="docutils literal notranslate"><span class="pre">return</span></code> a value, which constructors can never do. D adds <code class="docutils literal notranslate"><span class="pre">static</span></code>, which constructors cannot be.</p>
+</details>
+</section>
+<hr class="docutils" />
+<section id="id12">
+<h4>2. Multiple Choice<a class="headerlink" href="#id12" title="Link to this heading">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="k">class</span><span class="w"> </span><span class="nc">Book</span> <span class="p">{</span>
+    <span class="n">private</span> <span class="n">String</span> <span class="n">title</span><span class="p">;</span>
+
+    <span class="n">public</span> <span class="n">Book</span><span class="p">(</span><span class="n">String</span> <span class="n">title</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">title</span> <span class="o">=</span> <span class="n">title</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>A student writes the constructor above. What happens when they run <code class="docutils literal notranslate"><span class="pre">Book</span> <span class="pre">b</span> <span class="pre">=</span> <span class="pre">new</span> <span class="pre">Book(&quot;Dune&quot;);</span> <span class="pre">System.out.println(b.title);</span></code>?</p>
+<ul class="simple">
+<li><p>A. It prints <code class="docutils literal notranslate"><span class="pre">Dune</span></code></p></li>
+<li><p>B. It prints <code class="docutils literal notranslate"><span class="pre">null</span></code></p></li>
+<li><p>C. It throws a <code class="docutils literal notranslate"><span class="pre">NullPointerException</span></code> at compile time</p></li>
+<li><p>D. It doesn’t compile</p></li>
+</ul>
+<details>
+<summary>Show answer</summary>
+<p><strong>Answer: B</strong></p>
+<p>Without <code class="docutils literal notranslate"><span class="pre">this.title</span> <span class="pre">=</span> <span class="pre">title;</span></code>, the line <code class="docutils literal notranslate"><span class="pre">title</span> <span class="pre">=</span> <span class="pre">title;</span></code> just assigns the parameter to itself — it never touches the instance variable. The instance variable <code class="docutils literal notranslate"><span class="pre">title</span></code> is left at its default value, <code class="docutils literal notranslate"><span class="pre">null</span></code> for a <code class="docutils literal notranslate"><span class="pre">String</span></code>. This is exactly why <code class="docutils literal notranslate"><span class="pre">this</span></code> matters whenever a parameter name matches a field name.</p>
+</details>
+</section>
+<hr class="docutils" />
+<section id="id13">
+<h4>3. Multiple Choice<a class="headerlink" href="#id13" title="Link to this heading">¶</a></h4>
+<p>A class has <strong>no constructor written anywhere</strong> in its source code. What happens when you write <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">MyClass();</span></code>?</p>
+<ul class="simple">
+<li><p>A. The program fails to compile</p></li>
+<li><p>B. Java throws a <code class="docutils literal notranslate"><span class="pre">NoConstructorException</span></code> at runtime</p></li>
+<li><p>C. Java automatically supplies a no-argument default constructor</p></li>
+<li><p>D. The object is created with all fields set to <code class="docutils literal notranslate"><span class="pre">null</span></code> and no constructor runs at all</p></li>
+</ul>
+<details>
+<summary>Show answer</summary>
+<p><strong>Answer: C</strong></p>
+<p>If a class has no constructor at all, Java automatically generates an invisible no-argument constructor that does nothing except create the object (instance variables still get their default values — 0, false, or null — but that happens regardless). The moment you write even one constructor yourself, this automatic one disappears.</p>
+</details>
+</section>
+<hr class="docutils" />
+<section id="id14">
+<h4>4. Multiple Choice<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="k">class</span><span class="w"> </span><span class="nc">Ticket</span> <span class="p">{</span>
+    <span class="n">public</span> <span class="n">Ticket</span><span class="p">()</span> <span class="p">{</span> <span class="o">/*</span> <span class="o">...</span> <span class="o">*/</span> <span class="p">}</span>
+    <span class="n">public</span> <span class="n">Ticket</span><span class="p">(</span><span class="n">String</span> <span class="n">eventName</span><span class="p">)</span> <span class="p">{</span> <span class="o">/*</span> <span class="o">...</span> <span class="o">*/</span> <span class="p">}</span>
+    <span class="n">public</span> <span class="n">Ticket</span><span class="p">(</span><span class="n">String</span> <span class="n">eventName</span><span class="p">,</span> <span class="n">double</span> <span class="n">price</span><span class="p">)</span> <span class="p">{</span> <span class="o">/*</span> <span class="o">...</span> <span class="o">*/</span> <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This is an example of:</p>
+<ul class="simple">
+<li><p>A. Constructor inheritance</p></li>
+<li><p>B. Constructor overriding</p></li>
+<li><p>C. Constructor overloading</p></li>
+<li><p>D. An illegal class — a class can only have one constructor</p></li>
+</ul>
+<details>
+<summary>Show answer</summary>
+<p><strong>Answer: C</strong></p>
+<p>This is <strong>overloading</strong> — the same class provides multiple constructors, each with a different parameter list, so Java can pick the right one based on how many arguments (and what types) are passed in at the call site. Overriding (B) applies to instance methods in a subclass, not constructors, and D is simply false — this is a completely legal and common pattern.</p>
+</details>
+</section>
+<hr class="docutils" />
+<section id="short-answer">
+<h4>5. Short Answer<a class="headerlink" href="#short-answer" title="Link to this heading">¶</a></h4>
+<p>Given the class below, write a line of code that creates a <code class="docutils literal notranslate"><span class="pre">Ticket</span></code> object using the <strong>two-parameter</strong> constructor, for the event <code class="docutils literal notranslate"><span class="pre">&quot;Concert&quot;</span></code> at a price of <code class="docutils literal notranslate"><span class="pre">49.99</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="k">class</span><span class="w"> </span><span class="nc">Ticket</span> <span class="p">{</span>
+    <span class="n">public</span> <span class="n">Ticket</span><span class="p">()</span> <span class="p">{</span> <span class="o">/*</span> <span class="o">...</span> <span class="o">*/</span> <span class="p">}</span>
+    <span class="n">public</span> <span class="n">Ticket</span><span class="p">(</span><span class="n">String</span> <span class="n">eventName</span><span class="p">)</span> <span class="p">{</span> <span class="o">/*</span> <span class="o">...</span> <span class="o">*/</span> <span class="p">}</span>
+    <span class="n">public</span> <span class="n">Ticket</span><span class="p">(</span><span class="n">String</span> <span class="n">eventName</span><span class="p">,</span> <span class="n">double</span> <span class="n">price</span><span class="p">)</span> <span class="p">{</span> <span class="o">/*</span> <span class="o">...</span> <span class="o">*/</span> <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<details>
+<summary>Show answer</summary>
+<p><strong>Answer:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Ticket</span> <span class="n">t</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Ticket</span><span class="p">(</span><span class="s2">"Concert"</span><span class="p">,</span> <span class="mf">49.99</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Java matches this call to the constructor whose parameter list is <code class="docutils literal notranslate"><span class="pre">(String,</span> <span class="pre">double)</span></code> — two arguments of the matching types — and runs that one specifically, ignoring the other two overloaded constructors.</p>
+</details>
+<p>#############################################################################</p>
+<p><strong>Reminders</strong></p>
+<ul class="simple">
+<li><p>Use the <strong>standard block comment header</strong> at the top of every <code class="docutils literal notranslate"><span class="pre">.java</span></code> file you submit (see the top of this unit for the required format).</p></li>
+<li><p>This assignment is graded using the <strong>AP CSA Generic Assignment Rubric</strong> (5-point scale) — see the rubric table at the top of Unit 1.</p></li>
+</ul>
+<p><strong>Submission</strong></p>
+<p>Upload the following to the assignment:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">Order.java</span></code> and <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> — your completed program with block comment header</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Test Cases document showing inputs, expected output, actual output, and Pass/Fail result</p></li>
+</ul>
+<p>#############################################################################</p>
+</section>
+</section>
+</section>
+<section id="tostring-method">
+<h2>1.13 toString() Method<a class="headerlink" href="#tostring-method" title="Link to this heading">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">toString()</span></code> method provides a meaningful String representation of an object. It is called automatically when you print an object.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Car</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">make</span><span class="p">;</span>
@@ -3587,8 +3784,316 @@ Visually demonstrate the properties of inheritance by creating a subclass(es) of
 <span class="p">}</span>
 </pre></div>
 </div>
+<section id="practice-tostring-method">
+<h3>Practice <code class="docutils literal notranslate"><span class="pre">toString()</span></code> Method<a class="headerlink" href="#practice-tostring-method" title="Link to this heading">¶</a></h3>
+<p>Two exercises building on <strong>1.13a toString() Method</strong>. Exercise 1 is a straight override of a single class. Exercise 2 applies the same override across <em>multiple</em> objects, so students see <code class="docutils literal notranslate"><span class="pre">toString()</span></code> fire automatically every time an object is printed — not just once.</p>
+<details>
+<summary>📌 Standards — 1.13a Practice</summary>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Standard</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ICT 5.9</p></td>
+<td><p>Deconstruct large problems into smaller components</p></td>
+</tr>
+<tr class="row-odd"><td><p>ICT 5.10</p></td>
+<td><p>Use multiple layers of abstraction</p></td>
+</tr>
+<tr class="row-even"><td><p>ICT 10.1</p></td>
+<td><p>Interpret and explain ICT-specific terminology</p></td>
+</tr>
+<tr class="row-odd"><td><p>C4.5</p></td>
+<td><p>Demonstrate awareness of the OOP paradigm</p></td>
+</tr>
+<tr class="row-even"><td><p>C4.7</p></td>
+<td><p>Use various data structures including objects</p></td>
+</tr>
+<tr class="row-odd"><td><p>C4.8</p></td>
+<td><p>Use OOP concepts: properties, methods, and inheritance</p></td>
+</tr>
+<tr class="row-even"><td><p>C4.9</p></td>
+<td><p>Create programs using control structures and variables</p></td>
+</tr>
+<tr class="row-odd"><td><p>C4.11</p></td>
+<td><p>Document development work using comments</p></td>
+</tr>
+<tr class="row-even"><td><p>CRP 1</p></td>
+<td><p>Apply appropriate technical skills and academic knowledge</p></td>
+</tr>
+<tr class="row-odd"><td><p>CRP 5</p></td>
+<td><p>Utilize critical thinking to make sense of problems</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<blockquote>
+<div><p><strong>Oracle Exam Note:</strong> Every Java class inherits a default <code class="docutils literal notranslate"><span class="pre">toString()</span></code> from <code class="docutils literal notranslate"><span class="pre">Object</span></code> (the <code class="docutils literal notranslate"><span class="pre">ClassName&#64;hexHash</span></code> string you’ve already seen, e.g. <code class="docutils literal notranslate"><span class="pre">Backpack&#64;15db9742</span></code> in 1.7.1). Overriding it doesn’t create new behavior for <code class="docutils literal notranslate"><span class="pre">println()</span></code> — Java is <em>always</em> calling <code class="docutils literal notranslate"><span class="pre">toString()</span></code> on an object when you print it or concatenate it with a <code class="docutils literal notranslate"><span class="pre">+</span></code>. Overriding just replaces <em>which</em> <code class="docutils literal notranslate"><span class="pre">toString()</span></code> gets called. A common exam trap: forgetting <code class="docutils literal notranslate"><span class="pre">&#64;Override</span></code> doesn’t break the code (Java still finds the method), but leaving off the annotation means the compiler can’t warn you if your method signature doesn’t actually match <code class="docutils literal notranslate"><span class="pre">toString()</span></code> — e.g. <code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">String</span> <span class="pre">tostring()</span></code> (wrong case) silently compiles as a brand-new, unrelated method, and Java quietly falls back to the default <code class="docutils literal notranslate"><span class="pre">Object</span></code> version.</p>
+</div></blockquote>
+<p>#############################################################################</p>
 </section>
+<section id="assignment-1-13-1-bookreport-your-first-tostring-override">
+<h3>Assignment 1.13.1 — BookReport: Your First <code class="docutils literal notranslate"><span class="pre">toString()</span></code> Override<a class="headerlink" href="#assignment-1-13-1-bookreport-your-first-tostring-override" title="Link to this heading">¶</a></h3>
+<p><strong>Overview</strong></p>
+<p>Complete a <code class="docutils literal notranslate"><span class="pre">Book</span></code> class by writing a constructor and overriding <code class="docutils literal notranslate"><span class="pre">toString()</span></code> so that printing a <code class="docutils literal notranslate"><span class="pre">Book</span></code> object shows a meaningful description instead of the default <code class="docutils literal notranslate"><span class="pre">Book&#64;1b6d3586</span></code>-style address.</p>
+<p>By the end of this activity you will be able to:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Override <code class="docutils literal notranslate"><span class="pre">toString()</span></code> using the correct signature and <code class="docutils literal notranslate"><span class="pre">&#64;Override</span></code> annotation</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Explain why <code class="docutils literal notranslate"><span class="pre">System.out.println(someObject)</span></code> calls <code class="docutils literal notranslate"><span class="pre">toString()</span></code> automatically</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Build a formatted <code class="docutils literal notranslate"><span class="pre">String</span></code> inside <code class="docutils literal notranslate"><span class="pre">toString()</span></code> using instance variables</p></li>
+</ul>
+<p><strong>Requirements Checklist</strong></p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Include the required block comment header in <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> (all fields completed)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Write a constructor for <code class="docutils literal notranslate"><span class="pre">Book</span></code> that sets <code class="docutils literal notranslate"><span class="pre">title</span></code>, <code class="docutils literal notranslate"><span class="pre">author</span></code>, and <code class="docutils literal notranslate"><span class="pre">pages</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Override <code class="docutils literal notranslate"><span class="pre">toString()</span></code> with the <code class="docutils literal notranslate"><span class="pre">&#64;Override</span></code> annotation</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">toString()</span></code> must return (not print) a single formatted <code class="docutils literal notranslate"><span class="pre">String</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create <strong>three</strong> <code class="docutils literal notranslate"><span class="pre">Book</span></code> objects in <code class="docutils literal notranslate"><span class="pre">main</span></code> and print each one directly (no <code class="docutils literal notranslate"><span class="pre">.getTitle()</span></code>-style calls — just <code class="docutils literal notranslate"><span class="pre">System.out.println(myBook)</span></code>)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Include meaningful inline comments throughout</p></li>
+</ul>
+<p><strong>Starter Code — Book.java:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Book</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">title</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">author</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pages</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// TODO 1: Write a constructor that takes (String bookTitle, String bookAuthor, int numPages)</span>
+<span class="w">    </span><span class="c1">//         and assigns them to title, author, and pages</span>
+
+
+<span class="w">    </span><span class="c1">// TODO 2: Override toString() below.</span>
+<span class="w">    </span><span class="c1">//         Return (do not print) a single String in this exact format:</span>
+<span class="w">    </span><span class="c1">//         "Title" by Author (pages pp.)</span>
+<span class="w">    </span><span class="c1">//         Example: "The Hobbit" by J.R.R. Tolkien (310 pp.)</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="c1">//         Don't forget the @Override annotation above the method header.</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Starter Code — Main.java:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Name:          [Your Full Name]</span>
+<span class="c1">// Partner:       [Partner's Full Name, or "None"]</span>
+<span class="c1">// Course:        AP Computer Science A</span>
+<span class="c1">// Instructor:    [Instructor Name]</span>
+<span class="c1">// Assignment:    1.13a.1 — BookReport</span>
+<span class="c1">// Due Date:      [Month Day, Year]</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// TODO 3: Create three Book objects using the constructor you wrote —</span>
+<span class="w">        </span><span class="c1">//         pick any three books you like.</span>
+
+
+<span class="w">        </span><span class="c1">// TODO 4: Print each Book object directly. Do NOT call any getter —</span>
+<span class="w">        </span><span class="c1">//         println(myBook) should trigger your toString() automatically.</span>
+
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Sample Output</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">"The Hobbit"</span> <span class="n">by</span> <span class="n">J</span><span class="o">.</span><span class="n">R</span><span class="o">.</span><span class="n">R</span><span class="o">.</span> <span class="n">Tolkien</span> <span class="p">(</span><span class="mi">310</span> <span class="n">pp</span><span class="o">.</span><span class="p">)</span>
+<span class="s2">"Dune"</span> <span class="n">by</span> <span class="n">Frank</span> <span class="n">Herbert</span> <span class="p">(</span><span class="mi">412</span> <span class="n">pp</span><span class="o">.</span><span class="p">)</span>
+<span class="s2">"1984"</span> <span class="n">by</span> <span class="n">George</span> <span class="n">Orwell</span> <span class="p">(</span><span class="mi">328</span> <span class="n">pp</span><span class="o">.</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Think About It</strong></p>
+<details>
+<summary>Q1. If you delete your <code>toString()</code> override entirely, what does <code>System.out.println(myBook)</code> print instead?</summary>
+<p><strong>Answer:</strong> Something like <code class="docutils literal notranslate"><span class="pre">Book&#64;4eec7777</span></code> — the default <code class="docutils literal notranslate"><span class="pre">Object.toString()</span></code>, which is the class name followed by <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> and the object’s hash code in hexadecimal. It’s a valid reference, just not a human-readable one.</p>
+</details>
+<details>
+<summary>Q2. Why does <code>toString()</code> <strong>return</strong> a String instead of using <code>System.out.println()</code> inside the method itself?</summary>
+<p><strong>Answer:</strong> If <code class="docutils literal notranslate"><span class="pre">toString()</span></code> printed instead of returning, it would only ever be useful when called directly. Because it returns a <code class="docutils literal notranslate"><span class="pre">String</span></code>, Java can call it silently <em>anywhere</em> a <code class="docutils literal notranslate"><span class="pre">String</span></code> is expected — inside <code class="docutils literal notranslate"><span class="pre">println()</span></code>, inside a <code class="docutils literal notranslate"><span class="pre">+</span></code> concatenation, inside an array print — and reuse the same formatted text every time, instead of just dumping it straight to the console once.</p>
+</details>
+<details>
+<summary>Q3. What is the return type and access modifier required for a valid <code>toString()</code> override?</summary>
+<p><strong>Answer:</strong> <code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">String</span> <span class="pre">toString()</span></code> — exactly. Access must be <code class="docutils literal notranslate"><span class="pre">public</span></code> (you cannot reduce visibility when overriding), and the return type must be <code class="docutils literal notranslate"><span class="pre">String</span></code>. Changing either one means you’ve written a new, unrelated method instead of an override.</p>
+</details>
+<p><strong>Submission</strong></p>
+<p>Upload the following:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">Book.java</span></code> and <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> — completed with block comment header</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Test Cases document showing your program’s actual output for all three books</p></li>
+</ul>
+<p>#############################################################################</p>
+</section>
+<section id="assignment-1-13-2-team-roster-tostring-across-multiple-objects">
+<h3>Assignment 1.13.2 — Team Roster: <code class="docutils literal notranslate"><span class="pre">toString()</span></code> Across Multiple Objects<a class="headerlink" href="#assignment-1-13-2-team-roster-tostring-across-multiple-objects" title="Link to this heading">¶</a></h3>
+<p><strong>Overview</strong></p>
+<p>Build a <code class="docutils literal notranslate"><span class="pre">Player</span></code> class and print an entire roster of <code class="docutils literal notranslate"><span class="pre">Player</span></code> objects, demonstrating that <code class="docutils literal notranslate"><span class="pre">toString()</span></code> fires the same way every time — one object, ten objects, it doesn’t matter — because Java calls it, you never have to.</p>
+<p>By the end of this activity you will be able to:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Override <code class="docutils literal notranslate"><span class="pre">toString()</span></code> for a class with more instance variables than 1.13a.1</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Print multiple objects of the same class in a loop and observe <code class="docutils literal notranslate"><span class="pre">toString()</span></code> firing each time</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Distinguish between calling <code class="docutils literal notranslate"><span class="pre">.toString()</span></code> explicitly and letting Java call it implicitly</p></li>
+</ul>
+<p><strong>Requirements Checklist</strong></p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Include the required block comment header in <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> (all fields completed)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">Player</span></code> has instance variables: <code class="docutils literal notranslate"><span class="pre">name</span></code> (String), <code class="docutils literal notranslate"><span class="pre">position</span></code> (String), <code class="docutils literal notranslate"><span class="pre">number</span></code> (int), <code class="docutils literal notranslate"><span class="pre">pointsPerGame</span></code> (double)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Constructor sets all four instance variables</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Override <code class="docutils literal notranslate"><span class="pre">toString()</span></code> with <code class="docutils literal notranslate"><span class="pre">&#64;Override</span></code>, matching the sample output format exactly</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create an <strong>array</strong> of at least four <code class="docutils literal notranslate"><span class="pre">Player</span></code> objects in <code class="docutils literal notranslate"><span class="pre">main</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use a loop to print every player in the array (do not print them one at a time by name)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Include one line that concatenates a <code class="docutils literal notranslate"><span class="pre">Player</span></code> object into a <code class="docutils literal notranslate"><span class="pre">String</span></code> with <code class="docutils literal notranslate"><span class="pre">+</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">&quot;Starting:</span> <span class="pre">&quot;</span> <span class="pre">+</span> <span class="pre">player</span></code>) to show <code class="docutils literal notranslate"><span class="pre">toString()</span></code> firing inside concatenation, not just inside <code class="docutils literal notranslate"><span class="pre">println()</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Include meaningful inline comments throughout</p></li>
+</ul>
+<p><strong>Starter Code — Player.java:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Player</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">position</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">pointsPerGame</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// TODO 1: Write a constructor that takes</span>
+<span class="w">    </span><span class="c1">//         (String playerName, String playerPosition, int jerseyNumber, double ppg)</span>
+<span class="w">    </span><span class="c1">//         and assigns them to the instance variables above</span>
+
+
+<span class="w">    </span><span class="c1">// TODO 2: Override toString() below.</span>
+<span class="w">    </span><span class="c1">//         Return (do not print) a single String in this exact format:</span>
+<span class="w">    </span><span class="c1">//         #number name (position) — ppg ppg</span>
+<span class="w">    </span><span class="c1">//         Example: #23 LeBron James (Forward) — 27.1 ppg</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Starter Code — Main.java:</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Name:          [Your Full Name]</span>
+<span class="c1">// Partner:       [Partner's Full Name, or "None"]</span>
+<span class="c1">// Course:        AP Computer Science A</span>
+<span class="c1">// Instructor:    [Instructor Name]</span>
+<span class="c1">// Assignment:    1.13a.2 — Team Roster</span>
+<span class="c1">// Due Date:      [Month Day, Year]</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// TODO 3: Create an array of at least four Player objects</span>
+
+
+<span class="w">        </span><span class="c1">// TODO 4: Use a loop to print each player in the array —</span>
+<span class="w">        </span><span class="c1">//         System.out.println(players[i]) should call toString() for you</span>
+
+
+<span class="w">        </span><span class="c1">// TODO 5: Pick one player from the array and print a line using</span>
+<span class="w">        </span><span class="c1">//         String concatenation, e.g.:</span>
+<span class="w">        </span><span class="c1">//         System.out.println("Starting: " + players[0]);</span>
+<span class="w">        </span><span class="c1">//         This should ALSO trigger your toString() — prove it in your output.</span>
+
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Sample Output</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#23 LeBron James (Forward) — 27.1 ppg</span>
+<span class="c1">#30 Stephen Curry (Guard) — 24.8 ppg</span>
+<span class="c1">#7 Kevin Durant (Forward) — 26.9 ppg</span>
+<span class="c1">#11 Kyrie Irving (Guard) — 23.4 ppg</span>
+
+<span class="n">Starting</span><span class="p">:</span> <span class="c1">#23 LeBron James (Forward) — 27.1 ppg</span>
+</pre></div>
+</div>
+<p><strong>Think About It</strong></p>
+<details>
+<summary>Q1. In the loop, you never call <code>players[i].toString()</code> directly — yet it runs every time. What line of code actually triggers it?</summary>
+<p><strong>Answer:</strong> <code class="docutils literal notranslate"><span class="pre">System.out.println(players[i]);</span></code> — <code class="docutils literal notranslate"><span class="pre">println()</span></code> is overloaded to accept an <code class="docutils literal notranslate"><span class="pre">Object</span></code>, and internally it calls <code class="docutils literal notranslate"><span class="pre">.toString()</span></code> on whatever object it’s handed before printing the result. You wrote the loop; Java supplies the call.</p>
+</details>
+<details>
+<summary>Q2. The concatenation line <code>"Starting: " + players[0]</code> also produced formatted text instead of a <code>Player@hashcode</code>-style string. Why?</summary>
+<p><strong>Answer:</strong> The <code class="docutils literal notranslate"><span class="pre">+</span></code> operator can’t combine a <code class="docutils literal notranslate"><span class="pre">String</span></code> with a <code class="docutils literal notranslate"><span class="pre">Player</span></code> directly, so Java automatically calls <code class="docutils literal notranslate"><span class="pre">.toString()</span></code> on the <code class="docutils literal notranslate"><span class="pre">Player</span></code> object first to turn it into a <code class="docutils literal notranslate"><span class="pre">String</span></code>, then concatenates the two Strings. This is the same mechanism as <code class="docutils literal notranslate"><span class="pre">println()</span></code> — Java is just looking for a <code class="docutils literal notranslate"><span class="pre">String</span></code> and calling <code class="docutils literal notranslate"><span class="pre">toString()</span></code> to get one.</p>
+</details>
+<details>
+<summary>Q3. Suppose two different classes, <code>Player</code> and <code>Book</code>, both override <code>toString()</code> with completely different formats. Does that cause a conflict?</summary>
+<p><strong>Answer:</strong> No — each class’s <code class="docutils literal notranslate"><span class="pre">toString()</span></code> only affects objects of that class. Overriding is per-class; a <code class="docutils literal notranslate"><span class="pre">Player</span></code> object’s <code class="docutils literal notranslate"><span class="pre">println()</span></code> call uses <code class="docutils literal notranslate"><span class="pre">Player</span></code>’s <code class="docutils literal notranslate"><span class="pre">toString()</span></code>, and a <code class="docutils literal notranslate"><span class="pre">Book</span></code> object’s call uses <code class="docutils literal notranslate"><span class="pre">Book</span></code>’s. There’s no shared or global <code class="docutils literal notranslate"><span class="pre">toString()</span></code> behavior to collide.</p>
+</details>
+<details>
+<summary>Q4. If you changed the array of <code>Player</code> objects to an <code>ArrayList&lt;Player&gt;</code> instead, would your <code>toString()</code> override still work the same way when looping and printing?</summary>
+<p><strong>Answer:</strong> Yes. <code class="docutils literal notranslate"><span class="pre">toString()</span></code> belongs to the <code class="docutils literal notranslate"><span class="pre">Player</span></code> class itself, not to the array or list that happens to be holding the objects. Whether you loop over an array, an <code class="docutils literal notranslate"><span class="pre">ArrayList</span></code>, or print one <code class="docutils literal notranslate"><span class="pre">Player</span></code> by itself, <code class="docutils literal notranslate"><span class="pre">println()</span></code> calls the same overridden <code class="docutils literal notranslate"><span class="pre">toString()</span></code> every time.</p>
+</details>
+<p><strong>Submission</strong></p>
+<p>Upload the following:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">Player.java</span></code> and <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> — completed with header</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Test Cases document showing your program’s actual output for the full roster and the concatenation line</p></li>
+</ul>
 <hr class="docutils" />
+<p><strong>Grading</strong></p>
+<p>Both assignments are graded using the <strong>AP CSA Generic Assignment Rubric</strong> (5-point scale):</p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Points</p></th>
+<th class="head"><p>Grade</p></th>
+<th class="head"><p>Compilation &amp; Output</p></th>
+<th class="head"><p>Documentation &amp; Style</p></th>
+<th class="head"><p>Submission</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>5</strong></p></td>
+<td><p>Full Credit</p></td>
+<td><p>Program compiles and runs without errors or warnings. Output matches expected results for <strong>all</strong> test cases.</p></td>
+<td><p>Block comment header fully completed. Meaningful variable names, camelCase convention, proper indentation. Inline and multi-line comments present throughout.</p></td>
+<td><p>All required <code class="docutils literal notranslate"><span class="pre">.java</span></code> files and test cases submitted with completed assignment header.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>4</strong></p></td>
+<td><p>Near Full Credit</p></td>
+<td><p>Program compiles and runs. Output is correct for most test cases with <strong>one</strong> minor error or omission.</p></td>
+<td><p>Block comment header complete. Comments mostly present. Minor style or formatting inconsistency.</p></td>
+<td><p>All required files submitted. Assignment header present.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>3</strong></p></td>
+<td><p>Partial Credit</p></td>
+<td><p>Program compiles but produces incorrect output for <strong>some</strong> test cases, or compiles with warnings.</p></td>
+<td><p>Limited comments. Block comment header partially completed. Variable names or formatting inconsistent.</p></td>
+<td><p>Most required files submitted. Test cases incomplete or partially documented.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>2</strong></p></td>
+<td><p>Minimal Credit</p></td>
+<td><p>Program has syntax or logic errors that cause significant incorrect output, or fails to fully compile.</p></td>
+<td><p>Little to no commenting. Block comment header missing or blank. Poor variable naming or formatting.</p></td>
+<td><p>A required <code class="docutils literal notranslate"><span class="pre">.java</span></code> file or test cases document is missing. Assignment header absent.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>1</strong></p></td>
+<td><p>Attempted</p></td>
+<td><p>Code submitted shows a clear attempt but does not compile or run.</p></td>
+<td><p>Minimal or no documentation present.</p></td>
+<td><p>At least one file submitted, but submission is largely incomplete.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>0</strong></p></td>
+<td><p>No Credit</p></td>
+<td><p>Nothing submitted, file is empty, or code is unrelated to the assignment.</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<div><p>⚠️ <strong>Header reminder:</strong> Every submission — the <code class="docutils literal notranslate"><span class="pre">.java</span></code> file(s) <em>and</em> the Test Cases document — must include the standard Assignment Header (Name, Partner, Course, Instructor, Assignment, Due Date) at the top. Submissions missing the header are penalized <strong>one point</strong>, per the site-wide grading notes.</p>
+</div></blockquote>
+<p><strong>Grading Notes</strong></p>
+<ul class="simple">
+<li><p>A program that does not compile cannot earn higher than a <strong>2</strong>.</p></li>
+<li><p>A missing test cases document cannot earn higher than a <strong>4</strong>.</p></li>
+<li><p>A missing block comment header (in <code class="docutils literal notranslate"><span class="pre">Main.java</span></code>) deducts <strong>1 point</strong>.</p></li>
+<li><p>A missing assignment header (Name/Partner/Course/etc.) deducts <strong>1 point</strong>.</p></li>
+</ul>
+<p>#############################################################################</p>
+</section>
+</section>
 <section id="calling-instance-methods">
 <h2>1.14 Calling Instance Methods<a class="headerlink" href="#calling-instance-methods" title="Link to this heading">¶</a></h2>
 <details>
@@ -4867,8 +5372,8 @@ Thunder Loop: NOT ELIGIBLE
 </ul>
 </section>
 <hr class="docutils" />
-<section id="id11">
-<h4>Part 3 — Main.java<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h4>
+<section id="id15">
+<h4>Part 3 — Main.java<a class="headerlink" href="#id15" title="Link to this heading">¶</a></h4>
 <p>Your <code class="docutils literal notranslate"><span class="pre">main</span></code> method must:</p>
 <ol class="arabic simple">
 <li><p>Include the required block comment header (all fields completed)</p></li>
@@ -5261,10 +5766,45 @@ Available vehicles: 3
 </ul>
 </li>
 <li><a class="reference internal" href="#calling-class-methods">1.10 Calling Class Methods</a></li>
-<li><a class="reference internal" href="#math-class">1.11 Math Class</a></li>
-<li><a class="reference internal" href="#objects-instances-of-classes">1.12 Objects: Instances of Classes</a></li>
-<li><a class="reference internal" href="#object-creation-and-storage-instantiation">1.13 Object Creation and Storage (Instantiation)</a></li>
-<li><a class="reference internal" href="#a-tostring-method">1.13a toString() Method</a></li>
+<li><a class="reference internal" href="#math-class">1.11 Math Class</a><ul>
+<li><a class="reference internal" href="#project-1-11-1-roller-coaster-simulator">Project 1.11.1 — Roller Coaster Simulator</a></li>
+<li><a class="reference internal" href="#activity-1-11-2-race-car-applying-the-math-class">Activity 1.11.2 — Race Car: Applying the Math Class</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#standards">Standards</a></li>
+<li><a class="reference internal" href="#id5">Overview</a></li>
+<li><a class="reference internal" href="#id6">Background</a><ul>
+<li><a class="reference internal" href="#connecting-prior-activities">Connecting Prior Activities</a></li>
+<li><a class="reference internal" href="#the-physics-formula">The Physics Formula</a></li>
+<li><a class="reference internal" href="#generating-a-bounded-random-integer">Generating a Bounded Random Integer</a></li>
+<li><a class="reference internal" href="#rounding-to-three-decimal-places">Rounding to Three Decimal Places</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#starter-files">Starter Files</a><ul>
+<li><a class="reference internal" href="#racecar-java">Racecar.java</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#object-creation-and-storage-instantiation">1.12 Object Creation and Storage (Instantiation)</a><ul>
+<li><a class="reference internal" href="#what-is-a-constructor">What Is a Constructor?¶</a></li>
+<li><a class="reference internal" href="#the-this-keyword">The <code class="docutils literal notranslate"><span class="pre">this</span></code> Keyword¶</a></li>
+<li><a class="reference internal" href="#constructor-overloading-multiple-constructors-different-parameters">Constructor Overloading — Multiple Constructors, Different Parameters<span class="xref myst">¶</span></a></li>
+<li><a class="reference internal" href="#assignment-1-12-1-bakery-order-system">Assignment 1.12.1 — Bakery Order System<span class="xref myst">¶</span></a></li>
+<li><a class="reference internal" href="#practice-questions-constructors">Practice Questions — Constructors<span class="xref myst">¶</span></a><ul>
+<li><a class="reference internal" href="#id11">1. Multiple Choice</a></li>
+<li><a class="reference internal" href="#id12">2. Multiple Choice</a></li>
+<li><a class="reference internal" href="#id13">3. Multiple Choice</a></li>
+<li><a class="reference internal" href="#id14">4. Multiple Choice</a></li>
+<li><a class="reference internal" href="#short-answer">5. Short Answer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#tostring-method">1.13 toString() Method</a><ul>
+<li><a class="reference internal" href="#practice-tostring-method">Practice <code class="docutils literal notranslate"><span class="pre">toString()</span></code> Method</a></li>
+<li><a class="reference internal" href="#assignment-1-13-1-bookreport-your-first-tostring-override">Assignment 1.13.1 — BookReport: Your First <code class="docutils literal notranslate"><span class="pre">toString()</span></code> Override</a></li>
+<li><a class="reference internal" href="#assignment-1-13-2-team-roster-tostring-across-multiple-objects">Assignment 1.13.2 — Team Roster: <code class="docutils literal notranslate"><span class="pre">toString()</span></code> Across Multiple Objects</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#calling-instance-methods">1.14 Calling Instance Methods</a><ul>
 <li><a class="reference internal" href="#assignment-1-14-1-sports-class">Assignment 1.14.1 — Sports Class</a></li>
 <li><a class="reference internal" href="#assignment-1-14-2-not-another-cake">Assignment 1.14.2 — Not Another Cake</a></li>
@@ -5302,7 +5842,7 @@ Available vehicles: 3
 <li><a class="reference internal" href="#option-b-car-dealership-inventory">Option B — Car Dealership Inventory</a><ul>
 <li><a class="reference internal" href="#part-1-car-java">Part 1 — Car.java</a></li>
 <li><a class="reference internal" href="#part-2-customer-java">Part 2 — Customer.java</a></li>
-<li><a class="reference internal" href="#id11">Part 3 — Main.java</a></li>
+<li><a class="reference internal" href="#id15">Part 3 — Main.java</a></li>
 <li><a class="reference internal" href="#sample-output-option-b">Sample Output — Option B</a></li>
 </ul>
 </li>

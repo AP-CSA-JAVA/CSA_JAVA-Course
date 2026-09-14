@@ -2385,323 +2385,335 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 > **Oracle Exam Note:** `Math.ceil()` and `Math.floor()` both return a **`double`** — even when the result looks like a whole number (`4.0`, not `4`). This is a common exam trap because `Math.round()` looks like it belongs in the same family but actually returns a `long`. If you need an `int`, you must cast the result yourself: `int rounded = (int) Math.ceil(3.2);`
 
 
-> 
-> Project 1.11.1 — Roller Coaster Simulator
->
-> **Project Overview:**
->
-> Students will write a program that helps a theme park design safe roller coasters based on physics-related math. Use `Math.random()` and `Math.round()` to simulate the experience of riding a roller coaster, generating random values for speed, height, and rating. The user (acting as an engineer) inputs the parameters of a coaster hill, and the program will:
->
-> - Calculate speed at the bottom of the hill
-> - Estimate time to descend the incline, using slope angle
-> - Warn if g-forces exceed safety limits
-> - Round values for display
->
-> **Concepts Covered:**
->
-> - `Math` class: `Math.pow`, `Math.sqrt`, `Math.abs`, `Math.max`, `Math.min`, `Math.toRadians`, `Math.sin`
-> - `Scanner` for input
-> - Decision-making and problem-solving
-> - Realistic application of physics/math concepts
->
-> **Key Functionalities:**
->
-> 1. **User Inputs:**
->
-> - Hill height (meters)
-> - Slope angle (degrees)
-> - Track length (meters)
->
-> 2. **Calculations:**
->
-> - **Speed at bottom:**
->
-> Using conservation of energy (this depends only on height, not angle):
->
-> \[v = \sqrt{2 \cdot g \cdot h}\]
-> where `g = 9.8 m/s²`
->
-> - **Time to descend the incline:**
->
-> Unlike a straight vertical drop, a coaster travels *along* the slope. For a track length `L` at slope angle `θ`, the component of gravity accelerating the car down the incline is `g · sin(θ)`, so:
->
-> \[t = \sqrt{\dfrac{2 \cdot L}{g \cdot \sin(\theta)}}\]
->
-> **This is the step where slope angle is actually used** — convert the input angle from degrees to radians with `Math.toRadians()` before passing it to `Math.sin()`.
->
-> - **G-force estimation:**
->
-> Simulate g-force during curve:
->
-> \[G = \frac{v^2}{r \cdot g}\]
-> Assume `r = 10` (constant curve radius). Warn if `G > 5`.
->
-> - Round values with `Math.round`, `Math.ceil`, or `Math.floor`
->
-> ##########################################################################
->
-> **Requirements Checklist**
->
-> - [ ] Include the required block comment header in `Main.java` (all fields completed)
-> - [ ] Accept hill height, slope angle, and track length as user input via `Scanner`
-> - [ ] Convert slope angle from degrees to radians using `Math.toRadians()` **before** using it in `Math.sin()`
-> - [ ] Calculate speed at the bottom of the hill using `Math.sqrt()` — must depend on height only
-> - [ ] Calculate time to descend the incline using the slope-angle formula — must change when slope angle changes (not just height or track length)
-> - [ ] Calculate g-force using the given formula with `r = 10`
-> - [ ] Warn if g-force exceeds the safety limit (`G > 5`)
-> - [ ] Round displayed speed up and displayed time down, using the appropriate `Math` rounding method for each
-> - [ ] Include meaningful inline comments throughout, especially around the angle conversion step
->
-> ##########################################################################
->
-> **Example Output**
->
-> ```
-> Welcome to the Roller Coaster Simulator
-> Enter hill height (in meters): 50
-> Enter slope angle (in degrees): 40
-> Enter track length (in meters): 100
->
-> --- Results ---
-> Estimated Speed at Bottom: 31.30 m/s
-> Time to Descend Incline: 5.63 seconds
-> Estimated G-force in curve: 10.0 Gs TOO DANGEROUS!
->
-> Recommendation: Reduce hill height or increase curve radius.
->
-> --- Rounded Data ---
-> Speed Rounded Up: 32.0 m/s
-> Time Rounded Down: 5.0 sec
-> ```
->
-> ##########################################################################
->
-> ```
-> public class RollerCoasterSimulator {
-> private static final double GRAVITY = 9.8; // m/s^2 // DO NOT CHANGE
->
-> // Attributes (height, speed, time, gForce, angle, trackLength)
->
-> // Constructor
->
-> // Perform all calculations
-> // Reminder: convert angle to radians with Math.toRadians() before
-> // using it in Math.sin() — Java's trig methods expect radians, not degrees.
->
-> // Return calculated results to main
->
-> // Helper method for safety
->
-> }
->
->
-> import java.util.Scanner;
->
-> public class Main {
-> public static void main(String[] args) {
->
-> // Use Scanner to get inputs for height, angle, and track length
->
-> // Get user inputs
->
-> // Create an instance of RollerCoasterSimulator
->
-> // Get and display results
-> double speed = sim.getSpeed();
-> double time = sim.getTime();
-> double gForce = sim.getGForce();
->
-> if (!sim.isSafe()) {
-> // if speed Gforce is too excessive print "TOO DANGEROUS!"
-> // Recommend that the user make changes to height or curve
-> // else print "Safe for riders!"
->
-> System.out.println("\n--- Rounded Data ---");
-> // Round speed up
-> // Round time down
->
-> input.close();
-> }
-> }
-> ```
->
+### Project 1.11.1 — Roller Coaster Simulator
+
+**Project Overview:**
+
+Students will write a program that helps a theme park design safe roller coasters based on physics-related math. Use `Math.random()` and `Math.round()` to simulate the experience of riding a roller coaster, generating random values for speed, height, and rating. The user (acting as an engineer) inputs the parameters of a coaster hill, and the program will:
+
+ - Calculate speed at the bottom of the hill
+ - Estimate time to descend the incline, using slope angle
+ - Warn if g-forces exceed safety limits
+ - Round values for display
+
+**Concepts Covered:**
+
+- `Math` class: `Math.pow`, `Math.sqrt`, `Math.abs`, `Math.max`, `Math.min`, `Math.toRadians`, `Math.sin`
+- `Scanner` for input
+- Decision-making and problem-solving
+- Realistic application of physics/math concepts
+
+**Key Functionalities:**
+
+ 1. **User Inputs:**
+
+- Hill height (meters)
+- Slope angle (degrees)
+- Track length (meters)
+
+2. **Calculations:**
+
+- **Speed at bottom:**
+
+Using conservation of energy (this depends only on height, not angle):
+
+\[v = \sqrt{2 \cdot g \cdot h}\]
+where `g = 9.8 m/s²`
+
+- **Time to descend the incline:**
+
+Unlike a straight vertical drop, a coaster travels *along* the slope. For a track length `L` at slope angle `θ`, the component of gravity accelerating the car down the incline is `g · sin(θ)`, so:
+
+\[t = \sqrt{\dfrac{2 \cdot L}{g \cdot \sin(\theta)}}\]
+
+**This is the step where slope angle is actually used** — convert the input angle from degrees to radians with `Math.toRadians()` before passing it to `Math.sin()`.
+
+- **G-force estimation:**
+
+Simulate g-force during curve:
+
+\[G = \frac{v^2}{r \cdot g}\]
+Assume `r = 10` (constant curve radius). Warn if `G > 5`.
+
+- Round values with `Math.round`, `Math.ceil`, or `Math.floor`
+
+##########################################################################
+
+ **Requirements Checklist**
+
+- [ ] Include the required block comment header in `Main.java` (all fields completed)
+- [ ] Accept hill height, slope angle, and track length as user input via `Scanner`
+- [ ] Convert slope angle from degrees to radians using `Math.toRadians()` **before** using it in `Math.sin()`
+- [ ] Calculate speed at the bottom of the hill using `Math.sqrt()` — must depend on height only
+- [ ] Calculate time to descend the incline using the slope-angle formula — must change when slope angle changes (not just height or track length)
+- [ ] Calculate g-force using the given formula with `r = 10`
+- [ ] Warn if g-force exceeds the safety limit (`G > 5`)
+- [ ] Round displayed speed up and displayed time down, using the appropriate `Math` rounding method for each
+- [ ] Include meaningful inline comments throughout, especially around the angle conversion step
+
+##########################################################################
+
+**Example Output**
+
+```java
+Welcome to the Roller Coaster Simulator
+Enter hill height (in meters): 50
+Enter slope angle (in degrees): 40
+Enter track length (in meters): 100
+
+--- Results ---
+Estimated Speed at Bottom: 31.30 m/s
+Time to Descend Incline: 5.63 seconds
+Estimated G-force in curve: 10.0 Gs TOO DANGEROUS!
+
+Recommendation: Reduce hill height or increase curve radius.
+
+--- Rounded Data ---
+Speed Rounded Up: 32.0 m/s
+Time Rounded Down: 5.0 sec
+```
+
+
+##########################################################################
+
+> **Note:** The constructor below is provided for you. You are not expected to know how to write one yet — you'll learn how constructors work, and write your own from scratch, in Unit 1.13 (Object Creation).
+
+```java
+public class RollerCoasterSimulator {
+    private static final double GRAVITY = 9.8; // m/s^2 // DO NOT CHANGE
+
+    // Attributes
+    private double height;
+    private double angle;
+    private double trackLength;
+    private double speed;
+    private double time;
+    private double gForce;
+
+    // Constructor — provided for you (see Unit 1.13 to learn how this works)
+    public RollerCoasterSimulator(double height, double angle, double trackLength) {
+        this.height = height;
+        this.angle = angle;
+        this.trackLength = trackLength;
+    }
+
+    // Perform all calculations
+    // Reminder: convert angle to radians with Math.toRadians() before
+    // using it in Math.sin() — Java's trig methods expect radians, not degrees.
+
+    // Return calculated results to main
+
+    // Helper method for safety
+
+}
+
+// This is a separate file
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        // Use Scanner to get inputs for height, angle, and track length
+
+        // Get user inputs
+
+        // Create an instance of RollerCoasterSimulator
+
+        // Get and display results
+        double speed = sim.getSpeed();
+        double time = sim.getTime();
+        double gForce = sim.getGForce();
+
+        if (!sim.isSafe()) {
+            // if speed Gforce is too excessive print "TOO DANGEROUS!"
+            // Recommend that the user make changes to height or curve
+            // else print "Safe for riders!"
+
+            System.out.println("\n--- Rounded Data ---");
+            // Round speed up
+            // Round time down
+
+            input.close();
+        }
+    }
+}
+```
+
 > Submit your java program code and your test cases that demonstrates your program works as intended.
->
-> 
 
 
 #############################################################################
 
 
->
-> ### Activity 1.11.2 — Race Car: Applying the Math Class
-> 
-> ## Standards
-> 
-> | Standard | Description |
-> | -------- | ----------- |
-> | ICT 5.8 | Create and use algorithms |
-> | ICT 5.9 | Deconstruct large problems |
-> | C4.6 | Use proper programming language syntax |
-> | C4.9 | Create programs using control structures, procedures, and functions |
-> | CRP 1 | Apply appropriate technical skills and academic knowledge |
-> | CRP 5 | Utilize critical thinking to make sense of problems |
-> 
-> ##########################################################################
-> 
-> ## Overview
-> 
-> In this activity you will apply what you have learned about the `Math` class, static methods, object instantiation, and `java.util.Random` to simulate a drag race between two cars. You will complete a partially written program by implementing the `computeTime` method in `Racecar.java` and filling in the guided comments in `Main.java`.
-> 
-> By the end of this activity you will be able to:
-> - [ ] Use `Math.sqrt()` inside an instance method to solve a physics formula
-> - [ ] Use `Math.round()` to format a result to three decimal places
-> - [ ] Use `java.util.Random` to generate a bounded random integer
-> - [ ] Instantiate objects and call instance methods on them
-> - [ ] Connect prior concepts — classes, constructors, `toString()`, and static methods — in a complete program
-> 
-> ##########################################################################
-> 
-> ## Background
-> 
-> ### Connecting Prior Activities
-> 
-> You have already used these concepts individually. This activity brings them together:
-> 
-> | Prior Activity | Concept Used Here |
-> | -------------- | ----------------- |
-> | 1.7.1 Magic 8-Ball | `import java.util.Random`, `nextInt(bound)` |
-> | 1.10.1 Mission Control | Writing and calling static and instance methods |
-> | 1.11.1 Roller Coaster Simulator | `Math.sqrt()`, physics formulas, `Math.round()` |
-> | 1.13 Object Creation | Constructors, instance variables, `toString()` |
-> 
-> ##########################################################################
-> 
-> ### The Physics Formula
-> 
-> The time it takes a vehicle to travel a distance from a standing start under constant acceleration is:
-> 
-> ```
-> t = √( 2 × d / a )
-> ```
-> 
-> Where:
-> - `t` = time in seconds
-> - `d` = distance in meters
-> - `a` = acceleration in m/s²
-> 
-> You implemented a similar formula in **Activity 1.11.1** when calculating speed at the bottom of a roller coaster hill. Here you will apply the same `Math.sqrt()` approach inside an **instance method** instead of directly in `main`.
-> 
-> ##########################################################################
-> 
-> ### Generating a Bounded Random Integer
-> 
-> In **Activity 1.7.1** you used `Random.nextInt(bound)` to pick a Magic 8-Ball response. Here you will use it to assign each car a random acceleration between **20 and 50 inclusive**:
-> 
-> ```java
-> Random rand = new Random();
-> int accel = rand.nextInt(31) + 20;  // produces 0–30, shifted to 20–50
-> ```
-> 
-> > **Why `nextInt(31)`?**
-> > `nextInt(bound)` returns a value from `0` up to but **not including** `bound`.
-> > To get the range 20–50 (31 possible values), use `nextInt(31)` then add 20.
-> 
-> ##########################################################################
-> 
-> ### Rounding to Three Decimal Places
-> 
-> `Math.round()` rounds to the nearest whole number. To round to three decimal places, scale up, round, then scale back down:
-> 
-> ```java
-> double time = 10.5963847;
-> double rounded = Math.round(time * 1000.0) / 1000.0;  // 10.596
-> ```
-> 
-> You used `Math.round()` in **Activity 1.10.1** to clean up fuel consumption values. Apply the same technique here inside `computeTime`.
-> 
-> ##########################################################################
-> 
-> ## Starter Files
-> 
-> ### Racecar.java
-> 
-> ```java
-> public class Racecar
-> {
->     private double accel; // acceleration in m/s²
->     private String name;  // name of the driver
-> 
->     public Racecar(double acceleration, String driver)
->     {
->         accel = acceleration;
->         name  = driver;
->     }
-> 
->     // Returns the time it takes the racecar to complete
->     // the track rounded to three decimal places.
->     // Formula: t = √(2 × d / a)
->     // where t = time (seconds), d = distance (meters), a = acceleration (m/s²)
->     public double computeTime(double distance)
->     {
->         // Step 1: Calculate time using the formula above and Math.sqrt()
-> 
->         // Step 2: Round to three decimal places using Math.round()
-> 
->         // Step 3: Return the rounded time
->         return 0; // replace this
->     }
-> 
->     public String toString()
->     {
->         return "Racer " + name;
->     }
-> }
-> ```
-> 
-> ##########################################################################
-> 
-> ### Main.java
-> 
-> ```java
-> import java.util.Random;
-> 
-> public class Main
-> {
->     public static void main(String[] args)
->     {
->         Random rand = new Random();
-> 
->         // Length of the track in meters
->         double distance = 2414; // ~1.5 miles
-> 
->         // TODO: Generate a random acceleration (integer) for each car
->         // from 20 to 50 (inclusive) using rand.nextInt()
->         // Hint: review Activity 1.7.1 — how did you restrict nextInt() to a range?
-> 
->         // TODO: Create two Racecar objects — one named "Tom", one named "Jerry"
->         // Pass each car its random acceleration (cast to double) and driver name
->         // Hint: review Activity 1.13 — how did you instantiate objects?
-> 
->         // TODO: Compute the finishing time for both cars
->         // Call computeTime(distance) on each Racecar object and store the result
-> 
->         // Print statement is given below — you haven't been taught toString()
->         // overriding yet, so this part is provided for you.
->         //
->         // NOTE: When you concatenate an object with a String using +, Java
->         // automatically calls that object's toString() method to convert it
->         // to text. That's why tom + "'s car..." works even though you never
->         // call tom.toString() yourself — println does it for you.
->         System.out.println(tom + "'s car finished in " + timeTom + " seconds."); // tom and timeTom are variables
->         System.out.println(jerry + "'s car finished in " + timeJerry + " seconds."); //jerry and timeJerry are variables
->     }
-> }
-> ```
-> 
-> ##########################################################################
-> 
-> ## What You Need to Complete
+### Activity 1.11.2 — Race Car: Applying the Math Class
+ 
+## Standards
+ 
+| Standard | Description |
+| -------- | ----------- |
+| ICT 5.8 | Create and use algorithms |
+| ICT 5.9 | Deconstruct large problems |
+| C4.6 | Use proper programming language syntax |
+| C4.9 | Create programs using control structures, procedures, and functions |
+| CRP 1 | Apply appropriate technical skills and academic knowledge |
+| CRP 5 | Utilize critical thinking to make sense of problems |
+ 
+##########################################################################
+ 
+## Overview
+ 
+In this activity you will apply what you have learned about the `Math` class, static methods, object instantiation, and `java.util.Random` to simulate a drag race between two cars. You will complete a partially written program by implementing the `computeTime` method in `Racecar.java` and filling in the guided comments in `Main.java`.
+ 
+By the end of this activity you will be able to:
+- [ ] Use `Math.sqrt()` inside an instance method to solve a physics formula
+- [ ] Use `Math.round()` to format a result to three decimal places
+- [ ] Use `java.util.Random` to generate a bounded random integer
+- [ ] Instantiate objects and call instance methods on them
+- [ ] Connect prior concepts — classes, constructors, `toString()`, and static methods — in a complete program
+ 
+##########################################################################
+ 
+## Background
+ 
+### Connecting Prior Activities
+ 
+You have already used these concepts individually. This activity brings them together:
+
+| Prior Activity | Concept Used Here |
+| -------------- | ----------------- |
+| 1.7.1 Magic 8-Ball | `import java.util.Random`, `nextInt(bound)` |
+| 1.10.1 Mission Control | Writing and calling static and instance methods |
+| 1.11.1 Roller Coaster Simulator | `Math.sqrt()`, physics formulas, `Math.round()` |
+| 1.13 Object Creation | Constructors, instance variables, `toString()` |
+ 
+##########################################################################
+ 
+### The Physics Formula
+ 
+The time it takes a vehicle to travel a distance from a standing start under constant acceleration is:
+ 
+```
+t = √( 2 × d / a )
+```
+ 
+Where:
+- `t` = time in seconds
+- `d` = distance in meters
+- `a` = acceleration in m/s²
+
+You implemented a similar formula in **Activity 1.11.1** when calculating speed at the bottom of a roller coaster hill. Here you will apply the same `Math.sqrt()` approach inside an **instance method** instead of directly in `main`.
+ 
+##########################################################################
+ 
+### Generating a Bounded Random Integer
+ 
+In **Activity 1.7.1** you used `Random.nextInt(bound)` to pick a Magic 8-Ball response. Here you will use it to assign each car a random acceleration between **20 and 50 inclusive**:
+ 
+```java
+Random rand = new Random();
+int accel = rand.nextInt(31) + 20;  // produces 0–30, shifted to 20–50
+```
+ 
+> **Why `nextInt(31)`?**
+> `nextInt(bound)` returns a value from `0` up to but **not including** `bound`.
+> To get the range 20–50 (31 possible values), use `nextInt(31)` then add 20.
+ 
+##########################################################################
+ 
+### Rounding to Three Decimal Places
+ 
+`Math.round()` rounds to the nearest whole number. To round to three decimal places, scale up, round, then scale back down:
+ 
+```java
+double time = 10.5963847;
+double rounded = Math.round(time * 1000.0) / 1000.0;  // 10.596
+```
+ 
+You used `Math.round()` in **Activity 1.10.1** to clean up fuel consumption values. Apply the same technique here inside `computeTime`.
+ 
+##########################################################################
+ 
+## Starter Files
+ 
+### Racecar.java
+ 
+```java
+public class Racecar
+{
+     private double accel; // acceleration in m/s²
+     private String name;  // name of the driver
+ 
+     public Racecar(double acceleration, String driver)
+     {
+         accel = acceleration;
+         name  = driver;
+     }
+ 
+     // Returns the time it takes the racecar to complete
+     // the track rounded to three decimal places.
+     // Formula: t = √(2 × d / a)
+     // where t = time (seconds), d = distance (meters), a = acceleration (m/s²)
+     public double computeTime(double distance)
+     {
+         // Step 1: Calculate time using the formula above and Math.sqrt()
+ 
+         // Step 2: Round to three decimal places using Math.round()
+ 
+         // Step 3: Return the rounded time
+         return 0; // replace this
+     }
+ 
+     public String toString()
+     {
+         return "Racer " + name;
+     }
+ }
+```
+ 
+##########################################################################
+ 
+**Main.java**
+ 
+ ```java
+import java.util.Random;
+ 
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Random rand = new Random();
+ 
+        // Length of the track in meters
+        double distance = 2414; // ~1.5 miles
+ 
+        // TODO: Generate a random acceleration (integer) for each car
+        // from 20 to 50 (inclusive) using rand.nextInt()
+        // Hint: review Activity 1.7.1 — how did you restrict nextInt() to a range?
+ 
+        // TODO: Create two Racecar objects — one named "Tom", one named "Jerry"
+        // Pass each car its random acceleration (cast to double) and driver name
+        // Hint: review Activity 1.13 — how did you instantiate objects?
+ 
+        // TODO: Compute the finishing time for both cars
+        // Call computeTime(distance) on each Racecar object and store the result
+ 
+        // Print statement is given below — you haven't been taught toString()
+        // overriding yet, so this part is provided for you.
+        //
+        // NOTE: When you concatenate an object with a String using +, Java
+        // automatically calls that object's toString() method to convert it
+        // to text. That's why tom + "'s car..." works even though you never
+        // call tom.toString() yourself — println does it for you.
+        System.out.println(tom + "'s car finished in " + timeTom + " seconds."); // tom and timeTom are variables
+        System.out.println(jerry + "'s car finished in " + timeJerry + " seconds."); //jerry and timeJerry are variables
+    }
+}
+```
+ 
+##########################################################################
+ 
+> **What You Need to Complete**
 > 
 > ### In Racecar.java
 > - [ ] Implement `computeTime(double distance)` using `Math.sqrt()` and the formula `t = √(2 × d / a)`
@@ -2787,119 +2799,354 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 
 #############################################################################
 
-## 1.12 Objects: Instances of Classes
+## 1.12 Object Creation and Storage (Instantiation)
 
-<details>
-<summary>📌 Standards — 1.12</summary>
 
-| Standard | Description |
-| -------- | ----------- |
-| ICT 5.9 | Deconstruct large problems into components to solve |
-| ICT 5.10 | Use multiple layers of abstraction |
-| C4.5 | Demonstrate awareness of the OOP paradigm |
-| C4.8 | Use OOP concepts: properties, methods, and inheritance |
-| CRP 1 | Apply appropriate technical skills and academic knowledge |
-| CRP 5 | Utilize critical thinking to make sense of problems |
+**📌 Standards — 1.13**
+<details><Summary></Summary>Summary>
+| Standard | Description                                                         |
+| -------- | -------------------------------------------------------------------- |
+| ICT 5.8  | Create and use algorithms and solve problems                         |
+| ICT 5.9  | Deconstruct large problems into smaller components                   |
+| ICT 5.10 | Use multiple layers of abstraction                                   |
+| C4.5     | Demonstrate awareness of the OOP paradigm                            |
+| C4.7     | Use various data structures including objects                        |
+| C4.8     | Use OOP concepts: properties, methods, and inheritance                |
+| C4.9     | Create programs using control structures, procedures, and variables   |
+| CRP 1    | Apply appropriate technical skills and academic knowledge             |
+| CRP 5    | Utilize critical thinking to make sense of problems                   |
 
 </details>
-
-- [ ] Explain the relationship between a class and an object
-	- [ ] I will be able to create a poster demonstrating classes and objects
-
-A *class* is a blueprint of an object. An *object* is an instance of a class. What we define as a class determines what objects will be associated with the class and how things will operate within it.
-
-We can also create a *method* that will call the attributes within a class. **NOTE:** Method and behavior are interchangeable terms.
-
-**Mr Potato Head Activity:**
-
-    Split into pairs.
-    Each pair will create:
-        a potato head character.
-        a list describing what it is, what characteristics it has, and what it can do (actions).
-            write PROPERTIES / characteristics
-            write METHODS / actions
-    What are the object oriented concepts to your Mr. Potato Head?
-        Class:
-        Object:
-        Properties:
-        Methods:
-    Visually demonstrate the properties of inheritance by creating a subclass(es) of your Superclass.
-
-**Things to Remember:**
-- [ ] Properties are the characteristics of your objects
-- [ ] Methods are the actions that your object can take.
-- [ ] A class is like a blueprint or a recipe.
-- [ ] A class is used to create an instance of a class, called an object.
 
 #############################################################################
 
-## 1.13 Object Creation and Storage (Instantiation)
+> **Oracle Exam Note:** Constructors are tested directly on the Oracle Java Foundations exam (1Z0-811) — expect questions on default vs. parameterized constructors, constructor naming/signature rules, and what happens when no constructor is written explicitly. This overlaps heavily with AP CSA's own object-creation content, so this section is dual-purpose.
 
-<details>
-<summary>📌 Standards — 1.13</summary>
+- [ ] Explain what a constructor is and why every class has one.
+- [ ] Distinguish between a default constructor and a parameterized constructor.
+- [ ] Write a constructor that initializes instance variables from parameters.
+- [ ] Write multiple constructors for the same class with different parameter lists (constructor overloading).
+- [ ] Use the `new` keyword to instantiate objects using different constructors.
 
-| Standard | Description |
-| -------- | ----------- |
-| ICT 5.9 | Deconstruct large problems into components to solve |
-| ICT 5.10 | Use multiple layers of abstraction |
-| C4.5 | Demonstrate awareness of the OOP paradigm |
-| C4.7 | Use various data structures including objects |
-| C4.8 | Use OOP concepts: properties, methods, and inheritance |
-| C4.9 | Create programs using control structures and variables |
-| CRP 1 | Apply appropriate technical skills and academic knowledge |
-| CRP 5 | Utilize critical thinking to make sense of problems |
+### What Is a Constructor?[¶](#what-is-a-constructor "Link to this heading")
 
-</details>
+A **constructor** is a special method that runs automatically when you create an object with `new`. Its job is to set up — or *construct* — the object's instance variables so it starts life in a valid state.
 
-- [ ] Explain the relationship between a class and an object
-- [ ] Identify different constructor signatures and create objects using them
-- [ ] Use variables to represent object references
-	- [ ] I will be able to write more complex programs using classes and objects
+A constructor always:
 
-A **constructor** in Java is a special method that is used to initialize objects. The constructor is called when an object of a class is created.
+- Has the **same name as the class**
 
-**Null Objects**
+- Has **no return type** — not even `void`
 
-Null is a reserved keyword in Java for literal values. It is a value that shows that the object is referring to nothing. This will create a **NullPointerException** error if called.
+- Runs exactly once per object, at the moment it's created
 
-```java
-Car emptyCar = null;
-Car myCar = new Car(5.6);
-Car yourCar = new Car();
-Car ourCar = new Car(2);
-
-System.out.println("myCar=" + myCar);       // myCar=Car@6d06d69c
-System.out.println("emptyCar=" +emptyCar);  // emptyCar=null
 ```
+public class Cake {
+    private String flavor;
+    private int servings;
 
-![Constructors_image](https://user-images.githubusercontent.com/12989939/195926575-c2a49adc-afdb-4ef0-91e1-c5d93fb54539.PNG)
-
-**Constructor Overloading:** It is possible to write two or more constructors within a program. The difference between the constructors are the *parameters* defined within each constructor.
-
-The **default constructor** is the constructor with no parameters. If an overloaded constructor is missing a parameter, the value will default to the default constructor.
-
-```java
-// Example of Overloading Constructors
-class Box {
-    double width, height, depth;
-
-    // constructor with no parameters specified
-    Box() {
-        width = 0;
-        height = 0;
-        depth = 0;
-    }
-
-    // constructor with three parameters specified
-    Box(double w, double h, double d) {
-        width = w;
-        height = h;
-        depth = d;
+    // Constructor — same name as the class, no return type
+    public Cake(String flavor, int servings) {
+        this.flavor = flavor;
+        this.servings = servings;
     }
 }
 ```
 
-## 1.13a toString() Method
+```
+Cake birthdayCake = new Cake("Chocolate", 12);
+//        ↑                    ↑
+//   variable name      constructor runs here, sets flavor and servings
+```
+> **Oracle Exam Note:** If a class has **no** constructor written at all, Java automatically supplies an invisible **default constructor** — one with no parameters that does nothing but create the object. The moment you write **any** constructor yourself, that automatic default constructor disappears. This is a frequent Oracle exam trap.
+
+### The `this` Keyword[¶](#the-this-keyword "Link to this heading")
+
+Notice `this.flavor = flavor;` above. When a parameter has the **same name** as an instance variable, `this` tells Java "I mean the instance variable that belongs to this object, not the parameter." Without `this`, Java would just assign the parameter to itself and the instance variable would stay uninitialized.
+
+```
+public Cake(String flavor, int servings) {
+    this.flavor = flavor;     // this.flavor = the object's field; flavor = the parameter
+    this.servings = servings;
+}
+```
+
+### Constructor Overloading — Multiple Constructors, Different Parameters[¶](#constructor-overloading "Link to this heading")
+
+A class can have **more than one constructor**, as long as each one has a different parameter list (different number or types of parameters). This is called **overloading**, and it lets the same class be instantiated in different ways depending on what information you have available.
+
+```
+public class Cake {
+    private String flavor;
+    private int servings;
+    private boolean hasFrosting;
+
+    // No-argument constructor — sets sensible defaults
+    public Cake() {
+        flavor = "Vanilla";
+        servings = 8;
+        hasFrosting = true;
+    }
+
+    // One-parameter constructor
+    public Cake(String flavor) {
+        this.flavor = flavor;
+        servings = 8;
+        hasFrosting = true;
+    }
+
+    // Two-parameter constructor
+    public Cake(String flavor, int servings) {
+        this.flavor = flavor;
+        this.servings = servings;
+        hasFrosting = true;
+    }
+
+    // Three-parameter constructor — full control
+    public Cake(String flavor, int servings, boolean hasFrosting) {
+        this.flavor = flavor;
+        this.servings = servings;
+        this.hasFrosting = hasFrosting;
+    }
+}
+```
+
+```
+Cake c1 = new Cake();                          // Vanilla, 8 servings, frosted
+Cake c2 = new Cake("Red Velvet");              // Red Velvet, 8 servings, frosted
+Cake c3 = new Cake("Lemon", 20);               // Lemon, 20 servings, frosted
+Cake c4 = new Cake("Carrot", 10, false);       // Carrot, 10 servings, no frosting
+```
+> Java decides which constructor to run based on **how many arguments you pass, and their types** — this is the same matching rule Java uses for overloaded methods in general.
+
+#############################################################################
+
+### Assignment 1.12.1 — Bakery Order System[¶](#assignment-1-13-1-bakery-order-system "Link to this heading")
+
+**Overview**
+
+You will build an `Order` class for a bakery's ordering system. Customers can place an order in several different ways — a walk-in customer who just wants "a cake," someone who knows exactly what they want, or a full custom order with every detail specified. You'll write **four overloaded constructors** to handle each scenario.
+
+By the end of this activity you will be able to:
+
+- [ ] Write a no-argument constructor that sets default values
+- [ ] Write parameterized constructors with increasing levels of detail
+- [ ] Use `this` correctly to distinguish parameters from instance variables
+- [ ] Instantiate objects using different constructors in the same program
+
+**Requirements Checklist**
+
+- [ ] Include the required block comment header in `Main.java` (all fields completed)
+- [ ] Create an `Order.java` file with the following **private** instance variables: `String itemName`, `int quantity`, `String size`, `boolean isRush`
+- [ ] Write **four constructors**, each with a different parameter list:
+
+  1. **No-argument constructor** — defaults to `itemName = "Cake"`, `quantity = 1`, `size = "Medium"`, `isRush = false`
+  2. **One-parameter constructor** — takes `itemName` only; quantity, size, and isRush use the same defaults as above
+  3. **Two-parameter constructor** — takes `itemName` and `quantity`; size and isRush use the same defaults
+  4. **Four-parameter constructor** — takes all four values, giving the customer full control
+
+- [ ] Use `this` correctly in every constructor where a parameter name matches an instance variable name
+- [ ] Write a `printOrder()` instance method that prints all four fields in a readable format
+- [ ] In `Main.java`, create **one `Order` object using each of the four constructors** (four objects total) and call `printOrder()` on each
+
+- [ ] Include meaningful inline comments throughout
+
+**Starter Code — Order.java:**
+
+```
+public class Order {
+
+    // TODO: declare the four private instance variables described above
+
+    // TODO 1: no-argument constructor — set the default values
+    // TODO 2: one-parameter constructor (itemName)
+    // TODO 3: two-parameter constructor (itemName, quantity)
+    // TODO 4: four-parameter constructor (itemName, quantity, size, isRush)
+    // TODO 5: printOrder() — prints all four fields in a readable format
+
+}
+```
+
+**Starter Code — Main.java:**
+
+```
+// Name:          [Your Full Name]
+// Partner:       [Partner's Full Name, or "None"]
+// Course:        AP Computer Science A
+// Instructor:    [Instructor Name]
+// Assignment:    1.13.1 — Bakery Order System: Building Multiple Constructors
+// Due Date:      [Month Day, Year]
+
+public class Main {
+    public static void main(String[] args) {
+
+        // TODO 1: create an Order using the no-argument constructor
+
+        // TODO 2: create an Order using the one-parameter constructor
+
+        // TODO 3: create an Order using the two-parameter constructor
+
+        // TODO 4: create an Order using the four-parameter constructor
+
+        // TODO 5: call printOrder() on all four objects
+
+    }
+}
+```
+
+**Sample Output**
+
+```
+Order: 1 Medium Cake(s)  |  Rush: false
+Order: 1 Medium Birthday Cake(s)  |  Rush: false
+Order: 6 Medium Cupcake(s)  |  Rush: false
+Order: 3 Large Wedding Cake(s)  |  Rush: true
+```
+
+---
+
+### Practice Questions — Constructors[¶](#practice-questions-constructors "Link to this heading")
+
+> **Purpose:** Check your understanding of constructor syntax, default vs. parameterized constructors, and overloading — mirrors the style of Oracle 1Z0-811 questions on object creation.
+
+#### 1. Multiple Choice
+
+Which of the following is a valid constructor for a class named `Dog`?
+
+- A. `public void Dog() { }`
+- B. `public Dog() { }`
+- C. `public Dog(String name) { return name; }`
+- D. `public static Dog() { }`
+
+<details>
+<summary>Show answer</summary>
+
+**Answer: B**
+
+A constructor has no return type at all — not even `void` — and must share the exact name of the class. A has a `void` return type, which makes it a regular method, not a constructor, even though it's named `Dog()`. C tries to `return` a value, which constructors can never do. D adds `static`, which constructors cannot be.
+</details>
+
+---
+
+#### 2. Multiple Choice
+
+```
+public class Book {
+    private String title;
+
+    public Book(String title) {
+        title = title;
+    }
+}
+```
+
+A student writes the constructor above. What happens when they run `Book b = new Book("Dune"); System.out.println(b.title);`?
+
+- A. It prints `Dune`
+- B. It prints `null`
+- C. It throws a `NullPointerException` at compile time
+- D. It doesn't compile
+
+<details>
+<summary>Show answer</summary>
+
+**Answer: B**
+
+Without `this.title = title;`, the line `title = title;` just assigns the parameter to itself — it never touches the instance variable. The instance variable `title` is left at its default value, `null` for a `String`. This is exactly why `this` matters whenever a parameter name matches a field name.
+</details>
+
+---
+
+#### 3. Multiple Choice
+
+A class has **no constructor written anywhere** in its source code. What happens when you write `new MyClass();`?
+
+- A. The program fails to compile
+- B. Java throws a `NoConstructorException` at runtime
+- C. Java automatically supplies a no-argument default constructor
+- D. The object is created with all fields set to `null` and no constructor runs at all
+
+<details>
+<summary>Show answer</summary>
+
+**Answer: C**
+
+If a class has no constructor at all, Java automatically generates an invisible no-argument constructor that does nothing except create the object (instance variables still get their default values — 0, false, or null — but that happens regardless). The moment you write even one constructor yourself, this automatic one disappears.
+</details>
+
+---
+
+#### 4. Multiple Choice
+
+```
+public class Ticket {
+    public Ticket() { /* ... */ }
+    public Ticket(String eventName) { /* ... */ }
+    public Ticket(String eventName, double price) { /* ... */ }
+}
+```
+
+This is an example of:
+
+- A. Constructor inheritance
+- B. Constructor overriding
+- C. Constructor overloading
+- D. An illegal class — a class can only have one constructor
+
+<details>
+<summary>Show answer</summary>
+
+**Answer: C**
+
+This is **overloading** — the same class provides multiple constructors, each with a different parameter list, so Java can pick the right one based on how many arguments (and what types) are passed in at the call site. Overriding (B) applies to instance methods in a subclass, not constructors, and D is simply false — this is a completely legal and common pattern.
+</details>
+
+---
+
+#### 5. Short Answer
+
+Given the class below, write a line of code that creates a `Ticket` object using the **two-parameter** constructor, for the event `"Concert"` at a price of `49.99`.
+
+```
+public class Ticket {
+    public Ticket() { /* ... */ }
+    public Ticket(String eventName) { /* ... */ }
+    public Ticket(String eventName, double price) { /* ... */ }
+}
+```
+
+<details>
+<summary>Show answer</summary>
+
+**Answer:**
+
+```
+Ticket t = new Ticket("Concert", 49.99);
+```
+
+Java matches this call to the constructor whose parameter list is `(String, double)` — two arguments of the matching types — and runs that one specifically, ignoring the other two overloaded constructors.
+</details>
+
+#############################################################################
+
+**Reminders**
+
+- Use the **standard block comment header** at the top of every `.java` file you submit (see the top of this unit for the required format).
+- This assignment is graded using the **AP CSA Generic Assignment Rubric** (5-point scale) — see the rubric table at the top of Unit 1.
+
+**Submission**
+
+Upload the following to the assignment:
+- [ ] `Order.java` and `Main.java` — your completed program with block comment header
+- [ ] Test Cases document showing inputs, expected output, actual output, and Pass/Fail result
+
+
+
+
+#############################################################################
+
+
+## 1.13 toString() Method
 
 The `toString()` method provides a meaningful String representation of an object. It is called automatically when you print an object.
 
@@ -2928,7 +3175,282 @@ public class Car {
 }
 ```
 
+### Practice `toString()` Method
+
+Two exercises building on **1.13a toString() Method**. Exercise 1 is a straight override of a single class. Exercise 2 applies the same override across *multiple* objects, so students see `toString()` fire automatically every time an object is printed — not just once.
+
+<details>
+<summary>📌 Standards — 1.13a Practice</summary>
+
+| Standard | Description |
+| -------- | ----------- |
+| ICT 5.9 | Deconstruct large problems into smaller components |
+| ICT 5.10 | Use multiple layers of abstraction |
+| ICT 10.1 | Interpret and explain ICT-specific terminology |
+| C4.5 | Demonstrate awareness of the OOP paradigm |
+| C4.7 | Use various data structures including objects |
+| C4.8 | Use OOP concepts: properties, methods, and inheritance |
+| C4.9 | Create programs using control structures and variables |
+| C4.11 | Document development work using comments |
+| CRP 1 | Apply appropriate technical skills and academic knowledge |
+| CRP 5 | Utilize critical thinking to make sense of problems |
+
+</details>
+
+> **Oracle Exam Note:** Every Java class inherits a default `toString()` from `Object` (the `ClassName@hexHash` string you've already seen, e.g. `Backpack@15db9742` in 1.7.1). Overriding it doesn't create new behavior for `println()` — Java is *always* calling `toString()` on an object when you print it or concatenate it with a `+`. Overriding just replaces *which* `toString()` gets called. A common exam trap: forgetting `@Override` doesn't break the code (Java still finds the method), but leaving off the annotation means the compiler can't warn you if your method signature doesn't actually match `toString()` — e.g. `public String tostring()` (wrong case) silently compiles as a brand-new, unrelated method, and Java quietly falls back to the default `Object` version.
+
+#############################################################################
+
+### Assignment 1.13.1 — BookReport: Your First `toString()` Override
+
+**Overview**
+
+Complete a `Book` class by writing a constructor and overriding `toString()` so that printing a `Book` object shows a meaningful description instead of the default `Book@1b6d3586`-style address.
+
+By the end of this activity you will be able to:
+- [ ] Override `toString()` using the correct signature and `@Override` annotation
+- [ ] Explain why `System.out.println(someObject)` calls `toString()` automatically
+- [ ] Build a formatted `String` inside `toString()` using instance variables
+
+**Requirements Checklist**
+
+- [ ] Include the required block comment header in `Main.java` (all fields completed)
+- [ ] Write a constructor for `Book` that sets `title`, `author`, and `pages`
+- [ ] Override `toString()` with the `@Override` annotation
+- [ ] `toString()` must return (not print) a single formatted `String`
+- [ ] Create **three** `Book` objects in `main` and print each one directly (no `.getTitle()`-style calls — just `System.out.println(myBook)`)
+- [ ] Include meaningful inline comments throughout
+
+**Starter Code — Book.java:**
+
+```java
+public class Book
+{
+    private String title;
+    private String author;
+    private int pages;
+
+    // TODO 1: Write a constructor that takes (String bookTitle, String bookAuthor, int numPages)
+    //         and assigns them to title, author, and pages
+
+
+    // TODO 2: Override toString() below.
+    //         Return (do not print) a single String in this exact format:
+    //         "Title" by Author (pages pp.)
+    //         Example: "The Hobbit" by J.R.R. Tolkien (310 pp.)
+    //
+    //         Don't forget the @Override annotation above the method header.
+
+}
+```
+
+**Starter Code — Main.java:**
+
+```java
+// Name:          [Your Full Name]
+// Partner:       [Partner's Full Name, or "None"]
+// Course:        AP Computer Science A
+// Instructor:    [Instructor Name]
+// Assignment:    1.13a.1 — BookReport
+// Due Date:      [Month Day, Year]
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        // TODO 3: Create three Book objects using the constructor you wrote —
+        //         pick any three books you like.
+
+
+        // TODO 4: Print each Book object directly. Do NOT call any getter —
+        //         println(myBook) should trigger your toString() automatically.
+
+    }
+}
+```
+
+**Sample Output**
+
+```
+"The Hobbit" by J.R.R. Tolkien (310 pp.)
+"Dune" by Frank Herbert (412 pp.)
+"1984" by George Orwell (328 pp.)
+```
+
+**Think About It**
+
+<details>
+<summary>Q1. If you delete your <code>toString()</code> override entirely, what does <code>System.out.println(myBook)</code> print instead?</summary>
+
+**Answer:** Something like `Book@4eec7777` — the default `Object.toString()`, which is the class name followed by `@` and the object's hash code in hexadecimal. It's a valid reference, just not a human-readable one.
+</details>
+
+<details>
+<summary>Q2. Why does <code>toString()</code> <strong>return</strong> a String instead of using <code>System.out.println()</code> inside the method itself?</summary>
+
+**Answer:** If `toString()` printed instead of returning, it would only ever be useful when called directly. Because it returns a `String`, Java can call it silently *anywhere* a `String` is expected — inside `println()`, inside a `+` concatenation, inside an array print — and reuse the same formatted text every time, instead of just dumping it straight to the console once.
+</details>
+
+<details>
+<summary>Q3. What is the return type and access modifier required for a valid <code>toString()</code> override?</summary>
+
+**Answer:** `public String toString()` — exactly. Access must be `public` (you cannot reduce visibility when overriding), and the return type must be `String`. Changing either one means you've written a new, unrelated method instead of an override.
+</details>
+
+**Submission**
+
+Upload the following:
+- [ ] `Book.java` and `Main.java` — completed with block comment header
+- [ ] Test Cases document showing your program's actual output for all three books
+
+
+#############################################################################
+
+
+### Assignment 1.13.2 — Team Roster: `toString()` Across Multiple Objects
+
+**Overview**
+
+Build a `Player` class and print an entire roster of `Player` objects, demonstrating that `toString()` fires the same way every time — one object, ten objects, it doesn't matter — because Java calls it, you never have to.
+
+By the end of this activity you will be able to:
+- [ ] Override `toString()` for a class with more instance variables than 1.13a.1
+- [ ] Print multiple objects of the same class in a loop and observe `toString()` firing each time
+- [ ] Distinguish between calling `.toString()` explicitly and letting Java call it implicitly
+
+**Requirements Checklist**
+
+- [ ] Include the required block comment header in `Main.java` (all fields completed)
+- [ ] `Player` has instance variables: `name` (String), `position` (String), `number` (int), `pointsPerGame` (double)
+- [ ] Constructor sets all four instance variables
+- [ ] Override `toString()` with `@Override`, matching the sample output format exactly
+- [ ] Create an **array** of at least four `Player` objects in `main`
+- [ ] Use a loop to print every player in the array (do not print them one at a time by name)
+- [ ] Include one line that concatenates a `Player` object into a `String` with `+` (e.g. `"Starting: " + player`) to show `toString()` firing inside concatenation, not just inside `println()`
+- [ ] Include meaningful inline comments throughout
+
+**Starter Code — Player.java:**
+
+```java
+public class Player
+{
+    private String name;
+    private String position;
+    private int number;
+    private double pointsPerGame;
+
+    // TODO 1: Write a constructor that takes
+    //         (String playerName, String playerPosition, int jerseyNumber, double ppg)
+    //         and assigns them to the instance variables above
+
+
+    // TODO 2: Override toString() below.
+    //         Return (do not print) a single String in this exact format:
+    //         #number name (position) — ppg ppg
+    //         Example: #23 LeBron James (Forward) — 27.1 ppg
+
+}
+```
+
+**Starter Code — Main.java:**
+
+```java
+// Name:          [Your Full Name]
+// Partner:       [Partner's Full Name, or "None"]
+// Course:        AP Computer Science A
+// Instructor:    [Instructor Name]
+// Assignment:    1.13a.2 — Team Roster
+// Due Date:      [Month Day, Year]
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        // TODO 3: Create an array of at least four Player objects
+
+
+        // TODO 4: Use a loop to print each player in the array —
+        //         System.out.println(players[i]) should call toString() for you
+
+
+        // TODO 5: Pick one player from the array and print a line using
+        //         String concatenation, e.g.:
+        //         System.out.println("Starting: " + players[0]);
+        //         This should ALSO trigger your toString() — prove it in your output.
+
+    }
+}
+```
+
+**Sample Output**
+
+```
+#23 LeBron James (Forward) — 27.1 ppg
+#30 Stephen Curry (Guard) — 24.8 ppg
+#7 Kevin Durant (Forward) — 26.9 ppg
+#11 Kyrie Irving (Guard) — 23.4 ppg
+
+Starting: #23 LeBron James (Forward) — 27.1 ppg
+```
+
+**Think About It**
+
+<details>
+<summary>Q1. In the loop, you never call <code>players[i].toString()</code> directly — yet it runs every time. What line of code actually triggers it?</summary>
+
+**Answer:** `System.out.println(players[i]);` — `println()` is overloaded to accept an `Object`, and internally it calls `.toString()` on whatever object it's handed before printing the result. You wrote the loop; Java supplies the call.
+</details>
+
+<details>
+<summary>Q2. The concatenation line <code>"Starting: " + players[0]</code> also produced formatted text instead of a <code>Player@hashcode</code>-style string. Why?</summary>
+
+**Answer:** The `+` operator can't combine a `String` with a `Player` directly, so Java automatically calls `.toString()` on the `Player` object first to turn it into a `String`, then concatenates the two Strings. This is the same mechanism as `println()` — Java is just looking for a `String` and calling `toString()` to get one.
+</details>
+
+<details>
+<summary>Q3. Suppose two different classes, <code>Player</code> and <code>Book</code>, both override <code>toString()</code> with completely different formats. Does that cause a conflict?</summary>
+
+**Answer:** No — each class's `toString()` only affects objects of that class. Overriding is per-class; a `Player` object's `println()` call uses `Player`'s `toString()`, and a `Book` object's call uses `Book`'s. There's no shared or global `toString()` behavior to collide.
+</details>
+
+<details>
+<summary>Q4. If you changed the array of <code>Player</code> objects to an <code>ArrayList&lt;Player&gt;</code> instead, would your <code>toString()</code> override still work the same way when looping and printing?</summary>
+
+**Answer:** Yes. `toString()` belongs to the `Player` class itself, not to the array or list that happens to be holding the objects. Whether you loop over an array, an `ArrayList`, or print one `Player` by itself, `println()` calls the same overridden `toString()` every time.
+</details>
+
+**Submission**
+
+Upload the following:
+- [ ] `Player.java` and `Main.java` — completed with header
+- [ ] Test Cases document showing your program's actual output for the full roster and the concatenation line
+
 ---
+
+**Grading**
+
+Both assignments are graded using the **AP CSA Generic Assignment Rubric** (5-point scale):
+
+| Points | Grade            | Compilation & Output                                                                                          | Documentation & Style                                                                                                                                         | Submission                                                                            |
+| ------ | ---------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| **5**  | Full Credit      | Program compiles and runs without errors or warnings. Output matches expected results for **all** test cases. | Block comment header fully completed. Meaningful variable names, camelCase convention, proper indentation. Inline and multi-line comments present throughout. | All required `.java` files and test cases submitted with completed assignment header. |
+| **4**  | Near Full Credit | Program compiles and runs. Output is correct for most test cases with **one** minor error or omission.        | Block comment header complete. Comments mostly present. Minor style or formatting inconsistency.                                                              | All required files submitted. Assignment header present.                              |
+| **3**  | Partial Credit   | Program compiles but produces incorrect output for **some** test cases, or compiles with warnings.            | Limited comments. Block comment header partially completed. Variable names or formatting inconsistent.                                                        | Most required files submitted. Test cases incomplete or partially documented.         |
+| **2**  | Minimal Credit   | Program has syntax or logic errors that cause significant incorrect output, or fails to fully compile.        | Little to no commenting. Block comment header missing or blank. Poor variable naming or formatting.                                                           | A required `.java` file or test cases document is missing. Assignment header absent.  |
+| **1**  | Attempted        | Code submitted shows a clear attempt but does not compile or run.                                             | Minimal or no documentation present.                                                                                                                          | At least one file submitted, but submission is largely incomplete.                    |
+| **0**  | No Credit        | Nothing submitted, file is empty, or code is unrelated to the assignment.                                     | N/A                                                                                                                                                              | N/A                                                                                    |
+
+> ⚠️ **Header reminder:** Every submission — the `.java` file(s) *and* the Test Cases document — must include the standard Assignment Header (Name, Partner, Course, Instructor, Assignment, Due Date) at the top. Submissions missing the header are penalized **one point**, per the site-wide grading notes.
+
+**Grading Notes**
+- A program that does not compile cannot earn higher than a **2**.
+- A missing test cases document cannot earn higher than a **4**.
+- A missing block comment header (in `Main.java`) deducts **1 point**.
+- A missing assignment header (Name/Partner/Course/etc.) deducts **1 point**.
+
+
+#############################################################################
+
 
 ## 1.14 Calling Instance Methods
 
