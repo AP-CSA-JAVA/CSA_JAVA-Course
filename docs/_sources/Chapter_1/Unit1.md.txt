@@ -3162,6 +3162,73 @@ Upload the following to the assignment:
 
 The `toString()` method provides a meaningful String representation of an object. It is called automatically when you print an object.
 
+### Why We Override `toString()`
+
+Here's a complete, working `Laptop` class — **no `toString()` override
+yet.** Run it as-is first.
+
+```java
+public class Laptop {
+    private String brand;
+    private String model;
+    private int ramGB;
+
+    public Laptop(String brand, String model, int ramGB) {
+        this.brand = brand;
+        this.model = model;
+        this.ramGB = ramGB;
+    }
+
+    public static void main(String[] args) {
+        Laptop l1 = new Laptop("Dell", "XPS 13", 16);
+        System.out.println(l1);
+    }
+}
+```
+
+**Output:**
+```
+Laptop@15db9742
+```
+
+**The output would confuse most people.** It tells us nothing about the brand, model, or RAM — just the class name and a hash code. And it is irrelevant to the user.  It is possible that the hash code **isn't even guaranteed to be the same next time you run the program.** Nothing about this string is reliable information about the object.
+
+Now add a `toString()` override:
+
+```java
+public class Laptop {
+    private String brand;
+    private String model;
+    private int ramGB;
+
+    public Laptop(String brand, String model, int ramGB) {
+        this.brand = brand;
+        this.model = model;
+        this.ramGB = ramGB;
+    }
+
+    @Override
+    public String toString() {
+        return brand + " " + model + " (" + ramGB + "GB RAM)";
+    }
+
+    public static void main(String[] args) {
+        Laptop l1 = new Laptop("Dell", "XPS 13", 16);
+        System.out.println(l1);
+    }
+}
+```
+
+**Output:**
+```
+Dell XPS 13 (16GB RAM)
+```
+
+**Same `println(l1)` call, same object — the only thing that changed is which `toString()` Java finds.** That's the whole lesson in one comparison: overriding doesn't change how printing works, it changes what gets printed.
+
+
+**Look at this program below:**
+
 ```java
 public class Car {
     private String make;
@@ -3187,12 +3254,16 @@ public class Car {
 }
 ```
 
-### Practice `toString()` Method
 
-Two exercises building on **1.13a toString() Method**. Exercise 1 is a straight override of a single class. Exercise 2 applies the same override across *multiple* objects, so students see `toString()` fire automatically every time an object is printed — not just once.
+#############################################################################
+
+
+**Practice `toString()` Method**
+
+Below are two exercises for you to practice using `toString()`.  Exercise 1 is a straight override of a single class. Exercise 2 applies the same override across *multiple* objects, so students see `toString()` fire automatically every time an object is printed — not just once.
 
 <details>
-<summary>📌 Standards — 1.13a Practice</summary>
+<summary>📌 Standards — 1.13 Practice</summary>
 
 | Standard | Description |
 | -------- | ----------- |
@@ -3209,11 +3280,145 @@ Two exercises building on **1.13a toString() Method**. Exercise 1 is a straight 
 
 </details>
 
+#############################################################################
+
+
+### Exercise 1 — Override `toString()` (single class)
+
+Complete the `Recipe` class below. Right now, printing a `Recipe`
+object falls back to the default `Object` version — your job is to
+override `toString()` so it prints something meaningful instead.
+
+```java
+public class Recipe {
+    private String name;
+    private String cuisine;
+    private int cookTimeMinutes;
+
+    public Recipe(String name, String cuisine, int cookTimeMinutes) {
+        this.name = name;
+        this.cuisine = cuisine;
+        this.cookTimeMinutes = cookTimeMinutes;
+    }
+
+    // TODO: Override toString() so it returns a String in this exact
+    // format:  "Recipe: <name> (<cuisine>) — <cookTimeMinutes> min"
+
+    public static void main(String[] args) {
+        Recipe r1 = new Recipe("Pad Thai", "Thai", 25);
+        System.out.println(r1);
+        // Expected output:
+        // Recipe: Pad Thai (Thai) — 25 min
+    }
+}
+```
+
+<details>
+<summary>Solution</summary>
+
+```java
+@Override
+public String toString() {
+    return "Recipe: " + name + " (" + cuisine + ") — " + cookTimeMinutes + " min";
+}
+```
+
+</details>
+
+#############################################################################
+
+### Exercise 2 — `toString()` across multiple objects
+
+Create a `Song` class with fields `title`, `artist`, and
+`durationSeconds`, and override its `toString()` to return:
+`"<title> by <artist> (<durationSeconds>s)"`.
+
+Then create **four** different `Song` objects, store them in an array
+(or `ArrayList`), and print all four with a loop. Notice you don't call
+`toString()` yourself anywhere — `println()` calls it automatically,
+every time, for every object.
+
+```java
+public class Song {
+    private String title;
+    private String artist;
+    private int durationSeconds;
+
+    public Song(String title, String artist, int durationSeconds) {
+        this.title = title;
+        this.artist = artist;
+        this.durationSeconds = durationSeconds;
+    }
+
+    // TODO: Override toString() so it returns:
+    // "<title> by <artist> (<durationSeconds>s)"
+}
+
+public class PlaylistDemo {
+    public static void main(String[] args) {
+        // TODO: create an array of 4 Song objects, each with different
+        // title/artist/durationSeconds values
+
+        // TODO: use a for-each loop to println() each song in the array
+    }
+}
+```
+
+**Expected output shape** (your own titles/artists will vary):
+```
+Blinding Lights by The Weeknd (200s)
+Circles by Post Malone (215s)
+Levitating by Dua Lipa (203s)
+As It Was by Harry Styles (167s)
+```
+
+<details>
+<summary>Solution</summary>
+
+```java
+public class Song {
+    private String title;
+    private String artist;
+    private int durationSeconds;
+
+    public Song(String title, String artist, int durationSeconds) {
+        this.title = title;
+        this.artist = artist;
+        this.durationSeconds = durationSeconds;
+    }
+
+    @Override
+    public String toString() {
+        return title + " by " + artist + " (" + durationSeconds + "s)";
+    }
+}
+
+public class PlaylistDemo {
+    public static void main(String[] args) {
+        Song[] songs = {
+            new Song("Blinding Lights", "The Weeknd", 200),
+            new Song("Circles", "Post Malone", 215),
+            new Song("Levitating", "Dua Lipa", 203),
+            new Song("As It Was", "Harry Styles", 167)
+        };
+
+        for (Song s : songs) {
+            System.out.println(s);
+        }
+    }
+}
+```
+
+**Discussion:** Why not use  `System.out.println(s)` and not `System.out.println(s.toString())` — both work identically, which is exactly the point: Java is already calling `toString()` either way. This is a good moment to circle back to the Oracle Exam Note above.
+
+</details>
+
+
 > **Oracle Exam Note:** Every Java class inherits a default `toString()` from `Object` (the `ClassName@hexHash` string you've already seen, e.g. `Backpack@15db9742` in 1.7.1). Overriding it doesn't create new behavior for `println()` — Java is *always* calling `toString()` on an object when you print it or concatenate it with a `+`. Overriding just replaces *which* `toString()` gets called. A common exam trap: forgetting `@Override` doesn't break the code (Java still finds the method), but leaving off the annotation means the compiler can't warn you if your method signature doesn't actually match `toString()` — e.g. `public String tostring()` (wrong case) silently compiles as a brand-new, unrelated method, and Java quietly falls back to the default `Object` version.
 
 #############################################################################
 
-### Assignment 1.13.1 — BookReport: Your First `toString()` Override
+### Assignment 1.13.1 — BookReport: `toString()` Override
 
 **Overview**
 

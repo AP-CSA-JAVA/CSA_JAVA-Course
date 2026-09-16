@@ -3774,6 +3774,63 @@ public class Main {
 <section id="tostring-method">
 <h2>1.13 toString() Method<a class="headerlink" href="#tostring-method" title="Link to this heading">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">toString()</span></code> method provides a meaningful String representation of an object. It is called automatically when you print an object.</p>
+<section id="why-we-override-tostring">
+<h3>Why We Override <code class="docutils literal notranslate"><span class="pre">toString()</span></code><a class="headerlink" href="#why-we-override-tostring" title="Link to this heading">¶</a></h3>
+<p>Here’s a complete, working <code class="docutils literal notranslate"><span class="pre">Laptop</span></code> class — <strong>no <code class="docutils literal notranslate"><span class="pre">toString()</span></code> override
+yet.</strong> Run it as-is first.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Laptop</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">brand</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">model</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ramGB</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Laptop</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">brand</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">model</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ramGB</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">brand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">brand</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">model</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">ramGB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ramGB</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Laptop</span><span class="w"> </span><span class="n">l1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Laptop</span><span class="p">(</span><span class="s">"Dell"</span><span class="p">,</span><span class="w"> </span><span class="s">"XPS 13"</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">l1</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Output:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Laptop</span><span class="o">@</span><span class="mi">15</span><span class="n">db9742</span>
+</pre></div>
+</div>
+<p><strong>The output would confuse most people.</strong> It tells us nothing about the brand, model, or RAM — just the class name and a hash code. And it is irrelevant to the user.  It is possible that the hash code <strong>isn’t even guaranteed to be the same next time you run the program.</strong> Nothing about this string is reliable information about the object.</p>
+<p>Now add a <code class="docutils literal notranslate"><span class="pre">toString()</span></code> override:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Laptop</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">brand</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">model</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ramGB</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Laptop</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">brand</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">model</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ramGB</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">brand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">brand</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">model</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">ramGB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ramGB</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">brand</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" ("</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ramGB</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"GB RAM)"</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Laptop</span><span class="w"> </span><span class="n">l1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Laptop</span><span class="p">(</span><span class="s">"Dell"</span><span class="p">,</span><span class="w"> </span><span class="s">"XPS 13"</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">l1</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Output:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Dell</span> <span class="n">XPS</span> <span class="mi">13</span> <span class="p">(</span><span class="mi">16</span><span class="n">GB</span> <span class="n">RAM</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Same <code class="docutils literal notranslate"><span class="pre">println(l1)</span></code> call, same object — the only thing that changed is which <code class="docutils literal notranslate"><span class="pre">toString()</span></code> Java finds.</strong> That’s the whole lesson in one comparison: overriding doesn’t change how printing works, it changes what gets printed.</p>
+<p><strong>Look at this program below:</strong></p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Car</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">make</span><span class="p">;</span>
 <span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">model</span><span class="p">;</span>
@@ -3798,11 +3855,11 @@ public class Main {
 <span class="p">}</span>
 </pre></div>
 </div>
-<section id="practice-tostring-method">
-<h3>Practice <code class="docutils literal notranslate"><span class="pre">toString()</span></code> Method<a class="headerlink" href="#practice-tostring-method" title="Link to this heading">¶</a></h3>
-<p>Two exercises building on <strong>1.13a toString() Method</strong>. Exercise 1 is a straight override of a single class. Exercise 2 applies the same override across <em>multiple</em> objects, so students see <code class="docutils literal notranslate"><span class="pre">toString()</span></code> fire automatically every time an object is printed — not just once.</p>
+<p>#############################################################################</p>
+<p><strong>Practice <code class="docutils literal notranslate"><span class="pre">toString()</span></code> Method</strong></p>
+<p>Below are two exercises for you to practice using <code class="docutils literal notranslate"><span class="pre">toString()</span></code>.  Exercise 1 is a straight override of a single class. Exercise 2 applies the same override across <em>multiple</em> objects, so students see <code class="docutils literal notranslate"><span class="pre">toString()</span></code> fire automatically every time an object is printed — not just once.</p>
 <details>
-<summary>📌 Standards — 1.13a Practice</summary>
+<summary>📌 Standards — 1.13 Practice</summary>
 <div class="table-wrapper colwidths-auto docutils container">
 <table class="docutils align-default">
 <thead>
@@ -3845,13 +3902,132 @@ public class Main {
 </table>
 </div>
 </details>
+<p>#############################################################################</p>
+</section>
+<section id="exercise-1-override-tostring-single-class">
+<h3>Exercise 1 — Override <code class="docutils literal notranslate"><span class="pre">toString()</span></code> (single class)<a class="headerlink" href="#exercise-1-override-tostring-single-class" title="Link to this heading">¶</a></h3>
+<p>Complete the <code class="docutils literal notranslate"><span class="pre">Recipe</span></code> class below. Right now, printing a <code class="docutils literal notranslate"><span class="pre">Recipe</span></code>
+object falls back to the default <code class="docutils literal notranslate"><span class="pre">Object</span></code> version — your job is to
+override <code class="docutils literal notranslate"><span class="pre">toString()</span></code> so it prints something meaningful instead.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Recipe</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">cuisine</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">cookTimeMinutes</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Recipe</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">cuisine</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">cookTimeMinutes</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">cuisine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cuisine</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">cookTimeMinutes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cookTimeMinutes</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// TODO: Override toString() so it returns a String in this exact</span>
+<span class="w">    </span><span class="c1">// format:  "Recipe: &lt;name&gt; (&lt;cuisine&gt;) — &lt;cookTimeMinutes&gt; min"</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Recipe</span><span class="w"> </span><span class="n">r1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Recipe</span><span class="p">(</span><span class="s">"Pad Thai"</span><span class="p">,</span><span class="w"> </span><span class="s">"Thai"</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">r1</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">// Expected output:</span>
+<span class="w">        </span><span class="c1">// Recipe: Pad Thai (Thai) — 25 min</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<details>
+<summary>Solution</summary>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="nd">@Override</span>
+<span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">"Recipe: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" ("</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cuisine</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">") — "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cookTimeMinutes</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" min"</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</details>
+<p>#############################################################################</p>
+</section>
+<section id="exercise-2-tostring-across-multiple-objects">
+<h3>Exercise 2 — <code class="docutils literal notranslate"><span class="pre">toString()</span></code> across multiple objects<a class="headerlink" href="#exercise-2-tostring-across-multiple-objects" title="Link to this heading">¶</a></h3>
+<p>Create a <code class="docutils literal notranslate"><span class="pre">Song</span></code> class with fields <code class="docutils literal notranslate"><span class="pre">title</span></code>, <code class="docutils literal notranslate"><span class="pre">artist</span></code>, and
+<code class="docutils literal notranslate"><span class="pre">durationSeconds</span></code>, and override its <code class="docutils literal notranslate"><span class="pre">toString()</span></code> to return:
+<code class="docutils literal notranslate"><span class="pre">&quot;&lt;title&gt;</span> <span class="pre">by</span> <span class="pre">&lt;artist&gt;</span> <span class="pre">(&lt;durationSeconds&gt;s)&quot;</span></code>.</p>
+<p>Then create <strong>four</strong> different <code class="docutils literal notranslate"><span class="pre">Song</span></code> objects, store them in an array
+(or <code class="docutils literal notranslate"><span class="pre">ArrayList</span></code>), and print all four with a loop. Notice you don’t call
+<code class="docutils literal notranslate"><span class="pre">toString()</span></code> yourself anywhere — <code class="docutils literal notranslate"><span class="pre">println()</span></code> calls it automatically,
+every time, for every object.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Song</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">title</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">artist</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">durationSeconds</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Song</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">artist</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">durationSeconds</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">title</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">artist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">artist</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">durationSeconds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">durationSeconds</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// TODO: Override toString() so it returns:</span>
+<span class="w">    </span><span class="c1">// "&lt;title&gt; by &lt;artist&gt; (&lt;durationSeconds&gt;s)"</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">PlaylistDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// TODO: create an array of 4 Song objects, each with different</span>
+<span class="w">        </span><span class="c1">// title/artist/durationSeconds values</span>
+
+<span class="w">        </span><span class="c1">// TODO: use a for-each loop to println() each song in the array</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Expected output shape</strong> (your own titles/artists will vary):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Blinding</span> <span class="n">Lights</span> <span class="n">by</span> <span class="n">The</span> <span class="n">Weeknd</span> <span class="p">(</span><span class="mi">200</span><span class="n">s</span><span class="p">)</span>
+<span class="n">Circles</span> <span class="n">by</span> <span class="n">Post</span> <span class="n">Malone</span> <span class="p">(</span><span class="mi">215</span><span class="n">s</span><span class="p">)</span>
+<span class="n">Levitating</span> <span class="n">by</span> <span class="n">Dua</span> <span class="n">Lipa</span> <span class="p">(</span><span class="mi">203</span><span class="n">s</span><span class="p">)</span>
+<span class="n">As</span> <span class="n">It</span> <span class="n">Was</span> <span class="n">by</span> <span class="n">Harry</span> <span class="n">Styles</span> <span class="p">(</span><span class="mi">167</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+<details>
+<summary>Solution</summary>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Song</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">title</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">artist</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">durationSeconds</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Song</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">artist</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">durationSeconds</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">title</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">artist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">artist</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">durationSeconds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">durationSeconds</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">title</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" by "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">artist</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" ("</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">durationSeconds</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"s)"</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">PlaylistDemo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Song</span><span class="o">[]</span><span class="w"> </span><span class="n">songs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">new</span><span class="w"> </span><span class="n">Song</span><span class="p">(</span><span class="s">"Blinding Lights"</span><span class="p">,</span><span class="w"> </span><span class="s">"The Weeknd"</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">),</span>
+<span class="w">            </span><span class="k">new</span><span class="w"> </span><span class="n">Song</span><span class="p">(</span><span class="s">"Circles"</span><span class="p">,</span><span class="w"> </span><span class="s">"Post Malone"</span><span class="p">,</span><span class="w"> </span><span class="mi">215</span><span class="p">),</span>
+<span class="w">            </span><span class="k">new</span><span class="w"> </span><span class="n">Song</span><span class="p">(</span><span class="s">"Levitating"</span><span class="p">,</span><span class="w"> </span><span class="s">"Dua Lipa"</span><span class="p">,</span><span class="w"> </span><span class="mi">203</span><span class="p">),</span>
+<span class="w">            </span><span class="k">new</span><span class="w"> </span><span class="n">Song</span><span class="p">(</span><span class="s">"As It Was"</span><span class="p">,</span><span class="w"> </span><span class="s">"Harry Styles"</span><span class="p">,</span><span class="w"> </span><span class="mi">167</span><span class="p">)</span>
+<span class="w">        </span><span class="p">};</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Song</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">songs</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Discussion:</strong> Why not use  <code class="docutils literal notranslate"><span class="pre">System.out.println(s)</span></code> and not <code class="docutils literal notranslate"><span class="pre">System.out.println(s.toString())</span></code> — both work identically, which is exactly the point: Java is already calling <code class="docutils literal notranslate"><span class="pre">toString()</span></code> either way. This is a good moment to circle back to the Oracle Exam Note above.</p>
+</details>
 <blockquote>
 <div><p><strong>Oracle Exam Note:</strong> Every Java class inherits a default <code class="docutils literal notranslate"><span class="pre">toString()</span></code> from <code class="docutils literal notranslate"><span class="pre">Object</span></code> (the <code class="docutils literal notranslate"><span class="pre">ClassName&#64;hexHash</span></code> string you’ve already seen, e.g. <code class="docutils literal notranslate"><span class="pre">Backpack&#64;15db9742</span></code> in 1.7.1). Overriding it doesn’t create new behavior for <code class="docutils literal notranslate"><span class="pre">println()</span></code> — Java is <em>always</em> calling <code class="docutils literal notranslate"><span class="pre">toString()</span></code> on an object when you print it or concatenate it with a <code class="docutils literal notranslate"><span class="pre">+</span></code>. Overriding just replaces <em>which</em> <code class="docutils literal notranslate"><span class="pre">toString()</span></code> gets called. A common exam trap: forgetting <code class="docutils literal notranslate"><span class="pre">&#64;Override</span></code> doesn’t break the code (Java still finds the method), but leaving off the annotation means the compiler can’t warn you if your method signature doesn’t actually match <code class="docutils literal notranslate"><span class="pre">toString()</span></code> — e.g. <code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">String</span> <span class="pre">tostring()</span></code> (wrong case) silently compiles as a brand-new, unrelated method, and Java quietly falls back to the default <code class="docutils literal notranslate"><span class="pre">Object</span></code> version.</p>
 </div></blockquote>
 <p>#############################################################################</p>
 </section>
-<section id="assignment-1-13-1-bookreport-your-first-tostring-override">
-<h3>Assignment 1.13.1 — BookReport: Your First <code class="docutils literal notranslate"><span class="pre">toString()</span></code> Override<a class="headerlink" href="#assignment-1-13-1-bookreport-your-first-tostring-override" title="Link to this heading">¶</a></h3>
+<section id="assignment-1-13-1-bookreport-tostring-override">
+<h3>Assignment 1.13.1 — BookReport: <code class="docutils literal notranslate"><span class="pre">toString()</span></code> Override<a class="headerlink" href="#assignment-1-13-1-bookreport-tostring-override" title="Link to this heading">¶</a></h3>
 <p><strong>Overview</strong></p>
 <p>Complete a <code class="docutils literal notranslate"><span class="pre">Book</span></code> class by writing a constructor and overriding <code class="docutils literal notranslate"><span class="pre">toString()</span></code> so that printing a <code class="docutils literal notranslate"><span class="pre">Book</span></code> object shows a meaningful description instead of the default <code class="docutils literal notranslate"><span class="pre">Book&#64;1b6d3586</span></code>-style address.</p>
 <p>By the end of this activity you will be able to:</p>
@@ -5814,8 +5990,10 @@ Available vehicles: 3
 </ul>
 </li>
 <li><a class="reference internal" href="#tostring-method">1.13 toString() Method</a><ul>
-<li><a class="reference internal" href="#practice-tostring-method">Practice <code class="docutils literal notranslate"><span class="pre">toString()</span></code> Method</a></li>
-<li><a class="reference internal" href="#assignment-1-13-1-bookreport-your-first-tostring-override">Assignment 1.13.1 — BookReport: Your First <code class="docutils literal notranslate"><span class="pre">toString()</span></code> Override</a></li>
+<li><a class="reference internal" href="#why-we-override-tostring">Why We Override <code class="docutils literal notranslate"><span class="pre">toString()</span></code></a></li>
+<li><a class="reference internal" href="#exercise-1-override-tostring-single-class">Exercise 1 — Override <code class="docutils literal notranslate"><span class="pre">toString()</span></code> (single class)</a></li>
+<li><a class="reference internal" href="#exercise-2-tostring-across-multiple-objects">Exercise 2 — <code class="docutils literal notranslate"><span class="pre">toString()</span></code> across multiple objects</a></li>
+<li><a class="reference internal" href="#assignment-1-13-1-bookreport-tostring-override">Assignment 1.13.1 — BookReport: <code class="docutils literal notranslate"><span class="pre">toString()</span></code> Override</a></li>
 <li><a class="reference internal" href="#assignment-1-13-2-team-roster-tostring-across-multiple-objects">Assignment 1.13.2 — Team Roster: <code class="docutils literal notranslate"><span class="pre">toString()</span></code> Across Multiple Objects</a></li>
 </ul>
 </li>
