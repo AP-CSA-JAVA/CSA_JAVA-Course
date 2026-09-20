@@ -163,7 +163,8 @@ public static void main(String args[]) // `public` is an access specifier.
 ```
 
 
-> ### Assignment 1.01.1 — My Timeline
+### Assignment 1.01.1 — My Timeline
+
 >
 > Create a personal timeline of at least seven meaningful events in your life using the `print` and `println` methods. The timeline will proceed vertically — earlier events near the top, later events near the bottom. Make it look professional. HINT: use `\t`
 >
@@ -183,7 +184,7 @@ public static void main(String args[]) // `public` is an access specifier.
 
 ---
 
-## 1.01a Understanding Java — *Oracle Foundations 1Z0-811*
+### 1.01a Understanding Java — *Oracle Foundations 1Z0-811*
 
 <details>
 <summary>📌 Standards — 1.01a</summary>
@@ -205,7 +206,7 @@ public static void main(String args[]) // `public` is an access specifier.
 - [ ] Describe the purpose of the `java.lang` package.
 - [ ] Give examples of real-world applications built with Java.
 
-### Features of Java
+#### Features of Java
 
 Java was designed with several core features in mind. You don't need to memorize this list word-for-word, but you should recognize each feature and be able to explain it in your own words:
 
@@ -221,7 +222,7 @@ Java was designed with several core features in mind. You don't need to memorize
 
 > **Oracle Exam Note:** A common exam question asks you to "identify features of Java" from a list of options. Watch for wrong answers like *single-threaded* or *architecture-dependent* — these describe the opposite of how Java actually works.
 
-### JDK vs. JRE vs. JVM
+#### JDK vs. JRE vs. JVM
 
 These three acronyms are easy to confuse. Think of them as three nested layers, each one containing the one before it:
 
@@ -238,7 +239,7 @@ JDK  >  JRE  >  JVM
 
 > **Oracle Exam Note:** The JVM is responsible for garbage collection and for interpreting bytecode — not the JRE or JDK by themselves. If you see an answer choice like "the JRE contains the JDK," it's backwards: the JDK contains the JRE.
 
-### How a Java Program Compiles and Executes
+#### How a Java Program Compiles and Executes
 
 When you click "Run" in your IDE, several steps happen automatically. It's worth knowing what they are:
 
@@ -267,7 +268,7 @@ Main.java  --(javac)-->  Main.class (bytecode)  --(java)-->  JVM executes it  --
 
 
 
-### Understanding Java: Certification-Style Practice Questions
+#### Understanding Java: Certification-Style Practice Questions
 
 > **Purpose:** These mirror the style of the Oracle 1Z0-811 exam — multiple choice, snippet-driven, testing *why* Java behaves a certain way rather than just vocabulary recall.
 > Two parts: **Part A** on the compile → bytecode → JVM sequence.
@@ -275,9 +276,9 @@ Main.java  --(javac)-->  Main.class (bytecode)  --(java)-->  JVM executes it  --
 ---
 
 
-### Part A — The Compile → Bytecode → JVM Sequence
+#### Part A — The Compile → Bytecode → JVM Sequence Practice Quiz
 
-#### A1. Multiple Choice
+##### A1. Multiple Choice
 
 What is produced when `javac Hello.java` is run successfully?
 
@@ -297,7 +298,7 @@ What is produced when `javac Hello.java` is run successfully?
 
 ---
 
-#### A2. Multiple Choice
+##### A2. Multiple Choice
 
 A student compiles `Hello.java` on a Windows laptop, then emails `Hello.class` to a friend running macOS. What must be true for the friend to run the program?
 
@@ -317,7 +318,7 @@ The `.class` file's bytecode is identical no matter what OS compiled it — it w
 
 ---
 
-#### A3. Multiple Choice
+##### A3. Multiple Choice
 
 Which best describes the role of the JVM once it has loaded a `.class` file?
 
@@ -337,7 +338,7 @@ The JVM is an **interpreter** (often paired with a Just-In-Time compiler for spe
 
 ---
 
-#### A4. Short Answer
+##### A4. Short Answer
 
 Put these four items in the correct order for how a Java program goes from source code to a running program: **JVM interprets bytecode**, **`.java` source file written**, **`javac` compiles source**, **`.class` bytecode file created**.
 
@@ -356,7 +357,7 @@ Put these four items in the correct order for how a Java program goes from sourc
 
 ---
 
-#### A5. Multiple Choice
+##### A5. Multiple Choice
 
 Why does each operating system need its **own** version of the JVM, if bytecode itself is platform-independent?
 
@@ -376,11 +377,11 @@ Bytecode itself never changes between platforms — that's the whole point. What
 
 ---
 
-### Part B — Identifying the Feature Behind the Behavior
+#### Part B — Identifying the Feature Behind the Behavior
 
 Identify **which Java feature** (Platform Independence, Compiled + Interpreted, Object-Oriented, Static/Strong Typing, Automatic Memory Management, Robust/Secure) best explains the behavior described.
 
-#### B1.
+##### B1.
 
 ```java
 int total = "42";
@@ -399,7 +400,7 @@ Java checks variable types at **compile time**. Assigning a `String` to an `int`
 
 ---
 
-#### B2.
+##### B2.
 
 ```java
 public class Car {
@@ -425,7 +426,7 @@ public class SportsCar extends Car {
 
 ---
 
-#### B3.
+##### B3.
 
 A student writes a method that creates thousands of temporary `String` objects inside a loop. The student never writes any code to delete or free those objects, yet the program's memory usage doesn't grow without bound.
 
@@ -440,7 +441,7 @@ Once those temporary `String` objects are no longer referenced by anything the p
 
 ---
 
-#### B4.
+##### B4.
 
 The exact same `.class` file, compiled once on a school's Windows lab computer, runs correctly on a student's Chromebook and a teacher's MacBook without being recompiled.
 
@@ -455,7 +456,7 @@ The `.class` file contains bytecode, not machine code — it isn't tied to Windo
 
 ---
 
-#### B5.
+##### B5.
 
 ```java
 public static void main(String[] args) {
@@ -477,7 +478,7 @@ Java checks array bounds at runtime and throws a catchable exception rather than
 
 ---
 
-#### B6.
+##### B6.
 
 The program's source file compiles in under a second, but the compiled file cannot actually be run directly by double-clicking it on any operating system — a separate program has to be launched first to read it.
 
@@ -531,7 +532,7 @@ public class Main {                          // 1. Class declaration — must ma
 
 Compare this to `java.util` (Scanner, ArrayList, Random) and `java.time` (LocalDate, LocalTime) — both of which **do** require an explicit `import` statement. `java.lang` is the exception, not the rule.
 
-### Real-World Applications of Java
+#### Real-World Applications of Java
 
 Java shows up in far more places than classroom assignments. A few examples worth knowing:
 
