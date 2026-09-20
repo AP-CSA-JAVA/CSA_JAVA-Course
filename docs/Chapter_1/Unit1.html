@@ -4704,57 +4704,64 @@ every time, for every object.</p>
 </section>
 <section id="instance-methods-practice-questions">
 <h3>Instance Methods — Practice Questions<a class="headerlink" href="#instance-methods-practice-questions" title="Link to this heading">¶</a></h3>
-<p><strong>Q1. Which line correctly calls the instance method <code class="docutils literal notranslate"><span class="pre">addItem</span></code> on the <code class="docutils literal notranslate"><span class="pre">Backpack</span></code> object <code class="docutils literal notranslate"><span class="pre">myBag</span></code>?</strong></p>
+<p><strong>Q1. In <code class="docutils literal notranslate"><span class="pre">System.out.println(&quot;Hi&quot;);</span></code>, which part is the object that the method <code class="docutils literal notranslate"><span class="pre">println</span></code> is called on?</strong></p>
 <ul class="simple">
-<li><p>A. <code class="docutils literal notranslate"><span class="pre">Backpack.addItem(&quot;pen&quot;);</span></code></p></li>
-<li><p>B. <code class="docutils literal notranslate"><span class="pre">myBag.addItem(&quot;pen&quot;);</span></code></p></li>
-<li><p>C. <code class="docutils literal notranslate"><span class="pre">addItem(myBag,</span> <span class="pre">&quot;pen&quot;);</span></code></p></li>
-<li><p>D. <code class="docutils literal notranslate"><span class="pre">myBag(addItem,</span> <span class="pre">&quot;pen&quot;);</span></code></p></li>
-</ul>
-<details>
-<summary>Show answer</summary>
-<p><strong>Answer: B</strong></p>
-<p>An instance method is called on an <strong>object</strong>: the object, a dot, then the method name and arguments. A uses a class name, which only works for <code class="docutils literal notranslate"><span class="pre">static</span></code> methods. C and D are not valid Java call syntax.</p>
-</details>
-<p><strong>Q2. <code class="docutils literal notranslate"><span class="pre">tom</span></code> and <code class="docutils literal notranslate"><span class="pre">jerry</span></code> are two <code class="docutils literal notranslate"><span class="pre">Racecar</span></code> objects. Both call <code class="docutils literal notranslate"><span class="pre">computeTime(2414)</span></code>, but they get different results. Why?</strong></p>
-<ul class="simple">
-<li><p>A. <code class="docutils literal notranslate"><span class="pre">computeTime</span></code> is a <code class="docutils literal notranslate"><span class="pre">static</span></code> method.</p></li>
-<li><p>B. Java chooses a random answer each time.</p></li>
-<li><p>C. <code class="docutils literal notranslate"><span class="pre">tom</span></code> was created first, so it is always faster.</p></li>
-<li><p>D. Each object stores its own acceleration, and the method uses the data of the object before the dot.</p></li>
-</ul>
-<details>
-<summary>Show answer</summary>
-<p><strong>Answer: D</strong></p>
-<p>The method code is the same, but the <strong>data</strong> belongs to each object. <code class="docutils literal notranslate"><span class="pre">tom.computeTime(...)</span></code> uses tom’s acceleration; <code class="docutils literal notranslate"><span class="pre">jerry.computeTime(...)</span></code> uses jerry’s.</p>
-</details>
-<p><strong>Q3. Which line will NOT compile? (<code class="docutils literal notranslate"><span class="pre">addItem</span></code> is void; <code class="docutils literal notranslate"><span class="pre">getItem</span></code> returns a <code class="docutils literal notranslate"><span class="pre">String</span></code>.)</strong></p>
-<ul class="simple">
-<li><p>A. <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">n</span> <span class="pre">=</span> <span class="pre">myBag.addItem(&quot;pen&quot;);</span></code></p></li>
-<li><p>B. <code class="docutils literal notranslate"><span class="pre">String</span> <span class="pre">s</span> <span class="pre">=</span> <span class="pre">myBag.getItem();</span></code></p></li>
-<li><p>C. <code class="docutils literal notranslate"><span class="pre">myBag.addItem(&quot;pen&quot;);</span></code></p></li>
-<li><p>D. <code class="docutils literal notranslate"><span class="pre">System.out.println(myBag.getItem());</span></code></p></li>
-</ul>
-<details>
-<summary>Show answer</summary>
-<p><strong>Answer: A</strong></p>
-<p>A void method returns nothing, so there is no value to store in <code class="docutils literal notranslate"><span class="pre">n</span></code>. The compiler reports: incompatible types: void cannot be converted to int. B, C, and D all use the methods correctly.</p>
-</details>
-<p><strong>Q4. What happens?</strong></p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Backpack</span><span class="w"> </span><span class="n">ghost</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
-<span class="n">ghost</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="s">"pen"</span><span class="p">);</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>A. A compile-time error.</p></li>
-<li><p>B. Nothing — Java skips the line.</p></li>
-<li><p>C. It compiles, then throws a <code class="docutils literal notranslate"><span class="pre">NullPointerException</span></code> when it runs.</p></li>
-<li><p>D. Java creates a new <code class="docutils literal notranslate"><span class="pre">Backpack</span></code> automatically.</p></li>
+<li><p>A. <code class="docutils literal notranslate"><span class="pre">System</span></code></p></li>
+<li><p>B. <code class="docutils literal notranslate"><span class="pre">println</span></code></p></li>
+<li><p>C. <code class="docutils literal notranslate"><span class="pre">System.out</span></code></p></li>
+<li><p>D. <code class="docutils literal notranslate"><span class="pre">&quot;Hi&quot;</span></code></p></li>
 </ul>
 <details>
 <summary>Show answer</summary>
 <p><strong>Answer: C</strong></p>
-<p><code class="docutils literal notranslate"><span class="pre">ghost</span></code> is a legal <code class="docutils literal notranslate"><span class="pre">Backpack</span></code> variable, so the code compiles. At run time there is no object at that address, so Java throws a <code class="docutils literal notranslate"><span class="pre">NullPointerException</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">System.out</span></code> is an <strong>object</strong> (a <code class="docutils literal notranslate"><span class="pre">PrintStream</span></code>), and <code class="docutils literal notranslate"><span class="pre">println</span></code> is one of the things it can do. <code class="docutils literal notranslate"><span class="pre">System</span></code> is the class that holds <code class="docutils literal notranslate"><span class="pre">out</span></code>, <code class="docutils literal notranslate"><span class="pre">println</span></code> is the method, and <code class="docutils literal notranslate"><span class="pre">&quot;Hi&quot;</span></code> is the argument.</p>
+</details>
+<p><strong>Q2. Assume <code class="docutils literal notranslate"><span class="pre">Bike</span> <span class="pre">b</span> <span class="pre">=</span> <span class="pre">new</span> <span class="pre">Bike();</span></code> where <code class="docutils literal notranslate"><span class="pre">getSpeed()</span></code> returns an <code class="docutils literal notranslate"><span class="pre">int</span></code>, and <code class="docutils literal notranslate"><span class="pre">pedal()</span></code>, <code class="docutils literal notranslate"><span class="pre">paint(String</span> <span class="pre">color)</span></code>, and <code class="docutils literal notranslate"><span class="pre">brake()</span></code> are all void. Which line calls a method and uses the value it returns?</strong></p>
+<ul class="simple">
+<li><p>A. <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">s</span> <span class="pre">=</span> <span class="pre">b.getSpeed();</span></code></p></li>
+<li><p>B. <code class="docutils literal notranslate"><span class="pre">b.pedal();</span></code></p></li>
+<li><p>C. <code class="docutils literal notranslate"><span class="pre">b.paint(&quot;red&quot;);</span></code></p></li>
+<li><p>D. <code class="docutils literal notranslate"><span class="pre">b.brake();</span></code></p></li>
+</ul>
+<details>
+<summary>Show answer</summary>
+<p><strong>Answer: A</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">getSpeed()</span></code> is non-void: it hands back an <code class="docutils literal notranslate"><span class="pre">int</span></code>, which the line stores in <code class="docutils literal notranslate"><span class="pre">s</span></code>. B, C, and D call void methods. They perform an action and return nothing, so there is no value to store or use.</p>
+</details>
+<p><strong>Q3. <code class="docutils literal notranslate"><span class="pre">addTiers(int</span> <span class="pre">extra)</span></code> is a void method that adds tiers to the <code class="docutils literal notranslate"><span class="pre">Cake</span></code> it is called on. <code class="docutils literal notranslate"><span class="pre">getTiers()</span></code> returns the number of tiers. What is printed?</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Cake</span><span class="w"> </span><span class="n">c1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Cake</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="n">Cake</span><span class="w"> </span><span class="n">c2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Cake</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="n">c1</span><span class="p">.</span><span class="na">addTiers</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">c1</span><span class="p">.</span><span class="na">getTiers</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c2</span><span class="p">.</span><span class="na">getTiers</span><span class="p">());</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>A. <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">5</span></code></p></li>
+<li><p>B. <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">6</span></code></p></li>
+<li><p>C. <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">8</span></code></p></li>
+<li><p>D. <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">5</span></code></p></li>
+</ul>
+<details>
+<summary>Show answer</summary>
+<p><strong>Answer: D</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">c1</span></code> and <code class="docutils literal notranslate"><span class="pre">c2</span></code> are two different objects, and each keeps its own tiers. <code class="docutils literal notranslate"><span class="pre">c1.addTiers(1)</span></code> changes only <code class="docutils literal notranslate"><span class="pre">c1</span></code>, so <code class="docutils literal notranslate"><span class="pre">c1</span></code> has 3 tiers and <code class="docutils literal notranslate"><span class="pre">c2</span></code> still has 5.</p>
+</details>
+<p><strong>Q4. What is printed?</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"hello"</span><span class="p">;</span>
+<span class="n">s</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">();</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>A. <code class="docutils literal notranslate"><span class="pre">HELLO</span></code></p></li>
+<li><p>B. <code class="docutils literal notranslate"><span class="pre">hello</span></code></p></li>
+<li><p>C. <code class="docutils literal notranslate"><span class="pre">Hello</span></code></p></li>
+<li><p>D. It does not compile.</p></li>
+</ul>
+<details>
+<summary>Show answer</summary>
+<p><strong>Answer: B</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">toUpperCase()</span></code> is a non-void method: it <strong>returns</strong> a new <code class="docutils literal notranslate"><span class="pre">String</span></code>. The line never stores or uses that returned value, so the answer is thrown away, and <code class="docutils literal notranslate"><span class="pre">s</span></code> is unchanged. To use the result you would write <code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">s.toUpperCase();</span></code> or <code class="docutils literal notranslate"><span class="pre">String</span> <span class="pre">big</span> <span class="pre">=</span> <span class="pre">s.toUpperCase();</span></code>. You will see why in 1.15: a <code class="docutils literal notranslate"><span class="pre">String</span></code> object cannot be changed after it is created.</p>
 </details>
 <p>#############################################################################</p>
 </section>
