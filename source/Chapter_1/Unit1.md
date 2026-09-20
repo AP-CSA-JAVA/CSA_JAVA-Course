@@ -3982,72 +3982,80 @@ ghost.addItem("pen");   // compiles, but at RUN time: NullPointerException
 
 ### Instance Methods — Practice Questions
 
-**Q1. Which line correctly calls the instance method `addItem` on the `Backpack` object `myBag`?**
+**Q1. In `System.out.println("Hi");`, which part is the object that the method `println` is called on?**
 
-- A. `Backpack.addItem("pen");`
-- B. `myBag.addItem("pen");`
-- C. `addItem(myBag, "pen");`
-- D. `myBag(addItem, "pen");`
-
-<details>
-<summary>Show answer</summary>
-
-**Answer: B**
-
-An instance method is called on an **object**: the object, a dot, then the method name and arguments. A uses a class name, which only works for `static` methods. C and D are not valid Java call syntax.
-
-</details>
-
-**Q2. `tom` and `jerry` are two `Racecar` objects. Both call `computeTime(2414)`, but they get different results. Why?**
-
-- A. `computeTime` is a `static` method.
-- B. Java chooses a random answer each time.
-- C. `tom` was created first, so it is always faster.
-- D. Each object stores its own acceleration, and the method uses the data of the object before the dot.
-
-<details>
-<summary>Show answer</summary>
-
-**Answer: D**
-
-The method code is the same, but the **data** belongs to each object. `tom.computeTime(...)` uses tom's acceleration; `jerry.computeTime(...)` uses jerry's.
-
-</details>
-
-**Q3. Which line will NOT compile? (`addItem` is void; `getItem` returns a `String`.)**
-
-- A. `int n = myBag.addItem("pen");`
-- B. `String s = myBag.getItem();`
-- C. `myBag.addItem("pen");`
-- D. `System.out.println(myBag.getItem());`
-
-<details>
-<summary>Show answer</summary>
-
-**Answer: A**
-
-A void method returns nothing, so there is no value to store in `n`. The compiler reports: incompatible types: void cannot be converted to int. B, C, and D all use the methods correctly.
-
-</details>
-
-**Q4. What happens?**
-
-```java
-Backpack ghost = null;
-ghost.addItem("pen");
-```
-
-- A. A compile-time error.
-- B. Nothing — Java skips the line.
-- C. It compiles, then throws a `NullPointerException` when it runs.
-- D. Java creates a new `Backpack` automatically.
+- A. `System`
+- B. `println`
+- C. `System.out`
+- D. `"Hi"`
 
 <details>
 <summary>Show answer</summary>
 
 **Answer: C**
 
-`ghost` is a legal `Backpack` variable, so the code compiles. At run time there is no object at that address, so Java throws a `NullPointerException`.
+`System.out` is an **object** (a `PrintStream`), and `println` is one of the things it can do. `System` is the class that holds `out`, `println` is the method, and `"Hi"` is the argument.
+
+</details>
+
+**Q2. Assume `Bike b = new Bike();` where `getSpeed()` returns an `int`, and `pedal()`, `paint(String color)`, and `brake()` are all void. Which line calls a method and uses the value it returns?**
+
+- A. `int s = b.getSpeed();`
+- B. `b.pedal();`
+- C. `b.paint("red");`
+- D. `b.brake();`
+
+<details>
+<summary>Show answer</summary>
+
+**Answer: A**
+
+`getSpeed()` is non-void: it hands back an `int`, which the line stores in `s`. B, C, and D call void methods. They perform an action and return nothing, so there is no value to store or use.
+
+</details>
+
+**Q3. `addTiers(int extra)` is a void method that adds tiers to the `Cake` it is called on. `getTiers()` returns the number of tiers. What is printed?**
+
+```java
+Cake c1 = new Cake(2);
+Cake c2 = new Cake(5);
+c1.addTiers(1);
+System.out.println(c1.getTiers() + " " + c2.getTiers());
+```
+
+- A. `2 5`
+- B. `3 6`
+- C. `8 8`
+- D. `3 5`
+
+<details>
+<summary>Show answer</summary>
+
+**Answer: D**
+
+`c1` and `c2` are two different objects, and each keeps its own tiers. `c1.addTiers(1)` changes only `c1`, so `c1` has 3 tiers and `c2` still has 5.
+
+</details>
+
+**Q4. What is printed?**
+
+```java
+String s = "hello";
+s.toUpperCase();
+System.out.println(s);
+```
+
+- A. `HELLO`
+- B. `hello`
+- C. `Hello`
+- D. It does not compile.
+
+<details>
+<summary>Show answer</summary>
+
+**Answer: B**
+
+`toUpperCase()` is a non-void method: it **returns** a new `String`. The line never stores or uses that returned value, so the answer is thrown away, and `s` is unchanged. To use the result you would write `s = s.toUpperCase();` or `String big = s.toUpperCase();`. You will see why in 1.15: a `String` object cannot be changed after it is created.
 
 </details>
 
