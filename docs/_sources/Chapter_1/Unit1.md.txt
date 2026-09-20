@@ -24,7 +24,7 @@ Name:          Jordan Smith
 Partner:       Alex Rivera
 Course:        AP Computer Science A
 Instructor:    [Instructor Name]
-Assignment:    1.3.1 — Calculate Your Weight on Jupiter
+Assignment:    1.03.1 — Calculate Your Weight on Jupiter
 Due Date:      September 12, 2026
 ```
 
@@ -128,10 +128,10 @@ Most work is done in class, so the late work policy is not applicable.  For any 
 
 ---
 
-## 1.1 Introduction to Algorithms, Programming, and Compilers
+## 1.01 Introduction to Algorithms, Programming, and Compilers
 
 <details>
-<summary>📌 Standards — 1.1</summary>
+<summary>📌 Standards — 1.01</summary>
 
 | Standard | Description |
 | -------- | ----------- |
@@ -163,7 +163,7 @@ public static void main(String args[]) // `public` is an access specifier.
 ```
 
 
-> ### Assignment 1.1.1 — My Timeline
+> ### Assignment 1.01.1 — My Timeline
 >
 > Create a personal timeline of at least seven meaningful events in your life using the `print` and `println` methods. The timeline will proceed vertically — earlier events near the top, later events near the bottom. Make it look professional. HINT: use `\t`
 >
@@ -183,10 +183,10 @@ public static void main(String args[]) // `public` is an access specifier.
 
 ---
 
-## 1.1a Understanding Java — *Oracle Foundations 1Z0-811*
+## 1.01a Understanding Java — *Oracle Foundations 1Z0-811*
 
 <details>
-<summary>📌 Standards — 1.1a</summary>
+<summary>📌 Standards — 1.01a</summary>
 
 | Standard | Description |
 | -------- | ----------- |
@@ -513,7 +513,7 @@ public class Main {                          // 1. Class declaration — must ma
 | **`main` method** | The starting point of any runnable Java program. Its signature (`public static void main(String[] args)`) never changes. |
 | **Statements** | Individual instructions, each ending in a semicolon `;`. |
 | **Blocks `{ }`** | Group statements together — a class body, a method body, a loop body, etc. |
-| **(Optional) `import` statements** | Placed *above* the class declaration, used to bring in classes from other packages (see Unit 1.7). |
+| **(Optional) `import` statements** | Placed *above* the class declaration, used to bring in classes from other packages (see Unit 1.07). |
 
 > **Oracle Exam Note:** A frequent Oracle exam trap is a file where the public class name does *not* match the filename — this is a compile-time error, not a warning.
 
@@ -543,10 +543,10 @@ Java shows up in far more places than classroom assignments. A few examples wort
 
 ---
 
-## 1.2 Variables and Data Types
+## 1.02 Variables and Data Types
 
 <details>
-<summary>📌 Standards — 1.2</summary>
+<summary>📌 Standards — 1.02</summary>
 
 | Standard | Description |
 | -------- | ----------- |
@@ -596,7 +596,7 @@ When you declare a variable, you must state the variable type along with the var
 Once you have declared the variable type, you **do not need to do it again** to reassign a value to the variable. If you declare a variable as `final` you cannot change the value of it. `final` variables are written as ALL CAPS.
 
 >
-> ### Assignment 1.2.1 — Allowance
+> ### Assignment 1.02.1 — Allowance
 >
 > Write a program that will determine who receives an allowance or not. Use the information below as a guide:
 > - [ ] Allowance is always $30.00/week
@@ -694,7 +694,7 @@ public class Allowance {
 ---
 
 >
-> ### Assignment 1.2.2 — Scanner Class
+> ### Assignment 1.02.2 — Scanner Class
 > 
 > The Scanner class is a package that provides primitive input within Java programs. It can be found in the [java.util Package](https://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html).
 > 
@@ -713,7 +713,7 @@ public class Allowance {
 // Partner:       [Partner's Full Name, or "None"]
 // Course:        AP Computer Science A
 // Instructor:    [Instructor Name]
-// Assignment:    1.2.2 — Scanner Class
+// Assignment:    1.02.2 — Scanner Class
 // Due Date:      [Month Day, Year]
 
 /* ============================================================
@@ -798,10 +798,10 @@ public class ScannerDemo {
 
 ---
 
-## 1.3 Expressions and Output
+## 1.03 Expressions and Output
 
 <details>
-<summary>📌 Standards — 1.3</summary>
+<summary>📌 Standards — 1.03</summary>
 
 | Standard | Description |
 | -------- | ----------- |
@@ -834,7 +834,7 @@ public class ScannerDemo {
 **Note:** When you divide an integer by zero your program will return an *ArithmeticException* error.
 
 >
-> ### Assignment 1.3.1 — Calculate Your Weight on Jupiter
+> ### Assignment 1.03.1 — Calculate Your Weight on Jupiter
 >
 > Using the equation below, calculate what your weight would be on different planets:
 >
@@ -890,7 +890,7 @@ public class GalaxyWeight{
 ---
 
 > 
-> ### Assignment 1.3.2 — Simple Math
+> ### Assignment 1.03.2 — Simple Math
 > 
 > - [ ] Create a program that will ask the user for two distinct integers
 > - [ ] Use the Scanner class to receive input from the user
@@ -901,10 +901,10 @@ public class GalaxyWeight{
 
 ---
 
-## 1.4 Assignment Statements and Input
+## 1.04 Assignment Statements and Input
 
 <details>
-<summary>📌 Standards — 1.4</summary>
+<summary>📌 Standards — 1.04</summary>
 
 | Standard | Description |
 | -------- | ----------- |
@@ -943,7 +943,7 @@ System.out.println("b = " + b++);  // b = 5 (post-increment: original returned f
 ```
 
 >
-> ### Assignment 1.4.1 — Compound Operators
+> ### Assignment 1.04.1 — Compound Operators
 > 
 > ```java
 > public class CompoundOperators
@@ -1027,7 +1027,7 @@ One thing worth pointing out to students: `%d` **only** works with integer types
 ---
 
 >
-> ### Assignment 1.4.2 — Average Test Score / Cashier Totals
+> ### Assignment 1.04.2 — Average Test Score / Cashier Totals
 > 
 > **Directions:** No starter code will be provided for the program below.  Write two programs that will do the following:
 > 
@@ -1076,10 +1076,10 @@ One thing worth pointing out to students: `%d` **only** works with integer types
 #############################################################################
 
 
-## 1.5 Casting and Range of Variables
+## 1.05 Casting and Range of Variables
 
 <details>
-<summary>📌 Standards — 1.5</summary>
+<summary>📌 Standards — 1.05</summary>
 
 | Standard | Description |
 | -------- | ----------- |
@@ -1176,7 +1176,7 @@ We know that we don't have 0 eggs.  We can rewrite our program to show how many 
 
 #############################################################################
 
-### Assignment 1.5.1 — FivePlanetTravel
+### Assignment 1.05.1 — FivePlanetTravel
 
 > 
 > You will explore the PlanetTravel program called **FivePlanetTravel**. The program is set up to plan a five-planet tour!
@@ -1242,16 +1242,16 @@ Your output should look similar to the example above. You will write a **widenin
 
 #############################################################################
 
-## 1.6 Compound Assignment Operators
+## 1.06 Compound Assignment Operators
 
-*(See section 1.4 — covered in depth with compound assignment operators and prefix/postfix increment/decrement.)*
+*(See section 1.04 — covered in depth with compound assignment operators and prefix/postfix increment/decrement.)*
 
 #############################################################################
 
-## 1.7 Application Program Interface (API) and Libraries
+## 1.07 Application Program Interface (API) and Libraries
 
 <details>
-<summary>📌 Standards — 1.7</summary>
+<summary>📌 Standards — 1.07</summary>
 
 | Standard | Description |
 | -------- | ----------- |
@@ -1315,7 +1315,7 @@ Pick one Java library or API from the list below (or propose your own with instr
 
 #############################################################################
 
-## 1.7a Where Do Objects Live? — Heap Memory
+## 1.07a Where Do Objects Live? — Heap Memory
 
 Every time your program uses `new` to create an object — a `Scanner`, a `Random`, a `String` — Java needs somewhere to store it. That somewhere is called the **heap**.
 
@@ -1397,7 +1397,7 @@ System.out.println(s1.equals(s3));    // true  — same content
 
 #############################################################################
 
-## 1.7b Packages & APIs
+## 1.07b Packages & APIs
 
 When you write a Java program, you do not have to build everything from scratch. Java provides thousands of pre-built classes organized into **packages**. A **package** is a folder of related classes. Together, all of these packages make up the Java **standard library**.
 
@@ -1415,10 +1415,10 @@ import java.util.Random;    // imports the Random class from the java.util packa
 
 #############################################################################
 
-### Assignment 1.7.1 — Heap Detective: Tracing References & Memory
+### Assignment 1.07.1 — Heap Detective: Tracing References & Memory
 
 <details>
-<summary>📌 Standards — 1.7.3</summary>
+<summary>📌 Standards — 1.07.1</summary>
 
 | Standard | Description                                                 |
 | -------- | ------------------------------------------------------------ |
@@ -1566,7 +1566,7 @@ import java.util.Random;    // imports the Random class from the java.util packa
 > // Partner:       [Partner's Full Name, or "None"]
 > // Course:        AP Computer Science A
 > // Instructor:    [Instructor Name]
-> // Assignment:    1.7.3 — Heap Detective: Tracing References and Memory
+> // Assignment:    1.07.1 — Heap Detective: Tracing References and Memory
 > // Due Date:      [Month Day, Year]
 > //
 > // Explanation: [TODO — after finishing the program, explain in 2-3
@@ -1648,7 +1648,7 @@ import java.util.Random;    // imports the Random class from the java.util packa
 #############################################################################
 
 
-### Assignment 1.7.2 — Magic 8-Ball: Exploring APIs and Libraries
+### Assignment 1.07.2 — Magic 8-Ball: Exploring APIs and Libraries
 
 **Overview**
 
@@ -1810,10 +1810,10 @@ By the end of this activity you will be able to:
 #############################################################################
 
 
-## 1.8 Documentation with Comments
+## 1.08 Documentation with Comments
 
 <details>
-<summary>📌 Standards — 1.8</summary>
+<summary>📌 Standards — 1.08</summary>
 
 | Standard | Description |
 | -------- | ----------- |
@@ -1866,10 +1866,10 @@ With **every** .java project that you submit, include the following block commen
 
 ---
 
-## 1.9 Method Signatures
+## 1.09 Method Signatures
 
 <details>
-<summary>📌 Standards — 1.9</summary>
+<summary>📌 Standards — 1.09</summary>
 
 | Standard | Description |
 | -------- | ----------- |
@@ -2484,7 +2484,7 @@ Time Rounded Down: 5.0 sec
 
 ##########################################################################
 
-> **Note:** The constructor below is provided for you. You are not expected to know how to write one yet — you'll learn how constructors work, and write your own from scratch, in Unit 1.13 (Object Creation).
+> **Note:** The constructor below is provided for you. You are not expected to know how to write one yet — you'll learn how constructors work, and write your own from scratch, in Unit 1.12 (Object Creation).
 
 ```java
 public class RollerCoasterSimulator {
@@ -2498,7 +2498,7 @@ public class RollerCoasterSimulator {
     private double time;
     private double gForce;
 
-    // Constructor — provided for you (see Unit 1.13 to learn how this works)
+    // Constructor — provided for you (see Unit 1.12 to learn how this works)
     public RollerCoasterSimulator(double height, double angle, double trackLength) {
         this.height = height;
         this.angle = angle;
@@ -2590,10 +2590,10 @@ You have already used these concepts individually. This activity brings them tog
 
 | Prior Activity | Concept Used Here |
 | -------------- | ----------------- |
-| 1.7.1 Magic 8-Ball | `import java.util.Random`, `nextInt(bound)` |
+| 1.07.2 Magic 8-Ball | `import java.util.Random`, `nextInt(bound)` |
 | 1.10.1 Mission Control | Writing and calling static and instance methods |
 | 1.11.1 Roller Coaster Simulator | `Math.sqrt()`, physics formulas, `Math.round()` |
-| 1.13 Object Creation | Constructors, instance variables, `toString()` |
+| 1.12 Object Creation | Constructors, instance variables, `toString()` |
  
 ##########################################################################
  
@@ -2616,7 +2616,7 @@ You implemented a similar formula in **Activity 1.11.1** when calculating speed 
  
 ### Generating a Bounded Random Integer
  
-In **Activity 1.7.1** you used `Random.nextInt(bound)` to pick a Magic 8-Ball response. Here you will use it to assign each car a random acceleration between **20 and 50 inclusive**:
+In **Activity 1.07.2** you used `Random.nextInt(bound)` to pick a Magic 8-Ball response. Here you will use it to assign each car a random acceleration between **20 and 50 inclusive**:
  
 ```java
 Random rand = new Random();
@@ -2697,11 +2697,11 @@ public class Main
  
         // TODO: Generate a random acceleration (integer) for each car
         // from 20 to 50 (inclusive) using rand.nextInt()
-        // Hint: review Activity 1.7.1 — how did you restrict nextInt() to a range?
+        // Hint: review Activity 1.07.2 — how did you restrict nextInt() to a range?
  
         // TODO: Create two Racecar objects — one named "Tom", one named "Jerry"
         // Pass each car its random acceleration (cast to double) and driver name
-        // Hint: review Activity 1.13 — how did you instantiate objects?
+        // Hint: review Activity 1.12 — how did you instantiate objects?
  
         // TODO: Compute the finishing time for both cars
         // Call computeTime(distance) on each Racecar object and store the result
@@ -2814,7 +2814,7 @@ public class Main
 ## 1.12 Object Creation and Storage (Instantiation)
 
 
-**📌 Standards — 1.13**
+**📌 Standards — 1.12**
 <details><Summary></Summary>Summary>
 | Standard | Description                                                         |
 | -------- | -------------------------------------------------------------------- |
@@ -2933,7 +2933,7 @@ Cake c4 = new Cake("Carrot", 10, false);       // Carrot, 10 servings, no frosti
 
 #############################################################################
 
-### Assignment 1.12.1 — Bakery Order System[¶](#assignment-1-13-1-bakery-order-system "Link to this heading")
+### Assignment 1.12.1 — Bakery Order System
 
 **Overview**
 
@@ -2986,7 +2986,7 @@ public class Order {
 // Partner:       [Partner's Full Name, or "None"]
 // Course:        AP Computer Science A
 // Instructor:    [Instructor Name]
-// Assignment:    1.13.1 — Bakery Order System: Building Multiple Constructors
+// Assignment:    1.12.1 — Bakery Order System: Building Multiple Constructors
 // Due Date:      [Month Day, Year]
 
 public class Main {
@@ -3014,6 +3014,54 @@ Order: 1 Medium Birthday Cake(s)  |  Rush: false
 Order: 6 Medium Cupcake(s)  |  Rush: false
 Order: 3 Large Wedding Cake(s)  |  Rush: true
 ```
+
+---
+
+### Assignment 1.12.2 — Extra Practice: Student Constructors
+
+> **Extra practice.** Complete this after 1.12.1 for more work with overloaded constructors. In 1.13 you will learn `toString()` — come back and replace `printInfo()` with it as a challenge.
+
+**Overview**
+
+Create a `Student` class that can be built in several different ways, depending on how much you know about the student when you create the object.
+
+By the end of this activity you will be able to:
+
+- [ ] Write a no-argument constructor that sets default values
+- [ ] Write parameterized constructors with increasing levels of detail
+- [ ] Use `this` to distinguish parameters from instance variables
+- [ ] Create objects with each constructor and call an instance method on each
+
+**Requirements Checklist**
+
+- [ ] Include the required block comment header in `Main.java` (all fields completed)
+- [ ] Create a `Student` class with these **private** instance variables: `name` (`String`), `age` (`int`), `gpa` (`double`)
+- [ ] Write **four constructors**:
+
+  1. **No-argument constructor** — sets `"Unknown"`, `0`, and `0.0`
+  2. **One-parameter constructor** — takes only `name`; `age` and `gpa` use the same defaults
+  3. **Two-parameter constructor** — takes `name` and `age`; `gpa` uses the default
+  4. **Three-parameter constructor** — takes `name`, `age`, and `gpa`
+
+- [ ] Write a `printInfo()` instance method that prints the student in the format shown below
+- [ ] In `Main`, create at least one `Student` with each constructor and call `printInfo()` on each
+- [ ] Include meaningful inline comments throughout
+
+**Sample Output**
+
+```
+Student{name='Unknown', age=0, gpa=0.0}
+Student{name='Alice', age=0, gpa=0.0}
+Student{name='Bob', age=17, gpa=0.0}
+Student{name='Charlie', age=18, gpa=3.7}
+```
+
+**Submission**
+
+Upload the following to the assignment:
+
+- [ ] `Student.java` and `Main.java` — completed with header
+- [ ] Test Cases document showing your program's actual output
 
 ---
 
@@ -3468,7 +3516,7 @@ public class Book
 // Partner:       [Partner's Full Name, or "None"]
 // Course:        AP Computer Science A
 // Instructor:    [Instructor Name]
-// Assignment:    1.13a.1 — BookReport
+// Assignment:    1.13.1 — BookReport
 // Due Date:      [Month Day, Year]
 
 public class Main
@@ -3531,7 +3579,7 @@ Upload the following:
 Build a `Player` class and print an entire roster of `Player` objects, demonstrating that `toString()` fires the same way every time — one object, ten objects, it doesn't matter — because Java calls it, you never have to.
 
 By the end of this activity you will be able to:
-- [ ] Override `toString()` for a class with more instance variables than 1.13a.1
+- [ ] Override `toString()` for a class with more instance variables than 1.13.1
 - [ ] Print multiple objects of the same class in a loop and observe `toString()` firing each time
 - [ ] Distinguish between calling `.toString()` explicitly and letting Java call it implicitly
 
@@ -3576,7 +3624,7 @@ public class Player
 // Partner:       [Partner's Full Name, or "None"]
 // Course:        AP Computer Science A
 // Instructor:    [Instructor Name]
-// Assignment:    1.13a.2 — Team Roster
+// Assignment:    1.13.2 — Team Roster
 // Due Date:      [Month Day, Year]
 
 public class Main
@@ -3642,11 +3690,145 @@ Upload the following:
 - [ ] `Player.java` and `Main.java` — completed with header
 - [ ] Test Cases document showing your program's actual output for the full roster and the concatenation line
 
+### Assignment 1.13.3 — Extra Practice: Sports Class
+
+> **Extra practice.** Complete this after 1.13.2 to design a class from scratch.
+
+**Overview**
+
+Write a class related to a professional sport of your choice (football, soccer, basketball, baseball, and so on). You decide what an object of your class *knows* — its attributes — and you use `toString()` to print it.
+
+By the end of this activity you will be able to:
+
+- [ ] Choose meaningful instance variables of different types (`String`, `int`, `boolean`)
+- [ ] Write a constructor that sets every instance variable
+- [ ] Override `toString()` to print an object as readable text
+
+**Requirements Checklist**
+
+- [ ] Include the required block comment header in `Main.java` (all fields completed)
+- [ ] Create a class related to a professional sport of your choice
+- [ ] Give it at least **six** private instance variables, including at least one `String`, one `int`, and one `boolean`
+- [ ] Write a constructor that sets all of them
+- [ ] Override `toString()` with `@Override`; it must **return** (not print) the text
+- [ ] In `Main`, create at least one object and print it directly with `System.out.println(...)`
+- [ ] Include meaningful inline comments throughout
+
+**Example Output**
+
+```
+Name: Marcelo Vieira da Silva Jr.
+Team: Real Madrid
+Position: left-back
+Number: 12
+Goals: 0
+Starting: true
+```
+
+> **Note:** A Java `boolean` prints as `true` or `false` in lowercase.
+
+**Submission**
+
+Upload the following to the assignment:
+
+- [ ] All `.java` files — completed with header
+- [ ] Test Cases document showing your program's actual output
+
+---
+
+### Assignment 1.13.4 — Extra Practice: Dog Pizza
+
+> **Extra practice.** Complete this after 1.13.2 for more work with constructors and `toString()`.
+
+**Overview**
+
+In Part A you finish a `Dog` class that is partly written. In Part B you build a `Pizza` class yourself. Both print through `toString()`.
+
+By the end of this activity you will be able to:
+
+- [ ] Declare instance variables and write a constructor for a partly written class
+- [ ] Write a class from scratch, including `toString()`
+- [ ] Explain why `System.out.println(someObject)` prints the text `toString()` returns
+
+**Part A — Finish the Dog class**
+
+- [ ] Declare two private instance variables: `breed` and `name` (both `String`)
+- [ ] Write a constructor that takes `breed` first and `name` second, and assigns both
+- [ ] Do **not** modify the provided `toString()`
+
+**Part B — Build the Pizza class**
+
+- [ ] `Pizza` has private instance variables: `size` (`int`, in inches), `type` (`String`), and `toppings` (`String`)
+- [ ] Write a constructor that sets all three
+- [ ] Write `toString()` so that it returns text in the format shown in the sample output
+- [ ] In `Main`, create **three** pizzas and print each one directly with `System.out.println(...)`
+
+**Requirements Checklist**
+
+- [ ] Include the required block comment header in `Main.java` (all fields completed)
+- [ ] Complete Part A and Part B
+- [ ] Include meaningful inline comments throughout
+
+**Starter Code — Dog.java:**
+
+```java
+public class Dog
+{
+    // TODO: declare the two private instance variables
+
+    // TODO: write the constructor (breed first, then name)
+
+    // This method works once you finish the instance variables and the constructor.
+    // DO NOT modify this method.
+    public String toString()
+    {
+        return name + " is a " + breed;
+    }
+}
+```
+
+**Starter Code — Main.java:**
+
+```java
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Dog golden = new Dog("Golden Retriever", "Sammy");
+        System.out.println(golden);
+
+        // TODO: create three Pizza objects below and print each one
+    }
+}
+```
+
+**Starter Code — Pizza.java:**
+
+```java
+// TODO: write the Pizza class (Part B)
+```
+
+**Sample Output**
+
+```
+Sammy is a Golden Retriever
+12 inch Veggie pizza with Tomatoes, onions, olives
+15 inch Cheese pizza with Cheese
+20 inch Meat pizza with Pepperoni, sausage, bacon
+```
+
+**Submission**
+
+Upload the following to the assignment:
+
+- [ ] `Dog.java`, `Pizza.java`, and `Main.java` — completed with header
+- [ ] Test Cases document showing your program's actual output
+
 ---
 
 **Grading**
 
-Both assignments are graded using the **AP CSA Generic Assignment Rubric** (5-point scale):
+All assignments in this section are graded using the **AP CSA Generic Assignment Rubric** (5-point scale):
 
 | Points | Grade            | Compilation & Output                                                                                          | Documentation & Style                                                                                                                                         | Submission                                                                            |
 | ------ | ---------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
@@ -3676,17 +3858,46 @@ Both assignments are graded using the **AP CSA Generic Assignment Rubric** (5-po
 
 | Standard | Description |
 | -------- | ----------- |
-| ICT 5.8 | Create and use algorithms and solve problems |
-| ICT 5.9 | Deconstruct large problems into components |
+| AP CSA 1.14.A | Develop code to call instance methods and determine the result of these calls |
+| C4.5 | Demonstrate awareness of the OOP paradigm |
+| C4.7 | Use various data structures including objects |
 | C4.8 | Use OOP concepts: properties and methods |
 | C4.9 | Create programs using procedures and functions with parameters |
+| ICT 5.10 | Use multiple layers of abstraction |
 | CRP 1 | Apply appropriate technical skills and academic knowledge |
 | CRP 5 | Utilize critical thinking to make sense of problems |
 
 </details>
 
-- [ ] Understand how to call methods on an object.
-- [ ] Distinguish between calling void and non-void instance methods.
+- [ ] Explain that an object bundles **data** (instance variables) with **behavior** (instance methods).
+- [ ] Call void and non-void instance methods on an object using the dot operator.
+- [ ] Predict the output when two variables refer to different objects, or to the same object.
+- [ ] Explain the difference between a compile-time error and a run-time error when a call is wrong or the reference is `null`.
+	- [ ] I will be able to explain what happens when I type `object.method()`.
+
+### Object = Data + Behavior
+
+Every object bundles two things: **data** — what it *knows* — and **behavior** — what it can *do*.
+
+| | Data | Behavior |
+| --- | --- | --- |
+| In Java it is called | **instance variables** | **instance methods** |
+| A `Backpack` | `item` | `addItem()`, `getItem()` |
+| A `Racecar` | `accel`, `name` | `computeTime()` |
+| A phone (in real life) | contacts, battery level | call, lock the screen |
+
+An **instance variable** holds one piece of an object's data. An **instance method** is one thing the object can do. Each object has its **own** copy of the data, so two objects of the same class can act differently. In 1.12 you learned how to *build* objects with constructors. In this section you learn how to *ask them to do things*.
+
+### You Have Been Calling Instance Methods All Year
+
+You already know this pattern. You have used it in every unit so far:
+
+| Call | Object (before the dot) | Method (after the dot) | Void or non-void? |
+| ---- | ----------------------- | ---------------------- | ----------------- |
+| `input.nextInt()` | `input` (a `Scanner`) | `nextInt()` | non-void — returns an `int` |
+| `rand.nextInt(31)` | `rand` (a `Random`) | `nextInt(31)` | non-void — returns an `int` |
+| `sameBag.addItem("pencil")` | `sameBag` (a `Backpack`) | `addItem("pencil")` | void — performs an action |
+| `greeting.length()` | `greeting` (a `String`) | `length()` | non-void — returns an `int` |
 
 ```java
 // Calling an instance method on an object
@@ -3695,320 +3906,928 @@ int len = greeting.length();        // non-void: returns a value
 System.out.println(greeting);       // void: performs an action
 ```
 
-#############################################################################
+Even `System.out.println()` is an instance method call: `System.out` is an **object**, and `println` is something it can *do*.
 
-### Assignment 1.14.1 — Sports Class
+### The Pattern
 
-> 
-> Write a class related to a professional sport (Football, soccer, basketball, etc.)
-> 
-> - Create a class related to a professional sport of your choice
-> - Create attributes/instance variables for the class
-> - Create a constructor for your class
-> - Create an instance of the class
-> - Create a `toString()` method to print out the object
-> 
-> **Example Output:**
-> ```
-> Name: Marcelo Vieira da Silva Jr.
-> Team: Real Madrid
-> Position: left-back
-> Number: 12
-> Goals: 0
-> Starting: True
-> ```
->
+```
+object . method ( arguments )
+  who  . does what ( with what )
+```
 
-#############################################################################
+> **The object before the dot decides whose data is used.**
 
-### Assignment 1.14.2 — Not Another Cake
+```java
+Racecar tom = new Racecar(40, "Tom");      // tom's acceleration is 40
+Racecar jerry = new Racecar(25, "Jerry");  // jerry's acceleration is 25
 
-> 
-> **Directions:** Look at the `Cake.java` program below. Create a 1-tier cake, 2-tier cake, and a 3-tier cake. Print out the reference location of the constructor. A solution is provided if you get stuck.
-> 
-> **Submission Requirements:**
-> - Create a **unique program of your choice** (not another Cake)
-> - Create four constructors:
->   - default constructor (no parameters)
->   - constructor with 1 parameter
->   - constructor with 2 parameters
->   - constructor with 3 parameters
-> - Use appropriate comments throughout your program
-> - Use `toString()` method to display all objects
-> - Submit all program files as `.java` files (Main.java, YourClass.java, etc.)
-> 
-> **Cake.java — Reference Program:**
-> 
-> ```java
-> public class Cake
-> {
->     private int tiers;
->     private String flavor;
->     private String frosting;
-> 
->     // Constructor 1: no parameters (default constructor)
->     // Creates a basic 1-tier cake with default flavor/frosting
->     public Cake()
->     {
->         tiers = 1;
->         flavor = "Vanilla";
->         frosting = "Buttercream";
->         drawCake();
->     }
-> 
->     // Constructor 2: one parameter
->     // Lets the caller choose the number of tiers
->     public Cake(int numTiers)
->     {
->         tiers = numTiers;
->         flavor = "Vanilla";
->         frosting = "Buttercream";
->         drawCake();
->     }
-> 
->     // Constructor 3: two parameters
->     // Lets the caller choose tiers and flavor
->     public Cake(int numTiers, String cakeFlavor)
->     {
->         tiers = numTiers;
->         flavor = cakeFlavor;
->         frosting = "Buttercream";
->         drawCake();
->     }
-> 
->     // Constructor 4: three parameters
->     // Lets the caller choose tiers, flavor, and frosting
->     public Cake(int numTiers, String cakeFlavor, String cakeFrosting)
->     {
->         tiers = numTiers;
->         flavor = cakeFlavor;
->         frosting = cakeFrosting;
->         drawCake();
->     }
-> 
->   // Draws a cake with a number of layers equal to `tiers`.
-> 	// Each layer gets wider going down, and narrower layers are
->   // centered above the wider ones — this is what creates the
->   // tiered wedding-cake look instead of a stack of flush-left boxes.
-> 
-> private void drawCake()
-> {
->     System.out.println("   ,,,");
->     System.out.println("   |||");
-> 
->     int maxWidth = 10 + 4 * (tiers - 1);   // width of the bottom (widest) tier
-> 
->     for (int layer = 1; layer <= tiers; layer++)
->     {
->         int width = 10 + 4 * (layer - 1);       // this tier's width
->         int indent = (maxWidth - width) / 2;    // spaces needed to center it
-> 
->        String spacer = " ".repeat(indent);
->         String top = "(" + "*".repeat(width) + ")";
->         String side = "(*" + " ".repeat(width - 2) + "*)";
-> 
->         System.out.println(spacer + top);
->         System.out.println(spacer + side);
->         System.out.println(spacer + side);
->     }
->     System.out.println("Flavor: " + flavor + " | Frosting: " + frosting);
->     System.out.println();
-> }
-> 
->     // NOTE: No toString() override on purpose.
->     // When you print a Cake object directly (e.g. System.out.println(myCake)),
->     // Java shows the DEFAULT representation: Cake@<hashcode>.
->     // That's what the assignment means by "print the reference location" —
->     // it's proof that each object lives at its own separate address in the heap.
-> }
-> 
-> **Main.java — Starter Code:**
-> 
-> ```java
-> public class Main
-> {
->   public static void main(String[] args)
->   {
->     // create a double variable named 't' and assign a value of 3.
-> 
-> 
->     // create a variable that can store the object reference myCake created with new Cake(t)
-> 
-> 
->     // Create two more object references using yourCake and ourCake constructors
-> 
-> 
->     // Print out all three Cake object reference variables
-> 
-> 
->     // Initialize the emptyCake variable with a value of null
-> 
-> 
->   }
-> }
-> ```
->
-> 
-> **Sample Output:**
-> 
-> ```
->         ,,,
->         |||
->     (**********)
->     (*        *)
->     (*        *)
->   (**************)
->   (*            *)
->   (*            *)
-> (******************)
-> (*                *)
-> (*                *)
-> (******************)
-> 
-> 
->    ,,,
->    |||
-> (~~~~~~~)
-> (       )
-> (~~~~~~~)
-> 
->       ,,,
->       |||
->   (**********)
->   (*        *)
->   (*        *)
-> (**************)
-> (*            *)
-> (*            *)
-> (**************)
-> 
-> myCake=Cake@15db9742
-> yourCake=Cake@6d06d69c
-> ourCake=Cake@7852e922
-> emptyCake=null
-> ```
->
+System.out.println(tom + ": " + tom.computeTime(2414));      // Racer Tom: 10.986
+System.out.println(jerry + ": " + jerry.computeTime(2414));  // Racer Jerry: 13.897
+```
+
+Same method, same distance, different results — because each object uses **its own** data.
+
+### Void Methods Do Something. Non-Void Methods Answer Something.
+
+| | `void` method | non-`void` method |
+| --- | --- | --- |
+| Think of it as | an **action** | a **question** |
+| What comes back | nothing | a value (`int`, `double`, `String`, …) |
+| How you use the call | as a statement by itself | store it, print it, or use it in an expression |
+| `Backpack` example | `addItem("pen")` | `getItem()` |
+
+```java
+Backpack myBag = new Backpack();
+myBag.addItem("pencil");                 // void: an ACTION — nothing comes back
+String item = myBag.getItem();           // non-void: a QUESTION — a value comes back
+System.out.println(myBag.getItem());     // pencil
+```
+
+A void method cannot be used where a value is needed:
+
+```java
+int n = myBag.addItem("pen");   // COMPILE ERROR: incompatible types: void cannot be converted to int
+```
+
+And if you call a non-void method but never use what it returns, the answer is thrown away.
+
+### Class Method or Instance Method? The Dot Tells You
+
+| | Class (static) method | Instance method |
+| --- | --- | --- |
+| Before the dot | a **class name** | an **object** |
+| Example | `Math.sqrt(144)` | `tom.computeTime(2414)` |
+| Uses an object's data? | no | yes — the object before the dot |
+
+You met class methods in 1.10. If you see a class name before the dot, no object's data is involved. If you see an object, the method works with **that object's** data.
+
+### What If There Is No Object? — `null`
+
+From 1.07a: a variable that holds an object really holds an **address**. The value `null` is an address that points to **nothing**. There is no object for the method to act on.
+
+```java
+Backpack ghost = null;
+ghost.addItem("pen");   // compiles, but at RUN time: NullPointerException
+```
+
+| | Compile-time error | Run-time error |
+| --- | --- | --- |
+| When | while `javac` translates your code | while the program is running |
+| Example | `int n = myBag.addItem("pen");` | `ghost.addItem("pen");` where `ghost` is `null` |
+| Result | no `.class` file; nothing runs | program crashes with `NullPointerException` |
+
+> **Oracle Exam Note:** Calling a method on a `null` reference *compiles* but throws a `NullPointerException` when that line runs. Expect "what happens when this code runs?" questions where the answer is a run-time exception, not a compile error.
 
 #############################################################################
 
-### Assignment 1.14.3 — Dog Pizza
+### Instance Methods — Practice Questions
 
-> 
-> - Complete `Dog.java` by filling in the attributes and creating the constructor
-> - Instantiate 3 pizzas and print them out by:
->   - Creating a `Pizza` class
->   - Filling out the attributes
->   - Creating the constructor
->   - Creating 3 pizza objects and printing them out
->   - Use the `toString()` method to print the pizza size, type, and toppings:
->     - 12 inch Veggie pizza with Tomatoes, onions, olives
->     - 15 inch Cheese pizza with Cheese
->     - 20 inch Meat pizza with Pepperoni, sausage, bacon
-> 
-> **Main.java — Starter Code:**
-> 
-> ```java
-> class Main 
-> {
->     public static void main(String[] args) 
->     {
->         Dog golden = new Dog("Golden Retriever", "Sammy");
->         System.out.println(golden);
->         
->         // instantiate 3 pizzas below and print them out
-> 
-> 
->     }
-> }
-> ```
-> 
-> **Dog.java — Starter Code:**
-> 
-> ```java
-> public class Dog 
-> {
->     // attributes
-> 
->     // constructor
-> 
->     // This method should work after you add the
->     // new instance variable and update the constructor.
->     // DO NOT modify this method.
->     public String toString()
->     {
->         return name + " is a " + breed;
->     }
-> }
-> ```
-> 
-> **Pizza.java — Starter Code:**
-> 
-> ```java
-> // Your code here
-> ```
->
+**Q1. Which line correctly calls the instance method `addItem` on the `Backpack` object `myBag`?**
 
-#############################################################################
+- A. `Backpack.addItem("pen");`
+- B. `myBag.addItem("pen");`
+- C. `addItem(myBag, "pen");`
+- D. `myBag(addItem, "pen");`
 
-### Assignment 1.14.4 — Bicycle 
+<details>
+<summary>Show answer</summary>
 
-> 
-> 1. Create a `Bike` class with the following attributes:
->    - `kind` (Cruiser, road bike, tricycle, hybrid)
->    - `gear` (single, three-speed, 10 speed, 30 speed)
->    - `size` (20, 22, 26, 28)
->    - `cost` (175.99, 300.00, 1049.00, 1500.00)
-> 2. Create a no-argument constructor. Default values are: Cruiser, 26, and 175.99
-> 3. Create a constructor that takes only `kind` and `size` as parameters
-> 4. Create a constructor that takes all four parameters
-> 5. Create two more objects to match the sample output
-> 
-> **Sample Output:**
-> 
-> ```
-> My bicycle has 1 gear and is painted white!
-> Pedaling to accelerate!
-> My cruiser has 10 gears costs $150.
-> Pedaling to accelerate.
-> My tricycle has 3 gears costs $300.
-> Pedaling to accelerate.
-> ```
->
+**Answer: B**
+
+An instance method is called on an **object**: the object, a dot, then the method name and arguments. A uses a class name, which only works for `static` methods. C and D are not valid Java call syntax.
+
+</details>
+
+**Q2. `tom` and `jerry` are two `Racecar` objects. Both call `computeTime(2414)`, but they get different results. Why?**
+
+- A. `computeTime` is a `static` method.
+- B. Java chooses a random answer each time.
+- C. `tom` was created first, so it is always faster.
+- D. Each object stores its own acceleration, and the method uses the data of the object before the dot.
+
+<details>
+<summary>Show answer</summary>
+
+**Answer: D**
+
+The method code is the same, but the **data** belongs to each object. `tom.computeTime(...)` uses tom's acceleration; `jerry.computeTime(...)` uses jerry's.
+
+</details>
+
+**Q3. Which line will NOT compile? (`addItem` is void; `getItem` returns a `String`.)**
+
+- A. `int n = myBag.addItem("pen");`
+- B. `String s = myBag.getItem();`
+- C. `myBag.addItem("pen");`
+- D. `System.out.println(myBag.getItem());`
+
+<details>
+<summary>Show answer</summary>
+
+**Answer: A**
+
+A void method returns nothing, so there is no value to store in `n`. The compiler reports: incompatible types: void cannot be converted to int. B, C, and D all use the methods correctly.
+
+</details>
+
+**Q4. What happens?**
+
+```java
+Backpack ghost = null;
+ghost.addItem("pen");
+```
+
+- A. A compile-time error.
+- B. Nothing — Java skips the line.
+- C. It compiles, then throws a `NullPointerException` when it runs.
+- D. Java creates a new `Backpack` automatically.
+
+<details>
+<summary>Show answer</summary>
+
+**Answer: C**
+
+`ghost` is a legal `Backpack` variable, so the code compiles. At run time there is no object at that address, so Java throws a `NullPointerException`.
+
+</details>
 
 #############################################################################
 
-### Assignment 1.14.5 — Constructor Practice
+### Assignment 1.14.1 — Predict, Run, Explain
 
-> 
-> 1. Create a class called `Student` with the following instance variables:
->    - `name` (String)
->    - `age` (int)
->    - `gpa` (double)
-> 
-> 2. Write **at least four constructors**:
->    - A no-argument constructor that sets all values to defaults (`"Unknown"`, `0`, `0.0`)
->    - A constructor that takes only a name
->    - A constructor that takes a name and age
->    - A constructor that takes all three values (name, age, gpa)
-> 
-> 3. Write a `toString()` method that returns the student information as a single string:
->    ```
->    Student{name='Alice', age=16, gpa=3.5}
->    ```
-> 
-> 4. Create a `Main` class with a `main` method. In `main`:
->    - Create at least one `Student` object using each constructor
->    - Print each object
-> 
-> **Example Output:**
-> 
-> ```
-> Student{name='Unknown', age=0, gpa=0.0}
-> Student{name='Alice', age=0, gpa=0.0}
-> Student{name='Bob', age=17, gpa=0.0}
-> Student{name='Charlie', age=18, gpa=3.7}
-> ```
->
+**Overview**
+
+Before you write any new code, you will make predictions about code you can already read. Predicting first — and then finding out whether you were right — is one of the fastest ways to fix a wrong idea in your head.
+
+By the end of this activity you will be able to:
+
+- [ ] Predict the output of code that calls instance methods on different objects, or on the same object
+- [ ] Draw the stack and heap for a short snippet
+- [ ] Explain, in your own words, why a call worked, printed what it printed, or failed
+
+> 🧰 **Supplies Needed:** a computer with `Backpack.java` (1.07.1) and your `Racecar.java` (1.11.2); paper and a pencil for the sketches.
+
+**Part A — Predict, Run, Explain**
+
+**Do the prediction on paper first. Do not run any code until every prediction is written down.**
+
+For each snippet: (1) write your prediction, (2) run it, (3) if you were wrong, write one sentence about what you misunderstood. Some snippets do not print anything — for those, predict whether the code will compile and what will happen when it runs.
+
+```java
+// Snippet 1
+Backpack a = new Backpack();
+Backpack b = new Backpack();
+a.addItem("pencil");
+System.out.println(b.getItem());
+```
+
+```java
+// Snippet 2
+Backpack a = new Backpack();
+Backpack b = a;
+b.addItem("pencil");
+System.out.println(a.getItem());
+```
+
+```java
+// Snippet 3
+Racecar tom = new Racecar(40, "Tom");
+Racecar jerry = new Racecar(25, "Jerry");
+double t1 = tom.computeTime(100);
+double t2 = jerry.computeTime(100);
+System.out.println(t1 < t2);
+```
+
+```java
+// Snippet 4
+Backpack c = null;
+c.addItem("pen");
+```
+
+```java
+// Snippet 5
+Backpack d = new Backpack();
+int n = d.addItem("pen");
+```
+
+**Part B — Draw the Memory Diagram**
+
+On paper, draw the **Stack** and the **Heap** for **Snippet 2** and for **Snippet 4**. Show every variable, every object, and an arrow for each reference. For Snippet 4, show what `c` holds.
+
+**Part C — Explain It**
+
+Use these sentence frames to explain Snippets 2 and 4 in your own words:
+
+- The output is ____ because ____ and ____ refer to the same object / different objects.
+- This code throws a `NullPointerException` because ____ is `null`.
+- A void method ____ and returns nothing, so I cannot ____.
+
+**Submission**
+
+Upload the following to the assignment:
+
+- [ ] Part A — predictions and corrections (photo, scan, or typed document)
+- [ ] Part B — memory diagrams (photo or scan of your hand-drawn diagrams)
+- [ ] Part C — your explanations
+
+**Grading**
+
+This assignment is graded using the **AP CSA Generic Assignment Rubric** (5-point scale). Pay particular attention to:
+
+- Predictions were made **before** running the code, with honest corrections for any wrong guesses
+- Diagrams show one object (not two) for Snippet 2, and a reference that points to nothing for Snippet 4
+- Explanations are accurate and in the student's own words
+
+#############################################################################
+
+### Assignment 1.14.2 — Race Day: Calling Instance Methods
+
+**Overview**
+
+You will run a three-car drag race by **calling** instance methods on `Racecar` objects. `Racecar.java` is provided — **use this version in place of the one you wrote in 1.11.2** — and it must not be modified. Your job is to call its methods correctly and use what they return.
+
+By the end of this activity you will be able to:
+
+- [ ] Call void and non-void instance methods, with and without arguments
+- [ ] Store and use a method's return value
+- [ ] Explain why calling a method on one object does not change another object
+- [ ] Predict what happens when a method is called on `null`
+
+**The methods you will call**
+
+| Method | Void or non-void? | Parameters | What it does |
+| ------ | ----------------- | ---------- | ------------ |
+| `getName()` | non-void (`String`) | none | returns this car's driver name |
+| `getAcceleration()` | non-void (`double`) | none | returns this car's acceleration |
+| `boost(double amount)` | **void** | one | adds `amount` to this car's acceleration; returns nothing |
+| `computeTime(double distance)` | non-void (`double`) | one | returns the seconds to cover the distance, rounded to three decimals |
+
+**Requirements Checklist**
+
+- [ ] Include the required block comment header in `Main.java` (all fields completed)
+- [ ] Do **not** modify `Racecar.java`
+- [ ] Print each driver's name and acceleration using `getName()` and `getAcceleration()` (TODO 1)
+- [ ] Call `boost(5)` on one car, print its acceleration again, and comment on why the other cars did not change (TODO 2)
+- [ ] Store each `computeTime(distance)` result in its own `double` variable (TODO 3)
+- [ ] Print each finishing time; use `Math.min()` and `if` statements to print the winner using `getName()` (TODO 4)
+- [ ] In a **comment**, predict what `Racecar pitCrew = null; pitCrew.getName();` does, and whether it fails at compile time or run time (TODO 5). Do not leave a crashing line in your submission
+- [ ] Include meaningful inline comments throughout
+
+**Starter Code — Racecar.java (provided, do not modify):**
+
+```java
+// Racecar.java — PROVIDED for Race Day (Assignment 1.14.2). Do not modify.
+// Every Racecar object stores its OWN acceleration and driver name.
+public class Racecar
+{
+    private double accel;   // acceleration in m/s^2 (belongs to this one object)
+    private String name;    // driver's name (belongs to this one object)
+
+    public Racecar(double acceleration, String driver)
+    {
+        accel = acceleration;
+        name  = driver;
+    }
+
+    // non-void, no parameters: hands back a copy of this object's driver name
+    public String getName()
+    {
+        return name;
+    }
+
+    // non-void, no parameters: hands back this object's acceleration
+    public double getAcceleration()
+    {
+        return accel;
+    }
+
+    // void, one parameter: changes THIS object's acceleration; returns nothing
+    public void boost(double amount)
+    {
+        accel = accel + amount;
+    }
+
+    // non-void, one parameter: time (seconds) to cover the distance from a standing start
+    // t = sqrt(2 * d / a), rounded to three decimal places
+    public double computeTime(double distance)
+    {
+        double time = Math.sqrt(2 * distance / accel);
+        return Math.round(time * 1000.0) / 1000.0;
+    }
+
+    public String toString()
+    {
+        return "Racer " + name;
+    }
+}
+```
+
+**Starter Code — Main.java:**
+
+```java
+// Name:          [Your Full Name]
+// Partner:       [Partner's Full Name, or "None"]
+// Course:        AP Computer Science A
+// Instructor:    [Instructor Name]
+// Assignment:    1.14.2 — Race Day: Calling Instance Methods
+// Due Date:      [Month Day, Year]
+//
+// Racecar.java is PROVIDED. Do not modify it. Your job is to CALL its methods.
+
+import java.util.Random;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Random rand = new Random();
+        double distance = 2414;   // track length in meters (~1.5 miles)
+
+        // Done for you: three Racecar objects, each with its OWN random acceleration (20-50)
+        Racecar tom   = new Racecar(rand.nextInt(31) + 20, "Tom");
+        Racecar jerry = new Racecar(rand.nextInt(31) + 20, "Jerry");
+        Racecar spike = new Racecar(rand.nextInt(31) + 20, "Spike");
+
+        // TODO 1 (non-void, no parameters): Print each driver's name and acceleration
+        //        by calling getName() and getAcceleration() on each car.
+        //        Example line:  Tom accelerates at 41.0 m/s^2
+
+
+        // TODO 2 (void, one parameter): Choose ONE car and give it boost(5).
+        //        Then print that car's acceleration again.
+        //        Comment: did the OTHER cars change? Why or why not?
+
+
+        // TODO 3 (non-void, one parameter): Call computeTime(distance) on each car
+        //        and STORE each result in its own double variable.
+        //        (Calling it without storing the answer throws the answer away!)
+
+
+        // TODO 4: Print each car's finishing time. Then use Math.min() to find the
+        //         smallest (fastest) time and use if statements to print the winner:
+        //         Winner: <name>   (use getName())
+
+
+        // TODO 5 (prediction, in a COMMENT only): What would happen if you wrote
+        //         Racecar pitCrew = null;   and then called   pitCrew.getName();  ?
+        //         Will it fail when you COMPILE or when you RUN? Explain in 1-2 sentences.
+        //         Do NOT leave a crashing line in your submission.
+
+    }
+}
+
+/* ============================================================
+ * TEST CASES
+ * Run at least three times. Because acceleration is random, record
+ * the accelerations printed, the times, and whether the winner is
+ * the car with the largest acceleration (Expected: yes, after boosts).
+ * ============================================================ */
+```
+
+**Sample Output**
+
+Your numbers will differ — acceleration is random.
+
+```
+Tom accelerates at 45.0 m/s^2
+Jerry accelerates at 41.0 m/s^2
+Spike accelerates at 27.0 m/s^2
+After boost: Jerry accelerates at 46.0 m/s^2
+Tom finished in 10.358 seconds.
+Jerry finished in 10.245 seconds.
+Spike finished in 13.372 seconds.
+Winner: Jerry
+```
+
+**Extension Challenges**
+
+Completed early? Try one or more of the following:
+
+- [ ] Write a new instance method in `Racecar`, such as `finalSpeed(double distance)` using v = √(2 × a × d), and call it from `Main`
+- [ ] Add a fourth car and update the winner logic
+- [ ] Boost the slowest car by enough to beat the winner. Use `getAcceleration()` and `boost()` to find out how much it takes
+
+**Submission**
+
+Upload the following to the assignment:
+
+- [ ] `Main.java` — your completed program with block comment header
+- [ ] Test Cases document — at least **three** runs. Because acceleration is random, record the accelerations, the times, and whether the winner had the largest (boosted) acceleration
+
+**Grading**
+
+This assignment is graded using the **AP CSA Generic Assignment Rubric** (5-point scale). Pay particular attention to:
+
+- Return values are stored and used — not ignored
+- Each method is called on the correct object
+- The TODO 5 prediction is accurate and in your own words
+
+#############################################################################
+
+### Assignment 1.14.3 — Not Another Cake: Calling Methods on Cake Objects
+
+**Overview**
+
+In 1.12 you built objects with constructors. Now a `Cake` can *do* things: it can draw itself, grow more tiers, change its frosting, and tell you how many guests it serves. `Cake.java` is provided and must not be modified. Your job is to **call** its methods, and to notice what happens when two variables share one object.
+
+By the end of this activity you will be able to:
+
+- [ ] Call void and non-void instance methods on `Cake` objects
+- [ ] Use methods with and without parameters
+- [ ] Show, using printed references, that two variables can point to the same object
+- [ ] Predict what happens when a method is called on `null`
+
+**The methods you will call**
+
+| Method | Void or non-void? | Parameters | What it does |
+| ------ | ----------------- | ---------- | ------------ |
+| `drawCake()` | **void** | none | draws this cake in the console |
+| `addTiers(int extraTiers)` | **void** | one | adds tiers to this cake only |
+| `setFrosting(String newFrosting)` | **void** | one | changes this cake's frosting |
+| `getTiers()` | non-void (`int`) | none | returns the number of tiers |
+| `servings()` | non-void (`int`) | none | returns how many guests it serves (12 per tier) |
+
+**Requirements Checklist**
+
+- [ ] Include the required block comment header in `Main.java` (all fields completed)
+- [ ] Do **not** modify `Cake.java`
+- [ ] Call `drawCake()` on `myCake` and `yourCake` (TODO 1)
+- [ ] Call `addTiers(2)` on `yourCake`, then draw it again (TODO 2)
+- [ ] Store the return value of `servings()` in an `int` and print it (TODO 3)
+- [ ] Write a prediction in a comment, then call `ourCake.setFrosting("Whipped Cream")` and draw `myCake` (TODO 4)
+- [ ] Print the three variables directly and explain which references match (TODO 5)
+- [ ] In a **comment**, predict what `emptyCake.drawCake();` does when `emptyCake` is `null` (TODO 6)
+- [ ] Include meaningful inline comments throughout
+
+**Starter Code — Cake.java (provided, do not modify):**
+
+```java
+// Cake.java — PROVIDED for Assignment 1.14.3. Do not modify.
+// Every Cake object stores its OWN tiers, flavor, and frosting.
+public class Cake
+{
+    private int tiers;
+    private String flavor;
+    private String frosting;
+
+    // Constructor 1: no parameters — a plain 1-tier cake
+    public Cake()
+    {
+        tiers = 1;
+        flavor = "Vanilla";
+        frosting = "Buttercream";
+    }
+
+    // Constructor 2: one parameter — choose the number of tiers
+    public Cake(int numTiers)
+    {
+        tiers = numTiers;
+        flavor = "Vanilla";
+        frosting = "Buttercream";
+    }
+
+    // Constructor 3: two parameters — choose tiers and flavor
+    public Cake(int numTiers, String cakeFlavor)
+    {
+        tiers = numTiers;
+        flavor = cakeFlavor;
+        frosting = "Buttercream";
+    }
+
+    // Constructor 4: three parameters — choose tiers, flavor, and frosting
+    public Cake(int numTiers, String cakeFlavor, String cakeFrosting)
+    {
+        tiers = numTiers;
+        flavor = cakeFlavor;
+        frosting = cakeFrosting;
+    }
+
+    // void, no parameters: draws THIS cake in the console
+    public void drawCake()
+    {
+        int maxWidth = 10 + 4 * (tiers - 1);                  // width of the bottom tier
+        String candleSpace = repeat(" ", (maxWidth - 10) / 2 + 5);
+        System.out.println(candleSpace + ",,,");
+        System.out.println(candleSpace + "|||");
+
+        for (int layer = 1; layer <= tiers; layer++)
+        {
+            int width = 10 + 4 * (layer - 1);                 // this tier's width
+            String spacer = repeat(" ", (maxWidth - width) / 2);
+            String top = "(" + repeat("*", width) + ")";
+            String side = "(*" + repeat(" ", width - 2) + "*)";
+            System.out.println(spacer + top);
+            System.out.println(spacer + side);
+            System.out.println(spacer + side);
+        }
+        System.out.println("Flavor: " + flavor + " | Frosting: " + frosting);
+        System.out.println();
+    }
+
+    // void, one parameter: adds tiers to THIS cake only
+    public void addTiers(int extraTiers)
+    {
+        tiers = tiers + extraTiers;
+    }
+
+    // void, one parameter: changes THIS cake's frosting
+    public void setFrosting(String newFrosting)
+    {
+        frosting = newFrosting;
+    }
+
+    // non-void, no parameters: returns the number of tiers
+    public int getTiers()
+    {
+        return tiers;
+    }
+
+    // non-void, no parameters: each tier serves 12 guests
+    public int servings()
+    {
+        return tiers * 12;
+    }
+
+    // Helper: builds a String by repeating text (Java 8 has no String.repeat)
+    private String repeat(String text, int times)
+    {
+        String result = "";
+        for (int i = 0; i < times; i++)
+        {
+            result = result + text;
+        }
+        return result;
+    }
+
+    // NOTE: No toString() override on purpose. Printing a Cake object directly
+    // (System.out.println(myCake)) shows the default Cake@<hashcode>: the object's
+    // reference. Two variables that print the SAME reference point to ONE object.
+}
+```
+
+**Starter Code — Main.java:**
+
+```java
+// Name:          [Your Full Name]
+// Partner:       [Partner's Full Name, or "None"]
+// Course:        AP Computer Science A
+// Instructor:    [Instructor Name]
+// Assignment:    1.14.3 — Not Another Cake: Calling Methods on Cake Objects
+// Due Date:      [Month Day, Year]
+//
+// Cake.java is PROVIDED. Do not modify it. Your job is to CALL its methods.
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        // Done for you: three variables, but only TWO Cake objects. Which two variables
+        // share one object?
+        Cake myCake   = new Cake(3);
+        Cake yourCake = new Cake(1, "Chocolate");
+        Cake ourCake  = myCake;
+
+        // TODO 1 (void, no parameters): Draw myCake and yourCake by calling drawCake().
+
+
+        // TODO 2 (void, one parameter): Give yourCake two more tiers with addTiers(2),
+        //        then draw it again.
+
+
+        // TODO 3 (non-void, no parameters): Store myCake.servings() in an int variable
+        //        and print it:  myCake serves 36 guests.
+
+
+        // TODO 4 (aliasing): FIRST write a prediction in a comment. Then call
+        //        ourCake.setFrosting("Whipped Cream") and draw myCake.
+        //        Did myCake change? Why?
+
+
+        // TODO 5: Print the three variables directly (no method call):
+        //         System.out.println("myCake=" + myCake);  ... yourCake ... ourCake
+        //         Which two references match? What does that prove?
+
+
+        // TODO 6 (prediction, in a COMMENT only): Given   Cake emptyCake = null;
+        //        what would emptyCake.drawCake(); do? Compile time or run time?
+        //        Do NOT leave a crashing line in your submission.
+
+    }
+}
+
+/* ============================================================
+ * TEST CASES
+ * Record your actual output. Reference numbers (Cake@...) will differ
+ * on every computer; what matters is which ones match.
+ * ============================================================ */
+```
+
+**Sample Output**
+
+The `Cake@…` reference numbers will differ on every computer. What matters is which ones match.
+
+```
+         ,,,
+         |||
+    (**********)
+    (*        *)
+    (*        *)
+  (**************)
+  (*            *)
+  (*            *)
+(******************)
+(*                *)
+(*                *)
+Flavor: Vanilla | Frosting: Buttercream
+
+     ,,,
+     |||
+(**********)
+(*        *)
+(*        *)
+Flavor: Chocolate | Frosting: Buttercream
+
+         ,,,
+         |||
+    (**********)
+    (*        *)
+    (*        *)
+  (**************)
+  (*            *)
+  (*            *)
+(******************)
+(*                *)
+(*                *)
+Flavor: Chocolate | Frosting: Buttercream
+
+myCake serves 36 guests.
+
+         ,,,
+         |||
+    (**********)
+    (*        *)
+    (*        *)
+  (**************)
+  (*            *)
+  (*            *)
+(******************)
+(*                *)
+(*                *)
+Flavor: Vanilla | Frosting: Whipped Cream
+
+myCake=Cake@15db9742
+yourCake=Cake@6d06d69c
+ourCake=Cake@15db9742
+```
+
+**Part 2 — Extension: Not Another Cake!**
+
+Now design your own class — **anything but a cake**. Requirements:
+
+- [ ] At least **two constructors** (different parameter lists)
+- [ ] At least **three instance methods**: one `void` method with no parameters, one method **with a parameter**, and one **non-void** method that returns a value
+- [ ] Override `toString()` and use it to display your objects (see 1.13)
+- [ ] In `Main`, create at least two objects and **call every method** at least once
+- [ ] Include meaningful inline comments throughout
+
+**Submission**
+
+Upload the following to the assignment:
+
+- [ ] `Main.java` — your completed program with block comment header
+- [ ] Test Cases document showing your program's actual output
+- [ ] Part 2 (extension): all `.java` files for your own class
+
+**Grading**
+
+This assignment is graded using the **AP CSA Generic Assignment Rubric** (5-point scale). Pay particular attention to:
+
+- Return values are stored and used — not ignored
+- The TODO 4 prediction and the TODO 5 explanation show that `myCake` and `ourCake` are the same object
+- The TODO 6 prediction correctly names a **run-time** error
+
+#############################################################################
+
+### Assignment 1.14.4 — Bike Shop: Void and Non-Void Methods
+
+**Overview**
+
+A bike shop needs software. Each `Bike` object knows its kind, gears, size, cost, color, and speed — and it can pedal, brake, be painted, and describe itself. `Bike.java` is provided and must not be modified. Your job is to **call** its methods and to tell **void** methods (actions) from **non-void** methods (questions).
+
+By the end of this activity you will be able to:
+
+- [ ] Call void and non-void instance methods, with and without parameters
+- [ ] Use a returned `String` and a returned `double` in your program
+- [ ] Explain why pedaling one bike does not change another bike
+- [ ] Classify methods as void or non-void from how they are used
+
+**The methods you will call**
+
+| Method | Void or non-void? | Parameters | What it does |
+| ------ | ----------------- | ---------- | ------------ |
+| `pedal()` | **void** | none | speeds this bike up by 5 and prints a message |
+| `brake()` | **void** | none | stops this bike and prints a message |
+| `paint(String newColor)` | **void** | one | repaints this bike |
+| `getSpeed()` | non-void (`int`) | none | returns the current speed |
+| `priceWithTax(double taxRate)` | non-void (`double`) | one | returns the cost plus sales tax, rounded to cents |
+| `describe()` | non-void (`String`) | none | **returns** a description (it does not print it) |
+
+**Requirements Checklist**
+
+- [ ] Include the required block comment header in `Main.java` (all fields completed)
+- [ ] Do **not** modify `Bike.java`
+- [ ] Call `describe()` on all three bikes and print what it **returns** (TODO 1)
+- [ ] Call `pedal()` three times on `road`; print `road.getSpeed()` and `starter.getSpeed()` and explain the difference (TODO 2)
+- [ ] Paint `hybrid` green with `paint("green")` and print its description again (TODO 3)
+- [ ] Store `hybrid.priceWithTax(0.0775)` in a `double` and print it with `printf` and a dollar sign (TODO 4)
+- [ ] Write a prediction in a comment, then run `Bike mine = road; mine.brake();` and print `road.getSpeed()` (TODO 5)
+- [ ] In a **comment**, list which of the six methods are void and which return a value (TODO 6)
+- [ ] Include meaningful inline comments throughout
+
+**Starter Code — Bike.java (provided, do not modify):**
+
+```java
+// Bike.java — PROVIDED for Assignment 1.14.4. Do not modify.
+// Every Bike object stores its OWN kind, gears, size, cost, color, and speed.
+public class Bike
+{
+    private String kind;     // cruiser, road bike, tricycle, hybrid
+    private int gears;       // 1, 3, 10, or 30
+    private int size;        // 20, 22, 26, or 28
+    private double cost;     // 175.99, 300.00, 1049.00, or 1500.00
+    private String color;    // every bike starts out white
+    private int speed;       // every bike starts at rest (0)
+
+    // Constructor 1: no parameters — the default bike
+    public Bike()
+    {
+        kind = "cruiser";
+        gears = 1;
+        size = 26;
+        cost = 175.99;
+        color = "white";
+        speed = 0;
+    }
+
+    // Constructor 2: kind and size only — one gear, default cost
+    public Bike(String bikeKind, int bikeSize)
+    {
+        kind = bikeKind;
+        gears = 1;
+        size = bikeSize;
+        cost = 175.99;
+        color = "white";
+        speed = 0;
+    }
+
+    // Constructor 3: all four attributes
+    public Bike(String bikeKind, int bikeGears, int bikeSize, double bikeCost)
+    {
+        kind = bikeKind;
+        gears = bikeGears;
+        size = bikeSize;
+        cost = bikeCost;
+        color = "white";
+        speed = 0;
+    }
+
+    // void, no parameters: speeds up THIS bike by 5 and prints a message
+    public void pedal()
+    {
+        speed = speed + 5;
+        System.out.println("Pedaling to accelerate!");
+    }
+
+    // void, no parameters: stops THIS bike
+    public void brake()
+    {
+        speed = 0;
+        System.out.println("Braking to a stop.");
+    }
+
+    // void, one parameter: repaints THIS bike
+    public void paint(String newColor)
+    {
+        color = newColor;
+    }
+
+    // non-void, no parameters: returns the current speed
+    public int getSpeed()
+    {
+        return speed;
+    }
+
+    // non-void, one parameter: returns the price after sales tax, rounded to cents
+    public double priceWithTax(double taxRate)
+    {
+        double total = cost * (1 + taxRate);
+        return Math.round(total * 100.0) / 100.0;
+    }
+
+    // non-void, no parameters: RETURNS a description (it does not print it)
+    public String describe()
+    {
+        String gearWord = (gears == 1) ? " gear" : " gears";
+        return "My " + kind + " has " + gears + gearWord + ", is painted " + color
+               + ", and costs $" + String.format("%.2f", cost) + ".";
+    }
+}
+```
+
+**Starter Code — Main.java:**
+
+```java
+// Name:          [Your Full Name]
+// Partner:       [Partner's Full Name, or "None"]
+// Course:        AP Computer Science A
+// Instructor:    [Instructor Name]
+// Assignment:    1.14.4 — Bike Shop: Void and Non-Void Methods
+// Due Date:      [Month Day, Year]
+//
+// Bike.java is PROVIDED. Do not modify it. Your job is to CALL its methods.
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        // Done for you: three Bike objects, each built with a different constructor
+        Bike starter = new Bike();
+        Bike road    = new Bike("road bike", 22);
+        Bike hybrid  = new Bike("hybrid", 10, 26, 1049.00);
+
+        // TODO 1 (non-void, no parameters): Call describe() on each bike and print what
+        //        it RETURNS. (describe() does not print by itself.)
+
+
+        // TODO 2 (void, no parameters): Call pedal() three times on road. Then print
+        //        road.getSpeed() and starter.getSpeed(). Why are they different?
+
+
+        // TODO 3 (void, one parameter): Paint hybrid "green" with paint("green"),
+        //        then print hybrid.describe() again. What changed?
+
+
+        // TODO 4 (non-void, one parameter): Store hybrid.priceWithTax(0.0775) in a
+        //        double variable and print it with printf and a dollar sign.
+
+
+        // TODO 5 (aliasing): FIRST write a prediction in a comment. Then run:
+        //            Bike mine = road;   mine.brake();
+        //        and print road.getSpeed(). What happened to road? Why?
+
+
+        // TODO 6 (in a COMMENT): Which of the methods you called are void, and which
+        //        return a value? Fill in one line for each: pedal, brake, paint,
+        //        getSpeed, priceWithTax, describe.
+
+    }
+}
+
+/* ============================================================
+ * TEST CASES
+ * Record your actual output for at least one run.
+ * ============================================================ */
+```
+
+**Sample Output**
+
+```
+My cruiser has 1 gear, is painted white, and costs $175.99.
+My road bike has 1 gear, is painted white, and costs $175.99.
+My hybrid has 10 gears, is painted white, and costs $1049.00.
+Pedaling to accelerate!
+Pedaling to accelerate!
+Pedaling to accelerate!
+road speed: 15
+starter speed: 0
+My hybrid has 10 gears, is painted green, and costs $1049.00.
+Hybrid with tax: $1130.30
+Braking to a stop.
+road speed after mine.brake(): 0
+```
+
+**Extension Challenges**
+
+Completed early? Try one or more of the following:
+
+- [ ] Write a new instance method in `Bike`, such as `public boolean isExpensive()` that returns `true` when the cost is over 1000, and call it from `Main`
+- [ ] Put your bikes in an array and use a loop to call `describe()` on each one
+- [ ] Create a fourth bike with the four-parameter constructor and compare `priceWithTax(0.0775)` for all four
+
+**Submission**
+
+Upload the following to the assignment:
+
+- [ ] `Main.java` — your completed program with block comment header
+- [ ] Test Cases document showing your program's actual output
+
+**Grading**
+
+This assignment is graded using the **AP CSA Generic Assignment Rubric** (5-point scale). Pay particular attention to:
+
+- Return values are stored and used — not ignored
+- `describe()` output is **printed by `Main`**, not by `Bike`
+- The TODO 5 prediction and the TODO 6 classification are accurate
 
 #############################################################################
 
