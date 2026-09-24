@@ -3928,8 +3928,39 @@ System.out.println(jerry + ": " + jerry.computeTime(2414));  // Racer Jerry: 13.
 
 <img width="2720" height="1440" alt="Image" src="https://github.com/user-attachments/assets/42011e6f-8b4e-41ce-ba64-4de2d65325cd" />
 
-
 Same method, same distance, different results — because each object uses **its own** data.
+
+
+#############################################################################
+
+
+**Look at the creation and aliasing of the Dog below:**
+
+```java
+Dog d1 = new Dog("Rex");  // one Dog object on the heap; d1 (a reference) on the stack
+Dog d2 = d1;              // d2 is a second reference on the stack; still ONE Dog on the heap
+d2.setName("Max");
+System.out.println(d1.getName());  // "Max", same object
+```
+
+STACK                 HEAP
++------+
+| d1 --|---------+
++------+         |    +-------------+
+| d2 --|---------+--> | Dog "Max"   |
++------+              +-------------+
+
+```java
+class Owner {
+    Dog pet;   // this reference lives inside an Owner object, on the heap
+}
+
+Owner o = new Owner();  // o on the stack, Owner object on the heap
+o.pet = d1;             // o.pet (on the heap, inside Owner) now aliases the same Dog
+```
+
+#############################################################################
+
 
 ### Void Methods Do Something. Non-Void Methods Answer Something.
 
