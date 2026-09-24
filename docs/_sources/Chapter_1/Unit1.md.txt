@@ -3912,8 +3912,8 @@ Even `System.out.println()` is an instance method call: `System.out` is an **obj
 ### The Pattern
 
 ```
-object . method ( arguments )
-  who  . does what ( with what )
+reference . method    ( arguments )
+  who     . does what ( with what )
 ```
 
 > **The object before the dot decides whose data is used.**
