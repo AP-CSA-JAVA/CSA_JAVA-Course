@@ -3926,6 +3926,9 @@ System.out.println(tom + ": " + tom.computeTime(2414));      // Racer Tom: 10.98
 System.out.println(jerry + ": " + jerry.computeTime(2414));  // Racer Jerry: 13.897
 ```
 
+<img width="2720" height="1440" alt="Image" src="https://github.com/user-attachments/assets/42011e6f-8b4e-41ce-ba64-4de2d65325cd" />
+
+
 Same method, same distance, different results — because each object uses **its own** data.
 
 ### Void Methods Do Something. Non-Void Methods Answer Something.
