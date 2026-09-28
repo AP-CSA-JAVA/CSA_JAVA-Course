@@ -4920,11 +4920,11 @@ System.out.println("Hello, " + name + "!");  // Hello, World!
 
 `==` compares object references (memory locations), while `.equals()` compares the actual content of strings:
 
-Here's a predict-the-output question in the same style as your existing "Show answer" dropdowns (like the B1–B6 series in 1.1a) — it forces students to trace reference vs. object creation instead of just reciting the rule.
 
----
+#############################################################################
 
-### Question — Reference Copying vs. Object Creation
+
+### Predict-the-Output Questions — Reference Copying vs. Object Creation
 
 **Directions:** Predict the output of each `println` line, then explain *why* in one sentence. 
 
@@ -5005,7 +5005,9 @@ s1.equals(s3)  → true
 > Submit your program code as a java file. Upload your test cases as 1 pdf.
 > 
 
+
 #############################################################################
+
 
 ### Assignment 1.15.2 — Speaking
 
@@ -5037,7 +5039,8 @@ Your team name is Samaell
 > ```
 > 
 > Submit your program code as a java file and test cases as 1 pdf.
-> 
+>
+
 
 #############################################################################
 
@@ -5091,6 +5094,7 @@ Your team name is Samaell
 >
 > `%d`, `%f`, `%.2f`, and `%n` still work exactly the way they did in §1.4 — `String.format()` just hands you the result as a String instead of sending it straight to the console.
 >
+
 
 ### StringBuilder
 
