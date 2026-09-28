@@ -4879,6 +4879,8 @@ This assignment is graded using the **AP CSA Generic Assignment Rubric** (5-poin
 <details>
 <summary>📌 Standards — 1.15</summary>
 
+[Oracle Strings Link](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)
+
 | Standard | Description |
 | -------- | ----------- |
 | ICT 2.0 | Communications — communicate effectively in written formats |
