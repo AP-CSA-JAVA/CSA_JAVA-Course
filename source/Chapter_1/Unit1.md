@@ -4920,7 +4920,10 @@ System.out.println("Hello, " + name + "!");  // Hello, World!
 
 **Important: Object Equality with Strings**
 
-`==` compares object references (memory locations), while `.equals()` compares the actual content of strings:
+| `==` vs `.equals` | Explained |
+| :---: | ------------------ |
+| `==` | compares object references (memory locations) |
+| `.equals()` | compares the actual content of strings |
 
 
 #############################################################################
@@ -5037,7 +5040,7 @@ s1.equals(s3)  → true
 > Whispering your partner's name: russell
 > Your name in Pig Latin: amanthaSay
 > Your partner's name in Pig Latin: ussellray
-Your team name is Samaell
+> Your team name is Samaell
 > ```
 > 
 > Submit your program code as a java file. Submit your test cases as 1 pdf.
