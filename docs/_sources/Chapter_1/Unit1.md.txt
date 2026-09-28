@@ -5038,7 +5038,7 @@ s1.equals(s3)  → true
 Your team name is Samaell
 > ```
 > 
-> Submit your program code as a java file and test cases as 1 pdf.
+> Submit your program code as a java file. Submit your test cases as 1 pdf.
 >
 
 
