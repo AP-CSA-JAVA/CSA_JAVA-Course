@@ -4602,16 +4602,11 @@ every time, for every object.</p>
 <p><strong>Look at the creation and aliasing of the Dog below:</strong></p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Dog</span><span class="w"> </span><span class="n">d1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">(</span><span class="s">"Rex"</span><span class="p">);</span><span class="w">  </span><span class="c1">// one Dog object on the heap; d1 (a reference) on the stack</span>
 <span class="n">Dog</span><span class="w"> </span><span class="n">d2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d1</span><span class="p">;</span><span class="w">              </span><span class="c1">// d2 is a second reference on the stack; still ONE Dog on the heap</span>
-<span class="n">d2</span><span class="p">.</span><span class="na">setName</span><span class="p">(</span><span class="s">"Max"</span><span class="p">);</span>
+<span class="n">Dog</span><span class="w"> </span><span class="n">D3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">(</span><span class="s">"Buddy"</span><span class="p">,</span><span class="s">"bark"</span><span class="p">,</span><span class="w"> </span><span class="s">"loves belly rubs"</span><span class="p">);</span><span class="w">  </span><span class="c1">// 2nd Dog object on the heap</span>
+<span class="n">d2</span><span class="p">.</span><span class="na">setName</span><span class="p">(</span><span class="s">"Max"</span><span class="p">);</span><span class="w">		  </span><span class="c1">// changes the name of the One Dog object (Rex -&gt; Max)</span>
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">d1</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span><span class="w">  </span><span class="c1">// "Max", same object</span>
 </pre></div>
 </div>
-<p>STACK                 HEAP
-+——+
-| d1 –|———+
-+——+         |    +————-+
-| d2 –|———+–&gt; | Dog “Max”   |
-+——+              +————-+</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Owner</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">Dog</span><span class="w"> </span><span class="n">pet</span><span class="p">;</span><span class="w">   </span><span class="c1">// this reference lives inside an Owner object, on the heap</span>
 <span class="p">}</span>
