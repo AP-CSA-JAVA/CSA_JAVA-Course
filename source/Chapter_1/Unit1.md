@@ -3939,16 +3939,13 @@ Same method, same distance, different results — because each object uses **its
 ```java
 Dog d1 = new Dog("Rex");  // one Dog object on the heap; d1 (a reference) on the stack
 Dog d2 = d1;              // d2 is a second reference on the stack; still ONE Dog on the heap
-d2.setName("Max");
+Dog D3 = new Dog("Buddy","bark", "loves belly rubs");  // 2nd Dog object on the heap
+d2.setName("Max");		  // changes the name of the One Dog object (Rex -> Max)
 System.out.println(d1.getName());  // "Max", same object
 ```
 
-STACK                 HEAP
-+------+
-| d1 --|---------+
-+------+         |    +-------------+
-| d2 --|---------+--> | Dog "Max"   |
-+------+              +-------------+
+
+
 
 ```java
 class Owner {
