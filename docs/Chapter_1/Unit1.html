@@ -5982,6 +5982,28 @@ separated by a space. Then it asks the user to enter a phrase. You will write an
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">table</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
 </pre></div>
 </div>
+<p>The output is:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Alice      95
+Bob        87
+Carol      92
+</pre></div>
+</div>
+<p><strong>How it works</strong></p>
+<p>The format string is:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="s">"%-10s %d%n"</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">%-10s</span></code> → prints the name as a <strong>left-aligned string</strong> in a field 10 characters wide.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">%d</span></code> → prints the integer score.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">%n</span></code> → moves to the next line.</p></li>
+</ul>
+<p>So <code class="docutils literal notranslate"><span class="pre">&quot;Alice&quot;</span></code> gets padded with spaces until the name field is 10 characters wide:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Alice_____95
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">_</span></code> represents a space.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">StringBuilder</span></code> accumulates all three lines, and <code class="docutils literal notranslate"><span class="pre">System.out.print()</span></code> prints the completed table at once.</p>
 </section>
 <section id="assignment-1-16-1-formatted-report">
 <h3>Assignment 1.16.1 — Formatted Report<a class="headerlink" href="#assignment-1-16-1-formatted-report" title="Link to this heading">¶</a></h3>
