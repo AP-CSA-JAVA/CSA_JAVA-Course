@@ -5137,6 +5137,39 @@ for (int i = 0; i < names.length; i++) {
 System.out.print(table.toString());
 ```
 
+The output is:
+
+```text
+Alice      95
+Bob        87
+Carol      92
+```
+
+**How it works**
+
+The format string is:
+
+```java
+"%-10s %d%n"
+```
+
+* `%-10s` → prints the name as a **left-aligned string** in a field 10 characters wide.
+* `%d` → prints the integer score.
+* `%n` → moves to the next line.
+
+So `"Alice"` gets padded with spaces until the name field is 10 characters wide:
+
+```text
+Alice_____95
+```
+
+where `_` represents a space.
+
+The `StringBuilder` accumulates all three lines, and `System.out.print()` prints the completed table at once.
+
+
+
+
 ### Assignment 1.16.1 — Formatted Report
 
 Checked this one too — same situation as StringBuilder. Per the same College Board Java Subset appendix, under **Input/Output**, `System.out.printf` and formatted output are explicitly listed as **"Not tested in the AP CS A Exam, but potentially relevant/useful."** So `String.format()` (which works the same way under the hood) is safe to teach freely — no exam-alignment tension, just genuinely useful skill-building.
