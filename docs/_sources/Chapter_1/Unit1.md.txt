@@ -3944,7 +3944,7 @@ d2.setName("Max");		  // changes the name of the One Dog object (Rex -> Max)
 System.out.println(d1.getName());  // "Max", same object
 ```
 
-
+<img width="960" height="479" alt="Image" src="https://github.com/user-attachments/assets/d4d9f337-f8b1-4524-806b-44f60c8cf078" />
 
 
 ```java
