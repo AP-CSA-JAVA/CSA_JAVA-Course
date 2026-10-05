@@ -5553,121 +5553,19 @@ double d = Double.parseDouble("3.14");
 >
 >
 
-<details>
-<summary>Starter Code — HSTracker.java</summary>
+**What You Need to Know About Arrays (for this assignment)**
 
-```java
-// Name:          [Your Full Name]
-// Partner:       [Partner's Full Name, or "None"]
-// Course:        AP Computer Science A
-// Instructor:    [Instructor Name]
-// Assignment:    1.17.1 — High Score Tracker
-// Due Date:      [Month Day, Year]
+You haven't learned arrays yet, and you won't need to write any array code here. All of it is provided. You just need to be able to read it:
 
-public class HSTracker
-{
-    // ---------------------------------------------------
-    // Instance variables
-    // ---------------------------------------------------
-    private String[] names;     // player names
-    private Integer[] scores;   // WRAPPER array — an element can be null ("has not played yet")
-                                // An int[] could never do this: its "empty" value is 0
-
-    // ---------------------------------------------------
-    // Constructor — provided
-    // ---------------------------------------------------
-    public HSTracker(String[] names, Integer[] scores)
-    {
-        this.names = names;
-        this.scores = scores;
-    }
-
-    // ---------------------------------------------------
-    // Prints each player's score, or "has not played yet"
-    // ---------------------------------------------------
-    public void printScores()
-    {
-        System.out.println("Player scores:");
-
-        for (int i = 0; i < scores.length; i++)
-        {
-            // TODO 1 — CRASH IT ON PURPOSE (do this first!)
-            //   Unbox scores[i] using the explicit .intValue() method,
-            //   store it in an int, and print "[Name]: [score]".
-            //   Do NOT check for null yet. Run the program, and take a
-            //   screenshot of the NullPointerException for your reflection.
-            //   Add a comment explaining what .intValue() is doing.
+- An **array** holds several values of the same type under one name. `String[] names` holds several Strings; `Integer[] scores` holds several Integer objects.
+- `new Integer[5]` creates **5 empty slots**, numbered 0–4.
+- `scores[0]` means "the slot at position 0" (the first one). `scores[i]` means "the slot at position `i`."
+- The provided `for` loops visit each slot one at a time, with `i` counting 0, 1, 2, 3, 4.
+- **Here's the key idea:** a new `int[]` starts with every slot set to `0`, but a new `Integer[]` starts with every slot set to `null`. That's why this assignment uses `Integer[]`. A `0` would look like a real score, but `null` clearly means "has not played yet."
 
 
-            // TODO 2 — FIX IT
-            //   Add a null check BEFORE the line that unboxes.
-            //   If scores[i] is null, print "[Name]: no score yet" instead.
-            //   Think: why does the check have to come before .intValue()?
+#############################################################################
 
-        }
-    }
-
-    // ---------------------------------------------------
-    // Returns the INDEX of the player with the highest score,
-    // or -1 if no one has played yet.
-    // ---------------------------------------------------
-    public int findHighestIndex()
-    {
-        // TODO 3: Initialize your "highest so far" tracker to Integer.MIN_VALUE.
-        //         In a comment, explain why 0 would be a buggy starting value.
-        int highest = 0;      // replace 0
-        int highestIndex = -1;
-
-        for (int i = 0; i < scores.length; i++)
-        {
-            // TODO 4: Skip null scores. Otherwise, compare scores[i] to highest
-            //         WITHOUT calling .intValue() — Java will unbox it for you.
-            //         Label this in a comment as IMPLICIT UNBOXING.
-            //         If it's larger, update highest and highestIndex.
-
-        }
-
-        return highestIndex;
-    }
-
-    // ---------------------------------------------------
-    // Returns the average of players who HAVE played.
-    // Null scores are not counted (they are not zeros!).
-    // ---------------------------------------------------
-    public double calculateAverage()
-    {
-        int total = 0;
-        int count = 0;
-
-        // TODO 5: Loop through scores. Skip nulls. Add each score to total
-        //         using implicit unboxing (e.g., total += scores[i];) and
-        //         count how many players were added.
-
-
-        // TODO 6: Store the average in a Double using the new Double(...)
-        //         constructor. Add a comment explaining what value it holds.
-        //         Watch out for integer division — cast before you divide!
-        //         Then return it (Java unboxes it back to a double for you).
-
-        return 0.0; // replace this
-    }
-
-    // ---------------------------------------------------
-    // Accessor — provided
-    // ---------------------------------------------------
-    public String getName(int index)
-    {
-        return names[index];
-    }
-
-    public Integer getScore(int index)
-    {
-        return scores[index];
-    }
-}
-```
-
-</details>
 
 <details>
 <summary>Starter Code — Main.java</summary>
@@ -5685,48 +5583,48 @@ public class Main
     public static void main(String[] args)
     {
         // ---------------------------------------------------
-        // STEP 1: Player names — provided
+        // Player names — provided
         // ---------------------------------------------------
         String[] names = {"Amara", "Devon", "Priya", "Kai", "Lena"};
 
         // ---------------------------------------------------
-        // STEP 2: Build the Integer[] array
+        // Score array — provided
         // ---------------------------------------------------
-        // Every element of a new Integer[] starts as null — not 0.
-        // (Compare: every element of a new int[] starts as 0.)
+        // This creates 5 empty slots. Every slot starts as null, NOT 0.
         Integer[] scores = new Integer[names.length];
 
-        // TODO 7: Give Amara (index 0) a score of 87 using the explicit
-        //         new Integer(...) constructor. Add a comment noting that
-        //         this is exam-tested syntax (it's on the AP Quick Reference).
-        //         A "deprecated" warning here is expected.
+        // TODO 1: Give Amara (slot 0) a score of 87 using the explicit
+        //         constructor:   scores[0] = new Integer(87);
+        //         Add a comment noting this is exam-tested syntax
+        //         (it's on the AP Java Quick Reference).
+        //         A "deprecated" warning here is expected — not a mistake.
 
 
-        // Devon (index 1) has not played — leave it null on purpose.
+        // Devon (slot 1) has not played — leave it null on purpose.
 
-        // TODO 8: Give Priya (index 2) a 95 and Kai (index 3) a 72 using
-        //         AUTOBOXING — assign plain int literals, no constructor,
-        //         no valueOf(). Label this in a comment.
+        // TODO 2: Give Priya (slot 2) a 95 and Kai (slot 3) a 72 using
+        //         AUTOBOXING — assign plain int values directly
+        //         (no constructor, no valueOf). Label this in a comment.
 
 
-        // Lena (index 4) has not played — leave it null on purpose.
+        // Lena (slot 4) has not played — leave it null on purpose.
 
         // ---------------------------------------------------
-        // STEP 3: Create the tracker and print scores
+        // Create the tracker and print scores — provided
         // ---------------------------------------------------
         HSTracker tracker = new HSTracker(names, scores);
         tracker.printScores();
 
         // ---------------------------------------------------
-        // STEP 4: Highest score
+        // Highest score — provided
         // ---------------------------------------------------
         int topIndex = tracker.findHighestIndex();
+        System.out.println();
 
         if (topIndex != -1)
         {
-            // TODO 9: Print "Highest score so far: [score] ([Name])"
-            //         using tracker.getScore(topIndex) and tracker.getName(topIndex)
-
+            System.out.println("Highest score so far: " + tracker.getScore(topIndex)
+                               + " (" + tracker.getName(topIndex) + ")");
         }
         else
         {
@@ -5734,28 +5632,154 @@ public class Main
         }
 
         // ---------------------------------------------------
-        // STEP 5: Class average
+        // Class average — provided
         // ---------------------------------------------------
-        // TODO 10: Call calculateAverage() and print it with printf,
-        //          rounded to two decimal places:
-        //          "Class average (players who have played): 84.67"
-
+        System.out.printf("Class average (players who have played): %.2f%n",
+                          tracker.calculateAverage());
 
         // ---------------------------------------------------
-        // STEP 6: Wrapper class limits
+        // Wrapper class limits
         // ---------------------------------------------------
-        // TODO 11: Print Double.MAX_VALUE. In a comment, explain what it is.
+        // TODO 8: Print Double.MAX_VALUE. In a comment, explain what it is.
         //
-        // Oracle exam trap: Double.MIN_VALUE is NOT the most negative double —
-        // it's the smallest POSITIVE double (about 4.9E-324). Integer.MIN_VALUE,
-        // on the other hand, really is the most negative int. Print both and
-        // compare them.
+        // Oracle exam trap: Double.MIN_VALUE is NOT the most negative
+        // double — it's the smallest POSITIVE double (about 4.9E-324).
+        // Integer.MIN_VALUE, on the other hand, really is the most
+        // negative int. Try printing both and compare.
 
     }
 }
 ```
 
 </details>
+
+<details>
+<summary>Starter Code — HSTracker.java</summary>
+
+```java
+// Name:          [Your Full Name]
+// Partner:       [Partner's Full Name, or "None"]
+// Course:        AP Computer Science A
+// Instructor:    [Instructor Name]
+// Assignment:    1.17.1 — High Score Tracker
+// Due Date:      [Month Day, Year]
+
+public class HSTracker
+{
+    // ---------------------------------------------------
+    // Instance variables — provided
+    // ---------------------------------------------------
+    private String[] names;     // player names
+    private Integer[] scores;   // WRAPPER array — a slot can be null ("has not played yet")
+
+    // ---------------------------------------------------
+    // Constructor — provided
+    // ---------------------------------------------------
+    public HSTracker(String[] names, Integer[] scores)
+    {
+        this.names = names;
+        this.scores = scores;
+    }
+
+    // ---------------------------------------------------
+    // Prints each player's score, or "no score yet"
+    // ---------------------------------------------------
+    public void printScores()
+    {
+        System.out.println("Player scores:");
+
+        for (int i = 0; i < scores.length; i++)
+        {
+            // TODO 3 — CRASH IT ON PURPOSE (do this first!)
+            //   Replace the 0 below with scores[i].intValue()
+            //   Add a comment explaining what .intValue() does.
+            //   Run the program. It WILL crash with a NullPointerException
+            //   when it reaches Devon. Screenshot the crash for your reflection.
+            int score = 0;
+            System.out.println(names[i] + ": " + score);
+
+            // TODO 4 — FIX IT
+            //   Wrap the two lines above in an if/else that checks
+            //   whether scores[i] == null.
+            //   If it is null, print:  names[i] + ": no score yet"
+            //   Otherwise, run the two lines above.
+            //   Think: why must the check come BEFORE .intValue()?
+        }
+    }
+
+    // ---------------------------------------------------
+    // Returns the slot number of the highest score,
+    // or -1 if no one has played yet
+    // ---------------------------------------------------
+    public int findHighestIndex()
+    {
+        // TODO 5: Replace 0 with Integer.MIN_VALUE.
+        //         In a comment, explain why 0 would be a buggy starting value.
+        int highest = 0;
+        int highestIndex = -1;
+
+        for (int i = 0; i < scores.length; i++)
+        {
+            if (scores[i] != null)   // skip players who haven't played
+            {
+                // TODO 6: Add a comment identifying the line below as
+                //         IMPLICIT UNBOXING — scores[i] is an Integer object,
+                //         but > only works on primitives, so Java unboxes it.
+                if (scores[i] > highest)
+                {
+                    highest = scores[i];
+                    highestIndex = i;
+                }
+            }
+        }
+
+        return highestIndex;
+    }
+
+    // ---------------------------------------------------
+    // Returns the average of players who HAVE played.
+    // Null scores are skipped — they are not zeros!
+    // ---------------------------------------------------
+    public double calculateAverage()
+    {
+        int total = 0;
+        int count = 0;
+
+        for (int i = 0; i < scores.length; i++)
+        {
+            if (scores[i] != null)
+            {
+                total += scores[i];   // implicit unboxing again
+                count++;
+            }
+        }
+
+        // TODO 7: Create a Double using the explicit constructor:
+        //             Double average = new Double((double) total / count);
+        //         Add a comment explaining what value it holds.
+        //         Then return average instead of 0.0
+        //         (Java unboxes it back to a double automatically).
+
+        return 0.0; // replace this
+    }
+
+    // ---------------------------------------------------
+    // Accessors — provided
+    // ---------------------------------------------------
+    public String getName(int index)
+    {
+        return names[index];
+    }
+
+    public Integer getScore(int index)
+    {
+        return scores[index];
+    }
+}
+```
+
+</details>
+
 
 **Sample Output**
 
@@ -5772,6 +5796,7 @@ Class average (players who have played): 84.67
 ```
 
 #############################################################################
+
 
 > 
 > **Reflection Questions (submit as a `.txt` file)**
