@@ -6294,8 +6294,7 @@ Carol      92
 </pre></div>
 </div>
 <p>If the String is not a valid number (e.g. <code class="docutils literal notranslate"><span class="pre">Integer.parseInt(&quot;forty&quot;)</span></code>), the program throws a <code class="docutils literal notranslate"><span class="pre">NumberFormatException</span></code> at run time.</p>
-<section id="common-pitfalls">
-<h3>Common Pitfalls<a class="headerlink" href="#common-pitfalls" title="Link to this heading">¶</a></h3>
+<p><em><strong>Common Pitfalls</strong></em></p>
 <p><strong>1. Comparing wrapper objects with <code class="docutils literal notranslate"><span class="pre">==</span></code>.</strong> <code class="docutils literal notranslate"><span class="pre">==</span></code> compares <em>references</em> (are these the same box?), not values. Use <code class="docutils literal notranslate"><span class="pre">.equals()</span></code> for wrapper objects, just like with <code class="docutils literal notranslate"><span class="pre">String</span></code>.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Integer</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span>
 <span class="n">Integer</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span>
@@ -6312,7 +6311,6 @@ Carol      92
 <blockquote>
 <div><p><strong>Oracle Exam Note:</strong> Expect questions on autoboxing/unboxing, <code class="docutils literal notranslate"><span class="pre">parseInt</span></code>/<code class="docutils literal notranslate"><span class="pre">parseDouble</span></code>, and <code class="docutils literal notranslate"><span class="pre">==</span></code> vs. <code class="docutils literal notranslate"><span class="pre">.equals()</span></code> with wrappers. Java caches <code class="docutils literal notranslate"><span class="pre">Integer</span></code> objects from <strong>-128 to 127</strong>, so <code class="docutils literal notranslate"><span class="pre">Integer</span> <span class="pre">x</span> <span class="pre">=</span> <span class="pre">127,</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">127;</span> <span class="pre">x</span> <span class="pre">==</span> <span class="pre">y</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>, but the same comparison with <code class="docutils literal notranslate"><span class="pre">128</span></code> is <code class="docutils literal notranslate"><span class="pre">false</span></code>. This is a classic trick question. Also know the instance methods <code class="docutils literal notranslate"><span class="pre">intValue()</span></code> and <code class="docutils literal notranslate"><span class="pre">doubleValue()</span></code>, which unbox explicitly, and <code class="docutils literal notranslate"><span class="pre">Integer.valueOf(...)</span></code>, which boxes explicitly.</p>
 </div></blockquote>
-</section>
 <section id="check-for-understanding">
 <h3>Check for Understanding<a class="headerlink" href="#check-for-understanding" title="Link to this heading">¶</a></h3>
 <p><strong>1.</strong> What is printed?</p>
@@ -6381,8 +6379,7 @@ Carol      92
 </section>
 <section id="assignment-1-17-1-high-score-tracker">
 <h3>Assignment 1.17.1 — High Score Tracker<a class="headerlink" href="#assignment-1-17-1-high-score-tracker" title="Link to this heading">¶</a></h3>
-<blockquote>
-<div><p><strong>Overview</strong></p>
+<p><strong>Overview</strong></p>
 <p>Your school’s arcade club wants a program that tracks high scores for a group of players. The twist: not every player has played yet, so some scores are <strong>missing</strong> rather than zero — and “missing” and “zero” need to be treated differently. This is exactly the kind of situation where primitives (<code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">double</span></code>) fall short, because primitives can never be <code class="docutils literal notranslate"><span class="pre">null</span></code>. Wrapper classes can.</p>
 <p>By the end of this activity you will be able to:</p>
 <ul class="contains-task-list simple">
@@ -6392,7 +6389,9 @@ Carol      92
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use <code class="docutils literal notranslate"><span class="pre">Integer.MAX_VALUE</span></code> / <code class="docutils literal notranslate"><span class="pre">MIN_VALUE</span></code> and <code class="docutils literal notranslate"><span class="pre">Double.MAX_VALUE</span></code> / <code class="docutils literal notranslate"><span class="pre">MIN_VALUE</span></code> in a real comparison, not just printed in isolation</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Explain what happens when you try to unbox a <code class="docutils literal notranslate"><span class="pre">null</span></code> wrapper object, and how to guard against it</p></li>
 </ul>
-<p><strong>Note on <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Integer()</span></code> / <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Double()</span></code>:</strong> These constructors are part of the <strong>AP CSA Java Quick Reference sheet</strong> — they’re fair game on the exam, and you’re required to use them below. If your IDE shows a strikethrough or a “deprecated” warning on them, that’s expected and not a mistake: the AP CSA Exam is written against Java 7, which allows these constructors. In Java 9 and later, the officially recommended approach is <code class="docutils literal notranslate"><span class="pre">Integer.valueOf(x)</span></code> or simply relying on autoboxing instead. Both are worth knowing — the constructor because it’s testable on the exam, and the modern alternative because it’s what you’d actually write in a real codebase today.</p>
+<blockquote>
+<div><p><strong>Note on <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Integer()</span></code> / <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Double()</span></code>:</strong> These constructors are part of the <strong>AP CSA Java Quick Reference sheet</strong> — they’re fair game on the exam, and you’re required to use them below. If your IDE shows a strikethrough or a “deprecated” warning on them, that’s expected and not a mistake: the AP CSA Exam is written against Java 7, which allows these constructors. In Java 9 and later, the officially recommended approach is <code class="docutils literal notranslate"><span class="pre">Integer.valueOf(x)</span></code> or simply relying on autoboxing instead. Both are worth knowing — the constructor because it’s testable on the exam, and the modern alternative because it’s what you’d actually write in a real codebase today.</p>
+</div></blockquote>
 <p><strong>Program Description</strong></p>
 <p>Build a <code class="docutils literal notranslate"><span class="pre">HSTracker.java</span></code> that:</p>
 <ul class="simple">
@@ -6402,17 +6401,15 @@ Carol      92
 <li><p>Loops through the array and, for each player:</p>
 <ul>
 <li><p>Skips players whose score is <code class="docutils literal notranslate"><span class="pre">null</span></code> (print <code class="docutils literal notranslate"><span class="pre">&quot;[Name]</span> <span class="pre">has</span> <span class="pre">not</span> <span class="pre">played</span> <span class="pre">yet.&quot;</span></code>)</p></li>
-<li><p><strong>Unboxes</strong> the <code class="docutils literal notranslate"><span class="pre">Integer</span></code> back to an <code class="docutils literal notranslate"><span class="pre">int</span></code> to use in a calculation — do this at least once using the explicit <code class="docutils literal notranslate"><span class="pre">.intValue()</span></code> method, and at least once using &gt; implicit unboxing (e.g., using the <code class="docutils literal notranslate"><span class="pre">Integer</span></code> directly in a math expression)</p></li>
+<li><p><strong>Unboxes</strong> the <code class="docutils literal notranslate"><span class="pre">Integer</span></code> back to an <code class="docutils literal notranslate"><span class="pre">int</span></code> to use in a calculation — do this at least once using the explicit <code class="docutils literal notranslate"><span class="pre">.intValue()</span></code> method, and at least once using  implicit unboxing (e.g., using the <code class="docutils literal notranslate"><span class="pre">Integer</span></code> directly in a math expression)</p></li>
 </ul>
 </li>
 <li><p>Tracks the highest score seen so far, initializing your “highest so far” variable to <code class="docutils literal notranslate"><span class="pre">Integer.MIN_VALUE</span></code> (not <code class="docutils literal notranslate"><span class="pre">0</span></code>) — ask yourself why <code class="docutils literal notranslate"><span class="pre">0</span></code> would be the wrong choice here</p></li>
 <li><p>Calculates the <strong>average score</strong> as a <code class="docutils literal notranslate"><span class="pre">double</span></code>, using a <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Double(...)</span></code> constructor at least once to store an intermediate result, with a comment explaining what it’s storing</p></li>
 <li><p>Deliberately triggers and then fixes a <code class="docutils literal notranslate"><span class="pre">NullPointerException</span></code>: first write the loop <em>without</em> a null check and run it to see the crash, then add the null check and re-run to show it working</p></li>
 </ul>
-</div></blockquote>
 <p><strong>Requirements Checklist</strong></p>
-<blockquote>
-<div><ul class="contains-task-list simple">
+<ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">Integer[]</span></code> array of at least 5 players, with <strong>at least one <code class="docutils literal notranslate"><span class="pre">null</span></code></strong> score</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> At least one element created with the explicit <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Integer(...)</span></code> constructor</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> At least one element populated via autoboxing (plain <code class="docutils literal notranslate"><span class="pre">int</span></code> literal, no explicit constructor or <code class="docutils literal notranslate"><span class="pre">valueOf()</span></code>)</p></li>
@@ -6424,7 +6421,6 @@ Carol      92
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> A <code class="docutils literal notranslate"><span class="pre">toString()</span></code>-based or <code class="docutils literal notranslate"><span class="pre">printf</span></code>-based summary at the end showing each player’s score (or “no score yet”) and the class average</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Screenshot showing the program <strong>crashing</strong> with a <code class="docutils literal notranslate"><span class="pre">NullPointerException</span></code> before you added your null check (for the reflection questions)</p></li>
 </ul>
-</div></blockquote>
 <p><strong>What You Need to Know About Arrays (for this assignment)</strong></p>
 <p>You haven’t learned arrays yet, and you won’t need to write any array code here. All of it is provided. You just need to be able to read it:</p>
 <ul class="simple">
@@ -6656,7 +6652,8 @@ Carol      92
 </div>
 <p>#############################################################################</p>
 <blockquote>
-<div><p><strong>Reflection Questions (submit as a <code class="docutils literal notranslate"><span class="pre">.txt</span></code> file)</strong></p>
+<div><p><strong>Reflection Questions (submit as a <code class="docutils literal notranslate"><span class="pre">.txt</span></code> or as a comment within your java file)</strong></p>
+</div></blockquote>
 <ol class="arabic simple">
 <li><p>What happened when you unboxed a <code class="docutils literal notranslate"><span class="pre">null</span></code> Integer before adding your null check? Paste the exact error message and explain, in your own words, what Java was trying to do when it crashed.</p></li>
 <li><p>How did adding a null check fix the crash? Where exactly does the check need to go?</p></li>
@@ -6679,7 +6676,6 @@ Carol      92
 <li><p><code class="docutils literal notranslate"><span class="pre">MIN_VALUE</span></code>/<code class="docutils literal notranslate"><span class="pre">MAX_VALUE</span></code> are used in an actual comparison or initialization, not just printed standalone</p></li>
 <li><p>Reflection answers connect to what the student actually observed, not generic textbook definitions</p></li>
 </ul>
-</div></blockquote>
 <p>#############################################################################</p>
 </section>
 </section>
@@ -7396,7 +7392,6 @@ Available vehicles: 3
 </ul>
 </li>
 <li><a class="reference internal" href="#wrapper-classes-integer-and-double">1.17 Wrapper Classes — Integer and Double</a><ul>
-<li><a class="reference internal" href="#common-pitfalls">Common Pitfalls</a></li>
 <li><a class="reference internal" href="#check-for-understanding">Check for Understanding</a></li>
 <li><a class="reference internal" href="#assignment-1-17-1-high-score-tracker">Assignment 1.17.1 — High Score Tracker</a></li>
 </ul>

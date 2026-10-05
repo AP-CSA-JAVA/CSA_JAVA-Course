@@ -5406,7 +5406,7 @@ System.out.println(input + 8);         // 428 (string concatenation)
 
 If the String is not a valid number (e.g. `Integer.parseInt("forty")`), the program throws a `NumberFormatException` at run time.
 
-### Common Pitfalls
+***Common Pitfalls***
 
 **1. Comparing wrapper objects with `==`.** `==` compares *references* (are these the same box?), not values. Use `.equals()` for wrapper objects, just like with `String`.
 
@@ -5508,50 +5508,50 @@ double d = Double.parseDouble("3.14");
 
 ### Assignment 1.17.1 — High Score Tracker
 
-> 
-> **Overview**
-> 
-> Your school's arcade club wants a program that tracks high scores for a group of players. The twist: not every player has played yet, so some scores are **missing** rather than zero — and "missing" and "zero" need to be treated differently. This is exactly the kind of situation where primitives (`int`, `double`) fall short, because primitives can never be `null`. Wrapper classes can.
-> 
-> By the end of this activity you will be able to:
-> - [ ] Explain why a primitive `int` cannot represent "no value yet," but an `Integer` can
-> - [ ] Construct `Integer` and `Double` objects using their constructors, and retrieve primitive values with `intValue()` / `doubleValue()`
-> - [ ] Use autoboxing and unboxing without writing explicit conversion code
-> - [ ] Use `Integer.MAX_VALUE` / `MIN_VALUE` and `Double.MAX_VALUE` / `MIN_VALUE` in a real comparison, not just printed in isolation
-> - [ ] Explain what happens when you try to unbox a `null` wrapper object, and how to guard against it
->
-> 
+
+ **Overview**
+ 
+ Your school's arcade club wants a program that tracks high scores for a group of players. The twist: not every player has played yet, so some scores are **missing** rather than zero — and "missing" and "zero" need to be treated differently. This is exactly the kind of situation where primitives (`int`, `double`) fall short, because primitives can never be `null`. Wrapper classes can.
+ 
+ By the end of this activity you will be able to:
+ - [ ] Explain why a primitive `int` cannot represent "no value yet," but an `Integer` can
+ - [ ] Construct `Integer` and `Double` objects using their constructors, and retrieve primitive values with `intValue()` / `doubleValue()`
+ - [ ] Use autoboxing and unboxing without writing explicit conversion code
+ - [ ] Use `Integer.MAX_VALUE` / `MIN_VALUE` and `Double.MAX_VALUE` / `MIN_VALUE` in a real comparison, not just printed in isolation
+ - [ ] Explain what happens when you try to unbox a `null` wrapper object, and how to guard against it
+
+ 
 > **Note on `new Integer()` / `new Double()`:** These constructors are part of the **AP CSA Java Quick Reference sheet** — they're fair game on the exam, and you're required to use them below. If your IDE shows a strikethrough or a "deprecated" warning on them, that's expected and not a mistake: the AP CSA Exam is written against Java 7, which allows these constructors. In Java 9 and later, the officially recommended approach is `Integer.valueOf(x)` or simply relying on autoboxing instead. Both are worth knowing — the constructor because it's testable on the exam, and the modern alternative because it's what you'd actually write in a real codebase today.
->
-> 
-> **Program Description**
-> 
-> Build a `HSTracker.java` that:
-> 
-> - Stores each player's score as an `Integer[]` array (not `int[]`) — this is what allows a missing score to be represented as `null` instead of a fake `0`
-> - Populates **at least one** element of the array using the explicit `new Integer(score)` constructor, with a comment noting this is exam-tested syntax
-> - Populates the **rest** of the array using **autoboxing** — plain `int` literals assigned directly, letting Java convert them automatically
-> - Loops through the array and, for each player:
->   - Skips players whose score is `null` (print `"[Name] has not played yet."`)
->   - **Unboxes** the `Integer` back to an `int` to use in a calculation — do this at least once using the explicit `.intValue()` method, and at least once using > implicit unboxing (e.g., using the `Integer` directly in a math expression)
-> - Tracks the highest score seen so far, initializing your "highest so far" variable to `Integer.MIN_VALUE` (not `0`) — ask yourself why `0` would be the wrong choice here
-> - Calculates the **average score** as a `double`, using a `new Double(...)` constructor at least once to store an intermediate result, with a comment explaining what it's storing
-> - Deliberately triggers and then fixes a `NullPointerException`: first write the loop *without* a null check and run it to see the crash, then add the null check and re-run to show it working
+
+ 
+ **Program Description**
+ 
+ Build a `HSTracker.java` that:
+ 
+ - Stores each player's score as an `Integer[]` array (not `int[]`) — this is what allows a missing score to be represented as `null` instead of a fake `0`
+ - Populates **at least one** element of the array using the explicit `new Integer(score)` constructor, with a comment noting this is exam-tested syntax
+ - Populates the **rest** of the array using **autoboxing** — plain `int` literals assigned directly, letting Java convert them automatically
+ - Loops through the array and, for each player:
+   - Skips players whose score is `null` (print `"[Name] has not played yet."`)
+   - **Unboxes** the `Integer` back to an `int` to use in a calculation — do this at least once using the explicit `.intValue()` method, and at least once using  implicit unboxing (e.g., using the `Integer` directly in a math expression)
+ - Tracks the highest score seen so far, initializing your "highest so far" variable to `Integer.MIN_VALUE` (not `0`) — ask yourself why `0` would be the wrong choice here
+ - Calculates the **average score** as a `double`, using a `new Double(...)` constructor at least once to store an intermediate result, with a comment explaining what it's storing
+ - Deliberately triggers and then fixes a `NullPointerException`: first write the loop *without* a null check and run it to see the crash, then add the null check and re-run to show it working
  
  **Requirements Checklist**
-> 
-> - [ ] `Integer[]` array of at least 5 players, with **at least one `null`** score
-> - [ ] At least one element created with the explicit `new Integer(...)` constructor
-> - [ ] At least one element populated via autoboxing (plain `int` literal, no explicit constructor or `valueOf()`)
-> - [ ] `intValue()` called explicitly at least once, with a comment explaining what it's doing
-> - [ ] At least one implicit unboxing example (using an `Integer` directly in arithmetic), with a comment identifying it as implicit unboxing
-> - [ ] `new Double(...)` used at least once, with a comment explaining what value it holds
-> - [ ] `Integer.MIN_VALUE` used to initialize your "highest score" tracker, with a comment explaining why `0` would be a buggy choice
-> - [ ] `Double.MAX_VALUE` printed and explained in a comment
-> - [ ] A `toString()`-based or `printf`-based summary at the end showing each player's score (or "no score yet") and the class average
-> - [ ] Screenshot showing the program **crashing** with a `NullPointerException` before you added your null check (for the reflection questions)
->
->
+ 
+ - [ ] `Integer[]` array of at least 5 players, with **at least one `null`** score
+ - [ ] At least one element created with the explicit `new Integer(...)` constructor
+ - [ ] At least one element populated via autoboxing (plain `int` literal, no explicit constructor or `valueOf()`)
+ - [ ] `intValue()` called explicitly at least once, with a comment explaining what it's doing
+ - [ ] At least one implicit unboxing example (using an `Integer` directly in arithmetic), with a comment identifying it as implicit unboxing
+ - [ ] `new Double(...)` used at least once, with a comment explaining what value it holds
+ - [ ] `Integer.MIN_VALUE` used to initialize your "highest score" tracker, with a comment explaining why `0` would be a buggy choice
+ - [ ] `Double.MAX_VALUE` printed and explained in a comment
+ - [ ] A `toString()`-based or `printf`-based summary at the end showing each player's score (or "no score yet") and the class average
+ - [ ] Screenshot showing the program **crashing** with a `NullPointerException` before you added your null check (for the reflection questions)
+
+
 
 **What You Need to Know About Arrays (for this assignment)**
 
@@ -5798,30 +5798,31 @@ Class average (players who have played): 84.67
 #############################################################################
 
 
-> 
-> **Reflection Questions (submit as a `.txt` file)**
-> 
-> 1. What happened when you unboxed a `null` Integer before adding your null check? Paste the exact error message and explain, in your own words, what Java was trying to do when it crashed.
-> 2. How did adding a null check fix the crash? Where exactly does the check need to go?
-> 3. Why did you initialize the "highest score" tracker to `Integer.MIN_VALUE` instead of `0`? Describe a scenario where using `0` would produce a wrong answer.
-> 4. You used both `new Integer(x)` and plain autoboxing (`Integer y = x;`) in this program. Both work, but they behave slightly differently under the hood. Look up why `new Integer(x) == new Integer(x)` is always `false`, while small autoboxed values can sometimes be `==` to each other. Explain what you found in your own words.
-> 5. Autoboxing happens automatically, which is convenient — but describe a situation (e.g., inside a large loop) where autoboxing repeatedly could cause a > performance problem compared to using primitives directly.
-> 
-> **Submission**
-> 
-> - [ ] `Main.java` — completed program with inline comments explaining each wrapper-class concept where it's used
-> - [ ] Reflection `.txt` file
-> - [ ] Screenshot of the `NullPointerException` crash (before the fix)
-> 
-> **Grading**
-> 
-> Graded on the **AP CSA Generic Assignment Rubric** (5-point scale). Pay particular attention to:
-> - Array is genuinely `Integer[]`, not `int[]` — the whole assignment depends on this distinction
-> - Both the explicit constructor (`new Integer(...)`) and autoboxing are present and correctly labeled in comments
-> - The null-check crash is real (not just described) and the screenshot proves it happened
-> - `MIN_VALUE`/`MAX_VALUE` are used in an actual comparison or initialization, not just printed standalone
-> - Reflection answers connect to what the student actually observed, not generic textbook definitions
->
+ 
+> **Reflection Questions (submit as a `.txt` or as a comment within your java file)**
+ 
+
+1. What happened when you unboxed a `null` Integer before adding your null check? Paste the exact error message and explain, in your own words, what Java was trying to do when it crashed.
+2. How did adding a null check fix the crash? Where exactly does the check need to go?
+3. Why did you initialize the "highest score" tracker to `Integer.MIN_VALUE` instead of `0`? Describe a scenario where using `0` would produce a wrong answer.
+4. You used both `new Integer(x)` and plain autoboxing (`Integer y = x;`) in this program. Both work, but they behave slightly differently under the hood. Look up why `new Integer(x) == new Integer(x)` is always `false`, while small autoboxed values can sometimes be `==` to each other. Explain what you found in your own words.
+5. Autoboxing happens automatically, which is convenient — but describe a situation (e.g., inside a large loop) where autoboxing repeatedly could cause a > performance problem compared to using primitives directly.
+ 
+**Submission**
+ 
+- [ ] `Main.java` — completed program with inline comments explaining each wrapper-class concept where it's used
+- [ ] Reflection `.txt` file
+- [ ] Screenshot of the `NullPointerException` crash (before the fix)
+ 
+**Grading**
+ 
+Graded on the **AP CSA Generic Assignment Rubric** (5-point scale). Pay particular attention to:
+- Array is genuinely `Integer[]`, not `int[]` — the whole assignment depends on this distinction
+- Both the explicit constructor (`new Integer(...)`) and autoboxing are present and correctly labeled in comments
+- The null-check crash is real (not just described) and the screenshot proves it happened
+- `MIN_VALUE`/`MAX_VALUE` are used in an actual comparison or initialization, not just printed standalone
+- Reflection answers connect to what the student actually observed, not generic textbook definitions
+
 
 #############################################################################
 
