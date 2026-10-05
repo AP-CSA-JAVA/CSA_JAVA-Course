@@ -93,7 +93,7 @@ Most work is done in class, so the late work policy is not applicable.  For any 
 </details>
 
 
----
+#############################################################################
 
 
 <details>
