@@ -5338,6 +5338,148 @@ Here's the rebuilt version — a real report card with a letter-grade calculatio
 - [ ] Use wrapper classes to convert between primitive and reference types.
 - [ ] Understand autoboxing and unboxing.
 
+
+**What Is a Wrapper Class?**
+
+Java has two kinds of data: **primitives** (`int`, `double`, `boolean`, `char`, ...) and **objects** (`String`, `Scanner`, `Random`, ...). Primitives are fast and simple, but they are *not* objects. They have no methods, they can't be `null`, and they can't be stored in Java's collection classes such as `ArrayList`.
+
+A **wrapper class** is a class whose whole job is to "wrap" a single primitive value inside an object. Think of it like putting a coin in a small box. The coin (the value) is the same, but now it's a package that can be labeled, handed to methods that only accept objects, and stored in containers that only hold objects.
+
+Every primitive type has a matching wrapper class in `java.lang`, so no `import` is needed:
+
+| Primitive | Wrapper Class | AP CSA Focus |
+|-----------|---------------|:------------:|
+| `int`     | `Integer`     | ✅ |
+| `double`  | `Double`      | ✅ |
+| `boolean` | `Boolean`     |    |
+| `char`    | `Character`   |    |
+| `long`    | `Long`        |    |
+| `float`   | `Float`       |    |
+| `short`   | `Short`       |    |
+| `byte`    | `Byte`        |    |
+
+> Notice the naming: most wrappers are just the primitive name capitalized. The two exceptions are `int` → `Integer` and `char` → `Character`.
+
+**Why Do We Need Them?**
+
+1. **Collections require objects.** An `ArrayList<int>` will not compile. You must write `ArrayList<Integer>`. (You'll use this heavily in Unit 4.)
+2. **Useful tools live in the wrapper classes.** Converting text to numbers and finding the largest/smallest possible `int` are handled by static members of `Integer` and `Double`.
+3. **Objects can be `null`.** Sometimes "no value yet" is meaningful, and only an object reference can represent that.
+
+**Autoboxing and Unboxing**
+
+Java converts between primitives and their wrappers automatically:
+
+- **Autoboxing:** primitive → wrapper object (Java puts the coin in the box)
+- **Unboxing:** wrapper object → primitive (Java takes the coin back out)
+
+```java
+Integer score = 95;        // autoboxing: int 95 becomes an Integer object
+int points = score;        // unboxing: Integer becomes int
+int total = score + 5;     // score is unboxed, then added -> 100
+
+Double price = 19.99;      // autoboxing
+double tax = price * 0.1;  // unboxing
+```
+
+Because this happens automatically, you rarely need to write the conversion yourself, but you must understand that it *is* happening.
+
+**Useful Static Members (Java Quick Reference)**
+
+| Member | Purpose | Example |
+|--------|---------|---------|
+| `Integer.MAX_VALUE` | Largest possible `int` (2,147,483,647) | `int best = Integer.MIN_VALUE;` |
+| `Integer.MIN_VALUE` | Smallest possible `int` (-2,147,483,648) | `int lowest = Integer.MAX_VALUE;` |
+| `Integer.parseInt(String s)` | Converts text to an `int` | `int age = Integer.parseInt("16");` |
+| `Double.parseDouble(String s)` | Converts text to a `double` | `double gpa = Double.parseDouble("3.75");` |
+
+`MIN_VALUE` and `MAX_VALUE` are commonly used as starting values when searching for a maximum or minimum. Start "best so far" at the worst possible value so the first real value always replaces it.
+
+```java
+String input = "42";
+int n = Integer.parseInt(input);       // 42 as an int
+System.out.println(n + 8);             // 50  (math)
+System.out.println(input + 8);         // 428 (string concatenation)
+```
+
+If the String is not a valid number (e.g. `Integer.parseInt("forty")`), the program throws a `NumberFormatException` at run time.
+
+### Common Pitfalls
+
+**1. Comparing wrapper objects with `==`.** `==` compares *references* (are these the same box?), not values. Use `.equals()` for wrapper objects, just like with `String`.
+
+```java
+Integer a = 1000;
+Integer b = 1000;
+System.out.println(a == b);       // false (two different objects)
+System.out.println(a.equals(b));  // true  (same value)
+```
+
+**2. Unboxing `null`.** If a wrapper variable is `null` and Java tries to unbox it, the program crashes.
+
+```java
+Integer count = null;
+int n = count;   // NullPointerException at run time
+```
+
+**3. Wrapper objects are immutable.** `score = score + 1;` doesn't change the original `Integer` object. It unboxes, adds, and boxes a brand-new `Integer`, then reassigns the variable.
+
+> **Oracle Exam Note:** Expect questions on autoboxing/unboxing, `parseInt`/`parseDouble`, and `==` vs. `.equals()` with wrappers. Java caches `Integer` objects from **-128 to 127**, so `Integer x = 127, y = 127; x == y` is `true`, but the same comparison with `128` is `false`. This is a classic trick question. Also know the instance methods `intValue()` and `doubleValue()`, which unbox explicitly, and `Integer.valueOf(...)`, which boxes explicitly.
+
+### Check for Understanding
+
+**1.** What is printed?
+```java
+String s = "7";
+int x = Integer.parseInt(s);
+System.out.println(s + 3);
+System.out.println(x + 3);
+```
+<details>
+<summary>Answer</summary>
+
+```
+73
+10
+```
+`s + 3` is String concatenation. `x + 3` is integer addition.
+</details>
+
+**2.** Why does `ArrayList<double> prices = new ArrayList<double>();` fail to compile, and how do you fix it?
+<details>
+<summary>Answer</summary>
+
+Generic collections can only hold objects, and `double` is a primitive. Use the wrapper class: `ArrayList<Double> prices = new ArrayList<Double>();`
+</details>
+
+**3.** Identify the autoboxing and unboxing in this code:
+```java
+Integer a = 5;
+int b = a * 2;
+```
+<details>
+<summary>Answer</summary>
+
+Line 1: `5` is **autoboxed** into an `Integer`. Line 2: `a` is **unboxed** to an `int` so the multiplication can happen.
+</details>
+
+**4.** What happens when this runs, and why?
+```java
+Double d = null;
+double result = d + 1.0;
+```
+<details>
+<summary>Answer</summary>
+
+A `NullPointerException` is thrown. Java tries to unbox `d` to a `double`, but there is no object to unbox.
+</details>
+
+**5.** Why might a programmer write `int max = Integer.MIN_VALUE;` before a loop?
+<details>
+<summary>Answer</summary>
+
+It guarantees that the first value checked will be larger than `max` and will replace it, so the search works even if every value is negative.
+</details>
 | Wrapper Class | Primitive | Useful Methods |
 | ------------- | --------- | -------------- |
 | `Integer` | `int` | `Integer.parseInt(str)`, `Integer.MAX_VALUE` |
