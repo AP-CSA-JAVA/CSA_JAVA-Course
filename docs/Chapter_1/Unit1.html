@@ -6409,8 +6409,10 @@ Carol      92
 <li><p>Calculates the <strong>average score</strong> as a <code class="docutils literal notranslate"><span class="pre">double</span></code>, using a <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Double(...)</span></code> constructor at least once to store an intermediate result, with a comment explaining what it’s storing</p></li>
 <li><p>Deliberately triggers and then fixes a <code class="docutils literal notranslate"><span class="pre">NullPointerException</span></code>: first write the loop <em>without</em> a null check and run it to see the crash, then add the null check and re-run to show it working</p></li>
 </ul>
+</div></blockquote>
 <p><strong>Requirements Checklist</strong></p>
-<ul class="contains-task-list simple">
+<blockquote>
+<div><ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">Integer[]</span></code> array of at least 5 players, with <strong>at least one <code class="docutils literal notranslate"><span class="pre">null</span></code></strong> score</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> At least one element created with the explicit <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Integer(...)</span></code> constructor</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> At least one element populated via autoboxing (plain <code class="docutils literal notranslate"><span class="pre">int</span></code> literal, no explicit constructor or <code class="docutils literal notranslate"><span class="pre">valueOf()</span></code>)</p></li>
@@ -6422,6 +6424,205 @@ Carol      92
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> A <code class="docutils literal notranslate"><span class="pre">toString()</span></code>-based or <code class="docutils literal notranslate"><span class="pre">printf</span></code>-based summary at the end showing each player’s score (or “no score yet”) and the class average</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Screenshot showing the program <strong>crashing</strong> with a <code class="docutils literal notranslate"><span class="pre">NullPointerException</span></code> before you added your null check (for the reflection questions)</p></li>
 </ul>
+</div></blockquote>
+<details>
+<summary>Starter Code — HSTracker.java</summary>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Name:          [Your Full Name]</span>
+<span class="c1">// Partner:       [Partner's Full Name, or "None"]</span>
+<span class="c1">// Course:        AP Computer Science A</span>
+<span class="c1">// Instructor:    [Instructor Name]</span>
+<span class="c1">// Assignment:    1.17.1 — High Score Tracker</span>
+<span class="c1">// Due Date:      [Month Day, Year]</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HSTracker</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// ---------------------------------------------------</span>
+<span class="w">    </span><span class="c1">// Instance variables</span>
+<span class="w">    </span><span class="c1">// ---------------------------------------------------</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">names</span><span class="p">;</span><span class="w">     </span><span class="c1">// player names</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Integer</span><span class="o">[]</span><span class="w"> </span><span class="n">scores</span><span class="p">;</span><span class="w">   </span><span class="c1">// WRAPPER array — an element can be null ("has not played yet")</span>
+<span class="w">                                </span><span class="c1">// An int[] could never do this: its "empty" value is 0</span>
+
+<span class="w">    </span><span class="c1">// ---------------------------------------------------</span>
+<span class="w">    </span><span class="c1">// Constructor — provided</span>
+<span class="w">    </span><span class="c1">// ---------------------------------------------------</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">HSTracker</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">names</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="o">[]</span><span class="w"> </span><span class="n">scores</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">names</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">scores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scores</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// ---------------------------------------------------</span>
+<span class="w">    </span><span class="c1">// Prints each player's score, or "has not played yet"</span>
+<span class="w">    </span><span class="c1">// ---------------------------------------------------</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printScores</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Player scores:"</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">scores</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// TODO 1 — CRASH IT ON PURPOSE (do this first!)</span>
+<span class="w">            </span><span class="c1">//   Unbox scores[i] using the explicit .intValue() method,</span>
+<span class="w">            </span><span class="c1">//   store it in an int, and print "[Name]: [score]".</span>
+<span class="w">            </span><span class="c1">//   Do NOT check for null yet. Run the program, and take a</span>
+<span class="w">            </span><span class="c1">//   screenshot of the NullPointerException for your reflection.</span>
+<span class="w">            </span><span class="c1">//   Add a comment explaining what .intValue() is doing.</span>
+
+
+<span class="w">            </span><span class="c1">// TODO 2 — FIX IT</span>
+<span class="w">            </span><span class="c1">//   Add a null check BEFORE the line that unboxes.</span>
+<span class="w">            </span><span class="c1">//   If scores[i] is null, print "[Name]: no score yet" instead.</span>
+<span class="w">            </span><span class="c1">//   Think: why does the check have to come before .intValue()?</span>
+
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// ---------------------------------------------------</span>
+<span class="w">    </span><span class="c1">// Returns the INDEX of the player with the highest score,</span>
+<span class="w">    </span><span class="c1">// or -1 if no one has played yet.</span>
+<span class="w">    </span><span class="c1">// ---------------------------------------------------</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">findHighestIndex</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// TODO 3: Initialize your "highest so far" tracker to Integer.MIN_VALUE.</span>
+<span class="w">        </span><span class="c1">//         In a comment, explain why 0 would be a buggy starting value.</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">highest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">      </span><span class="c1">// replace 0</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">highestIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">scores</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// TODO 4: Skip null scores. Otherwise, compare scores[i] to highest</span>
+<span class="w">            </span><span class="c1">//         WITHOUT calling .intValue() — Java will unbox it for you.</span>
+<span class="w">            </span><span class="c1">//         Label this in a comment as IMPLICIT UNBOXING.</span>
+<span class="w">            </span><span class="c1">//         If it's larger, update highest and highestIndex.</span>
+
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">highestIndex</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// ---------------------------------------------------</span>
+<span class="w">    </span><span class="c1">// Returns the average of players who HAVE played.</span>
+<span class="w">    </span><span class="c1">// Null scores are not counted (they are not zeros!).</span>
+<span class="w">    </span><span class="c1">// ---------------------------------------------------</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">calculateAverage</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// TODO 5: Loop through scores. Skip nulls. Add each score to total</span>
+<span class="w">        </span><span class="c1">//         using implicit unboxing (e.g., total += scores[i];) and</span>
+<span class="w">        </span><span class="c1">//         count how many players were added.</span>
+
+
+<span class="w">        </span><span class="c1">// TODO 6: Store the average in a Double using the new Double(...)</span>
+<span class="w">        </span><span class="c1">//         constructor. Add a comment explaining what value it holds.</span>
+<span class="w">        </span><span class="c1">//         Watch out for integer division — cast before you divide!</span>
+<span class="w">        </span><span class="c1">//         Then return it (Java unboxes it back to a double for you).</span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span><span class="w"> </span><span class="c1">// replace this</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// ---------------------------------------------------</span>
+<span class="w">    </span><span class="c1">// Accessor — provided</span>
+<span class="w">    </span><span class="c1">// ---------------------------------------------------</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getName</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">names</span><span class="o">[</span><span class="n">index</span><span class="o">]</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Integer</span><span class="w"> </span><span class="nf">getScore</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">scores</span><span class="o">[</span><span class="n">index</span><span class="o">]</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</details>
+<details>
+<summary>Starter Code — Main.java</summary>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Name:          [Your Full Name]</span>
+<span class="c1">// Partner:       [Partner's Full Name, or "None"]</span>
+<span class="c1">// Course:        AP Computer Science A</span>
+<span class="c1">// Instructor:    [Instructor Name]</span>
+<span class="c1">// Assignment:    1.17.1 — High Score Tracker</span>
+<span class="c1">// Due Date:      [Month Day, Year]</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// ---------------------------------------------------</span>
+<span class="w">        </span><span class="c1">// STEP 1: Player names — provided</span>
+<span class="w">        </span><span class="c1">// ---------------------------------------------------</span>
+<span class="w">        </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">"Amara"</span><span class="p">,</span><span class="w"> </span><span class="s">"Devon"</span><span class="p">,</span><span class="w"> </span><span class="s">"Priya"</span><span class="p">,</span><span class="w"> </span><span class="s">"Kai"</span><span class="p">,</span><span class="w"> </span><span class="s">"Lena"</span><span class="p">};</span>
+
+<span class="w">        </span><span class="c1">// ---------------------------------------------------</span>
+<span class="w">        </span><span class="c1">// STEP 2: Build the Integer[] array</span>
+<span class="w">        </span><span class="c1">// ---------------------------------------------------</span>
+<span class="w">        </span><span class="c1">// Every element of a new Integer[] starts as null — not 0.</span>
+<span class="w">        </span><span class="c1">// (Compare: every element of a new int[] starts as 0.)</span>
+<span class="w">        </span><span class="n">Integer</span><span class="o">[]</span><span class="w"> </span><span class="n">scores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Integer</span><span class="o">[</span><span class="n">names</span><span class="p">.</span><span class="na">length</span><span class="o">]</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// TODO 7: Give Amara (index 0) a score of 87 using the explicit</span>
+<span class="w">        </span><span class="c1">//         new Integer(...) constructor. Add a comment noting that</span>
+<span class="w">        </span><span class="c1">//         this is exam-tested syntax (it's on the AP Quick Reference).</span>
+<span class="w">        </span><span class="c1">//         A "deprecated" warning here is expected.</span>
+
+
+<span class="w">        </span><span class="c1">// Devon (index 1) has not played — leave it null on purpose.</span>
+
+<span class="w">        </span><span class="c1">// TODO 8: Give Priya (index 2) a 95 and Kai (index 3) a 72 using</span>
+<span class="w">        </span><span class="c1">//         AUTOBOXING — assign plain int literals, no constructor,</span>
+<span class="w">        </span><span class="c1">//         no valueOf(). Label this in a comment.</span>
+
+
+<span class="w">        </span><span class="c1">// Lena (index 4) has not played — leave it null on purpose.</span>
+
+<span class="w">        </span><span class="c1">// ---------------------------------------------------</span>
+<span class="w">        </span><span class="c1">// STEP 3: Create the tracker and print scores</span>
+<span class="w">        </span><span class="c1">// ---------------------------------------------------</span>
+<span class="w">        </span><span class="n">HSTracker</span><span class="w"> </span><span class="n">tracker</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HSTracker</span><span class="p">(</span><span class="n">names</span><span class="p">,</span><span class="w"> </span><span class="n">scores</span><span class="p">);</span>
+<span class="w">        </span><span class="n">tracker</span><span class="p">.</span><span class="na">printScores</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// ---------------------------------------------------</span>
+<span class="w">        </span><span class="c1">// STEP 4: Highest score</span>
+<span class="w">        </span><span class="c1">// ---------------------------------------------------</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">topIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tracker</span><span class="p">.</span><span class="na">findHighestIndex</span><span class="p">();</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">topIndex</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// TODO 9: Print "Highest score so far: [score] ([Name])"</span>
+<span class="w">            </span><span class="c1">//         using tracker.getScore(topIndex) and tracker.getName(topIndex)</span>
+
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">else</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"No one has played yet."</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// ---------------------------------------------------</span>
+<span class="w">        </span><span class="c1">// STEP 5: Class average</span>
+<span class="w">        </span><span class="c1">// ---------------------------------------------------</span>
+<span class="w">        </span><span class="c1">// TODO 10: Call calculateAverage() and print it with printf,</span>
+<span class="w">        </span><span class="c1">//          rounded to two decimal places:</span>
+<span class="w">        </span><span class="c1">//          "Class average (players who have played): 84.67"</span>
+
+
+<span class="w">        </span><span class="c1">// ---------------------------------------------------</span>
+<span class="w">        </span><span class="c1">// STEP 6: Wrapper class limits</span>
+<span class="w">        </span><span class="c1">// ---------------------------------------------------</span>
+<span class="w">        </span><span class="c1">// TODO 11: Print Double.MAX_VALUE. In a comment, explain what it is.</span>
+<span class="w">        </span><span class="c1">//</span>
+<span class="w">        </span><span class="c1">// Oracle exam trap: Double.MIN_VALUE is NOT the most negative double —</span>
+<span class="w">        </span><span class="c1">// it's the smallest POSITIVE double (about 4.9E-324). Integer.MIN_VALUE,</span>
+<span class="w">        </span><span class="c1">// on the other hand, really is the most negative int. Print both and</span>
+<span class="w">        </span><span class="c1">// compare them.</span>
+
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</details>
 <p><strong>Sample Output</strong></p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Player</span><span class="w"> </span><span class="n">scores</span><span class="p">:</span>
 <span class="nl">Amara</span><span class="p">:</span><span class="w"> </span><span class="mi">87</span>
@@ -6434,7 +6635,9 @@ Carol      92
 <span class="n">Class</span><span class="w"> </span><span class="nf">average</span><span class="w"> </span><span class="p">(</span><span class="n">players</span><span class="w"> </span><span class="n">who</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">played</span><span class="p">):</span><span class="w"> </span><span class="mf">84.67</span>
 </pre></div>
 </div>
-<p><strong>Reflection Questions (submit as a <code class="docutils literal notranslate"><span class="pre">.txt</span></code> file)</strong></p>
+<p>#############################################################################</p>
+<blockquote>
+<div><p><strong>Reflection Questions (submit as a <code class="docutils literal notranslate"><span class="pre">.txt</span></code> file)</strong></p>
 <ol class="arabic simple">
 <li><p>What happened when you unboxed a <code class="docutils literal notranslate"><span class="pre">null</span></code> Integer before adding your null check? Paste the exact error message and explain, in your own words, what Java was trying to do when it crashed.</p></li>
 <li><p>How did adding a null check fix the crash? Where exactly does the check need to go?</p></li>

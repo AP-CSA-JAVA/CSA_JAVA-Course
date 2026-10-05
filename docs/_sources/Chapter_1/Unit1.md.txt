@@ -5386,12 +5386,14 @@ Because this happens automatically, you rarely need to write the conversion your
 
 **Useful Static Members (Java Quick Reference)**
 
+
 | Member | Purpose | Example |
 |--------|---------|---------|
 | `Integer.MAX_VALUE` | Largest possible `int` (2,147,483,647) | `int best = Integer.MIN_VALUE;` |
 | `Integer.MIN_VALUE` | Smallest possible `int` (-2,147,483,648) | `int lowest = Integer.MAX_VALUE;` |
 | `Integer.parseInt(String s)` | Converts text to an `int` | `int age = Integer.parseInt("16");` |
 | `Double.parseDouble(String s)` | Converts text to a `double` | `double gpa = Double.parseDouble("3.75");` |
+
 
 `MIN_VALUE` and `MAX_VALUE` are commonly used as starting values when searching for a maximum or minimum. Start "best so far" at the worst possible value so the first real value always replaces it.
 
@@ -5535,8 +5537,8 @@ double d = Double.parseDouble("3.14");
 > - Tracks the highest score seen so far, initializing your "highest so far" variable to `Integer.MIN_VALUE` (not `0`) — ask yourself why `0` would be the wrong choice here
 > - Calculates the **average score** as a `double`, using a `new Double(...)` constructor at least once to store an intermediate result, with a comment explaining what it's storing
 > - Deliberately triggers and then fixes a `NullPointerException`: first write the loop *without* a null check and run it to see the crash, then add the null check and re-run to show it working
-> 
-> **Requirements Checklist**
+ 
+ **Requirements Checklist**
 > 
 > - [ ] `Integer[]` array of at least 5 players, with **at least one `null`** score
 > - [ ] At least one element created with the explicit `new Integer(...)` constructor
@@ -5548,20 +5550,229 @@ double d = Double.parseDouble("3.14");
 > - [ ] `Double.MAX_VALUE` printed and explained in a comment
 > - [ ] A `toString()`-based or `printf`-based summary at the end showing each player's score (or "no score yet") and the class average
 > - [ ] Screenshot showing the program **crashing** with a `NullPointerException` before you added your null check (for the reflection questions)
-> 
-> **Sample Output**
-> 
-> ```java
-> Player scores:
-> Amara: 87
-> Devon: no score yet
-> Priya: 95
-> Kai: 72
-> Lena: no score yet
-> 
-> Highest score so far: 95 (Priya)
-> Class average (players who have played): 84.67
-> ```
+>
+>
+
+<details>
+<summary>Starter Code — HSTracker.java</summary>
+
+```java
+// Name:          [Your Full Name]
+// Partner:       [Partner's Full Name, or "None"]
+// Course:        AP Computer Science A
+// Instructor:    [Instructor Name]
+// Assignment:    1.17.1 — High Score Tracker
+// Due Date:      [Month Day, Year]
+
+public class HSTracker
+{
+    // ---------------------------------------------------
+    // Instance variables
+    // ---------------------------------------------------
+    private String[] names;     // player names
+    private Integer[] scores;   // WRAPPER array — an element can be null ("has not played yet")
+                                // An int[] could never do this: its "empty" value is 0
+
+    // ---------------------------------------------------
+    // Constructor — provided
+    // ---------------------------------------------------
+    public HSTracker(String[] names, Integer[] scores)
+    {
+        this.names = names;
+        this.scores = scores;
+    }
+
+    // ---------------------------------------------------
+    // Prints each player's score, or "has not played yet"
+    // ---------------------------------------------------
+    public void printScores()
+    {
+        System.out.println("Player scores:");
+
+        for (int i = 0; i < scores.length; i++)
+        {
+            // TODO 1 — CRASH IT ON PURPOSE (do this first!)
+            //   Unbox scores[i] using the explicit .intValue() method,
+            //   store it in an int, and print "[Name]: [score]".
+            //   Do NOT check for null yet. Run the program, and take a
+            //   screenshot of the NullPointerException for your reflection.
+            //   Add a comment explaining what .intValue() is doing.
+
+
+            // TODO 2 — FIX IT
+            //   Add a null check BEFORE the line that unboxes.
+            //   If scores[i] is null, print "[Name]: no score yet" instead.
+            //   Think: why does the check have to come before .intValue()?
+
+        }
+    }
+
+    // ---------------------------------------------------
+    // Returns the INDEX of the player with the highest score,
+    // or -1 if no one has played yet.
+    // ---------------------------------------------------
+    public int findHighestIndex()
+    {
+        // TODO 3: Initialize your "highest so far" tracker to Integer.MIN_VALUE.
+        //         In a comment, explain why 0 would be a buggy starting value.
+        int highest = 0;      // replace 0
+        int highestIndex = -1;
+
+        for (int i = 0; i < scores.length; i++)
+        {
+            // TODO 4: Skip null scores. Otherwise, compare scores[i] to highest
+            //         WITHOUT calling .intValue() — Java will unbox it for you.
+            //         Label this in a comment as IMPLICIT UNBOXING.
+            //         If it's larger, update highest and highestIndex.
+
+        }
+
+        return highestIndex;
+    }
+
+    // ---------------------------------------------------
+    // Returns the average of players who HAVE played.
+    // Null scores are not counted (they are not zeros!).
+    // ---------------------------------------------------
+    public double calculateAverage()
+    {
+        int total = 0;
+        int count = 0;
+
+        // TODO 5: Loop through scores. Skip nulls. Add each score to total
+        //         using implicit unboxing (e.g., total += scores[i];) and
+        //         count how many players were added.
+
+
+        // TODO 6: Store the average in a Double using the new Double(...)
+        //         constructor. Add a comment explaining what value it holds.
+        //         Watch out for integer division — cast before you divide!
+        //         Then return it (Java unboxes it back to a double for you).
+
+        return 0.0; // replace this
+    }
+
+    // ---------------------------------------------------
+    // Accessor — provided
+    // ---------------------------------------------------
+    public String getName(int index)
+    {
+        return names[index];
+    }
+
+    public Integer getScore(int index)
+    {
+        return scores[index];
+    }
+}
+```
+
+</details>
+
+<details>
+<summary>Starter Code — Main.java</summary>
+
+```java
+// Name:          [Your Full Name]
+// Partner:       [Partner's Full Name, or "None"]
+// Course:        AP Computer Science A
+// Instructor:    [Instructor Name]
+// Assignment:    1.17.1 — High Score Tracker
+// Due Date:      [Month Day, Year]
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        // ---------------------------------------------------
+        // STEP 1: Player names — provided
+        // ---------------------------------------------------
+        String[] names = {"Amara", "Devon", "Priya", "Kai", "Lena"};
+
+        // ---------------------------------------------------
+        // STEP 2: Build the Integer[] array
+        // ---------------------------------------------------
+        // Every element of a new Integer[] starts as null — not 0.
+        // (Compare: every element of a new int[] starts as 0.)
+        Integer[] scores = new Integer[names.length];
+
+        // TODO 7: Give Amara (index 0) a score of 87 using the explicit
+        //         new Integer(...) constructor. Add a comment noting that
+        //         this is exam-tested syntax (it's on the AP Quick Reference).
+        //         A "deprecated" warning here is expected.
+
+
+        // Devon (index 1) has not played — leave it null on purpose.
+
+        // TODO 8: Give Priya (index 2) a 95 and Kai (index 3) a 72 using
+        //         AUTOBOXING — assign plain int literals, no constructor,
+        //         no valueOf(). Label this in a comment.
+
+
+        // Lena (index 4) has not played — leave it null on purpose.
+
+        // ---------------------------------------------------
+        // STEP 3: Create the tracker and print scores
+        // ---------------------------------------------------
+        HSTracker tracker = new HSTracker(names, scores);
+        tracker.printScores();
+
+        // ---------------------------------------------------
+        // STEP 4: Highest score
+        // ---------------------------------------------------
+        int topIndex = tracker.findHighestIndex();
+
+        if (topIndex != -1)
+        {
+            // TODO 9: Print "Highest score so far: [score] ([Name])"
+            //         using tracker.getScore(topIndex) and tracker.getName(topIndex)
+
+        }
+        else
+        {
+            System.out.println("No one has played yet.");
+        }
+
+        // ---------------------------------------------------
+        // STEP 5: Class average
+        // ---------------------------------------------------
+        // TODO 10: Call calculateAverage() and print it with printf,
+        //          rounded to two decimal places:
+        //          "Class average (players who have played): 84.67"
+
+
+        // ---------------------------------------------------
+        // STEP 6: Wrapper class limits
+        // ---------------------------------------------------
+        // TODO 11: Print Double.MAX_VALUE. In a comment, explain what it is.
+        //
+        // Oracle exam trap: Double.MIN_VALUE is NOT the most negative double —
+        // it's the smallest POSITIVE double (about 4.9E-324). Integer.MIN_VALUE,
+        // on the other hand, really is the most negative int. Print both and
+        // compare them.
+
+    }
+}
+```
+
+</details>
+
+**Sample Output**
+
+```java
+Player scores:
+Amara: 87
+Devon: no score yet
+Priya: 95
+Kai: 72
+Lena: no score yet
+
+Highest score so far: 95 (Priya)
+Class average (players who have played): 84.67
+```
+
+#############################################################################
+
 > 
 > **Reflection Questions (submit as a `.txt` file)**
 > 
