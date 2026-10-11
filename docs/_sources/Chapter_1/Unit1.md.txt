@@ -5165,17 +5165,10 @@ where `_` represents a space.
 The `StringBuilder` accumulates all three lines, and `System.out.print()` prints the completed table at once.
 
 
-
-
-### Assignment 1.16.1 — Formatted Report
-
-Checked this one too — same situation as StringBuilder. Per the same College Board Java Subset appendix, under **Input/Output**, `System.out.printf` and formatted output are explicitly listed as **"Not tested in the AP CS A Exam, but potentially relevant/useful."** So `String.format()` (which works the same way under the hood) is safe to teach freely — no exam-alignment tension, just genuinely useful skill-building.
-
-Here's the rebuilt version — a real report card with a letter-grade calculation baked in, so the formatting has actual data worth aligning instead of being the whole point of the exercise.
-
 ---
 
 ### Assignment 1.16.1 — Formatted Report Card
+
 
 
 > **Oracle Exam Note (1Z0-811):** `String.format()` and `System.out.printf` are not tested on the AP CS A Exam — you won't find them on the Quick Reference sheet you get during that test. But unlike AP, the Oracle Java Foundations exam tests this directly — expect to see `%d`, `%s`, `%n`, and `%f`-style format specifiers on the 1Z0-811. Know this one well for your Oracle cert, even though it's optional for AP.
