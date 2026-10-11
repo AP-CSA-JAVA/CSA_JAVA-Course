@@ -1,6 +1,6 @@
 # Unit 2 - Selection and Iteration
 *AP Exam Weighting: 25–35%*
-
+## Deprecated on 10/11/2026
 ---
 
 **📋 Unit 2 Standards Alignment**
