@@ -715,6 +715,38 @@
 <section id="java-style-guidelines">
 <h2>Java Style Guidelines<a class="headerlink" href="#java-style-guidelines" title="Link to this heading">¶</a></h2>
 <p>Consistent, readable code is a professional standard and a grading requirement in this course. All submitted code must follow these Java style conventions.</p>
+</section>
+<section id="java-style-guidelines-oracle-code-conventions">
+<h2>Java Style Guidelines — Oracle Code Conventions<a class="headerlink" href="#java-style-guidelines-oracle-code-conventions" title="Link to this heading">¶</a></h2>
+<p>Consistent, readable code is a professional standard and a grading requirement in this course. Our style rules come from Oracle’s <strong><a class="reference external" href="https://www.oracle.com/java/technologies/javase/codeconventions-contents.html">Code Conventions for the Java Programming Language</a></strong>, the original style guide for Java. Most companies’ Java style guides (Google’s, for example) are built on these same rules.</p>
+<p>A few rules are <strong>course rules</strong>: they go a little further than Oracle so your code is easy to grade and easy for a partner to read. Each rule below is marked <strong>Oracle</strong> or <strong>Course</strong>.</p>
+<p>The CSA Java Grader checks most of these rules automatically, and your teacher checks the rest when reading your code. Each <em>type</em> of mistake counts once in the Documentation &amp; Style column, but your correction sheet lists every line, and you fix them all.</p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>Mistake types</p></th>
+<th class="head text-center"><p>Documentation &amp; Style score</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>0</p></td>
+<td class="text-center"><p>5</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>1</p></td>
+<td class="text-center"><p>4</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>2–3</p></td>
+<td class="text-center"><p>3</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>4–5</p></td>
+<td class="text-center"><p>2</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>6 or more</p></td>
+<td class="text-center"><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <section id="naming-conventions">
 <h3>Naming Conventions<a class="headerlink" href="#naming-conventions" title="Link to this heading">¶</a></h3>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -723,51 +755,163 @@
 <tr class="row-odd"><th class="head"><p>Element</p></th>
 <th class="head"><p>Convention</p></th>
 <th class="head"><p>Example</p></th>
+<th class="head"><p>Source</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>Variables</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">camelCase</span></code> — start lowercase</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">studentScore</span></code>, <code class="docutils literal notranslate"><span class="pre">totalCount</span></code></p></td>
+<tr class="row-even"><td><p>Classes</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">PascalCase</span></code>: a noun, every word capitalized</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">BankAccount</span></code>, <code class="docutils literal notranslate"><span class="pre">CashierTotals</span></code></p></td>
+<td><p>Oracle §9</p></td>
 </tr>
 <tr class="row-odd"><td><p>Methods</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">camelCase</span></code> — start lowercase, verb phrase</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">camelCase</span></code>: a verb, starts lowercase</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">calculateAverage()</span></code>, <code class="docutils literal notranslate"><span class="pre">printResult()</span></code></p></td>
+<td><p>Oracle §9</p></td>
 </tr>
-<tr class="row-even"><td><p>Classes</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">PascalCase</span></code> — start uppercase</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">BankAccount</span></code>, <code class="docutils literal notranslate"><span class="pre">MoonProblems</span></code></p></td>
+<tr class="row-even"><td><p>Variables</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">camelCase</span></code>: starts lowercase</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">studentScore</span></code>, <code class="docutils literal notranslate"><span class="pre">totalSales</span></code></p></td>
+<td><p>Oracle §9</p></td>
 </tr>
-<tr class="row-odd"><td><p>Constants</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">ALL_CAPS_WITH_UNDERSCORES</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">MAX_SIZE</span></code>, <code class="docutils literal notranslate"><span class="pre">PI_VALUE</span></code></p></td>
-</tr>
-<tr class="row-even"><td><p>Parameters</p></td>
+<tr class="row-odd"><td><p>Parameters</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">camelCase</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">numStudents</span></code>, <code class="docutils literal notranslate"><span class="pre">inputValue</span></code></p></td>
+<td><p>Oracle §9</p></td>
+</tr>
+<tr class="row-even"><td><p>Constants (<code class="docutils literal notranslate"><span class="pre">static</span> <span class="pre">final</span></code>)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ALL_CAPS_WITH_UNDERSCORES</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">MAX_SPEED</span></code>, <code class="docutils literal notranslate"><span class="pre">TAX_RATE</span></code></p></td>
+<td><p>Oracle §9</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-</section>
-<section id="formatting-rules">
-<h3>Formatting Rules<a class="headerlink" href="#formatting-rules" title="Link to this heading">¶</a></h3>
 <ul class="simple">
-<li><p><strong>Indentation:</strong> 4 spaces (not tabs) per level.</p></li>
-<li><p><strong>Braces:</strong> Opening brace on the same line as the statement. Closing brace on its own line.</p></li>
-<li><p><strong>Blank lines:</strong> One blank line between methods. Two blank lines between class-level sections.</p></li>
-<li><p><strong>Line length:</strong> Keep lines under 100 characters.</p></li>
-<li><p><strong>Variable names:</strong> Descriptive and meaningful — never single letters (<code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">n</span></code>) except for loop counters (<code class="docutils literal notranslate"><span class="pre">i</span></code>, <code class="docutils literal notranslate"><span class="pre">j</span></code>).</p></li>
+<li><p><strong>Meaningful names.</strong> Avoid one-letter names except for short “throwaway” variables such as loop counters (<code class="docutils literal notranslate"><span class="pre">i</span></code>, <code class="docutils literal notranslate"><span class="pre">j</span></code>, <code class="docutils literal notranslate"><span class="pre">k</span></code>). <em>(Oracle §9)</em></p></li>
+<li><p><strong>The class name must match the file name.</strong> <code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">class</span> <span class="pre">CashierTotals</span></code> goes in <code class="docutils literal notranslate"><span class="pre">CashierTotals.java</span></code>. <em>(Java requires this.)</em></p></li>
+<li><p><strong>No underscores or spaces in class, method, or variable names.</strong> <code class="docutils literal notranslate"><span class="pre">Total_Sales</span></code> and <code class="docutils literal notranslate"><span class="pre">cashier_totals</span></code> are wrong; <code class="docutils literal notranslate"><span class="pre">totalSales</span></code> and <code class="docutils literal notranslate"><span class="pre">CashierTotals</span></code> are right.</p></li>
 </ul>
+<details>
+<summary>Example: fixing names</summary>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Before</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">cashier_totals</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">Total_Sales</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">PrintReceipt</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// After</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CashierTotals</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">totalSales</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printReceipt</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</details>
+</section>
+<section id="statements-and-formatting">
+<h3>Statements and Formatting<a class="headerlink" href="#statements-and-formatting" title="Link to this heading">¶</a></h3>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Rule</p></th>
+<th class="head"><p>Example</p></th>
+<th class="head"><p>Source</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Always use braces</strong> <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">}</span></code> on <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">else</span></code>, <code class="docutils literal notranslate"><span class="pre">for</span></code>, and <code class="docutils literal notranslate"><span class="pre">while</span></code>, even when the body is one line</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">(score</span> <span class="pre">&gt;</span> <span class="pre">90)</span> <span class="pre">{</span></code> … <code class="docutils literal notranslate"><span class="pre">}</span></code></p></td>
+<td><p>Oracle §7.4</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>One statement per line</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">count++;</span></code> and <code class="docutils literal notranslate"><span class="pre">total</span> <span class="pre">+=</span> <span class="pre">price;</span></code> go on separate lines</p></td>
+<td><p>Oracle §7.1</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Space after a keyword</strong> followed by <code class="docutils literal notranslate"><span class="pre">(</span></code>: <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">(</span></code>, <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">(</span></code>, <code class="docutils literal notranslate"><span class="pre">while</span> <span class="pre">(</span></code>, <code class="docutils literal notranslate"><span class="pre">switch</span> <span class="pre">(</span></code>, <code class="docutils literal notranslate"><span class="pre">catch</span> <span class="pre">(</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">(x</span> <span class="pre">&gt;</span> <span class="pre">0)</span></code>, not <code class="docutils literal notranslate"><span class="pre">if(x</span> <span class="pre">&gt;</span> <span class="pre">0)</span></code></p></td>
+<td><p>Oracle §8.2</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>No space after a method name</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">calculateAverage(a,</span> <span class="pre">b)</span></code>, not <code class="docutils literal notranslate"><span class="pre">calculateAverage</span> <span class="pre">(a,</span> <span class="pre">b)</span></code></p></td>
+<td><p>Oracle §8.2</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Indent 4 spaces</strong> for each level inside <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">}</span></code></p></td>
+<td><p>see the example below</p></td>
+<td><p>Oracle §4</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Spaces only, no tabs.</strong> Don’t mix tabs and spaces</p></td>
+<td><p>set your editor to “insert spaces”</p></td>
+<td><p>Course</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Lines 100 characters or shorter.</strong> Oracle says 80; we allow 100 for long <code class="docutils literal notranslate"><span class="pre">printf</span></code> lines</p></td>
+<td><p>split a long line after a comma or before an operator</p></td>
+<td><p>Course (Oracle §4.1 says 80)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Opening brace</strong> at the end of the line; <strong>closing brace</strong> on its own line</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">static</span> <span class="pre">void</span> <span class="pre">main(String[]</span> <span class="pre">args)</span> <span class="pre">{</span></code></p></td>
+<td><p>Oracle §6.4</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>One blank line</strong> between methods</p></td>
+<td><p></p></td>
+<td><p>Oracle §8.1</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<details>
+<summary>Example: braces, one statement per line, and spacing</summary>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Before: no braces, two statements on one line, no space after if</span>
+<span class="k">if</span><span class="p">(</span><span class="n">total</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="n">discount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5.0</span><span class="p">;</span>
+<span class="n">count</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">price</span><span class="p">;</span>
+
+<span class="c1">// After</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">total</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">discount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5.0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">count</span><span class="o">++</span><span class="p">;</span>
+<span class="n">total</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">price</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Why always use braces? Without them, only the first line belongs to the <code class="docutils literal notranslate"><span class="pre">if</span></code>. Adding a second line later looks right but runs every time:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">total</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">50</span><span class="p">)</span>
+<span class="w">    </span><span class="n">discount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5.0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"You saved $5!"</span><span class="p">);</span><span class="w">   </span><span class="c1">// runs even when total is 10</span>
+</pre></div>
+</div>
+</details>
 </section>
 <section id="comments">
 <h3>Comments<a class="headerlink" href="#comments" title="Link to this heading">¶</a></h3>
-<ul class="simple">
-<li><p><strong>Block comment header</strong> required at the top of every <code class="docutils literal notranslate"><span class="pre">.java</span></code> file (see <a class="reference internal" href="#assignment-header-submission-requirements">Submission Requirements</a>).</p></li>
-<li><p><strong>Inline comments</strong> (<code class="docutils literal notranslate"><span class="pre">//</span></code>) explain the <em>why</em> behind non-obvious logic — not the <em>what</em>.</p></li>
-<li><p><strong>Multi-line comments</strong> (<code class="docutils literal notranslate"><span class="pre">/*</span> <span class="pre">*/</span></code>) for complex algorithm explanations.</p></li>
-<li><p>Every method should have a brief comment describing its purpose.</p></li>
-</ul>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Rule</p></th>
+<th class="head"><p>Source</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Block comment header</strong> at the top of your main <code class="docutils literal notranslate"><span class="pre">.java</span></code> file, with every field filled in (see <a class="reference internal" href="#assignment-header-submission-requirements">Assignment Header &amp; Submission Requirements</a>). A missing or incomplete header costs 1 point.</p></td>
+<td><p>Course</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Comments explain the steps</strong> of your program: what each section does, and <em>why</em> for anything that isn’t obvious.</p></td>
+<td><p>Oracle §5</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>About 1 comment line for every 15 lines of code.</strong> Your header doesn’t count toward this.</p></td>
+<td><p>Course</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Every method gets a short comment</strong> describing its purpose.</p></td>
+<td><p>Course</p></td>
+</tr>
+<tr class="row-even"><td><p>Single-line comments use <code class="docutils literal notranslate"><span class="pre">//</span></code>; multi-line comments use <code class="docutils literal notranslate"><span class="pre">/*</span> <span class="pre">*/</span></code>; Javadoc comments use <code class="docutils literal notranslate"><span class="pre">/**</span> <span class="pre">*/</span></code>.</p></td>
+<td><p>Oracle §5</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<div><p><strong>Why a comment minimum?</strong> Oracle also warns that a comment shouldn’t repeat what the code already says. <code class="docutils literal notranslate"><span class="pre">count++;</span> <span class="pre">//</span> <span class="pre">add</span> <span class="pre">1</span> <span class="pre">to</span> <span class="pre">count</span></code> is wasted space. A good comment tells the reader what a group of lines is <em>for</em>: <code class="docutils literal notranslate"><span class="pre">//</span> <span class="pre">total</span> <span class="pre">sales</span> <span class="pre">=</span> <span class="pre">burgers</span> <span class="pre">sold</span> <span class="pre">x</span> <span class="pre">price</span></code>. In this course you are learning to explain your thinking, so we ask for a steady minimum. Professional teams decide this for themselves.</p>
+</div></blockquote>
 </section>
 <section id="example-well-styled-code">
 <h3>Example: Well-Styled Code<a class="headerlink" href="#example-well-styled-code" title="Link to this heading">¶</a></h3>
@@ -776,29 +920,46 @@
 <span class="cm"> * Partner:       None</span>
 <span class="cm"> * Course:        AP Computer Science A</span>
 <span class="cm"> * Instructor:    [Instructor Name]</span>
-<span class="cm"> * Assignment:    1.3.1 — Calculate Your Weight on Jupiter</span>
+<span class="cm"> * Assignment:    1.03.1 — Calculate Your Weight on Jupiter</span>
 <span class="cm"> * Due Date:      September 12, 2026</span>
 <span class="cm"> */</span>
 <span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">WeightOnJupiter</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="c1">// Jupiter's gravity is 2.34 times Earth's gravity</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">JUPITER_GRAVITY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.34</span><span class="p">;</span>
 
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">        </span><span class="c1">// Earth weight in pounds</span>
 <span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">earthWeight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">150.0</span><span class="p">;</span>
 
-<span class="w">        </span><span class="c1">// Jupiter's gravity is 2.34 times Earth's gravity</span>
-<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">jupiterGravityMultiplier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.34</span><span class="p">;</span>
-
 <span class="w">        </span><span class="c1">// Calculate weight on Jupiter using proportional gravity</span>
-<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">jupiterWeight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">earthWeight</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">jupiterGravityMultiplier</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">jupiterWeight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">earthWeight</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">JUPITER_GRAVITY</span><span class="p">;</span>
 
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Weight on Jupiter: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">jupiterWeight</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" lbs"</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">// Warn about heavy loads; braces even for a one-line body</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">jupiterWeight</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">300</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Careful: that's a heavy load!"</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Weight on Jupiter: %.2f lbs%n"</span><span class="p">,</span><span class="w"> </span><span class="n">jupiterWeight</span><span class="p">);</span>
 
 <span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="c1">// end main</span>
 
 <span class="p">}</span><span class="w"> </span><span class="c1">// end class WeightOnJupiter</span>
 </pre></div>
 </div>
+</section>
+<section id="style-checklist-before-you-submit">
+<h3>Style Checklist (before you submit)<a class="headerlink" href="#style-checklist-before-you-submit" title="Link to this heading">¶</a></h3>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Header at the top, every field filled in (no partner → <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Class name is <code class="docutils literal notranslate"><span class="pre">PascalCase</span></code> and matches the file name</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Methods and variables are <code class="docutils literal notranslate"><span class="pre">camelCase</span></code>; constants are <code class="docutils literal notranslate"><span class="pre">ALL_CAPS</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Braces <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">}</span></code> on every <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">else</span></code>, <code class="docutils literal notranslate"><span class="pre">for</span></code>, and <code class="docutils literal notranslate"><span class="pre">while</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> One statement per line; a space after <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">for</span></code>, and <code class="docutils literal notranslate"><span class="pre">while</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Indented 4 spaces per level, no tabs, no line over 100 characters</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Comments explain each step (about 1 per 15 lines of code)</p></li>
+</ul>
 </section>
 </section>
 <hr class="docutils" />
@@ -1261,11 +1422,13 @@
 <li><a class="reference internal" href="#general-tips-on-note-taking">General Tips on Note-Taking</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#java-style-guidelines">Java Style Guidelines</a><ul>
+<li><a class="reference internal" href="#java-style-guidelines">Java Style Guidelines</a></li>
+<li><a class="reference internal" href="#java-style-guidelines-oracle-code-conventions">Java Style Guidelines — Oracle Code Conventions</a><ul>
 <li><a class="reference internal" href="#naming-conventions">Naming Conventions</a></li>
-<li><a class="reference internal" href="#formatting-rules">Formatting Rules</a></li>
+<li><a class="reference internal" href="#statements-and-formatting">Statements and Formatting</a></li>
 <li><a class="reference internal" href="#comments">Comments</a></li>
 <li><a class="reference internal" href="#example-well-styled-code">Example: Well-Styled Code</a></li>
+<li><a class="reference internal" href="#style-checklist-before-you-submit">Style Checklist (before you submit)</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#ap-computational-thinking-practices-skills">AP Computational Thinking Practices: Skills</a></li>
