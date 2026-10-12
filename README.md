@@ -161,7 +161,9 @@ It is crucial that students consistently attend class. Most classes consist of h
 
 - [ ] **Late work:**  Most work is done in class, so the late work policy is not applicable.  For any ***assigned homework*** assignment, you have 1 week after the given due date to turn it in.  Otherwise, you will receive a maximum of 50% for late work.  With regards to Projects, you will have daily progress checks that will count for your overall grade.  Failure to complete a daily progress check will lower your grade.
 
+
 ---
+
 
 ## Assignment Header & Submission Requirements
 
@@ -292,30 +294,106 @@ The Cornell method was developed in the 1950s by Professor Walter Pauk at Cornel
 
 Consistent, readable code is a professional standard and a grading requirement in this course. All submitted code must follow these Java style conventions.
 
+## Java Style Guidelines — Oracle Code Conventions
+
+Consistent, readable code is a professional standard and a grading requirement in this course. Our style rules come from Oracle's **[Code Conventions for the Java Programming Language](https://www.oracle.com/java/technologies/javase/codeconventions-contents.html)**, the original style guide for Java. Most companies' Java style guides (Google's, for example) are built on these same rules.
+
+A few rules are **course rules**: they go a little further than Oracle so your code is easy to grade and easy for a partner to read. Each rule below is marked **Oracle** or **Course**.
+
+The CSA Java Grader checks most of these rules automatically, and your teacher checks the rest when reading your code. Each *type* of mistake counts once in the Documentation & Style column, but your correction sheet lists every line, and you fix them all.
+
+| Mistake types | Documentation & Style score |
+|:---:|:---:|
+| 0 | 5 |
+| 1 | 4 |
+| 2–3 | 3 |
+| 4–5 | 2 |
+| 6 or more | 1 |
+
 ### Naming Conventions
 
-| Element | Convention | Example |
+| Element | Convention | Example | Source |
+|---|---|---|---|
+| Classes | `PascalCase`: a noun, every word capitalized | `BankAccount`, `CashierTotals` | Oracle §9 |
+| Methods | `camelCase`: a verb, starts lowercase | `calculateAverage()`, `printResult()` | Oracle §9 |
+| Variables | `camelCase`: starts lowercase | `studentScore`, `totalSales` | Oracle §9 |
+| Parameters | `camelCase` | `numStudents`, `inputValue` | Oracle §9 |
+| Constants (`static final`) | `ALL_CAPS_WITH_UNDERSCORES` | `MAX_SPEED`, `TAX_RATE` | Oracle §9 |
+
+- **Meaningful names.** Avoid one-letter names except for short "throwaway" variables such as loop counters (`i`, `j`, `k`). *(Oracle §9)*
+- **The class name must match the file name.** `public class CashierTotals` goes in `CashierTotals.java`. *(Java requires this.)*
+- **No underscores or spaces in class, method, or variable names.** `Total_Sales` and `cashier_totals` are wrong; `totalSales` and `CashierTotals` are right.
+
+<details>
+<summary>Example: fixing names</summary>
+
+```java
+// Before
+public class cashier_totals {
+    double Total_Sales;
+    public static void PrintReceipt() { }
+}
+
+// After
+public class CashierTotals {
+    double totalSales;
+    public static void printReceipt() { }
+}
+```
+
+</details>
+
+### Statements and Formatting
+
+| Rule | Example | Source |
 |---|---|---|
-| Variables | `camelCase` — start lowercase | `studentScore`, `totalCount` |
-| Methods | `camelCase` — start lowercase, verb phrase | `calculateAverage()`, `printResult()` |
-| Classes | `PascalCase` — start uppercase | `BankAccount`, `MoonProblems` |
-| Constants | `ALL_CAPS_WITH_UNDERSCORES` | `MAX_SIZE`, `PI_VALUE` |
-| Parameters | `camelCase` | `numStudents`, `inputValue` |
+| **Always use braces** `{ }` on `if`, `else`, `for`, and `while`, even when the body is one line | `if (score > 90) {` ... `}` | Oracle §7.4 |
+| **One statement per line** | `count++;` and `total += price;` go on separate lines | Oracle §7.1 |
+| **Space after a keyword** followed by `(`: `if (`, `for (`, `while (`, `switch (`, `catch (` | `if (x > 0)`, not `if(x > 0)` | Oracle §8.2 |
+| **No space after a method name** | `calculateAverage(a, b)`, not `calculateAverage (a, b)` | Oracle §8.2 |
+| **Indent 4 spaces** for each level inside `{ }` | see the example below | Oracle §4 |
+| **Spaces only, no tabs.** Don't mix tabs and spaces | set your editor to "insert spaces" | Course |
+| **Lines 100 characters or shorter.** Oracle says 80; we allow 100 for long `printf` lines | split a long line after a comma or before an operator | Course (Oracle §4.1 says 80) |
+| **Opening brace** at the end of the line; **closing brace** on its own line | `public static void main(String[] args) {` | Oracle §6.4 |
+| **One blank line** between methods | | Oracle §8.1 |
 
-### Formatting Rules
+<details>
+<summary>Example: braces, one statement per line, and spacing</summary>
 
-- **Indentation:** 4 spaces (not tabs) per level.
-- **Braces:** Opening brace on the same line as the statement. Closing brace on its own line.
-- **Blank lines:** One blank line between methods. Two blank lines between class-level sections.
-- **Line length:** Keep lines under 100 characters.
-- **Variable names:** Descriptive and meaningful — never single letters (`x`, `a`, `n`) except for loop counters (`i`, `j`).
+```java
+// Before: no braces, two statements on one line, no space after if
+if(total > 50) discount = 5.0;
+count++; total += price;
+
+// After
+if (total > 50) {
+    discount = 5.0;
+}
+count++;
+total += price;
+```
+
+Why always use braces? Without them, only the first line belongs to the `if`. Adding a second line later looks right but runs every time:
+
+```java
+if (total > 50)
+    discount = 5.0;
+    System.out.println("You saved $5!");   // runs even when total is 10
+```
+
+</details>
 
 ### Comments
 
-- **Block comment header** required at the top of every `.java` file (see [Submission Requirements](#assignment-header--submission-requirements)).
-- **Inline comments** (`//`) explain the *why* behind non-obvious logic — not the *what*.
-- **Multi-line comments** (`/* */`) for complex algorithm explanations.
-- Every method should have a brief comment describing its purpose.
+| Rule | Source |
+|---|---|
+| **Block comment header** at the top of your main `.java` file, with every field filled in (see [Assignment Header & Submission Requirements](#assignment-header--submission-requirements)). A missing or incomplete header costs 1 point. | Course |
+| **Comments explain the steps** of your program: what each section does, and *why* for anything that isn't obvious. | Oracle §5 |
+| **About 1 comment line for every 15 lines of code.** Your header doesn't count toward this. | Course |
+| **Every method gets a short comment** describing its purpose. | Course |
+| Single-line comments use `//`; multi-line comments use `/* */`; Javadoc comments use `/** */`. | Oracle §5 |
+
+> **Why a comment minimum?** Oracle also warns that a comment shouldn't repeat what the code already says. `count++; // add 1 to count` is wasted space. A good comment tells the reader what a group of lines is *for*: `// total sales = burgers sold x price`. In this course you are learning to explain your thinking, so we ask for a steady minimum. Professional teams decide this for themselves.
 
 ### Example: Well-Styled Code
 
@@ -325,30 +403,47 @@ Consistent, readable code is a professional standard and a grading requirement i
  * Partner:       None
  * Course:        AP Computer Science A
  * Instructor:    [Instructor Name]
- * Assignment:    1.3.1 — Calculate Your Weight on Jupiter
+ * Assignment:    1.03.1 — Calculate Your Weight on Jupiter
  * Due Date:      September 12, 2026
  */
 public class WeightOnJupiter {
+
+    // Jupiter's gravity is 2.34 times Earth's gravity
+    public static final double JUPITER_GRAVITY = 2.34;
 
     public static void main(String[] args) {
 
         // Earth weight in pounds
         double earthWeight = 150.0;
 
-        // Jupiter's gravity is 2.34 times Earth's gravity
-        double jupiterGravityMultiplier = 2.34;
-
         // Calculate weight on Jupiter using proportional gravity
-        double jupiterWeight = earthWeight * jupiterGravityMultiplier;
+        double jupiterWeight = earthWeight * JUPITER_GRAVITY;
 
-        System.out.println("Weight on Jupiter: " + jupiterWeight + " lbs");
+        // Warn about heavy loads; braces even for a one-line body
+        if (jupiterWeight > 300) {
+            System.out.println("Careful: that's a heavy load!");
+        }
+
+        System.out.printf("Weight on Jupiter: %.2f lbs%n", jupiterWeight);
 
     } // end main
 
 } // end class WeightOnJupiter
 ```
 
+### Style Checklist (before you submit)
+
+- [ ] Header at the top, every field filled in (no partner → `None`)
+- [ ] Class name is `PascalCase` and matches the file name
+- [ ] Methods and variables are `camelCase`; constants are `ALL_CAPS`
+- [ ] Braces `{ }` on every `if`, `else`, `for`, and `while`
+- [ ] One statement per line; a space after `if`, `for`, and `while`
+- [ ] Indented 4 spaces per level, no tabs, no line over 100 characters
+- [ ] Comments explain each step (about 1 per 15 lines of code)
+
+
 ---
+
 
 ## AP Computational Thinking Practices: Skills
 
