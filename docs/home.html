@@ -192,7 +192,8 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Home</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">AP Computer Science A — Course Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#java-code-style-guide-csa-java-grader">Java Code Style Guide — CSA Java Grader</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Resources/Resources.html">Resources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Resources/AP_Resources.html">AP Resources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Resources/inClass.html">In Class</a></li>
@@ -336,12 +337,12 @@
 <section id="expectations">
 <h3>Expectations<a class="headerlink" href="#expectations" title="Link to this heading">¶</a></h3>
 <ul class="contains-task-list simple">
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> ==<strong>Be on time for class.</strong>== Students should be seated, logged into Canvas, the course website, and their notebook within the first five minutes to avoid being marked tardy or absent.</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> ==<strong>Be prepared for class.</strong>== Have your notebook, assignments, pen/pencil, and paper ready every day.</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> ==<strong>Have a good attitude about learning.</strong>== Be prepared to actively participate. Accept feedback with a positive attitude.</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> ==<strong>Be respectful of others and their property.</strong>==</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> ==<strong>Take care of the learning environment.</strong>== Keep your area neat and clean. Always clean your space before leaving. Put materials away in their proper place.</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> ==<strong>Report any damaged equipment</strong>== to the instructor immediately.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Be on time for class.</strong> Students should be seated, logged into Canvas, the course website, and their notebook within the first five minutes to avoid being marked tardy or absent.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Be prepared for class.</strong> Have your notebook, assignments, pen/pencil, and paper ready every day.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Have a good attitude about learning.</strong> Be prepared to actively participate. Accept feedback with a positive attitude.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Be respectful of others and their property.</strong></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Take care of the learning environment.</strong> Keep your area neat and clean. Always clean your space before leaving. Put materials away in their proper place.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Report any damaged equipment</strong> to the instructor immediately.</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Do not change any settings on the computers.</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Do not download or install any programs (including games) on school computers.</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Do not access inappropriate content on the internet.</p></li>
@@ -352,7 +353,7 @@
 <section id="academic-honesty-policy">
 <h2>Academic Honesty Policy<a class="headerlink" href="#academic-honesty-policy" title="Link to this heading">¶</a></h2>
 <blockquote>
-<div><p>==<strong>Be in charge of your own learning.</strong>== All submitted work — every line of code — must originate from your own mind.</p>
+<div><p><strong>Be in charge of your own learning.</strong> All submitted work — every line of code — must originate from your own mind.</p>
 </div></blockquote>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Students may work with a peer and discuss general problem-solving strategies, ideas, and algorithms. However, <strong>all code must be your own</strong>. Every line of code must originate from your own thinking.</p></li>
@@ -457,6 +458,192 @@
 <blockquote>
 <div><p>Students who score below 75% on a project, test, or quiz (excluding finals) may <strong>retake for up to 75%</strong>. Students have <strong>one week</strong> to review feedback and schedule a retake before or after school.</p>
 </div></blockquote>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="java-code-style-guide-csa-java-grader">
+<h1>Java Code Style Guide — CSA Java Grader<a class="headerlink" href="#java-code-style-guide-csa-java-grader" title="Link to this heading">¶</a></h1>
+<hr class="docutils" />
+<section id="how-your-style-score-works">
+<h2>How your style score works<a class="headerlink" href="#how-your-style-score-works" title="Link to this heading">¶</a></h2>
+<p>Your Documentation &amp; Style score depends on how many <strong>different kinds</strong> of mistakes the grader finds, not how many times you make them. Ten lines missing a space after <code class="docutils literal notranslate"><span class="pre">if</span></code> count as one mistake type. Your feedback still lists every line, so you can fix them all.</p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Different mistake types</p></th>
+<th class="head"><p>Style score</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>2–3</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p>4–5</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>6 or more</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The header comment at the top of your file is never style-checked. It is graded separately (see the next section).</p>
+</section>
+<section id="the-header">
+<h2>The header<a class="headerlink" href="#the-header" title="Link to this heading">¶</a></h2>
+<p>Every program starts with a header comment that has six filled-in fields. A missing header, or any blank field, costs <strong>1 point</strong> off your final score.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Name:          Jordan Smith</span>
+<span class="c1">// Partner:       None</span>
+<span class="c1">// Course:        AP Computer Science A</span>
+<span class="c1">// Instructor:    Mr. V</span>
+<span class="c1">// Assignment:    1.04.2 — Average Test Score</span>
+<span class="c1">// Due Date:      October 14, 2026</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Any comment style works:</strong> <code class="docutils literal notranslate"><span class="pre">//</span></code> lines, <code class="docutils literal notranslate"><span class="pre">/*</span> <span class="pre">...</span> <span class="pre">*/</span></code>, or <code class="docutils literal notranslate"><span class="pre">/**</span> <span class="pre">...</span> <span class="pre">*/</span></code>.</p></li>
+<li><p><strong>Put it at the very top</strong>, above <code class="docutils literal notranslate"><span class="pre">import</span></code>. A header below the imports still counts, but your feedback will ask you to move it.</p></li>
+<li><p><strong>No partner?</strong> Write <code class="docutils literal notranslate"><span class="pre">None</span></code> or <code class="docutils literal notranslate"><span class="pre">N/A</span></code>. Don’t leave it empty.</p></li>
+<li><p><strong>Replace every template placeholder.</strong> <code class="docutils literal notranslate"><span class="pre">[Your</span> <span class="pre">Full</span> <span class="pre">Name]</span></code> or <code class="docutils literal notranslate"><span class="pre">[Month</span> <span class="pre">Day,</span> <span class="pre">Year]</span></code> counts as blank.</p></li>
+<li><p><strong>Use the label, a colon, then the value</strong>, e.g. <code class="docutils literal notranslate"><span class="pre">Due</span> <span class="pre">Date:</span> <span class="pre">October</span> <span class="pre">14,</span> <span class="pre">2026</span></code>. In your main file, the first comment with these labels is the one graded.</p></li>
+</ul>
+</section>
+<section id="the-12-conventions-the-grader-checks">
+<h2>The 12 conventions the grader checks<a class="headerlink" href="#the-12-conventions-the-grader-checks" title="Link to this heading">¶</a></h2>
+<p>These come from Oracle’s Java code conventions. Each one below is one mistake type.</p>
+<section id="naming">
+<h3>Naming<a class="headerlink" href="#naming" title="Link to this heading">¶</a></h3>
+<p><strong>1. Class names are PascalCase.</strong> Every word starts with a capital letter.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">magic_8_ball</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w">   </span><span class="c1">// wrong</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MagicEightBall</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// right</span>
+</pre></div>
+</div>
+<p><strong>2. Method names are camelCase.</strong> First word lowercase, later words capitalized.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">CalculateTime</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w">  </span><span class="c1">// wrong</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">calculateTime</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w">  </span><span class="c1">// right</span>
+</pre></div>
+</div>
+<p><strong>3. Variable names are camelCase.</strong> No underscores and no capital first letter.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">Total_Sales</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">   </span><span class="c1">// wrong</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">totalSales</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">    </span><span class="c1">// right</span>
+</pre></div>
+</div>
+<p><strong>4. Constants are UPPER_CASE.</strong> Any <code class="docutils literal notranslate"><span class="pre">static</span> <span class="pre">final</span></code> value uses capitals and underscores.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">maxSpeed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w">   </span><span class="c1">// wrong</span>
+<span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">MAX_SPEED</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w">  </span><span class="c1">// right</span>
+</pre></div>
+</div>
+<p><strong>5. Names are meaningful, not single letters.</strong> A loop counter inside a <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">(...)</span></code> is fine, and so are <code class="docutils literal notranslate"><span class="pre">i</span></code>, <code class="docutils literal notranslate"><span class="pre">j</span></code>, <code class="docutils literal notranslate"><span class="pre">k</span></code>, <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>, <code class="docutils literal notranslate"><span class="pre">n</span></code> and <code class="docutils literal notranslate"><span class="pre">e</span></code>.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span><span class="w">          </span><span class="c1">// wrong</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">firstScore</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span><span class="w"> </span><span class="c1">// right</span>
+</pre></div>
+</div>
+</section>
+<section id="layout">
+<h3>Layout<a class="headerlink" href="#layout" title="Link to this heading">¶</a></h3>
+<p><strong>6. Code inside <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">}</span></code> is indented one level deeper</strong> than the line that opened the braces.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Hi"</span><span class="p">);</span><span class="w">       </span><span class="c1">// wrong</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Hi"</span><span class="p">);</span><span class="w">   </span><span class="c1">// right</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>7. Don’t mix tabs and spaces</strong> for indentation in the same file. Pick one; 4 spaces is standard.</p>
+<p><strong>8. Keep lines to 100 characters or fewer.</strong> Split a long <code class="docutils literal notranslate"><span class="pre">printf</span></code> across two lines.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Total items: %d, Total sales: $%.2f%n"</span><span class="p">,</span>
+<span class="w">        </span><span class="n">items</span><span class="p">,</span><span class="w"> </span><span class="n">sales</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>9. One statement per line.</strong> The semicolons inside a <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">(...)</span></code> header don’t count.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">burgers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">fries</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w">   </span><span class="c1">// wrong</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">burgers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w">                  </span><span class="c1">// right</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">fries</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="braces-and-spacing">
+<h3>Braces and spacing<a class="headerlink" href="#braces-and-spacing" title="Link to this heading">¶</a></h3>
+<p><strong>10. Always use <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">}</span></code> braces</strong> on <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">else</span></code>, <code class="docutils literal notranslate"><span class="pre">for</span></code> and <code class="docutils literal notranslate"><span class="pre">while</span></code>, even for one line.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">score</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">90</span><span class="p">)</span><span class="w"> </span><span class="n">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'A'</span><span class="p">;</span><span class="w">       </span><span class="c1">// wrong</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">score</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">90</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">                  </span><span class="c1">// right</span>
+<span class="w">    </span><span class="n">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'A'</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>11. Put a space after <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">for</span></code>, <code class="docutils literal notranslate"><span class="pre">while</span></code>, <code class="docutils literal notranslate"><span class="pre">switch</span></code> and <code class="docutils literal notranslate"><span class="pre">catch</span></code>.</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="n">score</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">90</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">    </span><span class="c1">// wrong</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">score</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">90</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">   </span><span class="c1">// right</span>
+</pre></div>
+</div>
+</section>
+<section id="comments">
+<h3>Comments<a class="headerlink" href="#comments" title="Link to this heading">¶</a></h3>
+<p><strong>12. Explain your steps with comments.</strong> Programs with 10 or more lines of code need at least 1 comment line for every 15 lines of code. The header doesn’t count toward this; comments inside your code do.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">average</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w">   </span><span class="c1">// mean of the four scores</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="test-cases">
+<h2>Test cases<a class="headerlink" href="#test-cases" title="Link to this heading">¶</a></h2>
+<p>Turn in your test cases one of two ways. Missing test cases caps your score at <strong>4</strong>.</p>
+<ol class="arabic simple">
+<li><p><strong>A separate file:</strong> a document or screenshot (PDF, Word, PNG, JPG, TXT).</p></li>
+<li><p><strong>A comment at the bottom of your program</strong>, with each case labeled <code class="docutils literal notranslate"><span class="pre">TEST</span> <span class="pre">CASE</span> <span class="pre">1:</span></code>, <code class="docutils literal notranslate"><span class="pre">TEST</span> <span class="pre">CASE</span> <span class="pre">2:</span></code>, and so on.</p></li>
+</ol>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="p">}</span><span class="w">   </span><span class="c1">// end of class</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * TEST CASE 1:</span>
+<span class="cm"> * Input: 95, 87.5, 73.2, 75</span>
+<span class="cm"> * Expected: Average test score: 82.68%</span>
+<span class="cm"> * Actual: Average test score: 82.68%   PASS</span>
+<span class="cm"> *</span>
+<span class="cm"> * TEST CASE 2:</span>
+<span class="cm"> * Input: 100, 100, 100, 100</span>
+<span class="cm"> * Expected: Average test score: 100.00%</span>
+<span class="cm"> * Actual: Average test score: 100.00%  PASS</span>
+<span class="cm"> */</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>The number and colon matter:</strong> write <code class="docutils literal notranslate"><span class="pre">TEST</span> <span class="pre">CASE</span> <span class="pre">1:</span></code>, not just “Test 1”. Capital letters are suggested but not required.</p></li>
+<li><p><strong>Number each case differently.</strong> Writing <code class="docutils literal notranslate"><span class="pre">TEST</span> <span class="pre">CASE</span> <span class="pre">1:</span></code> three times counts as one case.</p></li>
+<li><p><strong>It must be a comment.</strong> Printing “TEST CASE 1” with <code class="docutils literal notranslate"><span class="pre">System.out.println</span></code> doesn’t count.</p></li>
+<li><p><strong>A comment after the class’s closing <code class="docutils literal notranslate"><span class="pre">}</span></code> is legal Java</strong> and compiles fine.</p></li>
+</ul>
+</section>
+<section id="before-you-submit">
+<h2>Before you submit<a class="headerlink" href="#before-you-submit" title="Link to this heading">¶</a></h2>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Header at the top with all six fields filled in (<code class="docutils literal notranslate"><span class="pre">None</span></code> or <code class="docutils literal notranslate"><span class="pre">N/A</span></code> for no partner)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Class, method and variable names follow the naming rules</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Every <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">}</span></code> body indented 4 spaces, with no tabs mixed in</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Braces on every <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">else</span></code>, <code class="docutils literal notranslate"><span class="pre">for</span></code> and <code class="docutils literal notranslate"><span class="pre">while</span></code>, and a space after the keyword</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> One statement per line, and no line longer than 100 characters</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Comments explaining the main steps</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Output matches the assignment, including symbols like <code class="docutils literal notranslate"><span class="pre">$</span></code> and <code class="docutils literal notranslate"><span class="pre">%</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Test cases turned in as a file or as <code class="docutils literal notranslate"><span class="pre">TEST</span> <span class="pre">CASE</span></code> comments</p></li>
+</ul>
+</section>
+<section id="common-questions">
+<h2>Common questions<a class="headerlink" href="#common-questions" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>My program works. Why did it lose points?</strong> The grader types the sample inputs from the assignment and compares your output. A missing <code class="docutils literal notranslate"><span class="pre">$</span></code>, the wrong number of decimal places, or an extra calculation counts as a failed check even when the program runs.</p></li>
+<li><p><strong>Why does <code class="docutils literal notranslate"><span class="pre">var</span></code> give a compile error?</strong> The grader compiles with Java 8, which doesn’t have <code class="docutils literal notranslate"><span class="pre">var</span></code>. Declare the type, e.g. <code class="docutils literal notranslate"><span class="pre">double</span> <span class="pre">total</span></code>.</p></li>
+<li><p><strong>Can I use <code class="docutils literal notranslate"><span class="pre">float</span></code> instead of <code class="docutils literal notranslate"><span class="pre">double</span></code>?</strong> It works for most programs, but a decimal number like <code class="docutils literal notranslate"><span class="pre">4.99</span></code> is a <code class="docutils literal notranslate"><span class="pre">double</span></code>, so <code class="docutils literal notranslate"><span class="pre">float</span> <span class="pre">price</span> <span class="pre">=</span> <span class="pre">4.99;</span></code> won’t compile. Use <code class="docutils literal notranslate"><span class="pre">double</span></code> unless the assignment says otherwise.</p></li>
+<li><p><strong>My program got stuck and was marked as an infinite loop.</strong> Each run is stopped after 8 seconds. Check that your loops can end and that you read exactly the inputs the assignment asks for.</p></li>
+<li><p><strong>I resubmitted and Canvas renamed my file.</strong> That’s fine. The grader renames <code class="docutils literal notranslate"><span class="pre">Main-1.java</span></code> back to <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> before compiling.</p></li>
+<li><p><strong>I think the grader got it wrong.</strong> Your teacher reviews every score and can change it. Bring your feedback and point to the line in question.</p></li>
+</ul>
 </section>
 <hr class="docutils" />
 <section id="classroom-attendance-conduct-and-participation">
@@ -881,8 +1068,8 @@
 </div>
 </details>
 </section>
-<section id="comments">
-<h3>Comments<a class="headerlink" href="#comments" title="Link to this heading">¶</a></h3>
+<section id="id1">
+<h3>Comments<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
 <div class="table-wrapper colwidths-auto docutils container">
 <table class="docutils align-default">
 <thead>
@@ -1403,6 +1590,21 @@
 <li><a class="reference internal" href="#academic-support">Academic Support</a></li>
 <li><a class="reference internal" href="#weighted-grading">Weighted Grading</a></li>
 <li><a class="reference internal" href="#grading-scale">Grading Scale</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#java-code-style-guide-csa-java-grader">Java Code Style Guide — CSA Java Grader</a><ul>
+<li><a class="reference internal" href="#how-your-style-score-works">How your style score works</a></li>
+<li><a class="reference internal" href="#the-header">The header</a></li>
+<li><a class="reference internal" href="#the-12-conventions-the-grader-checks">The 12 conventions the grader checks</a><ul>
+<li><a class="reference internal" href="#naming">Naming</a></li>
+<li><a class="reference internal" href="#layout">Layout</a></li>
+<li><a class="reference internal" href="#braces-and-spacing">Braces and spacing</a></li>
+<li><a class="reference internal" href="#comments">Comments</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#test-cases">Test cases</a></li>
+<li><a class="reference internal" href="#before-you-submit">Before you submit</a></li>
+<li><a class="reference internal" href="#common-questions">Common questions</a></li>
 <li><a class="reference internal" href="#classroom-attendance-conduct-and-participation">Classroom Attendance, Conduct, and Participation</a><ul>
 <li><a class="reference internal" href="#conduct-tracking-additive-scale">Conduct Tracking (Additive Scale)</a></li>
 </ul>
@@ -1426,7 +1628,7 @@
 <li><a class="reference internal" href="#java-style-guidelines-oracle-code-conventions">Java Style Guidelines — Oracle Code Conventions</a><ul>
 <li><a class="reference internal" href="#naming-conventions">Naming Conventions</a></li>
 <li><a class="reference internal" href="#statements-and-formatting">Statements and Formatting</a></li>
-<li><a class="reference internal" href="#comments">Comments</a></li>
+<li><a class="reference internal" href="#id1">Comments</a></li>
 <li><a class="reference internal" href="#example-well-styled-code">Example: Well-Styled Code</a></li>
 <li><a class="reference internal" href="#style-checklist-before-you-submit">Style Checklist (before you submit)</a></li>
 </ul>
