@@ -47,12 +47,12 @@ This course also prepares students to sit for the **Oracle Java Foundations Cert
 
 ### Expectations
 
-- [ ] ==**Be on time for class.**== Students should be seated, logged into Canvas, the course website, and their notebook within the first five minutes to avoid being marked tardy or absent.
-- [ ] ==**Be prepared for class.**== Have your notebook, assignments, pen/pencil, and paper ready every day.
-- [ ] ==**Have a good attitude about learning.**== Be prepared to actively participate. Accept feedback with a positive attitude.
-- [ ] ==**Be respectful of others and their property.**==
-- [ ] ==**Take care of the learning environment.**== Keep your area neat and clean. Always clean your space before leaving. Put materials away in their proper place.
-- [ ] ==**Report any damaged equipment**== to the instructor immediately.
+- [ ] **Be on time for class.** Students should be seated, logged into Canvas, the course website, and their notebook within the first five minutes to avoid being marked tardy or absent.
+- [ ] **Be prepared for class.** Have your notebook, assignments, pen/pencil, and paper ready every day.
+- [ ] **Have a good attitude about learning.** Be prepared to actively participate. Accept feedback with a positive attitude.
+- [ ] **Be respectful of others and their property.**
+- [ ] **Take care of the learning environment.** Keep your area neat and clean. Always clean your space before leaving. Put materials away in their proper place.
+- [ ] **Report any damaged equipment** to the instructor immediately.
 - [ ] Do not change any settings on the computers.
 - [ ] Do not download or install any programs (including games) on school computers.
 - [ ] Do not access inappropriate content on the internet.
@@ -61,7 +61,7 @@ This course also prepares students to sit for the **Oracle Java Foundations Cert
 
 ## Academic Honesty Policy
 
-> ==**Be in charge of your own learning.**== All submitted work — every line of code — must originate from your own mind.
+> **Be in charge of your own learning.** All submitted work — every line of code — must originate from your own mind.
 
 - [x] Students may work with a peer and discuss general problem-solving strategies, ideas, and algorithms. However, **all code must be your own**. Every line of code must originate from your own thinking.
 
@@ -131,6 +131,194 @@ All projects, presentations, tests, quizzes, classwork, portfolio, and notes wil
 > Students who score below 75% on a project, test, or quiz (excluding finals) may **retake for up to 75%**. Students have **one week** to review feedback and schedule a retake before or after school.
 
 ---
+
+
+# Java Code Style Guide — CSA Java Grader
+
+---
+
+
+## How your style score works
+
+Your Documentation & Style score depends on how many **different kinds** of mistakes the grader finds, not how many times you make them. Ten lines missing a space after `if` count as one mistake type. Your feedback still lists every line, so you can fix them all.
+
+| Different mistake types | Style score |
+| --- | --- |
+| 0 | 5 |
+| 1 | 4 |
+| 2–3 | 3 |
+| 4–5 | 2 |
+| 6 or more | 1 |
+
+The header comment at the top of your file is never style-checked. It is graded separately (see the next section).
+
+## The header
+
+Every program starts with a header comment that has six filled-in fields. A missing header, or any blank field, costs **1 point** off your final score.
+
+```java
+// Name:          Jordan Smith
+// Partner:       None
+// Course:        AP Computer Science A
+// Instructor:    Mr. V
+// Assignment:    1.04.2 — Average Test Score
+// Due Date:      October 14, 2026
+import java.util.Scanner;
+```
+
+- **Any comment style works:** `//` lines, `/* ... */`, or `/** ... */`.
+- **Put it at the very top**, above `import`. A header below the imports still counts, but your feedback will ask you to move it.
+- **No partner?** Write `None` or `N/A`. Don't leave it empty.
+- **Replace every template placeholder.** `[Your Full Name]` or `[Month Day, Year]` counts as blank.
+- **Use the label, a colon, then the value**, e.g. `Due Date: October 14, 2026`. In your main file, the first comment with these labels is the one graded.
+
+## The 12 conventions the grader checks
+
+These come from Oracle's Java code conventions. Each one below is one mistake type.
+
+### Naming
+
+**1. Class names are PascalCase.** Every word starts with a capital letter.
+
+```java
+public class magic_8_ball { }   // wrong
+public class MagicEightBall { } // right
+```
+
+**2. Method names are camelCase.** First word lowercase, later words capitalized.
+
+```java
+public static double CalculateTime() { }  // wrong
+public static double calculateTime() { }  // right
+```
+
+**3. Variable names are camelCase.** No underscores and no capital first letter.
+
+```java
+double Total_Sales = 0;   // wrong
+double totalSales = 0;    // right
+```
+
+**4. Constants are UPPER\_CASE.** Any `static final` value uses capitals and underscores.
+
+```java
+static final int maxSpeed = 100;   // wrong
+static final int MAX_SPEED = 100;  // right
+```
+
+**5. Names are meaningful, not single letters.** A loop counter inside a `for (...)` is fine, and so are `i`, `j`, `k`, `x`, `y`, `n` and `e`.
+
+```java
+double a = scanner.nextDouble();          // wrong
+double firstScore = scanner.nextDouble(); // right
+```
+
+### Layout
+
+**6. Code inside `{ }` is indented one level deeper** than the line that opened the braces.
+
+```java
+public static void main(String[] args) {
+System.out.println("Hi");       // wrong
+    System.out.println("Hi");   // right
+}
+```
+
+**7. Don't mix tabs and spaces** for indentation in the same file. Pick one; 4 spaces is standard.
+
+**8. Keep lines to 100 characters or fewer.** Split a long `printf` across two lines.
+
+```java
+System.out.printf("Total items: %d, Total sales: $%.2f%n",
+        items, sales);
+```
+
+**9. One statement per line.** The semicolons inside a `for (...)` header don't count.
+
+```java
+int burgers = 10; int fries = 4;   // wrong
+int burgers = 10;                  // right
+int fries = 4;
+```
+
+### Braces and spacing
+
+**10. Always use `{ }` braces** on `if`, `else`, `for` and `while`, even for one line.
+
+```java
+if (score > 90) grade = 'A';       // wrong
+
+if (score > 90) {                  // right
+    grade = 'A';
+}
+```
+
+**11. Put a space after `if`, `for`, `while`, `switch` and `catch`.**
+
+```java
+if(score > 90) {    // wrong
+if (score > 90) {   // right
+```
+
+### Comments
+
+**12. Explain your steps with comments.** Programs with 10 or more lines of code need at least 1 comment line for every 15 lines of code. The header doesn't count toward this; comments inside your code do.
+
+```java
+double average = sum / 4;   // mean of the four scores
+```
+
+## Test cases
+
+Turn in your test cases one of two ways. Missing test cases caps your score at **4**.
+
+1. **A separate file:** a document or screenshot (PDF, Word, PNG, JPG, TXT).
+2. **A comment at the bottom of your program**, with each case labeled `TEST CASE 1:`, `TEST CASE 2:`, and so on.
+
+```java
+}   // end of class
+
+/**
+ * TEST CASE 1:
+ * Input: 95, 87.5, 73.2, 75
+ * Expected: Average test score: 82.68%
+ * Actual: Average test score: 82.68%   PASS
+ *
+ * TEST CASE 2:
+ * Input: 100, 100, 100, 100
+ * Expected: Average test score: 100.00%
+ * Actual: Average test score: 100.00%  PASS
+ */
+```
+
+- **The number and colon matter:** write `TEST CASE 1:`, not just "Test 1". Capital letters are suggested but not required.
+- **Number each case differently.** Writing `TEST CASE 1:` three times counts as one case.
+- **It must be a comment.** Printing "TEST CASE 1" with `System.out.println` doesn't count.
+- **A comment after the class's closing `}` is legal Java** and compiles fine.
+
+## Before you submit
+
+- [ ] Header at the top with all six fields filled in (`None` or `N/A` for no partner)
+- [ ] Class, method and variable names follow the naming rules
+- [ ] Every `{ }` body indented 4 spaces, with no tabs mixed in
+- [ ] Braces on every `if`, `else`, `for` and `while`, and a space after the keyword
+- [ ] One statement per line, and no line longer than 100 characters
+- [ ] Comments explaining the main steps
+- [ ] Output matches the assignment, including symbols like `$` and `%`
+- [ ] Test cases turned in as a file or as `TEST CASE` comments
+
+## Common questions
+
+- **My program works. Why did it lose points?** The grader types the sample inputs from the assignment and compares your output. A missing `$`, the wrong number of decimal places, or an extra calculation counts as a failed check even when the program runs.
+- **Why does `var` give a compile error?** The grader compiles with Java 8, which doesn't have `var`. Declare the type, e.g. `double total`.
+- **Can I use `float` instead of `double`?** It works for most programs, but a decimal number like `4.99` is a `double`, so `float price = 4.99;` won't compile. Use `double` unless the assignment says otherwise.
+- **My program got stuck and was marked as an infinite loop.** Each run is stopped after 8 seconds. Check that your loops can end and that you read exactly the inputs the assignment asks for.
+- **I resubmitted and Canvas renamed my file.** That's fine. The grader renames `Main-1.java` back to `Main.java` before compiling.
+- **I think the grader got it wrong.** Your teacher reviews every score and can change it. Bring your feedback and point to the line in question.
+
+
+---
+
 
 ## Classroom Attendance, Conduct, and Participation
 
