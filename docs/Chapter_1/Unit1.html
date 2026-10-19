@@ -2639,9 +2639,10 @@ The Magic 8-Ball has spoken. Goodbye!
 </pre></div>
 </div>
 <p>#############################################################################</p>
-<blockquote>
-<div><p class="rubric" id="assignment-1-10-1-mission-control-calling-class-methods">Assignment 1.10.1 — Mission Control: Calling Class Methods</p>
-<p class="rubric" id="overview">Overview</p>
+<section id="assignment-1-10-1-mission-control-calling-class-methods">
+<h3>Assignment 1.10.1 — Mission Control: Calling Class Methods<a class="headerlink" href="#assignment-1-10-1-mission-control-calling-class-methods" title="Link to this heading">¶</a></h3>
+<section id="overview">
+<h4>Overview<a class="headerlink" href="#overview" title="Link to this heading">¶</a></h4>
 <p>In this activity you will investigate how <strong>class methods</strong> (also called <strong>static methods</strong>) work in Java, then build a Mission Control program that calls static methods to calculate rocket launch data.</p>
 <p>By the end of this activity you will be able to:</p>
 <ul class="contains-task-list simple">
@@ -2651,7 +2652,9 @@ The Magic 8-Ball has spoken. Goodbye!
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Decompose a larger problem into smaller methods, each responsible for one task</p></li>
 </ul>
 <p>##########################################################################</p>
-<p class="rubric" id="background">Background</p>
+</section>
+<section id="background">
+<h4>Background<a class="headerlink" href="#background" title="Link to this heading">¶</a></h4>
 <p>A <strong>class method</strong> (declared with the keyword <code class="docutils literal notranslate"><span class="pre">static</span></code>) belongs to the <strong>class itself</strong> — not to any specific object. You call it using the class name, not an object reference:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Calling a static method from the Math class — no object needed</span>
 <span class="kt">double</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">sqrt</span><span class="p">(</span><span class="mi">144</span><span class="p">);</span><span class="w">     </span><span class="c1">// returns 12.0</span>
@@ -2713,10 +2716,21 @@ The Magic 8-Ball has spoken. Goodbye!
 </pre></div>
 </div>
 <p>A method that returns nothing uses <code class="docutils literal notranslate"><span class="pre">void</span></code> as its return type. A <code class="docutils literal notranslate"><span class="pre">void</span></code> method performs an action but does not hand a value back to the caller.</p>
+<p>A static method can also <strong>call another static method</strong> in the same class. That is how you build bigger methods out of smaller ones:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">isFeverish</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">celsius</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">fahrenheit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">celsiusToFahrenheit</span><span class="p">(</span><span class="n">celsius</span><span class="p">);</span><span class="w">   </span><span class="c1">// calls the method above</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">fahrenheit</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">100.4</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 <p>##########################################################################</p>
-<p class="rubric" id="part-1-investigation">Part 1 — Investigation</p>
+</section>
+<section id="part-1-investigation">
+<h4>Part 1 — Investigation<a class="headerlink" href="#part-1-investigation" title="Link to this heading">¶</a></h4>
 <p>Answer the following questions in a comment block at the top of your <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> or in a separate document submitted alongside your code.</p>
-<p class="rubric" id="section-a-understanding-static-methods">Section A — Understanding Static Methods</p>
+<section id="section-a-understanding-static-methods">
+<h5>Section A — Understanding Static Methods<a class="headerlink" href="#section-a-understanding-static-methods" title="Link to this heading">¶</a></h5>
 <ol class="arabic simple">
 <li><p>Why can you call <code class="docutils literal notranslate"><span class="pre">Math.sqrt()</span></code> without first writing <code class="docutils literal notranslate"><span class="pre">Math</span> <span class="pre">m</span> <span class="pre">=</span> <span class="pre">new</span> <span class="pre">Math()</span></code>?</p></li>
 <li><p>What keyword makes a method a class (static) method?</p></li>
@@ -2724,7 +2738,9 @@ The Magic 8-Ball has spoken. Goodbye!
 <li><p>What is the return type of <code class="docutils literal notranslate"><span class="pre">Math.round(double</span> <span class="pre">a)</span></code>? Why is the return type different from <code class="docutils literal notranslate"><span class="pre">double</span></code>?</p></li>
 <li><p>In your own words, explain why <code class="docutils literal notranslate"><span class="pre">main</span></code> must be declared <code class="docutils literal notranslate"><span class="pre">static</span></code>.</p></li>
 </ol>
-<p class="rubric" id="section-b-reading-method-signatures">Section B — Reading Method Signatures</p>
+</section>
+<section id="section-b-reading-method-signatures">
+<h5>Section B — Reading Method Signatures<a class="headerlink" href="#section-b-reading-method-signatures" title="Link to this heading">¶</a></h5>
 <p>Look at the following method signatures and answer the questions below each one.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">max</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span>
 </pre></div>
@@ -2741,72 +2757,106 @@ The Magic 8-Ball has spoken. Goodbye!
 <li><p>What does a <code class="docutils literal notranslate"><span class="pre">void</span></code> return type mean?</p></li>
 <li><p>Can you store the result of calling this method in a variable? Why or why not?</p></li>
 </ol>
-<p class="rubric" id="section-c-decomposing-a-problem">Section C — Decomposing a Problem</p>
+</section>
+<section id="section-c-decomposing-a-problem-on-paper">
+<h5>Section C — Decomposing a Problem (on paper)<a class="headerlink" href="#section-c-decomposing-a-problem-on-paper" title="Link to this heading">¶</a></h5>
 <p>A good programmer breaks a large problem into smaller, focused methods — each doing <strong>one job</strong>.</p>
+<blockquote>
+<div><p><strong>Note:</strong> Section C is a design exercise only. Answer it in your comment block or document. <strong>Do not add these methods to your program</strong> — Part 2 tells you exactly which methods to write.</p>
+</div></blockquote>
 <ol class="arabic simple" start="11">
-<li><p>Look at the following task: <em>“Calculate the fuel needed for a rocket launch, warn the crew if fuel is low, and print a launch report.”</em> Identify <strong>three</strong> static methods you could write to decompose this problem. For &gt; each, write the method signature only (no body needed).</p></li>
+<li><p>Look at the following task: <em>“Calculate the fuel needed for a rocket launch, warn the crew if fuel is low, and print a launch report.”</em> Identify <strong>three</strong> static methods you could write to decompose this problem. For each, write the method signature only (no body needed).</p></li>
 </ol>
 <p>##########################################################################</p>
-<p class="rubric" id="part-2-mission-control-program">Part 2 — Mission Control Program</p>
-<p class="rubric" id="program-description">Program Description</p>
+</section>
+</section>
+<section id="part-2-mission-control-program">
+<h4>Part 2 — Mission Control Program<a class="headerlink" href="#part-2-mission-control-program" title="Link to this heading">¶</a></h4>
+<section id="program-description">
+<h5>Program Description<a class="headerlink" href="#program-description" title="Link to this heading">¶</a></h5>
 <p>You are writing the launch software for Mission Control. Your program will:</p>
 <ul class="simple">
-<li><p>Accept rocket launch parameters from the user via <code class="docutils literal notranslate"><span class="pre">Scanner</span></code></p></li>
-<li><p>Call static methods to calculate fuel consumption, estimated flight time, and thrust-to-weight ratio</p></li>
-<li><p>Warn the crew if any value falls outside safe limits</p></li>
+<li><p>Accept the rocket’s name, mass, and engine thrust from the user via <code class="docutils literal notranslate"><span class="pre">Scanner</span></code></p></li>
+<li><p>Call static methods to calculate fuel consumption, estimated flight time, and the thrust-to-weight ratio</p></li>
+<li><p>Decide whether the launch is safe</p></li>
 <li><p>Print a formatted launch report</p></li>
 </ul>
-<p class="rubric" id="requirements-checklist">Requirements Checklist</p>
+</section>
+<section id="requirements-checklist">
+<h5>Requirements Checklist<a class="headerlink" href="#requirements-checklist" title="Link to this heading">¶</a></h5>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Include the required block comment header in <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> (all fields completed)</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Write and call <strong>at least four</strong> static methods of your own (see specifications below)</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> At least one method must be <code class="docutils literal notranslate"><span class="pre">void</span></code> (performs an action, returns nothing)</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> At least one method must return a <code class="docutils literal notranslate"><span class="pre">double</span></code></p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> At least one method must return a <code class="docutils literal notranslate"><span class="pre">boolean</span></code></p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Call at least <strong>two</strong> <code class="docutils literal notranslate"><span class="pre">Math</span></code> class static methods within your own methods</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> to accept user input for rocket name, fuel amount, and rocket mass</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use the return values of your static methods meaningfully in <code class="docutils literal notranslate"><span class="pre">main</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Write the <strong>five</strong> static methods below, using the <strong>exact names, parameters, and return types</strong> shown, and call them from <code class="docutils literal notranslate"><span class="pre">main</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Call at least <strong>two</strong> <code class="docutils literal notranslate"><span class="pre">Math</span></code> class static methods within your own methods (<code class="docutils literal notranslate"><span class="pre">Math.round()</span></code> and <code class="docutils literal notranslate"><span class="pre">Math.abs()</span></code>)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> to accept user input for the rocket name, rocket mass, and engine thrust</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Store the return values of your methods in variables in <code class="docutils literal notranslate"><span class="pre">main</span></code>, then pass them to <code class="docutils literal notranslate"><span class="pre">printLaunchReport</span></code></p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Use <code class="docutils literal notranslate"><span class="pre">String.format()</span></code> or <code class="docutils literal notranslate"><span class="pre">printf()</span></code> to produce the formatted launch report</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Include meaningful inline comments throughout</p></li>
 </ul>
 <p>##########################################################################</p>
-<p class="rubric" id="required-static-methods">Required Static Methods</p>
-<p>Implement the following four static methods in <code class="docutils literal notranslate"><span class="pre">Main.java</span></code>:</p>
-<p class="rubric" id="calculatefuelconsumption">1. <code class="docutils literal notranslate"><span class="pre">calculateFuelConsumption</span></code></p>
+</section>
+<section id="required-static-methods">
+<h5>Required Static Methods<a class="headerlink" href="#required-static-methods" title="Link to this heading">¶</a></h5>
+<blockquote>
+<div><p><strong>Use these exact method names, parameters, and return types.</strong> The starter code already has all five headers. Your job is to fill in the bodies. Do not rename them or add parameters.</p>
+</div></blockquote>
+<section id="calculatefuelconsumption">
+<h6>1. <code class="docutils literal notranslate"><span class="pre">calculateFuelConsumption</span></code><a class="headerlink" href="#calculatefuelconsumption" title="Link to this heading">¶</a></h6>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">calculateFuelConsumption</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">distanceKm</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">fuelEfficiency</span><span class="p">)</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Returns the estimated fuel consumed: <code class="docutils literal notranslate"><span class="pre">distanceKm</span> <span class="pre">/</span> <span class="pre">fuelEfficiency</span></code></p></li>
-<li><p>Call <code class="docutils literal notranslate"><span class="pre">Math.round()</span></code> on the result before returning it as a <code class="docutils literal notranslate"><span class="pre">double</span></code></p></li>
+<li><p>Returns the estimated fuel consumed in liters: <code class="docutils literal notranslate"><span class="pre">distanceKm</span> <span class="pre">/</span> <span class="pre">fuelEfficiency</span></code></p></li>
+<li><p>Round the result with <code class="docutils literal notranslate"><span class="pre">Math.round()</span></code>. <code class="docutils literal notranslate"><span class="pre">Math.round()</span></code> returns a <code class="docutils literal notranslate"><span class="pre">long</span></code>, so cast it back to a <code class="docutils literal notranslate"><span class="pre">double</span></code>:
+<code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">(double)</span> <span class="pre">Math.round(distanceKm</span> <span class="pre">/</span> <span class="pre">fuelEfficiency);</span></code></p></li>
 </ul>
-<p class="rubric" id="calculateflighttime">2. <code class="docutils literal notranslate"><span class="pre">calculateFlightTime</span></code></p>
+</section>
+<section id="calculateflighttime">
+<h6>2. <code class="docutils literal notranslate"><span class="pre">calculateFlightTime</span></code><a class="headerlink" href="#calculateflighttime" title="Link to this heading">¶</a></h6>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">calculateFlightTime</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">distanceKm</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">speedKph</span><span class="p">)</span>
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>Returns estimated flight time in hours: <code class="docutils literal notranslate"><span class="pre">distanceKm</span> <span class="pre">/</span> <span class="pre">speedKph</span></code></p></li>
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">Math.abs()</span></code> to ensure the result is always positive</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">Math.abs()</span></code> so the result is always positive, even if a negative distance is passed in</p></li>
 </ul>
-<p class="rubric" id="issafelaunch">3. <code class="docutils literal notranslate"><span class="pre">isSafeLaunch</span></code></p>
+</section>
+<section id="calculatethrusttoweight">
+<h6>3. <code class="docutils literal notranslate"><span class="pre">calculateThrustToWeight</span></code><a class="headerlink" href="#calculatethrusttoweight" title="Link to this heading">¶</a></h6>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">calculateThrustToWeight</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">thrustKn</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">massKg</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Returns the thrust-to-weight ratio: <code class="docutils literal notranslate"><span class="pre">thrustKn</span> <span class="pre">/</span> <span class="pre">(massKg</span> <span class="pre">*</span> <span class="pre">9.8</span> <span class="pre">/</span> <span class="pre">1000)</span></code></p></li>
+</ul>
+</section>
+<section id="issafelaunch">
+<h6>4. <code class="docutils literal notranslate"><span class="pre">isSafeLaunch</span></code><a class="headerlink" href="#issafelaunch" title="Link to this heading">¶</a></h6>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">isSafeLaunch</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">thrustKn</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">massKg</span><span class="p">)</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Calculates thrust-to-weight ratio: <code class="docutils literal notranslate"><span class="pre">thrustKn</span> <span class="pre">/</span> <span class="pre">(massKg</span> <span class="pre">*</span> <span class="pre">9.8</span> <span class="pre">/</span> <span class="pre">1000)</span></code></p></li>
+<li><p><strong>Calls</strong> <code class="docutils literal notranslate"><span class="pre">calculateThrustToWeight(thrustKn,</span> <span class="pre">massKg)</span></code> to get the ratio (do not repeat the formula)</p></li>
 <li><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the ratio is greater than <strong>1.5</strong> (minimum safe ratio), <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise</p></li>
 </ul>
-<p class="rubric" id="printlaunchreport">4. <code class="docutils literal notranslate"><span class="pre">printLaunchReport</span></code></p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printLaunchReport</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">rocketName</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">fuel</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">flightTime</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">safe</span><span class="p">)</span>
+</section>
+<section id="printlaunchreport">
+<h6>5. <code class="docutils literal notranslate"><span class="pre">printLaunchReport</span></code><a class="headerlink" href="#printlaunchreport" title="Link to this heading">¶</a></h6>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printLaunchReport</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">rocketName</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">fuelConsumed</span><span class="p">,</span>
+<span class="w">                                     </span><span class="kt">double</span><span class="w"> </span><span class="n">flightTime</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">thrustToWeight</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">safe</span><span class="p">)</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">void</span></code> method — prints the complete formatted launch report to the console</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">void</span></code> method — prints the complete formatted launch report to the console (see Sample Output)</p></li>
 <li><p>Uses <code class="docutils literal notranslate"><span class="pre">String.format()</span></code> or <code class="docutils literal notranslate"><span class="pre">printf()</span></code> for aligned output</p></li>
-<li><p>Prints a safety status message based on the <code class="docutils literal notranslate"><span class="pre">boolean</span></code> parameter</p></li>
+<li><p>Prints the safety status from the <code class="docutils literal notranslate"><span class="pre">boolean</span></code> parameter. The starter code gives you this part (you will learn <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">/</span> <span class="pre">else</span></code> in Unit 2).</p></li>
 </ul>
 <p>##########################################################################</p>
-<p class="rubric" id="starter-code">Starter Code</p>
+</section>
+</section>
+</section>
+<section id="starter-code">
+<h4>Starter Code<a class="headerlink" href="#starter-code" title="Link to this heading">¶</a></h4>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
 
 <span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span>
@@ -2825,16 +2875,33 @@ The Magic 8-Ball has spoken. Goodbye!
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">isSafeLaunch</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">thrustKn</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">massKg</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">calculateThrustToWeight</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">thrustKn</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">massKg</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">        </span><span class="c1">// your code here</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">isSafeLaunch</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">thrustKn</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">massKg</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// your code here: call calculateThrustToWeight</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printLaunchReport</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">rocketName</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">fuel</span><span class="p">,</span>
-<span class="w">                                         </span><span class="kt">double</span><span class="w"> </span><span class="n">flightTime</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">safe</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printLaunchReport</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">rocketName</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">fuelConsumed</span><span class="p">,</span>
+<span class="w">                                         </span><span class="kt">double</span><span class="w"> </span><span class="n">flightTime</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">thrustToWeight</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">safe</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">// your code here</span>
+<span class="w">        </span><span class="c1">// your code here: print the report lines with printf (see Sample Output)</span>
+
+<span class="w">        </span><span class="c1">// PROVIDED: prints the status from the boolean (if / else comes in Unit 2)</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">safe</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"LAUNCH STATUS:     ✓ SAFE FOR LAUNCH"</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">else</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"LAUNCH STATUS:     ✗ UNSAFE — ABORT LAUNCH"</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"========================================"</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 
 <span class="w">    </span><span class="c1">// ─── Main ─────────────────────────────────────────────────────────────────</span>
@@ -2849,23 +2916,20 @@ The Magic 8-Ball has spoken. Goodbye!
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Enter rocket name: "</span><span class="p">);</span>
 <span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">rocketName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
 
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Enter fuel amount (liters): "</span><span class="p">);</span>
-<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">fuel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
-
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Enter rocket mass (kg): "</span><span class="p">);</span>
 <span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">mass</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
 
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Enter engine thrust (kN): "</span><span class="p">);</span>
 <span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">thrust</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
 
-<span class="w">       </span><span class="c1">// Mission constants</span>
-<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">distanceKm</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mf">400.0</span><span class="p">;</span><span class="w">   </span><span class="c1">// destination distance in km</span>
-<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">fuelEfficiency</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">12.5</span><span class="p">;</span><span class="w">   </span><span class="c1">// km per liter</span>
-<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">speedKph</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mf">28000.0</span><span class="p">;</span><span class="w"> </span><span class="c1">// cruising speed in km/h</span>
+<span class="w">        </span><span class="c1">// Mission constants</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">distanceKm</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="mf">400.0</span><span class="p">;</span><span class="w">   </span><span class="c1">// destination distance in km</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">fuelEfficiency</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">12.5</span><span class="p">;</span><span class="w">    </span><span class="c1">// km per liter</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">speedKph</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="mf">28000.0</span><span class="p">;</span><span class="w"> </span><span class="c1">// cruising speed in km/h</span>
 
-<span class="w">        </span><span class="c1">// Call your static methods and store the results</span>
+<span class="w">        </span><span class="c1">// Call your static methods and store the results in variables</span>
 
-<span class="w">       </span><span class="c1">// Call printLaunchReport</span>
+<span class="w">        </span><span class="c1">// Call printLaunchReport with those variables</span>
 
 <span class="w">        </span><span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
 <span class="w">    </span><span class="p">}</span>
@@ -2873,10 +2937,11 @@ The Magic 8-Ball has spoken. Goodbye!
 </pre></div>
 </div>
 <p>##########################################################################</p>
-<p class="rubric" id="sample-output">Sample Output</p>
+</section>
+<section id="sample-output">
+<h4>Sample Output<a class="headerlink" href="#sample-output" title="Link to this heading">¶</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>=== MISSION CONTROL LAUNCH SYSTEM ===
 Enter rocket name: Falcon Alpha
-Enter fuel amount (liters): 5000
 Enter rocket mass (kg): 120000
 Enter engine thrust (kN): 2500
 
@@ -2894,7 +2959,6 @@ LAUNCH STATUS:     ✓ SAFE FOR LAUNCH
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>=== MISSION CONTROL LAUNCH SYSTEM ===
 Enter rocket name: Titan IV
-Enter fuel amount (liters): 800
 Enter rocket mass (kg): 300000
 Enter engine thrust (kN): 1200
 
@@ -2910,34 +2974,46 @@ LAUNCH STATUS:     ✗ UNSAFE — ABORT LAUNCH
 ========================================
 </pre></div>
 </div>
+<blockquote>
+<div><p>Fuel Consumed and Flight Time are the same in both runs because the distance, fuel efficiency, and speed are mission constants. Only the mass and thrust change.</p>
+</div></blockquote>
 <p>##########################################################################</p>
-<p class="rubric" id="extension-challenges">Extension Challenges</p>
+</section>
+<section id="extension-challenges">
+<h4>Extension Challenges<a class="headerlink" href="#extension-challenges" title="Link to this heading">¶</a></h4>
 <p>Completed early? Try one or more of the following:</p>
 <ul class="contains-task-list simple">
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Add a fifth method</strong> <code class="docutils literal notranslate"><span class="pre">calculateMaxAltitude(double</span> <span class="pre">thrustKn,</span> <span class="pre">double</span> <span class="pre">massKg)</span></code> that returns an estimated max altitude using <code class="docutils literal notranslate"><span class="pre">Math.pow()</span></code> and <code class="docutils literal notranslate"><span class="pre">Math.sqrt()</span></code> in the formula</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Add a sixth method</strong> <code class="docutils literal notranslate"><span class="pre">calculateMaxAltitude(double</span> <span class="pre">thrustKn,</span> <span class="pre">double</span> <span class="pre">massKg)</span></code> that returns an estimated max altitude using <code class="docutils literal notranslate"><span class="pre">Math.pow()</span></code> and <code class="docutils literal notranslate"><span class="pre">Math.sqrt()</span></code> in the formula</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Add a countdown</strong> — write a <code class="docutils literal notranslate"><span class="pre">void</span></code> method called <code class="docutils literal notranslate"><span class="pre">launchCountdown(int</span> <span class="pre">seconds)</span></code> that prints a countdown from the given number to zero using a loop</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Multiple rockets</strong> — use a loop in <code class="docutils literal notranslate"><span class="pre">main</span></code> to process three different rockets and report which one has the best thrust-to-weight ratio using <code class="docutils literal notranslate"><span class="pre">Math.max()</span></code></p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Unit conversion</strong> — add a static method that converts <code class="docutils literal notranslate"><span class="pre">km/h</span></code> to <code class="docutils literal notranslate"><span class="pre">m/s</span></code> and display both speeds in the report</p></li>
 </ul>
+<p>Extensions go <strong>after</strong> the five required methods. Do not change the required ones.</p>
 <p>##########################################################################</p>
-<p class="rubric" id="submission">Submission</p>
+</section>
+<section id="submission">
+<h4>Submission<a class="headerlink" href="#submission" title="Link to this heading">¶</a></h4>
 <p>Upload the following to the assignment:</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <code class="docutils literal notranslate"><span class="pre">Main.java</span></code> — your completed program with block comment header</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Test Cases document — showing at least <strong>three</strong> runs with different rocket inputs, including one that triggers the unsafe launch warning</p></li>
 </ul>
 <p>##########################################################################</p>
-<p class="rubric" id="grading">Grading</p>
+</section>
+<section id="grading">
+<h4>Grading<a class="headerlink" href="#grading" title="Link to this heading">¶</a></h4>
 <p>This assignment is graded using the <strong>AP CSA Generic Assignment Rubric</strong> (5-point scale). Pay particular attention to:</p>
 <ul class="simple">
-<li><p>All four required static methods are present, correctly implemented, and called in <code class="docutils literal notranslate"><span class="pre">main</span></code></p></li>
+<li><p>All five required static methods are present with the exact names and parameters, correctly implemented, and called in <code class="docutils literal notranslate"><span class="pre">main</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isSafeLaunch</span></code> calls <code class="docutils literal notranslate"><span class="pre">calculateThrustToWeight</span></code> instead of repeating the formula</p></li>
 <li><p>Return values from non-void methods are stored and used — not ignored</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Math</span></code> class static methods are called inside your own methods, not just in <code class="docutils literal notranslate"><span class="pre">main</span></code></p></li>
 <li><p>Part 1 investigation questions are answered in your block comment or submitted document</p></li>
 <li><p>The launch report is formatted using <code class="docutils literal notranslate"><span class="pre">String.format()</span></code> or <code class="docutils literal notranslate"><span class="pre">printf()</span></code> — not plain <code class="docutils literal notranslate"><span class="pre">println</span></code> concatenation</p></li>
 </ul>
 <p>##########################################################################</p>
-</div></blockquote>
+</section>
+</section>
 </section>
 <section id="math-class">
 <h2>1.11 Math Class<a class="headerlink" href="#math-class" title="Link to this heading">¶</a></h2>
@@ -7314,7 +7390,38 @@ Available vehicles: 3
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#calling-class-methods">1.10 Calling Class Methods</a></li>
+<li><a class="reference internal" href="#calling-class-methods">1.10 Calling Class Methods</a><ul>
+<li><a class="reference internal" href="#assignment-1-10-1-mission-control-calling-class-methods">Assignment 1.10.1 — Mission Control: Calling Class Methods</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#background">Background</a></li>
+<li><a class="reference internal" href="#part-1-investigation">Part 1 — Investigation</a><ul>
+<li><a class="reference internal" href="#section-a-understanding-static-methods">Section A — Understanding Static Methods</a></li>
+<li><a class="reference internal" href="#section-b-reading-method-signatures">Section B — Reading Method Signatures</a></li>
+<li><a class="reference internal" href="#section-c-decomposing-a-problem-on-paper">Section C — Decomposing a Problem (on paper)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#part-2-mission-control-program">Part 2 — Mission Control Program</a><ul>
+<li><a class="reference internal" href="#program-description">Program Description</a></li>
+<li><a class="reference internal" href="#requirements-checklist">Requirements Checklist</a></li>
+<li><a class="reference internal" href="#required-static-methods">Required Static Methods</a><ul>
+<li><a class="reference internal" href="#calculatefuelconsumption">1. <code class="docutils literal notranslate"><span class="pre">calculateFuelConsumption</span></code></a></li>
+<li><a class="reference internal" href="#calculateflighttime">2. <code class="docutils literal notranslate"><span class="pre">calculateFlightTime</span></code></a></li>
+<li><a class="reference internal" href="#calculatethrusttoweight">3. <code class="docutils literal notranslate"><span class="pre">calculateThrustToWeight</span></code></a></li>
+<li><a class="reference internal" href="#issafelaunch">4. <code class="docutils literal notranslate"><span class="pre">isSafeLaunch</span></code></a></li>
+<li><a class="reference internal" href="#printlaunchreport">5. <code class="docutils literal notranslate"><span class="pre">printLaunchReport</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#starter-code">Starter Code</a></li>
+<li><a class="reference internal" href="#sample-output">Sample Output</a></li>
+<li><a class="reference internal" href="#extension-challenges">Extension Challenges</a></li>
+<li><a class="reference internal" href="#submission">Submission</a></li>
+<li><a class="reference internal" href="#grading">Grading</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a class="reference internal" href="#math-class">1.11 Math Class</a><ul>
 <li><a class="reference internal" href="#project-1-11-1-roller-coaster-simulator">Project 1.11.1 — Roller Coaster Simulator</a></li>
 <li><a class="reference internal" href="#activity-1-11-2-race-car-applying-the-math-class">Activity 1.11.2 — Race Car: Applying the Math Class</a></li>
