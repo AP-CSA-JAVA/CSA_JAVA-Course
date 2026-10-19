@@ -2044,312 +2044,343 @@ double r = Math.random();      // Returns 0.0 to < 1.0
 #############################################################################
 
 
->
-> # Assignment 1.10.1 — Mission Control: Calling Class Methods
-> 
-> 
-> ## Overview
-> 
-> In this activity you will investigate how **class methods** (also called **static methods**) work in Java, then build a Mission Control program that calls static methods to calculate rocket launch data.
-> 
-> By the end of this activity you will be able to:
-> - [ ] Explain the difference between a static (class) method and an instance method
-> - [ ] Call static methods from existing Java classes without creating an object
-> - [ ] Write your own static methods and call them from `main`
-> - [ ] Decompose a larger problem into smaller methods, each responsible for one task
-> 
-> ##########################################################################
-> 
-> ## Background
-> 
-> A **class method** (declared with the keyword `static`) belongs to the **class itself** — not to any specific object. You call it using the class name, not an object reference:
-> 
-> ```java
-> // Calling a static method from the Math class — no object needed
-> double result = Math.sqrt(144);     // returns 12.0
-> int rolled   = Math.abs(-7);        // returns 7
-> double rand  = Math.random();       // returns a value in [0.0, 1.0)
-> ```
-> 
-> You have already used static methods every time you called `Math.pow()`, `Math.round()`, or `System.out.println()`. `main` itself is a static method — that is why Java can run it without creating an object first.
-> 
-> **Static vs. Instance — Side by Side:**
-> 
-> | | Static (Class) Method | Instance Method |
-> |---|---|---|
-> | Keyword | `static` | *(no static)* |
-> | Called on | The class name | An object reference |
-> | Example call | `Math.sqrt(25)` | `myString.length()` |
-> | Requires an object? | No | Yes |
-> | Can access instance variables? | No | Yes |
-> 
-> **Writing Your Own Static Method:**
-> 
-> ```java
-> public static double celsiusToFahrenheit(double celsius)
-> {
->     return (celsius * 9.0 / 5.0) + 32;
-> }
-> ```
->
-> - `public` — accessible from anywhere
-> - `static` — belongs to the class, not an object
-> - `double` — the return type
-> - `celsiusToFahrenheit` — the method name
-> - `(double celsius)` — one parameter
-> 
-> Call it from `main` like this:
-> 
-> ```java
-> double temp = celsiusToFahrenheit(100.0);   // returns 212.0
-> System.out.println(temp);
-> ```
-> 
-> A method that returns nothing uses `void` as its return type. A `void` method performs an action but does not hand a value back to the caller.
-> 
-> ##########################################################################
-> 
-> ## Part 1 — Investigation
-> 
-> Answer the following questions in a comment block at the top of your `Main.java` or in a separate document submitted alongside your code.
-> 
-> ### Section A — Understanding Static Methods
-> 
-> 1. Why can you call `Math.sqrt()` without first writing `Math m = new Math()`?
-> 2. What keyword makes a method a class (static) method?
-> 3. What is the return type of `Math.random()`? What range of values can it produce?
-> 4. What is the return type of `Math.round(double a)`? Why is the return type different from `double`?
-> 5. In your own words, explain why `main` must be declared `static`.
-> 
-> ### Section B — Reading Method Signatures
-> 
-> Look at the following method signatures and answer the questions below each one.
-> 
-> ```java
-> public static int max(int a, int b)
-> ```
-> 6. How many parameters does this method take?
-> 7. What data type does it return?
-> 8. Write a line of code that calls this method with the values 42 and 17 and stores the result in a variable.
-> 
-> ```java
-> public static void printDivider(int width)
-> ```
-> 9. What does a `void` return type mean?
-> 10. Can you store the result of calling this method in a variable? Why or why not?
-> 
-> ### Section C — Decomposing a Problem
-> 
-> A good programmer breaks a large problem into smaller, focused methods — each doing **one job**.
-> 
-> 11. Look at the following task: *"Calculate the fuel needed for a rocket launch, warn the crew if fuel is low, and print a launch report."* Identify **three** static methods you could write to decompose this problem. For > each, write the method signature only (no body needed).
-> 
-> ##########################################################################
-> 
-> ## Part 2 — Mission Control Program
-> 
-> ### Program Description
-> 
-> You are writing the launch software for Mission Control. Your program will:
-> - Accept rocket launch parameters from the user via `Scanner`
-> - Call static methods to calculate fuel consumption, estimated flight time, and thrust-to-weight ratio
-> - Warn the crew if any value falls outside safe limits
-> - Print a formatted launch report
-> 
-> ### Requirements Checklist
-> 
-> - [ ] Include the required block comment header in `Main.java` (all fields completed)
-> - [ ] Write and call **at least four** static methods of your own (see specifications below)
-> - [ ] At least one method must be `void` (performs an action, returns nothing)
-> - [ ] At least one method must return a `double`
-> - [ ] At least one method must return a `boolean`
-> - [ ] Call at least **two** `Math` class static methods within your own methods
-> - [ ] Use `Scanner` to accept user input for rocket name, fuel amount, and rocket mass
-> - [ ] Use the return values of your static methods meaningfully in `main`
-> - [ ] Use `String.format()` or `printf()` to produce the formatted launch report
-> - [ ] Include meaningful inline comments throughout
-> 
-> ##########################################################################
-> 
-> ### Required Static Methods
-> 
-> Implement the following four static methods in `Main.java`:
-> 
-> #### 1. `calculateFuelConsumption`
-> ```java
-> public static double calculateFuelConsumption(double distanceKm, double fuelEfficiency)
-> ```
-> - Returns the estimated fuel consumed: `distanceKm / fuelEfficiency`
-> - Call `Math.round()` on the result before returning it as a `double`
-> 
-> #### 2. `calculateFlightTime`
-> ```java
-> public static double calculateFlightTime(double distanceKm, double speedKph)
-> ```
-> - Returns estimated flight time in hours: `distanceKm / speedKph`
-> - Use `Math.abs()` to ensure the result is always positive
-> 
-> #### 3. `isSafeLaunch`
-> ```java
-> public static boolean isSafeLaunch(double thrustKn, double massKg)
-> ```
-> - Calculates thrust-to-weight ratio: `thrustKn / (massKg * 9.8 / 1000)`
-> - Returns `true` if the ratio is greater than **1.5** (minimum safe ratio), `false` otherwise
-> 
-> #### 4. `printLaunchReport`
-> ```java
-> public static void printLaunchReport(String rocketName, double fuel, double flightTime, boolean safe)
-> ```
-> - `void` method — prints the complete formatted launch report to the console
-> - Uses `String.format()` or `printf()` for aligned output
-> - Prints a safety status message based on the `boolean` parameter
-> 
-> ##########################################################################
-> 
-> ## Starter Code
-> 
-> ```java
-> import java.util.Scanner;
-> 
-> public class Main
-> {
->     // ─── Static Methods ───────────────────────────────────────────────────────
-> 
->     public static double calculateFuelConsumption(double distanceKm, double fuelEfficiency)
->     {
->         // your code here
->         return 0;
->     }
-> 
->     public static double calculateFlightTime(double distanceKm, double speedKph)
->     {
->         // your code here
->         return 0;
->     }
-> 
->     public static boolean isSafeLaunch(double thrustKn, double massKg)
->     {
->         // your code here
->         return false;
->     }
-> 
->     public static void printLaunchReport(String rocketName, double fuel,
->                                          double flightTime, boolean safe)
->     {
->         // your code here
->     }
-> 
->     // ─── Main ─────────────────────────────────────────────────────────────────
-> 
->     public static void main(String[] args)
->     {
->         Scanner input = new Scanner(System.in);
-> 
->         System.out.println("=== MISSION CONTROL LAUNCH SYSTEM ===");
-> 
->         // Get user inputs
->         System.out.print("Enter rocket name: ");
->         String rocketName = input.nextLine();
-> 
->         System.out.print("Enter fuel amount (liters): ");
->         double fuel = input.nextDouble();
-> 
->         System.out.print("Enter rocket mass (kg): ");
->         double mass = input.nextDouble();
-> 
->         System.out.print("Enter engine thrust (kN): ");
->         double thrust = input.nextDouble();
-> 
->        // Mission constants
->         double distanceKm    = 400.0;   // destination distance in km
->         double fuelEfficiency = 12.5;   // km per liter
->         double speedKph      = 28000.0; // cruising speed in km/h
-> 
->         // Call your static methods and store the results
-> 
->        // Call printLaunchReport
-> 
->         input.close();
->     }
-> }
-> ```
-> 
-> ##########################################################################
-> 
-> ## Sample Output
-> 
-> ```
-> === MISSION CONTROL LAUNCH SYSTEM ===
-> Enter rocket name: Falcon Alpha
-> Enter fuel amount (liters): 5000
-> Enter rocket mass (kg): 120000
-> Enter engine thrust (kN): 2500
-> 
-> ========================================
->         MISSION CONTROL REPORT
-> ========================================
-> Rocket Name:       Falcon Alpha
-> Fuel Consumed:     32.0 liters
-> Flight Time:       0.01 hours
-> Thrust/Weight:     2.13
-> ----------------------------------------
-> LAUNCH STATUS:     ✓ SAFE FOR LAUNCH
-> ========================================
-> ```
-> 
-> ```
-> === MISSION CONTROL LAUNCH SYSTEM ===
-> Enter rocket name: Titan IV
-> Enter fuel amount (liters): 800
-> Enter rocket mass (kg): 300000
-> Enter engine thrust (kN): 1200
-> 
-> ========================================
->         MISSION CONTROL REPORT
-> ========================================
-> Rocket Name:       Titan IV
-> Fuel Consumed:     32.0 liters
-> Flight Time:       0.01 hours
-> Thrust/Weight:     0.41
-> ----------------------------------------
-> LAUNCH STATUS:     ✗ UNSAFE — ABORT LAUNCH
-> ========================================
-> ```
-> 
-> ##########################################################################
-> 
-> ## Extension Challenges
-> 
-> Completed early? Try one or more of the following:
-> 
-> - [ ] **Add a fifth method** `calculateMaxAltitude(double thrustKn, double massKg)` that returns an estimated max altitude using `Math.pow()` and `Math.sqrt()` in the formula
-> - [ ] **Add a countdown** — write a `void` method called `launchCountdown(int seconds)` that prints a countdown from the given number to zero using a loop
-> - [ ] **Multiple rockets** — use a loop in `main` to process three different rockets and report which one has the best thrust-to-weight ratio using `Math.max()`
-> - [ ] **Unit conversion** — add a static method that converts `km/h` to `m/s` and display both speeds in the report
-> 
-> ##########################################################################
-> 
-> ## Submission
-> 
-> Upload the following to the assignment:
-> 
-> - [ ] `Main.java` — your completed program with block comment header
-> - [ ] Test Cases document — showing at least **three** runs with different rocket inputs, including one that triggers the unsafe launch warning
-> 
-> ##########################################################################
-> 
-> ## Grading
-> 
-> This assignment is graded using the **AP CSA Generic Assignment Rubric** (5-point scale). Pay particular attention to:
-> 
-> - All four required static methods are present, correctly implemented, and called in `main`
-> - Return values from non-void methods are stored and used — not ignored
-> - `Math` class static methods are called inside your own methods, not just in `main`
-> - Part 1 investigation questions are answered in your block comment or submitted document
-> - The launch report is formatted using `String.format()` or `printf()` — not plain `println` concatenation
-> 
-> ##########################################################################
->
+### Assignment 1.10.1 — Mission Control: Calling Class Methods
+
+#### Overview
+
+In this activity you will investigate how **class methods** (also called **static methods**) work in Java, then build a Mission Control program that calls static methods to calculate rocket launch data.
+
+By the end of this activity you will be able to:
+- [ ] Explain the difference between a static (class) method and an instance method
+- [ ] Call static methods from existing Java classes without creating an object
+- [ ] Write your own static methods and call them from `main`
+- [ ] Decompose a larger problem into smaller methods, each responsible for one task
+
+##########################################################################
+
+#### Background
+
+A **class method** (declared with the keyword `static`) belongs to the **class itself** — not to any specific object. You call it using the class name, not an object reference:
+
+```java
+// Calling a static method from the Math class — no object needed
+double result = Math.sqrt(144);     // returns 12.0
+int rolled   = Math.abs(-7);        // returns 7
+double rand  = Math.random();       // returns a value in [0.0, 1.0)
+```
+
+You have already used static methods every time you called `Math.pow()`, `Math.round()`, or `System.out.println()`. `main` itself is a static method — that is why Java can run it without creating an object first.
+
+**Static vs. Instance — Side by Side:**
+
+| | Static (Class) Method | Instance Method |
+|---|---|---|
+| Keyword | `static` | *(no static)* |
+| Called on | The class name | An object reference |
+| Example call | `Math.sqrt(25)` | `myString.length()` |
+| Requires an object? | No | Yes |
+| Can access instance variables? | No | Yes |
+
+**Writing Your Own Static Method:**
+
+```java
+public static double celsiusToFahrenheit(double celsius)
+{
+    return (celsius * 9.0 / 5.0) + 32;
+}
+```
+
+- `public` — accessible from anywhere
+- `static` — belongs to the class, not an object
+- `double` — the return type
+- `celsiusToFahrenheit` — the method name
+- `(double celsius)` — one parameter
+
+Call it from `main` like this:
+
+```java
+double temp = celsiusToFahrenheit(100.0);   // returns 212.0
+System.out.println(temp);
+```
+
+A method that returns nothing uses `void` as its return type. A `void` method performs an action but does not hand a value back to the caller.
+
+A static method can also **call another static method** in the same class. That is how you build bigger methods out of smaller ones:
+
+```java
+public static boolean isFeverish(double celsius)
+{
+    double fahrenheit = celsiusToFahrenheit(celsius);   // calls the method above
+    return fahrenheit > 100.4;
+}
+```
+
+##########################################################################
+
+#### Part 1 — Investigation
+
+Answer the following questions in a comment block at the top of your `Main.java` or in a separate document submitted alongside your code.
+
+##### Section A — Understanding Static Methods
+
+1. Why can you call `Math.sqrt()` without first writing `Math m = new Math()`?
+2. What keyword makes a method a class (static) method?
+3. What is the return type of `Math.random()`? What range of values can it produce?
+4. What is the return type of `Math.round(double a)`? Why is the return type different from `double`?
+5. In your own words, explain why `main` must be declared `static`.
+
+##### Section B — Reading Method Signatures
+
+Look at the following method signatures and answer the questions below each one.
+
+```java
+public static int max(int a, int b)
+```
+6. How many parameters does this method take?
+7. What data type does it return?
+8. Write a line of code that calls this method with the values 42 and 17 and stores the result in a variable.
+
+```java
+public static void printDivider(int width)
+```
+9. What does a `void` return type mean?
+10. Can you store the result of calling this method in a variable? Why or why not?
+
+##### Section C — Decomposing a Problem (on paper)
+
+A good programmer breaks a large problem into smaller, focused methods — each doing **one job**.
+
+> **Note:** Section C is a design exercise only. Answer it in your comment block or document. **Do not add these methods to your program** — Part 2 tells you exactly which methods to write.
+
+11. Look at the following task: *"Calculate the fuel needed for a rocket launch, warn the crew if fuel is low, and print a launch report."* Identify **three** static methods you could write to decompose this problem. For each, write the method signature only (no body needed).
+
+##########################################################################
+
+#### Part 2 — Mission Control Program
+
+##### Program Description
+
+You are writing the launch software for Mission Control. Your program will:
+- Accept the rocket's name, mass, and engine thrust from the user via `Scanner`
+- Call static methods to calculate fuel consumption, estimated flight time, and the thrust-to-weight ratio
+- Decide whether the launch is safe
+- Print a formatted launch report
+
+##### Requirements Checklist
+
+- [ ] Include the required block comment header in `Main.java` (all fields completed)
+- [ ] Write the **five** static methods below, using the **exact names, parameters, and return types** shown, and call them from `main`
+- [ ] Call at least **two** `Math` class static methods within your own methods (`Math.round()` and `Math.abs()`)
+- [ ] Use `Scanner` to accept user input for the rocket name, rocket mass, and engine thrust
+- [ ] Store the return values of your methods in variables in `main`, then pass them to `printLaunchReport`
+- [ ] Use `String.format()` or `printf()` to produce the formatted launch report
+- [ ] Include meaningful inline comments throughout
+
+##########################################################################
+
+##### Required Static Methods
+
+> **Use these exact method names, parameters, and return types.** The starter code already has all five headers. Your job is to fill in the bodies. Do not rename them or add parameters.
+
+###### 1. `calculateFuelConsumption`
+```java
+public static double calculateFuelConsumption(double distanceKm, double fuelEfficiency)
+```
+- Returns the estimated fuel consumed in liters: `distanceKm / fuelEfficiency`
+- Round the result with `Math.round()`. `Math.round()` returns a `long`, so cast it back to a `double`:
+  `return (double) Math.round(distanceKm / fuelEfficiency);`
+
+###### 2. `calculateFlightTime`
+```java
+public static double calculateFlightTime(double distanceKm, double speedKph)
+```
+- Returns estimated flight time in hours: `distanceKm / speedKph`
+- Use `Math.abs()` so the result is always positive, even if a negative distance is passed in
+
+###### 3. `calculateThrustToWeight`
+```java
+public static double calculateThrustToWeight(double thrustKn, double massKg)
+```
+- Returns the thrust-to-weight ratio: `thrustKn / (massKg * 9.8 / 1000)`
+
+###### 4. `isSafeLaunch`
+```java
+public static boolean isSafeLaunch(double thrustKn, double massKg)
+```
+- **Calls** `calculateThrustToWeight(thrustKn, massKg)` to get the ratio (do not repeat the formula)
+- Returns `true` if the ratio is greater than **1.5** (minimum safe ratio), `false` otherwise
+
+###### 5. `printLaunchReport`
+```java
+public static void printLaunchReport(String rocketName, double fuelConsumed,
+                                     double flightTime, double thrustToWeight, boolean safe)
+```
+- `void` method — prints the complete formatted launch report to the console (see Sample Output)
+- Uses `String.format()` or `printf()` for aligned output
+- Prints the safety status from the `boolean` parameter. The starter code gives you this part (you will learn `if / else` in Unit 2).
+
+##########################################################################
+
+#### Starter Code
+
+```java
+import java.util.Scanner;
+
+public class Main
+{
+    // ─── Static Methods ───────────────────────────────────────────────────────
+
+    public static double calculateFuelConsumption(double distanceKm, double fuelEfficiency)
+    {
+        // your code here
+        return 0;
+    }
+
+    public static double calculateFlightTime(double distanceKm, double speedKph)
+    {
+        // your code here
+        return 0;
+    }
+
+    public static double calculateThrustToWeight(double thrustKn, double massKg)
+    {
+        // your code here
+        return 0;
+    }
+
+    public static boolean isSafeLaunch(double thrustKn, double massKg)
+    {
+        // your code here: call calculateThrustToWeight
+        return false;
+    }
+
+    public static void printLaunchReport(String rocketName, double fuelConsumed,
+                                         double flightTime, double thrustToWeight, boolean safe)
+    {
+        // your code here: print the report lines with printf (see Sample Output)
+
+        // PROVIDED: prints the status from the boolean (if / else comes in Unit 2)
+        if (safe)
+        {
+            System.out.println("LAUNCH STATUS:     ✓ SAFE FOR LAUNCH");
+        }
+        else
+        {
+            System.out.println("LAUNCH STATUS:     ✗ UNSAFE — ABORT LAUNCH");
+        }
+        System.out.println("========================================");
+    }
+
+    // ─── Main ─────────────────────────────────────────────────────────────────
+
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("=== MISSION CONTROL LAUNCH SYSTEM ===");
+
+        // Get user inputs
+        System.out.print("Enter rocket name: ");
+        String rocketName = input.nextLine();
+
+        System.out.print("Enter rocket mass (kg): ");
+        double mass = input.nextDouble();
+
+        System.out.print("Enter engine thrust (kN): ");
+        double thrust = input.nextDouble();
+
+        // Mission constants
+        double distanceKm     = 400.0;   // destination distance in km
+        double fuelEfficiency = 12.5;    // km per liter
+        double speedKph       = 28000.0; // cruising speed in km/h
+
+        // Call your static methods and store the results in variables
+
+        // Call printLaunchReport with those variables
+
+        input.close();
+    }
+}
+```
+
+##########################################################################
+
+#### Sample Output
+
+```
+=== MISSION CONTROL LAUNCH SYSTEM ===
+Enter rocket name: Falcon Alpha
+Enter rocket mass (kg): 120000
+Enter engine thrust (kN): 2500
+
+========================================
+        MISSION CONTROL REPORT
+========================================
+Rocket Name:       Falcon Alpha
+Fuel Consumed:     32.0 liters
+Flight Time:       0.01 hours
+Thrust/Weight:     2.13
+----------------------------------------
+LAUNCH STATUS:     ✓ SAFE FOR LAUNCH
+========================================
+```
+
+```
+=== MISSION CONTROL LAUNCH SYSTEM ===
+Enter rocket name: Titan IV
+Enter rocket mass (kg): 300000
+Enter engine thrust (kN): 1200
+
+========================================
+        MISSION CONTROL REPORT
+========================================
+Rocket Name:       Titan IV
+Fuel Consumed:     32.0 liters
+Flight Time:       0.01 hours
+Thrust/Weight:     0.41
+----------------------------------------
+LAUNCH STATUS:     ✗ UNSAFE — ABORT LAUNCH
+========================================
+```
+
+> Fuel Consumed and Flight Time are the same in both runs because the distance, fuel efficiency, and speed are mission constants. Only the mass and thrust change.
+
+##########################################################################
+
+#### Extension Challenges
+
+Completed early? Try one or more of the following:
+
+- [ ] **Add a sixth method** `calculateMaxAltitude(double thrustKn, double massKg)` that returns an estimated max altitude using `Math.pow()` and `Math.sqrt()` in the formula
+- [ ] **Add a countdown** — write a `void` method called `launchCountdown(int seconds)` that prints a countdown from the given number to zero using a loop
+- [ ] **Multiple rockets** — use a loop in `main` to process three different rockets and report which one has the best thrust-to-weight ratio using `Math.max()`
+- [ ] **Unit conversion** — add a static method that converts `km/h` to `m/s` and display both speeds in the report
+
+Extensions go **after** the five required methods. Do not change the required ones.
+
+##########################################################################
+
+#### Submission
+
+Upload the following to the assignment:
+
+- [ ] `Main.java` — your completed program with block comment header
+- [ ] Test Cases document — showing at least **three** runs with different rocket inputs, including one that triggers the unsafe launch warning
+
+##########################################################################
+
+#### Grading
+
+This assignment is graded using the **AP CSA Generic Assignment Rubric** (5-point scale). Pay particular attention to:
+
+- All five required static methods are present with the exact names and parameters, correctly implemented, and called in `main`
+- `isSafeLaunch` calls `calculateThrustToWeight` instead of repeating the formula
+- Return values from non-void methods are stored and used — not ignored
+- `Math` class static methods are called inside your own methods, not just in `main`
+- Part 1 investigation questions are answered in your block comment or submitted document
+- The launch report is formatted using `String.format()` or `printf()` — not plain `println` concatenation
+
+##########################################################################
 
 
 ## 1.11 Math Class
