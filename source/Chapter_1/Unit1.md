@@ -288,7 +288,9 @@ Why it matters: Java competitions and online tutorials often use newer Java, and
 | Lists from values | `Arrays.asList(1, 2, 3)` |
 | Lambdas and streams | `list.stream().filter(x -> x > 0).collect(Collectors.toList())` |
 
-## ⚠️ Newer than Java 8: no points off, but write it the Java 8 way for class
+## ⚠️ Newer than Java 8
+
+#### ⚠️⚠️⚠️ No points off, write it using the Java 8 way for class
 
 | Newer feature | Added in | Write it this way for class |
 |---|---|---|
@@ -308,7 +310,7 @@ Why it matters: Java competitions and online tutorials often use newer Java, and
 | `stream.toList()` | Java 16 | `stream.collect(Collectors.toList())` |
 | `sealed` / `permits` | Java 17 | Leave them out |
 
-## ❌ Java 21: won't compile in the grader
+## ❌ Java 21: won't compile in the grader ❌
 
 | Feature | Write it this way |
 |---|---|
