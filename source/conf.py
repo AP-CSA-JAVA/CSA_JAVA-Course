@@ -62,5 +62,8 @@ html_title = project
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+# Interactive questions (CSA Quiz)
+html_css_files = ['csa-quiz.css']
+html_js_files = ['csa-quiz.js']
 
 myst_heading_anchors = 3
