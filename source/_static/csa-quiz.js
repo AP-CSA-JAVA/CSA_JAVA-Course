@@ -33,13 +33,13 @@
      ------------------------------------------------------------------------ */
   var CONFIG = {
     // Paste your Apps Script Web App URL (ends in /exec). Leave "" for practice mode.
-    endpoint: "",
+    endpoint: "https://script.google.com/macros/s/AKfycbyp3GF_7LADnznit0wfSSOkByj5BhOKSnmR5cU8pPvUGanNHINhPK6Fp3zkryzI78s3FQ/exec",
     // Must match SITE_KEY in Code.gs. Stops random junk, not a determined student.
     siteKey: "csa-2026",
     // Class periods students can pick from.
-    periods: ["1", "2", "3", "4", "5", "6", "7", "8"],
+    periods: ["3", "5"],
     // Default tries before the answer is revealed (a question can override with attempts:).
-    defaultAttempts: 3,
+    defaultAttempts: 1,
     course: "AP CSA",
     // Seconds to wait for the Sheet when a student signs in.
     lookupTimeout: 10
