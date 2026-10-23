@@ -79,6 +79,12 @@ George Boole formulated the basic rules of Boolean algebra back in 1847. Below a
 | a == b | a equals b\* | Equates to 'true' if a has the same value as b. |
 | a != b | a does not equal b | Equates to 'true' if a does not have the same value as b, 'false' otherwise. |
 
+
+---
+
+### Check Your Understanding 2.2
+
+
 <script type="text/x-csa-question">
 id: 2.2-q01
 type: mcq
@@ -128,6 +134,10 @@ choice: Neither line
 answer: B
 explain: `==` **compares** and produces a `boolean`. A single `=` **assigns**, and the value of `(x = 5)` is the `int` 5. Java will not store an `int` in a `boolean` variable, so Line 3 is an "incompatible types" compile error.
 </script>
+
+
+---
+
 
 **Logical Operators**
 
@@ -192,7 +202,146 @@ attempts: 3
 explain: `b || c` is `false` only when **both** `b` and `c` are false. Then `a && (b || c)` can only be `true` when `a` is `true`, so the entire bottom half of the table (where `a` is false) is `F`.
 </script>
 
+
+---
+
+
 ### Activity 2.2.2 - Boolean Expression
+
+
+**Theme Park Ride Check**
+
+You're writing the program that runs at the entrance kiosk of a theme park ride. It collects a guest's information and works out which rules the guest meets. You haven't learned `if` statements yet (that's 2.3), so the program stores each answer in a `boolean` variable and prints it. Next lesson, you'll use these same variables to make decisions.
+
+**Part A — Write the Program** (`RideCheck.java`)
+
+1. Use a `Scanner` to ask the guest for:
+   - their name (`String`, use `nextLine()`)
+   - their age (`int`)
+   - their height in inches (`double`)
+   - their budget in dollars (`double`)
+
+2. Calculate these values (Unit 1 review):
+
+   | Variable | Type | How to calculate it |
+   |----------|------|---------------------|
+   | `initial` | `String` | First letter of the name, uppercase (`substring` + `toUpperCase`) |
+   | `heightCm` | `int` | Height in inches × 2.54, **cast** to an `int` |
+   | `inchesFromLimit` | `double` | Distance from the 48-inch limit, always positive (`Math.abs`) |
+   | `ridesAffordable` | `int` | Budget ÷ $12 per ride, **cast** to an `int` |
+
+3. Translate each rule into a `boolean` variable. Use the exact variable names.
+
+   | Variable | Rule |
+   |----------|------|
+   | `tallEnough` | Height is at least 48 inches |
+   | `oldEnough` | Age is at least 10 |
+   | `canRideAlone` | Tall enough **and** at least 14 years old |
+   | `needsAdult` | **Not** able to ride alone (use `!` with `canRideAlone`) |
+   | `canAffordThree` | Can afford at least 3 rides |
+   | `evenAge` | Age is an even number (use `%`) |
+   | `validName` | Name is between 2 and 20 characters long, inclusive |
+   | `fastPassEligible` | (Age 13 or older **or** budget over $50) **and** tall enough |
+
+4. Print every calculated value and every `boolean` with a clear label.
+
+**Rules**
+
+- No `if`, `else`, `switch`, or ternary (`? :`). Every answer must come from a Boolean expression.
+- Include your block comment header at the top of the program.
+- At the bottom of your program, type at least **3** test cases as `//` comments, in this format:
+
+  ```java
+  //TEST CASE 1:
+  //Input:  maya, 13, 52.5, 40.00
+  //Output: tallEnough true, oldEnough true, canRideAlone false, ...
+
+  //TEST CASE 2:
+  //Input:  ...
+  //Output: ...
+  ```
+
+  List every input and every expected `true`/`false` value. At least one test case must check a boundary (for example, exactly 48 inches or exactly age 14).
+
+**Sample Run**
+
+```
+Enter your name: maya
+Enter your age: 13
+Enter your height in inches: 52.5
+Enter your budget: 40.00
+
+--- Ride Check for M ---
+Height (cm): 133
+Inches from limit: 4.5
+Rides affordable: 3
+
+tallEnough: true
+oldEnough: true
+canRideAlone: false
+needsAdult: true
+canAffordThree: true
+evenAge: false
+validName: true
+fastPassEligible: true
+```
+
+**Part B — Predict the Value**
+
+Use the values below to decide whether each expression is `true` or `false` **before** you run anything. Then check your answers.
+
+```java
+int x = 7;
+int y = 3;
+double d = 2.5;
+String s = "Java";
+```
+
+| # | Expression | Your Prediction |
+|---|------------|-----------------|
+| 1 | `x > y` | |
+| 2 | `x / 2 == y` | |
+| 3 | `x % y != 1` | |
+| 4 | `(int) d * 2 >= 5` | |
+| 5 | `s.length() == x - y` | |
+| 6 | `!(x < 10) \|\| d > 2` | |
+| 7 | `x > 10 && s.length() > 0` | |
+| 8 | `Math.pow(y, 2) > x + 1` | |
+| 9 | `s.indexOf("v") < 2` | |
+| 10 | `(double) x / 2 > y` | |
+
+<details>
+<summary>Part B Answers</summary>
+
+| # | Answer | Why |
+|---|--------|-----|
+| 1 | `true` | 7 > 3 |
+| 2 | `true` | Integer division: 7 / 2 is 3 |
+| 3 | `false` | 7 % 3 is 1, and 1 != 1 is false |
+| 4 | `false` | The cast happens first: (int) 2.5 is 2, and 2 * 2 = 4 |
+| 5 | `true` | "Java" has 4 characters, and 7 - 3 = 4 |
+| 6 | `true` | !(true) is false, but 2.5 > 2 is true |
+| 7 | `false` | 7 > 10 is false, so Java short-circuits and never checks the right side |
+| 8 | `true` | Math.pow returns 9.0, and 9.0 > 8 |
+| 9 | `false` | "v" is at index 2, and 2 < 2 is false |
+| 10 | `true` | The cast makes it 7.0 / 2 = 3.5, and 3.5 > 3 |
+
+</details>
+
+**Part C — Reflect** (answer as a comment at the bottom of your program)
+
+1. In Part B #7, the right side of `&&` was never evaluated. Write a Boolean expression where short-circuiting **prevents an error**. (Hint: think about dividing by a variable that might be 0.)
+2. In Part A, why does `canRideAlone` only need to check age 14, and not also check `oldEnough`?
+
+**Submit**
+
+- `RideCheck.java` with header, `//TEST CASE 1:`, `//TEST CASE 2:` `//TEST CASE 3:` comments, and Part C answers
+- A screenshot of your program running with the sample input
+- A screenshot of your program running with one of your own test cases
+
+
+---
+
 
 ### Activity 2.2.3 - Comparing Objects with .equals()
 
