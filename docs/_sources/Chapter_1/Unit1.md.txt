@@ -264,8 +264,237 @@ Main.java  --(javac)-->  Main.class (bytecode)  --(java)-->  JVM executes it  --
 > [Review with this java_infographic!](https://github.com/user-attachments/files/31231474/java_1-1a_infographic.html)
 > 
 
+
 ---
 
+
+### Java Versions: What You Can Use
+
+**Class assignments are written in Java 8**, the version in the course header.
+
+The grader also accepts Java 9–17 code with **no points off**. If you use a newer feature, your correction sheet lists it with its line numbers and shows the Java 8 way to write it. Java 21 features **won't compile** in the grader at all.
+
+Why it matters: Java competitions and online tutorials often use newer Java, and AI tools often suggest it. That code is fine there. For class, practice the Java 8 way.
+
+## ✅ Fine to use: all part of Java 8
+
+| Feature | Example |
+|---|---|
+| Diamond operator | `ArrayList<String> names = new ArrayList<>();` |
+| Switch on a String | `switch (choice) { case "yes": ... break; }` |
+| Enhanced for loop | `for (String name : names) { ... }` |
+| String methods | `trim()`, `isEmpty()`, `charAt()`, `substring()`, `indexOf()` |
+| Joining and formatting | `String.join(", ", a, b)`, `String.format("%.2f", price)` |
+| Lists from values | `Arrays.asList(1, 2, 3)` |
+| Lambdas and streams | `list.stream().filter(x -> x > 0).collect(Collectors.toList())` |
+
+## ⚠️ Newer than Java 8: no points off, but write it the Java 8 way for class
+
+| Newer feature | Added in | Write it this way for class |
+|---|---|---|
+| `var count = 10;` | Java 10 | `int count = 10;` |
+| `List.of(1, 2, 3)`, `Set.of(...)`, `Map.of(...)` | Java 9 | `Arrays.asList(1, 2, 3)`, or `new ArrayList<>()` with `add()` |
+| `"ab".repeat(3)` | Java 11 | A loop that adds `"ab"` three times |
+| `s.isBlank()` | Java 11 | `s.trim().isEmpty()` |
+| `s.strip()` | Java 11 | `s.trim()` |
+| `Files.readString(Path.of("data.txt"))` | Java 11 | A `Scanner` with `new File("data.txt")` |
+| `case 1 -> ...` (switch arrows) | Java 14 | `case 1:` … `break;` |
+| `String w = switch (n) { ... };` and `yield` | Java 14 | Set a variable inside each `case`, then `break;` |
+| `case 1, 2:` | Java 14 | `case 1:` and `case 2:` on separate lines |
+| `"%d points".formatted(5)` | Java 15 | `String.format("%d points", 5)` |
+| Text blocks `"""` | Java 15 | Normal strings joined with `+` and `"\n"` |
+| `record Point(int x, int y) { }` | Java 16 | A class with `private` fields, a constructor, and getters |
+| `if (o instanceof String s)` | Java 16 | `if (o instanceof String) { String s = (String) o; }` |
+| `stream.toList()` | Java 16 | `stream.collect(Collectors.toList())` |
+| `sealed` / `permits` | Java 17 | Leave them out |
+
+## ❌ Java 21: won't compile in the grader
+
+| Feature | Write it this way |
+|---|---|
+| `case Integer i ->` (pattern matching in `switch`) | `if` / `else if` with `instanceof` and a cast |
+| `list.getFirst()`, `list.getLast()` | `list.get(0)`, `list.get(list.size() - 1)` |
+| `list.reversed()` | `Collections.reverse(copy)` on a copy of the list |
+| `Math.clamp(x, low, high)` | `Math.max(low, Math.min(high, x))` |
+
+## Side by side
+
+<details>
+<summary><b>var → the type</b></summary>
+
+```java
+// Newer Java (10+)
+var count = 10;
+var name = "Maria";
+var scores = new ArrayList<Integer>();
+
+// Java 8: write the type
+int count = 10;
+String name = "Maria";
+ArrayList<Integer> scores = new ArrayList<>();
+```
+
+</details>
+
+<details>
+<summary><b>Switch arrows → classic switch</b></summary>
+
+```java
+// Newer Java (14+)
+String dayName = switch (day) {
+    case 1, 7 -> "Weekend";
+    default -> "Weekday";
+};
+
+// Java 8
+String dayName;
+switch (day) {
+    case 1:
+    case 7:
+        dayName = "Weekend";
+        break;
+    default:
+        dayName = "Weekday";
+        break;
+}
+```
+
+Don't forget `break;`. Without it, the code falls through into the next `case`.
+
+</details>
+
+<details>
+<summary><b>List.of → Arrays.asList or add()</b></summary>
+
+```java
+// Newer Java (9+)
+List<String> colors = List.of("red", "green", "blue");
+
+// Java 8: fixed list
+List<String> colors = Arrays.asList("red", "green", "blue");
+
+// Java 8: list you can add to
+ArrayList<String> colors = new ArrayList<>();
+colors.add("red");
+colors.add("green");
+colors.add("blue");
+```
+
+</details>
+
+<details>
+<summary><b>String methods (repeat, isBlank, strip)</b></summary>
+
+```java
+// Newer Java (11+)
+String line = "-".repeat(20);
+if (input.isBlank()) { ... }
+String clean = input.strip();
+
+// Java 8
+String line = "";
+for (int i = 0; i < 20; i++) {
+    line += "-";
+}
+if (input.trim().isEmpty()) { ... }
+String clean = input.trim();
+```
+
+</details>
+
+<details>
+<summary><b>record → class</b></summary>
+
+```java
+// Newer Java (16+)
+record Point(int x, int y) { }
+
+// Java 8
+public class Point {
+    private int x;
+    private int y;
+
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    @Override
+    public String toString() {
+        return "Point[x=" + x + ", y=" + y + "]";
+    }
+}
+```
+
+</details>
+
+<details>
+<summary><b>instanceof pattern → instanceof and a cast</b></summary>
+
+```java
+// Newer Java (16+)
+if (item instanceof String text) {
+    System.out.println(text.toUpperCase());
+}
+
+// Java 8
+if (item instanceof String) {
+    String text = (String) item;
+    System.out.println(text.toUpperCase());
+}
+```
+
+</details>
+
+<details>
+<summary><b>Text block → normal strings</b></summary>
+
+```java
+// Newer Java (15+)
+String menu = """
+    1. Play
+    2. Quit
+    """;
+
+// Java 8
+String menu = "1. Play\n"
+        + "2. Quit\n";
+```
+
+</details>
+
+<details>
+<summary><b>getFirst / getLast (Java 21) → get()</b></summary>
+
+```java
+// Java 21: won't compile in the grader
+int first = scores.getFirst();
+int last = scores.getLast();
+
+// Java 8
+int first = scores.get(0);
+int last = scores.get(scores.size() - 1);
+```
+
+</details>
+
+#### What you'll see from the grader
+
+- **Java 8 code:** graded normally.
+- **Java 9–17 code:** graded normally with no points off. The row is marked **JAVA 17**, and your correction sheet has a **"Newer Java - no points off"** section listing each feature with its line numbers and the Java 8 way to write it.
+- **Java 21 code:** doesn't compile, so it's scored like any other program that doesn't compile. The correction sheet still names the Java 21 feature so you know what to change.
+- **`var` in Java 8:** the error says `var cannot be resolved to a type`. That means Java 8 doesn't know `var`, so write the type instead.
+
+
+---
 
 
 #### Understanding Java: Certification-Style Practice Questions
@@ -278,7 +507,7 @@ Main.java  --(javac)-->  Main.class (bytecode)  --(java)-->  JVM executes it  --
 
 #### Part A — The Compile → Bytecode → JVM Sequence Practice Quiz
 
-##### A1. Multiple Choice
+**A1. Multiple Choice**
 
 What is produced when `javac Hello.java` is run successfully?
 
@@ -298,7 +527,7 @@ What is produced when `javac Hello.java` is run successfully?
 
 ---
 
-##### A2. Multiple Choice
+**A2. Multiple Choice**
 
 A student compiles `Hello.java` on a Windows laptop, then emails `Hello.class` to a friend running macOS. What must be true for the friend to run the program?
 
@@ -318,7 +547,7 @@ The `.class` file's bytecode is identical no matter what OS compiled it — it w
 
 ---
 
-##### A3. Multiple Choice
+**A3. Multiple Choice**
 
 Which best describes the role of the JVM once it has loaded a `.class` file?
 
@@ -338,7 +567,7 @@ The JVM is an **interpreter** (often paired with a Just-In-Time compiler for spe
 
 ---
 
-##### A4. Short Answer
+**A4. Short Answer**
 
 Put these four items in the correct order for how a Java program goes from source code to a running program: **JVM interprets bytecode**, **`.java` source file written**, **`javac` compiles source**, **`.class` bytecode file created**.
 
@@ -357,7 +586,7 @@ Put these four items in the correct order for how a Java program goes from sourc
 
 ---
 
-##### A5. Multiple Choice
+**A5. Multiple Choice**
 
 Why does each operating system need its **own** version of the JVM, if bytecode itself is platform-independent?
 
@@ -381,7 +610,7 @@ Bytecode itself never changes between platforms — that's the whole point. What
 
 Identify **which Java feature** (Platform Independence, Compiled + Interpreted, Object-Oriented, Static/Strong Typing, Automatic Memory Management, Robust/Secure) best explains the behavior described.
 
-##### B1.
+**B1.**
 
 ```java
 int total = "42";
@@ -400,7 +629,7 @@ Java checks variable types at **compile time**. Assigning a `String` to an `int`
 
 ---
 
-##### B2.
+**B2.**
 
 ```java
 public class Car {
@@ -426,7 +655,7 @@ public class SportsCar extends Car {
 
 ---
 
-##### B3.
+**B3.**
 
 A student writes a method that creates thousands of temporary `String` objects inside a loop. The student never writes any code to delete or free those objects, yet the program's memory usage doesn't grow without bound.
 
@@ -441,7 +670,7 @@ Once those temporary `String` objects are no longer referenced by anything the p
 
 ---
 
-##### B4.
+**B4.**
 
 The exact same `.class` file, compiled once on a school's Windows lab computer, runs correctly on a student's Chromebook and a teacher's MacBook without being recompiled.
 
@@ -456,7 +685,7 @@ The `.class` file contains bytecode, not machine code — it isn't tied to Windo
 
 ---
 
-##### B5.
+**B5.**
 
 ```java
 public static void main(String[] args) {
@@ -478,7 +707,7 @@ Java checks array bounds at runtime and throws a catchable exception rather than
 
 ---
 
-##### B6.
+**B6.**
 
 The program's source file compiles in under a second, but the compiled file cannot actually be run directly by double-clicking it on any operating system — a separate program has to be launched first to read it.
 
